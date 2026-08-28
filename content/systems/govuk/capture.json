@@ -15,7 +15,7 @@
     "sampleRatio": 0.716
   },
   "harvestVersion": 1,
-  "clusterVersion": 1,
+  "clusterVersion": 2,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -41,7 +41,8 @@
         "hex": "#0f7a52",
         "weightShare": 0.6749,
         "variants": [],
-        "source": "interactiveBg"
+        "source": "interactiveBg",
+        "occurrences": 2
       },
       "primaryForeground": {
         "hex": "#ffffff",
@@ -134,6 +135,12 @@
         "lightness": 0.765,
         "chroma": 0.069,
         "count": 4
+      }
+    ],
+    "accentRejected": [
+      {
+        "hex": "#1d70b8",
+        "occurrences": 1
       }
     ],
     "clusterCounts": {
@@ -326,6 +333,7 @@
     "minRatio": 1.57
   },
   "warnings": [
+    "Ignored #1d70b8 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
     "No border radius anywhere; treat as a deliberately sharp system.",
     "Strided sample: 441 of 616 elements. Weights are relative only."

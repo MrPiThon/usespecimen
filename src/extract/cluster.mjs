@@ -45,6 +45,10 @@ const MUTED_MAX_CHROMA = 0.08;
 /** A card surface sits near the page background in lightness. Further than this
  *  and it is an accent panel, not a surface. */
 const SURFACE_MAX_DL = 0.25;
+/** A brand accent recurs; a single element is a promo panel. Measured: Stripe's
+ *  indigo appears on 7 interactive fills and GOV.UK's green on 2, while the one
+ *  576x360 yellow banner that used to win Linear by sheer area appears on 1. */
+const MIN_ACCENT_COUNT = 2;
 
 const WHITE = { r: 255, g: 255, b: 255, a: 1 };
 const MAX_VARIANTS = 6;
@@ -118,6 +122,33 @@ export function clusterColors(entries) {
 
 const isChromatic = c => toOklch(c.rgb).C >= CHROMATIC;
 
+/**
+ * Colors declared inside box-shadow strings. A chromatic one is nearly always a
+ * focus ring or brand glow, which is where a restrained system keeps its accent
+ * when it never fills a button with it.
+ *
+ * Kept RAW rather than composited: a ring drawn at 40% alpha still declares the
+ * brand value, and that declared value is the observed one. Flattening it would
+ * emit a colour that is genuinely on screen but is not the token.
+ */
+export function shadowAccents(capture) {
+  const byHex = new Map();
+  for (const [value, w] of Object.entries(capture?.shadows ?? {})) {
+    for (const m of value.matchAll(/rgba?\([^)]+\)|#[0-9a-f]{3,8}\b/gi)) {
+      const raw = parseColor(m[0]);
+      if (!raw) continue;
+      const rgb = { r: raw.r, g: raw.g, b: raw.b, a: 1 };
+      if (toOklch(rgb).C < CHROMATIC) continue;
+      const hex = toHex(rgb);
+      const hit = byHex.get(hex);
+      if (hit) { hit.weight += w.count; hit.count += w.count; } else {
+        byHex.set(hex, { hex, rgb, weight: w.count, count: w.count, variants: [] });
+      }
+    }
+  }
+  return [...byHex.values()].sort(byWeightThen('hex'));
+}
+
 /** The page backdrop everything else composites against. */
 function resolveBackdrop(capture) {
   const page = parseColor(capture.pageBg);
@@ -182,14 +213,26 @@ export function colorTokens(capture) {
     && Math.abs(toOklch(c.rgb).L - bgLightness) <= SURFACE_MAX_DL
     && !accents.has(c.hex)) || null;
 
-  // The accent lives on filled buttons. Plenty of restrained sites have none, so
-  // fall back to interactive text and then to any chromatic body text — that's
-  // the link color, which is the accent by another route.
-  let primary = iBg.find(isChromatic);
-  let primarySource = 'interactiveBg';
-  if (!primary) { primary = iFg.find(isChromatic); primarySource = 'interactiveFg'; }
-  if (!primary) { primary = text.find(isChromatic); primarySource = 'textColors'; }
-  if (!primary) primarySource = null;
+  // The accent ladder, strongest evidence first. Ranking interactive fills by
+  // area alone is what handed Linear a one-off promo panel instead of its brand
+  // colour, so a fill has to RECUR to count as the accent.
+  const recurring = c => c.count >= MIN_ACCENT_COUNT;
+  const oneOffs = iBg.filter(c => isChromatic(c) && !recurring(c));
+  const rings = shadowAccents(capture);
+
+  let primary = iBg.find(c => isChromatic(c) && recurring(c));
+  let primarySource = primary ? 'interactiveBg' : null;
+  // No count floor on focus rings: only the focused element draws one, so they
+  // are always rare, and a chromatic ring is unambiguously the brand colour.
+  if (!primary && rings.length) { primary = rings[0]; primarySource = 'focusRing'; }
+  if (!primary) {
+    primary = iFg.find(isChromatic);
+    primarySource = primary ? 'interactiveFg' : null;
+  }
+  if (!primary) {
+    primary = text.find(isChromatic);
+    primarySource = primary ? 'textColors' : null;
+  }
 
   // Only meaningful when primary is a filled surface — if the accent came from
   // link text there is no "on primary" to report, and guessing white would be
@@ -209,8 +252,15 @@ export function colorTokens(capture) {
     foreground: token(foreground, share(foreground, shares.text)),
     card: token(card, share(card, shares.bg)),
     mutedForeground: token(mutedForeground, share(mutedForeground, shares.text)),
-    primary: token(primary, share(primary, primarySource === 'interactiveBg' ? shares.iBg
-      : primarySource === 'interactiveFg' ? shares.iFg : shares.text), { source: primarySource }),
+    // A focus ring has no meaningful share of any histogram, so it reports null
+    // rather than 0 — "not applicable" and "never appears" are different claims.
+    primary: token(primary, ({
+      interactiveBg: shares.iBg, interactiveFg: shares.iFg, textColors: shares.text,
+    }[primarySource] ?? 0) > 0
+      ? share(primary, { interactiveBg: shares.iBg, interactiveFg: shares.iFg,
+        textColors: shares.text }[primarySource])
+      : null,
+    { source: primarySource, occurrences: primary?.count ?? null }),
     primaryForeground: token(primaryForeground, share(primaryForeground, shares.iFg)),
     border: token(border[0], share(border[0], shares.border)),
   };
@@ -236,6 +286,10 @@ export function colorTokens(capture) {
     polarity: relativeLuminance(backdrop.rgb) < 0.2 ? 'dark' : 'light',
     roles,
     palette,
+    // Chromatic fills that lost the accent role for appearing once. Reported
+    // rather than dropped: a reviewer eyeballing the tokens should see what was
+    // considered and why it was passed over.
+    accentRejected: oneOffs.map(c => ({ hex: c.hex, occurrences: c.count })),
     clusterCounts: {
       bg: bg.length, text: text.length, border: border.length, interactive: iBg.length,
     },
@@ -511,9 +565,17 @@ function collectWarnings(capture, colors, type, spacing, rounded) {
     w.push('No page background observed; composited against white. Colors with alpha may be off.');
   }
   if (!roles.foreground) w.push('No text color observed — the capture may have run before render.');
-  if (!roles.primary) w.push('No chromatic accent found in buttons, links or body text; palette is fully neutral.');
-  else if (roles.primary.source !== 'interactiveBg') {
+  if (!roles.primary) w.push('No chromatic accent found in buttons, focus rings, links or body text; palette is fully neutral.');
+  else if (roles.primary.source === 'focusRing') {
+    w.push(`Accent ${roles.primary.hex} taken from a focus ring, the only chromatic `
+      + 'evidence on the page. The site never fills a button with it, so no '
+      + 'foreground pairing could be observed.');
+  } else if (roles.primary.source !== 'interactiveBg') {
     w.push(`Accent taken from ${roles.primary.source}, not a filled button — verify by eye.`);
+  }
+  for (const r of colors.accentRejected ?? []) {
+    w.push(`Ignored ${r.hex} as the accent: a chromatic interactive fill on only `
+      + `${r.occurrences} element, which reads as a promo panel rather than a brand colour.`);
   }
   if (roles.primary && !roles.primaryForeground && roles.primary.source === 'interactiveBg') {
     w.push('No text color observed on interactive surfaces; primaryForeground omitted rather than guessed.');
@@ -563,7 +625,10 @@ export function cluster(capture) {
     // with both versions unchanged are a real redesign; anything else is us.
     // A null harvestVersion means a capture taken before the field existed.
     harvestVersion: capture.harvestVersion ?? null,
-    clusterVersion: 1,
+    // 2: accent role now requires a recurring fill and falls back to focus-ring
+    // colour. Moves `primary` on any site whose brightest interactive fill was a
+    // one-off, so v1 and v2 token sets are not comparable for drift.
+    clusterVersion: 2,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

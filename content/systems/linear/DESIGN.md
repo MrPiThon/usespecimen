@@ -1,14 +1,13 @@
 ---
 name: 'Voltage Dark'
 version: '0.1.0'
-description: 'Dense dark product UI: near-black canvas, small tight type, one acid yellow reserved for primary action.'
+description: 'Dense dark product UI: near-black canvas, small tight type, and a lavender accent so restrained it survives only in focus rings.'
 colors:
   background: '#08090a'
   foreground: '#d0d6e0'
   card: '#201011'
   mutedForeground: '#8a8f98'
-  primary: '#e4f222'
-  primaryForeground: '#08090a'
+  primary: '#5e6ad2'
   border: '#1c1d1e'
 typography:
   fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
@@ -53,7 +52,6 @@ spacing:
 components:
   button:
     background: '{colors.primary}'
-    foreground: '{colors.primaryForeground}'
     radius: '{rounded.button}'
   surface:
     background: '{colors.card}'
@@ -64,14 +62,14 @@ provenance:
   capturedAt: '2026-08-28T22:26:46.603Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 1
+  clusterVersion: 2
 ---
 
 ## Overview
 
 A dark, information-dense aesthetic for tools people keep open all day. The
-canvas is near-black, type is small and tightly tracked, and a single acid
-yellow appears only where the product wants a decision.
+canvas is near-black, type is small and tightly tracked, and the brand colour is
+held back so far that it never fills a button on the marketing page.
 
 Use it for keyboard-driven software where density is a feature.
 
@@ -81,8 +79,14 @@ The canvas is `#08090a` — effectively black but not pure, which keeps large
 fills from feeling like holes. Body text `#d0d6e0` sits at 13.64:1 and the muted
 tier `#8a8f98` at 6.13:1, so both remain comfortably legible.
 
-The accent `#e4f222` is an acid yellow carrying a near-black label at 16.15:1.
-It is the brightest thing on the page and should stay rare.
+The accent is the lavender `#5e6ad2`, and finding it says something about the
+system: it appears nowhere as a filled surface, only as a focus ring. A design
+this restrained spends its brand colour on the one moment that needs it. No
+foreground pairing is recorded here because the site never gave us one to
+observe.
+
+A single acid-yellow panel (`#e4f222`) appears once on the marketing page. It is
+a campaign element, not a token, and it is deliberately excluded.
 
 Borders are `#1c1d1e` at 1.18:1. Separation here is a small luminance step, not
 a contrast boundary — correct for dark UI, but it means borders alone cannot
@@ -117,12 +121,14 @@ Radii of 4, 6, 8, 9 and 12px across surfaces, with buttons fully pilled at
 
 ## Components
 
-Buttons are pills with the yellow fill and a near-black label. Surfaces sit a
-step above the canvas with a `#1c1d1e` border.
+Buttons are pills. Their fills are neutral, not branded — the lavender is spent
+on the focus ring instead. Surfaces sit a step above the canvas with a
+`#1c1d1e` border.
 
 ## Do's and Don'ts
 
 - **Do** keep type small and tracking tight; loosening either breaks the density.
-- **Do** reserve the yellow for a single primary action per view.
+- **Do** spend the lavender on focus and selection states rather than on fills.
+  That restraint is the system, not an oversight.
 - **Don't** invent a spacing scale. This system genuinely does not have one.
 - **Don't** rely on border colour alone to indicate state at 1.18:1.

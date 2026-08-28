@@ -32,47 +32,53 @@ Everything else is soft.
 
 ---
 
-## 2. Six findings, ranked by exploitability
+## 2. Findings, re-verified
 
-**1. The pages don't contain the product.**
-`/design-md/betterstack` has no DESIGN.md content, no copy button, no download,
-no raw file, and no link to the file in their own GitHub repo. Its only CTAs are
-a $39 paid analysis, a $249 starter kit, and a sponsor ad. Someone arriving from
-a search for "Better Stack design system" gets a screenshot, one sentence, and
-three boilerplate blocks — "Three ways to ship a Better Stack-style UI" — that
-are byte-identical across all 551 pages. Trivially beatable: put the file on the
-page.
+> **Rewritten after re-checking the live site on 28 Aug 2026.** The original
+> teardown listed six findings. Four of them are no longer true — getdesign.md
+> has shipped the file-on-page, an install command and search since. They are
+> recorded below as dead so nobody plans against them again.
 
-**2. The catalog is a menu of things that don't exist yet.**
-551 entries, 74 public files, 35 in the Pass. Roughly seven in eight entries are
-lead-gen pages for a file generated only after you pay $39. Defensible business,
-terrible browsing, and it makes the "550+" headline hollow — which matters,
-because the whole category competes on that number.
+**Dead — they shipped these.**
 
-**3. No search, on a 551-item catalog.**
-Eight category chips and 35 pages of numbered pagination. No search input
-anywhere. You cannot look up a brand by name, let alone shop the way people
-actually choose a direction: dark and high-contrast, editorial serif, dense data
-UI, soft and rounded, brutalist. Every file already carries structured color,
-type, spacing and radius tokens in frontmatter — the facets are sitting there
-unused.
+- ~~The pages don't contain the product.~~ `/linear.app/design-md` now serves the
+  full DESIGN.md behind a tab, plus a Download button and a Live Preview with
+  light/dark toggles.
+- ~~No machine interface.~~ `npx getdesign@latest add linear.app` is on the page,
+  above the fold. This was our finding #4 and our proposed primitive; they got
+  there first.
+- ~~No search.~~ The catalog now has a search input.
+- ~~The files hedge the brand name.~~ Partly. The Linear file reads
+  `name: Linear-design-analysis` — the real brand, uncorrupted. The `Stripi`
+  mangling may be one bad file rather than a policy.
 
-**4. No machine interface, for a product whose user is a machine.**
-No API, no CLI, no MCP server, no stable raw-file URL. The documented workflow is
-"look at the page, then paste something into Cursor." The correct primitive is
-`npx specimen add stripe`, or an MCP server the agent queries itself.
+**Still true, and now the whole wedge.**
 
-**5. The files hedge the brand name, and it breaks the output.**
-The Stripe file's frontmatter reads `name: Stripi-Inspired-design-analysis`. The
-page says Stripe; the file says Stripi. The trademark instinct is right, the
-execution leaks into the artifact and tells the agent to build a company that
-does not exist.
+**1. Nothing is verified, dated, or sourced — and at least one token is invented.**
+Their files carry no capture date, no method, no source URL, no contrast audit,
+no conformance result. That was already the strongest finding. It is now
+*evidenced*: their Linear file declares `canvas: "#010102"`, described in prose
+as "the deepest dark surface of any tool in this collection". That colour does
+not appear anywhere on linear.app — not as a background, border, shadow or text
+colour. Our capture of the same page finds `#08090a` covering 43.7M px².
 
-**6. Nothing is verified, and nothing is dated.**
-Files are "independent analysis of publicly visible design patterns" with no
-capture date, no extraction method, no contrast audit, no conformance check.
-Every file claims to describe a live site's tokens; sites get redesigned. This is
-the one thing a hand-written analysis cannot fake and a crawler can prove.
+A described file cannot avoid this failure mode. A crawled one cannot have it.
+That asymmetry is the product.
+
+**2. Their token vocabulary is richer than ours.**
+Worth stating plainly, because it cuts against us. Their Linear file has four ink
+tiers, four surfaces, three hairline weights, thirteen typography roles, semantic
+success/overlay colours, and per-component padding with pressed states. We emit
+seven colour roles and a flat size scale. Several of their values are correct and
+independently confirmed by our own capture: `#d0d6e0`, `#8a8f98`, `#62666d`,
+`#0f1011`, `#23252a` all match our histograms exactly.
+
+Their method produces a *better-shaped* file. Ours produces a *checkable* one.
+The goal is both, and the gap is a real backlog item, not a rounding error.
+
+**3. Distribution, not product, is their moat.**
+22K installs and 781 bookmarks on the Linear page alone, off a 111k-star repo.
+Nothing in this plan closes that by building features.
 
 Minor: 24 of 76 homepage images have no alt text.
 
@@ -101,24 +107,35 @@ visible on the page, is a position nobody holds.
 
 ---
 
-## 4. Five things we do that they don't
+## 4. What actually differentiates us
 
-1. **The whole file is on the page.** Rendered, highlighted, copy button, raw
-   download, stable URL at `/r/<slug>/DESIGN.md`. No gate, no sign-in.
-2. **Proof, not vibes.** A provenance block per entry: capture date, source URL,
-   extraction method — plus a live preview rendering real components (buttons,
-   cards, nav, form, table) from the file's own tokens in both themes, beside a
-   screenshot of the source. If the preview looks wrong, the file is wrong, and
-   everyone can see it.
-3. **Validated in public.** Google spec linter plus a WCAG contrast audit on
-   every declared foreground/background pair, printed on the page as pass/fail
-   with detail. Files that fail don't ship.
-4. **Search that matches how people choose.** Full-text plus facets derived from
-   the token data: hue family, contrast level, radius scale, type
-   classification, density, light/dark polarity.
-5. **It installs.** `npx specimen add stripe` writes DESIGN.md into the repo and
-   prints the agent prompt. An MCP server exposes `search_designs` and
-   `get_design` so agents fetch without a human leaving the editor.
+Revised 28 Aug 2026. Three of the original five are now table stakes — they have
+the file on the page, search, and an install command. Building those wins
+nothing; not having them loses. What remains:
+
+**Real differentiators.**
+
+1. **Proof, not vibes.** A provenance block per entry: capture date, source URL,
+   extraction method, pipeline versions — plus a live preview rendering real
+   components from the file's own tokens in both themes, beside a screenshot of
+   the source. If the preview looks wrong, the file is wrong, and everyone can
+   see it. Nobody else dates a file.
+2. **Validated in public.** Google spec linter plus a WCAG contrast audit on
+   every declared pair, printed on the page. Enforced at build time, so a
+   non-conformant file cannot reach the site. Caveat learned in testing: a
+   *text* pair below AA is disqualifying, a decorative border below 3:1 is not —
+   four of four reference sites fail the latter, so blocking on it would ship
+   nothing.
+3. **Facets from the token data.** Hue family, contrast level, radius scale,
+   type classification, density, light/dark polarity. They have search; nobody
+   has shopping-by-aesthetic, and the token data makes it nearly free.
+4. **Falsifiability as a feature.** Publish the capture alongside the file so a
+   reader can check any claim. It is how we found `#010102` doesn't exist, and
+   it is the one thing a competitor cannot copy by scraping the output.
+
+**Table stakes — build, but claim nothing for them.**
+Whole file on the page, raw URL at `/r/<slug>/DESIGN.md`, `npx specimen add`,
+MCP server.
 
 Not on the list: more entries, a Catalog Pass, backgrounds, video templates, an
 affiliate program, a starter kit. Their homepage carries nine product lines.
@@ -266,10 +283,77 @@ Depth first. Forty files done properly beats five hundred stubs.
   consolidate into the agent platforms. Build the pipeline so its output is
   useful even if the file format changes: extracted tokens are the durable asset,
   the markdown wrapper is not.
-- **Extraction quality.** Computed-style harvesting on a modern marketing site
-  returns hundreds of near-duplicate values. Clustering is the hard engineering
-  problem in this plan and where the schedule will slip. Prototype on three sites
-  before committing to the rest.
+- **Extraction quality.** Confirmed as predicted, and worse than expected in one
+  specific way: the failures are not noise, they are *confident wrong answers*.
+  Ranking interactive fills by area gave Linear a one-off promo banner as its
+  brand colour — a plausible token, wrong, and invisible without something to
+  check it against. Two independent bugs of this shape surfaced in the first
+  comparison against a competitor's file (see §11). Assume more exist; the
+  mitigation is not better heuristics but keeping the raw capture published so
+  any claim can be falsified.
+
+## 11. Extraction backlog — measured, not speculative
+
+Every item below came from diffing our Linear output against getdesign.md's on
+28 Aug 2026, and each is stated with the number that proves it. Ordered by how
+much it distorts a shipped file.
+
+**1. Dark surfaces over-merge. (bug, highest impact)**
+`COLOR_MERGE` is a flat 0.045 in OKLab, but lightness compresses at the dark end:
+`deltaE(#08090a, #0f1011) = 0.0334`, so Linear's canvas and its card surface
+collapse into one cluster. The `card` role then falls through to `#201011`, which
+is `rgba(243, 78, 82, 0.1)` — a red danger-state overlay — composited over the
+canvas. An observed colour, but semantically an error tint, published as a
+surface. Fix: scale the merge threshold by lightness, or resolve surfaces by
+lightness step rather than by cluster separation.
+
+**2. We emit roles; they emit ramps.**
+They ship `ink / ink-muted / ink-subtle / ink-tertiary` and `surface-1..4`. We
+ship `foreground` + `mutedForeground` and stop. The tiers are already in our
+cluster output — we rank them and then discard everything below first place.
+Emitting ordered ramps (text by contrast, surface by lightness) is mostly
+plumbing, and it closes most of the vocabulary gap in one change.
+
+**3. Body size is wrong on dense UI.**
+We pick the size with the most total characters. On Linear that is 13px, which is
+nav and label chrome. Characters *per element* separates prose from chrome, but
+not alone — display text scores highest of all:
+
+| Linear | elements | chars/el |  | Stripe | elements | chars/el |
+|---|---|---|---|---|---|---|
+| 13px | 129 | 16.9 |  | 16px | 196 | 22.9 |
+| 15px | 65 | **31.2** |  | 22px | 20 | 93.0 |
+| 24px | 4 | 136.8 |  | 10px | 93 | 8.3 |
+
+Rule that fits both: among sizes with a substantial element count, body is the
+one with the highest chars-per-element. Gives 15px for Linear and keeps 16px for
+Stripe. Note this makes getdesign.md's Linear body of 16px look wrong too.
+
+**4. Semantic colours are on the floor.**
+Their file has `semantic-success: #27a644`. Our capture contains
+`rgba(39, 166, 68, 0.07)` — the same green — and we never look at it. Low-alpha
+chromatic backgrounds classified by hue family (green→success, red→danger,
+amber→warning) is a cheap, well-evidenced addition.
+
+**5. No interaction states.**
+`harvest` reads resting computed style only, so hover, active and focus are
+invisible; their file has `button-primary-pressed`. Reading `document.styleSheets`
+for `:hover`/`:focus` rules is more robust than trying to drive interactions, and
+the focus-ring work already landed in `cluster.mjs` proves the value.
+
+**6. One viewport, one colour scheme.**
+Section 6 of this plan specifies light/dark at three widths. We capture
+1440x900, light, once. Dark capture would also give the light/dark polarity
+facet real data instead of an inference from background luminance.
+
+**7. No component-level tokens.**
+Their button carries `padding: 8px 14px` plus typography and radius references.
+We emit background, foreground and radius. `harvest` already visits every
+interactive element, so padding and font size are free.
+
+**8. No screenshots.**
+`source.avif` is specified and absent, and §4.1's "preview beside the source"
+claim needs it.
 
 ## Verify before building
 

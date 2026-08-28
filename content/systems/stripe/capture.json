@@ -15,7 +15,7 @@
     "sampleRatio": 0.667
   },
   "harvestVersion": 1,
-  "clusterVersion": 1,
+  "clusterVersion": 2,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -53,7 +53,8 @@
         "hex": "#533afd",
         "weightShare": 0.6424,
         "variants": [],
-        "source": "interactiveBg"
+        "source": "interactiveBg",
+        "occurrences": 7
       },
       "primaryForeground": {
         "hex": "#ffffff",
@@ -261,6 +262,12 @@
         "lightness": 0.313,
         "chroma": 0.107,
         "count": 1
+      }
+    ],
+    "accentRejected": [
+      {
+        "hex": "#0a2540",
+        "occurrences": 1
       }
     ],
     "clusterCounts": {
@@ -522,6 +529,7 @@
     "minRatio": 1.18
   },
   "warnings": [
+    "Ignored #0a2540 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "15 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "Strided sample: 1967 of 2948 elements. Weights are relative only."
   ],

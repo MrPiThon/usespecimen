@@ -15,7 +15,7 @@
     "sampleRatio": 0.59
   },
   "harvestVersion": 1,
-  "clusterVersion": 1,
+  "clusterVersion": 2,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -53,16 +53,13 @@
         "variants": []
       },
       "primary": {
-        "hex": "#e4f222",
-        "weightShare": 0.8954,
+        "hex": "#5e6ad2",
+        "weightShare": null,
         "variants": [],
-        "source": "interactiveBg"
+        "source": "focusRing",
+        "occurrences": 1
       },
-      "primaryForeground": {
-        "hex": "#08090a",
-        "weightShare": 0.0485,
-        "variants": []
-      },
+      "primaryForeground": null,
       "border": {
         "hex": "#1c1d1e",
         "weightShare": 0.8544,
@@ -84,7 +81,7 @@
       },
       {
         "hex": "#e4f222",
-        "role": "primary",
+        "role": null,
         "hue": "green",
         "lightness": 0.92,
         "chroma": 0.201,
@@ -265,6 +262,12 @@
         "lightness": 0.509,
         "chroma": 0.012,
         "count": 1
+      }
+    ],
+    "accentRejected": [
+      {
+        "hex": "#e4f222",
+        "occurrences": 1
       }
     ],
     "clusterCounts": {
@@ -508,22 +511,13 @@
         "aaa": false
       },
       {
-        "pair": "primaryForeground/primary",
-        "fg": "#08090a",
-        "bg": "#e4f222",
-        "ratio": 16.15,
-        "nonText": false,
-        "aa": true,
-        "aaa": true
-      },
-      {
         "pair": "primary/background",
-        "fg": "#e4f222",
+        "fg": "#5e6ad2",
         "bg": "#08090a",
-        "ratio": 16.15,
+        "ratio": 4.24,
         "nonText": false,
-        "aa": true,
-        "aaa": true
+        "aa": false,
+        "aaa": false
       },
       {
         "pair": "border/background",
@@ -535,10 +529,12 @@
         "aaa": false
       }
     ],
-    "failures": 1,
+    "failures": 2,
     "minRatio": 1.18
   },
   "warnings": [
+    "Accent #5e6ad2 taken from a focus ring, the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
+    "Ignored #e4f222 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "No spacing grid explains 75% of values (best 0.661); site may not be on a grid.",
     "14 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "Strided sample: 2982 of 5052 elements. Weights are relative only."
