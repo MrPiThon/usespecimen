@@ -1,0 +1,4 @@
+# Normalise to LF in the repo regardless of platform. capture.json files are
+# reviewed as diffs and re-diffed against future captures for drift, so
+# line-ending churn from mixed-platform contributors is real noise, not cosmetic.
+* text=auto eol=lf

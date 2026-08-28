@@ -1,0 +1,15 @@
+{
+  "name": "@usespecimen/extractor",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Design token extractor for Specimen — captures a live site's computed styles and clusters them into a DESIGN.md token set.",
+  "scripts": {
+    "extract": "node src/cli.mjs extract",
+    "cluster": "node src/cli.mjs cluster",
+    "postinstall-note": "run: npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1"
+  }
+}
