@@ -9,6 +9,11 @@ colors:
   mutedForeground: '#8a8f98'
   primary: '#5e6ad2'
   border: '#1c1d1e'
+  surface-1: '#0f1011'
+  text-1: '#f7f8f8'
+  text-2: '#d0d6e0'
+  text-3: '#8a8f98'
+  text-4: '#62666d'
 typography:
   fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
   headingFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
@@ -62,7 +67,7 @@ provenance:
   capturedAt: '2026-08-28T22:26:46.603Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 4
+  clusterVersion: 5
 ---
 
 ## Overview
@@ -78,6 +83,12 @@ Use it for keyboard-driven software where density is a feature.
 The canvas is `#08090a` — effectively black but not pure, which keeps large
 fills from feeling like holes. Body text `#d0d6e0` sits at 13.64:1 and the muted
 tier `#8a8f98` at 6.13:1, so both remain comfortably legible.
+
+The text ladder runs four steps — `#f7f8f8` at 18.73:1, `#d0d6e0` at 13.64:1,
+`#8a8f98` at 6.13:1, `#62666d` at 3.45:1. Every step stays above 3:1, so the
+quietest tier is still readable rather than decorative. Above the canvas only one
+surface step is visible on this page, `#0f1011`; the system almost certainly has
+more, but they appear in states this capture does not reach.
 
 The accent is the lavender `#5e6ad2`, and finding it says something about the
 system: it appears nowhere as a filled surface, only as a focus ring. A design

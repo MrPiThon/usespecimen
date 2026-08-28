@@ -313,12 +313,30 @@ danger overlay composited over the canvas — to `#0f1011`, matching the
 tiers are unchanged. This also unblocks item 2: the surface ramp now exists in
 the cluster output instead of being merged away.
 
-**2. We emit roles; they emit ramps.**
-They ship `ink / ink-muted / ink-subtle / ink-tertiary` and `surface-1..4`. We
-ship `foreground` + `mutedForeground` and stop. The tiers are already in our
-cluster output — we rank them and then discard everything below first place.
-Emitting ordered ramps (text by contrast, surface by lightness) is mostly
-plumbing, and it closes most of the vocabulary gap in one change.
+**2. ~~We emit roles; they emit ramps.~~ DONE, cluster v5.**
+`colors.ramps` now carries ordered ladders alongside the named roles — text by
+contrast descending, surfaces by lightness distance from the canvas. Emitted into
+frontmatter as flat `text-1..n` / `surface-1..n` keys.
+
+The text ramp reproduces their ink ladder exactly, and independently:
+
+| ours | theirs | contrast |
+|---|---|---|
+| `text-1` `#f7f8f8` | `ink` | 18.73:1 |
+| `text-2` `#d0d6e0` | `ink-muted` | 13.64:1 |
+| `text-3` `#8a8f98` | `ink-subtle` | 6.13:1 |
+| `text-4` `#62666d` | `ink-tertiary` | 3.45:1 |
+
+Surfaces close less of the gap: we find one step above Linear's canvas
+(`#0f1011`, their `surface-1`) where they declare four. The rest are not on the
+page we captured — they live in hover and component states, which is backlog
+item 5, not a clustering failure. Stripe gets three surface steps and three text
+tiers; GOV.UK gets one of each, consistent with it having no muted tier at all.
+
+Separation is by **area share**, not chroma: real surfaces sit at 9.3% and 0.42%
+of painted background area while Linear's green and red semantic overlays sit at
+0.145% and 0.104%. Chroma would have failed here, because plenty of systems tint
+their surfaces deliberately — Stripe's `#e5edf5` is measurably blue.
 
 **3. Body size is wrong on dense UI.**
 We pick the size with the most total characters. On Linear that is 13px, which is

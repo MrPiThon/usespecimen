@@ -64,6 +64,18 @@ const SURFACE_MAX_DL = 0.25;
  *  indigo appears on 7 interactive fills and GOV.UK's green on 2, while the one
  *  576x360 yellow banner that used to win Linear by sheer area appears on 1. */
 const MIN_ACCENT_COUNT = 2;
+/** Below this share of painted background area a colour is a component tint — a
+ *  success panel, a danger overlay — not a tier of the system. Measured on
+ *  Linear: real surfaces sit at 9.3% and 0.42%, the green and red overlays at
+ *  0.145% and 0.104%. Area separates them cleanly; chroma does not, because
+ *  plenty of systems tint their surfaces on purpose. */
+const SURFACE_MIN_AREA = 0.0025;
+/** A text tier has to carry real copy. Lower than TEXT_SIGNIFICANCE, which gates
+ *  role assignment: a tier can be a minority voice, a role cannot. */
+const RAMP_MIN_SHARE = 0.02;
+/** Ramps stop here. Beyond four or five steps the tail is noise, and no system
+ *  we have measured declares more. */
+const MAX_RAMP = 5;
 
 const WHITE = { r: 255, g: 255, b: 255, a: 1 };
 const MAX_VARIANTS = 6;
@@ -181,6 +193,42 @@ const token = (cluster, share, extra = {}) => cluster && ({
   variants: cluster.variants,
   ...extra,
 });
+
+/**
+ * The surface ladder: each distinct near-canvas background, ordered by distance
+ * from the canvas. This is how a dark UI builds depth, and until SURFACE_MERGE
+ * landed the whole ladder collapsed into `background` and was thrown away.
+ *
+ * Ordered by lightness distance rather than by area, because a ramp is a
+ * sequence of steps. `card` stays area-ranked — it answers "which surface does
+ * this system actually use most", which is a different question.
+ */
+function surfaceRamp(bg, backdrop, accents, total) {
+  const bgL = toOklch(backdrop.rgb).L;
+  const dL = c => Math.abs(toOklch(c.rgb).L - bgL);
+  return bg
+    .filter(c => deltaE(c.rgb, backdrop.rgb) > SURFACE_MERGE
+      && dL(c) <= SURFACE_MAX_DL
+      && !accents.has(c.hex)
+      && total > 0 && c.weight / total >= SURFACE_MIN_AREA)
+    .sort((a, b) => dL(a) - dL(b) || (a.hex < b.hex ? -1 : 1))
+    .slice(0, MAX_RAMP);
+}
+
+/**
+ * The text ladder, strongest contrast first. Same guards as `mutedForeground`:
+ * legible, desaturated so a link colour is not mistaken for a text tier, and
+ * common enough to be a tier at all.
+ */
+function textRamp(text, backdrop, total) {
+  const ratio = c => contrastRatio(c.rgb, backdrop.rgb);
+  return text
+    .filter(c => total > 0 && c.weight / total >= RAMP_MIN_SHARE
+      && ratio(c) >= MUTED_MIN_CONTRAST
+      && toOklch(c.rgb).C < MUTED_MAX_CHROMA)
+    .sort((a, b) => ratio(b) - ratio(a) || (a.hex < b.hex ? -1 : 1))
+    .slice(0, MAX_RAMP);
+}
 
 export function colorTokens(capture) {
   const backdrop = resolveBackdrop(capture);
@@ -300,9 +348,29 @@ export function colorTokens(capture) {
       };
     });
 
+  const surfaces = surfaceRamp(bg, backdrop, accents, shares.bg);
+  const texts = textRamp(text, backdrop, shares.text);
+
   return {
     polarity: relativeLuminance(backdrop.rgb) < 0.2 ? 'dark' : 'light',
     roles,
+    // Ordered ladders alongside the named roles. The roles answer "what is the
+    // body colour"; the ramps answer "what are the tiers", which is the shape a
+    // design system is actually built from.
+    ramps: {
+      surface: surfaces.map((c, i) => ({
+        name: `surface-${i + 1}`,
+        hex: c.hex,
+        deltaL: round(Math.abs(toOklch(c.rgb).L - bgLightness)),
+        areaShare: round(shares.bg > 0 ? c.weight / shares.bg : 0, 4),
+      })),
+      text: texts.map((c, i) => ({
+        name: `text-${i + 1}`,
+        hex: c.hex,
+        contrast: round(ratioToBg(c), 2),
+        charShare: round(shares.text > 0 ? c.weight / shares.text : 0, 4),
+      })),
+    },
     palette,
     // Chromatic fills that lost the accent role for appearing once. Reported
     // rather than dropped: a reviewer eyeballing the tokens should see what was
@@ -671,8 +739,10 @@ export function cluster(capture) {
     //    which moves `card` and `border` on any site with subtle surface steps.
     // 4: contrast audit picks its WCAG criterion from the accent's source.
     //    Tokens are unchanged from 3; only the audit verdicts move.
+    // 5: adds colors.ramps — ordered surface and text ladders. Additive; the
+    //    named roles are unchanged.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 4,
+    clusterVersion: 5,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
@@ -699,6 +769,14 @@ export function summarize(tokens) {
     const extra = [t.variants?.length ? `+${t.variants.length}` : '', t.source || ''].filter(Boolean);
     lines.push(`  ${swatch(t.hex)} ${name.padEnd(18)} ${t.hex}  ${extra.join(' ')}`);
   }
+
+  const ramp = (label, items, detail) => (items.length
+    ? `  ${label.padEnd(8)}${items.map(x => swatch(x.hex)).join('')}  `
+      + items.map(x => `${x.hex} ${detail(x)}`).join('  ')
+    : `  ${label.padEnd(8)}—`);
+  lines.push('',
+    ramp('surface', tokens.colors.ramps.surface, x => `(dL ${x.deltaL})`),
+    ramp('text', tokens.colors.ramps.text, x => `(${x.contrast}:1)`));
 
   const b = tokens.typography.body;
   const h = tokens.typography.heading;

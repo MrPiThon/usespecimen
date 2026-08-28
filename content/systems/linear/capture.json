@@ -15,7 +15,7 @@
     "sampleRatio": 0.59
   },
   "harvestVersion": 1,
-  "clusterVersion": 4,
+  "clusterVersion": 5,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -61,6 +61,42 @@
         "weightShare": 0.6893,
         "variants": []
       }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#0f1011",
+          "deltaL": 0.033,
+          "areaShare": 0.1156
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#f7f8f8",
+          "contrast": 18.73,
+          "charShare": 0.0805
+        },
+        {
+          "name": "text-2",
+          "hex": "#d0d6e0",
+          "contrast": 13.64,
+          "charShare": 0.3653
+        },
+        {
+          "name": "text-3",
+          "hex": "#8a8f98",
+          "contrast": 6.13,
+          "charShare": 0.3348
+        },
+        {
+          "name": "text-4",
+          "hex": "#62666d",
+          "contrast": 3.45,
+          "charShare": 0.0943
+        }
+      ]
     },
     "palette": [
       {

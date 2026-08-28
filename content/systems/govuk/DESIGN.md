@@ -9,6 +9,8 @@ colors:
   primary: '#0f7a52'
   primaryForeground: '#ffffff'
   border: '#cecece'
+  surface-1: '#f4f8fb'
+  text-1: '#0b0c0c'
 typography:
   fontFamily: '"GDS Transport", arial, sans-serif'
   headingFamily: '"GDS Transport", arial, sans-serif'
@@ -50,7 +52,7 @@ provenance:
   capturedAt: '2026-08-28T22:47:12.097Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 4
+  clusterVersion: 5
 ---
 
 ## Overview

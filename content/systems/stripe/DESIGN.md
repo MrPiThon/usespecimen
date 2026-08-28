@@ -10,6 +10,12 @@ colors:
   primary: '#533afd'
   primaryForeground: '#ffffff'
   border: '#e5edf5'
+  surface-1: '#f8fafd'
+  surface-2: '#e5edf5'
+  surface-3: '#d4dee9'
+  text-1: '#061b31'
+  text-2: '#50617a'
+  text-3: '#64748d'
 typography:
   fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
   headingFamily: 'sohne-var, "SF Pro Display", sans-serif'
@@ -64,7 +70,7 @@ provenance:
   capturedAt: '2026-08-28T22:47:09.750Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 4
+  clusterVersion: 5
 ---
 
 ## Overview
@@ -88,6 +94,10 @@ white label sits at 6.19:1.
 Borders are `#e5edf5` at 1.18:1 against the canvas. That is decorative
 separation, not a meaningful boundary, and it should not be asked to carry
 information on its own.
+
+Three surface steps sit above white — `#f8fafd`, `#e5edf5`, `#d4dee9` — and
+three text tiers below it at 17.37:1, 6.3:1 and 4.75:1. The palette is wide but
+every step is shallow, which is why the page reads as calm rather than layered.
 
 ## Typography
 

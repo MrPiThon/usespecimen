@@ -184,6 +184,15 @@ is what makes the palette recognisable:
   to interactive then body text; the emitted `source` says which.
 - **border** — top border cluster by count, not area.
 
+Alongside the roles, `colors.ramps` carries ordered ladders: `text` by contrast
+descending, `surface` by lightness distance from the canvas. They answer a
+different question from the roles — "what are the tiers" rather than "what is the
+body colour" — so `card` (the most-used surface, area-ranked) and `surface-1`
+(the nearest step, distance-ranked) can legitimately differ. Ramp membership is
+gated on **area share**, not chroma: real surfaces sit near 9% and 0.4% of
+painted background area while semantic overlays sit near 0.1%, and a chroma cut
+would wrongly reject deliberately tinted surfaces like Stripe's `#e5edf5`.
+
 The tuning constants at the top of the file were each derived from a measured
 failure on a real site, not chosen a priori:
 

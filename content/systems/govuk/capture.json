@@ -15,7 +15,7 @@
     "sampleRatio": 0.716
   },
   "harvestVersion": 1,
-  "clusterVersion": 4,
+  "clusterVersion": 5,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -58,6 +58,24 @@
         "weightShare": 0.6061,
         "variants": []
       }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f4f8fb",
+          "deltaL": 0.023,
+          "areaShare": 0.513
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#0b0c0c",
+          "contrast": 19.59,
+          "charShare": 0.5221
+        }
+      ]
     },
     "palette": [
       {
