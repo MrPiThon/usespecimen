@@ -50,7 +50,7 @@ provenance:
   capturedAt: '2026-08-28T22:47:12.097Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 3
+  clusterVersion: 4
 ---
 
 ## Overview

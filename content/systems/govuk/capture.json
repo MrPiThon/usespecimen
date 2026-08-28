@@ -15,7 +15,7 @@
     "sampleRatio": 0.716
   },
   "harvestVersion": 1,
-  "clusterVersion": 3,
+  "clusterVersion": 4,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -301,7 +301,10 @@
         "fg": "#0b0c0c",
         "bg": "#ffffff",
         "ratio": 19.59,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
         "aa": true,
         "aaa": true
       },
@@ -310,7 +313,10 @@
         "fg": "#ffffff",
         "bg": "#0f7a52",
         "ratio": 5.35,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
         "aa": true,
         "aaa": false
       },
@@ -319,21 +325,28 @@
         "fg": "#0f7a52",
         "bg": "#ffffff",
         "ratio": 5.35,
-        "nonText": false,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
         "aa": true,
-        "aaa": false
+        "aaa": null
       },
       {
         "pair": "border/background",
         "fg": "#cecece",
         "bg": "#ffffff",
         "ratio": 1.57,
-        "nonText": true,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
         "aa": false,
-        "aaa": false
+        "aaa": null
       }
     ],
     "failures": 1,
+    "textFailures": 0,
     "minRatio": 1.57
   },
   "warnings": [

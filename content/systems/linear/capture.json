@@ -15,7 +15,7 @@
     "sampleRatio": 0.59
   },
   "harvestVersion": 1,
-  "clusterVersion": 3,
+  "clusterVersion": 4,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -489,7 +489,10 @@
         "fg": "#d0d6e0",
         "bg": "#08090a",
         "ratio": 13.64,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
         "aa": true,
         "aaa": true
       },
@@ -498,7 +501,10 @@
         "fg": "#8a8f98",
         "bg": "#08090a",
         "ratio": 6.13,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
         "aa": true,
         "aaa": false
       },
@@ -507,21 +513,28 @@
         "fg": "#5e6ad2",
         "bg": "#08090a",
         "ratio": 4.24,
-        "nonText": false,
-        "aa": false,
-        "aaa": false
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a focus indicator, judged as a UI component",
+        "aa": true,
+        "aaa": null
       },
       {
         "pair": "border/background",
         "fg": "#1c1d1e",
         "bg": "#08090a",
         "ratio": 1.18,
-        "nonText": true,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
         "aa": false,
-        "aaa": false
+        "aaa": null
       }
     ],
-    "failures": 2,
+    "failures": 1,
+    "textFailures": 0,
     "minRatio": 1.18
   },
   "warnings": [

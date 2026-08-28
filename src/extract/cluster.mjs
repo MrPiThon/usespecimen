@@ -532,40 +532,63 @@ export function elevationTokens(capture) {
 // Contrast audit
 // ---------------------------------------------------------------------------
 
-const AA_TEXT = 4.5;
-const AA_LARGE = 3;
-const AAA_TEXT = 7;
+/** WCAG thresholds. 1.4.11 has no enhanced level, so `enhanced` is null there
+ *  rather than repeating the minimum — "not applicable" and "same bar twice"
+ *  are different claims. */
+const WCAG = {
+  text: { min: 4.5, enhanced: 7, criterion: '1.4.3 Contrast (Minimum)' },
+  nonText: { min: 3, enhanced: null, criterion: '1.4.11 Non-text Contrast' },
+};
 
-/** WCAG check on every pair the token set actually declares. Pairs whose
- *  colors we failed to observe are skipped, not assumed to pass. */
+/** Which criterion the accent falls under depends on what it actually is, which
+ *  only the extractor knows. A button fill or a focus ring is a UI component
+ *  judged at 3:1; a link colour is text judged at 4.5:1. Applying the text bar
+ *  to a focus ring reports a failure WCAG does not claim — Linear's #5e6ad2 at
+ *  4.24:1 is a conformant focus indicator, not a failing body colour. */
+const ACCENT_KIND = {
+  interactiveBg: ['nonText', 'accent is a button fill, judged as a UI component'],
+  focusRing: ['nonText', 'accent is a focus indicator, judged as a UI component'],
+  interactiveFg: ['text', 'accent is link text'],
+  textColors: ['text', 'accent is body text'],
+};
+
+/** WCAG check on every pair the token set actually declares. Pairs whose colors
+ *  we failed to observe are skipped, never assumed to pass. */
 export function contrastAudit(colors) {
   const { roles } = colors;
-  const rgbOf = hex => parseColor(hex);
+  const [accentKind, accentNote] = ACCENT_KIND[roles.primary?.source] ?? ['text', null];
+
   const pairs = [
-    ['foreground', 'background', false],
-    ['mutedForeground', 'background', false],
-    ['primaryForeground', 'primary', false],
-    ['primary', 'background', false],
-    ['border', 'background', true],
+    ['foreground', 'background', 'text', null],
+    ['mutedForeground', 'background', 'text', null],
+    ['primaryForeground', 'primary', 'text', 'label sitting on the accent fill'],
+    ['primary', 'background', accentKind, accentNote],
+    ['border', 'background', 'nonText',
+      'decorative separators legitimately fail; only boundaries that convey meaning must pass'],
   ];
 
   const results = [];
-  for (const [fgKey, bgKey, nonText] of pairs) {
+  for (const [fgKey, bgKey, kind, note] of pairs) {
     const fg = roles[fgKey]?.hex;
     const bg = roles[bgKey]?.hex;
     if (!fg || !bg) continue;
-    const ratio = round(contrastRatio(rgbOf(fg), rgbOf(bg)), 2);
-    const min = nonText ? AA_LARGE : AA_TEXT;
+    const { min, enhanced, criterion } = WCAG[kind];
+    const ratio = round(contrastRatio(parseColor(fg), parseColor(bg)), 2);
     results.push({
       pair: `${fgKey}/${bgKey}`,
-      fg, bg, ratio, nonText,
+      fg, bg, ratio, kind, criterion, min, note,
       aa: ratio >= min,
-      aaa: nonText ? ratio >= AA_LARGE : ratio >= AAA_TEXT,
+      aaa: enhanced === null ? null : ratio >= enhanced,
     });
   }
+
+  const failing = results.filter(r => !r.aa);
   return {
     pairs: results,
-    failures: results.filter(r => !r.aa).length,
+    failures: failing.length,
+    // Split out because they mean different things: a failing text pair
+    // disqualifies a file, a failing decorative border does not.
+    textFailures: failing.filter(r => r.kind === 'text').length,
     minRatio: results.length ? Math.min(...results.map(r => r.ratio)) : null,
   };
 }
@@ -646,8 +669,10 @@ export function cluster(capture) {
     // 2: accent requires a recurring fill, falls back to focus-ring colour.
     // 3: surfaces and borders cluster at SURFACE_MERGE instead of COLOR_MERGE,
     //    which moves `card` and `border` on any site with subtle surface steps.
+    // 4: contrast audit picks its WCAG criterion from the accent's source.
+    //    Tokens are unchanged from 3; only the audit verdicts move.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 3,
+    clusterVersion: 4,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
@@ -687,8 +712,11 @@ export function summarize(tokens) {
     + `${tokens.rounded.pill ? '  pill' : ''}  button:${tokens.rounded.button ?? '—'}`,
     `  shadows ${tokens.elevation.shadows.length}`);
 
+  // Show the bar each pair was judged against, so a 4.24:1 PASS doesn't read as
+  // a mistake when it is a focus ring measured at 3:1.
   lines.push('', ...tokens.audit.pairs.map(
-    p => `  ${p.aa ? 'PASS' : 'FAIL'} ${p.pair.padEnd(28)} ${p.ratio}:1`));
+    p => `  ${p.aa ? 'PASS' : 'FAIL'} ${p.pair.padEnd(28)} ${String(p.ratio).padStart(5)}:1`
+      + `  needs ${p.min}:1 ${p.kind === 'nonText' ? '(non-text)' : '(text)'}`));
   if (tokens.warnings.length) {
     lines.push('', ...tokens.warnings.map(x => `  ! ${x}`));
   }

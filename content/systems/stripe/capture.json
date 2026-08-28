@@ -15,7 +15,7 @@
     "sampleRatio": 0.667
   },
   "harvestVersion": 1,
-  "clusterVersion": 3,
+  "clusterVersion": 4,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -479,7 +479,10 @@
         "fg": "#061b31",
         "bg": "#ffffff",
         "ratio": 17.37,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
         "aa": true,
         "aaa": true
       },
@@ -488,7 +491,10 @@
         "fg": "#50617a",
         "bg": "#ffffff",
         "ratio": 6.3,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
         "aa": true,
         "aaa": false
       },
@@ -497,7 +503,10 @@
         "fg": "#ffffff",
         "bg": "#533afd",
         "ratio": 6.19,
-        "nonText": false,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
         "aa": true,
         "aaa": false
       },
@@ -506,21 +515,28 @@
         "fg": "#533afd",
         "bg": "#ffffff",
         "ratio": 6.19,
-        "nonText": false,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
         "aa": true,
-        "aaa": false
+        "aaa": null
       },
       {
         "pair": "border/background",
         "fg": "#e5edf5",
         "bg": "#ffffff",
         "ratio": 1.18,
-        "nonText": true,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
         "aa": false,
-        "aaa": false
+        "aaa": null
       }
     ],
     "failures": 1,
+    "textFailures": 0,
     "minRatio": 1.18
   },
   "warnings": [
