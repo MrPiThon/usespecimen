@@ -1,0 +1,49 @@
+name: CI
+
+# A DESIGN.md that breaks the spec fails `astro build` — that enforcement is the
+# product claim, and this workflow is what makes it true for contributions
+# rather than only for whoever happens to build locally before opening a PR.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and validate content
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      # Not `npm install`: ci fails on a lockfile that has drifted from
+      # package.json, which is a real class of broken PR.
+      - run: npm ci
+
+      # Deliberately no `npx playwright install`. Ingestion never runs here —
+      # the browser is only needed to produce a capture, and the site build
+      # reads captures that are already in the repo. Re-capture in CI is P2.
+      - name: Build site (fails on any spec violation)
+        run: npm run build
+
+      - name: Check raw files are byte-identical to source
+        run: |
+          for f in content/systems/*/DESIGN.md; do
+            slug=$(basename "$(dirname "$f")")
+            if ! cmp -s "$f" "dist/r/$slug/DESIGN.md"; then
+              echo "::error file=$f::/r/$slug/DESIGN.md does not match the source file"
+              exit 1
+            fi
+          done
+          echo "All $(ls -d content/systems/*/ | wc -l) raw files match their source."
