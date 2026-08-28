@@ -185,11 +185,24 @@ is what makes the palette recognisable:
 - **border** — top border cluster by count, not area.
 
 The tuning constants at the top of the file were each derived from a measured
-failure on a real site, not chosen a priori: `MUTED_MAX_CHROMA` at 0.08 sits
-between observed muted greys (0.015–0.046) and observed link blues (0.125+), and
-`GRID_CANDIDATES` excludes 2 because every even value divides by it, so it wins
-whenever nothing else fits. Changing them without re-running the reference sites
-is how the palette quietly regresses.
+failure on a real site, not chosen a priori:
+
+- `COLOR_MERGE` 0.045 for **text and interactive** — Stripe's navy variants sit
+  0.0424 apart and must merge, its grey tiers 0.0669 apart and must not.
+- `SURFACE_MERGE` 0.015 for **backgrounds and borders**. Surfaces step by
+  0.018–0.034 in both light and dark, so the coarse threshold swallowed them.
+  One threshold cannot serve both roles; that mistake published a translucent
+  red danger overlay as Linear's card surface.
+- `MIN_ACCENT_COUNT` 2 — a brand accent recurs. A single large fill is a promo
+  panel, which is how a yellow banner once became Linear's brand colour.
+- `MUTED_MAX_CHROMA` 0.08 sits between observed muted greys (0.015–0.046) and
+  observed link blues (0.125+).
+- `GRID_CANDIDATES` excludes 2, because every even value divides by it and it
+  wins whenever nothing else fits.
+
+Changing any of them without re-running the reference sites is how the palette
+quietly regresses. Bump `clusterVersion` when you do — drift diffs are only
+meaningful within one version.
 
 Output is deterministic and carries `harvestVersion` + `clusterVersion`, so a
 drift diff can tell a redesign from a pipeline change. That is the schema

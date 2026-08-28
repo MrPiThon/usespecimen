@@ -15,7 +15,7 @@
     "sampleRatio": 0.716
   },
   "harvestVersion": 1,
-  "clusterVersion": 2,
+  "clusterVersion": 3,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -35,7 +35,11 @@
         "weightShare": 0.5221,
         "variants": []
       },
-      "card": null,
+      "card": {
+        "hex": "#f4f8fb",
+        "weightShare": 0.513,
+        "variants": []
+      },
       "mutedForeground": null,
       "primary": {
         "hex": "#0f7a52",
@@ -58,11 +62,19 @@
     "palette": [
       {
         "hex": "#f4f8fb",
-        "role": null,
+        "role": "card",
         "hue": "neutral",
         "lightness": 0.977,
         "chroma": 0.006,
-        "count": 8
+        "count": 4
+      },
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 4
       },
       {
         "hex": "#1d70b8",
@@ -105,14 +117,6 @@
         "count": 77
       },
       {
-        "hex": "#ffffff",
-        "role": "background",
-        "hue": "neutral",
-        "lightness": 1,
-        "chroma": 0,
-        "count": 6
-      },
-      {
         "hex": "#cecece",
         "role": "border",
         "hue": "neutral",
@@ -144,7 +148,7 @@
       }
     ],
     "clusterCounts": {
-      "bg": 4,
+      "bg": 5,
       "text": 4,
       "border": 5,
       "interactive": 3

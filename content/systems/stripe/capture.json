@@ -15,7 +15,7 @@
     "sampleRatio": 0.667
   },
   "harvestVersion": 1,
-  "clusterVersion": 2,
+  "clusterVersion": 3,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -37,11 +37,9 @@
       },
       "card": {
         "hex": "#e5edf5",
-        "weightShare": 0.1228,
+        "weightShare": 0.1225,
         "variants": [
-          "#e2e4ff",
-          "#e3ecf7",
-          "#e8e9ff"
+          "#e3ecf7"
         ]
       },
       "mutedForeground": {
@@ -63,11 +61,8 @@
       },
       "border": {
         "hex": "#e5edf5",
-        "weightShare": 0.6709,
-        "variants": [
-          "#e2e4ff",
-          "#f6f9fc"
-        ]
+        "weightShare": 0.6076,
+        "variants": []
       }
     },
     "palette": [
@@ -77,7 +72,7 @@
         "hue": "neutral",
         "lightness": 1,
         "chroma": 0,
-        "count": 39
+        "count": 29
       },
       {
         "hex": "#e5edf5",
@@ -85,7 +80,7 @@
         "hue": "neutral",
         "lightness": 0.942,
         "chroma": 0.014,
-        "count": 26
+        "count": 20
       },
       {
         "hex": "#0d1738",
@@ -94,6 +89,14 @@
         "lightness": 0.217,
         "chroma": 0.066,
         "count": 1
+      },
+      {
+        "hex": "#f8fafd",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.984,
+        "chroma": 0.005,
+        "count": 10
       },
       {
         "hex": "#d4dee9",
@@ -125,7 +128,15 @@
         "hue": "purple",
         "lightness": 0.926,
         "chroma": 0.037,
-        "count": 7
+        "count": 3
+      },
+      {
+        "hex": "#e8e9ff",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.94,
+        "chroma": 0.03,
+        "count": 3
       },
       {
         "hex": "#0a2540",
@@ -246,22 +257,6 @@
         "lightness": 0.631,
         "chroma": 0.145,
         "count": 1
-      },
-      {
-        "hex": "#ff6118",
-        "role": null,
-        "hue": "orange",
-        "lightness": 0.69,
-        "chroma": 0.206,
-        "count": 8
-      },
-      {
-        "hex": "#2d2564",
-        "role": null,
-        "hue": "purple",
-        "lightness": 0.313,
-        "chroma": 0.107,
-        "count": 1
       }
     ],
     "accentRejected": [
@@ -271,9 +266,9 @@
       }
     ],
     "clusterCounts": {
-      "bg": 10,
+      "bg": 13,
       "text": 16,
-      "border": 7,
+      "border": 9,
       "interactive": 4
     }
   },

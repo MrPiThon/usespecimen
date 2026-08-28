@@ -5,6 +5,7 @@ description: 'Function-first public service design: zero ornament, zero radius, 
 colors:
   background: '#ffffff'
   foreground: '#0b0c0c'
+  card: '#f4f8fb'
   primary: '#0f7a52'
   primaryForeground: '#ffffff'
   border: '#cecece'
@@ -41,7 +42,7 @@ components:
     foreground: '{colors.primaryForeground}'
     radius: '0px'
   surface:
-    background: '{colors.background}'
+    background: '{colors.card}'
     border: '{colors.border}'
 provenance:
   brand: 'GOV.UK'
@@ -49,7 +50,7 @@ provenance:
   capturedAt: '2026-08-28T22:47:12.097Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 2
+  clusterVersion: 3
 ---
 
 ## Overview

@@ -5,7 +5,7 @@ description: 'Dense dark product UI: near-black canvas, small tight type, and a 
 colors:
   background: '#08090a'
   foreground: '#d0d6e0'
-  card: '#201011'
+  card: '#0f1011'
   mutedForeground: '#8a8f98'
   primary: '#5e6ad2'
   border: '#1c1d1e'
@@ -62,7 +62,7 @@ provenance:
   capturedAt: '2026-08-28T22:26:46.603Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 1
-  clusterVersion: 2
+  clusterVersion: 3
 ---
 
 ## Overview

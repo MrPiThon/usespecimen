@@ -21,10 +21,25 @@ import {
   parseColor, toHex, flatten, toOklch, deltaE, contrastRatio, relativeLuminance, hueFamily,
 } from './color.mjs';
 
-/** OKLab distance below which two colors are one token. 0.02 is a
- *  just-noticeable step; 0.045 swallows hover/opacity variants without merging
- *  two distinct brand hues. The single most consequential number in the file. */
+/** OKLab distance below which two TEXT or interactive colors are one token.
+ *  Measured against real pairs: Stripe's navy variants sit 0.0424 apart and must
+ *  merge, its two grey tiers 0.0669 apart and must not. 0.045 splits them. */
 export const COLOR_MERGE = 0.045;
+
+/**
+ * The same threshold for SURFACES, which need a much finer one.
+ *
+ * Design systems separate adjacent panels by deliberately small steps —
+ * measured at 0.018–0.034 in both light and dark (`#08090a`→`#0f1011` is 0.0334,
+ * `#ffffff`→`#f7f8f8` is 0.0217). At 0.045 those all collapse into the page
+ * background, which is how Linear's card surface disappeared and the role fell
+ * through to a translucent red danger overlay.
+ *
+ * 0.015 sits just under the ~0.02 just-noticeable step, so it still folds away
+ * genuinely imperceptible variants (`#ffffff`→`#fcfcfd` is 0.0088) while keeping
+ * every step a designer chose on purpose.
+ */
+export const SURFACE_MERGE = 0.015;
 
 /** OKLCH chroma below which a color reads as grey. Matches hueFamily's cutoff. */
 export const CHROMATIC = 0.03;
@@ -92,9 +107,9 @@ function colorEntries(map, weightKey, backdrop) {
 }
 
 /** Leader clustering in OKLab: the heaviest value seeds a cluster, lighter ones
- *  join their nearest leader within COLOR_MERGE. The leader is a real sampled
+ *  join their nearest leader within `threshold`. The leader is a real sampled
  *  color, so nothing here fabricates a hex. */
-export function clusterColors(entries) {
+export function clusterColors(entries, threshold = COLOR_MERGE) {
   const clusters = [];
   for (const e of entries) {
     let best = null;
@@ -103,7 +118,7 @@ export function clusterColors(entries) {
       const d = deltaE(e.rgb, c.rgb);
       if (d < bestD) { bestD = d; best = c; }
     }
-    if (best && bestD <= COLOR_MERGE) {
+    if (best && bestD <= threshold) {
       best.weight += e.weight;
       best.count += e.count;
       if (e.hex !== best.hex) best.variants.add(e.hex);
@@ -169,12 +184,15 @@ const token = (cluster, share, extra = {}) => cluster && ({
 
 export function colorTokens(capture) {
   const backdrop = resolveBackdrop(capture);
-  const bg = clusterColors(colorEntries(capture.bgColors, 'area', backdrop.rgb));
+  // Surfaces and borders cluster finely; text and interactive fills coarsely.
+  // One threshold cannot do both — see SURFACE_MERGE.
+  const bg = clusterColors(colorEntries(capture.bgColors, 'area', backdrop.rgb), SURFACE_MERGE);
   const text = clusterColors(colorEntries(capture.textColors, 'chars', backdrop.rgb));
   // Borders weight by count, not area: a design system uses one border color on
   // many small cards, and area would hand the token to whichever single big
   // section happens to be outlined.
-  const border = clusterColors(colorEntries(capture.borderColors, 'count', backdrop.rgb));
+  const border = clusterColors(
+    colorEntries(capture.borderColors, 'count', backdrop.rgb), SURFACE_MERGE);
   const iBg = clusterColors(colorEntries(capture.interactiveBg, 'area', backdrop.rgb));
   const iFg = clusterColors(colorEntries(capture.interactiveFg, 'chars', backdrop.rgb));
 
@@ -209,7 +227,7 @@ export function colorTokens(capture) {
   // never a color the site fills buttons with. Without both guards this picks
   // up the brightest CTA on the page and calls it a card.
   const accents = new Set(iBg.map(c => c.hex));
-  const card = bg.find(c => deltaE(c.rgb, backdrop.rgb) > COLOR_MERGE
+  const card = bg.find(c => deltaE(c.rgb, backdrop.rgb) > SURFACE_MERGE
     && Math.abs(toOklch(c.rgb).L - bgLightness) <= SURFACE_MAX_DL
     && !accents.has(c.hex)) || null;
 
@@ -625,10 +643,11 @@ export function cluster(capture) {
     // with both versions unchanged are a real redesign; anything else is us.
     // A null harvestVersion means a capture taken before the field existed.
     harvestVersion: capture.harvestVersion ?? null,
-    // 2: accent role now requires a recurring fill and falls back to focus-ring
-    // colour. Moves `primary` on any site whose brightest interactive fill was a
-    // one-off, so v1 and v2 token sets are not comparable for drift.
-    clusterVersion: 2,
+    // 2: accent requires a recurring fill, falls back to focus-ring colour.
+    // 3: surfaces and borders cluster at SURFACE_MERGE instead of COLOR_MERGE,
+    //    which moves `card` and `border` on any site with subtle surface steps.
+    // Token sets are only comparable for drift within the same version.
+    clusterVersion: 3,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

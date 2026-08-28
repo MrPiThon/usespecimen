@@ -298,14 +298,20 @@ Every item below came from diffing our Linear output against getdesign.md's on
 28 Aug 2026, and each is stated with the number that proves it. Ordered by how
 much it distorts a shipped file.
 
-**1. Dark surfaces over-merge. (bug, highest impact)**
-`COLOR_MERGE` is a flat 0.045 in OKLab, but lightness compresses at the dark end:
-`deltaE(#08090a, #0f1011) = 0.0334`, so Linear's canvas and its card surface
-collapse into one cluster. The `card` role then falls through to `#201011`, which
-is `rgba(243, 78, 82, 0.1)` — a red danger-state overlay — composited over the
-canvas. An observed colour, but semantically an error tint, published as a
-surface. Fix: scale the merge threshold by lightness, or resolve surfaces by
-lightness step rather than by cluster separation.
+**1. ~~Dark surfaces over-merge.~~ FIXED, cluster v3.**
+Diagnosed as a dark-region problem, but the measurements said otherwise: real
+surface steps are 0.018–0.034 apart in *both* polarities (`#08090a`→`#0f1011` is
+0.0334, `#ffffff`→`#f7f8f8` is 0.0217), while text needs the coarse 0.045 to fold
+antialiasing variants together (Stripe's navy variants are 0.0424 apart and must
+merge; its grey tiers are 0.0669 apart and must not). Not a lightness problem —
+a *role* problem. Surfaces and borders now cluster at `SURFACE_MERGE = 0.015`,
+just under the ~0.02 just-noticeable step.
+
+Linear's `card` went from `#201011` — which was `rgba(243, 78, 82, 0.1)`, a red
+danger overlay composited over the canvas — to `#0f1011`, matching the
+`surface-1` getdesign.md derived by hand. Stripe and GOV.UK primaries and text
+tiers are unchanged. This also unblocks item 2: the surface ramp now exists in
+the cluster output instead of being merged away.
 
 **2. We emit roles; they emit ramps.**
 They ship `ink / ink-muted / ink-subtle / ink-tertiary` and `surface-1..4`. We
