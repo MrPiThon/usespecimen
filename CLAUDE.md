@@ -33,13 +33,24 @@ prose *about* values it was handed.
 
 ```bash
 npm install
+npm run dev                                   # Astro dev server on :4321
+npm run build                                 # static build to dist/
+```
+
+```bash
 npx playwright install chromium               # one-time; already present on this machine
 npm run extract -- https://stripe.com         # → out/stripe/capture.json
 npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
 ```
 
-- Node 24, ESM only. Every source file is `.mjs` and `package.json` sets
+- Node 24, ESM only; extractor sources are `.mjs`, and `package.json` sets
   `"type": "module"`.
+- **`npm run build` fails if any DESIGN.md breaks the spec** — wrong section
+  order, a duplicate heading, or a `{token.reference}` that resolves to nothing.
+  That is deliberate and it is the product claim; don't route around it by
+  loosening the schema when a file fails.
+- Playwright is a **devDependency**. The ingestion pipeline is never part of the
+  web app, so the site build must never import from `src/extract/`.
 - `extract` accepts several urls at once; one failure doesn't abort the rest and
   the exit code is non-zero if any failed. `--json` prints the token set on
   stdout while progress goes to stderr, so it pipes. `--slug` overrides the
@@ -68,6 +79,34 @@ light/dark  styles     into a      writes     lint +    + capture
 
 The whole pipeline is a Node CLI that runs offline in CI and writes files. It is
 **never** part of the web app.
+
+### The site — Astro 7, static
+
+Note the version: PLAN.md says Astro 6, but the registry serves **7.2.9**. The
+Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
+`defineCollection`/`render` from `astro:content`).
+
+- `content/systems/<slug>/` holds `DESIGN.md` + `capture.json`. The directory
+  name is the slug, so `/systems/stripe` and `specimen add stripe` line up.
+- `src/content.config.ts` is where validation lives. The Zod schema mirrors the
+  Google spec and adds a **required** `provenance` block — an undated file is
+  precisely what the incumbent ships, so the schema refuses one.
+- `src/lib/design-md.mjs` is the spec linter: section order, duplicates, and
+  `{token.reference}` resolution. Deliberately framework-free so `/validate` and
+  the CLI can share it. It normalises smart quotes, which matters because
+  Markdown rendering turns `Do's and Don'ts` into a curly apostrophe.
+- The detail page **throws** on lint errors, which fails the build. Contrast
+  failures do not: non-text pairs below 3:1 are near-universal on real sites
+  (four of four reference captures), so those are reported, not disqualifying.
+- `src/lib/system-files.mjs` reads `DESIGN.md` from disk rather than using
+  `entry.body`, because the Content Layer strips frontmatter and the file people
+  paste into an agent is the whole thing. Verified byte-identical at
+  `/r/<slug>/DESIGN.md`.
+- `public/_headers` carries the CORS and content-type contract for `/r/*`; a
+  static build discards `Response` headers, so setting them in the endpoint
+  alone would silently do nothing.
+- The hostname is in `astro.config.mjs` and nowhere else. Everything derives
+  from `Astro.site`.
 
 ### `src/extract/harvest.mjs` — runs inside the page
 
@@ -185,8 +224,13 @@ published `#0b0c0c` / 19px GDS Transport / 5px spacing base and Stripe's navy,
 indigo and 4px grid, so the differentiator holds. Known soft spot: `card` on
 Linear returns a dark maroon rather than its neutral surface.
 
-Not built: the Astro site, the spec linter, the DESIGN.md authoring step, tests,
-git history.
+The site is scaffolded and builds: `/`, `/systems`, `/systems/<slug>` and the raw
+`/r/<slug>/DESIGN.md`, over three seeded systems (stripe, govuk, linear) whose
+frontmatter was generated from their captures rather than typed by hand.
+
+Not built: Pagefind and facets, the live component preview, `/validate`,
+`/spec`, `/cli`, `/mcp`, `/submit`, `/about`, screenshots (`source.avif`), the
+model authoring step, and tests.
 
 ## Environment — don't repeat these dead ends
 

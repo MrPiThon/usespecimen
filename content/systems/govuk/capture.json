@@ -1,0 +1,688 @@
+{
+  "capturedAt": "2026-08-28T22:47:12.097Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
+  "source": {
+    "url": "https://www.gov.uk/",
+    "title": "Welcome to GOV.UK",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 4923,
+    "elementCount": 616,
+    "sampled": 441,
+    "sampleRatio": 0.716
+  },
+  "harvestVersion": 1,
+  "clusterVersion": 1,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#0b0c0c",
+        "weightShare": 0.5221,
+        "variants": []
+      },
+      "card": null,
+      "mutedForeground": null,
+      "primary": {
+        "hex": "#0f7a52",
+        "weightShare": 0.6749,
+        "variants": [],
+        "source": "interactiveBg"
+      },
+      "primaryForeground": {
+        "hex": "#ffffff",
+        "weightShare": 0.0281,
+        "variants": []
+      },
+      "border": {
+        "hex": "#cecece",
+        "weightShare": 0.6061,
+        "variants": []
+      }
+    },
+    "palette": [
+      {
+        "hex": "#f4f8fb",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.977,
+        "chroma": 0.006,
+        "count": 8
+      },
+      {
+        "hex": "#1d70b8",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.535,
+        "chroma": 0.136,
+        "count": 4
+      },
+      {
+        "hex": "#0f7a52",
+        "role": "primary",
+        "hue": "teal",
+        "lightness": 0.514,
+        "chroma": 0.11,
+        "count": 2
+      },
+      {
+        "hex": "#d2e2f1",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.905,
+        "chroma": 0.027,
+        "count": 1
+      },
+      {
+        "hex": "#0b0c0c",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.153,
+        "chroma": 0.002,
+        "count": 48
+      },
+      {
+        "hex": "#1a65a6",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.497,
+        "chroma": 0.125,
+        "count": 77
+      },
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#cecece",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.851,
+        "chroma": 0,
+        "count": 20
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 1
+      },
+      {
+        "hex": "#8eb8dc",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.765,
+        "chroma": 0.069,
+        "count": 4
+      }
+    ],
+    "clusterCounts": {
+      "bg": 4,
+      "text": 4,
+      "border": 5,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "GDS Transport",
+      "class": "sans",
+      "stack": "\"GDS Transport\", arial, sans-serif",
+      "sizePx": 19,
+      "weight": 400,
+      "lineHeightPx": 25,
+      "lineHeightRatio": 1.32,
+      "lineHeightInferred": true,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "GDS Transport",
+      "class": "sans",
+      "stack": "\"GDS Transport\", arial, sans-serif",
+      "largestPx": 36,
+      "weight": 700,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "GDS Transport",
+        "class": "sans",
+        "stack": "\"GDS Transport\", arial, sans-serif"
+      },
+      {
+        "family": "Arial",
+        "class": "unknown",
+        "stack": "Arial"
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 13.3333,
+        "rem": 0.702,
+        "weightShare": 0.0034,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 16,
+        "rem": 0.842,
+        "weightShare": 0.0319,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 19,
+        "rem": 1,
+        "weightShare": 0.9049,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 24,
+        "rem": 1.263,
+        "weightShare": 0.0196,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 28.5,
+        "rem": 1.5,
+        "weightShare": 0.0034,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 36,
+        "rem": 1.895,
+        "weightShare": 0.0215,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 64,
+        "rem": 3.368,
+        "weightShare": 0.0152,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 7
+  },
+  "spacing": {
+    "base": 5,
+    "gridConfidence": 0.757,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.061
+      },
+      {
+        "base": 6,
+        "share": 0.13
+      },
+      {
+        "base": 5,
+        "share": 0.757
+      },
+      {
+        "base": 4,
+        "share": 0.183
+      }
+    ],
+    "scale": [
+      5,
+      6,
+      8,
+      10,
+      15,
+      16,
+      19,
+      20,
+      30,
+      60
+    ],
+    "distinctValues": 11
+  },
+  "rounded": {
+    "scale": [],
+    "button": null,
+    "pill": false,
+    "sharp": true
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgb(11, 12, 12) 0px 3px 0px 0px",
+        "count": 3
+      },
+      {
+        "value": "rgb(8, 61, 41) 0px 2px 0px 0px",
+        "count": 2
+      }
+    ],
+    "flat": false
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#0b0c0c",
+        "bg": "#ffffff",
+        "ratio": 19.59,
+        "nonText": false,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#ffffff",
+        "bg": "#0f7a52",
+        "ratio": 5.35,
+        "nonText": false,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0f7a52",
+        "bg": "#ffffff",
+        "ratio": 5.35,
+        "nonText": false,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "border/background",
+        "fg": "#cecece",
+        "bg": "#ffffff",
+        "ratio": 1.57,
+        "nonText": true,
+        "aa": false,
+        "aaa": false
+      }
+    ],
+    "failures": 1,
+    "minRatio": 1.57
+  },
+  "warnings": [
+    "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "No border radius anywhere; treat as a deliberately sharp system.",
+    "Strided sample: 441 of 616 elements. Weights are relative only."
+  ],
+  "harvest": {
+    "harvestVersion": 1,
+    "url": "https://www.gov.uk/",
+    "title": "Welcome to GOV.UK",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 4923,
+    "textColors": {
+      "rgb(11, 12, 12)": {
+        "count": 48,
+        "area": 753610.484375,
+        "chars": 1994
+      },
+      "rgb(255, 255, 255)": {
+        "count": 6,
+        "area": 194137.765625,
+        "chars": 131
+      },
+      "rgb(26, 101, 166)": {
+        "count": 76,
+        "area": 364146.984375,
+        "chars": 1666
+      },
+      "rgb(0, 0, 0)": {
+        "count": 1,
+        "area": 1,
+        "chars": 15
+      },
+      "rgb(29, 112, 184)": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      }
+    },
+    "bgColors": {
+      "rgb(244, 248, 251)": {
+        "count": 4,
+        "area": 8846145,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 4,
+        "area": 7611725,
+        "chars": 0
+      },
+      "rgb(15, 122, 82)": {
+        "count": 2,
+        "area": 17637.34375,
+        "chars": 50
+      },
+      "rgb(29, 112, 184)": {
+        "count": 4,
+        "area": 766419,
+        "chars": 0
+      },
+      "rgb(210, 226, 241)": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      }
+    },
+    "borderColors": {
+      "rgba(0, 0, 0, 0)": {
+        "count": 3,
+        "area": 485637.34375,
+        "chars": 50
+      },
+      "rgb(29, 112, 184)": {
+        "count": 5,
+        "area": 4005600,
+        "chars": 0
+      },
+      "rgb(244, 248, 251)": {
+        "count": 1,
+        "area": 2997.421875,
+        "chars": 4
+      },
+      "rgb(206, 206, 206)": {
+        "count": 20,
+        "area": 1345050,
+        "chars": 0
+      },
+      "rgb(142, 184, 220)": {
+        "count": 4,
+        "area": 123270,
+        "chars": 43
+      },
+      "rgb(11, 12, 12)": {
+        "count": 3,
+        "area": 16284.046875,
+        "chars": 36
+      }
+    },
+    "fontFamilies": {
+      "\"GDS Transport\", arial, sans-serif": {
+        "count": 131,
+        "area": 1311896.234375,
+        "chars": 3806
+      },
+      "Arial": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      }
+    },
+    "fontSizes": {
+      "24px": {
+        "count": 4,
+        "area": 66331,
+        "chars": 75
+      },
+      "19px": {
+        "count": 112,
+        "area": 954600.265625,
+        "chars": 3456
+      },
+      "16px": {
+        "count": 8,
+        "area": 22011.96875,
+        "chars": 122
+      },
+      "64px": {
+        "count": 1,
+        "area": 157752,
+        "chars": 58
+      },
+      "13.3333px": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      },
+      "36px": {
+        "count": 5,
+        "area": 111200,
+        "chars": 82
+      },
+      "28.5px": {
+        "count": 1,
+        "area": 1,
+        "chars": 13
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 75,
+        "area": 739998.953125,
+        "chars": 2550
+      },
+      "700": {
+        "count": 57,
+        "area": 574397.28125,
+        "chars": 1269
+      }
+    },
+    "lineHeights": {
+      "30px": {
+        "count": 3,
+        "area": 66330,
+        "chars": 60
+      },
+      "25px": {
+        "count": 102,
+        "area": 876225.09375,
+        "chars": 3166
+      },
+      "19px": {
+        "count": 3,
+        "area": 19663.21875,
+        "chars": 62
+      },
+      "20px": {
+        "count": 8,
+        "area": 19015.546875,
+        "chars": 131
+      },
+      "68.48px": {
+        "count": 1,
+        "area": 157752,
+        "chars": 58
+      },
+      "40px": {
+        "count": 5,
+        "area": 111200,
+        "chars": 82
+      },
+      "24.7px": {
+        "count": 6,
+        "area": 58710.953125,
+        "chars": 215
+      },
+      "37.5px": {
+        "count": 1,
+        "area": 1,
+        "chars": 13
+      }
+    },
+    "letterSpacings": {},
+    "radii": {},
+    "shadows": {
+      "rgb(8, 61, 41) 0px 2px 0px 0px": {
+        "count": 2,
+        "area": 17637.34375,
+        "chars": 50
+      },
+      "rgb(11, 12, 12) 0px 3px 0px 0px": {
+        "count": 3,
+        "area": 16284.046875,
+        "chars": 36
+      }
+    },
+    "spacings": {
+      "5": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "15": {
+        "count": 33,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "19": {
+        "count": 20,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 7,
+        "area": 0,
+        "chars": 0
+      },
+      "30": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "60": {
+        "count": 7,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(15, 122, 82)": {
+        "count": 2,
+        "area": 17637.34375,
+        "chars": 50
+      },
+      "rgb(29, 112, 184)": {
+        "count": 1,
+        "area": 5994,
+        "chars": 0
+      },
+      "rgb(210, 226, 241)": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 86,
+        "area": 437723.546875,
+        "chars": 1782
+      }
+    },
+    "interactiveFg": {
+      "rgb(255, 255, 255)": {
+        "count": 5,
+        "area": 33657.265625,
+        "chars": 50
+      },
+      "rgb(26, 101, 166)": {
+        "count": 76,
+        "area": 364146.984375,
+        "chars": 1666
+      },
+      "rgb(29, 112, 184)": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      },
+      "rgb(11, 12, 12)": {
+        "count": 4,
+        "area": 37419.296875,
+        "chars": 53
+      }
+    },
+    "headingSizes": {
+      "24px": {
+        "count": 4,
+        "area": 66331,
+        "chars": 75
+      },
+      "36px": {
+        "count": 5,
+        "area": 111200,
+        "chars": 82
+      },
+      "16px": {
+        "count": 1,
+        "area": 2727.5,
+        "chars": 20
+      },
+      "28.5px": {
+        "count": 1,
+        "area": 1,
+        "chars": 13
+      }
+    },
+    "headingFamilies": {
+      "\"GDS Transport\", arial, sans-serif": {
+        "count": 11,
+        "area": 180259.5,
+        "chars": 190
+      }
+    },
+    "headingWeights": {
+      "700": {
+        "count": 11,
+        "area": 180259.5,
+        "chars": 190
+      }
+    },
+    "pageBg": "rgb(255, 255, 255)",
+    "elementCount": 616,
+    "sampled": 441
+  }
+}

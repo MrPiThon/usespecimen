@@ -1,0 +1,6 @@
+# Static builds drop Response headers, so the raw-file contract lives here.
+# Agents fetch these cross-origin, so they must stay CORS-open and plain text.
+/r/*
+  Access-Control-Allow-Origin: *
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=300

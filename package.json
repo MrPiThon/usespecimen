@@ -7,9 +7,15 @@
   "scripts": {
     "extract": "node src/cli.mjs extract",
     "cluster": "node src/cli.mjs cluster",
-    "postinstall-note": "run: npx playwright install chromium"
+    "postinstall-note": "run: npx playwright install chromium",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
+    "astro": "^7.2.9"
+  },
+  "devDependencies": {
     "playwright": "^1.62.1"
   }
 }

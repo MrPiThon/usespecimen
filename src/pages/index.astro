@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const systems = (await getCollection('systems'))
+  .sort((a, b) => b.data.provenance.capturedAt.getTime() - a.data.provenance.capturedAt.getTime());
+---
+
+<Base
+  title="Specimen — verified DESIGN.md files for coding agents"
+  description="DESIGN.md files extracted from live sites by a real crawler: dated, spec-linted, contrast-audited and installable with one command."
+>
+  <section style="padding:4rem 0 2rem;">
+    <h1 class="prose" style="max-width:20ch;">
+      DESIGN.md files your agent can trust.
+    </h1>
+    <p class="prose" style="font-size:1.1rem;color:var(--muted);">
+      Every file here was extracted from the live site by a headless browser, not
+      described from a screenshot. Tokens come from <code>getComputedStyle</code>,
+      so no colour on this site was invented. Each file is dated, checked against
+      the DESIGN.md spec, and contrast-audited in public.
+    </p>
+
+    <div class="panel" style="max-width:32rem;margin-top:1.5rem;">
+      <pre style="margin:0;"><code>npx specimen add stripe</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recently verified</h2>
+    <div class="grid" style="margin-top:1rem;">
+      {systems.map((s) => {
+        const c = s.data.colors ?? {};
+        return (
+          <a class="card" href={`/systems/${s.id}`}>
+            <h3>{s.data.name}</h3>
+            <p>{s.data.description}</p>
+            <div class="swatches">
+              {['background', 'card', 'primary', 'foreground']
+                .filter((k) => typeof c[k] === 'string')
+                .map((k) => <span class="swatch" style={`background:${c[k]}`} title={`${k} ${c[k]}`}></span>)}
+            </div>
+          </a>
+        );
+      })}
+    </div>
+    <p style="margin-top:1.5rem;"><a href="/systems">All systems →</a></p>
+  </section>
+
+  <section class="prose">
+    <h2>Why this is different</h2>
+    <ul>
+      <li><strong>The whole file is on the page.</strong> Rendered, copyable, and
+        available raw at a permanent URL. No sign-in, no paywall.</li>
+      <li><strong>Dated and reproducible.</strong> Each entry records when it was
+        captured, from which URL, and by which pipeline version.</li>
+      <li><strong>Validated at build time.</strong> A file that breaks the spec's
+        section rules fails the build, so it cannot reach this site.</li>
+      <li><strong>Honest about gaps.</strong> Where the extractor could not
+        observe a token, the file omits it and says why, rather than guessing.</li>
+    </ul>
+  </section>
+</Base>

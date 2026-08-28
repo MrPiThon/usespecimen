@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const systems = (await getCollection('systems'))
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+// Facets come from the token data itself rather than hand-tagging. Pagefind and
+// the full facet set land in P1; this is the shape they plug into.
+const swatchKeys = ['background', 'card', 'primary', 'foreground'];
+---
+
+<Base
+  title="Systems — Specimen"
+  description="Design systems extracted from live sites, dated, spec-linted and contrast-audited."
+>
+  <h1 style="margin-top:2rem;">Systems</h1>
+  <p class="prose" style="color:var(--muted);">
+    {systems.length} {systems.length === 1 ? 'system' : 'systems'}, each extracted
+    from the live site by a headless browser and verified against the DESIGN.md spec.
+  </p>
+
+  <div class="grid" style="margin-top:2rem;">
+    {systems.map((s) => {
+      const c = s.data.colors ?? {};
+      const captured = s.data.provenance.capturedAt;
+      return (
+        <a class="card" href={`/systems/${s.id}`}>
+          <h3>{s.data.name}</h3>
+          <p>{s.data.description}</p>
+          <div class="swatches">
+            {swatchKeys.filter((k) => typeof c[k] === 'string').map((k) => (
+              <span class="swatch" style={`background:${c[k]}`} title={`${k} ${c[k]}`}></span>
+            ))}
+          </div>
+          <p style="margin:0.75rem 0 0;font-size:0.8rem;">
+            {s.data.provenance.brand} · verified <time datetime={captured.toISOString()}>
+              {captured.toISOString().slice(0, 10)}</time>
+          </p>
+        </a>
+      );
+    })}
+  </div>
+</Base>
