@@ -64,16 +64,40 @@ components:
     background: '{colors.primary}'
     foreground: '{colors.primaryForeground}'
     radius: '0px'
+    active:
+      color: '#ffffff'
+    focus:
+      borderColor: '#ffdd00'
+      boxShadow: 'inset 0 0 0 1px #ffdd00'
+      outlineColor: 'rgba(0, 0, 0, 0)'
+    focus-visible:
+      color: '#0b0c0c'
+      backgroundColor: '#ffdd00'
+      borderColor: '#ffdd00'
+      boxShadow: 'none'
+      outlineColor: 'rgba(0, 0, 0, 0)'
+    hover:
+      color: '#ffffff'
   surface:
     background: '{colors.card}'
     border: '{colors.border}'
+  link:
+    active:
+      color: '#0b0c0c'
+    focus:
+      color: '#0b0c0c'
+      backgroundColor: '#ffdd00'
+      boxShadow: '0 -2px #ffdd00,0 4px #0b0c0c'
+      outlineColor: 'rgba(0, 0, 0, 0)'
+    hover:
+      color: '#0f385c'
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-28T23:56:44.058Z'
+  capturedAt: '2026-08-29T00:12:13.375Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
-  harvestVersion: 2
-  clusterVersion: 7
+  harvestVersion: 3
+  clusterVersion: 8
 ---
 
 ## Overview
@@ -126,6 +150,12 @@ system's most recognisable trait.
 Buttons are square, green-filled, with a white label and the solid offset edge.
 Surfaces are plain white separated by rules.
 
+The focus state is the most distinctive thing in the system and the reason to
+copy it: links on focus take a `#ffdd00` yellow background with `#0b0c0c`
+text and a `0 -2px #ffdd00, 0 4px #0b0c0c` box-shadow that draws a solid black
+underline. The native outline is suppressed in favour of it. Reproduce this
+exactly — it is engineered to survive high-contrast modes and to be unmissable.
+
 ## Do's and Don'ts
 
 - **Do** keep body copy at 19px. Shrinking it to 16px breaks the system's
@@ -133,3 +163,4 @@ Surfaces are plain white separated by rules.
 - **Do** carry hierarchy with size and weight.
 - **Don't** round any corner. Sharpness is the identity.
 - **Don't** add a muted grey text tier. Its absence is deliberate.
+- **Don't** drop the yellow focus state or replace it with a default outline.

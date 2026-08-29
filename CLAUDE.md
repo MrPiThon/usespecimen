@@ -144,6 +144,14 @@ Four gotchas that will silently skew a clusterer:
 4. `radii` is gated on `borderRadius !== '0px'` but keyed on
    `borderTopLeftRadius`, so asymmetric radii record only one corner.
 
+`states` (harvest v3) is read from `document.styleSheets`, not from computed
+style, which only ever reports the resting value. Each state rule is matched back
+against the DOM so its role name comes from a real element, `var()` references are
+resolved against a matched element, and declarations are bundled **one key per
+rule**. `styleSheets.{readable,blocked}` is load-bearing: a site whose CSS is all
+cross-origin (Stripe: 0 of 8) must not read the same as one that declares no
+states.
+
 `typeStyles` (harvest v2) is the exception to the one-property-per-map rule: it
 keys on `kind|size|weight|lineHeight|tracking|family` so type properties that
 **co-occur** stay together. The other histograms cannot be recombined — knowing a

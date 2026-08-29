@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-28T23:56:44.058Z",
+  "capturedAt": "2026-08-29T00:12:13.375Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 441,
     "sampleRatio": 0.716
   },
-  "harvestVersion": 2,
-  "clusterVersion": 7,
+  "harvestVersion": 3,
+  "clusterVersion": 8,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -361,6 +361,84 @@
     ],
     "flat": false
   },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 2,
+      "readable": 2,
+      "blocked": 0,
+      "stateRules": 425
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "color": "#ffffff",
+          "matchedElements": 9,
+          "rulesConsidered": 4
+        },
+        "focus": {
+          "borderColor": "#ffdd00",
+          "boxShadow": "inset 0 0 0 1px #ffdd00",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 9,
+          "rulesConsidered": 8
+        },
+        "focus-visible": {
+          "color": "#0b0c0c",
+          "backgroundColor": "#ffdd00",
+          "borderColor": "#ffdd00",
+          "boxShadow": "none",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 1,
+          "rulesConsidered": 3
+        },
+        "hover": {
+          "color": "#ffffff",
+          "matchedElements": 10,
+          "rulesConsidered": 6
+        }
+      },
+      "link": {
+        "active": {
+          "color": "#0b0c0c",
+          "matchedElements": 106,
+          "rulesConsidered": 2
+        },
+        "focus": {
+          "color": "#0b0c0c",
+          "backgroundColor": "#ffdd00",
+          "boxShadow": "0 -2px #ffdd00,0 4px #0b0c0c",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 105,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "color": "#0f385c",
+          "matchedElements": 104,
+          "rulesConsidered": 1
+        }
+      },
+      "text": {
+        "focus": {
+          "boxShadow": "0px 0px 0px 2px inset",
+          "outlineColor": "#ffdd00",
+          "matchedElements": 2,
+          "rulesConsidered": 4
+        },
+        "focus-visible": {
+          "color": "#0b0c0c",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#ffffff",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        }
+      }
+    },
+    "declarations": 35
+  },
   "audit": {
     "pairs": [
       {
@@ -423,7 +501,7 @@
     "Strided sample: 441 of 616 elements. Weights are relative only."
   ],
   "harvest": {
-    "harvestVersion": 2,
+    "harvestVersion": 3,
     "url": "https://www.gov.uk/",
     "title": "Welcome to GOV.UK",
     "viewport": {
@@ -717,6 +795,154 @@
         "area": 1,
         "chars": 13
       }
+    },
+    "states": {
+      "link|focus|color:#0b0c0c;background-color:#ffdd00;box-shadow:0 -2px #ffdd00,0 4px #0b0c0c;outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 5,
+        "matched": 105
+      },
+      "link|hover|color:#0f385c": {
+        "rules": 4,
+        "matched": 104
+      },
+      "link|active|color:#0b0c0c": {
+        "rules": 6,
+        "matched": 106
+      },
+      "link|focus|color:#0b0c0c": {
+        "rules": 7,
+        "matched": 107
+      },
+      "button|active|color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 9
+      },
+      "button|hover|color:rgb(255, 255, 255)": {
+        "rules": 2,
+        "matched": 10
+      },
+      "button|hover|background-color:rgb(11, 92, 62)": {
+        "rules": 1,
+        "matched": 9
+      },
+      "button|focus|border-color:#ffdd00;box-shadow:inset 0 0 0 1px #ffdd00;outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 9
+      },
+      "button|active|color:#484949;background-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|focus|color:#484949;background-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|hover|color:rgb(11, 12, 12);background-color:rgb(206, 206, 206);border-color:rgb(11, 12, 12)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|focus|background-color:rgb(255, 221, 0);border-color:rgb(11, 12, 12);box-shadow:rgb(11, 12, 12) 0px 5px 0px": {
+        "rules": 1,
+        "matched": 4
+      },
+      "button|active|color:rgb(11, 12, 12)": {
+        "rules": 1,
+        "matched": 4
+      },
+      "button|hover|color:rgb(11, 12, 12);background-color:rgb(206, 206, 206)": {
+        "rules": 1,
+        "matched": 4
+      },
+      "button|focus|color:#0b0c0c": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|active|color:#0b0c0c": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|active|color:#000000": {
+        "rules": 2,
+        "matched": 2
+      },
+      "link|focus|color:#000000": {
+        "rules": 2,
+        "matched": 2
+      },
+      "link|focus|color:#0b0c0c;box-shadow:none": {
+        "rules": 4,
+        "matched": 4
+      },
+      "button|focus|color:#0b0c0c;background-color:#ffdd00;box-shadow:none;outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|color:rgb(11, 12, 12)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|color:#0b0c0c;background-color:#ffdd00;box-shadow:none;outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|color:rgb(11, 12, 12)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus|color:#0b0c0c;background-color:#ffdd00;border-color:#ffdd00;box-shadow:none;outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus|color:rgb(11, 12, 12)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|color:#0b0c0c;background-color:#ffdd00;border-color:#ffdd00;box-shadow:none;outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|color:rgb(11, 12, 12)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|box-shadow:0px 0px 0px 2px inset": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|focus|box-shadow:rgb(11, 12, 12) 0px 0px 0px 4px inset": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|box-shadow:0px 0px 0px 4px inset": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:rgb(244, 248, 251)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:rgb(22, 84, 138)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus|background-color:#ffdd00;outline-color:#ffdd00": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|box-shadow:0px 0px 0px 2px inset;outline-color:#ffdd00": {
+        "rules": 1,
+        "matched": 2
+      }
+    },
+    "styleSheets": {
+      "total": 2,
+      "readable": 2,
+      "blocked": 0,
+      "stateRules": 425
     },
     "radii": {},
     "shadows": {

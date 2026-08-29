@@ -135,10 +135,10 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-28T23:56:41.777Z'
+  capturedAt: '2026-08-29T00:12:11.118Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
-  harvestVersion: 2
-  clusterVersion: 7
+  harvestVersion: 3
+  clusterVersion: 8
 ---
 
 ## Overview

@@ -389,11 +389,41 @@ classification and the hue facet this plan sells in section 4.3. Bands are now
 verified against canonical colours (#ff0000 29, #f97316 48, #eab308 86, #22c55e
 150, #14b8a6 183, #3b82f6 260, #8b5cf6 293, #ec4899 354).
 
-**5. No interaction states.**
-`harvest` reads resting computed style only, so hover, active and focus are
-invisible; their file has `button-primary-pressed`. Reading `document.styleSheets`
-for `:hover`/`:focus` rules is more robust than trying to drive interactions, and
-the focus-ring work already landed in `cluster.mjs` proves the value.
+**5. ~~No interaction states.~~ DONE, harvest v3 + cluster v8.**
+`getComputedStyle` reports the resting value, so states are read from
+`document.styleSheets` instead. Every state rule is matched back against the DOM
+(`querySelectorAll` on the selector minus its pseudo-class) so the role name comes
+from a real element and dead CSS is skipped. `var(--token, fallback)` is resolved
+against a matched element — GOV.UK's focus styles are entirely var() references
+and would otherwise be unusable.
+
+GOV.UK yields its signature state exactly: `link:focus` → `#ffdd00` background,
+`#0b0c0c` text, `0 -2px #ffdd00, 0 4px #0b0c0c` underline, native outline
+suppressed. Plus button hover, active and focus-visible.
+
+**The two failure modes are reported separately, and that matters more than the
+successes.** Stripe: 0 of 8 stylesheets readable, all cross-origin — we learn
+nothing, and the file says so. Linear: 30 of 84 readable, 71 state rules found,
+but every one targets a bundled toast/drawer library not present on the page, so
+zero declarations. "This site declares no hover styles" and "we could not read
+this site's CSS" must never render the same, and they don't.
+
+Two design points learned the hard way, both the same lesson a third time:
+
+- Declarations are bundled **one key per rule**. Recording them per property let
+  the winner for `color` come from a different rule than the winner for
+  `background-color`, and emitted white text on a white button — the identical
+  fabricated combination that per-property type histograms produced before
+  `typeStyles`.
+- Within a near-tie on reach (95%), the **fuller** declaration wins. GOV.UK's
+  focus splits across two rules — one sets colour on 107 links, the other sets
+  colour, background and box-shadow on 106 — and taking the wider by one element
+  dropped the yellow the whole design is known for.
+
+Still approximate: CSS cascades and we pick a single rule, so `rulesConsidered`
+ships in `capture.json` as the caveat. The rigorous fix is CDP
+`CSS.forcePseudoState` plus a computed-style read, which needs a capture stage
+outside `harvestFn` — worth doing when states become load-bearing.
 
 **6. One viewport, one colour scheme.**
 Section 6 of this plan specifies light/dark at three widths. We capture

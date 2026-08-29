@@ -115,10 +115,10 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-28T23:56:37.987Z'
+  capturedAt: '2026-08-29T00:12:07.814Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
-  harvestVersion: 2
-  clusterVersion: 7
+  harvestVersion: 3
+  clusterVersion: 8
 ---
 
 ## Overview

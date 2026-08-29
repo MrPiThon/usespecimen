@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-28T23:56:37.987Z",
+  "capturedAt": "2026-08-29T00:12:07.814Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1913,
     "sampleRatio": 0.668
   },
-  "harvestVersion": 2,
-  "clusterVersion": 7,
+  "harvestVersion": 3,
+  "clusterVersion": 8,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -607,6 +607,17 @@
     ],
     "flat": false
   },
+  "states": {
+    "available": false,
+    "sheets": {
+      "total": 7,
+      "readable": 0,
+      "blocked": 7,
+      "stateRules": 0
+    },
+    "roles": {},
+    "declarations": 0
+  },
   "audit": {
     "pairs": [
       {
@@ -677,10 +688,11 @@
   "warnings": [
     "Ignored #0a2540 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "15 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Interaction states unavailable: all 7 stylesheets are cross-origin, so hover, focus and active could not be read at all.",
     "Strided sample: 1913 of 2862 elements. Weights are relative only."
   ],
   "harvest": {
-    "harvestVersion": 2,
+    "harvestVersion": 3,
     "url": "https://stripe.com/",
     "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
     "viewport": {
@@ -776,7 +788,7 @@
       },
       "rgb(10, 37, 64)": {
         "count": 1,
-        "area": 2635.359375,
+        "area": 2697.50830078125,
         "chars": 22
       },
       "rgb(66, 84, 102)": {
@@ -937,14 +949,14 @@
     "fontFamilies": {
       "sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 447,
-        "area": 3881390.486328125,
+        "area": 3881452.6352539062,
         "chars": 11342
       }
     },
     "fontSizes": {
       "14px": {
         "count": 34,
-        "area": 39905.328125,
+        "area": 39967.47705078125,
         "chars": 208
       },
       "48px": {
@@ -1026,7 +1038,7 @@
       },
       "400": {
         "count": 150,
-        "area": 495233.46728515625,
+        "area": 495295.6162109375,
         "chars": 1916
       }
     },
@@ -1158,7 +1170,7 @@
       },
       "19.6px": {
         "count": 1,
-        "area": 2635.359375,
+        "area": 2697.50830078125,
         "chars": 22
       },
       "21px": {
@@ -1542,7 +1554,7 @@
       },
       "text|14px|400|19.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
-        "area": 2635.359375,
+        "area": 2697.50830078125,
         "chars": 22
       },
       "text|14px|300|21px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
@@ -1555,6 +1567,13 @@
         "area": 4485.625,
         "chars": 8
       }
+    },
+    "states": {},
+    "styleSheets": {
+      "total": 7,
+      "readable": 0,
+      "blocked": 7,
+      "stateRules": 0
     },
     "radii": {
       "6px": {
@@ -1812,7 +1831,7 @@
     "interactiveRadius": {
       "0px": {
         "count": 155,
-        "area": 4336596.117736816,
+        "area": 4336596.120849609,
         "chars": 1322
       },
       "4px": {
@@ -1824,7 +1843,7 @@
     "interactiveFg": {
       "rgb(83, 58, 253)": {
         "count": 59,
-        "area": 270968.2271118164,
+        "area": 270968.2302246094,
         "chars": 318
       },
       "rgb(6, 27, 49)": {

@@ -445,6 +445,89 @@ export function colorTokens(capture) {
 }
 
 // ---------------------------------------------------------------------------
+// Interaction states
+// ---------------------------------------------------------------------------
+
+const camel = prop => prop.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+const COLOR_PROPS = new Set(['color', 'backgroundColor', 'borderColor',
+  'outlineColor', 'textDecorationColor']);
+
+/** Normalise declared colours to hex so state values read like the rest of the
+ *  file. Translucent values keep their rgba() form — flattening them here would
+ *  be inventing a composite the stylesheet never declared. */
+function normalizeStateValue(prop, value) {
+  if (!COLOR_PROPS.has(prop)) return value;
+  const c = parseColor(value);
+  return c && (c.a ?? 1) === 1 ? toHex(c) : value;
+}
+
+/**
+ * Hover / focus / active declarations, grouped by the element kind they target.
+ *
+ * Needs harvest v3. Availability is reported rather than assumed: a site whose
+ * stylesheets are all cross-origin produces an empty set for a reason that is
+ * ours, not theirs, and the two must not read the same on the page.
+ */
+export function stateTokens(capture) {
+  const sheets = capture?.styleSheets ?? null;
+
+  // One winning RULE per (kind, state), not one winning value per property.
+  // Most-targeted wins: a rule matching 106 links describes the system, one
+  // matching a single element describes an exception. Keeping the rule intact is
+  // what stops `color` and `background-color` being taken from different rules
+  // and emitted as a pair the stylesheet never declared.
+  const candidates = new Map();
+  for (const [key, w] of Object.entries(capture?.states ?? {})) {
+    const [kind, state, ...rest] = key.split('|');
+    const id = `${kind}|${state}`;
+    const decls = rest.join('|');
+    if (!candidates.has(id)) candidates.set(id, []);
+    candidates.get(id).push({
+      kind, state, decls, matched: w.matched, size: decls.split(';').length,
+    });
+  }
+
+  // Within a near-tie on reach, prefer the fuller declaration. GOV.UK's focus
+  // style splits across two rules — one sets colour on 107 links, the other sets
+  // colour, background and box-shadow on 106 — and taking the wider one by a
+  // single element drops the yellow that the whole design is known for.
+  const NEAR_TIE = 0.95;
+  const best = new Map();
+  for (const [id, list] of candidates) {
+    const top = Math.max(...list.map(c => c.matched));
+    const contenders = list.filter(c => c.matched >= top * NEAR_TIE);
+    best.set(id, {
+      ...contenders.sort((a, b) => b.size - a.size || b.matched - a.matched)[0],
+      rulesConsidered: list.length,
+    });
+  }
+
+  const roles = {};
+  for (const { kind, state, decls, matched, rulesConsidered } of [...best.values()]
+    .sort((a, b) => (a.kind + a.state < b.kind + b.state ? -1 : 1))) {
+    const props = {};
+    for (const decl of decls.split(';')) {
+      const i = decl.indexOf(':');
+      if (i < 1) continue;
+      const prop = camel(decl.slice(0, i));
+      props[prop] = normalizeStateValue(prop, decl.slice(i + 1));
+    }
+    if (Object.keys(props).length) {
+      // rulesConsidered is the honest caveat: CSS cascades, we pick one rule, and
+      // a reader should know how many others also style this state.
+      (roles[kind] ??= {})[state] = { ...props, matchedElements: matched, rulesConsidered };
+    }
+  }
+
+  return {
+    available: (sheets?.readable ?? 0) > 0,
+    sheets,
+    roles,
+    declarations: Object.keys(capture?.states ?? {}).length,
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Typography
 // ---------------------------------------------------------------------------
 
@@ -866,7 +949,7 @@ export function contrastAudit(colors) {
 
 /** Everything we could not observe, said out loud. This list is the honest
  *  half of the product — an unflagged gap is how a wrong token ships. */
-function collectWarnings(capture, colors, type, spacing, rounded) {
+function collectWarnings(capture, colors, type, spacing, rounded, states) {
   const w = [];
   const { roles } = colors;
   if (colors.roles.background.source === 'browserDefault') {
@@ -903,6 +986,14 @@ function collectWarnings(capture, colors, type, spacing, rounded) {
       + 'the site may not have a real type scale.');
   }
   if (rounded.sharp) w.push('No border radius anywhere; treat as a deliberately sharp system.');
+  const sh = states?.sheets;
+  if (sh && !states.available) {
+    w.push(`Interaction states unavailable: all ${sh.total} stylesheets are cross-origin, `
+      + 'so hover, focus and active could not be read at all.');
+  } else if (sh && states.declarations === 0) {
+    w.push(`Found ${sh.stateRules} state rules but none target elements on this page`
+      + (sh.blocked ? `; the site's own CSS is likely among the ${sh.blocked} cross-origin sheets.` : '.'));
+  }
   if (capture.sampled && capture.elementCount > capture.sampled) {
     w.push(`Strided sample: ${capture.sampled} of ${capture.elementCount} elements. `
       + 'Weights are relative only.');
@@ -918,6 +1009,7 @@ export function cluster(capture) {
   const rounded = roundedTokens(capture);
   const elevation = elevationTokens(capture);
   const audit = contrastAudit(colors);
+  const states = stateTokens(capture);
 
   return {
     source: {
@@ -946,16 +1038,18 @@ export function cluster(capture) {
     // 7: adds colors.semantic, and fixes hueFamily's bands, which were HSL
     //    angles applied to OKLCH — every red was labelled orange, so the `hue`
     //    facet moves on any palette containing one.
+    // 8: adds states from harvest v3 stylesheet rules.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 7,
+    clusterVersion: 8,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
     spacing,
     rounded,
     elevation,
+    states,
     audit,
-    warnings: collectWarnings(capture, colors, typography, spacing, rounded),
+    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states),
   };
 }
 
