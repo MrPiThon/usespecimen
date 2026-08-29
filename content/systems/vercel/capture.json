@@ -1,0 +1,2326 @@
+{
+  "capturedAt": "2026-08-29T00:18:45.190Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://vercel.com/",
+    "title": "Agentic Infrastructure - Vercel",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5333,
+    "elementCount": 3365,
+    "sampled": 1559,
+    "sampleRatio": 0.463
+  },
+  "harvestVersion": 3,
+  "clusterVersion": 9,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#fafafa",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#171717",
+        "weightShare": 0.4352,
+        "variants": []
+      },
+      "card": null,
+      "mutedForeground": {
+        "hex": "#4d4d4d",
+        "weightShare": 0.5385,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#297a3a",
+        "weightShare": 0.0014,
+        "variants": [],
+        "source": "textColors",
+        "occurrences": 9
+      },
+      "primaryForeground": null
+    },
+    "ramps": {
+      "surface": [],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#171717",
+          "contrast": 17.18,
+          "charShare": 0.4352
+        },
+        {
+          "name": "text-2",
+          "hex": "#4d4d4d",
+          "contrast": 8.1,
+          "charShare": 0.5385
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#fafafa",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0.985,
+        "chroma": 0,
+        "count": 35
+      },
+      {
+        "hex": "#171717",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.205,
+        "chroma": 0,
+        "count": 7
+      },
+      {
+        "hex": "#4d4d4d",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.42,
+        "chroma": 0,
+        "count": 284
+      },
+      {
+        "hex": "#666666",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.51,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#ffffff",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 7
+      },
+      {
+        "hex": "#8f8f8f",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.65,
+        "chroma": 0,
+        "count": 9
+      },
+      {
+        "hex": "#297a3a",
+        "role": "primary",
+        "hue": "green",
+        "lightness": 0.515,
+        "chroma": 0.125,
+        "count": 9
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 3,
+      "text": 6,
+      "border": 0,
+      "interactive": 2
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "GeistSans",
+      "class": "unknown",
+      "stack": "GeistSans, \"GeistSans Fallback\"",
+      "sizePx": 14,
+      "weight": 400,
+      "lineHeightPx": 20.02,
+      "lineHeightRatio": 1.43,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "GeistSans",
+      "class": "unknown",
+      "stack": "GeistSans, \"GeistSans Fallback\"",
+      "largestPx": 64,
+      "weight": 450,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "GeistSans",
+        "class": "unknown",
+        "stack": "GeistSans, \"GeistSans Fallback\""
+      },
+      {
+        "family": "Geist Mono",
+        "class": "mono",
+        "stack": "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\""
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 11,
+        "rem": 0.786,
+        "weightShare": 0.0163,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.857,
+        "weightShare": 0.0848,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 14,
+        "rem": 1,
+        "weightShare": 0.6555,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "rem": 1.143,
+        "weightShare": 0.0491,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 24,
+        "rem": 1.714,
+        "weightShare": 0.0964,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 32,
+        "rem": 2.286,
+        "weightShare": 0.0292,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 48,
+        "rem": 3.429,
+        "weightShare": 0.0326,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 56,
+        "rem": 4,
+        "weightShare": 0.0292,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 64,
+        "rem": 4.571,
+        "weightShare": 0.0068,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 9,
+    "roles": {
+      "body": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 25,
+        "chars": 724
+      },
+      "body-sm": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "11px",
+        "fontWeight": 500,
+        "lineHeight": 1.82,
+        "letterSpacing": "0.2px",
+        "elements": 27,
+        "chars": 81
+      },
+      "body-lg": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "16px",
+        "fontWeight": 500,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 9,
+        "chars": 99
+      },
+      "h1": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "64px",
+        "fontWeight": 400,
+        "lineHeight": 1,
+        "letterSpacing": "-3.84px",
+        "elements": 2,
+        "chars": 44
+      },
+      "h2": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 36,
+        "chars": 282
+      },
+      "link": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 237,
+        "chars": 2256
+      },
+      "mono": {
+        "fontFamily": "Geist Mono",
+        "fontStack": "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "mono",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 33,
+        "chars": 501
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 22
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.455,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.085
+      },
+      {
+        "base": 6,
+        "share": 0.455
+      },
+      {
+        "base": 5,
+        "share": 0.051
+      },
+      {
+        "base": 4,
+        "share": 0.25
+      }
+    ],
+    "scale": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16,
+      20,
+      24,
+      40,
+      44
+    ],
+    "distinctValues": 19
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 6,
+        "count": 23
+      }
+    ],
+    "button": "3.35544e+07px",
+    "pill": true,
+    "pillValue": "3.35544e+07px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px",
+        "count": 15
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px inset",
+        "count": 9
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px",
+        "count": 8
+      }
+    ],
+    "flat": false
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 7,
+      "readable": 7,
+      "blocked": 0,
+      "stateRules": 612
+    },
+    "roles": {
+      "button": {
+        "focus-visible": {
+          "boxShadow": "0 0 0 2px hsla(0, 0%, 100%, 1), 0 0 0 4px hsla(212, 100%, 48%, 1)",
+          "matchedElements": 38,
+          "rulesConsidered": 2
+        },
+        "hover": {
+          "backgroundColor": "#0000000d",
+          "matchedElements": 41,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "focus": {
+          "opacity": "1",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "hsla(0, 0%, 9%, 1)",
+          "matchedElements": 2,
+          "rulesConsidered": 1
+        }
+      },
+      "text": {
+        "focus-visible": {
+          "boxShadow": "0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000",
+          "matchedElements": 86,
+          "rulesConsidered": 4
+        },
+        "hover": {
+          "textDecorationColor": "hsla(0, 0%, 79%, 1)",
+          "matchedElements": 33,
+          "rulesConsidered": 7
+        }
+      }
+    },
+    "declarations": 16
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#171717",
+        "bg": "#fafafa",
+        "ratio": 17.18,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#4d4d4d",
+        "bg": "#fafafa",
+        "ratio": 8.1,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#297a3a",
+        "bg": "#fafafa",
+        "ratio": 5.11,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "accent is body text",
+        "aa": true,
+        "aaa": false
+      }
+    ],
+    "failures": 0,
+    "textFailures": 0,
+    "minRatio": 5.11
+  },
+  "warnings": [
+    "Accent taken from textColors, not a filled button — verify by eye.",
+    "No borders observed; border token omitted.",
+    "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
+    "Strided sample: 1559 of 3365 elements. Weights are relative only."
+  ],
+  "supportsDark": true,
+  "dark": {
+    "source": {
+      "url": "https://vercel.com/",
+      "title": "Agentic Infrastructure - Vercel",
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "docHeight": 5333,
+      "elementCount": 3389,
+      "sampled": 1568,
+      "sampleRatio": 0.463
+    },
+    "harvestVersion": 3,
+    "clusterVersion": 9,
+    "tuning": {
+      "colorMerge": 0.045,
+      "chromatic": 0.03,
+      "gridThreshold": 0.75
+    },
+    "colors": {
+      "polarity": "dark",
+      "roles": {
+        "background": {
+          "hex": "#000000",
+          "weightShare": 1,
+          "variants": [],
+          "source": "pageBg"
+        },
+        "foreground": {
+          "hex": "#ededed",
+          "weightShare": 0.4352,
+          "variants": []
+        },
+        "card": null,
+        "mutedForeground": {
+          "hex": "#a1a1a1",
+          "weightShare": 0.5385,
+          "variants": []
+        },
+        "primary": {
+          "hex": "#62c073",
+          "weightShare": 0.0014,
+          "variants": [],
+          "source": "textColors",
+          "occurrences": 9
+        },
+        "primaryForeground": null
+      },
+      "ramps": {
+        "surface": [],
+        "text": [
+          {
+            "name": "text-1",
+            "hex": "#ededed",
+            "contrast": 17.94,
+            "charShare": 0.4352
+          },
+          {
+            "name": "text-2",
+            "hex": "#a1a1a1",
+            "contrast": 8.13,
+            "charShare": 0.5385
+          }
+        ]
+      },
+      "palette": [
+        {
+          "hex": "#000000",
+          "role": "background",
+          "hue": "neutral",
+          "lightness": 0,
+          "chroma": 0,
+          "count": 15
+        },
+        {
+          "hex": "#ededed",
+          "role": "foreground",
+          "hue": "neutral",
+          "lightness": 0.946,
+          "chroma": 0,
+          "count": 16
+        },
+        {
+          "hex": "#0a0a0a",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.145,
+          "chroma": 0,
+          "count": 20
+        },
+        {
+          "hex": "#a1a1a1",
+          "role": "mutedForeground",
+          "hue": "neutral",
+          "lightness": 0.709,
+          "chroma": 0,
+          "count": 284
+        },
+        {
+          "hex": "#888888",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.627,
+          "chroma": 0,
+          "count": 3
+        },
+        {
+          "hex": "#62c073",
+          "role": "primary",
+          "hue": "green",
+          "lightness": 0.731,
+          "chroma": 0.142,
+          "count": 9
+        }
+      ],
+      "semantic": {},
+      "accentRejected": [],
+      "clusterCounts": {
+        "bg": 4,
+        "text": 5,
+        "border": 0,
+        "interactive": 3
+      }
+    },
+    "typography": {
+      "body": {
+        "family": "GeistSans",
+        "class": "unknown",
+        "stack": "GeistSans, \"GeistSans Fallback\"",
+        "sizePx": 14,
+        "weight": 400,
+        "lineHeightPx": 20.02,
+        "lineHeightRatio": 1.43,
+        "lineHeightInferred": false,
+        "letterSpacing": null
+      },
+      "heading": {
+        "family": "GeistSans",
+        "class": "unknown",
+        "stack": "GeistSans, \"GeistSans Fallback\"",
+        "largestPx": 64,
+        "weight": 450,
+        "sharesBodyFamily": true
+      },
+      "families": [
+        {
+          "family": "GeistSans",
+          "class": "unknown",
+          "stack": "GeistSans, \"GeistSans Fallback\""
+        },
+        {
+          "family": "Geist Mono",
+          "class": "mono",
+          "stack": "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\""
+        }
+      ],
+      "scale": [
+        {
+          "name": "xs",
+          "px": 11,
+          "rem": 0.786,
+          "weightShare": 0.0163,
+          "variants": []
+        },
+        {
+          "name": "sm",
+          "px": 12,
+          "rem": 0.857,
+          "weightShare": 0.0848,
+          "variants": []
+        },
+        {
+          "name": "base",
+          "px": 14,
+          "rem": 1,
+          "weightShare": 0.6555,
+          "variants": []
+        },
+        {
+          "name": "lg",
+          "px": 16,
+          "rem": 1.143,
+          "weightShare": 0.0491,
+          "variants": []
+        },
+        {
+          "name": "xl",
+          "px": 24,
+          "rem": 1.714,
+          "weightShare": 0.0964,
+          "variants": []
+        },
+        {
+          "name": "2xl",
+          "px": 32,
+          "rem": 2.286,
+          "weightShare": 0.0292,
+          "variants": []
+        },
+        {
+          "name": "3xl",
+          "px": 48,
+          "rem": 3.429,
+          "weightShare": 0.0326,
+          "variants": []
+        },
+        {
+          "name": "4xl",
+          "px": 56,
+          "rem": 4,
+          "weightShare": 0.0292,
+          "variants": []
+        },
+        {
+          "name": "5xl",
+          "px": 64,
+          "rem": 4.571,
+          "weightShare": 0.0068,
+          "variants": []
+        }
+      ],
+      "scaleTruncated": false,
+      "distinctSizes": 9,
+      "roles": {
+        "body": {
+          "fontFamily": "GeistSans",
+          "fontStack": "GeistSans, \"GeistSans Fallback\"",
+          "class": "unknown",
+          "fontSize": "14px",
+          "fontWeight": 400,
+          "lineHeight": 1.43,
+          "letterSpacing": null,
+          "elements": 25,
+          "chars": 724
+        },
+        "body-sm": {
+          "fontFamily": "GeistSans",
+          "fontStack": "GeistSans, \"GeistSans Fallback\"",
+          "class": "unknown",
+          "fontSize": "11px",
+          "fontWeight": 500,
+          "lineHeight": 1.82,
+          "letterSpacing": "0.2px",
+          "elements": 27,
+          "chars": 81
+        },
+        "body-lg": {
+          "fontFamily": "GeistSans",
+          "fontStack": "GeistSans, \"GeistSans Fallback\"",
+          "class": "unknown",
+          "fontSize": "16px",
+          "fontWeight": 500,
+          "lineHeight": 1.5,
+          "letterSpacing": null,
+          "elements": 9,
+          "chars": 99
+        },
+        "h1": {
+          "fontFamily": "GeistSans",
+          "fontStack": "GeistSans, \"GeistSans Fallback\"",
+          "class": "unknown",
+          "fontSize": "64px",
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": "-3.84px",
+          "elements": 2,
+          "chars": 44
+        },
+        "h2": {
+          "fontFamily": "GeistSans",
+          "fontStack": "GeistSans, \"GeistSans Fallback\"",
+          "class": "unknown",
+          "fontSize": "14px",
+          "fontWeight": 500,
+          "lineHeight": 1.43,
+          "letterSpacing": null,
+          "elements": 36,
+          "chars": 282
+        },
+        "link": {
+          "fontFamily": "GeistSans",
+          "fontStack": "GeistSans, \"GeistSans Fallback\"",
+          "class": "unknown",
+          "fontSize": "14px",
+          "fontWeight": 400,
+          "lineHeight": 1.43,
+          "letterSpacing": null,
+          "elements": 237,
+          "chars": 2256
+        },
+        "mono": {
+          "fontFamily": "Geist Mono",
+          "fontStack": "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "class": "mono",
+          "fontSize": "12px",
+          "fontWeight": 400,
+          "lineHeight": 1.33,
+          "letterSpacing": null,
+          "elements": 33,
+          "chars": 501
+        }
+      },
+      "rolesAvailable": true,
+      "distinctStyles": 22
+    },
+    "spacing": {
+      "base": null,
+      "gridConfidence": 0.455,
+      "gridCandidates": [
+        {
+          "base": 8,
+          "share": 0.085
+        },
+        {
+          "base": 6,
+          "share": 0.455
+        },
+        {
+          "base": 5,
+          "share": 0.051
+        },
+        {
+          "base": 4,
+          "share": 0.25
+        }
+      ],
+      "scale": [
+        2,
+        4,
+        6,
+        8,
+        12,
+        16,
+        20,
+        24,
+        40,
+        44
+      ],
+      "distinctValues": 19
+    },
+    "rounded": {
+      "scale": [
+        {
+          "name": "sm",
+          "px": 6,
+          "count": 23
+        }
+      ],
+      "button": "3.35544e+07px",
+      "pill": true,
+      "pillValue": "3.35544e+07px",
+      "sharp": false
+    },
+    "elevation": {
+      "shadows": [
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.145) 0px 0px 0px 1px, rgb(0, 0, 0) 0px 0px 0px 1px",
+          "count": 15
+        },
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px inset",
+          "count": 9
+        },
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px",
+          "count": 8
+        }
+      ],
+      "flat": false
+    },
+    "states": {
+      "available": true,
+      "sheets": {
+        "total": 7,
+        "readable": 7,
+        "blocked": 0,
+        "stateRules": 612
+      },
+      "roles": {
+        "button": {
+          "focus-visible": {
+            "boxShadow": "0 0 0 2px hsla(0, 0%, 4%, 1), 0 0 0 4px hsla(210, 100%, 66%, 1)",
+            "matchedElements": 38,
+            "rulesConsidered": 2
+          },
+          "hover": {
+            "backgroundColor": "#ffffff0f",
+            "matchedElements": 41,
+            "rulesConsidered": 1
+          }
+        },
+        "link": {
+          "focus": {
+            "opacity": "1",
+            "matchedElements": 1,
+            "rulesConsidered": 1
+          },
+          "hover": {
+            "color": "hsla(0, 0%, 93%, 1)",
+            "matchedElements": 2,
+            "rulesConsidered": 1
+          }
+        },
+        "text": {
+          "focus-visible": {
+            "boxShadow": "0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000",
+            "matchedElements": 86,
+            "rulesConsidered": 4
+          },
+          "hover": {
+            "textDecorationColor": "hsla(0, 0%, 27%, 1)",
+            "matchedElements": 33,
+            "rulesConsidered": 7
+          }
+        }
+      },
+      "declarations": 16
+    },
+    "audit": {
+      "pairs": [
+        {
+          "pair": "foreground/background",
+          "fg": "#ededed",
+          "bg": "#000000",
+          "ratio": 17.94,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": null,
+          "aa": true,
+          "aaa": true
+        },
+        {
+          "pair": "mutedForeground/background",
+          "fg": "#a1a1a1",
+          "bg": "#000000",
+          "ratio": 8.13,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": null,
+          "aa": true,
+          "aaa": true
+        },
+        {
+          "pair": "primary/background",
+          "fg": "#62c073",
+          "bg": "#000000",
+          "ratio": 9.31,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": "accent is body text",
+          "aa": true,
+          "aaa": true
+        }
+      ],
+      "failures": 0,
+      "textFailures": 0,
+      "minRatio": 8.13
+    },
+    "warnings": [
+      "Accent taken from textColors, not a filled button — verify by eye.",
+      "No borders observed; border token omitted.",
+      "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
+      "Strided sample: 1568 of 3389 elements. Weights are relative only."
+    ]
+  },
+  "harvest": {
+    "harvestVersion": 3,
+    "url": "https://vercel.com/",
+    "title": "Agentic Infrastructure - Vercel",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5333,
+    "textColors": {
+      "rgb(77, 77, 77)": {
+        "count": 284,
+        "area": 895589.875,
+        "chars": 3393
+      },
+      "rgb(23, 23, 23)": {
+        "count": 164,
+        "area": 1761712.8125,
+        "chars": 2742
+      },
+      "rgb(255, 255, 255)": {
+        "count": 7,
+        "area": 15688.03125,
+        "chars": 67
+      },
+      "lab(80.976 0 -0.0000119209)": {
+        "count": 18,
+        "area": 54538.01267658174,
+        "chars": 138
+      },
+      "rgb(41, 122, 58)": {
+        "count": 9,
+        "area": 2333.25,
+        "chars": 9
+      },
+      "rgb(102, 102, 102)": {
+        "count": 3,
+        "area": 6480,
+        "chars": 45
+      },
+      "rgb(143, 143, 143)": {
+        "count": 9,
+        "area": 9,
+        "chars": 45
+      }
+    },
+    "bgColors": {
+      "rgb(250, 250, 250)": {
+        "count": 15,
+        "area": 29898654.75,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 20,
+        "area": 492272.125,
+        "chars": 0
+      },
+      "rgb(23, 23, 23)": {
+        "count": 7,
+        "area": 40831.875,
+        "chars": 0
+      },
+      "lab(7.78201 -0.0000149012 0)": {
+        "count": 6,
+        "area": 642737.071843408,
+        "chars": 0
+      },
+      "rgb(102, 102, 102)": {
+        "count": 3,
+        "area": 300,
+        "chars": 0
+      }
+    },
+    "borderColors": {},
+    "fontFamilies": {
+      "GeistSans, \"GeistSans Fallback\"": {
+        "count": 433,
+        "area": 2541300.21875,
+        "chars": 5591
+      },
+      "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 61,
+        "area": 195050.76267658174,
+        "chars": 848
+      }
+    },
+    "fontSizes": {
+      "14px": {
+        "count": 370,
+        "area": 1173515.700315848,
+        "chars": 4221
+      },
+      "64px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "16px": {
+        "count": 16,
+        "area": 49287.078125,
+        "chars": 316
+      },
+      "56px": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "24px": {
+        "count": 24,
+        "area": 421753.375,
+        "chars": 621
+      },
+      "11px": {
+        "count": 30,
+        "area": 25383.452985733747,
+        "chars": 105
+      },
+      "12px": {
+        "count": 36,
+        "area": 121180.25,
+        "chars": 546
+      },
+      "48px": {
+        "count": 6,
+        "area": 330077.125,
+        "chars": 210
+      },
+      "32px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 335,
+        "area": 973952.8876765817,
+        "chars": 3963
+      },
+      "450": {
+        "count": 42,
+        "area": 1224474.703125,
+        "chars": 1244
+      },
+      "500": {
+        "count": 117,
+        "area": 537923.390625,
+        "chars": 1232
+      }
+    },
+    "lineHeights": {
+      "20px": {
+        "count": 382,
+        "area": 1191183.309690848,
+        "chars": 4174
+      },
+      "21px": {
+        "count": 18,
+        "area": 10336.453125,
+        "chars": 173
+      },
+      "64px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "24px": {
+        "count": 16,
+        "area": 49287.078125,
+        "chars": 316
+      },
+      "56px": {
+        "count": 11,
+        "area": 699217.75,
+        "chars": 398
+      },
+      "32px": {
+        "count": 18,
+        "area": 329755.65625,
+        "chars": 567
+      },
+      "16.5px": {
+        "count": 3,
+        "area": 3859.3904857337475,
+        "chars": 24
+      },
+      "26.4px": {
+        "count": 6,
+        "area": 91997.71875,
+        "chars": 54
+      },
+      "16px": {
+        "count": 33,
+        "area": 114700.25,
+        "chars": 501
+      },
+      "40px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "letterSpacings": {
+      "-3.84px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "-0.32px": {
+        "count": 3,
+        "area": 9458.203125,
+        "chars": 59
+      },
+      "-3.36px": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "-0.96px": {
+        "count": 18,
+        "area": 329755.65625,
+        "chars": 567
+      },
+      "-1.2px": {
+        "count": 6,
+        "area": 91997.71875,
+        "chars": 54
+      },
+      "0.2px": {
+        "count": 27,
+        "area": 21524.0625,
+        "chars": 81
+      },
+      "-2.88px": {
+        "count": 6,
+        "area": 330077.125,
+        "chars": 210
+      },
+      "-1.6px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "typeStyles": {
+      "text|14px|400|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 25,
+        "area": 196102.25,
+        "chars": 724
+      },
+      "text|14px|500|21px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 6,
+        "area": 10324.453125,
+        "chars": 59
+      },
+      "h1|64px|400|64px|-3.84px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "text|16px|500|24px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 9,
+        "area": 21994.875,
+        "chars": 99
+      },
+      "text|16px|450|24px|-0.32px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 3,
+        "area": 9458.203125,
+        "chars": 59
+      },
+      "h2|56px|450|56px|-3.36px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "text|24px|450|32px|-0.96px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 18,
+        "area": 329755.65625,
+        "chars": 567
+      },
+      "text|14px|500|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 36,
+        "area": 334800,
+        "chars": 666
+      },
+      "text|14px|400|20px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 15,
+        "area": 50678.62219084799,
+        "chars": 114
+      },
+      "text|11px|400|16.5px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 3859.3904857337475,
+        "chars": 24
+      },
+      "text|24px|450|26.4px|-1.2px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 6,
+        "area": 91997.71875,
+        "chars": 54
+      },
+      "text|12px|400|16px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 33,
+        "area": 114700.25,
+        "chars": 501
+      },
+      "h2|14px|500|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 36,
+        "area": 142800,
+        "chars": 282
+      },
+      "link|14px|400|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 237,
+        "area": 437299.875,
+        "chars": 2256
+      },
+      "text|11px|500|20px|0.2px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 27,
+        "area": 21524.0625,
+        "chars": 81
+      },
+      "link|14px|400|20px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 1498.5,
+        "chars": 6
+      },
+      "text|12px|500|20px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 6480,
+        "chars": 45
+      },
+      "text|14px|400|21px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 12,
+        "area": 12,
+        "chars": 114
+      },
+      "text|16px|400|24px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 4,
+        "area": 17834,
+        "chars": 158
+      },
+      "h2|48px|450|56px|-2.88px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 5,
+        "area": 291773.125,
+        "chars": 188
+      },
+      "h1|48px|400|56px|-2.88px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 1,
+        "area": 38304,
+        "chars": 22
+      },
+      "h2|32px|450|40px|-1.6px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "states": {
+      "text|hover|background-color:hsla(0, 0%, 95%, 1)": {
+        "rules": 2,
+        "matched": 4
+      },
+      "text|hover|color:hsla(0, 0%, 9%, 1)": {
+        "rules": 3,
+        "matched": 8
+      },
+      "text|hover|text-decoration-color:hsla(0, 0%, 79%, 1)": {
+        "rules": 1,
+        "matched": 33
+      },
+      "text|hover|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, inset 0 0 0 1px hsla(0, 0%, 92%, 1)": {
+        "rules": 1,
+        "matched": 3
+      },
+      "text|focus-visible|color:hsla(0, 0%, 9%, 1)": {
+        "rules": 2,
+        "matched": 7
+      },
+      "text|focus-visible|box-shadow:0 0 0 2px hsla(0, 0%, 100%, 1), 0 0 0 4px hsla(212, 100%, 48%, 1)": {
+        "rules": 1,
+        "matched": 37
+      },
+      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000": {
+        "rules": 2,
+        "matched": 86
+      },
+      "text|hover|background-color:hsla(0, 0%, 30%, 1)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:#0000000d": {
+        "rules": 1,
+        "matched": 41
+      },
+      "link|hover|color:hsla(0, 0%, 9%, 1)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|background-color:#0000000d": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|focus-visible|box-shadow:0 0 0 2px hsla(0, 0%, 100%, 1), 0 0 0 4px hsla(212, 100%, 48%, 1)": {
+        "rules": 1,
+        "matched": 38
+      },
+      "text|hover|opacity:0.8": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|color:#111": {
+        "rules": 1,
+        "matched": 3
+      }
+    },
+    "styleSheets": {
+      "total": 7,
+      "readable": 7,
+      "blocked": 0,
+      "stateRules": 612
+    },
+    "radii": {
+      "6px": {
+        "count": 23,
+        "area": 3787800.75,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 66,
+        "area": 145342.0625,
+        "chars": 81
+      },
+      "100%": {
+        "count": 3,
+        "area": 70537.5398632735,
+        "chars": 0
+      },
+      "0px": {
+        "count": 6,
+        "area": 642737.071843408,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px": {
+        "count": 8,
+        "area": 61365.625,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px": {
+        "count": 15,
+        "area": 2276828.25,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px inset": {
+        "count": 9,
+        "area": 5184,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "1": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "2": {
+        "count": 750,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 158,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 811,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 64,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 113,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 22,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 51,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 20,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 40,
+        "area": 0,
+        "chars": 0
+      },
+      "44": {
+        "count": 27,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 18,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "134": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "138": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "160": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(255, 255, 255)": {
+        "count": 8,
+        "area": 61365.625,
+        "chars": 0
+      },
+      "rgb(23, 23, 23)": {
+        "count": 7,
+        "area": 40831.875,
+        "chars": 0
+      },
+      "rgb(250, 250, 250)": {
+        "count": 9,
+        "area": 1845921.75,
+        "chars": 0
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 253,
+        "area": 488920.375,
+        "chars": 2262
+      },
+      "6px": {
+        "count": 14,
+        "area": 1857463.75,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 15,
+        "area": 107966,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(23, 23, 23)": {
+        "count": 31,
+        "area": 1963323.875,
+        "chars": 0
+      },
+      "rgb(77, 77, 77)": {
+        "count": 244,
+        "area": 450194.375,
+        "chars": 2262
+      },
+      "rgb(255, 255, 255)": {
+        "count": 7,
+        "area": 40831.875,
+        "chars": 0
+      }
+    },
+    "headingSizes": {
+      "64px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "56px": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "14px": {
+        "count": 36,
+        "area": 142800,
+        "chars": 282
+      },
+      "48px": {
+        "count": 6,
+        "area": 330077.125,
+        "chars": 210
+      },
+      "32px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "headingFamilies": {
+      "GeistSans, \"GeistSans Fallback\"": {
+        "count": 54,
+        "area": 1088031.125,
+        "chars": 912
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 3,
+        "area": 151968,
+        "chars": 66
+      },
+      "450": {
+        "count": 15,
+        "area": 793263.125,
+        "chars": 564
+      },
+      "500": {
+        "count": 36,
+        "area": 142800,
+        "chars": 282
+      }
+    },
+    "pageBg": "rgb(250, 250, 250)",
+    "elementCount": 3365,
+    "sampled": 1559,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 1123
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 1121
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 1121
+      }
+    ],
+    "mergedFrom": 3
+  },
+  "darkHarvest": {
+    "harvestVersion": 3,
+    "url": "https://vercel.com/",
+    "title": "Agentic Infrastructure - Vercel",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5333,
+    "textColors": {
+      "rgb(161, 161, 161)": {
+        "count": 284,
+        "area": 895589.875,
+        "chars": 3393
+      },
+      "rgb(237, 237, 237)": {
+        "count": 164,
+        "area": 1761712.8125,
+        "chars": 2742
+      },
+      "rgb(10, 10, 10)": {
+        "count": 7,
+        "area": 15688.03125,
+        "chars": 67
+      },
+      "lab(80.976 0 -0.0000119209)": {
+        "count": 18,
+        "area": 54538.01267658174,
+        "chars": 138
+      },
+      "rgb(98, 192, 115)": {
+        "count": 9,
+        "area": 2333.25,
+        "chars": 9
+      },
+      "rgb(136, 136, 136)": {
+        "count": 3,
+        "area": 6480,
+        "chars": 45
+      },
+      "rgb(143, 143, 143)": {
+        "count": 9,
+        "area": 9,
+        "chars": 45
+      }
+    },
+    "bgColors": {
+      "rgb(0, 0, 0)": {
+        "count": 15,
+        "area": 29898654.75,
+        "chars": 0
+      },
+      "rgb(10, 10, 10)": {
+        "count": 20,
+        "area": 492272.125,
+        "chars": 0
+      },
+      "rgb(237, 237, 237)": {
+        "count": 16,
+        "area": 992831.875,
+        "chars": 0
+      },
+      "lab(7.78201 -0.0000149012 0)": {
+        "count": 6,
+        "area": 642737.071843408,
+        "chars": 0
+      },
+      "rgb(136, 136, 136)": {
+        "count": 3,
+        "area": 300,
+        "chars": 0
+      }
+    },
+    "borderColors": {},
+    "fontFamilies": {
+      "GeistSans, \"GeistSans Fallback\"": {
+        "count": 433,
+        "area": 2541300.21875,
+        "chars": 5591
+      },
+      "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 61,
+        "area": 195050.76267658174,
+        "chars": 848
+      }
+    },
+    "fontSizes": {
+      "14px": {
+        "count": 370,
+        "area": 1173515.700315848,
+        "chars": 4221
+      },
+      "64px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "16px": {
+        "count": 16,
+        "area": 49287.078125,
+        "chars": 316
+      },
+      "56px": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "24px": {
+        "count": 24,
+        "area": 421753.375,
+        "chars": 621
+      },
+      "11px": {
+        "count": 30,
+        "area": 25383.452985733747,
+        "chars": 105
+      },
+      "12px": {
+        "count": 36,
+        "area": 121180.25,
+        "chars": 546
+      },
+      "48px": {
+        "count": 6,
+        "area": 330077.125,
+        "chars": 210
+      },
+      "32px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 335,
+        "area": 973952.8876765817,
+        "chars": 3963
+      },
+      "450": {
+        "count": 42,
+        "area": 1224474.703125,
+        "chars": 1244
+      },
+      "500": {
+        "count": 117,
+        "area": 537923.390625,
+        "chars": 1232
+      }
+    },
+    "lineHeights": {
+      "20px": {
+        "count": 382,
+        "area": 1191183.309690848,
+        "chars": 4174
+      },
+      "21px": {
+        "count": 18,
+        "area": 10336.453125,
+        "chars": 173
+      },
+      "64px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "24px": {
+        "count": 16,
+        "area": 49287.078125,
+        "chars": 316
+      },
+      "56px": {
+        "count": 11,
+        "area": 699217.75,
+        "chars": 398
+      },
+      "32px": {
+        "count": 18,
+        "area": 329755.65625,
+        "chars": 567
+      },
+      "16.5px": {
+        "count": 3,
+        "area": 3859.3904857337475,
+        "chars": 24
+      },
+      "26.4px": {
+        "count": 6,
+        "area": 91997.71875,
+        "chars": 54
+      },
+      "16px": {
+        "count": 33,
+        "area": 114700.25,
+        "chars": 501
+      },
+      "40px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "letterSpacings": {
+      "-3.84px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "-0.32px": {
+        "count": 3,
+        "area": 9458.203125,
+        "chars": 59
+      },
+      "-3.36px": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "-0.96px": {
+        "count": 18,
+        "area": 329755.65625,
+        "chars": 567
+      },
+      "-1.2px": {
+        "count": 6,
+        "area": 91997.71875,
+        "chars": 54
+      },
+      "0.2px": {
+        "count": 27,
+        "area": 21524.0625,
+        "chars": 81
+      },
+      "-2.88px": {
+        "count": 6,
+        "area": 330077.125,
+        "chars": 210
+      },
+      "-1.6px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "typeStyles": {
+      "text|14px|400|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 25,
+        "area": 196102.25,
+        "chars": 724
+      },
+      "text|14px|500|21px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 6,
+        "area": 10324.453125,
+        "chars": 59
+      },
+      "h1|64px|400|64px|-3.84px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "text|16px|500|24px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 9,
+        "area": 21994.875,
+        "chars": 99
+      },
+      "text|16px|450|24px|-0.32px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 3,
+        "area": 9458.203125,
+        "chars": 59
+      },
+      "h2|56px|450|56px|-3.36px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "text|24px|450|32px|-0.96px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 18,
+        "area": 329755.65625,
+        "chars": 567
+      },
+      "text|14px|500|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 36,
+        "area": 334800,
+        "chars": 666
+      },
+      "text|14px|400|20px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 15,
+        "area": 50678.62219084799,
+        "chars": 114
+      },
+      "text|11px|400|16.5px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 3859.3904857337475,
+        "chars": 24
+      },
+      "text|24px|450|26.4px|-1.2px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 6,
+        "area": 91997.71875,
+        "chars": 54
+      },
+      "text|12px|400|16px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 33,
+        "area": 114700.25,
+        "chars": 501
+      },
+      "h2|14px|500|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 36,
+        "area": 142800,
+        "chars": 282
+      },
+      "link|14px|400|20px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 237,
+        "area": 437299.875,
+        "chars": 2256
+      },
+      "text|11px|500|20px|0.2px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 27,
+        "area": 21524.0625,
+        "chars": 81
+      },
+      "link|14px|400|20px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 1498.5,
+        "chars": 6
+      },
+      "text|12px|500|20px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 6480,
+        "chars": 45
+      },
+      "text|14px|400|21px|normal|GeistSans, \"GeistSans Fallback\"": {
+        "count": 12,
+        "area": 12,
+        "chars": 114
+      },
+      "text|16px|400|24px|normal|\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 4,
+        "area": 17834,
+        "chars": 158
+      },
+      "h2|48px|450|56px|-2.88px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 5,
+        "area": 291773.125,
+        "chars": 188
+      },
+      "h1|48px|400|56px|-2.88px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 1,
+        "area": 38304,
+        "chars": 22
+      },
+      "h2|32px|450|40px|-1.6px|GeistSans, \"GeistSans Fallback\"": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "states": {
+      "text|hover|background-color:hsla(0, 0%, 10%, 1)": {
+        "rules": 2,
+        "matched": 4
+      },
+      "text|hover|color:hsla(0, 0%, 93%, 1)": {
+        "rules": 3,
+        "matched": 8
+      },
+      "text|hover|text-decoration-color:hsla(0, 0%, 27%, 1)": {
+        "rules": 1,
+        "matched": 33
+      },
+      "text|hover|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, inset 0 0 0 1px hsla(0, 0%, 18%, 1)": {
+        "rules": 1,
+        "matched": 3
+      },
+      "text|focus-visible|color:hsla(0, 0%, 93%, 1)": {
+        "rules": 2,
+        "matched": 7
+      },
+      "text|focus-visible|box-shadow:0 0 0 2px hsla(0, 0%, 4%, 1), 0 0 0 4px hsla(210, 100%, 66%, 1)": {
+        "rules": 1,
+        "matched": 37
+      },
+      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000": {
+        "rules": 2,
+        "matched": 86
+      },
+      "text|hover|background-color:hsla(0, 0%, 63%, 1)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:#ffffff0f": {
+        "rules": 1,
+        "matched": 41
+      },
+      "link|hover|color:hsla(0, 0%, 93%, 1)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|background-color:#ffffff0f": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|focus-visible|box-shadow:0 0 0 2px hsla(0, 0%, 4%, 1), 0 0 0 4px hsla(210, 100%, 66%, 1)": {
+        "rules": 1,
+        "matched": 38
+      },
+      "text|hover|opacity:0.8": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|color:#fafafa": {
+        "rules": 1,
+        "matched": 3
+      }
+    },
+    "styleSheets": {
+      "total": 7,
+      "readable": 7,
+      "blocked": 0,
+      "stateRules": 612
+    },
+    "radii": {
+      "6px": {
+        "count": 23,
+        "area": 3787800.75,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 75,
+        "area": 1097342.0625,
+        "chars": 81
+      },
+      "100%": {
+        "count": 3,
+        "area": 70537.5398632735,
+        "chars": 0
+      },
+      "0px": {
+        "count": 6,
+        "area": 642737.071843408,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px": {
+        "count": 8,
+        "area": 61365.625,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.145) 0px 0px 0px 1px, rgb(0, 0, 0) 0px 0px 0px 1px": {
+        "count": 15,
+        "area": 2276828.25,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px inset": {
+        "count": 9,
+        "area": 5184,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "1": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "2": {
+        "count": 750,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 158,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 811,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 64,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 113,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 22,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 51,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 20,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 40,
+        "area": 0,
+        "chars": 0
+      },
+      "44": {
+        "count": 27,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 18,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "134": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "138": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "160": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(10, 10, 10)": {
+        "count": 8,
+        "area": 61365.625,
+        "chars": 0
+      },
+      "rgb(237, 237, 237)": {
+        "count": 7,
+        "area": 40831.875,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 9,
+        "area": 1845921.75,
+        "chars": 0
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 253,
+        "area": 488920.375,
+        "chars": 2262
+      },
+      "6px": {
+        "count": 14,
+        "area": 1857463.75,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 15,
+        "area": 107966,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(237, 237, 237)": {
+        "count": 31,
+        "area": 1963323.875,
+        "chars": 0
+      },
+      "rgb(161, 161, 161)": {
+        "count": 244,
+        "area": 450194.375,
+        "chars": 2262
+      },
+      "rgb(10, 10, 10)": {
+        "count": 7,
+        "area": 40831.875,
+        "chars": 0
+      }
+    },
+    "headingSizes": {
+      "64px": {
+        "count": 2,
+        "area": 113664,
+        "chars": 44
+      },
+      "56px": {
+        "count": 5,
+        "area": 369140.625,
+        "chars": 188
+      },
+      "14px": {
+        "count": 36,
+        "area": 142800,
+        "chars": 282
+      },
+      "48px": {
+        "count": 6,
+        "area": 330077.125,
+        "chars": 210
+      },
+      "32px": {
+        "count": 5,
+        "area": 132349.375,
+        "chars": 188
+      }
+    },
+    "headingFamilies": {
+      "GeistSans, \"GeistSans Fallback\"": {
+        "count": 54,
+        "area": 1088031.125,
+        "chars": 912
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 3,
+        "area": 151968,
+        "chars": 66
+      },
+      "450": {
+        "count": 15,
+        "area": 793263.125,
+        "chars": 564
+      },
+      "500": {
+        "count": 36,
+        "area": 142800,
+        "chars": 282
+      }
+    },
+    "pageBg": "rgb(0, 0, 0)",
+    "elementCount": 3389,
+    "sampled": 1568,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 1131
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 1129
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 1129
+      }
+    ],
+    "mergedFrom": 3
+  }
+}

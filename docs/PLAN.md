@@ -437,8 +437,8 @@ so summing state rules would triple their counts for no information.
 
 `supportsDark` is decided by comparing the two page backgrounds perceptually, not
 as strings. **None of the three reference sites support it** — Stripe and GOV.UK
-are light-only, Linear is dark-only — so the dark path was verified against
-vercel.com, which yields two genuinely different palettes:
+are light-only, Linear is dark-only — so vercel.com is seeded as the
+dark-mode example and yields two genuinely different palettes:
 
 | | light | dark |
 |---|---|---|

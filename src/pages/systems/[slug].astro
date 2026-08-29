@@ -48,6 +48,7 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
     {textFailures === 0
       ? <span class="badge pass">Text contrast AA</span>
       : <span class="badge fail">{textFailures} text pair{textFailures === 1 ? '' : 's'} below AA</span>}
+    {capture?.supportsDark && <span class="badge pass">Light + dark</span>}
     <span class="badge warn">Verified {daysAgo === 0 ? 'today' : `${daysAgo}d ago`}</span>
   </p>
 
@@ -87,9 +88,25 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
           <h3>Colors</h3>
           <table>
             <tbody>
-              {colors.map(([name, hex]) => (
+              {colors.filter(([n]) => !n.startsWith('dark-')).map(([name, hex]) => (
                 <tr>
                   <td><span class="chip" style={`background:${hex}`}></span>{name}</td>
+                  <td><code>{hex}</code></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {colors.some(([n]) => n.startsWith('dark-')) && (
+        <div class="panel" style="margin-bottom:1rem;">
+          <h3>Colors — dark</h3>
+          <table>
+            <tbody>
+              {colors.filter(([n]) => n.startsWith('dark-')).map(([name, hex]) => (
+                <tr>
+                  <td><span class="chip" style={`background:${hex}`}></span>{name.slice(5)}</td>
                   <td><code>{hex}</code></td>
                 </tr>
               ))}
