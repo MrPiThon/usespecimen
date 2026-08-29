@@ -136,6 +136,12 @@ elevation:
   shadow-3: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.129999 -0.00404751 -0.027702 / 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px'
   shadow-4: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px'
   shadow-5: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px'
+layout:
+  measure: '1360px'
+  gridColumns: 3
+motion:
+  duration: '0.15s'
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -154,11 +160,13 @@ components:
 provenance:
   brand: 'Tailwind CSS'
   source: 'https://tailwindcss.com/'
-  capturedAt: '2026-08-29T02:23:31.415Z'
+  capturedAt: '2026-08-29T03:23:19.602Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -198,6 +206,15 @@ An 8px grid, obeyed by 76.8% of observed spacing, and the only 8px system in thi
 catalogue — everything else here with a grid is on 4. The run is 4, 8, 10, 12,
 16, 24, 32, 36, 40, 44.
 
+**1360px measure with nine three-column card grids** — where most systems here
+settle on two columns, this one defaults to three.
+
+**Neither the sections nor the navigation could be read.** The content root's
+children are stacked full-height layers rather than a sequence of sections, and
+no element qualified as a page banner. Both are reported as absent rather than
+estimated; the measure, the grid and the motion are independent measurements and
+stand.
+
 ## Elevation & Depth
 
 Five declared shadows, most resolving to transparent. Depth comes from the
@@ -213,6 +230,9 @@ Buttons are padded `4px 8px` at 4px radius. Links take `16px 8px`, which is
 vertical-heavy because they are stacked in navigation rather than sitting inline.
 Only hover is declared.
 
+**0.15s cubic-bezier(0.4, 0, 0.2, 1)** on every one of the 48 controls that
+animates — 100% agreement.
+
 ## Do's and Don'ts
 
 - **Do** keep the line height at 2.0. It is the single decision that makes this
@@ -222,4 +242,6 @@ Only hover is declared.
   it for prose fails AA.
 - **Don't** move to a 4px grid because it is more common. The 8px step is what
   gives the reference pages their rhythm.
+
+
 

@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T02:23:21.837Z",
+  "capturedAt": "2026-08-29T03:25:30.858Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1405,
     "sampleRatio": 0.432
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,7 +32,7 @@
       },
       "foreground": {
         "hex": "#000000",
-        "weightShare": 0.1351,
+        "weightShare": 0.1352,
         "variants": []
       },
       "card": {
@@ -44,7 +44,7 @@
       },
       "mutedForeground": {
         "hex": "#615d59",
-        "weightShare": 0.2416,
+        "weightShare": 0.2417,
         "variants": [
           "#696969"
         ]
@@ -81,31 +81,31 @@
           "name": "text-1",
           "hex": "#000000",
           "contrast": 21,
-          "charShare": 0.1351
+          "charShare": 0.1352
         },
         {
           "name": "text-2",
           "hex": "#0d0d0d",
           "contrast": 19.47,
-          "charShare": 0.07
+          "charShare": 0.0696
         },
         {
           "name": "text-3",
           "hex": "#1a1a1a",
           "contrast": 17.4,
-          "charShare": 0.1926
+          "charShare": 0.1927
         },
         {
           "name": "text-4",
           "hex": "#615d59",
           "contrast": 6.53,
-          "charShare": 0.2416
+          "charShare": 0.2417
         },
         {
           "name": "text-5",
           "hex": "#757575",
           "contrast": 4.59,
-          "charShare": 0.0846
+          "charShare": 0.0847
         }
       ]
     },
@@ -191,12 +191,12 @@
         "count": 9
       },
       {
-        "hex": "#ffdec4",
+        "hex": "#d0f4d8",
         "role": null,
-        "hue": "orange",
-        "lightness": 0.921,
-        "chroma": 0.05,
-        "count": 3
+        "hue": "green",
+        "lightness": 0.934,
+        "chroma": 0.053,
+        "count": 1
       },
       {
         "hex": "#e6f3fe",
@@ -205,6 +205,14 @@
         "lightness": 0.958,
         "chroma": 0.02,
         "count": 3
+      },
+      {
+        "hex": "#ffdec4",
+        "role": null,
+        "hue": "orange",
+        "lightness": 0.921,
+        "chroma": 0.05,
+        "count": 2
       },
       {
         "hex": "#111111",
@@ -293,14 +301,6 @@
         "lightness": 0.481,
         "chroma": 0.008,
         "count": 51
-      },
-      {
-        "hex": "#1a1a1a",
-        "role": null,
-        "hue": "neutral",
-        "lightness": 0.218,
-        "chroma": 0,
-        "count": 87
       }
     ],
     "semantic": {
@@ -322,7 +322,7 @@
     },
     "accentRejected": [],
     "clusterCounts": {
-      "bg": 23,
+      "bg": 24,
       "text": 8,
       "border": 2,
       "interactive": 3
@@ -372,7 +372,7 @@
         "name": "base",
         "px": 14,
         "rem": 1,
-        "weightShare": 0.5357,
+        "weightShare": 0.5359,
         "variants": []
       },
       {
@@ -386,7 +386,7 @@
         "name": "xl",
         "px": 18,
         "rem": 1.286,
-        "weightShare": 0.1766,
+        "weightShare": 0.1767,
         "variants": []
       },
       {
@@ -636,6 +636,48 @@
       "dominantUnstyled": false
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 4,
+    "measure": {
+      "px": 1230,
+      "occurrences": 19,
+      "share": 0.404
+    },
+    "rhythm": {
+      "px": 96,
+      "occurrences": 4,
+      "share": 0.667
+    },
+    "columns": {
+      "count": 2,
+      "occurrences": 2
+    },
+    "hero": {
+      "heightRatio": 1.59,
+      "heightRatioMeasured": 1.59,
+      "headingSize": 96,
+      "align": "center",
+      "media": 3,
+      "fullBleed": true,
+      "ctas": 2,
+      "ctasFilled": 2,
+      "ctaEvidence": "strong"
+    },
+    "nav": {
+      "height": 64,
+      "position": "relative",
+      "links": 37,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.2s",
+      "easing": "cubic-bezier(0.42, 0, 1, 1)",
+      "occurrences": 62,
+      "share": 0.816
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -775,7 +817,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://www.notion.com/",
     "title": "The AI workspace that works for you. | Notion",
     "viewport": {
@@ -796,8 +838,8 @@
       },
       "rgba(0, 0, 0, 0.95)": {
         "count": 19,
-        "area": 685940.18359375,
-        "chars": 410
+        "area": 679398.8139648438,
+        "chars": 408
       },
       "rgb(0, 91, 171)": {
         "count": 3,
@@ -816,7 +858,7 @@
       },
       "rgb(97, 93, 89)": {
         "count": 45,
-        "area": 274326.755859375,
+        "area": 274326.7529296875,
         "chars": 1377
       },
       "rgb(9, 127, 232)": {
@@ -871,9 +913,9 @@
         "area": 3750.0074853897095,
         "chars": 0
       },
-      "rgb(255, 222, 196)": {
-        "count": 3,
-        "area": 42110.746337890625,
+      "rgb(208, 244, 216)": {
+        "count": 1,
+        "area": 25158.6875,
         "chars": 0
       },
       "rgb(230, 243, 254)": {
@@ -955,6 +997,11 @@
         "count": 3,
         "area": 14868,
         "chars": 0
+      },
+      "rgb(255, 222, 196)": {
+        "count": 2,
+        "area": 16940.78125,
+        "chars": 0
       }
     },
     "borderColors": {
@@ -977,8 +1024,8 @@
     "fontFamilies": {
       "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
         "count": 266,
-        "area": 1862765.361328125,
-        "chars": 4773
+        "area": 1856223.9887695312,
+        "chars": 4771
       },
       "\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif": {
         "count": 10,
@@ -989,7 +1036,7 @@
     "fontSizes": {
       "14px": {
         "count": 175,
-        "area": 688823.615234375,
+        "area": 688823.6123046875,
         "chars": 3140
       },
       "96px": {
@@ -999,8 +1046,8 @@
       },
       "72px": {
         "count": 1,
-        "area": 19087.841796875,
-        "chars": 6
+        "area": 12546.47216796875,
+        "chars": 4
       },
       "20px": {
         "count": 11,
@@ -1066,8 +1113,8 @@
       },
       "500": {
         "count": 159,
-        "area": 600140.408203125,
-        "chars": 2545
+        "area": 593599.0356445312,
+        "chars": 2543
       },
       "600": {
         "count": 12,
@@ -1083,7 +1130,7 @@
     "lineHeights": {
       "20px": {
         "count": 175,
-        "area": 688823.615234375,
+        "area": 688823.6123046875,
         "chars": 3140
       },
       "100px": {
@@ -1093,8 +1140,8 @@
       },
       "87.12px": {
         "count": 1,
-        "area": 19087.841796875,
-        "chars": 6
+        "area": 12546.47216796875,
+        "chars": 4
       },
       "28px": {
         "count": 29,
@@ -1150,8 +1197,8 @@
       },
       "-2px": {
         "count": 1,
-        "area": 19087.841796875,
-        "chars": 6
+        "area": 12546.47216796875,
+        "chars": 4
       },
       "-0.125px": {
         "count": 11,
@@ -1202,7 +1249,7 @@
     "typeStyles": {
       "text|14px|500|20px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
         "count": 132,
-        "area": 404295.505859375,
+        "area": 404295.5029296875,
         "chars": 2254
       },
       "h1|96px|600|100px|-4.6px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
@@ -1212,8 +1259,8 @@
       },
       "text|72px|500|87.12px|-2px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
         "count": 1,
-        "area": 19087.841796875,
-        "chars": 6
+        "area": 12546.47216796875,
+        "chars": 4
       },
       "text|20px|400|28px|-0.125px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
         "count": 2,
@@ -1583,7 +1630,7 @@
     "radii": {
       "4px": {
         "count": 54,
-        "area": 48984.374267578125,
+        "area": 48984.375,
         "chars": 0
       },
       "8px": {
@@ -1593,7 +1640,7 @@
       },
       "9999.01px": {
         "count": 27,
-        "area": 96905.65028227307,
+        "area": 96894.37269438244,
         "chars": 0
       },
       "50%": {
@@ -1986,6 +2033,62 @@
     "pageBg": "rgb(255, 255, 255)",
     "elementCount": 3252,
     "sampled": 1405,
+    "structure": {
+      "sectionCount": 4,
+      "sectionDepth": 0,
+      "sectionHeights": [
+        1433,
+        1448,
+        772,
+        486
+      ],
+      "contentWidths": {
+        "550": 1,
+        "600": 9,
+        "650": 1,
+        "730": 1,
+        "790": 7,
+        "830": 4,
+        "960": 3,
+        "1180": 1,
+        "1230": 14,
+        "1250": 5,
+        "1380": 1
+      },
+      "sectionRhythm": {
+        "64": 2,
+        "96": 4
+      },
+      "gridColumns": {
+        "2": 2,
+        "3": 2,
+        "4": 1
+      },
+      "transitions": {
+        "0.15s ease": 9,
+        "0.2s cubic-bezier(0.42, 0, 1, 1)": 62,
+        "0.2s ease": 1,
+        "0.2s cubic-bezier(0.645, 0.045, 0.355, 1)": 3,
+        "0.15s cubic-bezier(0, 0, 0.58, 1)": 1
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 1.59,
+        "headingSize": 96,
+        "align": "center",
+        "ctas": 2,
+        "ctaLevel": 0,
+        "ctasFilled": 2,
+        "media": 3,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 64,
+        "position": "relative",
+        "links": 37,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,

@@ -77,6 +77,19 @@ export function themeVars(data) {
   }
   for (const [name, value] of Object.entries(elevation)) out.push([`--${name}`, value]);
 
+  // Structure. The measure is the page container, not the reading column —
+  // `--measure` stays in ch because a prose column is measured in characters.
+  const layout = data?.layout ?? {};
+  if (layout.measure) out.push(['--container', layout.measure]);
+  if (layout.navHeight) out.push(['--nav-height', layout.navHeight]);
+  // How state changes arrive. Without this the site would pick its own timing
+  // while claiming to wear the file, which is the gap this whole exercise
+  // exists to close. A system that declares no motion sets nothing, and the
+  // stylesheet's 0s fallback leaves interactions instant — as measured.
+  const motion = data?.motion;
+  if (motion?.duration) out.push(['--motion', motion.duration]);
+  if (motion?.easing) out.push(['--motion-ease', motion.easing]);
+
   return out.map(([k, v]) => `  ${k}: ${v};`).join('\n');
 }
 

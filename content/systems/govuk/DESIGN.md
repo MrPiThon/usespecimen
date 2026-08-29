@@ -72,6 +72,12 @@ spacing:
 elevation:
   shadow-1: 'rgb(11, 12, 12) 0px 3px 0px 0px'
   shadow-2: 'rgb(8, 61, 41) 0px 2px 0px 0px'
+layout:
+  measure: '610px'
+  gridColumns: 3
+  navHeight: '62px'
+  navPosition: 'static'
+  heroHeight: '12vh'
 components:
   button:
     background: '{colors.primary}'
@@ -109,11 +115,13 @@ components:
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-29T00:37:14.194Z'
+  capturedAt: '2026-08-29T03:24:36.837Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 
@@ -151,6 +159,15 @@ largest heading is deliberately wide.
 A 5px base unit rather than the more common 4 or 8, obeyed by 76% of observed
 spacing. The run is 5, 10, 15, 20, 30, 60.
 
+**A 610px measure** — less than half the width of every commercial system in
+this registry, and the single most consequential number in the file. This is a
+reading column, sized for prose rather than for cards.
+
+The page runs **fifteen sections** at a 3-column grid, behind a **62px static**
+nav carrying 25 links. There is no hero in the marketing sense: the first
+section is 0.12 viewports and carries **no heading at all**, because the page
+opens on search and links rather than on a headline.
+
 ## Elevation & Depth
 
 No blur anywhere. Buttons carry a solid offset block —
@@ -173,6 +190,12 @@ text and a `0 -2px #ffdd00, 0 4px #0b0c0c` box-shadow that draws a solid black
 underline. The native outline is suppressed in favour of it. Reproduce this
 exactly — it is engineered to survive high-contrast modes and to be unmissable.
 
+**Nothing on this page declares a transition.** Not one control, at any state.
+Hover and focus changes are instantaneous.
+
+This is not an omission in the capture — it is the system. Adding a 150ms ease
+because it feels polished would be the single most un-GOV.UK thing you could do.
+
 ## Do's and Don'ts
 
 - **Do** keep body copy at 19px. Shrinking it to 16px breaks the system's
@@ -181,5 +204,7 @@ exactly — it is engineered to survive high-contrast modes and to be unmissable
 - **Don't** round any corner. Sharpness is the identity.
 - **Don't** add a muted grey text tier. Its absence is deliberate.
 - **Don't** drop the yellow focus state or replace it with a default outline.
+
+
 
 

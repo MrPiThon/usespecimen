@@ -10,13 +10,14 @@ colors:
   foreground: '#131313'
   card: '#f6f6f6'
   mutedForeground: '#4a4a4a'
-  primary: '#5200ff'
-  primaryForeground: '#ffffff'
+  primary: '#3cffd0'
+  primaryForeground: '#000000'
   border: '#e9e9e9'
   surface-1: '#f6f6f6'
-  text-1: '#131313'
-  text-2: '#4a4a4a'
-  text-3: '#636363'
+  text-1: '#000000'
+  text-2: '#131313'
+  text-3: '#4a4a4a'
+  text-4: '#636363'
   dark-background: '#131313'
   dark-foreground: '#ffffff'
   dark-card: '#1a1a1a'
@@ -25,16 +26,17 @@ colors:
   dark-border: '#313131'
 typography:
   fontFamily: '__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif'
-  headingFamily: '__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif'
+  headingFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
   baseSize: '16px'
   lineHeight: 1.3
   weight: 400
-  headingWeight: 700
+  headingWeight: 600
   letterSpacing: '-0.16px'
   scale:
-    3xs: '11px'
-    2xs: '12px'
-    xs: '13px'
+    4xs: '11px'
+    3xs: '12px'
+    2xs: '13.008px'
+    xs: '14px'
     sm: '15px'
     base: '16px'
     lg: '18px'
@@ -43,7 +45,6 @@ typography:
     3xl: '26px'
     4xl: '31px'
     5xl: '65px'
-    6xl: '90px'
   roles:
     body:
       fontFamily: '__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif'
@@ -53,14 +54,14 @@ typography:
       letterSpacing: '-0.16px'
     body-sm:
       fontFamily: '__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif'
-      fontSize: '13px'
+      fontSize: '14px'
+      fontWeight: 400
+      lineHeight: 1.3
+    caption:
+      fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+      fontSize: '13.01px'
       fontWeight: 400
       lineHeight: 1.5
-    caption:
-      fontFamily: '__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif'
-      fontSize: '12px'
-      fontWeight: 400
-      lineHeight: 1.1
     caption-sm:
       fontFamily: '__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif'
       fontSize: '11px'
@@ -89,11 +90,16 @@ typography:
       fontWeight: 700
       lineHeight: 1.1
       letterSpacing: '0.24px'
+    h3:
+      fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+      fontSize: '8px'
+      fontWeight: 600
+      lineHeight: 1.4
     button:
       fontFamily: '__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif'
-      fontSize: '13px'
+      fontSize: '14px'
       fontWeight: 400
-      lineHeight: 1.6
+      lineHeight: 1.3
     link:
       fontFamily: '__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif'
       fontSize: '18px'
@@ -108,7 +114,7 @@ rounded:
   sm: '2px'
   md: '3px'
   lg: '24px'
-  button: '50%'
+  button: '2px'
   pill: '50%'
 spacing:
   s1: '6px'
@@ -126,41 +132,54 @@ elevation:
   shadow-2: 'rgb(82, 0, 255) 0px -1px 0px 0px inset'
   shadow-3: 'rgb(19, 19, 19) 0px -1px 0px 0px inset'
   shadow-4: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px inset'
-  shadow-5: 'rgb(255, 255, 255) 0px 3px 0px 20px, rgba(0, 0, 0, 0.3) -8px -30px 30px 0px'
+  shadow-5: 'rgba(0, 0, 0, 0.2) 0px 0px 18px 0px'
+layout:
+  measure: '800px'
+  gridColumns: 2
+  navHeight: '36px'
+  navPosition: 'absolute'
+motion:
+  duration: '0.1s'
+  easing: 'ease'
 components:
   button:
     background: '{colors.primary}'
     foreground: '{colors.primaryForeground}'
     radius: '{rounded.button}'
-    padding: '10px 24px'
+    padding: '10px 18px'
     active:
       color: '#ffffff'
       backgroundColor: '#2c6415'
       borderColor: 'rgba(162, 192, 169, 0.5)'
     focus:
-      outlineColor: '#000000'
+      color: '#ffffff'
+      borderColor: '#68b631'
     focus-visible:
       borderColor: '#3cffd0'
       outlineColor: '#ffffff'
     hover:
       color: '#ffffff'
-      backgroundColor: '#000000'
+      borderColor: '#68b631'
   surface:
     background: '{colors.card}'
     border: '{colors.border}'
   link:
     padding: '14px 0px 14px 14px'
+    focus:
+      outlineColor: '#000000'
     hover:
       color: '#131313'
       boxShadow: 'inset 0 -1px 0 0 #5200ff'
 provenance:
   brand: 'The Verge'
   source: 'https://www.theverge.com/'
-  capturedAt: '2026-08-29T02:42:03.993Z'
+  capturedAt: '2026-08-29T03:23:47.835Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -196,6 +215,14 @@ headlines. Serif body with sans display is the classic editorial pairing, and th
 run is 6, 8, 10, 12, 15, 16, 20, 24, 30, 40 — a publication laid out by
 component rather than by step.
 
+**An 800px measure** with two-column grids — narrow for a homepage this busy,
+which is what keeps a dense wall of headlines readable. The nav is **36px**, the
+shortest here, and absolutely positioned over the content.
+
+**Section structure could not be read**: the content root does not partition
+into sections, so hero and section rhythm are withheld. The measure, grid and
+nav were measured independently and stand.
+
 ## Elevation & Depth
 
 Almost none. The declared shadows are inset hairlines like
@@ -213,6 +240,9 @@ combination.
 Buttons take `10px 24px`; links `14px 0px 14px 14px`, with the asymmetry giving
 room for a leading marker. Buttons declare all four states, links only hover.
 
+**0.1s ease**, but on a single control. Motion is essentially absent from this
+page; do not build a system of transitions on one measurement.
+
 ## Do's and Don'ts
 
 - **Do** keep the violet at full saturation. A muted version stops working as a
@@ -222,4 +252,6 @@ room for a leading marker. Buttons declare all four states, links only hover.
 - **Don't** loosen the 1.3 line height. The density is the point.
 - **Don't** round the containers. Sharp boxes with circular buttons is the
   signature.
+
+
 

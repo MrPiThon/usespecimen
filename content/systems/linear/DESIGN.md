@@ -143,6 +143,18 @@ elevation:
   shadow-3: 'rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset'
   shadow-4: 'rgba(0, 0, 0, 0.25) 0px 2px 32px 0px'
   shadow-5: 'rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset'
+layout:
+  measure: '1340px'
+  sectionSpacing: '128px'
+  gridColumns: 2
+  navHeight: '73px'
+  navPosition: 'fixed'
+  heroHeight: '114vh'
+  heroHeadingSize: '64px'
+  heroAlign: 'left'
+motion:
+  duration: '0.1s'
+  easing: 'ease'
 components:
   button:
     background: '{colors.primary}'
@@ -157,11 +169,14 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-29T00:37:06.457Z'
+  capturedAt: '2026-08-29T03:25:17.125Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
+
 
 
 
@@ -219,6 +234,15 @@ alongside the expected 4, 8, 12, 16, 32.
 
 Do not impose a grid it does not have; match the observed values instead.
 
+**The page is 1340px wide and breathes.** The measure accounts for 39% of
+observed content widths, sections are separated by **128px**, and card groups
+run two across. That much air between sections is unusual and is a large part of
+why the site reads as calm rather than dense.
+
+The hero is **1.14 viewports** — it deliberately overflows the fold — carrying a
+64px left-aligned headline, one piece of media and a single call to action. The
+nav is **73px and fixed**, so it stays with you for the whole scroll.
+
 ## Elevation & Depth
 
 Five distinct shadows, including inset treatments such as
@@ -236,6 +260,9 @@ Buttons are pills. Their fills are neutral, not branded — the lavender is spen
 on the focus ring instead. Surfaces sit a step above the canvas with a
 `#1c1d1e` border.
 
+**Motion is fast.** Controls transition in **0.1s ease** — 42 of them, 58% of
+everything that animates. Nothing here lingers.
+
 ## Do's and Don'ts
 
 - **Do** keep type small and tracking tight; loosening either breaks the density.
@@ -243,5 +270,8 @@ on the focus ring instead. Surfaces sit a step above the canvas with a
   That restraint is the system, not an oversight.
 - **Don't** invent a spacing scale. This system genuinely does not have one.
 - **Don't** rely on border colour alone to indicate state at 1.18:1.
+
+
+
 
 

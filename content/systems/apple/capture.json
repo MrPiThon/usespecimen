@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T02:24:17.813Z",
+  "capturedAt": "2026-08-29T03:23:09.226Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1867,
     "sampleRatio": 0.318
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -571,6 +571,48 @@
       "dominantUnstyled": true
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 3,
+    "measure": {
+      "px": 930,
+      "occurrences": 28,
+      "share": 0.364
+    },
+    "rhythm": {
+      "px": 53,
+      "occurrences": 7,
+      "share": 0.538
+    },
+    "columns": {
+      "count": 2,
+      "occurrences": 7
+    },
+    "hero": {
+      "heightRatio": null,
+      "heightRatioMeasured": 2.33,
+      "headingSize": 56,
+      "align": "center",
+      "media": 4,
+      "fullBleed": true,
+      "ctas": 1,
+      "ctasFilled": 1,
+      "ctaEvidence": "weak"
+    },
+    "nav": {
+      "height": 44,
+      "position": "fixed",
+      "links": 234,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.32s",
+      "easing": "cubic-bezier(0.4, 0, 0.6, 1)",
+      "occurrences": 232,
+      "share": 0.939
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -698,6 +740,8 @@
     "minRatio": 4.7
   },
   "warnings": [
+    "Hero call-to-action count (1) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "First section is 2.33 viewports tall — most likely a run of stacked panels rather than one hero, so its height was withheld.",
     "No spacing grid explains 75% of values (best 0.473); site may not be on a grid.",
     "button box metrics come from 2 elements out of 3 distinct shapes; thin evidence for a component token.",
     "Strided sample: 1867 of 5867 elements. Weights are relative only."
@@ -705,7 +749,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://www.apple.com/",
     "title": "Apple",
     "viewport": {
@@ -1750,6 +1794,58 @@
     "pageBg": "rgb(255, 255, 255)",
     "elementCount": 5867,
     "sampled": 1867,
+    "structure": {
+      "sectionCount": 3,
+      "sectionDepth": 0,
+      "sectionHeights": [
+        2100,
+        1764,
+        957
+      ],
+      "contentWidths": {
+        "570": 3,
+        "660": 2,
+        "700": 13,
+        "930": 27,
+        "940": 1,
+        "980": 14,
+        "1000": 2,
+        "1020": 15
+      },
+      "sectionRhythm": {
+        "53": 4,
+        "56": 3,
+        "60": 3,
+        "63": 3
+      },
+      "gridColumns": {
+        "2": 7
+      },
+      "transitions": {
+        "0.32s cubic-bezier(0.4, 0, 0.6, 1)": 232,
+        "0.02s cubic-bezier(0.4, 0, 0.6, 1)": 5,
+        "0.25s linear": 7,
+        "1s ease-in-out": 2,
+        "0.1s linear": 1
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 2.33,
+        "headingSize": 56,
+        "align": "center",
+        "ctas": 1,
+        "ctaLevel": 1,
+        "ctasFilled": 1,
+        "media": 4,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 44,
+        "position": "fixed",
+        "links": 234,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,

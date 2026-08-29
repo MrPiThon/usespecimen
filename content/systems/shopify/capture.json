@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T02:23:08.065Z",
+  "capturedAt": "2026-08-29T03:25:45.878Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 2691,
     "sampleRatio": 0.384
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -692,6 +692,48 @@
       "dominantUnstyled": true
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 14,
+    "measure": {
+      "px": 1260,
+      "occurrences": 50,
+      "share": 0.41
+    },
+    "rhythm": {
+      "px": 64,
+      "occurrences": 7,
+      "share": 0.304
+    },
+    "columns": {
+      "count": 2,
+      "occurrences": 3
+    },
+    "hero": {
+      "heightRatio": 0.94,
+      "heightRatioMeasured": 0.94,
+      "headingSize": 96,
+      "align": "left",
+      "media": 2,
+      "fullBleed": true,
+      "ctas": 2,
+      "ctasFilled": 1,
+      "ctaEvidence": "weak"
+    },
+    "nav": {
+      "height": 72,
+      "position": "sticky",
+      "links": 45,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.2s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 28,
+      "share": 0.683
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -816,6 +858,7 @@
     "minRatio": 8.19
   },
   "warnings": [
+    "Hero call-to-action count (2) was found several levels above the headline, so it may include controls that are not part of the hero.",
     "Accent taken from textColors, not a filled button — verify by eye.",
     "15 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
@@ -824,7 +867,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://www.shopify.com/",
     "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
     "viewport": {
@@ -2005,7 +2048,7 @@
       },
       "5px": {
         "count": 21,
-        "area": 1745901.2505493164,
+        "area": 1745901.2858886719,
         "chars": 0
       },
       "16px": {
@@ -2468,6 +2511,88 @@
     "pageBg": "rgb(0, 0, 0)",
     "elementCount": 7011,
     "sampled": 2691,
+    "structure": {
+      "sectionCount": 14,
+      "sectionDepth": 0,
+      "sectionHeights": [
+        847,
+        637,
+        653,
+        1480,
+        824,
+        927,
+        858,
+        625,
+        721,
+        221,
+        660,
+        778,
+        724,
+        781
+      ],
+      "contentWidths": {
+        "500": 2,
+        "530": 12,
+        "540": 1,
+        "550": 5,
+        "590": 5,
+        "610": 3,
+        "620": 4,
+        "630": 13,
+        "650": 2,
+        "660": 1,
+        "700": 1,
+        "740": 2,
+        "760": 2,
+        "820": 1,
+        "850": 4,
+        "860": 2,
+        "920": 2,
+        "1000": 1,
+        "1160": 4,
+        "1200": 3,
+        "1240": 1,
+        "1260": 49,
+        "1300": 1,
+        "1350": 1
+      },
+      "sectionRhythm": {
+        "64": 7,
+        "72": 1,
+        "80": 6,
+        "100": 2,
+        "128": 6,
+        "225": 1
+      },
+      "gridColumns": {
+        "2": 3,
+        "3": 3,
+        "4": 2
+      },
+      "transitions": {
+        "0.3s cubic-bezier(0.4, 0, 0.2, 1)": 3,
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 9,
+        "0.5s cubic-bezier(0, 0, 0.2, 1)": 1,
+        "0.2s cubic-bezier(0.4, 0, 0.2, 1)": 28
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 0.94,
+        "headingSize": 96,
+        "align": "left",
+        "ctas": 2,
+        "ctaLevel": 4,
+        "ctasFilled": 1,
+        "media": 2,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 72,
+        "position": "sticky",
+        "links": 45,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,

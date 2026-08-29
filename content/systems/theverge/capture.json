@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T02:42:03.993Z",
+  "capturedAt": "2026-08-29T03:23:47.835Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -9,13 +9,13 @@
       "w": 1440,
       "h": 900
     },
-    "docHeight": 19108,
-    "elementCount": 14666,
-    "sampled": 5883,
-    "sampleRatio": 0.401
+    "docHeight": 19177,
+    "elementCount": 15629,
+    "sampled": 5982,
+    "sampleRatio": 0.383
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,36 +32,36 @@
       },
       "foreground": {
         "hex": "#131313",
-        "weightShare": 0.4227,
+        "weightShare": 0.4307,
         "variants": [
           "#111111"
         ]
       },
       "card": {
         "hex": "#f6f6f6",
-        "weightShare": 0.0064,
+        "weightShare": 0.0207,
         "variants": []
       },
       "mutedForeground": {
         "hex": "#4a4a4a",
-        "weightShare": 0.3856,
+        "weightShare": 0.3202,
         "variants": []
       },
       "primary": {
-        "hex": "#5200ff",
-        "weightShare": 0.2797,
+        "hex": "#3cffd0",
+        "weightShare": 0.0941,
         "variants": [],
         "source": "interactiveBg",
-        "occurrences": 6
+        "occurrences": 3
       },
       "primaryForeground": {
-        "hex": "#ffffff",
-        "weightShare": 0.076,
+        "hex": "#000000",
+        "weightShare": 0.011,
         "variants": []
       },
       "border": {
         "hex": "#e9e9e9",
-        "weightShare": 0.7471,
+        "weightShare": 0.7191,
         "variants": []
       }
     },
@@ -71,27 +71,33 @@
           "name": "surface-1",
           "hex": "#f6f6f6",
           "deltaL": 0.027,
-          "areaShare": 0.0064
+          "areaShare": 0.0207
         }
       ],
       "text": [
         {
           "name": "text-1",
-          "hex": "#131313",
-          "contrast": 18.58,
-          "charShare": 0.4227
+          "hex": "#000000",
+          "contrast": 21,
+          "charShare": 0.0902
         },
         {
           "name": "text-2",
-          "hex": "#4a4a4a",
-          "contrast": 8.86,
-          "charShare": 0.3856
+          "hex": "#131313",
+          "contrast": 18.58,
+          "charShare": 0.4307
         },
         {
           "name": "text-3",
+          "hex": "#4a4a4a",
+          "contrast": 8.86,
+          "charShare": 0.3202
+        },
+        {
+          "name": "text-4",
           "hex": "#636363",
           "contrast": 6.01,
-          "charShare": 0.0344
+          "charShare": 0.0281
         }
       ]
     },
@@ -105,12 +111,28 @@
         "count": 14
       },
       {
+        "hex": "#f6f6f6",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.973,
+        "chroma": 0,
+        "count": 13
+      },
+      {
         "hex": "#131313",
         "role": "foreground",
         "hue": "neutral",
         "lightness": 0.187,
         "chroma": 0,
         "count": 10
+      },
+      {
+        "hex": "#3cffd0",
+        "role": "primary",
+        "hue": "teal",
+        "lightness": 0.896,
+        "chroma": 0.163,
+        "count": 6
       },
       {
         "hex": "#1a1a1a",
@@ -121,12 +143,12 @@
         "count": 3
       },
       {
-        "hex": "#f6f6f6",
-        "role": "card",
+        "hex": "#000000",
+        "role": "primaryForeground",
         "hue": "neutral",
-        "lightness": 0.973,
+        "lightness": 0,
         "chroma": 0,
-        "count": 2
+        "count": 17
       },
       {
         "hex": "#e9e9e9",
@@ -154,7 +176,7 @@
       },
       {
         "hex": "#5200ff",
-        "role": "primary",
+        "role": null,
         "hue": "purple",
         "lightness": 0.487,
         "chroma": 0.297,
@@ -185,37 +207,29 @@
         "count": 6
       },
       {
-        "hex": "#000000",
-        "role": null,
-        "hue": "neutral",
-        "lightness": 0,
-        "chroma": 0,
-        "count": 14
-      },
-      {
-        "hex": "#3cffd0",
-        "role": null,
-        "hue": "teal",
-        "lightness": 0.896,
-        "chroma": 0.163,
-        "count": 15
-      },
-      {
         "hex": "#111111",
         "role": null,
         "hue": "neutral",
         "lightness": 0.178,
         "chroma": 0,
         "count": 2
+      },
+      {
+        "hex": "#cccccc",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.845,
+        "chroma": 0,
+        "count": 1
       }
     ],
     "semantic": {},
     "accentRejected": [],
     "clusterCounts": {
-      "bg": 8,
+      "bg": 10,
       "text": 7,
-      "border": 5,
-      "interactive": 3
+      "border": 7,
+      "interactive": 5
     }
   },
   "typography": {
@@ -231,12 +245,12 @@
       "letterSpacing": "-0.16px"
     },
     "heading": {
-      "family": "__polySans_9afc27",
+      "family": "ui-sans-serif",
       "class": "sans",
-      "stack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+      "stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
       "largestPx": 24,
-      "weight": 700,
-      "sharesBodyFamily": true
+      "weight": 600,
+      "sharesBodyFamily": false
     },
     "families": [
       {
@@ -250,104 +264,108 @@
         "stack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif"
       },
       {
+        "family": "ui-sans-serif",
+        "class": "sans",
+        "stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+      },
+      {
         "family": "__polySansMono_0b836e",
         "class": "mono",
         "stack": "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif"
-      },
-      {
-        "family": "__manuka_62afb5",
-        "class": "sans",
-        "stack": "__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif"
       }
     ],
     "scale": [
       {
-        "name": "3xs",
+        "name": "4xs",
         "px": 11,
         "rem": 0.688,
-        "weightShare": 0.1239,
+        "weightShare": 0.1024,
+        "variants": []
+      },
+      {
+        "name": "3xs",
+        "px": 12,
+        "rem": 0.75,
+        "weightShare": 0.0036,
         "variants": []
       },
       {
         "name": "2xs",
-        "px": 12,
-        "rem": 0.75,
-        "weightShare": 0.0044,
-        "variants": []
+        "px": 13.008,
+        "rem": 0.813,
+        "weightShare": 0.1377,
+        "variants": [
+          13
+        ]
       },
       {
         "name": "xs",
-        "px": 13,
-        "rem": 0.813,
-        "weightShare": 0.0616,
-        "variants": []
+        "px": 14,
+        "rem": 0.875,
+        "weightShare": 0.0807,
+        "variants": [
+          14.08
+        ]
       },
       {
         "name": "sm",
         "px": 15,
         "rem": 0.938,
-        "weightShare": 0.0141,
+        "weightShare": 0.0117,
         "variants": []
       },
       {
         "name": "base",
         "px": 16,
         "rem": 1,
-        "weightShare": 0.413,
+        "weightShare": 0.3429,
         "variants": []
       },
       {
         "name": "lg",
         "px": 18,
         "rem": 1.125,
-        "weightShare": 0.2276,
+        "weightShare": 0.1899,
         "variants": []
       },
       {
         "name": "xl",
         "px": 20,
         "rem": 1.25,
-        "weightShare": 0.0947,
+        "weightShare": 0.0791,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 24,
         "rem": 1.5,
-        "weightShare": 0.0308,
+        "weightShare": 0.0256,
         "variants": []
       },
       {
         "name": "3xl",
         "px": 26,
         "rem": 1.625,
-        "weightShare": 0.0185,
+        "weightShare": 0.0153,
         "variants": []
       },
       {
         "name": "4xl",
         "px": 31,
         "rem": 1.938,
-        "weightShare": 0.0044,
+        "weightShare": 0.0037,
         "variants": []
       },
       {
         "name": "5xl",
         "px": 65,
         "rem": 4.063,
-        "weightShare": 0.0033,
-        "variants": []
-      },
-      {
-        "name": "6xl",
-        "px": 90,
-        "rem": 5.625,
-        "weightShare": 0.0017,
+        "weightShare": 0.0028,
         "variants": []
       }
     ],
     "scaleTruncated": true,
-    "distinctSizes": 15,
+    "distinctSizes": 16,
     "roles": {
       "body": {
         "fontFamily": "__fkRomanStandard_cfceed",
@@ -364,23 +382,23 @@
         "fontFamily": "__polySans_9afc27",
         "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
         "class": "sans",
-        "fontSize": "13px",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": null,
+        "elements": 11,
+        "chars": 3003
+      },
+      "caption": {
+        "fontFamily": "ui-sans-serif",
+        "fontStack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "13.01px",
         "fontWeight": 400,
         "lineHeight": 1.5,
         "letterSpacing": null,
         "elements": 3,
-        "chars": 1599
-      },
-      "caption": {
-        "fontFamily": "__polySans_9afc27",
-        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
-        "class": "sans",
-        "fontSize": "12px",
-        "fontWeight": 400,
-        "lineHeight": 1.1,
-        "letterSpacing": null,
-        "elements": 7,
-        "chars": 77
+        "chars": 1965
       },
       "caption-sm": {
         "fontFamily": "__polySans_9afc27",
@@ -391,7 +409,7 @@
         "lineHeight": 1.2,
         "letterSpacing": "1.1px",
         "elements": 450,
-        "chars": 3253
+        "chars": 3232
       },
       "body-lg": {
         "fontFamily": "__fkRomanStandard_cfceed",
@@ -437,16 +455,27 @@
         "elements": 4,
         "chars": 52
       },
+      "h3": {
+        "fontFamily": "ui-sans-serif",
+        "fontStack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "8px",
+        "fontWeight": 600,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 2,
+        "chars": 52
+      },
       "button": {
         "fontFamily": "__polySans_9afc27",
         "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
         "class": "sans",
-        "fontSize": "13px",
+        "fontSize": "14px",
         "fontWeight": 400,
-        "lineHeight": 1.6,
+        "lineHeight": 1.3,
         "letterSpacing": null,
-        "elements": 3,
-        "chars": 111
+        "elements": 22,
+        "chars": 561
       },
       "link": {
         "fontFamily": "__polySans_9afc27",
@@ -457,7 +486,7 @@
         "lineHeight": 1,
         "letterSpacing": null,
         "elements": 76,
-        "chars": 4750
+        "chars": 4790
       },
       "mono": {
         "fontFamily": "__polySansMono_0b836e",
@@ -472,27 +501,27 @@
       }
     },
     "rolesAvailable": true,
-    "distinctStyles": 59
+    "distinctStyles": 70
   },
   "spacing": {
     "base": null,
-    "gridConfidence": 0.569,
+    "gridConfidence": 0.58,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.243
+        "share": 0.239
       },
       {
         "base": 6,
-        "share": 0.443
+        "share": 0.46
       },
       {
         "base": 5,
-        "share": 0.424
+        "share": 0.413
       },
       {
         "base": 4,
-        "share": 0.569
+        "share": 0.58
       }
     ],
     "scale": [
@@ -507,7 +536,7 @@
       30,
       40
     ],
-    "distinctValues": 29
+    "distinctValues": 32
   },
   "stability": {
     "deadBand": 0.05,
@@ -518,7 +547,7 @@
       {
         "name": "sm",
         "px": 2,
-        "count": 40
+        "count": 52
       },
       {
         "name": "md",
@@ -531,7 +560,7 @@
         "count": 11
       }
     ],
-    "button": "50%",
+    "button": "2px",
     "pill": true,
     "pillValue": "50%",
     "sharp": false
@@ -555,8 +584,8 @@
         "count": 4
       },
       {
-        "value": "rgb(255, 255, 255) 0px 3px 0px 20px, rgba(0, 0, 0, 0.3) -8px -30px 30px 0px",
-        "count": 1
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px",
+        "count": 3
       }
     ],
     "flat": false
@@ -572,13 +601,41 @@
       "dominantUnstyled": true
     },
     "button": {
-      "padding": "10px 24px",
+      "padding": "10px 18px",
       "borderWidth": null,
-      "radius": "24px",
+      "radius": null,
       "gap": null,
-      "elements": 2,
-      "variants": 7,
+      "elements": 9,
+      "variants": 10,
       "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": false,
+    "sections": null,
+    "measure": {
+      "px": 800,
+      "occurrences": 49,
+      "share": 0.355
+    },
+    "rhythm": null,
+    "columns": {
+      "count": 2,
+      "occurrences": 11
+    },
+    "hero": null,
+    "nav": {
+      "height": 36,
+      "position": "absolute",
+      "links": 7,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.1s",
+      "easing": "ease",
+      "occurrences": 1,
+      "share": 1
     }
   },
   "states": {
@@ -587,7 +644,7 @@
       "total": 5,
       "readable": 5,
       "blocked": 0,
-      "stateRules": 201
+      "stateRules": 202
     },
     "roles": {
       "button": {
@@ -599,8 +656,9 @@
           "rulesConsidered": 1
         },
         "focus": {
-          "outlineColor": "#000000",
-          "matchedElements": 16,
+          "color": "#ffffff",
+          "borderColor": "#68b631",
+          "matchedElements": 59,
           "rulesConsidered": 3
         },
         "focus-visible": {
@@ -611,12 +669,17 @@
         },
         "hover": {
           "color": "#ffffff",
-          "backgroundColor": "#000000",
-          "matchedElements": 19,
-          "rulesConsidered": 14
+          "borderColor": "#68b631",
+          "matchedElements": 59,
+          "rulesConsidered": 15
         }
       },
       "link": {
+        "focus": {
+          "outlineColor": "#000000",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
         "hover": {
           "color": "#131313",
           "boxShadow": "inset 0 -1px 0 0 #5200ff",
@@ -627,8 +690,8 @@
       "text": {
         "focus": {
           "outlineColor": "#5200ff",
-          "matchedElements": 4,
-          "rulesConsidered": 4
+          "matchedElements": 19,
+          "rulesConsidered": 5
         },
         "hover": {
           "boxShadow": "inset 0 -0.6em 0 0 #3cffd0",
@@ -637,7 +700,7 @@
         }
       }
     },
-    "declarations": 54
+    "declarations": 57
   },
   "audit": {
     "pairs": [
@@ -667,9 +730,9 @@
       },
       {
         "pair": "primaryForeground/primary",
-        "fg": "#ffffff",
-        "bg": "#5200ff",
-        "ratio": 7.49,
+        "fg": "#000000",
+        "bg": "#3cffd0",
+        "ratio": 16.41,
         "kind": "text",
         "criterion": "1.4.3 Contrast (Minimum)",
         "min": 4.5,
@@ -679,14 +742,14 @@
       },
       {
         "pair": "primary/background",
-        "fg": "#5200ff",
+        "fg": "#3cffd0",
         "bg": "#ffffff",
-        "ratio": 7.49,
+        "ratio": 1.28,
         "kind": "nonText",
         "criterion": "1.4.11 Non-text Contrast",
         "min": 3,
         "note": "accent is a button fill, judged as a UI component",
-        "aa": true,
+        "aa": false,
         "aaa": null
       },
       {
@@ -702,15 +765,15 @@
         "aaa": null
       }
     ],
-    "failures": 1,
+    "failures": 2,
     "textFailures": 0,
     "minRatio": 1.21
   },
   "warnings": [
-    "No spacing grid explains 75% of values (best 0.569); site may not be on a grid.",
-    "15 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-    "button box metrics come from 2 elements out of 7 distinct shapes; thin evidence for a component token.",
-    "Strided sample: 5883 of 14666 elements. Weights are relative only."
+    "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
+    "No spacing grid explains 75% of values (best 0.58); site may not be on a grid.",
+    "16 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Strided sample: 5982 of 15629 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -721,13 +784,13 @@
         "w": 1440,
         "h": 900
       },
-      "docHeight": 19108,
-      "elementCount": 14645,
-      "sampled": 5883,
-      "sampleRatio": 0.402
+      "docHeight": 19177,
+      "elementCount": 15629,
+      "sampled": 5982,
+      "sampleRatio": 0.383
     },
-    "harvestVersion": 4,
-    "clusterVersion": 14,
+    "harvestVersion": 6,
+    "clusterVersion": 15,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -744,30 +807,30 @@
         },
         "foreground": {
           "hex": "#ffffff",
-          "weightShare": 0.4972,
+          "weightShare": 0.4937,
           "variants": []
         },
         "card": {
           "hex": "#1a1a1a",
-          "weightShare": 0.007,
+          "weightShare": 0.0067,
           "variants": []
         },
         "mutedForeground": null,
         "primary": {
           "hex": "#3cffd0",
-          "weightShare": 0.2797,
+          "weightShare": 0.1671,
           "variants": [],
           "source": "interactiveBg",
-          "occurrences": 6
+          "occurrences": 9
         },
         "primaryForeground": {
           "hex": "#000000",
-          "weightShare": 0.0039,
+          "weightShare": 0.0147,
           "variants": []
         },
         "border": {
           "hex": "#313131",
-          "weightShare": 0.7432,
+          "weightShare": 0.7154,
           "variants": []
         }
       },
@@ -777,13 +840,13 @@
             "name": "surface-1",
             "hex": "#1a1a1a",
             "deltaL": 0.031,
-            "areaShare": 0.007
+            "areaShare": 0.0067
           },
           {
             "name": "surface-2",
             "hex": "#222222",
             "deltaL": 0.065,
-            "areaShare": 0.0064
+            "areaShare": 0.0062
           }
         ],
         "text": [
@@ -791,19 +854,19 @@
             "name": "text-1",
             "hex": "#ffffff",
             "contrast": 18.58,
-            "charShare": 0.4972
+            "charShare": 0.4937
           },
           {
             "name": "text-2",
             "hex": "#e9e9e9",
             "contrast": 15.3,
-            "charShare": 0.3856
+            "charShare": 0.3205
           },
           {
             "name": "text-3",
             "hex": "#949494",
             "contrast": 6.13,
-            "charShare": 0.0445
+            "charShare": 0.0369
           }
         ]
       },
@@ -815,6 +878,22 @@
           "lightness": 0.187,
           "chroma": 0,
           "count": 20
+        },
+        {
+          "hex": "#f6f6f6",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.973,
+          "chroma": 0,
+          "count": 11
+        },
+        {
+          "hex": "#3cffd0",
+          "role": "primary",
+          "hue": "teal",
+          "lightness": 0.896,
+          "chroma": 0.163,
+          "count": 12
         },
         {
           "hex": "#1a1a1a",
@@ -841,20 +920,20 @@
           "count": 43
         },
         {
+          "hex": "#000000",
+          "role": "primaryForeground",
+          "hue": "neutral",
+          "lightness": 0,
+          "chroma": 0,
+          "count": 17
+        },
+        {
           "hex": "#34d0aa",
           "role": null,
           "hue": "teal",
           "lightness": 0.769,
           "chroma": 0.137,
           "count": 7
-        },
-        {
-          "hex": "#3cffd0",
-          "role": "primary",
-          "hue": "teal",
-          "lightness": 0.896,
-          "chroma": 0.163,
-          "count": 6
         },
         {
           "hex": "#e9e9e9",
@@ -881,12 +960,12 @@
           "count": 1
         },
         {
-          "hex": "#000000",
-          "role": "primaryForeground",
+          "hex": "#0f0f0f",
+          "role": null,
           "hue": "neutral",
-          "lightness": 0,
+          "lightness": 0.169,
           "chroma": 0,
-          "count": 20
+          "count": 1
         },
         {
           "hex": "#4a4a4a",
@@ -908,10 +987,10 @@
       "semantic": {},
       "accentRejected": [],
       "clusterCounts": {
-        "bg": 7,
+        "bg": 9,
         "text": 6,
-        "border": 5,
-        "interactive": 3
+        "border": 7,
+        "interactive": 4
       }
     },
     "typography": {
@@ -927,12 +1006,12 @@
         "letterSpacing": "-0.16px"
       },
       "heading": {
-        "family": "__polySans_9afc27",
+        "family": "ui-sans-serif",
         "class": "sans",
-        "stack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
         "largestPx": 24,
-        "weight": 700,
-        "sharesBodyFamily": true
+        "weight": 600,
+        "sharesBodyFamily": false
       },
       "families": [
         {
@@ -946,104 +1025,108 @@
           "stack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif"
         },
         {
+          "family": "ui-sans-serif",
+          "class": "sans",
+          "stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+        },
+        {
           "family": "__polySansMono_0b836e",
           "class": "mono",
           "stack": "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif"
-        },
-        {
-          "family": "__manuka_62afb5",
-          "class": "sans",
-          "stack": "__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif"
         }
       ],
       "scale": [
         {
-          "name": "3xs",
+          "name": "4xs",
           "px": 11,
           "rem": 0.688,
-          "weightShare": 0.1239,
+          "weightShare": 0.1029,
+          "variants": []
+        },
+        {
+          "name": "3xs",
+          "px": 12,
+          "rem": 0.75,
+          "weightShare": 0.0036,
           "variants": []
         },
         {
           "name": "2xs",
-          "px": 12,
-          "rem": 0.75,
-          "weightShare": 0.0044,
-          "variants": []
+          "px": 13.008,
+          "rem": 0.813,
+          "weightShare": 0.1378,
+          "variants": [
+            13
+          ]
         },
         {
           "name": "xs",
-          "px": 13,
-          "rem": 0.813,
-          "weightShare": 0.0616,
-          "variants": []
+          "px": 14,
+          "rem": 0.875,
+          "weightShare": 0.0808,
+          "variants": [
+            14.08
+          ]
         },
         {
           "name": "sm",
           "px": 15,
           "rem": 0.938,
-          "weightShare": 0.0141,
+          "weightShare": 0.0117,
           "variants": []
         },
         {
           "name": "base",
           "px": 16,
           "rem": 1,
-          "weightShare": 0.413,
+          "weightShare": 0.3433,
           "variants": []
         },
         {
           "name": "lg",
           "px": 18,
           "rem": 1.125,
-          "weightShare": 0.2276,
+          "weightShare": 0.1892,
           "variants": []
         },
         {
           "name": "xl",
           "px": 20,
           "rem": 1.25,
-          "weightShare": 0.0947,
+          "weightShare": 0.0787,
           "variants": []
         },
         {
           "name": "2xl",
           "px": 24,
           "rem": 1.5,
-          "weightShare": 0.0308,
+          "weightShare": 0.0256,
           "variants": []
         },
         {
           "name": "3xl",
           "px": 26,
           "rem": 1.625,
-          "weightShare": 0.0185,
+          "weightShare": 0.0154,
           "variants": []
         },
         {
           "name": "4xl",
           "px": 31,
           "rem": 1.938,
-          "weightShare": 0.0044,
+          "weightShare": 0.0037,
           "variants": []
         },
         {
           "name": "5xl",
           "px": 65,
           "rem": 4.063,
-          "weightShare": 0.0033,
-          "variants": []
-        },
-        {
-          "name": "6xl",
-          "px": 90,
-          "rem": 5.625,
-          "weightShare": 0.0017,
+          "weightShare": 0.0028,
           "variants": []
         }
       ],
       "scaleTruncated": true,
-      "distinctSizes": 15,
+      "distinctSizes": 16,
       "roles": {
         "body": {
           "fontFamily": "__fkRomanStandard_cfceed",
@@ -1060,23 +1143,23 @@
           "fontFamily": "__polySans_9afc27",
           "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
           "class": "sans",
-          "fontSize": "13px",
+          "fontSize": "14px",
+          "fontWeight": 400,
+          "lineHeight": 1.3,
+          "letterSpacing": null,
+          "elements": 11,
+          "chars": 3003
+        },
+        "caption": {
+          "fontFamily": "ui-sans-serif",
+          "fontStack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "class": "sans",
+          "fontSize": "13.01px",
           "fontWeight": 400,
           "lineHeight": 1.5,
           "letterSpacing": null,
           "elements": 3,
-          "chars": 1599
-        },
-        "caption": {
-          "fontFamily": "__polySans_9afc27",
-          "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
-          "class": "sans",
-          "fontSize": "12px",
-          "fontWeight": 400,
-          "lineHeight": 1.1,
-          "letterSpacing": null,
-          "elements": 7,
-          "chars": 77
+          "chars": 1965
         },
         "caption-sm": {
           "fontFamily": "__polySans_9afc27",
@@ -1087,7 +1170,7 @@
           "lineHeight": 1.2,
           "letterSpacing": "1.1px",
           "elements": 450,
-          "chars": 3253
+          "chars": 3247
         },
         "body-lg": {
           "fontFamily": "__fkRomanStandard_cfceed",
@@ -1133,16 +1216,27 @@
           "elements": 4,
           "chars": 52
         },
+        "h3": {
+          "fontFamily": "ui-sans-serif",
+          "fontStack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "class": "sans",
+          "fontSize": "8px",
+          "fontWeight": 600,
+          "lineHeight": 1.4,
+          "letterSpacing": null,
+          "elements": 2,
+          "chars": 52
+        },
         "button": {
           "fontFamily": "__polySans_9afc27",
           "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
           "class": "sans",
-          "fontSize": "13px",
+          "fontSize": "14px",
           "fontWeight": 400,
-          "lineHeight": 1.6,
+          "lineHeight": 1.3,
           "letterSpacing": null,
-          "elements": 3,
-          "chars": 111
+          "elements": 22,
+          "chars": 561
         },
         "link": {
           "fontFamily": "__polySans_9afc27",
@@ -1168,27 +1262,27 @@
         }
       },
       "rolesAvailable": true,
-      "distinctStyles": 59
+      "distinctStyles": 70
     },
     "spacing": {
       "base": null,
-      "gridConfidence": 0.569,
+      "gridConfidence": 0.58,
       "gridCandidates": [
         {
           "base": 8,
-          "share": 0.243
+          "share": 0.239
         },
         {
           "base": 6,
-          "share": 0.443
+          "share": 0.46
         },
         {
           "base": 5,
-          "share": 0.424
+          "share": 0.413
         },
         {
           "base": 4,
-          "share": 0.569
+          "share": 0.58
         }
       ],
       "scale": [
@@ -1203,7 +1297,7 @@
         30,
         40
       ],
-      "distinctValues": 29
+      "distinctValues": 32
     },
     "stability": {
       "deadBand": 0.05,
@@ -1214,7 +1308,7 @@
         {
           "name": "sm",
           "px": 2,
-          "count": 40
+          "count": 52
         },
         {
           "name": "md",
@@ -1227,7 +1321,7 @@
           "count": 11
         }
       ],
-      "button": "50%",
+      "button": "2px",
       "pill": true,
       "pillValue": "50%",
       "sharp": false
@@ -1249,6 +1343,10 @@
         {
           "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px inset",
           "count": 4
+        },
+        {
+          "value": "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px",
+          "count": 3
         }
       ],
       "flat": false
@@ -1264,13 +1362,41 @@
         "dominantUnstyled": true
       },
       "button": {
-        "padding": "10px 24px",
+        "padding": "10px 18px",
         "borderWidth": null,
-        "radius": "24px",
+        "radius": null,
         "gap": null,
-        "elements": 2,
-        "variants": 7,
+        "elements": 9,
+        "variants": 10,
         "dominantUnstyled": true
+      }
+    },
+    "layout": {
+      "available": true,
+      "sectionsReliable": false,
+      "sections": null,
+      "measure": {
+        "px": 800,
+        "occurrences": 49,
+        "share": 0.355
+      },
+      "rhythm": null,
+      "columns": {
+        "count": 2,
+        "occurrences": 11
+      },
+      "hero": null,
+      "nav": {
+        "height": 36,
+        "position": "absolute",
+        "links": 7,
+        "overflowed": false
+      },
+      "motion": {
+        "duration": "0.1s",
+        "easing": "ease",
+        "occurrences": 1,
+        "share": 1
       }
     },
     "states": {
@@ -1279,7 +1405,7 @@
         "total": 5,
         "readable": 5,
         "blocked": 0,
-        "stateRules": 201
+        "stateRules": 202
       },
       "roles": {
         "button": {
@@ -1291,8 +1417,9 @@
             "rulesConsidered": 1
           },
           "focus": {
-            "outlineColor": "#000000",
-            "matchedElements": 16,
+            "color": "#ffffff",
+            "borderColor": "#68b631",
+            "matchedElements": 59,
             "rulesConsidered": 3
           },
           "focus-visible": {
@@ -1303,12 +1430,17 @@
           },
           "hover": {
             "color": "#ffffff",
-            "backgroundColor": "#000000",
-            "matchedElements": 19,
-            "rulesConsidered": 14
+            "borderColor": "#68b631",
+            "matchedElements": 59,
+            "rulesConsidered": 15
           }
         },
         "link": {
+          "focus": {
+            "outlineColor": "#000000",
+            "matchedElements": 1,
+            "rulesConsidered": 1
+          },
           "hover": {
             "color": "#ffffff",
             "boxShadow": "inset 0 -1px 0 0 #3cffd0",
@@ -1319,8 +1451,8 @@
         "text": {
           "focus": {
             "outlineColor": "#5200ff",
-            "matchedElements": 4,
-            "rulesConsidered": 4
+            "matchedElements": 19,
+            "rulesConsidered": 5
           },
           "hover": {
             "boxShadow": "inset 0 -0.6em 0 0 #5200ff",
@@ -1329,7 +1461,7 @@
           }
         }
       },
-      "declarations": 57
+      "declarations": 60
     },
     "audit": {
       "pairs": [
@@ -1387,22 +1519,22 @@
       "minRatio": 1.43
     },
     "warnings": [
+      "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
       "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
-      "No spacing grid explains 75% of values (best 0.569); site may not be on a grid.",
-      "15 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-      "button box metrics come from 2 elements out of 7 distinct shapes; thin evidence for a component token.",
-      "Strided sample: 5883 of 14645 elements. Weights are relative only."
+      "No spacing grid explains 75% of values (best 0.58); site may not be on a grid.",
+      "16 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+      "Strided sample: 5982 of 15629 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://www.theverge.com/",
     "title": "The Verge",
     "viewport": {
       "w": 1440,
       "h": 900
     },
-    "docHeight": 19108,
+    "docHeight": 19177,
     "textColors": {
       "rgb(82, 0, 255)": {
         "count": 220,
@@ -1410,9 +1542,9 @@
         "chars": 2566
       },
       "rgb(255, 255, 255)": {
-        "count": 81,
-        "area": 454040.4934082031,
-        "chars": 2827
+        "count": 98,
+        "area": 631518.7629394531,
+        "chars": 2918
       },
       "rgb(74, 74, 74)": {
         "count": 141,
@@ -1420,19 +1552,19 @@
         "chars": 14338
       },
       "rgb(19, 19, 19)": {
-        "count": 376,
-        "area": 4154202.4702148438,
-        "chars": 15717
+        "count": 398,
+        "area": 4687707.789794922,
+        "chars": 19286
       },
       "rgb(99, 99, 99)": {
         "count": 290,
-        "area": 161138.78125,
-        "chars": 1280
+        "area": 159134.75,
+        "chars": 1259
       },
       "rgb(0, 0, 0)": {
-        "count": 14,
-        "area": 17910.8125,
-        "chars": 84
+        "count": 38,
+        "area": 570987.7934570312,
+        "chars": 4041
       },
       "rgb(17, 17, 17)": {
         "count": 1,
@@ -1448,12 +1580,12 @@
     "bgColors": {
       "rgb(255, 255, 255)": {
         "count": 13,
-        "area": 83910358.75,
+        "area": 84428897.125,
         "chars": 0
       },
       "rgb(246, 246, 246)": {
-        "count": 2,
-        "area": 552000,
+        "count": 13,
+        "area": 1847125.3125,
         "chars": 0
       },
       "rgb(82, 0, 255)": {
@@ -1481,6 +1613,11 @@
         "area": 160311.43725585938,
         "chars": 39
       },
+      "rgb(0, 0, 0)": {
+        "count": 17,
+        "area": 182591.37622070312,
+        "chars": 133
+      },
       "rgb(19, 19, 19)": {
         "count": 10,
         "area": 1099201.0625,
@@ -1490,6 +1627,11 @@
         "count": 3,
         "area": 598950.28125,
         "chars": 0
+      },
+      "rgb(60, 255, 208)": {
+        "count": 6,
+        "area": 931921.4375,
+        "chars": 45
       }
     },
     "borderColors": {
@@ -1505,7 +1647,7 @@
       },
       "rgb(233, 233, 233)": {
         "count": 192,
-        "area": 16893290.875,
+        "area": 17083283.59375,
         "chars": 0
       },
       "rgb(17, 17, 17)": {
@@ -1522,6 +1664,16 @@
         "count": 6,
         "area": 42206.4375,
         "chars": 60
+      },
+      "rgba(0, 0, 0, 0.2)": {
+        "count": 1,
+        "area": 88840.89184570312,
+        "chars": 655
+      },
+      "rgb(0, 0, 0)": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
       }
     },
     "fontFamilies": {
@@ -1531,9 +1683,9 @@
         "chars": 503
       },
       "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
-        "count": 863,
-        "area": 4570509.397705078,
-        "chars": 21318
+        "count": 896,
+        "area": 5223092.648925781,
+        "chars": 24879
       },
       "__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif": {
         "count": 3,
@@ -1556,16 +1708,21 @@
         "chars": 165
       },
       "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
-        "count": 3,
-        "area": 3,
-        "chars": 72
+        "count": 24,
+        "area": 526449.9809570312,
+        "chars": 3984
+      },
+      "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
       }
     },
     "fontSizes": {
       "11px": {
         "count": 533,
-        "area": 527062.8178710938,
-        "chars": 4609
+        "area": 525058.7866210938,
+        "chars": 4588
       },
       "19px": {
         "count": 6,
@@ -1584,8 +1741,8 @@
       },
       "20px": {
         "count": 75,
-        "area": 960020.25,
-        "chars": 3522
+        "area": 962846.5625,
+        "chars": 3542
       },
       "26px": {
         "count": 12,
@@ -1594,8 +1751,8 @@
       },
       "18px": {
         "count": 135,
-        "area": 1841780.7045898438,
-        "chars": 8464
+        "area": 1840504.9545898438,
+        "chars": 8504
       },
       "16px": {
         "count": 220,
@@ -1613,9 +1770,9 @@
         "chars": 162
       },
       "14px": {
-        "count": 3,
-        "area": 3463.25,
-        "chars": 26
+        "count": 36,
+        "area": 661613.0766601562,
+        "chars": 3590
       },
       "31px": {
         "count": 3,
@@ -1629,13 +1786,33 @@
       },
       "13px": {
         "count": 45,
-        "area": 332277.0556640625,
-        "chars": 2292
+        "area": 327163.9489746094,
+        "chars": 2250
+      },
+      "19.2px": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "13.008px": {
+        "count": 24,
+        "area": 569892.7766113281,
+        "chars": 3915
+      },
+      "14.08px": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
       },
       "65px": {
         "count": 2,
         "area": 116235.59375,
         "chars": 124
+      },
+      "8px": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
       }
     },
     "fontWeights": {
@@ -1645,9 +1822,9 @@
         "chars": 976
       },
       "400": {
-        "count": 795,
-        "area": 4391712.486816406,
-        "chars": 21790
+        "count": 849,
+        "area": 5611493.6396484375,
+        "chars": 29197
       },
       "500": {
         "count": 27,
@@ -1655,14 +1832,14 @@
         "chars": 369
       },
       "600": {
-        "count": 8,
-        "area": 40163.65625,
-        "chars": 67
+        "count": 14,
+        "area": 79744.16723632812,
+        "chars": 187
       },
       "700": {
-        "count": 272,
-        "area": 3392849.526123047,
-        "chars": 13773
+        "count": 275,
+        "area": 3395544.401123047,
+        "chars": 13842
       },
       "800": {
         "count": 3,
@@ -1678,8 +1855,8 @@
     "lineHeights": {
       "13.2px": {
         "count": 470,
-        "area": 416770.6291503906,
-        "chars": 3786
+        "area": 414766.5979003906,
+        "chars": 3765
       },
       "13px": {
         "count": 4,
@@ -1703,8 +1880,8 @@
       },
       "20px": {
         "count": 48,
-        "area": 629533.5625,
-        "chars": 2385
+        "area": 632359.875,
+        "chars": 2405
       },
       "26.4px": {
         "count": 41,
@@ -1728,8 +1905,8 @@
       },
       "20.8px": {
         "count": 195,
-        "area": 3194646.4025878906,
-        "chars": 13983
+        "area": 3189533.2958984375,
+        "chars": 13941
       },
       "28px": {
         "count": 7,
@@ -1763,8 +1940,13 @@
       },
       "18px": {
         "count": 85,
-        "area": 1083687.7763671875,
-        "chars": 5275
+        "area": 1082412.0263671875,
+        "chars": 5315
+      },
+      "18.2px": {
+        "count": 33,
+        "area": 658149.8266601562,
+        "chars": 3564
       },
       "14.3px": {
         "count": 29,
@@ -1791,10 +1973,35 @@
         "area": 13765.21875,
         "chars": 33
       },
+      "24.96px": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "19.512px": {
+        "count": 9,
+        "area": 262021.37622070312,
+        "chars": 2013
+      },
+      "23.936px": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
+      },
+      "15.6096px": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
+      },
       "52px": {
         "count": 2,
         "area": 116235.59375,
         "chars": 124
+      },
+      "11.2px": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
       },
       "15.95px": {
         "count": 3,
@@ -1810,8 +2017,8 @@
     "letterSpacings": {
       "1.1px": {
         "count": 512,
-        "area": 431438.3288574219,
-        "chars": 3872
+        "area": 429434.2976074219,
+        "chars": 3851
       },
       "0.24px": {
         "count": 41,
@@ -1863,6 +2070,11 @@
         "area": 28441.21875,
         "chars": 27
       },
+      "0.13008px": {
+        "count": 12,
+        "area": 90423.697265625,
+        "chars": 201
+      },
       "1px": {
         "count": 3,
         "area": 13734.09375,
@@ -1907,13 +2119,13 @@
       },
       "text|11px|400|13.2px|1.1px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 450,
-        "area": 360742.568359375,
-        "chars": 3253
+        "area": 358738.537109375,
+        "chars": 3232
       },
       "link|20px|700|20px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 38,
-        "area": 610173.5625,
-        "chars": 2375
+        "area": 612999.875,
+        "chars": 2395
       },
       "text|24px|700|26.4px|0.24px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 21,
@@ -2040,6 +2252,16 @@
         "area": 360157.5393066406,
         "chars": 1162
       },
+      "text|14px|400|18.2px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
+        "count": 11,
+        "area": 417397.65625,
+        "chars": 3003
+      },
+      "button|14px|400|18.2px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
+        "count": 22,
+        "area": 240752.17041015625,
+        "chars": 561
+      },
       "text|16px|700|20.8px|-0.16px|__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif": {
         "count": 1,
         "area": 585.625,
@@ -2077,8 +2299,8 @@
       },
       "button|13px|400|20.8px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 3,
-        "area": 14353.7431640625,
-        "chars": 111
+        "area": 9240.636474609375,
+        "chars": 69
       },
       "link|13px|400|20.8px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 27,
@@ -2120,6 +2342,46 @@
         "area": 13765.21875,
         "chars": 33
       },
+      "h2|19.2px|600|24.96px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "text|13.008px|400|19.512px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 256987.51684570312,
+        "chars": 1965
+      },
+      "text|13.008px|700|19.512px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 1144.3125,
+        "chars": 9
+      },
+      "link|13.008px|400|19.512px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 3889.546875,
+        "chars": 39
+      },
+      "h3|14.08px|600|23.936px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
+      },
+      "text|13.008px|400|normal|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 217447.703125,
+        "chars": 1701
+      },
+      "button|13.008px|400|normal|0.13008px|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 7397.390625,
+        "chars": 78
+      },
+      "button|13.008px|400|15.6096px|0.13008px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
+      },
       "link|65px|900|52px|normal|__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif": {
         "count": 2,
         "area": 116235.59375,
@@ -2127,8 +2389,8 @@
       },
       "link|18px|700|18px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 76,
-        "area": 989233.828125,
-        "chars": 4750
+        "area": 987958.078125,
+        "chars": 4790
       },
       "button|11px|400|14.3px|1.1px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 2,
@@ -2139,6 +2401,11 @@
         "count": 8,
         "area": 161737.1875,
         "chars": 688
+      },
+      "h3|8px|600|11.2px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
       },
       "button|11px|600|15.95px|1px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 3,
@@ -2324,13 +2591,25 @@
         "rules": 1,
         "matched": 1
       },
-      "link|hover|color:rgb(86, 86, 86)": {
-        "rules": 2,
+      "button|hover|color:rgb(31, 150, 219)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 3,
         "matched": 3
       },
-      "button|hover|opacity:1": {
+      "link|focus|outline-color:rgb(0, 0, 0)": {
         "rules": 1,
+        "matched": 1
+      },
+      "link|hover|color:rgb(86, 86, 86)": {
+        "rules": 3,
         "matched": 4
+      },
+      "button|hover|opacity:1": {
+        "rules": 2,
+        "matched": 30
       },
       "button|hover|color:rgb(255, 255, 255);background-color:rgb(44, 100, 21)": {
         "rules": 1,
@@ -2341,16 +2620,16 @@
         "matched": 1
       },
       "button|hover|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
-        "rules": 1,
-        "matched": 9
+        "rules": 2,
+        "matched": 21
       },
       "button|focus|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
-        "rules": 1,
-        "matched": 9
+        "rules": 2,
+        "matched": 21
       },
       "button|focus|outline-color:rgb(0, 0, 0)": {
-        "rules": 3,
-        "matched": 16
+        "rules": 4,
+        "matched": 62
       },
       "text|focus|border-color:rgb(0, 0, 0)": {
         "rules": 1,
@@ -2358,15 +2637,15 @@
       },
       "button|hover|color:rgb(255, 255, 255);border-color:rgb(104, 182, 49)": {
         "rules": 1,
-        "matched": 13
+        "matched": 59
       },
       "button|focus|color:rgb(255, 255, 255);border-color:rgb(104, 182, 49)": {
         "rules": 1,
-        "matched": 13
+        "matched": 59
       },
       "text|focus|box-shadow:rgb(33, 150, 243) 0px 0px 1px": {
         "rules": 1,
-        "matched": 3
+        "matched": 18
       },
       "link|hover|color:rgb(56, 96, 190)": {
         "rules": 1,
@@ -2386,7 +2665,7 @@
       },
       "text|focus|outline-color:rgb(82, 0, 255)": {
         "rules": 2,
-        "matched": 4
+        "matched": 19
       }
     },
     "componentBoxes": {
@@ -2401,9 +2680,9 @@
         "chars": 9
       },
       "link|0px|0px|0px|normal": {
-        "count": 237,
-        "area": 1694928.0317382812,
-        "chars": 6086
+        "count": 238,
+        "area": 1699224.7348632812,
+        "chars": 6119
       },
       "link|14px 0px 14px 14px|0px|0px|normal": {
         "count": 6,
@@ -2411,9 +2690,9 @@
         "chars": 0
       },
       "button|0px|0px|0px|normal": {
-        "count": 27,
-        "area": 11604.5810546875,
-        "chars": 37
+        "count": 36,
+        "area": 108197.08715820312,
+        "chars": 437
       },
       "button|14px 0px 14px 14px|0px|0px|normal": {
         "count": 1,
@@ -2424,6 +2703,11 @@
         "count": 2,
         "area": 10029.9375,
         "chars": 15
+      },
+      "button|10px 18px|0px|0px|normal": {
+        "count": 9,
+        "area": 103148.4375,
+        "chars": 45
       },
       "button|21px|0px|0px|normal": {
         "count": 2,
@@ -2454,13 +2738,23 @@
         "count": 1,
         "area": 4588.40625,
         "chars": 11
+      },
+      "button|0px|0px|2px|normal": {
+        "count": 1,
+        "area": 2465.796875,
+        "chars": 26
+      },
+      "button|12px 10px|1px|2px|normal": {
+        "count": 3,
+        "area": 19668.2314453125,
+        "chars": 41
       }
     },
     "styleSheets": {
       "total": 5,
       "readable": 5,
       "blocked": 0,
-      "stateRules": 201
+      "stateRules": 202
     },
     "radii": {
       "1px": {
@@ -2469,9 +2763,9 @@
         "chars": 0
       },
       "2px": {
-        "count": 40,
-        "area": 104216.8125,
-        "chars": 57
+        "count": 52,
+        "area": 194640.509765625,
+        "chars": 258
       },
       "3px": {
         "count": 87,
@@ -2502,8 +2796,8 @@
       },
       "rgba(0, 0, 0, 0) 0px -1px 0px 0px inset": {
         "count": 180,
-        "area": 2831463.87109375,
-        "chars": 11024
+        "area": 2833014.43359375,
+        "chars": 11084
       },
       "rgb(82, 0, 255) 0px -1px 0px 0px inset": {
         "count": 61,
@@ -2513,6 +2807,11 @@
       "rgb(19, 19, 19) 0px -1px 0px 0px inset": {
         "count": 18,
         "area": 8017.8662109375,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px": {
+        "count": 3,
+        "area": 905291.4375,
         "chars": 0
       },
       "rgb(255, 255, 255) 0px 3px 0px 20px, rgba(0, 0, 0, 0.3) -8px -30px 30px 0px": {
@@ -2538,7 +2837,7 @@
         "chars": 0
       },
       "5": {
-        "count": 3,
+        "count": 9,
         "area": 0,
         "chars": 0
       },
@@ -2553,12 +2852,17 @@
         "chars": 0
       },
       "10": {
-        "count": 85,
+        "count": 104,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 191,
+        "count": 266,
+        "area": 0,
+        "chars": 0
+      },
+      "13": {
+        "count": 3,
         "area": 0,
         "chars": 0
       },
@@ -2573,17 +2877,17 @@
         "chars": 0
       },
       "16": {
-        "count": 161,
+        "count": 163,
         "area": 0,
         "chars": 0
       },
       "18": {
-        "count": 9,
+        "count": 20,
         "area": 0,
         "chars": 0
       },
       "20": {
-        "count": 262,
+        "count": 255,
         "area": 0,
         "chars": 0
       },
@@ -2607,13 +2911,18 @@
         "area": 0,
         "chars": 0
       },
+      "32": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
       "35": {
         "count": 12,
         "area": 0,
         "chars": 0
       },
       "40": {
-        "count": 35,
+        "count": 57,
         "area": 0,
         "chars": 0
       },
@@ -2671,6 +2980,11 @@
         "count": 2,
         "area": 0,
         "chars": 0
+      },
+      "152": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
       }
     },
     "interactiveBg": {
@@ -2684,10 +2998,20 @@
         "area": 24781.749755859375,
         "chars": 39
       },
+      "rgb(0, 0, 0)": {
+        "count": 17,
+        "area": 182591.37622070312,
+        "chars": 133
+      },
       "rgb(19, 19, 19)": {
         "count": 3,
         "area": 28441.21875,
         "chars": 27
+      },
+      "rgb(60, 255, 208)": {
+        "count": 3,
+        "area": 26630,
+        "chars": 45
       }
     },
     "interactiveRadius": {
@@ -2697,14 +3021,14 @@
         "chars": 0
       },
       "2px": {
-        "count": 3,
-        "area": 5286.1875,
-        "chars": 27
+        "count": 15,
+        "area": 95709.884765625,
+        "chars": 228
       },
       "0px": {
-        "count": 582,
-        "area": 3737604.089111328,
-        "chars": 13861
+        "count": 607,
+        "area": 3979117.9497070312,
+        "chars": 14479
       },
       "24px": {
         "count": 8,
@@ -2724,9 +3048,9 @@
         "chars": 76
       },
       "rgb(255, 255, 255)": {
-        "count": 78,
-        "area": 182497.56591796875,
-        "chars": 1060
+        "count": 95,
+        "area": 359975.83544921875,
+        "chars": 1151
       },
       "rgb(74, 74, 74)": {
         "count": 6,
@@ -2734,13 +3058,13 @@
         "chars": 39
       },
       "rgb(19, 19, 19)": {
-        "count": 309,
-        "area": 3467638.4331054688,
-        "chars": 12780
+        "count": 320,
+        "area": 3583746.096435547,
+        "chars": 13346
       },
       "rgb(99, 99, 99)": {
         "count": 194,
-        "area": 75269.390625,
+        "area": 75704.078125,
         "chars": 0
       },
       "rgb(17, 17, 17)": {
@@ -2752,12 +3076,32 @@
         "count": 15,
         "area": 22815,
         "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 9,
+        "area": 37916.9375,
+        "chars": 162
       }
     },
     "headingSizes": {
       "24px": {
         "count": 4,
         "area": 72838.125,
+        "chars": 52
+      },
+      "19.2px": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "14.08px": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
+      },
+      "8px": {
+        "count": 2,
+        "area": 12149.625,
         "chars": 52
       },
       "20px": {
@@ -2771,9 +3115,19 @@
         "count": 6,
         "area": 89118.125,
         "chars": 78
+      },
+      "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 6,
+        "area": 39580.510986328125,
+        "chars": 120
       }
     },
     "headingWeights": {
+      "600": {
+        "count": 6,
+        "area": 39580.510986328125,
+        "chars": 120
+      },
       "700": {
         "count": 6,
         "area": 89118.125,
@@ -2781,23 +3135,61 @@
       }
     },
     "pageBg": "rgb(255, 255, 255)",
-    "elementCount": 14666,
-    "sampled": 5883,
+    "elementCount": 15629,
+    "sampled": 5982,
+    "structure": {
+      "sectionCount": 0,
+      "sectionDepth": 2,
+      "sectionHeights": [],
+      "contentWidths": {
+        "600": 1,
+        "680": 48,
+        "750": 2,
+        "770": 1,
+        "800": 49,
+        "830": 5,
+        "910": 1,
+        "930": 19,
+        "940": 1,
+        "1060": 1,
+        "1080": 1,
+        "1090": 1,
+        "1100": 4,
+        "1140": 2,
+        "1300": 2
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "2": 11,
+        "4": 6
+      },
+      "transitions": {
+        "0.1s ease": 1
+      },
+      "sectionsReliable": false,
+      "hero": null,
+      "nav": {
+        "height": 36,
+        "position": "absolute",
+        "links": 7,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 4944
+        "elements": 5265
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 4861
+        "elements": 5182
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 4861
+        "elements": 5182
       }
     ],
     "mergedFrom": 3,
@@ -2808,14 +3200,14 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://www.theverge.com/",
     "title": "The Verge",
     "viewport": {
       "w": 1440,
       "h": 900
     },
-    "docHeight": 19108,
+    "docHeight": 19177,
     "textColors": {
       "rgb(60, 255, 208)": {
         "count": 220,
@@ -2823,9 +3215,9 @@
         "chars": 2566
       },
       "rgb(0, 0, 0)": {
-        "count": 20,
-        "area": 38578.906494140625,
-        "chars": 139
+        "count": 44,
+        "area": 591655.8874511719,
+        "chars": 4096
       },
       "rgb(233, 233, 233)": {
         "count": 141,
@@ -2833,14 +3225,14 @@
         "chars": 14338
       },
       "rgb(255, 255, 255)": {
-        "count": 451,
-        "area": 4587574.869628906,
-        "chars": 18489
+        "count": 490,
+        "area": 5297007.896240234,
+        "chars": 22089
       },
       "rgb(148, 148, 148)": {
         "count": 296,
-        "area": 200207.7802734375,
-        "chars": 1655
+        "area": 199506.5927734375,
+        "chars": 1649
       },
       "rgb(214, 243, 31)": {
         "count": 1,
@@ -2851,7 +3243,7 @@
     "bgColors": {
       "rgb(19, 19, 19)": {
         "count": 19,
-        "area": 84606952.59375,
+        "area": 85125490.96875,
         "chars": 27
       },
       "rgb(34, 34, 34)": {
@@ -2860,9 +3252,9 @@
         "chars": 0
       },
       "rgb(60, 255, 208)": {
-        "count": 6,
-        "area": 20668.093994140625,
-        "chars": 55
+        "count": 12,
+        "area": 952589.5314941406,
+        "chars": 100
       },
       "rgb(49, 49, 49)": {
         "count": 43,
@@ -2878,6 +3270,16 @@
         "count": 1,
         "area": 43200,
         "chars": 0
+      },
+      "rgb(246, 246, 246)": {
+        "count": 11,
+        "area": 1295125.3125,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 17,
+        "area": 182591.37622070312,
+        "chars": 133
       },
       "rgb(255, 255, 255)": {
         "count": 1,
@@ -2903,7 +3305,7 @@
       },
       "rgb(49, 49, 49)": {
         "count": 191,
-        "area": 10390748.53125,
+        "area": 10551573.84375,
         "chars": 0
       },
       "rgb(214, 243, 31)": {
@@ -2913,8 +3315,18 @@
       },
       "rgb(74, 74, 74)": {
         "count": 1,
-        "area": 6502542.34375,
+        "area": 6531709.75,
         "chars": 0
+      },
+      "rgba(0, 0, 0, 0.2)": {
+        "count": 1,
+        "area": 88840.89184570312,
+        "chars": 655
+      },
+      "rgb(0, 0, 0)": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
       }
     },
     "fontFamilies": {
@@ -2924,9 +3336,9 @@
         "chars": 503
       },
       "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
-        "count": 863,
-        "area": 4570509.397705078,
-        "chars": 21318
+        "count": 896,
+        "area": 5222844.930175781,
+        "chars": 24834
       },
       "__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif": {
         "count": 3,
@@ -2949,16 +3361,21 @@
         "chars": 165
       },
       "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
-        "count": 3,
-        "area": 3,
-        "chars": 72
+        "count": 24,
+        "area": 526449.9809570312,
+        "chars": 3984
+      },
+      "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
       }
     },
     "fontSizes": {
       "11px": {
         "count": 533,
-        "area": 527062.8178710938,
-        "chars": 4609
+        "area": 526361.6303710938,
+        "chars": 4603
       },
       "19px": {
         "count": 6,
@@ -3006,9 +3423,9 @@
         "chars": 162
       },
       "14px": {
-        "count": 3,
-        "area": 3463.25,
-        "chars": 26
+        "count": 36,
+        "area": 661613.0766601562,
+        "chars": 3590
       },
       "31px": {
         "count": 3,
@@ -3022,13 +3439,33 @@
       },
       "13px": {
         "count": 45,
-        "area": 332277.0556640625,
-        "chars": 2292
+        "area": 327163.9489746094,
+        "chars": 2250
+      },
+      "19.2px": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "13.008px": {
+        "count": 24,
+        "area": 569892.7766113281,
+        "chars": 3915
+      },
+      "14.08px": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
       },
       "65px": {
         "count": 2,
         "area": 116235.59375,
         "chars": 124
+      },
+      "8px": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
       }
     },
     "fontWeights": {
@@ -3038,9 +3475,9 @@
         "chars": 976
       },
       "400": {
-        "count": 795,
-        "area": 4391712.486816406,
-        "chars": 21790
+        "count": 849,
+        "area": 5612796.4833984375,
+        "chars": 29212
       },
       "500": {
         "count": 27,
@@ -3048,14 +3485,14 @@
         "chars": 369
       },
       "600": {
-        "count": 8,
-        "area": 40163.65625,
-        "chars": 67
+        "count": 14,
+        "area": 79744.16723632812,
+        "chars": 187
       },
       "700": {
-        "count": 272,
-        "area": 3392849.526123047,
-        "chars": 13773
+        "count": 275,
+        "area": 3393993.838623047,
+        "chars": 13782
       },
       "800": {
         "count": 3,
@@ -3071,8 +3508,8 @@
     "lineHeights": {
       "13.2px": {
         "count": 470,
-        "area": 416770.6291503906,
-        "chars": 3786
+        "area": 416069.4416503906,
+        "chars": 3780
       },
       "13px": {
         "count": 4,
@@ -3121,8 +3558,8 @@
       },
       "20.8px": {
         "count": 195,
-        "area": 3194646.4025878906,
-        "chars": 13983
+        "area": 3189533.2958984375,
+        "chars": 13941
       },
       "28px": {
         "count": 7,
@@ -3159,6 +3596,11 @@
         "area": 1083687.7763671875,
         "chars": 5275
       },
+      "18.2px": {
+        "count": 33,
+        "area": 658149.8266601562,
+        "chars": 3564
+      },
       "14.3px": {
         "count": 29,
         "area": 62105.555908203125,
@@ -3184,10 +3626,35 @@
         "area": 13765.21875,
         "chars": 33
       },
+      "24.96px": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "19.512px": {
+        "count": 9,
+        "area": 262021.37622070312,
+        "chars": 2013
+      },
+      "23.936px": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
+      },
+      "15.6096px": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
+      },
       "52px": {
         "count": 2,
         "area": 116235.59375,
         "chars": 124
+      },
+      "11.2px": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
       },
       "15.95px": {
         "count": 3,
@@ -3203,8 +3670,8 @@
     "letterSpacings": {
       "1.1px": {
         "count": 512,
-        "area": 431438.3288574219,
-        "chars": 3872
+        "area": 430737.1413574219,
+        "chars": 3866
       },
       "0.24px": {
         "count": 41,
@@ -3256,6 +3723,11 @@
         "area": 28441.21875,
         "chars": 27
       },
+      "0.13008px": {
+        "count": 12,
+        "area": 90423.697265625,
+        "chars": 201
+      },
       "1px": {
         "count": 3,
         "area": 13734.09375,
@@ -3300,8 +3772,8 @@
       },
       "text|11px|400|13.2px|1.1px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 450,
-        "area": 360742.568359375,
-        "chars": 3253
+        "area": 360041.380859375,
+        "chars": 3247
       },
       "link|20px|700|20px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 38,
@@ -3433,6 +3905,16 @@
         "area": 360157.5393066406,
         "chars": 1162
       },
+      "text|14px|400|18.2px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
+        "count": 11,
+        "area": 417397.65625,
+        "chars": 3003
+      },
+      "button|14px|400|18.2px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
+        "count": 22,
+        "area": 240752.17041015625,
+        "chars": 561
+      },
       "text|16px|700|20.8px|-0.16px|__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif": {
         "count": 1,
         "area": 585.625,
@@ -3470,8 +3952,8 @@
       },
       "button|13px|400|20.8px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 3,
-        "area": 14353.7431640625,
-        "chars": 111
+        "area": 9240.636474609375,
+        "chars": 69
       },
       "link|13px|400|20.8px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 27,
@@ -3513,6 +3995,46 @@
         "area": 13765.21875,
         "chars": 33
       },
+      "h2|19.2px|600|24.96px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "text|13.008px|400|19.512px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 256987.51684570312,
+        "chars": 1965
+      },
+      "text|13.008px|700|19.512px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 1144.3125,
+        "chars": 9
+      },
+      "link|13.008px|400|19.512px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 3889.546875,
+        "chars": 39
+      },
+      "h3|14.08px|600|23.936px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
+      },
+      "text|13.008px|400|normal|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 217447.703125,
+        "chars": 1701
+      },
+      "button|13.008px|400|normal|0.13008px|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 7397.390625,
+        "chars": 78
+      },
+      "button|13.008px|400|15.6096px|0.13008px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace": {
+        "count": 9,
+        "area": 83026.306640625,
+        "chars": 123
+      },
       "link|65px|900|52px|normal|__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif": {
         "count": 2,
         "area": 116235.59375,
@@ -3532,6 +4054,11 @@
         "count": 8,
         "area": 161737.1875,
         "chars": 688
+      },
+      "h3|8px|600|11.2px|normal|ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
       },
       "button|11px|600|15.95px|1px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 3,
@@ -3729,13 +4256,25 @@
         "rules": 1,
         "matched": 1
       },
-      "link|hover|color:rgb(86, 86, 86)": {
-        "rules": 2,
+      "button|hover|color:rgb(31, 150, 219)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 3,
         "matched": 3
       },
-      "button|hover|opacity:1": {
+      "link|focus|outline-color:rgb(0, 0, 0)": {
         "rules": 1,
+        "matched": 1
+      },
+      "link|hover|color:rgb(86, 86, 86)": {
+        "rules": 3,
         "matched": 4
+      },
+      "button|hover|opacity:1": {
+        "rules": 2,
+        "matched": 30
       },
       "button|hover|color:rgb(255, 255, 255);background-color:rgb(44, 100, 21)": {
         "rules": 1,
@@ -3746,16 +4285,16 @@
         "matched": 1
       },
       "button|hover|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
-        "rules": 1,
-        "matched": 9
+        "rules": 2,
+        "matched": 21
       },
       "button|focus|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
-        "rules": 1,
-        "matched": 9
+        "rules": 2,
+        "matched": 21
       },
       "button|focus|outline-color:rgb(0, 0, 0)": {
-        "rules": 3,
-        "matched": 16
+        "rules": 4,
+        "matched": 62
       },
       "text|focus|border-color:rgb(0, 0, 0)": {
         "rules": 1,
@@ -3763,15 +4302,15 @@
       },
       "button|hover|color:rgb(255, 255, 255);border-color:rgb(104, 182, 49)": {
         "rules": 1,
-        "matched": 13
+        "matched": 59
       },
       "button|focus|color:rgb(255, 255, 255);border-color:rgb(104, 182, 49)": {
         "rules": 1,
-        "matched": 13
+        "matched": 59
       },
       "text|focus|box-shadow:rgb(33, 150, 243) 0px 0px 1px": {
         "rules": 1,
-        "matched": 3
+        "matched": 18
       },
       "link|hover|color:rgb(56, 96, 190)": {
         "rules": 1,
@@ -3791,7 +4330,7 @@
       },
       "text|focus|outline-color:rgb(82, 0, 255)": {
         "rules": 2,
-        "matched": 4
+        "matched": 19
       }
     },
     "componentBoxes": {
@@ -3806,9 +4345,9 @@
         "chars": 9
       },
       "link|0px|0px|0px|normal": {
-        "count": 237,
-        "area": 1694928.0317382812,
-        "chars": 6086
+        "count": 238,
+        "area": 1696398.4223632812,
+        "chars": 6099
       },
       "link|14px 0px 14px 14px|0px|0px|normal": {
         "count": 6,
@@ -3816,9 +4355,9 @@
         "chars": 0
       },
       "button|0px|0px|0px|normal": {
-        "count": 27,
-        "area": 11604.5810546875,
-        "chars": 37
+        "count": 36,
+        "area": 108197.08715820312,
+        "chars": 437
       },
       "button|14px 0px 14px 14px|0px|0px|normal": {
         "count": 1,
@@ -3829,6 +4368,11 @@
         "count": 2,
         "area": 10029.9375,
         "chars": 15
+      },
+      "button|10px 18px|0px|0px|normal": {
+        "count": 9,
+        "area": 103148.4375,
+        "chars": 45
       },
       "button|21px|0px|0px|normal": {
         "count": 2,
@@ -3859,13 +4403,23 @@
         "count": 1,
         "area": 4588.40625,
         "chars": 11
+      },
+      "button|0px|0px|2px|normal": {
+        "count": 1,
+        "area": 2465.796875,
+        "chars": 26
+      },
+      "button|12px 10px|1px|2px|normal": {
+        "count": 3,
+        "area": 19668.2314453125,
+        "chars": 41
       }
     },
     "styleSheets": {
       "total": 5,
       "readable": 5,
       "blocked": 0,
-      "stateRules": 201
+      "stateRules": 202
     },
     "radii": {
       "1px": {
@@ -3874,9 +4428,9 @@
         "chars": 0
       },
       "2px": {
-        "count": 40,
-        "area": 104216.8125,
-        "chars": 57
+        "count": 52,
+        "area": 194640.509765625,
+        "chars": 258
       },
       "3px": {
         "count": 87,
@@ -3914,6 +4468,11 @@
         "count": 18,
         "area": 8017.8662109375,
         "chars": 0
+      },
+      "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px": {
+        "count": 3,
+        "area": 905291.4375,
+        "chars": 0
       }
     },
     "spacings": {
@@ -3928,7 +4487,7 @@
         "chars": 0
       },
       "5": {
-        "count": 3,
+        "count": 9,
         "area": 0,
         "chars": 0
       },
@@ -3943,12 +4502,17 @@
         "chars": 0
       },
       "10": {
-        "count": 85,
+        "count": 104,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 191,
+        "count": 266,
+        "area": 0,
+        "chars": 0
+      },
+      "13": {
+        "count": 3,
         "area": 0,
         "chars": 0
       },
@@ -3963,17 +4527,17 @@
         "chars": 0
       },
       "16": {
-        "count": 161,
+        "count": 163,
         "area": 0,
         "chars": 0
       },
       "18": {
-        "count": 9,
+        "count": 20,
         "area": 0,
         "chars": 0
       },
       "20": {
-        "count": 262,
+        "count": 255,
         "area": 0,
         "chars": 0
       },
@@ -3997,13 +4561,18 @@
         "area": 0,
         "chars": 0
       },
+      "32": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
       "35": {
         "count": 12,
         "area": 0,
         "chars": 0
       },
       "40": {
-        "count": 35,
+        "count": 57,
         "area": 0,
         "chars": 0
       },
@@ -4061,18 +4630,28 @@
         "count": 2,
         "area": 0,
         "chars": 0
+      },
+      "152": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
       }
     },
     "interactiveBg": {
       "rgb(60, 255, 208)": {
-        "count": 6,
-        "area": 20668.093994140625,
-        "chars": 55
+        "count": 9,
+        "area": 47298.093994140625,
+        "chars": 100
       },
       "rgb(49, 49, 49)": {
         "count": 5,
         "area": 24781.749755859375,
         "chars": 39
+      },
+      "rgb(0, 0, 0)": {
+        "count": 17,
+        "area": 182591.37622070312,
+        "chars": 133
       },
       "rgb(19, 19, 19)": {
         "count": 3,
@@ -4087,14 +4666,14 @@
         "chars": 0
       },
       "2px": {
-        "count": 3,
-        "area": 5286.1875,
-        "chars": 27
+        "count": 15,
+        "area": 95709.884765625,
+        "chars": 228
       },
       "0px": {
-        "count": 582,
-        "area": 3737604.089111328,
-        "chars": 13861
+        "count": 607,
+        "area": 3977567.3872070312,
+        "chars": 14419
       },
       "24px": {
         "count": 8,
@@ -4114,9 +4693,9 @@
         "chars": 76
       },
       "rgb(0, 0, 0)": {
-        "count": 6,
-        "area": 20668.093994140625,
-        "chars": 55
+        "count": 15,
+        "area": 58585.031494140625,
+        "chars": 217
       },
       "rgb(233, 233, 233)": {
         "count": 6,
@@ -4124,13 +4703,13 @@
         "chars": 39
       },
       "rgb(255, 255, 255)": {
-        "count": 381,
-        "area": 3629467.905029297,
-        "chars": 13785
+        "count": 409,
+        "area": 3921503.275390625,
+        "chars": 14382
       },
       "rgb(148, 148, 148)": {
         "count": 194,
-        "area": 75269.390625,
+        "area": 75704.078125,
         "chars": 0
       },
       "rgb(214, 243, 31)": {
@@ -4145,6 +4724,21 @@
         "area": 72838.125,
         "chars": 52
       },
+      "19.2px": {
+        "count": 3,
+        "area": 17657.6787109375,
+        "chars": 42
+      },
+      "14.08px": {
+        "count": 1,
+        "area": 9773.207275390625,
+        "chars": 26
+      },
+      "8px": {
+        "count": 2,
+        "area": 12149.625,
+        "chars": 52
+      },
       "20px": {
         "count": 2,
         "area": 16280,
@@ -4156,9 +4750,19 @@
         "count": 6,
         "area": 89118.125,
         "chars": 78
+      },
+      "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 6,
+        "area": 39580.510986328125,
+        "chars": 120
       }
     },
     "headingWeights": {
+      "600": {
+        "count": 6,
+        "area": 39580.510986328125,
+        "chars": 120
+      },
       "700": {
         "count": 6,
         "area": 89118.125,
@@ -4166,23 +4770,61 @@
       }
     },
     "pageBg": "rgb(19, 19, 19)",
-    "elementCount": 14645,
-    "sampled": 5883,
+    "elementCount": 15629,
+    "sampled": 5982,
+    "structure": {
+      "sectionCount": 0,
+      "sectionDepth": 2,
+      "sectionHeights": [],
+      "contentWidths": {
+        "600": 1,
+        "680": 48,
+        "750": 2,
+        "770": 1,
+        "800": 49,
+        "830": 5,
+        "910": 1,
+        "930": 19,
+        "940": 1,
+        "1060": 1,
+        "1080": 1,
+        "1090": 1,
+        "1100": 4,
+        "1140": 2,
+        "1300": 2
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "2": 11,
+        "4": 6
+      },
+      "transitions": {
+        "0.1s ease": 1
+      },
+      "sectionsReliable": false,
+      "hero": null,
+      "nav": {
+        "height": 36,
+        "position": "absolute",
+        "links": 7,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 4937
+        "elements": 5265
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 4854
+        "elements": 5182
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 4854
+        "elements": 5182
       }
     ],
     "mergedFrom": 3,

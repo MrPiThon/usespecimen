@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T02:23:31.415Z",
+  "capturedAt": "2026-08-29T03:23:19.602Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 11649,
-    "elementCount": 7701,
-    "sampled": 6113,
+    "elementCount": 7695,
+    "sampled": 6112,
     "sampleRatio": 0.794
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -37,7 +37,7 @@
       },
       "card": {
         "hex": "#ffffff",
-        "weightShare": 0.3452,
+        "weightShare": 0.3451,
         "variants": [
           "#fcfcfc"
         ]
@@ -73,7 +73,7 @@
           "name": "surface-1",
           "hex": "#ecedee",
           "deltaL": 0.018,
-          "areaShare": 0.1323
+          "areaShare": 0.1324
         },
         {
           "name": "surface-2",
@@ -85,7 +85,7 @@
           "name": "surface-3",
           "hex": "#ffffff",
           "deltaL": 0.037,
-          "areaShare": 0.3452
+          "areaShare": 0.3451
         },
         {
           "name": "surface-4",
@@ -211,14 +211,6 @@
         "count": 9
       },
       {
-        "hex": "#00a6f4",
-        "role": null,
-        "hue": "blue",
-        "lightness": 0.691,
-        "chroma": 0.16,
-        "count": 9
-      },
-      {
         "hex": "#eef2ff",
         "role": null,
         "hue": "neutral",
@@ -233,6 +225,14 @@
         "lightness": 0.969,
         "chroma": 0.015,
         "count": 9
+      },
+      {
+        "hex": "#00a6f4",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.691,
+        "chroma": 0.16,
+        "count": 8
       },
       {
         "hex": "#e0e7ff",
@@ -291,14 +291,6 @@
         "count": 6
       },
       {
-        "hex": "#7c86ff",
-        "role": null,
-        "hue": "purple",
-        "lightness": 0.67,
-        "chroma": 0.176,
-        "count": 6
-      },
-      {
         "hex": "#c27aff",
         "role": null,
         "hue": "purple",
@@ -312,6 +304,14 @@
         "hue": "pink",
         "lightness": 0.718,
         "chroma": 0.202,
+        "count": 6
+      },
+      {
+        "hex": "#7c86ff",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.67,
+        "chroma": 0.176,
         "count": 6
       }
     ],
@@ -703,6 +703,29 @@
       "dominantUnstyled": false
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": false,
+    "sections": null,
+    "measure": {
+      "px": 1360,
+      "occurrences": 64,
+      "share": 0.413
+    },
+    "rhythm": null,
+    "columns": {
+      "count": 3,
+      "occurrences": 9
+    },
+    "hero": null,
+    "nav": null,
+    "motion": {
+      "duration": "0.15s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 48,
+      "share": 1
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -804,8 +827,9 @@
     "minRatio": 1.11
   },
   "warnings": [
+    "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
     "13 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-    "Strided sample: 6113 of 7701 elements. Weights are relative only."
+    "Strided sample: 6112 of 7695 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -817,12 +841,12 @@
         "h": 900
       },
       "docHeight": 11649,
-      "elementCount": 7701,
+      "elementCount": 7695,
       "sampled": 6112,
       "sampleRatio": 0.794
     },
-    "harvestVersion": 4,
-    "clusterVersion": 14,
+    "harvestVersion": 6,
+    "clusterVersion": 15,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1102,19 +1126,19 @@
           "count": 6
         },
         {
+          "hex": "#7c86ff",
+          "role": null,
+          "hue": "purple",
+          "lightness": 0.67,
+          "chroma": 0.176,
+          "count": 6
+        },
+        {
           "hex": "#c27aff",
           "role": null,
           "hue": "purple",
           "lightness": 0.71,
           "chroma": 0.195,
-          "count": 6
-        },
-        {
-          "hex": "#fb64b6",
-          "role": null,
-          "hue": "pink",
-          "lightness": 0.718,
-          "chroma": 0.202,
           "count": 6
         }
       ],
@@ -1391,15 +1415,15 @@
     },
     "spacing": {
       "base": 8,
-      "gridConfidence": 0.769,
+      "gridConfidence": 0.768,
       "gridCandidates": [
         {
           "base": 8,
-          "share": 0.769
+          "share": 0.768
         },
         {
           "base": 6,
-          "share": 0.242
+          "share": 0.241
         },
         {
           "base": 5,
@@ -1506,6 +1530,29 @@
         "dominantUnstyled": false
       }
     },
+    "layout": {
+      "available": true,
+      "sectionsReliable": false,
+      "sections": null,
+      "measure": {
+        "px": 1360,
+        "occurrences": 64,
+        "share": 0.413
+      },
+      "rhythm": null,
+      "columns": {
+        "count": 3,
+        "occurrences": 9
+      },
+      "hero": null,
+      "nav": null,
+      "motion": {
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "occurrences": 48,
+        "share": 1
+      }
+    },
     "states": {
       "available": true,
       "sheets": {
@@ -1607,12 +1654,13 @@
       "minRatio": 1.03
     },
     "warnings": [
+      "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
       "13 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-      "Strided sample: 6112 of 7701 elements. Weights are relative only."
+      "Strided sample: 6112 of 7695 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://tailwindcss.com/",
     "title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
     "viewport": {
@@ -1740,7 +1788,7 @@
     "bgColors": {
       "rgb(255, 255, 255)": {
         "count": 78,
-        "area": 19364669.3203125,
+        "area": 19351873.416503906,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.05)": {
@@ -1780,7 +1828,7 @@
       },
       "oklab(0 0 0 / 0.05)": {
         "count": 3,
-        "area": 264019.68994140625,
+        "area": 250395.17822265625,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.025)": {
@@ -1814,8 +1862,8 @@
         "chars": 0
       },
       "lab(63.3038 -18.433 -51.0407)": {
-        "count": 9,
-        "area": 20124.575885653496,
+        "count": 8,
+        "area": 16043.730909466743,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.1)": {
@@ -2375,7 +2423,7 @@
       },
       "lab(59.866 22.4834 -64.4485)": {
         "count": 6,
-        "area": 10304,
+        "area": 10303.99755859375,
         "chars": 0
       },
       "lab(62.8239 34.9159 -60.0512)": {
@@ -3310,12 +3358,12 @@
     "radii": {
       "16px": {
         "count": 60,
-        "area": 17880857.4609375,
+        "area": 17868061.557128906,
         "chars": 12
       },
       "3.35544e+07px": {
-        "count": 123,
-        "area": 174477.5446356535,
+        "count": 122,
+        "area": 170396.69965946674,
         "chars": 36
       },
       "32px": {
@@ -3330,12 +3378,12 @@
       },
       "8px": {
         "count": 104,
-        "area": 13460600.375,
+        "area": 13460600.372558594,
         "chars": 54
       },
       "24px": {
         "count": 3,
-        "area": 264019.68994140625,
+        "area": 250395.17822265625,
         "chars": 0
       },
       "0px": {
@@ -3407,7 +3455,7 @@
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.672993 0.0219624 -0.180645 / 0.5) 0px 10px 15px -3px, oklab(0.672993 0.0219624 -0.180645 / 0.5) 0px 4px 6px -4px": {
         "count": 3,
-        "area": 4224,
+        "area": 4223.99755859375,
         "chars": 0
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.129999 -0.00404751 -0.027702 / 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px": {
@@ -3711,23 +3759,66 @@
       }
     },
     "pageBg": "rgba(0, 0, 0, 0)",
-    "elementCount": 7701,
-    "sampled": 6113,
+    "elementCount": 7695,
+    "sampled": 6112,
+    "structure": {
+      "sectionCount": 0,
+      "sectionDepth": 4,
+      "sectionHeights": [],
+      "contentWidths": {
+        "510": 2,
+        "520": 6,
+        "530": 1,
+        "540": 4,
+        "560": 7,
+        "570": 4,
+        "580": 4,
+        "590": 4,
+        "650": 20,
+        "670": 6,
+        "690": 1,
+        "720": 4,
+        "750": 2,
+        "770": 8,
+        "790": 4,
+        "800": 1,
+        "830": 4,
+        "880": 2,
+        "890": 2,
+        "910": 1,
+        "1260": 2,
+        "1330": 2,
+        "1340": 9,
+        "1360": 55
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "2": 8,
+        "3": 9,
+        "4": 3
+      },
+      "transitions": {
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 48
+      },
+      "sectionsReliable": false,
+      "hero": null,
+      "nav": null
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 2559
+        "elements": 2557
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 2571
+        "elements": 2569
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 2571
+        "elements": 2569
       }
     ],
     "mergedFrom": 3,
@@ -3738,7 +3829,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://tailwindcss.com/",
     "title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
     "viewport": {
@@ -3749,7 +3840,7 @@
     "textColors": {
       "rgb(255, 255, 255)": {
         "count": 363,
-        "area": 2114825.6888348237,
+        "area": 2112137.6888348237,
         "chars": 3775
       },
       "lab(65.9269 -0.832707 -8.17473)": {
@@ -3846,12 +3937,12 @@
     "bgColors": {
       "lab(1.90334 0.278696 -5.48866)": {
         "count": 78,
-        "area": 59273411.3125,
+        "area": 59279128.9206543,
         "chars": 0
       },
       "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)": {
         "count": 42,
-        "area": 19752927.9375,
+        "area": 19759017.422607422,
         "chars": 93
       },
       "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)": {
@@ -3911,7 +4002,7 @@
       },
       "lab(63.3038 -18.433 -51.0407)": {
         "count": 8,
-        "area": 17752.78700554371,
+        "area": 16932.236635923386,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.1)": {
@@ -4471,7 +4562,7 @@
       },
       "lab(59.866 22.4834 -64.4485)": {
         "count": 6,
-        "area": 10303.99755859375,
+        "area": 10304,
         "chars": 0
       },
       "lab(62.8239 34.9159 -60.0512)": {
@@ -4885,7 +4976,7 @@
     "fontFamilies": {
       "inter, \"inter Fallback\", system-ui": {
         "count": 351,
-        "area": 4013315.65625,
+        "area": 4010627.65625,
         "chars": 11903
       },
       "plexMono, \"plexMono Fallback\", monospace": {
@@ -4927,7 +5018,7 @@
       },
       "16px": {
         "count": 46,
-        "area": 1015071.75,
+        "area": 1012383.75,
         "chars": 3381
       },
       "40px": {
@@ -4964,7 +5055,7 @@
     "fontWeights": {
       "400": {
         "count": 1385,
-        "area": 4229309.985709824,
+        "area": 4226621.985709824,
         "chars": 14762
       },
       "500": {
@@ -4996,7 +5087,7 @@
       },
       "24px": {
         "count": 1195,
-        "area": 2160056.75,
+        "area": 2157368.75,
         "chars": 7351
       },
       "96px": {
@@ -5110,7 +5201,7 @@
       },
       "text|16px|400|24px|normal|inter, \"inter Fallback\", system-ui": {
         "count": 18,
-        "area": 36423.375,
+        "area": 33735.375,
         "chars": 123
       },
       "text|12px|600|16px|1.2px|plexMono, \"plexMono Fallback\", monospace": {
@@ -5401,12 +5492,12 @@
     "radii": {
       "16px": {
         "count": 60,
-        "area": 17867149.6875,
+        "area": 17872867.295654297,
         "chars": 12
       },
       "3.35544e+07px": {
         "count": 122,
-        "area": 172105.7557555437,
+        "area": 171285.2053859234,
         "chars": 36
       },
       "32px": {
@@ -5421,12 +5512,12 @@
       },
       "8px": {
         "count": 104,
-        "area": 13460600.372558594,
+        "area": 13460600.375,
         "chars": 54
       },
       "24px": {
         "count": 3,
-        "area": 249424,
+        "area": 255513.48510742188,
         "chars": 0
       },
       "0px": {
@@ -5468,7 +5559,7 @@
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px": {
         "count": 3,
-        "area": 109824,
+        "area": 109440,
         "chars": 0
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px": {
@@ -5508,7 +5599,7 @@
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.672993 0.0219624 -0.180645 / 0.5) 0px 10px 15px -3px, oklab(0.672993 0.0219624 -0.180645 / 0.5) 0px 4px 6px -4px": {
         "count": 3,
-        "area": 4223.99755859375,
+        "area": 4224,
         "chars": 0
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px": {
@@ -5589,7 +5680,7 @@
         "chars": 0
       },
       "28": {
-        "count": 4,
+        "count": 6,
         "area": 0,
         "chars": 0
       },
@@ -5792,23 +5883,66 @@
       }
     },
     "pageBg": "lab(1.90334 0.278696 -5.48866)",
-    "elementCount": 7701,
+    "elementCount": 7695,
     "sampled": 6112,
+    "structure": {
+      "sectionCount": 0,
+      "sectionDepth": 4,
+      "sectionHeights": [],
+      "contentWidths": {
+        "510": 2,
+        "520": 6,
+        "530": 1,
+        "540": 4,
+        "560": 7,
+        "570": 4,
+        "580": 4,
+        "590": 4,
+        "650": 20,
+        "670": 6,
+        "690": 1,
+        "720": 4,
+        "750": 2,
+        "770": 8,
+        "790": 4,
+        "800": 1,
+        "830": 4,
+        "880": 2,
+        "890": 2,
+        "910": 1,
+        "1260": 2,
+        "1330": 2,
+        "1340": 9,
+        "1360": 55
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "2": 8,
+        "3": 9,
+        "4": 3
+      },
+      "transitions": {
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 48
+      },
+      "sectionsReliable": false,
+      "hero": null,
+      "nav": null
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 2559
+        "elements": 2557
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 2571
+        "elements": 2569
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 2571
+        "elements": 2569
       }
     ],
     "mergedFrom": 3,

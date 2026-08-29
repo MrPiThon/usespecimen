@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:36:08.461Z",
+  "capturedAt": "2026-08-29T03:26:36.066Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 5333,
-    "elementCount": 3362,
+    "elementCount": 3383,
     "sampled": 1559,
-    "sampleRatio": 0.464
+    "sampleRatio": 0.461
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -413,6 +413,45 @@
       "dominantUnstyled": true
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 4,
+    "measure": {
+      "px": 1390,
+      "occurrences": 43,
+      "share": 0.597
+    },
+    "rhythm": {
+      "px": 40,
+      "occurrences": 1,
+      "share": 1
+    },
+    "columns": null,
+    "hero": {
+      "heightRatio": 0.93,
+      "heightRatioMeasured": 0.93,
+      "headingSize": 64,
+      "align": "left",
+      "media": 2,
+      "fullBleed": false,
+      "ctas": 2,
+      "ctasFilled": 2,
+      "ctaEvidence": "strong"
+    },
+    "nav": {
+      "height": 64,
+      "position": "sticky",
+      "links": 78,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.1s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 80,
+      "share": 0.62
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -509,7 +548,7 @@
     "No borders observed; border token omitted.",
     "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
     "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
-    "Strided sample: 1559 of 3362 elements. Weights are relative only."
+    "Strided sample: 1559 of 3383 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -521,12 +560,12 @@
         "h": 900
       },
       "docHeight": 5333,
-      "elementCount": 3362,
+      "elementCount": 3380,
       "sampled": 1568,
-      "sampleRatio": 0.466
+      "sampleRatio": 0.464
     },
-    "harvestVersion": 4,
-    "clusterVersion": 14,
+    "harvestVersion": 6,
+    "clusterVersion": 15,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -543,7 +582,7 @@
         },
         "foreground": {
           "hex": "#ededed",
-          "weightShare": 0.4286,
+          "weightShare": 0.4258,
           "variants": []
         },
         "card": {
@@ -580,7 +619,7 @@
             "name": "text-1",
             "hex": "#ededed",
             "contrast": 17.94,
-            "charShare": 0.4286
+            "charShare": 0.4258
           },
           {
             "name": "text-2",
@@ -627,7 +666,7 @@
           "hue": "neutral",
           "lightness": 0.145,
           "chroma": 0,
-          "count": 23
+          "count": 20
         },
         {
           "hex": "#a1a1a1",
@@ -917,10 +956,6 @@
         {
           "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px",
           "count": 8
-        },
-        {
-          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px, rgba(255, 255, 255, 0.06) 0px 1px 2px 0px",
-          "count": 3
         }
       ],
       "flat": false
@@ -943,6 +978,45 @@
         "elements": 1,
         "variants": 2,
         "dominantUnstyled": true
+      }
+    },
+    "layout": {
+      "available": true,
+      "sectionsReliable": true,
+      "sections": 4,
+      "measure": {
+        "px": 1390,
+        "occurrences": 43,
+        "share": 0.597
+      },
+      "rhythm": {
+        "px": 40,
+        "occurrences": 1,
+        "share": 1
+      },
+      "columns": null,
+      "hero": {
+        "heightRatio": 0.93,
+        "heightRatioMeasured": 0.93,
+        "headingSize": 64,
+        "align": "left",
+        "media": 2,
+        "fullBleed": false,
+        "ctas": 2,
+        "ctasFilled": 2,
+        "ctaEvidence": "strong"
+      },
+      "nav": {
+        "height": 64,
+        "position": "sticky",
+        "links": 78,
+        "overflowed": false
+      },
+      "motion": {
+        "duration": "0.1s",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "occurrences": 80,
+        "share": 0.62
       }
     },
     "states": {
@@ -981,8 +1055,8 @@
         "text": {
           "focus-visible": {
             "boxShadow": "0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000",
-            "matchedElements": 83,
-            "rulesConsidered": 5
+            "matchedElements": 86,
+            "rulesConsidered": 4
           },
           "hover": {
             "textDecorationColor": "#454545",
@@ -991,7 +1065,7 @@
           }
         }
       },
-      "declarations": 17
+      "declarations": 16
     },
     "audit": {
       "pairs": [
@@ -1041,11 +1115,11 @@
       "No borders observed; border token omitted.",
       "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
       "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
-      "Strided sample: 1568 of 3362 elements. Weights are relative only."
+      "Strided sample: 1568 of 3380 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://vercel.com/",
     "title": "Agentic Infrastructure - Vercel",
     "viewport": {
@@ -1758,23 +1832,65 @@
       }
     },
     "pageBg": "rgb(250, 250, 250)",
-    "elementCount": 3362,
+    "elementCount": 3383,
     "sampled": 1559,
+    "structure": {
+      "sectionCount": 4,
+      "sectionDepth": 1,
+      "sectionHeights": [
+        836,
+        2363,
+        772,
+        480
+      ],
+      "contentWidths": {
+        "690": 8,
+        "920": 12,
+        "1390": 43,
+        "1420": 9
+      },
+      "sectionRhythm": {
+        "40": 1
+      },
+      "gridColumns": {},
+      "transitions": {
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 48,
+        "0.1s cubic-bezier(0.4, 0, 0.2, 1)": 80,
+        "1s ease": 1
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 0.93,
+        "headingSize": 64,
+        "align": "left",
+        "ctas": 2,
+        "ctaLevel": 0,
+        "ctasFilled": 2,
+        "media": 2,
+        "fullBleed": false
+      },
+      "nav": {
+        "height": 64,
+        "position": "sticky",
+        "links": 78,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1122
+        "elements": 1129
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1120
+        "elements": 1127
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1120
+        "elements": 1127
       }
     ],
     "mergedFrom": 3,
@@ -1785,7 +1901,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://vercel.com/",
     "title": "Agentic Infrastructure - Vercel",
     "viewport": {
@@ -1800,9 +1916,9 @@
         "chars": 3393
       },
       "rgb(237, 237, 237)": {
-        "count": 167,
-        "area": 1761715.8125,
-        "chars": 2760
+        "count": 164,
+        "area": 1761712.8125,
+        "chars": 2742
       },
       "rgb(10, 10, 10)": {
         "count": 7,
@@ -1825,9 +1941,9 @@
         "chars": 45
       },
       "rgb(143, 143, 143)": {
-        "count": 6,
-        "area": 6,
-        "chars": 27
+        "count": 9,
+        "area": 9,
+        "chars": 45
       }
     },
     "bgColors": {
@@ -1837,8 +1953,8 @@
         "chars": 0
       },
       "rgb(10, 10, 10)": {
-        "count": 23,
-        "area": 494000.125,
+        "count": 20,
+        "area": 492272.125,
         "chars": 0
       },
       "rgb(237, 237, 237)": {
@@ -2165,9 +2281,9 @@
         "rules": 1,
         "matched": 37
       },
-      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 0 1px hsla(0, 0%, 18%, 1), 0px 1px 2px 0px #ffffff0f": {
-        "rules": 1,
-        "matched": 3
+      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000": {
+        "rules": 2,
+        "matched": 86
       },
       "text|hover|background-color:hsla(0, 0%, 63%, 1)": {
         "rules": 1,
@@ -2188,10 +2304,6 @@
       "button|focus-visible|background-color:#ffffff0f": {
         "rules": 1,
         "matched": 2
-      },
-      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000": {
-        "rules": 1,
-        "matched": 83
       },
       "button|focus-visible|box-shadow:0 0 0 2px hsla(0, 0%, 4%, 1), 0 0 0 4px hsla(210, 100%, 66%, 1)": {
         "rules": 1,
@@ -2299,11 +2411,6 @@
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px inset": {
         "count": 9,
         "area": 5184,
-        "chars": 0
-      },
-      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px, rgba(255, 255, 255, 0.06) 0px 1px 2px 0px": {
-        "count": 3,
-        "area": 1728,
         "chars": 0
       }
     },
@@ -2507,23 +2614,65 @@
       }
     },
     "pageBg": "rgb(0, 0, 0)",
-    "elementCount": 3362,
+    "elementCount": 3380,
     "sampled": 1568,
+    "structure": {
+      "sectionCount": 4,
+      "sectionDepth": 1,
+      "sectionHeights": [
+        836,
+        2363,
+        772,
+        480
+      ],
+      "contentWidths": {
+        "690": 8,
+        "920": 12,
+        "1390": 43,
+        "1420": 9
+      },
+      "sectionRhythm": {
+        "40": 1
+      },
+      "gridColumns": {},
+      "transitions": {
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 48,
+        "0.1s cubic-bezier(0.4, 0, 0.2, 1)": 80,
+        "1s ease": 1
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 0.93,
+        "headingSize": 64,
+        "align": "left",
+        "ctas": 2,
+        "ctaLevel": 0,
+        "ctasFilled": 2,
+        "media": 2,
+        "fullBleed": false
+      },
+      "nav": {
+        "height": 64,
+        "position": "sticky",
+        "links": 78,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1122
+        "elements": 1128
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1120
+        "elements": 1126
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1120
+        "elements": 1126
       }
     ],
     "mergedFrom": 3,

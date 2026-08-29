@@ -15,7 +15,8 @@ colors:
   border: '#f5f5f5'
   surface-1: '#f9f0ff'
   text-1: '#000000'
-  text-2: '#696969'
+  text-2: '#1d1d1d'
+  text-3: '#696969'
 typography:
   fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
   headingFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -31,10 +32,10 @@ typography:
     lg: '22.4px'
     xl: '23.3436px'
     2xl: '24px'
-    3xl: '28px'
+    3xl: '26px'
     4xl: '32px'
-    5xl: '50.4px'
-    6xl: '58px'
+    5xl: '36.2698px'
+    6xl: '50px'
   roles:
     body:
       fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -68,21 +69,21 @@ typography:
       fontWeight: 600
     lead-lg:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '28px'
+      fontSize: '26px'
       fontWeight: 600
-      lineHeight: 1.21
+      lineHeight: 1.17
     h1:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '32px'
       fontWeight: 700
-      lineHeight: 1.12
+      lineHeight: 1.17
       letterSpacing: '-0.384px'
     h2:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '32px'
+      fontSize: '50px'
       fontWeight: 700
-      lineHeight: 1.25
-      letterSpacing: '-0.256px'
+      lineHeight: 1.17
+      letterSpacing: '-0.4px'
     h3:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '22.4px'
@@ -90,9 +91,10 @@ typography:
       lineHeight: 1.34
       letterSpacing: '-0.0896px'
     button:
-      fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '18px'
-      fontWeight: 400
+      fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+      fontSize: '14px'
+      fontWeight: 700
+      lineHeight: 1.43
     link:
       fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '14px'
@@ -111,9 +113,9 @@ spacing:
   s2: '4px'
   s3: '6px'
   s4: '8px'
-  s5: '10px'
-  s6: '12px'
-  s7: '16px'
+  s5: '12px'
+  s6: '16px'
+  s7: '19px'
   s8: '20px'
   s9: '24px'
   s10: '32px'
@@ -123,12 +125,24 @@ elevation:
   shadow-3: 'rgb(97, 31, 105) 0px 0px 0px 1px inset'
   shadow-4: 'rgba(0, 0, 0, 0.08) 0px 1px 3px 0px'
   shadow-5: 'rgb(255, 255, 255) 0px 0px 0px 1px inset'
+layout:
+  measure: '1230px'
+  sectionSpacing: '80px'
+  gridColumns: 2
+  navHeight: '80px'
+  navPosition: 'absolute'
+  heroHeight: '87vh'
+  heroHeadingSize: '58px'
+  heroAlign: 'left'
+motion:
+  duration: '0.42s'
+  easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)'
 components:
   button:
     background: '{colors.primary}'
     foreground: '{colors.primaryForeground}'
     radius: '{rounded.button}'
-    padding: '12px'
+    padding: '10px 10px 11.2px 10px'
     active:
       backgroundColor: '#f5f4f5'
       opacity: '1'
@@ -157,11 +171,13 @@ components:
 provenance:
   brand: 'Slack'
   source: 'https://slack.com/'
-  capturedAt: '2026-08-29T02:41:08.325Z'
+  capturedAt: '2026-08-29T03:25:05.614Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -202,6 +218,13 @@ sign the page is assembled from more components than it has a scale for.
 observed values, just under the threshold. The run is 2, 4, 6, 8, 10, 12, 16, 20,
 24, 32 — which is a 4px grid with enough exceptions to break it.
 
+**1230px measure, 80px between sections, eleven sections.** The nav is 80px and
+**absolutely positioned**, so it sits over the hero rather than above it, which
+is why the hero's colour runs to the very top of the page.
+
+The hero is **0.87 viewports, full bleed**, with a 58px left-aligned headline,
+one media element and two filled calls to action.
+
 ## Elevation & Depth
 
 Wide and soft: `rgba(0, 0, 0, 0.1) 0px 0px 32px` is an unoffset 32px blur, a
@@ -218,6 +241,10 @@ Buttons are padded `12px` all round; links carry a much larger `19px 40px 20px
 40px`, which is navigation-sized rather than inline. Every state — hover, focus,
 focus-visible, active — is declared on both.
 
+**Motion here is slow and expressive: 0.42s cubic-bezier(0.165, 0.84, 0.44, 1)**
+— four times Linear's duration, on an aggressive ease-out. It is the longest
+transition measured in this registry, and it is deliberate.
+
 ## Do's and Don'ts
 
 - **Do** keep the accent dark. Its 11:1 contrast is what makes it usable for
@@ -228,4 +255,6 @@ focus-visible, active — is declared on both.
   hierarchy.
 - **Don't** rely on the `#f5f5f5` border for structure; at 1.09:1 it is barely
   there.
+
+
 

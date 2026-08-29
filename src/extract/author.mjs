@@ -83,6 +83,32 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
   const elevation = {};
   cap.elevation.shadows.forEach((sh, i) => { elevation[`shadow-${i + 1}`] = sh.value; });
 
+  // Structure and motion, on the same footing as `elevation`: not among the
+  // spec's five token groups, but it preserves unknown properties, and these
+  // are values an agent applies directly rather than prose about the page.
+  //
+  // The hero height is emitted in vh because that is the unit it was measured
+  // in — a ratio of the viewport — and converting it to pixels would invent a
+  // precision the measurement never had.
+  const L = cap.layout;
+  const layout = L?.available ? {
+    ...(L.measure ? { measure: `${L.measure.px}px` } : {}),
+    ...(L.rhythm ? { sectionSpacing: `${L.rhythm.px}px` } : {}),
+    ...(L.columns ? { gridColumns: L.columns.count } : {}),
+    ...(L.nav?.height ? { navHeight: `${L.nav.height}px` } : {}),
+    ...(L.nav?.position ? { navPosition: L.nav.position } : {}),
+    ...(L.hero ? {
+      ...(L.hero.heightRatio ? { heroHeight: `${Math.round(L.hero.heightRatio * 100)}vh` } : {}),
+      ...(L.hero.headingSize ? { heroHeadingSize: `${L.hero.headingSize}px` } : {}),
+      ...(L.hero.align ? { heroAlign: L.hero.align } : {}),
+    } : {}),
+  } : {};
+  // Omitted entirely when the page animates nothing. The Layout prose says so
+  // in words; emitting `duration: null` would invite an agent to fill it in.
+  const motion = L?.motion?.duration
+    ? { duration: L.motion.duration, easing: L.motion.easing }
+    : {};
+
   const boxOf = (kind) => {
     const b = cap.components?.[kind];
     if (!b) return {};
@@ -128,6 +154,8 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     rounded,
     spacing,
     ...(Object.keys(elevation).length ? { elevation } : {}),
+    ...(Object.keys(layout).length ? { layout } : {}),
+    ...(Object.keys(motion).length ? { motion } : {}),
     components: {
       button: {
         background: '{colors.primary}',
@@ -194,13 +222,45 @@ function factsFor(section, cap, dark) {
         Object.entries(t.roles ?? {}).map(([n, x]) =>
           bullet(`Role ${n}`, `${x.fontSize} weight ${x.fontWeight} lh ${x.lineHeight}`)),
       );
-    case 'Layout':
+    case 'Layout': {
+      // Spacing describes the gaps; the structure below describes the page they
+      // sit in. Without it an agent has the right ink and no idea of the shape,
+      // which is most of why generated UI reads as generic.
+      const L = cap.layout;
+      const h = L?.hero;
       return lines(
         cap.spacing.base
           ? bullet('Base unit', `${cap.spacing.base}px, explaining ${Math.round(cap.spacing.gridConfidence * 100)}% of observed spacing`)
           : bullet('Base unit', `none — the best candidate explains only ${Math.round(cap.spacing.gridConfidence * 100)}% of observed values`),
         bullet('Observed', cap.spacing.scale.join(', ')),
+        L?.measure
+          ? bullet('Measure', `${L.measure.px}px, ${Math.round(L.measure.share * 100)}% of observed content widths`)
+          : null,
+        L?.rhythm ? bullet('Section rhythm', `${L.rhythm.px}px`) : null,
+        L?.columns ? bullet('Card grid', `${L.columns.count} columns, on ${L.columns.occurrences} grids`) : null,
+        L?.nav
+          ? bullet('Navigation', [
+            L.nav.height ? `${L.nav.height}px` : 'height not measurable',
+            L.nav.position,
+            `${L.nav.links} links`,
+          ].join(', '))
+          : null,
+        L?.sections ? bullet('Sections', `${L.sections} on the captured page`) : null,
+        h
+          ? bullet('Hero', [
+            h.heightRatio ? `${Math.round(h.heightRatio * 100)}vh`
+              : `${h.heightRatioMeasured} viewports tall, too tall to read as one hero`,
+            h.headingSize ? `${h.headingSize}px ${h.align}-aligned heading` : null,
+            h.ctas ? `${h.ctas} call${h.ctas === 1 ? '' : 's'} to action`
+              + (h.ctasFilled ? ` (${h.ctasFilled} filled)` : '') : 'no call to action',
+            h.media ? `${h.media} media element${h.media === 1 ? '' : 's'}` : 'no media',
+            // Said out loud, because a reader comparing this to the live site
+            // deserves to know which numbers to check first.
+            h.ctaEvidence === 'weak' ? 'call-to-action count is weakly evidenced' : null,
+          ].filter(Boolean).join('; '))
+          : null,
       );
+    }
     case 'Elevation & Depth':
       return cap.elevation.shadows.length
         ? lines(cap.elevation.shadows.map(s => `- \`${s.value}\` (${s.count} elements)`))
@@ -225,6 +285,15 @@ function factsFor(section, cap, dark) {
             const { matchedElements, rulesConsidered, ...rest } = props;
             return bullet(`${kind}:${state}`, Object.entries(rest).map(([k, v]) => `${k} ${v}`).join(', '));
           })),
+        // How the states arrive, not just what they are. A file that lists a
+        // hover colour but no timing leaves an agent to pick one, and the pick
+        // is usually a 200ms ease that the site never uses.
+        cap.layout?.motion
+          ? bullet('Motion', cap.layout.motion.duration
+            ? `${cap.layout.motion.duration} ${cap.layout.motion.easing},`
+              + ` on ${cap.layout.motion.occurrences} controls`
+            : 'none — no control on the page declares a transition, so state changes are instant')
+          : null,
       );
     case "Do's and Don'ts":
       // Derived, not invented: the audit's failures and the extractor's own

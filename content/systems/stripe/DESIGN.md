@@ -17,7 +17,6 @@ colors:
   border: '#e5edf5'
   surface-1: '#f8fafd'
   surface-2: '#e5edf5'
-  surface-3: '#d4dee9'
   text-1: '#061b31'
   text-2: '#50617a'
   text-3: '#64748d'
@@ -132,6 +131,18 @@ elevation:
   shadow-2: 'rgba(50, 50, 93, 0.12) 0px 16px 32px 0px'
   shadow-3: 'rgba(23, 23, 23, 0.06) 0px 3px 6px 0px'
   shadow-4: 'rgba(23, 23, 23, 0.08) 0px 15px 35px 0px'
+layout:
+  measure: '1230px'
+  sectionSpacing: '96px'
+  gridColumns: 2
+  navHeight: '76px'
+  navPosition: 'relative'
+  heroHeight: '76vh'
+  heroHeadingSize: '48px'
+  heroAlign: 'left'
+motion:
+  duration: '0.3s'
+  easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -148,11 +159,13 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-29T00:35:20.586Z'
+  capturedAt: '2026-08-29T03:26:01.508Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 
@@ -197,6 +210,15 @@ and weight; hierarchy comes from size, not from a heavier cut.
 A 4px grid, obeyed by 79% of observed spacing values. The common run is
 4, 8, 12, 16, 24, 32, 40, 64.
 
+**1230px measure, 96px between sections, two-column card grids** — sixteen of
+them, the most of any system measured here, which is what gives the page its
+modular feel.
+
+The hero is restrained: **0.76 viewports**, so the second section is visible on
+landing, with a 48px left-aligned headline, three media elements and two filled
+calls to action. The nav is 76px and **not sticky** — it scrolls away, which is
+a real choice on a page this long. Only seven links sit in it.
+
 ## Elevation & Depth
 
 Shadows are wide, soft and tinted blue rather than neutral:
@@ -215,6 +237,11 @@ The call to action is an anchor, not a button element: padded
 trailing arrow. Reproduce the padding rather than the tag. Surfaces use the pale
 `#e5edf5` tint with the same colour as their border.
 
+**Motion is applied more widely here than anywhere else measured:** 173 controls
+transition on **0.3s cubic-bezier(0.25, 1, 0.5, 1)**, more than any other system
+in the registry and 89% of everything that animates here. That curve decelerates
+hard at the end, which is what gives the page its settled feel.
+
 ## Do's and Don'ts
 
 - **Do** keep the indigo scarce. It reads as confident because it is rare.
@@ -222,5 +249,7 @@ trailing arrow. Reproduce the padding rather than the tag. Surfaces use the pale
 - **Don't** use the border colour to carry meaning. At 1.18:1 it is invisible to
   many readers and fails non-text contrast.
 - **Don't** introduce a second accent hue. This system has exactly one.
+
+
 
 

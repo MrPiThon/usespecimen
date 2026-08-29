@@ -111,7 +111,7 @@ pre {
   overflow-x: auto;
 }
 
-.wrap { max-width: 72rem; margin: 0 auto; padding: 0 var(--s5); }
+.wrap { max-width: var(--container, 72rem); margin: 0 auto; padding: 0 var(--s5); }
 .prose { max-width: var(--measure); }
 
 .site-header {
@@ -121,7 +121,18 @@ pre {
   background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(10px);
 }
-.site-header .wrap { display: flex; align-items: center; gap: var(--s5); height: 52px; }
+.site-header .wrap {
+  display: flex; align-items: center; gap: var(--s5);
+  height: var(--nav-height, 52px);
+}
+
+/* The system's own timing, on everything that responds to the pointer. A file
+   that declares no transition leaves --motion unset and these resolve to 0s,
+   which is the measurement rather than a fallback. */
+a, button, input, .card, .chip { transition: all var(--motion, 0s) var(--motion-ease, linear); }
+@media (prefers-reduced-motion: reduce) {
+  a, button, input, .card, .chip { transition-duration: 0s; }
+}
 .brand { font-weight: 550; color: var(--fg-strong); text-decoration: none; letter-spacing: -0.01em; }
 .site-header nav { margin-left: auto; display: flex; gap: var(--s4); align-items: center; }
 .site-header nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }

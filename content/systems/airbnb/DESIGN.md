@@ -91,6 +91,14 @@ elevation:
   shadow-3: 'rgb(255, 255, 255) 0px 1px 0.5px 0px, rgba(0, 0, 0, 0.15) 0px -0.5px 1px 0px, rgba(0, 0, 0, 0.05) 0px -1.2px 0.5px 1px, rgba(0, 0, 0, 0.05) 0px 8px 16px 0px, rgb(255, 255, 255) -0.2px -1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0.5px 0.7px 2.5px 0px inset, rgba(0, 0, 0, 0.05) -1px -3px 8px 0px inset, rgba(0, 0, 0, 0.1) 0.5px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 1px 6px 6px 2px inset'
   shadow-4: 'rgba(0, 0, 0, 0) 0px 2px 12px 0px'
   shadow-5: 'rgba(0, 0, 0, 0.1) 0px 6px 20px 0px'
+layout:
+  measure: '1430px'
+  gridColumns: 4
+  navHeight: '96px'
+  navPosition: 'static'
+motion:
+  duration: '0.3s'
+  easing: 'cubic-bezier(0.2, 0, 0, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -118,11 +126,13 @@ components:
 provenance:
   brand: 'Airbnb'
   source: 'https://www.airbnb.com/'
-  capturedAt: '2026-08-29T02:43:21.506Z'
+  capturedAt: '2026-08-29T03:22:58.109Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -163,6 +173,16 @@ scale as the reading sizes.
 5, 8, 10, 11, 12, 16, 20, 24. Close to a 4px rhythm with enough odd values to
 break it.
 
+**A 1430px measure** — the widest in the registry, agreed by 56% of observed
+content widths — with four-column card grids and a **96px static** nav carrying
+only five links.
+
+**Section structure could not be read.** The children of the content root do not
+partition it, which is what an app shell looks like from the outside: the page
+is assembled at runtime rather than laid out as a document. Measure, grid, nav
+and motion were all measured independently and stand; hero and section rhythm
+are withheld rather than guessed.
+
 ## Elevation & Depth
 
 `rgba(0, 0, 0, 0.1) 0px 3px 2.5px` — a small, tight, slightly-offset shadow.
@@ -179,6 +199,8 @@ small radii for controls, large ones for image containers.
 Buttons are padded `0px 16px` — horizontal only, with height coming from line
 box rather than padding. All four states are declared on buttons.
 
+**0.3s cubic-bezier(0.2, 0, 0, 1)** on 34 controls, about half of what animates.
+
 ## Do's and Don'ts
 
 - **Do** keep `#222222` rather than black. The softness is what makes the
@@ -188,4 +210,6 @@ box rather than padding. All four states are declared on buttons.
 - **Don't** treat 12px as the reading size — that measurement is chrome.
 - **Don't** promote the rejected `#0073e5` to an accent. It appeared once, and
   once is a campaign rather than a system.
+
+
 

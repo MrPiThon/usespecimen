@@ -131,6 +131,32 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
         </dl>
       </div>
 
+      {(d.layout || d.motion) && (
+        <div class="panel" style="margin-bottom:1rem;">
+          <h3>Structure</h3>
+          <dl class="kv">
+            {d.layout?.measure && <><dt>Measure</dt><dd>{d.layout.measure}</dd></>}
+            {d.layout?.sectionSpacing && <><dt>Section gap</dt><dd>{d.layout.sectionSpacing}</dd></>}
+            {d.layout?.gridColumns && <><dt>Card grid</dt><dd>{d.layout.gridColumns} columns</dd></>}
+            {d.layout?.navHeight && (
+              <><dt>Nav</dt><dd>{d.layout.navHeight}{d.layout.navPosition ? `, ${d.layout.navPosition}` : ''}</dd></>
+            )}
+            {d.layout?.heroHeight && (
+              <><dt>Hero</dt><dd>
+                {d.layout.heroHeight}
+                {d.layout.heroHeadingSize ? `, ${d.layout.heroHeadingSize} ${d.layout.heroAlign ?? ''}`.trimEnd() : ''}
+              </dd></>
+            )}
+            <dt>Motion</dt>
+            <dd>
+              {/* An absent motion group is a measurement, not a gap: no control on
+                  the page declared a transition. Saying so beats an em dash. */}
+              {d.motion ? `${d.motion.duration} ${d.motion.easing}` : 'none observed'}
+            </dd>
+          </dl>
+        </div>
+      )}
+
       {colors.length > 0 && (
         <div class="panel" style="margin-bottom:1rem;">
           <h3>Colors</h3>

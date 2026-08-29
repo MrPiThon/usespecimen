@@ -92,6 +92,17 @@ elevation:
   shadow-1: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px'
   shadow-2: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px inset'
   shadow-3: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px'
+layout:
+  measure: '1390px'
+  sectionSpacing: '40px'
+  navHeight: '64px'
+  navPosition: 'sticky'
+  heroHeight: '93vh'
+  heroHeadingSize: '64px'
+  heroAlign: 'left'
+motion:
+  duration: '0.1s'
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -114,11 +125,13 @@ components:
 provenance:
   brand: 'Vercel'
   source: 'https://vercel.com/'
-  capturedAt: '2026-08-29T00:36:08.461Z'
+  capturedAt: '2026-08-29T03:26:36.066Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 
@@ -161,6 +174,15 @@ the work a heavier cut would do elsewhere. `Geist Mono` at 12px carries code.
 observed values, the weakest of any system here. The run is 2, 4, 6, 8, 12, 16,
 20, 24, 40, 44. Match the observed values rather than imposing a scale.
 
+**1390px measure**, second only to Airbnb's 1430px — and it is the most
+decisive: 60% of observed content widths land on it, the highest agreement of
+any system measured. Sections
+are only **40px** apart, which is why the page feels tight despite its width.
+
+No repeating card grid was found. The hero is **0.93 viewports** with a 64px
+left-aligned headline, two media elements and two filled calls to action, under
+a **64px sticky** nav.
+
 ## Elevation & Depth
 
 Flat by construction. Every observed box-shadow resolves to fully transparent —
@@ -181,6 +203,9 @@ two-ring indicator: 2px white then 4px `#0072f5`. The white inner ring is what
 keeps the blue legible against either canvas, so both rings are load-bearing.
 Links darken to `hsla(0, 0%, 9%)` on hover.
 
+**0.1s cubic-bezier(0.4, 0, 0.2, 1)** on 80 controls, 62% of what animates —
+the standard material curve, run about twice as fast as it usually is.
+
 ## Do's and Don'ts
 
 - **Do** keep it achromatic. Colour is reserved for focus and status, nothing else.
@@ -189,5 +214,7 @@ Links darken to `hsla(0, 0%, 9%)` on hover.
 - **Don't** add drop shadows. This system is flat on purpose.
 - **Don't** spend the blue on anything but focus. Filling a button with it would
   break the one rule the palette is built around.
+
+
 
 

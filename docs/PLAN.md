@@ -214,8 +214,34 @@ system's colours and radii programmatically but had to parse English to learn
 its elevation. `author` now emits an `elevation` group. The spec's five token
 groups do not include it, but it explicitly preserves unknown properties, so
 this sits on the same footing as `provenance`. Layout, hero and section
-structure remain genuinely unexpressible in DESIGN.md; that is a limit of the
-format rather than of the extractor.
+structure looked unexpressible too — but that was a misreading of where the
+limit sat. The *frontmatter* has no vocabulary for them; the **body** has a
+Layout section and a Components section, which is exactly where they belong. The
+gap was never the format. It was that we measured no structure to put there.
+
+**Structure, as of harvest v6.** A DESIGN.md is meant to let an agent that has
+never seen the source reproduce how it looks *and how it behaves*. Colours and
+type alone produce a page in the right ink and the wrong shape, which is most of
+why generated UI still reads as generic. So the extractor now measures the
+measure, the section rhythm, the grid, the nav, the hero's height, headline and
+alignment, and the transition duration and easing — and the files carry all of
+it, in prose and in a `layout` and `motion` group.
+
+The corpus separates sharply on exactly these axes, and on none of them would a
+palette have told you anything:
+
+| | measure | hero | motion |
+|---|---|---|---|
+| GOV.UK | 610px | no headline; opens on search | **none — not one control animates** |
+| Notion | 1230px | 1.59vh, 96px **centred** | 0.2s |
+| Stripe | 1230px | 0.76vh, 48px left | 0.3s on 173 controls |
+| Slack | 1230px | 0.87vh, 58px left | **0.42s**, four times Linear's |
+| Airbnb | 1430px | withheld — app shell | 0.3s |
+
+GOV.UK's total absence of motion is the clearest case. It is not a hole in the
+capture; it is the system. An agent given the palette alone would add a 150ms
+ease because that feels polished, and would be wrong in a way no colour check
+would catch.
 
 **Drift monitoring.** Once the pipeline exists, scheduled re-capture is nearly
 free, and it produces the feature that turns a directory into a subscription:

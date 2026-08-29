@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:37:14.194Z",
+  "capturedAt": "2026-08-29T03:24:36.837Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1323,
     "sampleRatio": 0.716
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -428,6 +428,44 @@
       "dominantUnstyled": false
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 15,
+    "measure": {
+      "px": 610,
+      "occurrences": 31,
+      "share": 0.388
+    },
+    "rhythm": null,
+    "columns": {
+      "count": 3,
+      "occurrences": 1
+    },
+    "hero": {
+      "heightRatio": 0.12,
+      "heightRatioMeasured": 0.12,
+      "headingSize": null,
+      "align": null,
+      "media": 0,
+      "fullBleed": false,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": {
+      "height": 62,
+      "position": "static",
+      "links": 25,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": null,
+      "easing": null,
+      "occurrences": 0,
+      "share": 0
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -562,6 +600,7 @@
     "minRatio": 1.57
   },
   "warnings": [
+    "First section carries no heading; the page may open on chrome — a search bar or a breadcrumb — rather than on a headline.",
     "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
     "No spacing grid explains 75% of values (best 0.742); site may not be on a grid.",
     "No border radius anywhere; treat as a deliberately sharp system.",
@@ -570,7 +609,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://www.gov.uk/",
     "title": "Welcome to GOV.UK",
     "viewport": {
@@ -1300,6 +1339,61 @@
     "pageBg": "rgb(255, 255, 255)",
     "elementCount": 1848,
     "sampled": 1323,
+    "structure": {
+      "sectionCount": 15,
+      "sectionDepth": 9,
+      "sectionHeights": [
+        109,
+        109,
+        134,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109,
+        109
+      ],
+      "contentWidths": {
+        "580": 3,
+        "610": 31,
+        "630": 11,
+        "640": 2,
+        "660": 5,
+        "770": 3,
+        "800": 1,
+        "960": 14,
+        "980": 1,
+        "990": 9
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "3": 1
+      },
+      "transitions": {},
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 0.12,
+        "headingSize": null,
+        "align": null,
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 0,
+        "fullBleed": false
+      },
+      "nav": {
+        "height": 62,
+        "position": "static",
+        "links": 25,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,

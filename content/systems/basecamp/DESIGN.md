@@ -6,7 +6,7 @@ categories:
   - saas
   - marketing
 colors:
-  background: '#f5faf6'
+  background: '#fef3f3'
   foreground: '#29353c'
   primary: '#2377d2'
   primaryForeground: '#29353c'
@@ -126,6 +126,17 @@ elevation:
   shadow-3: 'oklch(0 0 0 / 0.1) 0px 2.4px 19.2px -6px, oklch(0 0 0 / 0.1) 0px 3.6px 24px -7.2px, oklch(0 0 0 / 0.1) 0px 3.6px 9.6px -8.4px, oklch(0 0 0 / 0.1) 0px 6px 14.4px -10.8px, oklch(0 0 0 / 0.1) 0px 8.4px 19.2px -13.2px'
   shadow-4: 'oklch(0 0 0 / 0.05) 0px 1.1px 17.6px -5.5px, oklch(0 0 0 / 0.05) 0px 2.2px 22px -6.6px, oklch(0 0 0 / 0.05) 0px 2.2px 8.8px -7.7px, oklch(0 0 0 / 0.05) 0px 4.4px 13.2px -9.9px, oklch(0 0 0 / 0.05) 0px 6.6px 17.6px -12.1px'
   shadow-5: 'oklch(0 0 0 / 0.0625) 0px 0px 0px 1px, oklch(0 0 0 / 0.04) 0px 2.2px 17.6px -5.5px, oklch(0 0 0 / 0.04) 0px 3.3px 22px -6.6px, oklch(0 0 0 / 0.04) 0px 3.3px 8.8px -7.7px, oklch(0 0 0 / 0.04) 0px 5.5px 13.2px -9.9px, oklch(0 0 0 / 0.04) 0px 7.7px 17.6px -12.1px'
+layout:
+  measure: '680px'
+  gridColumns: 2
+  navHeight: '76px'
+  navPosition: 'absolute'
+  heroHeight: '87vh'
+  heroHeadingSize: '38px'
+  heroAlign: 'left'
+motion:
+  duration: '0.15s'
+  easing: 'ease'
 components:
   button:
     background: '{colors.primary}'
@@ -151,11 +162,13 @@ components:
 provenance:
   brand: 'Basecamp'
   source: 'https://basecamp.com/'
-  capturedAt: '2026-08-29T02:25:37.646Z'
+  capturedAt: '2026-08-29T03:24:28.253Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -200,6 +213,14 @@ reproducing the ratio, not the rounded pixels.
 values, the loosest in this catalogue. The run is 4, 7, 8, 10, 14, 20, 27, 28,
 38, 66 — spacing here follows the type scale rather than a grid.
 
+**A 680px measure** — the second narrowest here, and close to GOV.UK's reading
+column rather than to a marketing page. Five sections, two-column grids, and no
+consistent section rhythm.
+
+The hero is **0.87 viewports** with a 38px left-aligned headline, **no media and
+no call to action**: an opening made entirely of words. The nav is 76px and
+absolutely positioned over it.
+
 ## Elevation & Depth
 
 Five shadows, authored in `oklch` and largely inset.
@@ -216,6 +237,9 @@ the type sizes are fractional. Buttons sit at 4.125px.
 Only hover and focus are declared, on buttons and links alike. No border token
 exists in the system at all.
 
+**0.15s ease** on 83 controls, 99% of what animates. One duration, one curve,
+no exceptions.
+
 ## Do's and Don'ts
 
 - **Do** tint the canvas. `#f5faf6` rather than `#ffffff` is most of the calm.
@@ -224,4 +248,6 @@ exists in the system at all.
 - **Don't** add a muted text tier. This system genuinely has one text colour.
 - **Don't** impose a spacing grid. It does not have one, and adding it would
   regularise exactly what makes it feel unhurried.
+
+
 

@@ -63,6 +63,13 @@ const systems = defineCollection({
     rounded: z.record(z.string(), tokenTree).optional(),
     spacing: z.record(z.string(), tokenTree).optional(),
     components: z.record(z.string(), tokenTree).optional(),
+    // Extensions. The spec's five token groups stop at `components`, but it
+    // preserves unknown properties, so these are legal — and declaring them
+    // rather than letting passthrough carry them means a malformed one fails
+    // the build like everything else, which is the guarantee we sell.
+    elevation: z.record(z.string(), tokenTree).optional(),
+    layout: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
+    motion: z.object({ duration: z.string(), easing: z.string() }).optional(),
     provenance: provenance(image),
   // Unknown top-level properties are preserved with a warning, per the spec, so
   // the schema must not strip them.

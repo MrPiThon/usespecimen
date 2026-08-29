@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T02:25:37.646Z",
+  "capturedAt": "2026-08-29T03:24:28.253Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1344,
     "sampleRatio": 0.73
   },
-  "harvestVersion": 4,
-  "clusterVersion": 14,
+  "harvestVersion": 6,
+  "clusterVersion": 15,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -25,7 +25,7 @@
     "polarity": "light",
     "roles": {
       "background": {
-        "hex": "#f5faf6",
+        "hex": "#fef3f3",
         "weightShare": 1,
         "variants": [],
         "source": "pageBg"
@@ -56,18 +56,18 @@
         {
           "name": "text-1",
           "hex": "#29353c",
-          "contrast": 11.92,
+          "contrast": 11.58,
           "charShare": 0.8443
         }
       ]
     },
     "palette": [
       {
-        "hex": "#f5faf6",
+        "hex": "#fef3f3",
         "role": "background",
         "hue": "neutral",
-        "lightness": 0.98,
-        "chroma": 0.007,
+        "lightness": 0.973,
+        "chroma": 0.012,
         "count": 3
       },
       {
@@ -500,6 +500,44 @@
       "dominantUnstyled": true
     }
   },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 5,
+    "measure": {
+      "px": 680,
+      "occurrences": 23,
+      "share": 0.59
+    },
+    "rhythm": null,
+    "columns": {
+      "count": 2,
+      "occurrences": 1
+    },
+    "hero": {
+      "heightRatio": 0.87,
+      "heightRatioMeasured": 0.87,
+      "headingSize": 38,
+      "align": "left",
+      "media": 0,
+      "fullBleed": false,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": {
+      "height": 76,
+      "position": "absolute",
+      "links": 12,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.15s",
+      "easing": "ease",
+      "occurrences": 83,
+      "share": 0.988
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -557,8 +595,8 @@
       {
         "pair": "foreground/background",
         "fg": "#29353c",
-        "bg": "#f5faf6",
-        "ratio": 11.92,
+        "bg": "#fef3f3",
+        "ratio": 11.58,
         "kind": "text",
         "criterion": "1.4.3 Contrast (Minimum)",
         "min": 4.5,
@@ -581,8 +619,8 @@
       {
         "pair": "primary/background",
         "fg": "#2377d2",
-        "bg": "#f5faf6",
-        "ratio": 4.29,
+        "bg": "#fef3f3",
+        "ratio": 4.16,
         "kind": "nonText",
         "criterion": "1.4.11 Non-text Contrast",
         "min": 3,
@@ -617,8 +655,8 @@
       "sampled": 1340,
       "sampleRatio": 0.727
     },
-    "harvestVersion": 4,
-    "clusterVersion": 14,
+    "harvestVersion": 6,
+    "clusterVersion": 15,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1141,6 +1179,44 @@
         "dominantUnstyled": true
       }
     },
+    "layout": {
+      "available": true,
+      "sectionsReliable": true,
+      "sections": 5,
+      "measure": {
+        "px": 680,
+        "occurrences": 23,
+        "share": 0.59
+      },
+      "rhythm": null,
+      "columns": {
+        "count": 2,
+        "occurrences": 1
+      },
+      "hero": {
+        "heightRatio": 0.87,
+        "heightRatioMeasured": 0.87,
+        "headingSize": 38,
+        "align": "left",
+        "media": 0,
+        "fullBleed": false,
+        "ctas": 0,
+        "ctasFilled": 0,
+        "ctaEvidence": "none"
+      },
+      "nav": {
+        "height": 76,
+        "position": "absolute",
+        "links": 12,
+        "overflowed": false
+      },
+      "motion": {
+        "duration": "0.15s",
+        "easing": "ease",
+        "occurrences": 83,
+        "share": 0.988
+      }
+    },
     "states": {
       "available": true,
       "sheets": {
@@ -1247,7 +1323,7 @@
     ]
   },
   "harvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
     "viewport": {
@@ -1258,7 +1334,7 @@
     "textColors": {
       "oklch(0.3209 0.0204 233.83)": {
         "count": 480,
-        "area": 5017514.3603515625,
+        "area": 5018268.424316406,
         "chars": 16368
       },
       "oklch(1 0 0)": {
@@ -1273,7 +1349,7 @@
       }
     },
     "bgColors": {
-      "oklch(0.9802 0.0074 151.89)": {
+      "oklch(0.9727 0.0119 17.36)": {
         "count": 3,
         "area": 12097525.6875,
         "chars": 0
@@ -1308,7 +1384,7 @@
     "fontFamilies": {
       "Graphik, sans-serif": {
         "count": 647,
-        "area": 5537705.151996329,
+        "area": 5538459.215961173,
         "chars": 19387
       }
     },
@@ -1320,7 +1396,7 @@
       },
       "19.0483px": {
         "count": 125,
-        "area": 1704049.5651855469,
+        "area": 1704803.6291503906,
         "chars": 4106
       },
       "41.9054px": {
@@ -1407,7 +1483,7 @@
     "fontWeights": {
       "400": {
         "count": 240,
-        "area": 3063182.8984375,
+        "area": 3063936.9624023438,
         "chars": 8006
       },
       "500": {
@@ -1429,7 +1505,7 @@
       },
       "28.5725px": {
         "count": 125,
-        "area": 1704049.5651855469,
+        "area": 1704803.6291503906,
         "chars": 4106
       },
       "48.1913px": {
@@ -1561,7 +1637,7 @@
       },
       "-0.357156px": {
         "count": 125,
-        "area": 1704049.5651855469,
+        "area": 1704803.6291503906,
         "chars": 4106
       },
       "-0.942872px": {
@@ -1663,7 +1739,7 @@
       },
       "link|19.0483px|400|28.5725px|-0.357156px|Graphik, sans-serif": {
         "count": 6,
-        "area": 59242.5,
+        "area": 59996.56396484375,
         "chars": 164
       },
       "text|19.0483px|600|28.5725px|-0.357156px|Graphik, sans-serif": {
@@ -2006,7 +2082,7 @@
       },
       "link|0px|0px|0px|normal": {
         "count": 56,
-        "area": 292659.75439453125,
+        "area": 293413.818359375,
         "chars": 1000
       },
       "button|0px|0px|11.4286px|normal": {
@@ -2397,7 +2473,7 @@
       },
       "0px": {
         "count": 205,
-        "area": 1315090.9655761719,
+        "area": 1315845.0295410156,
         "chars": 2672
       },
       "11.4286px": {
@@ -2439,7 +2515,7 @@
     "interactiveFg": {
       "oklch(0.3209 0.0204 233.83)": {
         "count": 109,
-        "area": 1061805.19070879,
+        "area": 1062559.2546736337,
         "chars": 326
       },
       "oklch(1 0 0)": {
@@ -2504,9 +2580,56 @@
         "chars": 1005
       }
     },
-    "pageBg": "oklch(0.9802 0.0074 151.89)",
+    "pageBg": "oklch(0.9727 0.0119 17.36)",
     "elementCount": 1842,
     "sampled": 1344,
+    "structure": {
+      "sectionCount": 5,
+      "sectionDepth": 1,
+      "sectionHeights": [
+        787,
+        233,
+        223,
+        725,
+        317
+      ],
+      "contentWidths": {
+        "530": 4,
+        "660": 1,
+        "680": 15,
+        "690": 8,
+        "700": 1,
+        "1070": 5,
+        "1260": 5
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "transitions": {
+        "0.15s ease": 83,
+        "0.3s ease": 1
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 0.87,
+        "headingSize": 38,
+        "align": "left",
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 0,
+        "fullBleed": false
+      },
+      "nav": {
+        "height": 76,
+        "position": "absolute",
+        "links": 12,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,
@@ -2532,7 +2655,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 4,
+    "harvestVersion": 6,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
     "viewport": {
@@ -3820,6 +3943,53 @@
     "pageBg": "oklch(0.1891 0.0191 235.5)",
     "elementCount": 1842,
     "sampled": 1340,
+    "structure": {
+      "sectionCount": 5,
+      "sectionDepth": 1,
+      "sectionHeights": [
+        787,
+        233,
+        223,
+        725,
+        317
+      ],
+      "contentWidths": {
+        "530": 4,
+        "660": 1,
+        "680": 15,
+        "690": 8,
+        "700": 1,
+        "1070": 5,
+        "1260": 5
+      },
+      "sectionRhythm": {},
+      "gridColumns": {
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "transitions": {
+        "0.15s ease": 83,
+        "0.3s ease": 1
+      },
+      "sectionsReliable": true,
+      "hero": {
+        "heightRatio": 0.87,
+        "headingSize": 38,
+        "align": "left",
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 0,
+        "fullBleed": false
+      },
+      "nav": {
+        "height": 76,
+        "position": "absolute",
+        "links": 12,
+        "overflowed": false
+      }
+    },
     "viewports": [
       {
         "w": 1440,

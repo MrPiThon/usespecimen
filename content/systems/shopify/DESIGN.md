@@ -130,6 +130,18 @@ elevation:
   shadow-3: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(0, 0, 0, 0.2) 0px 5px 10px 0px'
   shadow-4: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(7, 13, 23) 0px 16px 24px 0px'
   shadow-5: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px'
+layout:
+  measure: '1260px'
+  sectionSpacing: '64px'
+  gridColumns: 2
+  navHeight: '72px'
+  navPosition: 'sticky'
+  heroHeight: '94vh'
+  heroHeadingSize: '96px'
+  heroAlign: 'left'
+motion:
+  duration: '0.2s'
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -160,11 +172,13 @@ components:
 provenance:
   brand: 'Shopify'
   source: 'https://www.shopify.com/'
-  capturedAt: '2026-08-29T02:23:08.065Z'
+  capturedAt: '2026-08-29T03:25:45.878Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -208,6 +222,17 @@ Eleven roles, twelve steps from 12px to 56px.
 A 4px grid, obeyed by 81% of observed spacing: 4, 6, 8, 10, 12, 16, 24, 32, 40,
 64.
 
+**1260px measure, 64px between sections, fourteen sections** — a long
+merchandised page rather than a short pitch.
+
+The hero is **0.94 viewports, full bleed**, with a **96px** left-aligned
+headline, two media elements and two calls to action of which one is filled. The
+nav is **72px and sticky**, holding 45 links: a wide catalogue that has to stay
+reachable the whole way down.
+
+The call-to-action count here is weakly evidenced — it was found several levels
+above the headline — so check it against the live page before relying on it.
+
 ## Elevation & Depth
 
 Effectively flat. The declared shadows resolve to fully transparent — a reset
@@ -225,6 +250,8 @@ The primary button is padded `12px 26px 12px 16px` with a 2px border and a pill
 radius — note the asymmetry, which leaves room for a trailing icon. Links take
 `10px 0px`, vertical only.
 
+**0.2s cubic-bezier(0.4, 0, 0.2, 1)** across 28 controls, 68% of what animates.
+
 ## Do's and Don'ts
 
 - **Do** keep headings lighter than body copy. Inverting that ratio is the
@@ -234,4 +261,6 @@ radius — note the asymmetry, which leaves room for a trailing icon. Links take
   surface ladder readable.
 - **Don't** assume the mint is safe as a button fill without checking — the
   extractor found it in text, not on a control.
+
+
 

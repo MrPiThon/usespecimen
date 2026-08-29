@@ -104,6 +104,18 @@ elevation:
   shadow-1: 'rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px 0px, rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px 0px, rgba(0, 0, 0, 0.027) 0px 2.025px 7.847px 0px, rgba(0, 0, 0, 0.04) 0px 4px 18px 0px'
   shadow-2: 'rgba(0, 0, 0, 0.008) 0px 0.667px 3.502px 0px, rgba(0, 0, 0, 0.016) 0px 2.933px 7.252px 0px, rgba(0, 0, 0, 0.02) 0px 7.2px 14.462px 0px, rgba(0, 0, 0, 0.024) 0px 13.867px 28.348px 0px, rgba(0, 0, 0, 0.03) 0px 23.333px 52.123px 0px, rgba(0, 0, 0, 0.04) 0px 36px 89px 0px'
   shadow-3: 'rgba(0, 0, 0, 0) 0px 1px 0px 0px'
+layout:
+  measure: '1230px'
+  sectionSpacing: '96px'
+  gridColumns: 2
+  navHeight: '64px'
+  navPosition: 'relative'
+  heroHeight: '159vh'
+  heroHeadingSize: '96px'
+  heroAlign: 'center'
+motion:
+  duration: '0.2s'
+  easing: 'cubic-bezier(0.42, 0, 1, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -136,11 +148,13 @@ components:
 provenance:
   brand: 'Notion'
   source: 'https://www.notion.com/'
-  capturedAt: '2026-08-29T02:23:21.837Z'
+  capturedAt: '2026-08-29T03:25:30.858Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -179,6 +193,15 @@ Twelve steps from 12px to 96px.
 A 4px grid, obeyed by 82.6% of observed spacing — the second strictest in this
 catalogue. The run is 3, 4, 6, 8, 12, 15, 16, 24, 32, 40.
 
+**1230px measure, 96px between sections.** Where this diverges from almost
+everything else in the registry is the hero: **1.59 viewports, full bleed, and
+centred**, under a **96px** headline with three media elements and two filled
+calls to action.
+
+Centred display type at that size is the signature. Most systems here align
+their hero left; this one puts the headline in the middle of the screen and
+makes it very large.
+
 ## Elevation & Depth
 
 Barely there, deliberately. The largest shadow begins
@@ -198,6 +221,9 @@ against inline text rather than floating in a box of their own.
 
 Hover, focus-visible and active are all declared, on buttons and links alike.
 
+**0.2s cubic-bezier(0.42, 0, 1, 1)** across 62 controls, 82% of what animates.
+The curve accelerates into the end rather than easing out of it.
+
 ## Do's and Don'ts
 
 - **Do** keep the serif body. Substituting a sans changes what the product is.
@@ -206,4 +232,6 @@ Hover, focus-visible and active are all declared, on buttons and links alike.
 - **Don't** shrink the button label. White on `#0075de` is 4.57:1, and small or
   light text on that blue drops below AA immediately.
 - **Don't** ask the `#e6e6e6` border to carry meaning; at 1.25:1 it is a hairline.
+
+
 

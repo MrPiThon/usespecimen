@@ -1102,13 +1102,44 @@ export function contrastAudit(colors) {
 
 /** Everything we could not observe, said out loud. This list is the honest
  *  half of the product — an unflagged gap is how a wrong token ships. */
-function collectWarnings(capture, colors, type, spacing, rounded, states, components) {
+function collectWarnings(capture, colors, type, spacing, rounded, states, components, layout) {
   const w = [];
   const { roles } = colors;
   if (colors.roles.background.source === 'browserDefault') {
     w.push('No page background observed; composited against white. Colors with alpha may be off.');
   }
   if (!roles.foreground) w.push('No text color observed — the capture may have run before render.');
+  if (layout && !layout.available) {
+    w.push('Capture predates harvest v5; no structure was measured. Re-extract to '
+      + 'recover the measure, hero, rhythm and motion.');
+  } else if (layout) {
+    if (layout.sectionsReliable === false) {
+      w.push('Page sections could not be read — the children of the content root do not '
+        + 'partition it, which happens on app shells and on stacked full-height layers. '
+        + 'Hero, section rhythm and section count are withheld; measure, grid, navigation '
+        + 'and motion are measured independently and stand.');
+    }
+    if (layout.hero?.ctaEvidence === 'weak') {
+      w.push(`Hero call-to-action count (${layout.hero.ctas}) was found several levels above `
+        + 'the headline, so it may include controls that are not part of the hero.');
+    }
+    if (layout.nav?.overflowed) {
+      w.push('Navigation measured taller than a fifth of the viewport — likely a menu '
+        + 'caught open; its height was withheld rather than published.');
+    }
+    if (layout.hero && layout.hero.heightRatio == null) {
+      w.push(`First section is ${layout.hero.heightRatioMeasured} viewports tall — most likely `
+        + 'a run of stacked panels rather than one hero, so its height was withheld.');
+    }
+    if (layout.hero && !layout.hero.headingSize) {
+      w.push('First section carries no heading; the page may open on chrome — a search bar '
+        + 'or a breadcrumb — rather than on a headline.');
+    }
+    if (layout.measure && layout.measure.share < 0.2) {
+      w.push(`Content measure ${layout.measure.px}px explains only `
+        + `${Math.round(layout.measure.share * 100)}% of observed widths; the page may not hold one.`);
+    }
+  }
   if (!roles.primary) w.push('No chromatic accent found in buttons, focus rings, links or body text; palette is fully neutral.');
   else if (roles.primary.source === 'focusRing') {
     w.push(`Accent ${roles.primary.hex} taken from a focus ring`
@@ -1163,6 +1194,102 @@ function collectWarnings(capture, colors, type, spacing, rounded, states, compon
 }
 
 /** Raw harvest output → token set. Pure; no I/O, no network, no model. */
+/** Sibling containers land a pixel or two apart while being the same measure.
+ *  2% groups those without merging a 1230px column into a 1440px full bleed. */
+const MEASURE_TOLERANCE = px => Math.max(4, px * 0.02);
+
+/**
+ * Structure: the part of a design an agent cannot guess from the palette.
+ *
+ * A file carrying only colours and type produces a page in the right ink and
+ * the wrong shape, which is most of why generated UI still reads as generic.
+ * Everything here was measured from boxes and computed style by harvest v5, and
+ * is reduced the same way colour is: cluster, then represent the cluster by its
+ * heaviest OBSERVED member. No value is averaged into existence.
+ */
+export function layoutTokens(capture) {
+  const st = capture.structure;
+  // Captures older than harvestVersion 5 have no structure, and nothing about
+  // the page can be inferred from its absence.
+  if (!st) return { available: false };
+
+  const dominant = (obj, tolerance) => {
+    const entries = Object.entries(obj || {})
+      .map(([k, count]) => ({ px: Number(k), weight: count, count }))
+      .filter(e => Number.isFinite(e.px))
+      // Heaviest first, so clusterNumeric seeds each cluster with its heaviest
+      // member and reports that rather than whichever it happened to see first.
+      .sort((a, b) => b.weight - a.weight || b.px - a.px);
+    if (!entries.length) return null;
+    const total = entries.reduce((sum, e) => sum + e.weight, 0);
+    const top = clusterNumeric(entries, tolerance)[0];
+    return top ? { px: top.px, occurrences: top.count, share: round(top.weight / total, 3) } : null;
+  };
+
+  const columns = Object.entries(st.gridColumns || {})
+    .map(([k, v]) => ({ count: Number(k), occurrences: v }))
+    .sort((a, b) => b.occurrences - a.occurrences)[0] ?? null;
+
+  const transitions = Object.entries(st.transitions || {}).sort((a, b) => b[1] - a[1]);
+  const motionTotal = transitions.reduce((sum, t) => sum + t[1], 0);
+  const motion = transitions.length
+    ? {
+      // Duration and easing were bundled into one key by the harvester, off the
+      // same element, so this pair is one that actually runs on the page.
+      duration: transitions[0][0].slice(0, transitions[0][0].indexOf(' ')),
+      easing: transitions[0][0].slice(transitions[0][0].indexOf(' ') + 1),
+      occurrences: transitions[0][1],
+      share: round(transitions[0][1] / motionTotal, 3),
+    }
+    // Not "unknown". A page that animates no control is making a choice, and
+    // GOV.UK's instant, motionless interactions are as much its character as
+    // its 610px measure. An agent told nothing here would invent an ease.
+    : { duration: null, easing: null, occurrences: 0, share: 0 };
+
+  // Measured across the corpus, real heroes run 0.76 to 1.59 viewports. Apple's
+  // first section is 2.33 and holds several stacked product panels: a sequence
+  // you scroll through, not a view you land on. Publishing it as heroHeight
+  // would tell an agent to build a 2.3-screen opening, so the height is
+  // withheld above this and the headline it does contain is kept.
+  const HERO_MAX_RATIO = 2;
+  const hero = st.hero
+    ? {
+      heightRatio: st.hero.heightRatio <= HERO_MAX_RATIO ? st.hero.heightRatio : null,
+      heightRatioMeasured: st.hero.heightRatio,
+      headingSize: st.hero.headingSize,
+      align: st.hero.align,
+      media: st.hero.media,
+      fullBleed: st.hero.fullBleed,
+      ctas: st.hero.ctas,
+      ctasFilled: st.hero.ctasFilled,
+      // Level 0 means the controls sit in the headline's own block. Deeper
+      // means the walk passed through markup that was not plainly the hero's
+      // text block, so the count is reported with a warning rather than as
+      // though it were certain.
+      ctaEvidence: st.hero.ctaLevel === 0 ? 'strong'
+        : st.hero.ctaLevel > 0 ? 'weak' : 'none',
+    }
+    : null;
+
+  // Section detection either partitioned the page or it did not. When it did
+  // not, everything derived from sections is withheld — the measure, the grid,
+  // the nav and the motion are read independently and still stand.
+  const ok = st.sectionsReliable;
+  return {
+    available: true,
+    sectionsReliable: ok,
+    sections: ok ? st.sectionCount : null,
+    measure: dominant(st.contentWidths, MEASURE_TOLERANCE),
+    rhythm: ok ? dominant(st.sectionRhythm, MEASURE_TOLERANCE) : null,
+    columns,
+    hero: ok ? hero : null,
+    // A nav measured taller than a fifth of the viewport is a mega-menu caught
+    // open, not a bar. The height is dropped and the rest kept.
+    nav: st.nav ? { ...st.nav, height: st.nav.overflowed ? null : st.nav.height } : null,
+    motion,
+  };
+}
+
 export function cluster(capture, { previous } = {}) {
   const stab = stabilizer();
   const colors = colorTokens(capture);
@@ -1182,6 +1309,7 @@ export function cluster(capture, { previous } = {}) {
     });
   }
   const components = componentTokens(capture);
+  const layout = layoutTokens(capture);
 
   return {
     source: {
@@ -1221,7 +1349,7 @@ export function cluster(capture, { previous } = {}) {
     // 13: parseColor understands lab/oklab/oklch/display-p3, so sites authoring
     //     in modern colour spaces stop resolving to null andwhite-on-white.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 14,
+    clusterVersion: 15,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
@@ -1233,9 +1361,12 @@ export function cluster(capture, { previous } = {}) {
     rounded,
     elevation,
     components,
+    // Structure. Colours and type describe the paint; this describes the
+    // building, and it is the half a scraped catalog cannot reproduce.
+    layout,
     states,
     audit,
-    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states, components),
+    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states, components, layout),
   };
 }
 

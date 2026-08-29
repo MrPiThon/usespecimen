@@ -444,13 +444,44 @@ Neither applies on this Windows machine, where Chromium is already installed.
   What it takes: colours, the font stack, base size, leading, both weights,
   tracking, all five radii, the **type scale** (headings are its own steps, not a
   ladder invented here), the **observed spacing steps**, and the **shadows**.
-  What it cannot take: layout, hero and section structure, because DESIGN.md has
-  no vocabulary for them — its Layout section is spacing prose and its Components
-  group covers button, link and surface only.
+  It also takes the **structure**: the 1340px measure becomes the page
+  container, the 73px nav height the header, and the file's 0.1s ease governs
+  every transition on the site. A file that declares no motion sets `--motion`
+  to nothing and interactions stay instant.
   `--faint` (3.45:1) is the one token held back from small text — it is the
   system's quietest tier, fine where it is used at size and a failing pair at
   label size, and shipping it would contradict the audit we publish elsewhere.
 - **No auth, no billing, no accounts** until Phase 3.
+
+## Structure extraction (harvest v6, cluster v15)
+
+Tokens describe the paint. `structure` describes the building, and it is what a
+scraped catalog cannot reproduce. Measured from boxes and computed style like
+everything else; nothing here infers intent.
+
+Recovered: the **measure** (dominant content width), **section rhythm**, **grid
+columns**, **nav** height/position/links, **hero** height, headline size and
+alignment, CTA and media counts, and **motion** — transition duration and easing
+bundled off the same element, never glued together from separate histograms.
+
+Constants, each with the measurement behind it:
+
+| Constant | Value | Why |
+|---|---|---|
+| section partition | sum ≤ 1.25×parent, none > 0.85×parent | Tailwind returned five "sections" of 11592/11092/11592px against an 11592px parent — stacked absolute layers summing to 3× the page, which yielded a 1288vh hero. The Verge returned a wrapper at 91% of its parent. |
+| `HERO_MAX_RATIO` | 2 | Real heroes across the corpus run 0.76–1.59 viewports. Apple's first section is 2.33 and holds several stacked product panels, so its height is withheld and its headline kept. |
+| `MEASURE_TOLERANCE` | max(4px, 2%) | Sibling containers land a pixel or two apart at the same measure; 2% groups those without merging a 1230px column into a 1440px bleed. |
+| nav candidate | ≥3 links, width > 50vw, top < 1vh, topmost wins | Notion's first `<header>` in document order is the *hero's* header (`H1`, `P`, `HeroCTA`), so `querySelector('header')` measured a 308px block of hero text. GOV.UK's real masthead sits at y=324 behind a cookie bar, so a fixed 200px cutoff reported it had no navigation. |
+| CTA cluster | walk ≤5 ancestors from the headline | A pixel window fails: Linear renders a fake product sidebar as live DOM inside its hero, so `Pulse`, `Inbox` and `My issues` all counted as calls to action. The cluster is a different branch of the tree. Level 0 is strong evidence; deeper is reported as weak. |
+
+Section detection either partitions the page or it does not. When it does not
+(`sectionsReliable: false` — app shells, stacked overlays: airbnb, tailwindcss,
+theverge) the hero, rhythm and section count are **withheld**; the measure,
+grid, nav and motion are read independently and still stand.
+
+`--motion` is a site variable, so it inherits through the preview boundary —
+`previewVars` therefore sets it unconditionally, `0s` when a file declares none.
+Without that, GOV.UK's preview rendered on Linear's 0.1s ease.
 
 ## The spec (conform to it exactly)
 

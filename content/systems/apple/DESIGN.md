@@ -105,6 +105,17 @@ spacing:
   s10: '15px'
 elevation:
   shadow-1: 'rgba(0, 0, 0, 0.22) 3px 5px 30px 0px'
+layout:
+  measure: '930px'
+  sectionSpacing: '53px'
+  gridColumns: 2
+  navHeight: '44px'
+  navPosition: 'fixed'
+  heroHeadingSize: '56px'
+  heroAlign: 'center'
+motion:
+  duration: '0.32s'
+  easing: 'cubic-bezier(0.4, 0, 0.6, 1)'
 components:
   button:
     background: '{colors.primary}'
@@ -129,11 +140,13 @@ components:
 provenance:
   brand: 'Apple'
   source: 'https://www.apple.com/'
-  capturedAt: '2026-08-29T02:24:17.813Z'
+  capturedAt: '2026-08-29T03:23:09.226Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 4
-  clusterVersion: 14
+  harvestVersion: 6
+  clusterVersion: 15
 ---
+
+
 
 
 ## Overview
@@ -175,6 +188,18 @@ chrome it actually is.
 run — 3, 4, 5, 8, 10, 11, 12, 13, 14, 15 — is dense and irregular, which is what
 component-level tuning looks like when nothing is snapped to a step.
 
+**A 930px measure** — strikingly narrow for a page of this scale, and the reason
+its full-bleed product imagery reads as wide: the text column beside it is not.
+Sections sit **53px** apart with two-column grids.
+
+The **44px fixed** nav is among the thinnest here and carries 234 links, almost
+all of them inside its menus.
+
+**The first section is 2.33 viewports tall, so no hero height is published.**
+That is not one hero but a run of stacked product panels; it does carry a 56px
+centred headline over four media elements. Treat the opening as a sequence you
+scroll, not a view you land on.
+
 ## Elevation & Depth
 
 A single shadow, `rgba(0, 0, 0, 0.22) 3px 5px 30px`: wide, soft and offset
@@ -191,6 +216,9 @@ Buttons take `0px 8px` padding, links `4px 20px 4px 0px` — the trailing space 
 links leaves room for the chevron that follows them. Hover, focus, focus-visible
 and active are all declared on links.
 
+**0.32s cubic-bezier(0.4, 0, 0.6, 1)** on 232 controls, 94% of everything that
+animates. A single curve governs essentially the whole page.
+
 ## Do's and Don'ts
 
 - **Do** pill everything interactive. The 980px radius is the identity.
@@ -198,4 +226,6 @@ and active are all declared on links.
 - **Don't** treat 12px as your reading size — that measurement is chrome.
 - **Don't** brighten the blue. At 4.7:1 it is tuned to sit quietly beside
   photography, and a louder blue changes what the page is for.
+
+
 

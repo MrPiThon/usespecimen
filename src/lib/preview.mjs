@@ -77,6 +77,18 @@ export function previewVars(data, { dark = false } = {}) {
     '--pv-tracking': body.letterSpacing,
     '--pv-heading-size': heading.fontSize,
     '--pv-heading-weight': heading.fontWeight,
+
+    // Always set, unlike everything else here.
+    //
+    // The rest of these are `--pv-` prefixed and fall back to the preview's own
+    // neutral defaults when a file is silent. `--motion` is a SITE variable,
+    // and it inherits straight through the preview boundary: GOV.UK, which
+    // declares no transition on any control, was rendering its preview on
+    // Linear's 0.1s ease because that is what the surrounding page wears.
+    //
+    // A system with no motion gets 0s, which is its measurement, not a default.
+    '--motion': eff?.motion?.duration ?? '0s',
+    '--motion-ease': eff?.motion?.easing ?? 'linear',
   };
 
   return Object.entries(vars)
