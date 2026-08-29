@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:47:49.977Z",
+  "capturedAt": "2026-08-29T04:36:59.043Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 19177,
-    "elementCount": 15629,
-    "sampled": 5982,
-    "sampleRatio": 0.383
+    "elementCount": 15605,
+    "sampled": 5958,
+    "sampleRatio": 0.382
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,10 +32,8 @@
       },
       "foreground": {
         "hex": "#131313",
-        "weightShare": 0.4298,
-        "variants": [
-          "#111111"
-        ]
+        "weightShare": 0.4313,
+        "variants": []
       },
       "card": {
         "hex": "#f6f6f6",
@@ -44,7 +42,7 @@
       },
       "mutedForeground": {
         "hex": "#4a4a4a",
-        "weightShare": 0.3205,
+        "weightShare": 0.3194,
         "variants": []
       },
       "primary": {
@@ -85,19 +83,19 @@
           "name": "text-2",
           "hex": "#131313",
           "contrast": 18.58,
-          "charShare": 0.4298
+          "charShare": 0.4313
         },
         {
           "name": "text-3",
           "hex": "#4a4a4a",
           "contrast": 8.86,
-          "charShare": 0.3205
+          "charShare": 0.3194
         },
         {
           "name": "text-4",
           "hex": "#636363",
           "contrast": 6.01,
-          "charShare": 0.0285
+          "charShare": 0.0281
         }
       ]
     },
@@ -207,14 +205,6 @@
         "count": 6
       },
       {
-        "hex": "#111111",
-        "role": null,
-        "hue": "neutral",
-        "lightness": 0.178,
-        "chroma": 0,
-        "count": 2
-      },
-      {
         "hex": "#cccccc",
         "role": null,
         "hue": "neutral",
@@ -279,7 +269,7 @@
         "name": "4xs",
         "px": 11,
         "rem": 0.688,
-        "weightShare": 0.1029,
+        "weightShare": 0.1025,
         "variants": []
       },
       {
@@ -293,7 +283,7 @@
         "name": "2xs",
         "px": 13.008,
         "rem": 0.813,
-        "weightShare": 0.1378,
+        "weightShare": 0.1377,
         "variants": [
           13
         ]
@@ -318,21 +308,21 @@
         "name": "base",
         "px": 16,
         "rem": 1,
-        "weightShare": 0.3433,
+        "weightShare": 0.3431,
         "variants": []
       },
       {
         "name": "lg",
         "px": 18,
         "rem": 1.125,
-        "weightShare": 0.1892,
+        "weightShare": 0.19,
         "variants": []
       },
       {
         "name": "xl",
         "px": 20,
         "rem": 1.25,
-        "weightShare": 0.0787,
+        "weightShare": 0.0791,
         "variants": []
       },
       {
@@ -346,14 +336,14 @@
         "name": "3xl",
         "px": 26,
         "rem": 1.625,
-        "weightShare": 0.0154,
+        "weightShare": 0.0153,
         "variants": []
       },
       {
         "name": "4xl",
         "px": 31,
         "rem": 1.938,
-        "weightShare": 0.0037,
+        "weightShare": 0.0032,
         "variants": []
       },
       {
@@ -409,7 +399,7 @@
         "lineHeight": 1.2,
         "letterSpacing": "1.1px",
         "elements": 450,
-        "chars": 3247
+        "chars": 3232
       },
       "body-lg": {
         "fontFamily": "__fkRomanStandard_cfceed",
@@ -486,7 +476,7 @@
         "lineHeight": 1,
         "letterSpacing": null,
         "elements": 76,
-        "chars": 4750
+        "chars": 4790
       },
       "mono": {
         "fontFamily": "__polySansMono_0b836e",
@@ -616,8 +606,8 @@
     "sections": null,
     "measure": {
       "px": 800,
-      "occurrences": 49,
-      "share": 0.355
+      "occurrences": 50,
+      "share": 0.373
     },
     "rhythm": null,
     "composition": null,
@@ -637,6 +627,60 @@
       "easing": "ease",
       "occurrences": 1,
       "share": 1
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 5,
+    "pattern": {
+      "kind": "lines",
+      "size": "120px 120px",
+      "angle": "118",
+      "value": "linear-gradient(118deg, rgba(0, 0, 0, 0.04) 0.5px, rgba(0, 0, 0, 0) 0.5px)",
+      "external": false,
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0.04)",
+          "hex": "#000000",
+          "alpha": 0.04
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        }
+      ],
+      "areaShare": 0.059
+    },
+    "wash": {
+      "kind": "radial-gradient",
+      "value": "radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 62%)",
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0.06)",
+          "hex": "#000000",
+          "alpha": 0.06
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        }
+      ],
+      "areaShare": 0.177
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(14px)",
+        "count": 1
+      },
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": {
+        "value": "drop-shadow(rgba(255, 255, 255, 0.6) 0px 35px 35px)",
+        "count": 1
+      }
     }
   },
   "states": {
@@ -774,7 +818,7 @@
     "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
     "No spacing grid explains 75% of values (best 0.58); site may not be on a grid.",
     "16 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-    "Strided sample: 5982 of 15629 elements. Weights are relative only."
+    "Strided sample: 5958 of 15605 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -786,12 +830,12 @@
         "h": 900
       },
       "docHeight": 19177,
-      "elementCount": 15629,
-      "sampled": 5982,
-      "sampleRatio": 0.383
+      "elementCount": 15605,
+      "sampled": 5958,
+      "sampleRatio": 0.382
     },
-    "harvestVersion": 7,
-    "clusterVersion": 16,
+    "harvestVersion": 8,
+    "clusterVersion": 17,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -808,7 +852,7 @@
         },
         "foreground": {
           "hex": "#ffffff",
-          "weightShare": 0.4946,
+          "weightShare": 0.4944,
           "variants": []
         },
         "card": {
@@ -855,19 +899,19 @@
             "name": "text-1",
             "hex": "#ffffff",
             "contrast": 18.58,
-            "charShare": 0.4946
+            "charShare": 0.4944
           },
           {
             "name": "text-2",
             "hex": "#e9e9e9",
             "contrast": 15.3,
-            "charShare": 0.3202
+            "charShare": 0.3198
           },
           {
             "name": "text-3",
             "hex": "#949494",
             "contrast": 6.13,
-            "charShare": 0.0365
+            "charShare": 0.0369
           }
         ]
       },
@@ -1041,7 +1085,7 @@
           "name": "4xs",
           "px": 11,
           "rem": 0.688,
-          "weightShare": 0.1024,
+          "weightShare": 0.1029,
           "variants": []
         },
         {
@@ -1055,7 +1099,7 @@
           "name": "2xs",
           "px": 13.008,
           "rem": 0.813,
-          "weightShare": 0.1377,
+          "weightShare": 0.1379,
           "variants": [
             13
           ]
@@ -1064,7 +1108,7 @@
           "name": "xs",
           "px": 14,
           "rem": 0.875,
-          "weightShare": 0.0807,
+          "weightShare": 0.0809,
           "variants": [
             14.08
           ]
@@ -1080,21 +1124,21 @@
           "name": "base",
           "px": 16,
           "rem": 1,
-          "weightShare": 0.3429,
+          "weightShare": 0.3434,
           "variants": []
         },
         {
           "name": "lg",
           "px": 18,
           "rem": 1.125,
-          "weightShare": 0.1899,
+          "weightShare": 0.1893,
           "variants": []
         },
         {
           "name": "xl",
           "px": 20,
           "rem": 1.25,
-          "weightShare": 0.0791,
+          "weightShare": 0.0788,
           "variants": []
         },
         {
@@ -1108,14 +1152,14 @@
           "name": "3xl",
           "px": 26,
           "rem": 1.625,
-          "weightShare": 0.0153,
+          "weightShare": 0.0154,
           "variants": []
         },
         {
           "name": "4xl",
           "px": 31,
           "rem": 1.938,
-          "weightShare": 0.0037,
+          "weightShare": 0.0032,
           "variants": []
         },
         {
@@ -1171,7 +1215,7 @@
           "lineHeight": 1.2,
           "letterSpacing": "1.1px",
           "elements": 450,
-          "chars": 3232
+          "chars": 3247
         },
         "body-lg": {
           "fontFamily": "__fkRomanStandard_cfceed",
@@ -1248,7 +1292,7 @@
           "lineHeight": 1,
           "letterSpacing": null,
           "elements": 76,
-          "chars": 4790
+          "chars": 4750
         },
         "mono": {
           "fontFamily": "__polySansMono_0b836e",
@@ -1378,8 +1422,8 @@
       "sections": null,
       "measure": {
         "px": 800,
-        "occurrences": 49,
-        "share": 0.355
+        "occurrences": 50,
+        "share": 0.373
       },
       "rhythm": null,
       "composition": null,
@@ -1399,6 +1443,60 @@
         "easing": "ease",
         "occurrences": 1,
         "share": 1
+      }
+    },
+    "backgrounds": {
+      "available": true,
+      "decorated": true,
+      "layerCount": 7,
+      "pattern": {
+        "kind": "lines",
+        "size": "120px 120px",
+        "angle": "118",
+        "value": "linear-gradient(118deg, rgba(255, 255, 255, 0.043) 0.5px, rgba(0, 0, 0, 0) 0.5px)",
+        "external": false,
+        "stops": [
+          {
+            "raw": "rgba(255, 255, 255, 0.043)",
+            "hex": "#ffffff",
+            "alpha": 0.043
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0
+          }
+        ],
+        "areaShare": 0.035
+      },
+      "wash": {
+        "kind": "radial-gradient",
+        "value": "radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0) 62%)",
+        "stops": [
+          {
+            "raw": "rgba(0, 0, 0, 0.22)",
+            "hex": "#000000",
+            "alpha": 0.22
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0
+          }
+        ],
+        "areaShare": 0.177
+      },
+      "effects": {
+        "backdropFilter": {
+          "value": "blur(14px)",
+          "count": 1
+        },
+        "mixBlendMode": null,
+        "maskImage": null,
+        "filter": {
+          "value": "drop-shadow(rgba(0, 0, 0, 0.6) 0px 35px 35px)",
+          "count": 1
+        }
       }
     },
     "states": {
@@ -1525,11 +1623,11 @@
       "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
       "No spacing grid explains 75% of values (best 0.58); site may not be on a grid.",
       "16 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-      "Strided sample: 5982 of 15629 elements. Weights are relative only."
+      "Strided sample: 5958 of 15605 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.theverge.com/",
     "title": "The Verge",
     "viewport": {
@@ -1539,9 +1637,9 @@
     "docHeight": 19177,
     "textColors": {
       "rgb(82, 0, 255)": {
-        "count": 220,
-        "area": 271144.1345214844,
-        "chars": 2566
+        "count": 221,
+        "area": 272330.4470214844,
+        "chars": 2567
       },
       "rgb(255, 255, 255)": {
         "count": 98,
@@ -1550,28 +1648,23 @@
       },
       "rgb(74, 74, 74)": {
         "count": 141,
-        "area": 3521599.5083007812,
-        "chars": 14338
+        "area": 3460693.3811035156,
+        "chars": 14300
       },
       "rgb(19, 19, 19)": {
         "count": 398,
-        "area": 4686157.227294922,
-        "chars": 19226
+        "area": 4720762.582763672,
+        "chars": 19305
       },
       "rgb(99, 99, 99)": {
         "count": 290,
-        "area": 160389.25,
-        "chars": 1274
+        "area": 159061.625,
+        "chars": 1259
       },
       "rgb(0, 0, 0)": {
         "count": 38,
         "area": 570987.7934570312,
         "chars": 4041
-      },
-      "rgb(17, 17, 17)": {
-        "count": 1,
-        "area": 1186.3125,
-        "chars": 1
       },
       "rgb(148, 148, 148)": {
         "count": 6,
@@ -1638,8 +1731,8 @@
     },
     "borderColors": {
       "rgb(82, 0, 255)": {
-        "count": 42,
-        "area": 2748354.125,
+        "count": 43,
+        "area": 2791554.125,
         "chars": 0
       },
       "rgb(19, 19, 19)": {
@@ -1650,11 +1743,6 @@
       "rgb(233, 233, 233)": {
         "count": 192,
         "area": 17083283.59375,
-        "chars": 0
-      },
-      "rgb(17, 17, 17)": {
-        "count": 1,
-        "area": 43200,
         "chars": 0
       },
       "rgb(60, 255, 208)": {
@@ -1686,8 +1774,8 @@
       },
       "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 896,
-        "area": 5222796.586425781,
-        "chars": 24834
+        "area": 5223019.523925781,
+        "chars": 24879
       },
       "__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif": {
         "count": 3,
@@ -1701,13 +1789,13 @@
       },
       "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 37,
-        "area": 80260.4873046875,
-        "chars": 115
+        "area": 80375.83715820312,
+        "chars": 116
       },
       "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
         "count": 24,
@@ -1723,8 +1811,8 @@
     "fontSizes": {
       "11px": {
         "count": 533,
-        "area": 526313.2866210938,
-        "chars": 4603
+        "area": 524985.6616210938,
+        "chars": 4588
       },
       "19px": {
         "count": 6,
@@ -1743,8 +1831,8 @@
       },
       "20px": {
         "count": 75,
-        "area": 960020.25,
-        "chars": 3522
+        "area": 962846.5625,
+        "chars": 3542
       },
       "26px": {
         "count": 12,
@@ -1753,8 +1841,8 @@
       },
       "18px": {
         "count": 135,
-        "area": 1841780.7045898438,
-        "chars": 8464
+        "area": 1840504.9545898438,
+        "chars": 8504
       },
       "16px": {
         "count": 220,
@@ -1768,8 +1856,8 @@
       },
       "12px": {
         "count": 16,
-        "area": 49966.6669921875,
-        "chars": 162
+        "area": 50082.016845703125,
+        "chars": 163
       },
       "14px": {
         "count": 36,
@@ -1778,8 +1866,8 @@
       },
       "31px": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "15px": {
         "count": 9,
@@ -1820,18 +1908,18 @@
     "fontWeights": {
       "300": {
         "count": 21,
-        "area": 489758.16064453125,
-        "chars": 976
+        "area": 428736.68359375,
+        "chars": 937
       },
       "400": {
         "count": 849,
-        "area": 5612748.1396484375,
-        "chars": 29212
+        "area": 5611420.5146484375,
+        "chars": 29197
       },
       "500": {
         "count": 27,
-        "area": 54088.369384765625,
-        "chars": 369
+        "area": 54203.71923828125,
+        "chars": 370
       },
       "600": {
         "count": 14,
@@ -1840,8 +1928,8 @@
       },
       "700": {
         "count": 275,
-        "area": 3393993.838623047,
-        "chars": 13782
+        "area": 3428599.194091797,
+        "chars": 13861
       },
       "800": {
         "count": 3,
@@ -1857,8 +1945,8 @@
     "lineHeights": {
       "13.2px": {
         "count": 470,
-        "area": 416021.0979003906,
-        "chars": 3780
+        "area": 414693.4729003906,
+        "chars": 3765
       },
       "13px": {
         "count": 4,
@@ -1882,8 +1970,8 @@
       },
       "20px": {
         "count": 48,
-        "area": 629533.5625,
-        "chars": 2385
+        "area": 632359.875,
+        "chars": 2405
       },
       "26.4px": {
         "count": 41,
@@ -1927,13 +2015,13 @@
       },
       "40.3px": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "14.4px": {
         "count": 1,
-        "area": 1269.0732421875,
-        "chars": 11
+        "area": 1384.423095703125,
+        "chars": 12
       },
       "11px": {
         "count": 31,
@@ -1942,8 +2030,8 @@
       },
       "18px": {
         "count": 85,
-        "area": 1083687.7763671875,
-        "chars": 5275
+        "area": 1082412.0263671875,
+        "chars": 5315
       },
       "18.2px": {
         "count": 33,
@@ -2019,8 +2107,8 @@
     "letterSpacings": {
       "1.1px": {
         "count": 512,
-        "area": 430688.7976074219,
-        "chars": 3866
+        "area": 429361.1726074219,
+        "chars": 3851
       },
       "0.24px": {
         "count": 41,
@@ -2049,13 +2137,13 @@
       },
       "-0.31px": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "0.72px": {
         "count": 4,
-        "area": 15034.2919921875,
-        "chars": 44
+        "area": 15149.641845703125,
+        "chars": 45
       },
       "1.5px": {
         "count": 5,
@@ -2121,13 +2209,13 @@
       },
       "text|11px|400|13.2px|1.1px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 450,
-        "area": 359993.037109375,
-        "chars": 3247
+        "area": 358665.412109375,
+        "chars": 3232
       },
       "link|20px|700|20px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 38,
-        "area": 610173.5625,
-        "chars": 2375
+        "area": 612999.875,
+        "chars": 2395
       },
       "text|24px|700|26.4px|0.24px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 21,
@@ -2211,18 +2299,18 @@
       },
       "link|31px|700|40.3px|-0.31px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 1,
-        "area": 25091.78125,
-        "chars": 44
+        "area": 58146.57421875,
+        "chars": 63
       },
       "text|31px|300|40.3px|-0.31px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 2,
-        "area": 121400.287109375,
-        "chars": 121
+        "area": 60378.81005859375,
+        "chars": 82
       },
       "text|12px|500|14.4px|0.72px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 1,
-        "area": 1269.0732421875,
-        "chars": 11
+        "area": 1384.423095703125,
+        "chars": 12
       },
       "button|12px|600|24px|1.5px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 5,
@@ -2391,8 +2479,8 @@
       },
       "link|18px|700|18px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 76,
-        "area": 989233.828125,
-        "chars": 4750
+        "area": 987958.078125,
+        "chars": 4790
       },
       "button|11px|400|14.3px|1.1px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 2,
@@ -2683,8 +2771,8 @@
       },
       "link|0px|0px|0px|normal": {
         "count": 238,
-        "area": 1696377.7036132812,
-        "chars": 6099
+        "area": 1728931.4838867188,
+        "chars": 6138
       },
       "link|14px 0px 14px 14px|0px|0px|normal": {
         "count": 6,
@@ -2798,8 +2886,8 @@
       },
       "rgba(0, 0, 0, 0) 0px -1px 0px 0px inset": {
         "count": 180,
-        "area": 2831463.87109375,
-        "chars": 11024
+        "area": 2833014.43359375,
+        "chars": 11084
       },
       "rgb(82, 0, 255) 0px -1px 0px 0px inset": {
         "count": 61,
@@ -3029,8 +3117,8 @@
       },
       "0px": {
         "count": 607,
-        "area": 3977519.0434570312,
-        "chars": 14419
+        "area": 4008783.6674804688,
+        "chars": 14498
       },
       "24px": {
         "count": 8,
@@ -3045,8 +3133,8 @@
     },
     "interactiveFg": {
       "rgb(82, 0, 255)": {
-        "count": 9,
-        "area": 47637.47314453125,
+        "count": 10,
+        "area": 57728.03076171875,
         "chars": 76
       },
       "rgb(255, 255, 255)": {
@@ -3061,17 +3149,12 @@
       },
       "rgb(19, 19, 19)": {
         "count": 320,
-        "area": 3582195.533935547,
-        "chars": 13286
+        "area": 3616800.889404297,
+        "chars": 13365
       },
       "rgb(99, 99, 99)": {
         "count": 194,
-        "area": 75655.734375,
-        "chars": 0
-      },
-      "rgb(17, 17, 17)": {
-        "count": 1,
-        "area": 13406.5078125,
+        "area": 75630.953125,
         "chars": 0
       },
       "rgb(60, 255, 208)": {
@@ -3137,8 +3220,8 @@
       }
     },
     "pageBg": "rgb(255, 255, 255)",
-    "elementCount": 15629,
-    "sampled": 5982,
+    "elementCount": 15605,
+    "sampled": 5958,
     "structure": {
       "sectionCount": 0,
       "sectionDepth": 2,
@@ -3148,8 +3231,7 @@
         "680": 48,
         "750": 2,
         "770": 1,
-        "800": 49,
-        "830": 5,
+        "800": 50,
         "910": 1,
         "930": 19,
         "940": 1,
@@ -3178,11 +3260,47 @@
         "overflowed": false
       }
     },
+    "backgrounds": {
+      "layers": {
+        "svg-tile|cover|no-repeat|50% 50%|url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='none' style='filter: url(%23b);' href='data:image/png;base64,iVBORw0KGgoAAAANSUhE…TRUNCATED": {
+          "count": 30,
+          "area": 1313286.75
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(0, 0, 0, 0.024), rgba(0, 0, 0, 0) 45%)": {
+          "count": 1,
+          "area": 120000
+        },
+        "linear-gradient|120px 120px|repeat|0% 0%|linear-gradient(118deg, rgba(0, 0, 0, 0.04) 0.5px, rgba(0, 0, 0, 0) 0.5px)": {
+          "count": 1,
+          "area": 120000
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(247, 247, 247) 0%, rgb(221, 221, 221) 100%)": {
+          "count": 1,
+          "area": 120000
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 62%)": {
+          "count": 1,
+          "area": 360000
+        }
+      },
+      "effects": {
+        "filter|drop-shadow(rgba(255, 255, 255, 0.6) 0px 35px 35px)": {
+          "count": 1,
+          "area": 98072.84375
+        },
+        "backdrop-filter|blur(14px)": {
+          "count": 1,
+          "area": 43200
+        }
+      },
+      "scanned": 5241,
+      "elementsWithImage": 32
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 5265
+        "elements": 5241
       },
       {
         "w": 768,
@@ -3203,7 +3321,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.theverge.com/",
     "title": "The Verge",
     "viewport": {
@@ -3224,18 +3342,18 @@
       },
       "rgb(233, 233, 233)": {
         "count": 141,
-        "area": 3521599.5083007812,
-        "chars": 14338
+        "area": 3460693.3811035156,
+        "chars": 14300
       },
       "rgb(255, 255, 255)": {
         "count": 490,
-        "area": 5298558.458740234,
-        "chars": 22149
+        "area": 5330062.689208984,
+        "chars": 22108
       },
       "rgb(148, 148, 148)": {
         "count": 296,
-        "area": 198155.4052734375,
-        "chars": 1634
+        "area": 199433.4677734375,
+        "chars": 1649
       },
       "rgb(214, 243, 31)": {
         "count": 1,
@@ -3340,8 +3458,8 @@
       },
       "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 896,
-        "area": 5223044.305175781,
-        "chars": 24879
+        "area": 5222771.805175781,
+        "chars": 24834
       },
       "__manuka_62afb5, __manuka_Fallback_62afb5, Impact, Helvetica, sans-serif, Impact, Helvetica, sans-serif": {
         "count": 3,
@@ -3355,13 +3473,13 @@
       },
       "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 37,
-        "area": 80260.4873046875,
-        "chars": 115
+        "area": 80375.83715820312,
+        "chars": 116
       },
       "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
         "count": 24,
@@ -3377,8 +3495,8 @@
     "fontSizes": {
       "11px": {
         "count": 533,
-        "area": 525010.4428710938,
-        "chars": 4588
+        "area": 526288.5053710938,
+        "chars": 4603
       },
       "19px": {
         "count": 6,
@@ -3397,8 +3515,8 @@
       },
       "20px": {
         "count": 75,
-        "area": 962846.5625,
-        "chars": 3542
+        "area": 960020.25,
+        "chars": 3522
       },
       "26px": {
         "count": 12,
@@ -3407,8 +3525,8 @@
       },
       "18px": {
         "count": 135,
-        "area": 1840504.9545898438,
-        "chars": 8504
+        "area": 1841780.7045898438,
+        "chars": 8464
       },
       "16px": {
         "count": 220,
@@ -3422,8 +3540,8 @@
       },
       "12px": {
         "count": 16,
-        "area": 49966.6669921875,
-        "chars": 162
+        "area": 50082.016845703125,
+        "chars": 163
       },
       "14px": {
         "count": 36,
@@ -3432,8 +3550,8 @@
       },
       "31px": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "15px": {
         "count": 9,
@@ -3474,18 +3592,18 @@
     "fontWeights": {
       "300": {
         "count": 21,
-        "area": 489758.16064453125,
-        "chars": 976
+        "area": 428736.68359375,
+        "chars": 937
       },
       "400": {
         "count": 849,
-        "area": 5611445.2958984375,
-        "chars": 29197
+        "area": 5612723.3583984375,
+        "chars": 29212
       },
       "500": {
         "count": 27,
-        "area": 54088.369384765625,
-        "chars": 369
+        "area": 54203.71923828125,
+        "chars": 370
       },
       "600": {
         "count": 14,
@@ -3494,8 +3612,8 @@
       },
       "700": {
         "count": 275,
-        "area": 3395544.401123047,
-        "chars": 13842
+        "area": 3427048.631591797,
+        "chars": 13801
       },
       "800": {
         "count": 3,
@@ -3511,8 +3629,8 @@
     "lineHeights": {
       "13.2px": {
         "count": 470,
-        "area": 414718.2541503906,
-        "chars": 3765
+        "area": 415996.3166503906,
+        "chars": 3780
       },
       "13px": {
         "count": 4,
@@ -3536,8 +3654,8 @@
       },
       "20px": {
         "count": 48,
-        "area": 632359.875,
-        "chars": 2405
+        "area": 629533.5625,
+        "chars": 2385
       },
       "26.4px": {
         "count": 41,
@@ -3581,13 +3699,13 @@
       },
       "40.3px": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "14.4px": {
         "count": 1,
-        "area": 1269.0732421875,
-        "chars": 11
+        "area": 1384.423095703125,
+        "chars": 12
       },
       "11px": {
         "count": 31,
@@ -3596,8 +3714,8 @@
       },
       "18px": {
         "count": 85,
-        "area": 1082412.0263671875,
-        "chars": 5315
+        "area": 1083687.7763671875,
+        "chars": 5275
       },
       "18.2px": {
         "count": 33,
@@ -3673,8 +3791,8 @@
     "letterSpacings": {
       "1.1px": {
         "count": 512,
-        "area": 429385.9538574219,
-        "chars": 3851
+        "area": 430664.0163574219,
+        "chars": 3866
       },
       "0.24px": {
         "count": 41,
@@ -3703,13 +3821,13 @@
       },
       "-0.31px": {
         "count": 3,
-        "area": 146492.068359375,
-        "chars": 165
+        "area": 118525.38427734375,
+        "chars": 145
       },
       "0.72px": {
         "count": 4,
-        "area": 15034.2919921875,
-        "chars": 44
+        "area": 15149.641845703125,
+        "chars": 45
       },
       "1.5px": {
         "count": 5,
@@ -3775,13 +3893,13 @@
       },
       "text|11px|400|13.2px|1.1px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 450,
-        "area": 358690.193359375,
-        "chars": 3232
+        "area": 359968.255859375,
+        "chars": 3247
       },
       "link|20px|700|20px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 38,
-        "area": 612999.875,
-        "chars": 2395
+        "area": 610173.5625,
+        "chars": 2375
       },
       "text|24px|700|26.4px|0.24px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 21,
@@ -3865,18 +3983,18 @@
       },
       "link|31px|700|40.3px|-0.31px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 1,
-        "area": 25091.78125,
-        "chars": 44
+        "area": 58146.57421875,
+        "chars": 63
       },
       "text|31px|300|40.3px|-0.31px|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 2,
-        "area": 121400.287109375,
-        "chars": 121
+        "area": 60378.81005859375,
+        "chars": 82
       },
       "text|12px|500|14.4px|0.72px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, __polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 1,
-        "area": 1269.0732421875,
-        "chars": 11
+        "area": 1384.423095703125,
+        "chars": 12
       },
       "button|12px|600|24px|1.5px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 5,
@@ -4045,8 +4163,8 @@
       },
       "link|18px|700|18px|normal|__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif": {
         "count": 76,
-        "area": 987958.078125,
-        "chars": 4790
+        "area": 989233.828125,
+        "chars": 4750
       },
       "button|11px|400|14.3px|1.1px|__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif": {
         "count": 2,
@@ -4349,8 +4467,8 @@
       },
       "link|0px|0px|0px|normal": {
         "count": 238,
-        "area": 1699204.0161132812,
-        "chars": 6119
+        "area": 1726105.1713867188,
+        "chars": 6118
       },
       "link|14px 0px 14px 14px|0px|0px|normal": {
         "count": 6,
@@ -4459,8 +4577,8 @@
       },
       "rgba(0, 0, 0, 0) 0px -1px 0px 0px inset": {
         "count": 180,
-        "area": 2833014.43359375,
-        "chars": 11084
+        "area": 2831463.87109375,
+        "chars": 11024
       },
       "rgb(60, 255, 208) 0px -1px 0px 0px inset": {
         "count": 61,
@@ -4675,8 +4793,8 @@
       },
       "0px": {
         "count": 607,
-        "area": 3979069.6059570312,
-        "chars": 14479
+        "area": 4007233.1049804688,
+        "chars": 14438
       },
       "24px": {
         "count": 8,
@@ -4707,17 +4825,17 @@
       },
       "rgb(255, 255, 255)": {
         "count": 409,
-        "area": 3923053.837890625,
-        "chars": 14442
+        "area": 3954558.068359375,
+        "chars": 14401
       },
       "rgb(148, 148, 148)": {
         "count": 194,
-        "area": 75655.734375,
+        "area": 75630.953125,
         "chars": 0
       },
       "rgb(214, 243, 31)": {
         "count": 1,
-        "area": 13406.5078125,
+        "area": 10090.5576171875,
         "chars": 0
       }
     },
@@ -4773,8 +4891,8 @@
       }
     },
     "pageBg": "rgb(19, 19, 19)",
-    "elementCount": 15629,
-    "sampled": 5982,
+    "elementCount": 15605,
+    "sampled": 5958,
     "structure": {
       "sectionCount": 0,
       "sectionDepth": 2,
@@ -4784,8 +4902,7 @@
         "680": 48,
         "750": 2,
         "770": 1,
-        "800": 49,
-        "830": 5,
+        "800": 50,
         "910": 1,
         "930": 19,
         "940": 1,
@@ -4814,11 +4931,55 @@
         "overflowed": false
       }
     },
+    "backgrounds": {
+      "layers": {
+        "svg-tile|cover|no-repeat|50% 50%|url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='none' style='filter: url(%23b);' href='data:image/png;base64,iVBORw0KGgoAAAANSUhE…TRUNCATED": {
+          "count": 30,
+          "area": 1313286.75
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0) 45%)": {
+          "count": 1,
+          "area": 72000
+        },
+        "linear-gradient|120px 120px|repeat|0% 0%|linear-gradient(118deg, rgba(255, 255, 255, 0.043) 0.5px, rgba(0, 0, 0, 0) 0.5px)": {
+          "count": 1,
+          "area": 72000
+        },
+        "linear-gradient|160px 160px|repeat|0% 0%|linear-gradient(242deg, rgba(255, 255, 255, 0.03) 0.5px, rgba(0, 0, 0, 0) 0.5px)": {
+          "count": 1,
+          "area": 72000
+        },
+        "linear-gradient|200px 200px|repeat|0% 0%|linear-gradient(14deg, rgba(255, 255, 255, 0.02) 0.5px, rgba(0, 0, 0, 0) 0.5px)": {
+          "count": 1,
+          "area": 72000
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(85, 85, 85) 0%, rgb(18, 18, 18) 100%)": {
+          "count": 1,
+          "area": 72000
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0) 62%)": {
+          "count": 1,
+          "area": 360000
+        }
+      },
+      "effects": {
+        "filter|drop-shadow(rgba(0, 0, 0, 0.6) 0px 35px 35px)": {
+          "count": 1,
+          "area": 98072.84375
+        },
+        "backdrop-filter|blur(14px)": {
+          "count": 1,
+          "area": 43200
+        }
+      },
+      "scanned": 5241,
+      "elementsWithImage": 32
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 5265
+        "elements": 5241
       },
       {
         "w": 768,

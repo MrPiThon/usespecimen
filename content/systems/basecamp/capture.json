@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:44:29.510Z",
+  "capturedAt": "2026-08-29T04:34:22.177Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1344,
     "sampleRatio": 0.73
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -25,7 +25,7 @@
     "polarity": "light",
     "roles": {
       "background": {
-        "hex": "#fff9f5",
+        "hex": "#fcf7ff",
         "weightShare": 1,
         "variants": [],
         "source": "pageBg"
@@ -56,18 +56,18 @@
         {
           "name": "text-1",
           "hex": "#29353c",
-          "contrast": 12.06,
+          "contrast": 11.92,
           "charShare": 0.8443
         }
       ]
     },
     "palette": [
       {
-        "hex": "#fff9f5",
+        "hex": "#fcf7ff",
         "role": "background",
         "hue": "neutral",
-        "lightness": 0.986,
-        "chroma": 0.008,
+        "lightness": 0.982,
+        "chroma": 0.012,
         "count": 3
       },
       {
@@ -549,6 +549,19 @@
       "share": 0.988
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 2,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -606,8 +619,8 @@
       {
         "pair": "foreground/background",
         "fg": "#29353c",
-        "bg": "#fff9f5",
-        "ratio": 12.06,
+        "bg": "#fcf7ff",
+        "ratio": 11.92,
         "kind": "text",
         "criterion": "1.4.3 Contrast (Minimum)",
         "min": 4.5,
@@ -630,8 +643,8 @@
       {
         "pair": "primary/background",
         "fg": "#2377d2",
-        "bg": "#fff9f5",
-        "ratio": 4.34,
+        "bg": "#fcf7ff",
+        "ratio": 4.29,
         "kind": "nonText",
         "criterion": "1.4.11 Non-text Contrast",
         "min": 3,
@@ -645,6 +658,7 @@
     "minRatio": 2.78
   },
   "warnings": [
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
     "No borders observed; border token omitted.",
     "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
     "No spacing grid explains 75% of values (best 0.409); site may not be on a grid.",
@@ -666,8 +680,8 @@
       "sampled": 1340,
       "sampleRatio": 0.727
     },
-    "harvestVersion": 7,
-    "clusterVersion": 16,
+    "harvestVersion": 8,
+    "clusterVersion": 17,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1239,6 +1253,19 @@
         "share": 0.988
       }
     },
+    "backgrounds": {
+      "available": true,
+      "decorated": false,
+      "layerCount": 2,
+      "pattern": null,
+      "wash": null,
+      "effects": {
+        "backdropFilter": null,
+        "mixBlendMode": null,
+        "maskImage": null,
+        "filter": null
+      }
+    },
     "states": {
       "available": true,
       "sheets": {
@@ -1335,6 +1362,7 @@
       "minRatio": 3.57
     },
     "warnings": [
+      "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
       "No borders observed; border token omitted.",
       "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
       "No spacing grid explains 75% of values (best 0.409); site may not be on a grid.",
@@ -1345,7 +1373,7 @@
     ]
   },
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
     "viewport": {
@@ -1371,7 +1399,7 @@
       }
     },
     "bgColors": {
-      "oklch(0.9856 0.0084 56.32)": {
+      "oklch(0.9822 0.0118 313.22)": {
         "count": 3,
         "area": 12097525.6875,
         "chars": 0
@@ -2602,7 +2630,7 @@
         "chars": 1005
       }
     },
-    "pageBg": "oklch(0.9856 0.0084 56.32)",
+    "pageBg": "oklch(0.9822 0.0118 313.22)",
     "elementCount": 1842,
     "sampled": 1344,
     "structure": {
@@ -2659,6 +2687,21 @@
         "overflowed": false
       }
     },
+    "backgrounds": {
+      "layers": {
+        "raster|auto 59.0476px|no-repeat|0% 0%|url(\"https://basecamp.com/assets/images/general/jf-signature.svg\")": {
+          "count": 1,
+          "area": 82987.51904296875
+        },
+        "raster|40.7151px|no-repeat|12.8574px 50%|url(\"https://basecamp.com/assets/images/general/logo-mark.webp\")": {
+          "count": 1,
+          "area": 10361.274908065796
+        }
+      },
+      "effects": {},
+      "scanned": 614,
+      "elementsWithImage": 2
+    },
     "viewports": [
       {
         "w": 1440,
@@ -2684,7 +2727,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
     "viewport": {
@@ -4025,6 +4068,21 @@
         "links": 12,
         "overflowed": false
       }
+    },
+    "backgrounds": {
+      "layers": {
+        "raster|auto 59.0476px|no-repeat|0% 0%|url(\"https://basecamp.com/assets/images/general/jf-signature-dark.svg\")": {
+          "count": 1,
+          "area": 82987.51904296875
+        },
+        "raster|40.7151px|no-repeat|12.8574px 50%|url(\"https://basecamp.com/assets/images/general/logo-mark.webp\")": {
+          "count": 1,
+          "area": 10361.274908065796
+        }
+      },
+      "effects": {},
+      "scanned": 614,
+      "elementsWithImage": 2
     },
     "viewports": [
       {

@@ -141,6 +141,13 @@ layout:
 motion:
   duration: '0.1s'
   easing: 'ease'
+backgrounds:
+  pattern: 'lines'
+  patternSize: '120px 120px'
+  patternAngle: '118deg'
+  patternImage: 'linear-gradient(118deg, rgba(0, 0, 0, 0.04) 0.5px, rgba(0, 0, 0, 0) 0.5px)'
+  wash: 'radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 62%)'
+  backdropFilter: 'blur(14px)'
 components:
   button:
     background: '{colors.primary}'
@@ -173,13 +180,15 @@ components:
 provenance:
   brand: 'The Verge'
   source: 'https://www.theverge.com/'
-  capturedAt: '2026-08-29T03:47:49.977Z'
+  capturedAt: '2026-08-29T04:36:59.043Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---
+
+
 
 
 
@@ -234,6 +243,15 @@ Almost none. The declared shadows are inset hairlines like
 `rgba(0, 0, 0, 0) 0px -1px 0px inset` — rules drawn as shadows rather than
 elevation. Nothing floats.
 
+**A 118-degree hairline pattern** tiling at **120px**, drawn in `#000000` at
+**4% alpha** — half-pixel diagonal rules, barely visible individually and
+clearly felt across a full page. Under it, a radial vignette at 6% black lifts
+the centre.
+
+There is also a `drop-shadow(rgba(255, 255, 255, 0.6) 0 35px 35px)` — a white
+glow used as a shadow, which is unusual and worth keeping if you want the
+editorial glare.
+
 ## Shapes
 
 Radii of 2, 3 and 24px, and buttons at **50%** — fully circular. Small sharp
@@ -263,4 +281,6 @@ page; do not build a system of transitions on one measurement.
 
 **What this file does not constrain:** page structure, which could not be read
 here, and motion, which was measured on a single element.
+
+
 

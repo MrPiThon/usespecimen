@@ -547,6 +547,49 @@ grid, nav and motion are read independently and still stand.
 `previewVars` therefore sets it unconditionally, `0s` when a file declares none.
 Without that, GOV.UK's preview rendered on Linear's 0.1s ease.
 
+## Background treatment (harvest v8, cluster v17)
+
+Colour tokens say what a surface *is*. `backgrounds` says what is painted over
+it, and it is a large part of why a page in the right palette can still look
+nothing like the site. Linear's canvas is not the flat `#08090a` its colour
+tokens describe: a 256px grain sheet tiles over it under a radial vignette,
+blended `overlay`.
+
+Recovered per layer: kind (linear/radial/conic, repeating variants, svg tile,
+data URI, raster), `background-size`, `repeat`, `position`, the full value, and
+every colour stop parsed through `parseColor` — Tailwind authors its dots in
+`oklab()`, which is exactly why that parser had to handle the modern spaces.
+
+Bundled one key per element **per layer index**: a single declaration can stack
+several images, and `background-size`/`repeat`/`position` are parallel lists
+that CSS cycles when shorter, so they are paired by index rather than assumed
+to be single values. Gluing a 10px tile size onto the wrong gradient is the same
+fabricated-combination bug that `typeStyles`, `states` and motion each had.
+
+| Constant / rule | Value | Why |
+|---|---|---|
+| `DECOR_MIN_AREA` | 10000px² | ~100×100. Below this a `background-image` is an icon, not a wash. |
+| `TILE_MAX_PX` | 320 | Observed tiles: 3px (getdesign.md scanlines), 10px (Tailwind dots and hatch), 120px (Verge hairlines), 256px (Linear grain). Washes are `auto` or full-element. |
+| tiled test | `!/no-repeat/` **then** `/repeat\|round\|space/`, and no `auto\|cover\|contain` | `no-repeat` contains the substring `repeat`, so a bare `/repeat/` test called Basecamp's signature SVG and a Verge `cover` image textures. Rule the negative out first. |
+| `decorated` | a pattern, wash or effect exists | Not "some element has a background-image". Basecamp paints a signature and a logo that way and is otherwise flat; counting those reported a flat page as textured. |
+| full pass | not the strided sample | Decorative layers live on a handful of elements and striding can miss the one painting the canvas. |
+
+A **full scan** rather than the sampled loop, and `body`/`html` are useless as a
+starting point — both report `background-image: none` on all thirteen sites,
+GOV.UK and Stripe alike. The decoration always sits on large overlay elements,
+so layers are ranked by painted area.
+
+**External rasters are recorded but never published.** Linear's grain is a PNG
+on their CDN; the file carries the tile size and blend mode and withholds the
+URL, with a warning saying to reproduce the effect. `theme.mjs` does exactly
+that — `NOISE_SVG` is our own `feTurbulence` tile, used only when a file reports
+`noise` with no usable value. The measured values in play are the tile size and
+the blend mode; the texture is ours.
+
+Three of thirteen systems are **undecorated** — GOV.UK, Nike, Basecamp. That is
+a finding, not a failure, and the files say so in words so an agent does not
+reach for a gradient.
+
 ## The spec (conform to it exactly)
 
 Optional YAML frontmatter carrying tokens, then markdown body. `name` is the

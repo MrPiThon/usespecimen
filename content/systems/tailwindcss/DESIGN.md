@@ -142,6 +142,12 @@ layout:
 motion:
   duration: '0.15s'
   easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+backgrounds:
+  pattern: 'dots'
+  patternSize: '10px 10px'
+  patternImage: 'radial-gradient(oklab(0.129999 -0.00404751 -0.027702 / 0.05) 1px, rgba(0, 0, 0, 0) 0px)'
+  wash: 'linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)'
+  backdropFilter: 'blur(8px)'
 components:
   button:
     background: '{colors.primary}'
@@ -160,13 +166,15 @@ components:
 provenance:
   brand: 'Tailwind CSS'
   source: 'https://tailwindcss.com/'
-  capturedAt: '2026-08-29T03:47:22.516Z'
+  capturedAt: '2026-08-29T04:36:29.895Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---
+
+
 
 
 
@@ -225,6 +233,14 @@ stand.
 Five declared shadows, most resolving to transparent. Depth comes from the
 surface ladder — white cards on an off-white page — rather than from shadow.
 
+**A dot grid, and it is the signature.** A `radial-gradient` with a 1px stop
+tiles at **10px by 10px**, in `#030712` at **5% alpha** — 72% of all painted
+background area on the page. There is also a 315-degree hatch on the same 10px
+tile, and a vertical fade to `#030712` at the foot.
+
+A flat canvas in these colours is not this design. The grid is what makes it
+read as graph paper rather than as a page.
+
 ## Shapes
 
 Radii of 4, 8, 12, 16 and 32px, with buttons at the smallest step.
@@ -251,4 +267,6 @@ animates — 100% agreement.
 
 **What this file does not constrain:** page structure and navigation, which were
 not measurable here. Colour, type, shape, grid and motion stand.
+
+
 

@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:47:22.516Z",
+  "capturedAt": "2026-08-29T04:36:29.895Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 6112,
     "sampleRatio": 0.794
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -727,6 +727,62 @@
       "share": 1
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 3,
+    "pattern": {
+      "kind": "dots",
+      "size": "10px 10px",
+      "angle": null,
+      "value": "radial-gradient(oklab(0.129999 -0.00404751 -0.027702 / 0.05) 1px, rgba(0, 0, 0, 0) 0px)",
+      "external": false,
+      "stops": [
+        {
+          "raw": "oklab(0.129999 -0.00404751 -0.027702 / 0.05)",
+          "hex": "#030712",
+          "alpha": 0.05
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        }
+      ],
+      "areaShare": 0.724
+    },
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)",
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        },
+        {
+          "raw": "lab(1.90334 0.278696 -5.48866)",
+          "hex": "#030712",
+          "alpha": 1
+        }
+      ],
+      "areaShare": 0.046
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(8px)",
+        "count": 1
+      },
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -843,11 +899,11 @@
       },
       "docHeight": 11649,
       "elementCount": 7698,
-      "sampled": 6113,
+      "sampled": 6111,
       "sampleRatio": 0.794
     },
-    "harvestVersion": 7,
-    "clusterVersion": 16,
+    "harvestVersion": 8,
+    "clusterVersion": 17,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -919,7 +975,7 @@
             "name": "surface-3",
             "hex": "#292c36",
             "deltaL": 0.165,
-            "areaShare": 0.0154
+            "areaShare": 0.0155
           }
         ],
         "text": [
@@ -1047,14 +1103,6 @@
           "count": 9
         },
         {
-          "hex": "#00a6f4",
-          "role": null,
-          "hue": "blue",
-          "lightness": 0.691,
-          "chroma": 0.16,
-          "count": 9
-        },
-        {
           "hex": "#eef2ff",
           "role": null,
           "hue": "neutral",
@@ -1069,6 +1117,14 @@
           "lightness": 0.969,
           "chroma": 0.015,
           "count": 9
+        },
+        {
+          "hex": "#00a6f4",
+          "role": null,
+          "hue": "blue",
+          "lightness": 0.691,
+          "chroma": 0.16,
+          "count": 7
         },
         {
           "hex": "#e0e7ff",
@@ -1127,19 +1183,19 @@
           "count": 6
         },
         {
-          "hex": "#fb64b6",
-          "role": null,
-          "hue": "pink",
-          "lightness": 0.718,
-          "chroma": 0.202,
-          "count": 6
-        },
-        {
           "hex": "#7c86ff",
           "role": null,
           "hue": "purple",
           "lightness": 0.67,
           "chroma": 0.176,
+          "count": 6
+        },
+        {
+          "hex": "#c27aff",
+          "role": null,
+          "hue": "purple",
+          "lightness": 0.71,
+          "chroma": 0.195,
           "count": 6
         }
       ],
@@ -1416,15 +1472,15 @@
     },
     "spacing": {
       "base": 8,
-      "gridConfidence": 0.768,
+      "gridConfidence": 0.769,
       "gridCandidates": [
         {
           "base": 8,
-          "share": 0.768
+          "share": 0.769
         },
         {
           "base": 6,
-          "share": 0.241
+          "share": 0.242
         },
         {
           "base": 5,
@@ -1555,6 +1611,62 @@
         "share": 1
       }
     },
+    "backgrounds": {
+      "available": true,
+      "decorated": true,
+      "layerCount": 3,
+      "pattern": {
+        "kind": "dots",
+        "size": "10px 10px",
+        "angle": null,
+        "value": "radial-gradient(oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 1px, rgba(0, 0, 0, 0) 0px)",
+        "external": false,
+        "stops": [
+          {
+            "raw": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+            "hex": "#ffffff",
+            "alpha": 0.1
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0
+          }
+        ],
+        "areaShare": 0.724
+      },
+      "wash": {
+        "kind": "linear-gradient",
+        "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)",
+        "stops": [
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0
+          },
+          {
+            "raw": "lab(1.90334 0.278696 -5.48866)",
+            "hex": "#030712",
+            "alpha": 1
+          }
+        ],
+        "areaShare": 0.046
+      },
+      "effects": {
+        "backdropFilter": {
+          "value": "blur(8px)",
+          "count": 1
+        },
+        "mixBlendMode": null,
+        "maskImage": null,
+        "filter": null
+      }
+    },
     "states": {
       "available": true,
       "sheets": {
@@ -1658,11 +1770,11 @@
     "warnings": [
       "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
       "13 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-      "Strided sample: 6113 of 7698 elements. Weights are relative only."
+      "Strided sample: 6111 of 7698 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://tailwindcss.com/",
     "title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
     "viewport": {
@@ -1673,7 +1785,7 @@
     "textColors": {
       "lab(1.90334 0.278696 -5.48866)": {
         "count": 322,
-        "area": 1870878.8763348237,
+        "area": 1870878.8698689118,
         "chars": 3239
       },
       "lab(47.7841 -0.393182 -10.0268)": {
@@ -1790,7 +1902,7 @@
     "bgColors": {
       "rgb(255, 255, 255)": {
         "count": 78,
-        "area": 19357501.58239746,
+        "area": 19356569.75830078,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.05)": {
@@ -1830,7 +1942,7 @@
       },
       "oklab(0 0 0 / 0.05)": {
         "count": 3,
-        "area": 256389.3876953125,
+        "area": 255396.97314453125,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.025)": {
@@ -1865,7 +1977,7 @@
       },
       "lab(63.3038 -18.433 -51.0407)": {
         "count": 8,
-        "area": 17124.768530666828,
+        "area": 17001.382504999638,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.1)": {
@@ -2844,7 +2956,7 @@
     "fontFamilies": {
       "inter, \"inter Fallback\", system-ui": {
         "count": 351,
-        "area": 4010627.65625,
+        "area": 4010627.649784088,
         "chars": 11903
       },
       "plexMono, \"plexMono Fallback\", monospace": {
@@ -2886,7 +2998,7 @@
       },
       "16px": {
         "count": 46,
-        "area": 1012383.75,
+        "area": 1012383.7435340881,
         "chars": 3381
       },
       "40px": {
@@ -2923,7 +3035,7 @@
     "fontWeights": {
       "400": {
         "count": 1385,
-        "area": 4238485.532584824,
+        "area": 4238485.526118912,
         "chars": 14834
       },
       "500": {
@@ -2955,7 +3067,7 @@
       },
       "24px": {
         "count": 1195,
-        "area": 2169232.296875,
+        "area": 2169232.290409088,
         "chars": 7423
       },
       "96px": {
@@ -3069,7 +3181,7 @@
       },
       "text|16px|400|24px|normal|inter, \"inter Fallback\", system-ui": {
         "count": 18,
-        "area": 33735.375,
+        "area": 33735.368534088135,
         "chars": 123
       },
       "text|12px|600|16px|1.2px|plexMono, \"plexMono Fallback\", monospace": {
@@ -3360,12 +3472,12 @@
     "radii": {
       "16px": {
         "count": 60,
-        "area": 17873689.72302246,
+        "area": 17872757.89892578,
         "chars": 12
       },
       "3.35544e+07px": {
         "count": 122,
-        "area": 171477.73728066683,
+        "area": 171354.35125499964,
         "chars": 36
       },
       "32px": {
@@ -3385,7 +3497,7 @@
       },
       "24px": {
         "count": 3,
-        "area": 256389.3876953125,
+        "area": 255396.97314453125,
         "chars": 0
       },
       "0px": {
@@ -3807,6 +3919,58 @@
       "hero": null,
       "nav": null
     },
+    "backgrounds": {
+      "layers": {
+        "repeating-linear-gradient|10px 10px|repeat|0% 0%|repeating-linear-gradient(315deg, oklab(0 0 0 / 0.05) 0px, oklab(0 0 0 / 0.05) 1px, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 3,
+          "area": 1114170.125
+        },
+        "radial-gradient|10px 10px|repeat|0% 0%|radial-gradient(oklab(0.129999 -0.00404751 -0.027702 / 0.05) 1px, rgba(0, 0, 0, 0) 0px)": {
+          "count": 12,
+          "area": 3505110
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)": {
+          "count": 4,
+          "area": 224256
+        }
+      },
+      "effects": {
+        "backdrop-filter|blur(12px)": {
+          "count": 1,
+          "area": 79332.97314453125
+        },
+        "backdrop-filter|blur(8px)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|brightness(1.5)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|grayscale(1)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|contrast(1.5)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|saturate(2)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|sepia(1)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|blur(16px)": {
+          "count": 3,
+          "area": 80086.5
+        }
+      },
+      "scanned": 2558,
+      "elementsWithImage": 19
+    },
     "viewports": [
       {
         "w": 1440,
@@ -3832,7 +3996,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://tailwindcss.com/",
     "title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
     "viewport": {
@@ -3843,7 +4007,7 @@
     "textColors": {
       "rgb(255, 255, 255)": {
         "count": 363,
-        "area": 2112137.6888348237,
+        "area": 2114825.6888348237,
         "chars": 3775
       },
       "lab(65.9269 -0.832707 -8.17473)": {
@@ -3940,12 +4104,12 @@
     "bgColors": {
       "lab(1.90334 0.278696 -5.48866)": {
         "count": 78,
-        "area": 59285912.91418457,
+        "area": 59273411.3125,
         "chars": 0
       },
       "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)": {
         "count": 42,
-        "area": 19766242.66748047,
+        "area": 19752927.9375,
         "chars": 93
       },
       "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)": {
@@ -4000,12 +4164,12 @@
       },
       "lab(70.687 -23.6078 -45.9483)": {
         "count": 9,
-        "area": 21376,
+        "area": 21376.00244140625,
         "chars": 0
       },
       "lab(63.3038 -18.433 -51.0407)": {
-        "count": 9,
-        "area": 19168.587456017733,
+        "count": 7,
+        "area": 14862.026723504066,
         "chars": 0
       },
       "oklab(0.129999 -0.00404751 -0.027702 / 0.1)": {
@@ -4585,7 +4749,7 @@
       },
       "lab(64.5597 64.3615 -12.7988)": {
         "count": 6,
-        "area": 10304.00048828125,
+        "area": 10304,
         "chars": 0
       },
       "lab(64.4125 63.0291 19.2068)": {
@@ -4979,7 +5143,7 @@
     "fontFamilies": {
       "inter, \"inter Fallback\", system-ui": {
         "count": 351,
-        "area": 4010627.65625,
+        "area": 4013315.65625,
         "chars": 11903
       },
       "plexMono, \"plexMono Fallback\", monospace": {
@@ -5021,7 +5185,7 @@
       },
       "16px": {
         "count": 46,
-        "area": 1012383.75,
+        "area": 1015071.75,
         "chars": 3381
       },
       "40px": {
@@ -5058,7 +5222,7 @@
     "fontWeights": {
       "400": {
         "count": 1385,
-        "area": 4226621.985709824,
+        "area": 4229309.985709824,
         "chars": 14762
       },
       "500": {
@@ -5090,7 +5254,7 @@
       },
       "24px": {
         "count": 1195,
-        "area": 2157368.75,
+        "area": 2160056.75,
         "chars": 7351
       },
       "96px": {
@@ -5204,7 +5368,7 @@
       },
       "text|16px|400|24px|normal|inter, \"inter Fallback\", system-ui": {
         "count": 18,
-        "area": 33735.375,
+        "area": 36423.375,
         "chars": 123
       },
       "text|12px|600|16px|1.2px|plexMono, \"plexMono Fallback\", monospace": {
@@ -5495,12 +5659,12 @@
     "radii": {
       "16px": {
         "count": 60,
-        "area": 17879651.28918457,
+        "area": 17867149.6875,
         "chars": 12
       },
       "3.35544e+07px": {
-        "count": 123,
-        "area": 173521.55620601773,
+        "count": 121,
+        "area": 169214.99547350407,
         "chars": 36
       },
       "32px": {
@@ -5515,12 +5679,12 @@
       },
       "8px": {
         "count": 104,
-        "area": 13460600.375488281,
+        "area": 13460600.377441406,
         "chars": 54
       },
       "24px": {
         "count": 3,
-        "area": 262738.72998046875,
+        "area": 249424,
         "chars": 0
       },
       "0px": {
@@ -5562,7 +5726,7 @@
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px": {
         "count": 3,
-        "area": 109440,
+        "area": 109824,
         "chars": 0
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px": {
@@ -5587,7 +5751,7 @@
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.745991 -0.0970495 -0.127188 / 0.5) 0px 10px 15px -3px, oklab(0.745991 -0.0970495 -0.127188 / 0.5) 0px 4px 6px -4px": {
         "count": 3,
-        "area": 4224,
+        "area": 4224.00244140625,
         "chars": 0
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.713996 0.117875 -0.165232 / 0.5) 0px 10px 15px -3px, oklab(0.713996 0.117875 -0.165232 / 0.5) 0px 4px 6px -4px": {
@@ -5597,7 +5761,7 @@
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.718004 0.198758 -0.035884 / 0.5) 0px 10px 15px -3px, oklab(0.718004 0.198758 -0.035884 / 0.5) 0px 4px 6px -4px": {
         "count": 3,
-        "area": 4224.00048828125,
+        "area": 4224,
         "chars": 0
       },
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.672993 0.0219624 -0.180645 / 0.5) 0px 10px 15px -3px, oklab(0.672993 0.0219624 -0.180645 / 0.5) 0px 4px 6px -4px": {
@@ -5683,7 +5847,7 @@
         "chars": 0
       },
       "28": {
-        "count": 6,
+        "count": 4,
         "area": 0,
         "chars": 0
       },
@@ -5887,7 +6051,7 @@
     },
     "pageBg": "lab(1.90334 0.278696 -5.48866)",
     "elementCount": 7698,
-    "sampled": 6113,
+    "sampled": 6111,
     "structure": {
       "sectionCount": 0,
       "sectionDepth": 4,
@@ -5931,6 +6095,58 @@
       "sectionComposition": null,
       "hero": null,
       "nav": null
+    },
+    "backgrounds": {
+      "layers": {
+        "repeating-linear-gradient|10px 10px|repeat|0% 0%|repeating-linear-gradient(315deg, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 1px, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 3,
+          "area": 1114170.125
+        },
+        "radial-gradient|10px 10px|repeat|0% 0%|radial-gradient(oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 1px, rgba(0, 0, 0, 0) 0px)": {
+          "count": 12,
+          "area": 3505110
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)": {
+          "count": 4,
+          "area": 224256
+        }
+      },
+      "effects": {
+        "backdrop-filter|blur(12px)": {
+          "count": 1,
+          "area": 73360
+        },
+        "backdrop-filter|blur(8px)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|brightness(1.5)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|grayscale(1)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|contrast(1.5)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|saturate(2)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|sepia(1)": {
+          "count": 1,
+          "area": 82944
+        },
+        "backdrop-filter|blur(16px)": {
+          "count": 3,
+          "area": 80086.5
+        }
+      },
+      "scanned": 2558,
+      "elementsWithImage": 19
     },
     "viewports": [
       {

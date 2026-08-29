@@ -70,6 +70,7 @@ const systems = defineCollection({
     elevation: z.record(z.string(), tokenTree).optional(),
     layout: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
     motion: z.object({ duration: z.string(), easing: z.string() }).optional(),
+    backgrounds: z.record(z.string(), z.string()).optional(),
     provenance: provenance(image),
   // Unknown top-level properties are preserved with a warning, per the spec, so
   // the schema must not strip them.

@@ -119,6 +119,10 @@ layout:
 motion:
   duration: '0.2s'
   easing: 'cubic-bezier(0.42, 0, 1, 1)'
+backgrounds:
+  wash: 'linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.55) 100%)'
+  mixBlendMode: 'screen'
+  maskImage: 'linear-gradient'
 components:
   button:
     background: '{colors.primary}'
@@ -151,12 +155,14 @@ components:
 provenance:
   brand: 'Notion'
   source: 'https://www.notion.com/'
-  capturedAt: '2026-08-29T03:46:44.441Z'
+  capturedAt: '2026-08-29T04:35:15.365Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -221,6 +227,12 @@ Barely there, deliberately. The largest shadow begins
 sub-pixel offset. Depth is a hint that something is liftable, not a claim that
 it is already floating.
 
+**A single full-coverage fade** from transparent to `#000000` at **55%**,
+composited with `mix-blend-mode: screen` and cut off with a linear `mask-image`.
+The layer is also run through `brightness(1.4) saturate(0.25)` — brightened and
+substantially desaturated, which is how the page keeps illustration colour from
+competing with the type.
+
 ## Shapes
 
 Radii of 4, 6, 8 and 12px, with buttons at 8px. Nothing is pilled.
@@ -248,4 +260,6 @@ The curve accelerates into the end rather than easing out of it.
 
 **What this file does not constrain:** what the sections contain or how many
 there are. Take the centred display voice and the measure; build your own page.
+
+
 

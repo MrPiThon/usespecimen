@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:46:44.441Z",
+  "capturedAt": "2026-08-29T04:35:15.365Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1405,
     "sampleRatio": 0.432
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -689,6 +689,44 @@
       "share": 0.816
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 1,
+    "pattern": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.55) 100%)",
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.55)",
+          "hex": "#000000",
+          "alpha": 0.55
+        }
+      ],
+      "areaShare": 1
+    },
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": {
+        "value": "screen",
+        "count": 3
+      },
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 1
+      },
+      "filter": {
+        "value": "brightness(1.4) saturate(0.25)",
+        "count": 3
+      }
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -828,7 +866,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.notion.com/",
     "title": "The AI workspace that works for you. | Notion",
     "viewport": {
@@ -869,7 +907,7 @@
       },
       "rgb(97, 93, 89)": {
         "count": 45,
-        "area": 274326.74670410156,
+        "area": 274326.7510986328,
         "chars": 1377
       },
       "rgb(9, 127, 232)": {
@@ -926,7 +964,7 @@
       },
       "rgb(255, 222, 196)": {
         "count": 3,
-        "area": 42110.746337890625,
+        "area": 42149.412353515625,
         "chars": 0
       },
       "rgb(230, 243, 254)": {
@@ -1030,7 +1068,7 @@
     "fontFamilies": {
       "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
         "count": 266,
-        "area": 1862765.3521728516,
+        "area": 1862765.3565673828,
         "chars": 4773
       },
       "\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif": {
@@ -1042,7 +1080,7 @@
     "fontSizes": {
       "14px": {
         "count": 175,
-        "area": 688823.6060791016,
+        "area": 688823.6104736328,
         "chars": 3140
       },
       "96px": {
@@ -1119,7 +1157,7 @@
       },
       "500": {
         "count": 159,
-        "area": 600140.3990478516,
+        "area": 600140.4034423828,
         "chars": 2545
       },
       "600": {
@@ -1136,7 +1174,7 @@
     "lineHeights": {
       "20px": {
         "count": 175,
-        "area": 688823.6060791016,
+        "area": 688823.6104736328,
         "chars": 3140
       },
       "100px": {
@@ -1255,7 +1293,7 @@
     "typeStyles": {
       "text|14px|500|20px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
         "count": 132,
-        "area": 404295.49670410156,
+        "area": 404295.5010986328,
         "chars": 2254
       },
       "h1|96px|600|100px|-4.6px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
@@ -1636,7 +1674,7 @@
     "radii": {
       "4px": {
         "count": 54,
-        "area": 48984.37463378906,
+        "area": 48984.375,
         "chars": 0
       },
       "8px": {
@@ -1646,7 +1684,7 @@
       },
       "9999.01px": {
         "count": 27,
-        "area": 96905.65028227307,
+        "area": 96944.31629789807,
         "chars": 0
       },
       "50%": {
@@ -2101,6 +2139,38 @@
         "links": 37,
         "overflowed": false
       }
+    },
+    "backgrounds": {
+      "layers": {
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.55) 100%)": {
+          "count": 3,
+          "area": 580939.7626953125
+        }
+      },
+      "effects": {
+        "filter|drop-shadow(rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px) drop-shadow(rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px) drop-shadow(rgba": {
+          "count": 3,
+          "area": 239841.5185546875
+        },
+        "filter|brightness(1.4) saturate(0.25)": {
+          "count": 3,
+          "area": 580939.7626953125
+        },
+        "mix-blend-mode|screen": {
+          "count": 3,
+          "area": 580939.7626953125
+        },
+        "mix-blend-mode|multiply": {
+          "count": 3,
+          "area": 580939.7626953125
+        },
+        "mask-image|linear-gradient": {
+          "count": 1,
+          "area": 34560
+        }
+      },
+      "scanned": 1090,
+      "elementsWithImage": 3
     },
     "viewports": [
       {

@@ -14,6 +14,7 @@ colors:
   primary: '#5e6ad2'
   border: '#1c1d1e'
   surface-1: '#0f1011'
+  surface-2: '#161718'
   text-1: '#f7f8f8'
   text-2: '#d0d6e0'
   text-3: '#8a8f98'
@@ -157,6 +158,13 @@ layout:
 motion:
   duration: '0.1s'
   easing: 'ease'
+backgrounds:
+  pattern: 'noise'
+  patternSize: '256px 256px'
+  wash: 'radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 50%)'
+  backdropFilter: 'blur(20px)'
+  mixBlendMode: 'overlay'
+  maskImage: 'radial-gradient'
 components:
   button:
     background: '{colors.primary}'
@@ -171,12 +179,14 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-29T03:44:19.499Z'
+  capturedAt: '2026-08-29T04:34:43.398Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -261,6 +271,17 @@ Five distinct shadows, including inset treatments such as
 `rgba(0, 0, 0, 0.2) 0px 0px 12px inset`. Depth is built with inner glow and
 subtle luminance shifts rather than drop shadows, which read poorly on near-black.
 
+**The canvas is not the flat `#08090a` the colour tokens describe.** A grain
+sheet tiles over it at **256px**, under a radial vignette running
+`rgba(255, 255, 255, 0.04)` to transparent, composited with
+**`mix-blend-mode: overlay`** and faded out with a radial `mask-image`. Fifteen
+background layers in total, and a `backdrop-filter: blur(20px)` on the chrome.
+
+That texture is most of why the real site does not read as a solid fill. The
+grain itself is an external raster on the source, so this file records the tile
+size and the blend mode and deliberately withholds the URL — **reproduce the
+noise, do not link theirs.**
+
 ## Shapes
 
 Radii of 4, 6, 8, 9 and 12px across surfaces, with buttons fully pilled at
@@ -291,4 +312,6 @@ everything that animates. Nothing here lingers.
 **What this file does not constrain:** how many sections a page has, what they
 contain, their order, or the copy. It describes a language — dark, dense, fast,
 contained, card-built. Write your own pages in it.
+
+
 

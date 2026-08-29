@@ -153,6 +153,22 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
                 {d.layout.heroHeadingSize ? `, ${d.layout.heroHeadingSize} ${d.layout.heroAlign ?? ''}`.trimEnd() : ''}
               </dd></>
             )}
+            {d.backgrounds?.pattern && (
+              <><dt>Pattern</dt><dd>
+                {d.backgrounds.pattern}{d.backgrounds.patternSize ? `, ${d.backgrounds.patternSize}` : ''}
+              </dd></>
+            )}
+            <dt>Canvas</dt>
+            <dd>
+              {/* Flat is a measurement here, not a missing value: three systems
+                  in the corpus carry no decorative layer at all. */}
+              {d.backgrounds
+                ? [d.backgrounds.wash ? 'gradient wash' : null,
+                   d.backgrounds.mixBlendMode ? `blend ${d.backgrounds.mixBlendMode}` : null,
+                   d.backgrounds.backdropFilter ? 'backdrop blur' : null,
+                  ].filter(Boolean).join(', ') || 'textured'
+                : 'flat — no decorative layer'}
+            </dd>
             <dt>Motion</dt>
             <dd>
               {/* An absent motion group is a measurement, not a gap: no control on

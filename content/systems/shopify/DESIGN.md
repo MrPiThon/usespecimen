@@ -145,6 +145,9 @@ layout:
 motion:
   duration: '0.2s'
   easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+backgrounds:
+  wash: 'radial-gradient(rgba(18, 96, 255, 0.35), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0))'
+  maskImage: 'linear-gradient'
 components:
   button:
     background: '{colors.primary}'
@@ -175,12 +178,14 @@ components:
 provenance:
   brand: 'Shopify'
   source: 'https://www.shopify.com/'
-  capturedAt: '2026-08-29T03:43:43.893Z'
+  capturedAt: '2026-08-29T04:35:32.434Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -251,6 +256,14 @@ Effectively flat. The declared shadows resolve to fully transparent — a reset
 this page never overrides. Separation comes from the surface ladder, not from
 shadow.
 
+**One tinted wash**, radial, from `#1260ff` at **35% alpha** out to
+transparent, over 27% of painted background area, faded with a linear
+`mask-image`.
+
+The blue never appears as a solid colour token anywhere in this file — it exists
+only as a low-alpha wash behind the content, which is a very different thing
+from a blue surface.
+
 ## Shapes
 
 Radii of 4, 5, 12, 20 and 340px, with buttons fully pilled. The 340px step is for
@@ -277,4 +290,6 @@ radius — note the asymmetry, which leaves room for a trailing icon. Links take
 
 **What this file does not constrain:** the merchandising, the section order, or
 how many sections a page runs. Those are yours.
+
+
 

@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:43:28.252Z",
+  "capturedAt": "2026-08-29T04:35:00.053Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 12738,
-    "elementCount": 12534,
-    "sampled": 3368,
-    "sampleRatio": 0.269
+    "elementCount": 12740,
+    "sampled": 3402,
+    "sampleRatio": 0.267
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,17 +32,17 @@
       },
       "foreground": {
         "hex": "#111111",
-        "weightShare": 0.2929,
+        "weightShare": 0.2898,
         "variants": []
       },
       "card": {
         "hex": "#f5f5f5",
-        "weightShare": 0.1336,
+        "weightShare": 0.1337,
         "variants": []
       },
       "mutedForeground": {
         "hex": "#707072",
-        "weightShare": 0.4857,
+        "weightShare": 0.4813,
         "variants": []
       },
       "primary": {
@@ -66,7 +66,7 @@
           "name": "surface-1",
           "hex": "#f5f5f5",
           "deltaL": 0.03,
-          "areaShare": 0.1336
+          "areaShare": 0.1337
         },
         {
           "name": "surface-2",
@@ -80,13 +80,13 @@
           "name": "text-1",
           "hex": "#111111",
           "contrast": 18.88,
-          "charShare": 0.2929
+          "charShare": 0.2898
         },
         {
           "name": "text-2",
           "hex": "#707072",
           "contrast": 4.94,
-          "charShare": 0.4857
+          "charShare": 0.4813
         }
       ]
     },
@@ -97,7 +97,7 @@
         "hue": "neutral",
         "lightness": 1,
         "chroma": 0,
-        "count": 82
+        "count": 85
       },
       {
         "hex": "#f5f5f5",
@@ -188,49 +188,49 @@
         "name": "xs",
         "px": 12,
         "rem": 0.75,
-        "weightShare": 0.2596,
+        "weightShare": 0.2572,
         "variants": []
       },
       {
         "name": "sm",
         "px": 14,
         "rem": 0.875,
-        "weightShare": 0.2092,
+        "weightShare": 0.2073,
         "variants": []
       },
       {
         "name": "base",
         "px": 16,
         "rem": 1,
-        "weightShare": 0.3538,
+        "weightShare": 0.3596,
         "variants": []
       },
       {
         "name": "lg",
         "px": 20,
         "rem": 1.25,
-        "weightShare": 0.0781,
+        "weightShare": 0.0774,
         "variants": []
       },
       {
         "name": "xl",
         "px": 24,
         "rem": 1.5,
-        "weightShare": 0.0577,
+        "weightShare": 0.0572,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 40,
         "rem": 2.5,
-        "weightShare": 0.0277,
+        "weightShare": 0.0275,
         "variants": []
       },
       {
         "name": "3xl",
         "px": 76,
         "rem": 4.75,
-        "weightShare": 0.0139,
+        "weightShare": 0.0137,
         "variants": []
       }
     ],
@@ -353,23 +353,23 @@
   },
   "spacing": {
     "base": null,
-    "gridConfidence": 0.631,
+    "gridConfidence": 0.621,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.337
+        "share": 0.341
       },
       {
         "base": 6,
-        "share": 0.631
+        "share": 0.621
       },
       {
         "base": 5,
-        "share": 0.07
+        "share": 0.072
       },
       {
         "base": 4,
-        "share": 0.554
+        "share": 0.557
       }
     ],
     "scale": [
@@ -394,18 +394,23 @@
     "scale": [
       {
         "name": "sm",
+        "px": 2,
+        "count": 6
+      },
+      {
+        "name": "md",
         "px": 8,
         "count": 3
       },
       {
-        "name": "md",
+        "name": "lg",
         "px": 24,
         "count": 12
       },
       {
-        "name": "lg",
+        "name": "xl",
         "px": 30,
-        "count": 56
+        "count": 55
       }
     ],
     "button": "30px",
@@ -490,6 +495,19 @@
       "easing": "ease",
       "occurrences": 39,
       "share": 0.907
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 0,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
     }
   },
   "states": {
@@ -611,14 +629,15 @@
     "minRatio": 4.94
   },
   "warnings": [
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
     "Accent #1151ff taken from a focus ring (button:focus-visible, link:focus-visible), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
-    "No spacing grid explains 75% of values (best 0.631); site may not be on a grid.",
-    "Strided sample: 3368 of 12534 elements. Weights are relative only."
+    "No spacing grid explains 75% of values (best 0.621); site may not be on a grid.",
+    "Strided sample: 3402 of 12740 elements. Weights are relative only."
   ],
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.nike.com/",
     "title": "Nike. Just Do It. Nike.com",
     "viewport": {
@@ -628,9 +647,9 @@
     "docHeight": 12738,
     "textColors": {
       "rgb(17, 17, 17)": {
-        "count": 212,
-        "area": 1310310.921875,
-        "chars": 3125
+        "count": 211,
+        "area": 1306589.984375,
+        "chars": 3120
       },
       "rgb(112, 112, 114)": {
         "count": 441,
@@ -638,16 +657,16 @@
         "chars": 5181
       },
       "rgb(255, 255, 255)": {
-        "count": 82,
-        "area": 1299824.6518554688,
-        "chars": 2362
+        "count": 98,
+        "area": 1304231.2768554688,
+        "chars": 2464
       }
     },
     "bgColors": {
       "rgb(255, 255, 255)": {
-        "count": 80,
-        "area": 35788670.15625,
-        "chars": 347
+        "count": 79,
+        "area": 35776003.59375,
+        "chars": 342
       },
       "rgb(245, 245, 245)": {
         "count": 20,
@@ -665,13 +684,13 @@
         "chars": 93
       },
       "rgba(255, 255, 255, 0.25)": {
-        "count": 1,
-        "area": 256,
+        "count": 3,
+        "area": 768,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.2)": {
-        "count": 1,
-        "area": 520,
+        "count": 3,
+        "area": 1880,
         "chars": 0
       }
     },
@@ -694,9 +713,9 @@
     },
     "fontFamilies": {
       "\"Helvetica Now Text Medium\", Helvetica, Arial, sans-serif": {
-        "count": 564,
-        "area": 2365726.21875,
-        "chars": 6391
+        "count": 563,
+        "area": 2362005.28125,
+        "chars": 6386
       },
       "\"Nike Futura ND\", \"Helvetica Now Text Medium\", Helvetica, Arial, sans-serif": {
         "count": 27,
@@ -714,14 +733,14 @@
         "chars": 1449
       },
       "Arial": {
-        "count": 4,
-        "area": 4,
-        "chars": 29
+        "count": 10,
+        "area": 10,
+        "chars": 71
       },
       "\"Helvetica Neue\", Helvetica, Arial, sans-serif": {
-        "count": 5,
-        "area": 2210.40625,
-        "chars": 30
+        "count": 15,
+        "area": 6611.03125,
+        "chars": 90
       }
     },
     "fontSizes": {
@@ -736,9 +755,9 @@
         "chars": 2769
       },
       "16px": {
-        "count": 216,
-        "area": 877934.65625,
-        "chars": 3774
+        "count": 231,
+        "area": 878620.34375,
+        "chars": 3871
       },
       "76px": {
         "count": 9,
@@ -763,14 +782,14 @@
     },
     "fontWeights": {
       "400": {
-        "count": 34,
-        "area": 493026.40625,
-        "chars": 1943
+        "count": 50,
+        "area": 497433.03125,
+        "chars": 2045
       },
       "500": {
-        "count": 653,
-        "area": 4085196.9331054688,
-        "chars": 8284
+        "count": 652,
+        "area": 4081475.9956054688,
+        "chars": 8279
       },
       "700": {
         "count": 48,
@@ -790,9 +809,9 @@
         "chars": 2769
       },
       "24px": {
-        "count": 221,
-        "area": 1120553.625,
-        "chars": 4413
+        "count": 220,
+        "area": 1116832.6875,
+        "chars": 4408
       },
       "28px": {
         "count": 19,
@@ -820,14 +839,14 @@
         "chars": 296
       },
       "16px": {
-        "count": 7,
-        "area": 1684.015625,
-        "chars": 41
+        "count": 19,
+        "area": 5050.046875,
+        "chars": 107
       },
       "23.2px": {
-        "count": 2,
-        "area": 530.390625,
-        "chars": 18
+        "count": 6,
+        "area": 1570.984375,
+        "chars": 54
       }
     },
     "letterSpacings": {},
@@ -873,9 +892,9 @@
         "chars": 277
       },
       "button|16px|500|24px|normal|\"Helvetica Now Text Medium\", Helvetica, Arial, sans-serif": {
-        "count": 8,
-        "area": 29767.5,
-        "chars": 40
+        "count": 7,
+        "area": 26046.5625,
+        "chars": 35
       },
       "h3|76px|500|68.4px|normal|\"Nike Futura ND\", \"Helvetica Now Text Medium\", Helvetica, Arial, sans-serif": {
         "count": 3,
@@ -933,19 +952,19 @@
         "chars": 183
       },
       "text|16px|400|16px|normal|Arial": {
-        "count": 4,
-        "area": 4,
-        "chars": 29
+        "count": 10,
+        "area": 10,
+        "chars": 71
       },
       "text|16px|400|16px|normal|\"Helvetica Neue\", Helvetica, Arial, sans-serif": {
-        "count": 3,
-        "area": 1680.015625,
-        "chars": 12
+        "count": 9,
+        "area": 5040.046875,
+        "chars": 36
       },
       "text|16px|400|23.2px|normal|\"Helvetica Neue\", Helvetica, Arial, sans-serif": {
-        "count": 2,
-        "area": 530.390625,
-        "chars": 18
+        "count": 6,
+        "area": 1570.984375,
+        "chars": 54
       }
     },
     "states": {
@@ -1131,9 +1150,9 @@
         "chars": 0
       },
       "30px": {
-        "count": 56,
-        "area": 178077.375,
-        "chars": 317
+        "count": 55,
+        "area": 174356.4375,
+        "chars": 312
       },
       "8px": {
         "count": 3,
@@ -1141,8 +1160,8 @@
         "chars": 0
       },
       "2px": {
-        "count": 2,
-        "area": 776,
+        "count": 6,
+        "area": 2648,
         "chars": 0
       }
     },
@@ -1170,7 +1189,7 @@
         "chars": 0
       },
       "4": {
-        "count": 39,
+        "count": 38,
         "area": 0,
         "chars": 0
       },
@@ -1190,12 +1209,12 @@
         "chars": 0
       },
       "8": {
-        "count": 41,
+        "count": 49,
         "area": 0,
         "chars": 0
       },
       "10": {
-        "count": 21,
+        "count": 23,
         "area": 0,
         "chars": 0
       },
@@ -1205,12 +1224,12 @@
         "chars": 0
       },
       "12": {
-        "count": 83,
+        "count": 85,
         "area": 0,
         "chars": 0
       },
       "16": {
-        "count": 86,
+        "count": 89,
         "area": 0,
         "chars": 0
       },
@@ -1230,7 +1249,7 @@
         "chars": 0
       },
       "24": {
-        "count": 74,
+        "count": 70,
         "area": 0,
         "chars": 0
       },
@@ -1282,9 +1301,9 @@
     },
     "interactiveBg": {
       "rgb(255, 255, 255)": {
-        "count": 43,
-        "area": 147576.28125,
-        "chars": 347
+        "count": 42,
+        "area": 143855.34375,
+        "chars": 342
       },
       "rgb(245, 245, 245)": {
         "count": 1,
@@ -1299,14 +1318,14 @@
     },
     "interactiveRadius": {
       "0px": {
-        "count": 675,
-        "area": 35691125.8190918,
+        "count": 681,
+        "area": 35694581.8190918,
         "chars": 372
       },
       "30px": {
-        "count": 56,
-        "area": 178077.375,
-        "chars": 317
+        "count": 55,
+        "area": 174356.4375,
+        "chars": 312
       },
       "24px": {
         "count": 4,
@@ -1316,9 +1335,9 @@
     },
     "interactiveFg": {
       "rgb(17, 17, 17)": {
-        "count": 600,
-        "area": 35139301.9753418,
-        "chars": 557
+        "count": 599,
+        "area": 35135581.0378418,
+        "chars": 552
       },
       "rgb(158, 158, 160)": {
         "count": 2,
@@ -1326,8 +1345,8 @@
         "chars": 0
       },
       "rgb(255, 255, 255)": {
-        "count": 13,
-        "area": 41536.125,
+        "count": 19,
+        "area": 44992.125,
         "chars": 93
       },
       "rgb(112, 112, 114)": {
@@ -1373,8 +1392,8 @@
       }
     },
     "pageBg": "rgb(255, 255, 255)",
-    "elementCount": 12534,
-    "sampled": 3368,
+    "elementCount": 12740,
+    "sampled": 3402,
     "structure": {
       "sectionCount": 19,
       "sectionDepth": 4,
@@ -1449,21 +1468,27 @@
         "overflowed": false
       }
     },
+    "backgrounds": {
+      "layers": {},
+      "effects": {},
+      "scanned": 4136,
+      "elementsWithImage": 0
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 4132
+        "elements": 4136
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 4249
+        "elements": 4253
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 4153
+        "elements": 4351
       }
     ],
     "mergedFrom": 3,

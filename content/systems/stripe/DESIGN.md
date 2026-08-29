@@ -17,6 +17,7 @@ colors:
   border: '#e5edf5'
   surface-1: '#f8fafd'
   surface-2: '#e5edf5'
+  surface-3: '#d4dee9'
   text-1: '#061b31'
   text-2: '#50617a'
   text-3: '#64748d'
@@ -146,6 +147,10 @@ layout:
 motion:
   duration: '0.3s'
   easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
+backgrounds:
+  wash: 'radial-gradient(circle, rgb(127, 125, 252), rgb(244, 75, 204) 33%, rgb(229, 237, 245) 66%)'
+  backdropFilter: 'blur(12px)'
+  mixBlendMode: 'multiply'
 components:
   button:
     background: '{colors.primary}'
@@ -162,12 +167,14 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-29T03:44:08.593Z'
+  capturedAt: '2026-08-29T04:36:18.818Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -238,6 +245,16 @@ Shadows are wide, soft and tinted blue rather than neutral:
 `rgba(50, 50, 93, 0.12) 0px 16px 32px`. Depth signals hierarchy here, not
 physical material — nothing looks embossed.
 
+**The hero gradient is the brand.** A `radial-gradient` running
+`#7f7dfc` → `#f44bcc` → `#e5edf5` covers **45% of painted background area** —
+indigo into magenta into the pale surface, composited with
+`mix-blend-mode: multiply` and softened by a `blur(10px)`. The chrome sits on
+`backdrop-filter: blur(12px)`.
+
+The colour tokens give you a white page with an indigo accent. They do not tell
+you the top of the page is a saturated indigo-to-magenta sweep, and that is what
+people picture when they picture Stripe.
+
 ## Shapes
 
 A 4px radius by default, 6px on larger panels, 8px at the top end. Pill shapes
@@ -269,4 +286,6 @@ hard at the end, which is what gives the page its settled feel.
 
 **What this file does not constrain:** section order, page composition, imagery,
 or copy. It gives you an ink, a grid, a measure and a tempo — not a page.
+
+
 

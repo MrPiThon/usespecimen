@@ -37,6 +37,16 @@ export const THEME_SLUG = 'linear';
  */
 export const SELF_HOSTED_FONT = 'Inter Variable';
 
+/**
+ * Our own fractal-noise tile, used when a file reports a `noise` pattern
+ * without a usable value because the source was an external raster.
+ *
+ * Inlined as a data URI so the page makes no extra request, and kept small: at
+ * the tile size the file declares it repeats, so a 120px sheet is enough. `#`
+ * and `%` must be percent-encoded or the URL terminates early.
+ */
+const NOISE_SVG = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E\")";
+
 /** First family in a CSS font stack, unquoted. */
 export function primaryFamily(stack) {
   if (!stack) return null;
@@ -133,6 +143,25 @@ export function themeVars(data) {
   // branch on a custom property's value.
   const fixed = layout.navPosition === 'fixed' || layout.navPosition === 'absolute';
   if (layout.navHeight) out.push(['--nav-offset', fixed ? layout.navHeight : '0px']);
+
+  // The decorative layer. Linear's canvas is not the flat #08090a the colour
+  // tokens describe — it carries a tiled grain sheet under a radial vignette,
+  // and that texture is a large part of why the real site does not look like a
+  // solid fill.
+  const bg = data?.backgrounds ?? {};
+  if (bg.wash) out.push(['--bg-wash', bg.wash]);
+  if (bg.mixBlendMode) out.push(['--bg-blend', bg.mixBlendMode]);
+  if (bg.patternSize) out.push(['--bg-pattern-size', bg.patternSize]);
+  // A pattern the file publishes as a value is used verbatim. `noise` is the
+  // one kind that arrives without one: it was an external raster on the source
+  // site, and the file deliberately withholds the URL rather than inviting a
+  // hotlink to somebody else's asset.
+  //
+  // So this reproduces the effect instead of borrowing it, which is exactly
+  // what the file's own warning tells a consumer to do. The turbulence below is
+  // ours; the only measured values in play are the tile size and the blend mode.
+  if (bg.patternImage) out.push(['--bg-pattern', bg.patternImage]);
+  else if (bg.pattern === 'noise') out.push(['--bg-pattern', NOISE_SVG]);
   // How state changes arrive. Without this the site would pick its own timing
   // while claiming to wear the file, which is the gap this whole exercise
   // exists to close. A system that declares no motion sets nothing, and the

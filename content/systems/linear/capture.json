@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:44:19.499Z",
+  "capturedAt": "2026-08-29T04:34:43.398Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 9960,
-    "elementCount": 15268,
-    "sampled": 6768,
-    "sampleRatio": 0.443
+    "elementCount": 15350,
+    "sampled": 6850,
+    "sampleRatio": 0.446
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,12 +32,12 @@
       },
       "foreground": {
         "hex": "#d0d6e0",
-        "weightShare": 0.3585,
+        "weightShare": 0.3592,
         "variants": []
       },
       "card": {
         "hex": "#0f1011",
-        "weightShare": 0.1288,
+        "weightShare": 0.1285,
         "variants": [
           "#0d0e0f",
           "#101112",
@@ -46,7 +46,7 @@
       },
       "mutedForeground": {
         "hex": "#8a8f98",
-        "weightShare": 0.3577,
+        "weightShare": 0.3558,
         "variants": []
       },
       "primary": {
@@ -60,7 +60,7 @@
       "primaryForeground": null,
       "border": {
         "hex": "#1c1d1e",
-        "weightShare": 0.6468,
+        "weightShare": 0.6402,
         "variants": []
       }
     },
@@ -70,7 +70,13 @@
           "name": "surface-1",
           "hex": "#0f1011",
           "deltaL": 0.033,
-          "areaShare": 0.1288
+          "areaShare": 0.1285
+        },
+        {
+          "name": "surface-2",
+          "hex": "#161718",
+          "deltaL": 0.065,
+          "areaShare": 0.0036
         }
       ],
       "text": [
@@ -78,25 +84,25 @@
           "name": "text-1",
           "hex": "#f7f8f8",
           "contrast": 18.73,
-          "charShare": 0.0894
+          "charShare": 0.0913
         },
         {
           "name": "text-2",
           "hex": "#d0d6e0",
           "contrast": 13.64,
-          "charShare": 0.3585
+          "charShare": 0.3592
         },
         {
           "name": "text-3",
           "hex": "#8a8f98",
           "contrast": 6.13,
-          "charShare": 0.3577
+          "charShare": 0.3558
         },
         {
           "name": "text-4",
           "hex": "#62666d",
           "contrast": 3.45,
-          "charShare": 0.0985
+          "charShare": 0.0986
         }
       ]
     },
@@ -115,7 +121,7 @@
         "hue": "neutral",
         "lightness": 0.172,
         "chroma": 0.003,
-        "count": 107
+        "count": 108
       },
       {
         "hex": "#e4f222",
@@ -124,6 +130,14 @@
         "lightness": 0.92,
         "chroma": 0.201,
         "count": 3
+      },
+      {
+        "hex": "#161718",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.204,
+        "chroma": 0.003,
+        "count": 19
       },
       {
         "hex": "#1c85e8",
@@ -148,14 +162,6 @@
         "lightness": 0.195,
         "chroma": 0.026,
         "count": 7
-      },
-      {
-        "hex": "#161718",
-        "role": null,
-        "hue": "neutral",
-        "lightness": 0.204,
-        "chroma": 0.003,
-        "count": 16
       },
       {
         "hex": "#e5e5e6",
@@ -195,7 +201,7 @@
         "hue": "neutral",
         "lightness": 0.874,
         "chroma": 0.015,
-        "count": 265
+        "count": 269
       },
       {
         "hex": "#8a8f98",
@@ -203,7 +209,7 @@
         "hue": "neutral",
         "lightness": 0.649,
         "chroma": 0.015,
-        "count": 429
+        "count": 434
       },
       {
         "hex": "#260809",
@@ -235,7 +241,7 @@
         "hue": "neutral",
         "lightness": 0.978,
         "chroma": 0.001,
-        "count": 60
+        "count": 61
       },
       {
         "hex": "#121414",
@@ -361,63 +367,63 @@
         "name": "xs",
         "px": 10,
         "rem": 0.769,
-        "weightShare": 0.0179,
+        "weightShare": 0.0177,
         "variants": []
       },
       {
         "name": "sm",
         "px": 12,
         "rem": 0.923,
-        "weightShare": 0.2163,
+        "weightShare": 0.2157,
         "variants": []
       },
       {
         "name": "base",
         "px": 13,
         "rem": 1,
-        "weightShare": 0.2601,
+        "weightShare": 0.2657,
         "variants": []
       },
       {
         "name": "lg",
         "px": 14,
         "rem": 1.077,
-        "weightShare": 0.1058,
+        "weightShare": 0.1048,
         "variants": []
       },
       {
         "name": "xl",
         "px": 15,
         "rem": 1.154,
-        "weightShare": 0.2371,
+        "weightShare": 0.2347,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 16,
         "rem": 1.231,
-        "weightShare": 0.0059,
+        "weightShare": 0.0058,
         "variants": []
       },
       {
         "name": "3xl",
         "px": 20,
         "rem": 1.538,
-        "weightShare": 0.0308,
+        "weightShare": 0.0305,
         "variants": []
       },
       {
         "name": "4xl",
         "px": 24,
         "rem": 1.846,
-        "weightShare": 0.066,
+        "weightShare": 0.0653,
         "variants": []
       },
       {
         "name": "5xl",
         "px": 32,
         "rem": 2.462,
-        "weightShare": 0.0164,
+        "weightShare": 0.0162,
         "variants": []
       },
       {
@@ -431,14 +437,14 @@
         "name": "7xl",
         "px": 40,
         "rem": 3.077,
-        "weightShare": 0.0067,
+        "weightShare": 0.0066,
         "variants": []
       },
       {
         "name": "up-9",
         "px": 48,
         "rem": 3.692,
-        "weightShare": 0.0127,
+        "weightShare": 0.0125,
         "variants": []
       }
     ],
@@ -475,8 +481,8 @@
         "fontWeight": 400,
         "lineHeight": 1.54,
         "letterSpacing": "-0.039px",
-        "elements": 17,
-        "chars": 1295
+        "elements": 18,
+        "chars": 1350
       },
       "caption-sm": {
         "fontFamily": "Inter Variable",
@@ -594,23 +600,23 @@
   },
   "spacing": {
     "base": null,
-    "gridConfidence": 0.647,
+    "gridConfidence": 0.641,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.377
+        "share": 0.371
       },
       {
         "base": 6,
-        "share": 0.275
+        "share": 0.278
       },
       {
         "base": 5,
-        "share": 0.075
+        "share": 0.078
       },
       {
         "base": 4,
-        "share": 0.647
+        "share": 0.641
       }
     ],
     "scale": [
@@ -636,17 +642,17 @@
       {
         "name": "sm",
         "px": 4,
-        "count": 45
+        "count": 46
       },
       {
         "name": "md",
         "px": 6,
-        "count": 33
+        "count": 34
       },
       {
         "name": "lg",
         "px": 8,
-        "count": 80
+        "count": 82
       },
       {
         "name": "xl",
@@ -656,7 +662,7 @@
       {
         "name": "2xl",
         "px": 12,
-        "count": 56
+        "count": 57
       }
     ],
     "button": "8px",
@@ -668,7 +674,7 @@
     "shadows": [
       {
         "value": "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px",
-        "count": 16
+        "count": 18
       },
       {
         "value": "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset",
@@ -680,11 +686,11 @@
       },
       {
         "value": "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px",
-        "count": 9
+        "count": 10
       },
       {
         "value": "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset",
-        "count": 9
+        "count": 10
       }
     ],
     "flat": false
@@ -762,6 +768,55 @@
       "share": 0.575
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 15,
+    "pattern": {
+      "kind": "noise",
+      "size": "256px 256px",
+      "angle": null,
+      "value": null,
+      "external": true,
+      "stops": [],
+      "areaShare": 0.412
+    },
+    "wash": {
+      "kind": "radial-gradient",
+      "value": "radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 50%)",
+      "stops": [
+        {
+          "raw": "rgba(255, 255, 255, 0.04)",
+          "hex": "#ffffff",
+          "alpha": 0.04
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        }
+      ],
+      "areaShare": 0.124
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(20px)",
+        "count": 1
+      },
+      "mixBlendMode": {
+        "value": "overlay",
+        "count": 7
+      },
+      "maskImage": {
+        "value": "radial-gradient",
+        "count": 9
+      },
+      "filter": {
+        "value": "blur(0px)",
+        "count": 20
+      }
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -830,17 +885,18 @@
   },
   "warnings": [
     "Hero call-to-action count (1) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "Background texture is an external raster tiling at 256px 256px. Its URL is deliberately not published — reproduce the effect rather than hotlinking the source site's asset.",
     "Accent #5e6ad2 taken from a focus ring (resting), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
     "Ignored #e4f222 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
-    "No spacing grid explains 75% of values (best 0.647); site may not be on a grid.",
+    "No spacing grid explains 75% of values (best 0.641); site may not be on a grid.",
     "17 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "Found 71 state rules but none target elements on this page; the site's own CSS is likely among the 54 cross-origin sheets.",
-    "Strided sample: 6768 of 15268 elements. Weights are relative only."
+    "Strided sample: 6850 of 15350 elements. Weights are relative only."
   ],
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://linear.app/",
     "title": "Linear – The system for product development",
     "viewport": {
@@ -850,9 +906,9 @@
     "docHeight": 9960,
     "textColors": {
       "rgb(138, 143, 152)": {
-        "count": 429,
-        "area": 1318952.7766113281,
-        "chars": 6756
+        "count": 434,
+        "area": 1325354.2141113281,
+        "chars": 6791
       },
       "rgb(8, 9, 10)": {
         "count": 30,
@@ -860,19 +916,19 @@
         "chars": 898
       },
       "rgb(247, 248, 248)": {
-        "count": 60,
-        "area": 1080082.8635253906,
-        "chars": 1688
+        "count": 61,
+        "area": 1100602.8635253906,
+        "chars": 1743
       },
       "rgb(208, 214, 224)": {
-        "count": 265,
-        "area": 1287072.932006836,
-        "chars": 6772
+        "count": 269,
+        "area": 1310517.432006836,
+        "chars": 6856
       },
       "rgb(98, 102, 109)": {
-        "count": 294,
-        "area": 257588.2573852539,
-        "chars": 1860
+        "count": 296,
+        "area": 272469.1714477539,
+        "chars": 1882
       },
       "rgb(109, 120, 213)": {
         "count": 3,
@@ -1051,6 +1107,16 @@
         "area": 437760,
         "chars": 0
       },
+      "rgb(22, 23, 24)": {
+        "count": 6,
+        "area": 285970,
+        "chars": 110
+      },
+      "rgba(255, 255, 255, 0.03)": {
+        "count": 2,
+        "area": 845,
+        "chars": 0
+      },
       "rgb(98, 102, 109)": {
         "count": 1,
         "area": 31.5,
@@ -1060,23 +1126,13 @@
         "count": 2,
         "area": 230400,
         "chars": 0
-      },
-      "rgb(22, 23, 24)": {
-        "count": 3,
-        "area": 57194,
-        "chars": 55
-      },
-      "rgba(255, 255, 255, 0.03)": {
-        "count": 1,
-        "area": 169,
-        "chars": 0
       }
     },
     "borderColors": {
       "rgba(255, 255, 255, 0.08)": {
-        "count": 152,
-        "area": 18815289.4039917,
-        "chars": 69
+        "count": 153,
+        "area": 18816136.8102417,
+        "chars": 75
       },
       "rgb(229, 229, 230)": {
         "count": 6,
@@ -1089,8 +1145,8 @@
         "chars": 0
       },
       "rgba(255, 255, 255, 0.05)": {
-        "count": 16,
-        "area": 2855659,
+        "count": 17,
+        "area": 2856335,
         "chars": 0
       },
       "rgb(46, 46, 50)": {
@@ -1104,13 +1160,13 @@
         "chars": 0
       },
       "rgba(255, 255, 255, 0.12)": {
-        "count": 24,
-        "area": 2133596,
+        "count": 26,
+        "area": 2370096,
         "chars": 0
       },
       "rgba(0, 0, 0, 0)": {
-        "count": 33,
-        "area": 528866,
+        "count": 34,
+        "area": 564586,
         "chars": 0
       },
       "rgb(243, 78, 82)": {
@@ -1136,9 +1192,9 @@
     },
     "fontFamilies": {
       "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1071,
-        "area": 4214732.342712402,
-        "chars": 17708
+        "count": 1083,
+        "area": 4279979.194274902,
+        "chars": 17904
       },
       "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
         "count": 221,
@@ -1148,9 +1204,9 @@
     },
     "fontSizes": {
       "13px": {
-        "count": 325,
-        "area": 978876.451171875,
-        "chars": 5056
+        "count": 333,
+        "area": 1039564.951171875,
+        "chars": 5217
       },
       "64px": {
         "count": 3,
@@ -1168,9 +1224,9 @@
         "chars": 2057
       },
       "12px": {
-        "count": 436,
-        "area": 522635.71075439453,
-        "chars": 4205
+        "count": 439,
+        "area": 526368.6482543945,
+        "chars": 4234
       },
       "20px": {
         "count": 7,
@@ -1203,9 +1259,9 @@
         "chars": 40
       },
       "11px": {
-        "count": 9,
-        "area": 6752.95703125,
-        "chars": 58
+        "count": 10,
+        "area": 7578.37109375,
+        "chars": 64
       },
       "32px": {
         "count": 4,
@@ -1240,18 +1296,18 @@
         "chars": 1134
       },
       "400": {
-        "count": 894,
-        "area": 2617012.809387207,
-        "chars": 12599
+        "count": 902,
+        "area": 2658881.153137207,
+        "chars": 12711
       },
       "500": {
-        "count": 26,
-        "area": 104258.875,
-        "chars": 532
+        "count": 30,
+        "area": 127703.375,
+        "chars": 616
       },
       "510": {
         "count": 336,
-        "area": 1800684.5764160156,
+        "area": 1800618.5842285156,
         "chars": 4992
       },
       "590": {
@@ -1262,9 +1318,9 @@
     },
     "lineHeights": {
       "19.5px": {
-        "count": 212,
-        "area": 404915.888671875,
-        "chars": 2205
+        "count": 214,
+        "area": 408035.888671875,
+        "chars": 2221
       },
       "32px": {
         "count": 6,
@@ -1287,14 +1343,14 @@
         "chars": 634
       },
       "14px": {
-        "count": 251,
-        "area": 233896.55078125,
-        "chars": 1881
+        "count": 254,
+        "area": 236856.64453125,
+        "chars": 1910
       },
       "16px": {
-        "count": 150,
-        "area": 165307.9609375,
-        "chars": 1466
+        "count": 153,
+        "area": 174160.2109375,
+        "chars": 1529
       },
       "26.6px": {
         "count": 7,
@@ -1302,9 +1358,9 @@
         "chars": 598
       },
       "20px": {
-        "count": 69,
-        "area": 571762.65625,
-        "chars": 2491
+        "count": 73,
+        "area": 622099.15625,
+        "chars": 2579
       },
       "28px": {
         "count": 3,
@@ -1363,7 +1419,7 @@
       },
       "17.6px": {
         "count": 4,
-        "area": 3151.48046875,
+        "area": 3129.48828125,
         "chars": 28
       }
     },
@@ -1414,9 +1470,9 @@
         "chars": 756
       },
       "-0.039px": {
-        "count": 21,
-        "area": 336130.8125,
-        "chars": 1349
+        "count": 22,
+        "area": 356650.8125,
+        "chars": 1404
       },
       "-0.704px": {
         "count": 4,
@@ -1506,9 +1562,9 @@
         "chars": 741
       },
       "text|12px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 99,
-        "area": 47427.4609375,
-        "chars": 425
+        "count": 100,
+        "area": 49091.7109375,
+        "chars": 431
       },
       "h3|20px|590|26.6px|-0.24px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 3,
@@ -1531,9 +1587,9 @@
         "chars": 24
       },
       "text|12px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 91,
-        "area": 73592.859375,
-        "chars": 762
+        "count": 93,
+        "area": 75705.546875,
+        "chars": 785
       },
       "text|13px|510|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 6,
@@ -1607,7 +1663,7 @@
       },
       "text|12px|510|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 8,
-        "area": 6252,
+        "area": 6208,
         "chars": 56
       },
       "text|15px|300|20px|-0.06px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
@@ -1636,34 +1692,34 @@
         "chars": 38
       },
       "text|13px|500|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 12,
-        "area": 53506.875,
-        "chars": 99
+        "count": 14,
+        "area": 69719.375,
+        "chars": 126
       },
       "text|11px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 5,
-        "area": 3601.4765625,
-        "chars": 30
+        "count": 6,
+        "area": 4448.8828125,
+        "chars": 36
       },
       "text|13px|400|20px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 17,
-        "area": 329999.8125,
-        "chars": 1295
+        "count": 18,
+        "area": 350519.8125,
+        "chars": 1350
       },
       "text|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 14,
-        "area": 21840,
-        "chars": 112
+        "count": 16,
+        "area": 24960,
+        "chars": 128
       },
       "text|13px|500|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 14,
-        "area": 50752,
-        "chars": 433
+        "count": 16,
+        "area": 57984,
+        "chars": 490
       },
       "text|13px|400|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 29969.46875,
-        "chars": 51
+        "count": 5,
+        "area": 43573.46875,
+        "chars": 57
       },
       "text|13px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 2,
@@ -1772,7 +1828,7 @@
       },
       "text|11px|510|17.6px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 4,
-        "area": 3151.48046875,
+        "area": 3129.48828125,
         "chars": 28
       },
       "text|12px|300|19.2px|-0.048px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
@@ -1912,8 +1968,8 @@
     },
     "radii": {
       "6px": {
-        "count": 33,
-        "area": 3114758.1971435547,
+        "count": 34,
+        "area": 3143258.1971435547,
         "chars": 0
       },
       "9999px": {
@@ -1922,14 +1978,14 @@
         "chars": 371
       },
       "12px": {
-        "count": 56,
-        "area": 26165786.421875,
+        "count": 57,
+        "area": 26373786.421875,
         "chars": 0
       },
       "8px": {
-        "count": 80,
-        "area": 8175363.984375,
-        "chars": 807
+        "count": 82,
+        "area": 8231603.984375,
+        "chars": 862
       },
       "2px": {
         "count": 15,
@@ -1942,9 +1998,9 @@
         "chars": 0
       },
       "4px": {
-        "count": 45,
-        "area": 323648.2578125,
-        "chars": 90
+        "count": 46,
+        "area": 324495.6640625,
+        "chars": 96
       },
       "50%": {
         "count": 63,
@@ -1972,8 +2028,8 @@
         "chars": 21
       },
       "999px": {
-        "count": 16,
-        "area": 3712,
+        "count": 18,
+        "area": 4224,
         "chars": 0
       },
       "3px": {
@@ -1981,19 +2037,19 @@
         "area": 15465.3125,
         "chars": 0
       },
+      "5px": {
+        "count": 6,
+        "area": 3520.3125,
+        "chars": 12
+      },
+      "24px": {
+        "count": 2,
+        "area": 845,
+        "chars": 0
+      },
       "1.5px": {
         "count": 1,
         "area": 31.5,
-        "chars": 0
-      },
-      "5px": {
-        "count": 3,
-        "area": 704.0625,
-        "chars": 6
-      },
-      "24px": {
-        "count": 1,
-        "area": 169,
         "chars": 0
       }
     },
@@ -2014,9 +2070,9 @@
         "chars": 0
       },
       "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px": {
-        "count": 16,
-        "area": 548950.9899291992,
-        "chars": 753
+        "count": 18,
+        "area": 605190.9899291992,
+        "chars": 808
       },
       "rgb(35, 37, 42) 0px 0px 0px 1px inset": {
         "count": 6,
@@ -2039,13 +2095,13 @@
         "chars": 0
       },
       "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px": {
-        "count": 9,
-        "area": 1844000,
+        "count": 10,
+        "area": 2052000,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset": {
-        "count": 9,
-        "area": 2112,
+        "count": 10,
+        "area": 2368,
         "chars": 0
       },
       "rgb(35, 37, 42) 0px 0px 0px 1px inset, rgba(8, 9, 10, 0.8) 0px 0px 32px 0px": {
@@ -2064,39 +2120,39 @@
         "chars": 39
       },
       "rgba(0, 0, 0, 0.06) 0px 4px 4px -1px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px": {
-        "count": 1,
-        "area": 169,
+        "count": 2,
+        "area": 845,
         "chars": 0
       }
     },
     "spacings": {
       "1": {
-        "count": 17,
+        "count": 18,
         "area": 0,
         "chars": 0
       },
       "2": {
-        "count": 117,
+        "count": 116,
         "area": 0,
         "chars": 0
       },
       "3": {
-        "count": 40,
+        "count": 43,
         "area": 0,
         "chars": 0
       },
       "4": {
-        "count": 525,
+        "count": 532,
         "area": 0,
         "chars": 0
       },
       "5": {
-        "count": 30,
+        "count": 36,
         "area": 0,
         "chars": 0
       },
       "6": {
-        "count": 511,
+        "count": 528,
         "area": 0,
         "chars": 0
       },
@@ -2106,27 +2162,27 @@
         "chars": 0
       },
       "8": {
-        "count": 813,
+        "count": 816,
         "area": 0,
         "chars": 0
       },
       "10": {
-        "count": 84,
+        "count": 91,
         "area": 0,
         "chars": 0
       },
       "11": {
-        "count": 43,
+        "count": 45,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 196,
+        "count": 203,
         "area": 0,
         "chars": 0
       },
       "14": {
-        "count": 31,
+        "count": 33,
         "area": 0,
         "chars": 0
       },
@@ -2151,7 +2207,7 @@
         "chars": 0
       },
       "20": {
-        "count": 43,
+        "count": 44,
         "area": 0,
         "chars": 0
       },
@@ -2211,7 +2267,7 @@
         "chars": 0
       },
       "40": {
-        "count": 38,
+        "count": 39,
         "area": 0,
         "chars": 0
       },
@@ -2504,8 +2560,8 @@
       }
     },
     "pageBg": "rgb(8, 9, 10)",
-    "elementCount": 15268,
-    "sampled": 6768,
+    "elementCount": 15350,
+    "sampled": 6850,
     "structure": {
       "sectionCount": 10,
       "sectionDepth": 1,
@@ -2586,16 +2642,144 @@
         "overflowed": false
       }
     },
+    "backgrounds": {
+      "layers": {
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(11, 11, 11, 0.8) 0%, oklab(0.149576 0.00000680983 0.00000298768 / 0.761905) 100%)": {
+          "count": 1,
+          "area": 105120
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(52.53% 57.5% at 50% 100%, rgba(8, 9, 10, 0) 0%, rgba(8, 9, 10, 0.5) 100%)": {
+          "count": 1,
+          "area": 543744
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(8, 9, 10) 10%, rgb(208, 214, 224) 100%)": {
+          "count": 1,
+          "area": 543744
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(50% 50%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 90%)": {
+          "count": 1,
+          "area": 160000
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03))": {
+          "count": 2,
+          "area": 79344.66442871094
+        },
+        "raster|256px 256px|repeat|0% 0%|url(\"https://static.linear.app/web/_next/static/static/grain-default.png\")": {
+          "count": 3,
+          "area": 2666589.109375
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02))": {
+          "count": 16,
+          "area": 230400
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 50%)": {
+          "count": 5,
+          "area": 800000
+        },
+        "svg-tile|1280px 832px|no-repeat|-200px -2897.72px|url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='832' fill='none'%3E%3Cpath fill='%231C1D1E' d='M0 0h1280v832H0z'/%3E%3Cg filter='url(%23a)' opacity='0.22'%3E%3Crect width='240' height='560' x='781' y='133' fill='%23F7F8F8' rx='120' transform='rotate(45 781 133)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' width='722.274' height='722.274' x='306.726' y='54.706' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3Cfe…TRUNCATED": {
+          "count": 1,
+          "area": 268320
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))": {
+          "count": 3,
+          "area": 18684
+        },
+        "svg-tile|1280px 832px|no-repeat|-200px 0px|url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='832' fill='none'%3E%3Cpath fill='%231C1D1E' d='M0 0h1280v832H0z'/%3E%3Cg filter='url(%23a)' opacity='0.22'%3E%3Crect width='240' height='560' x='781' y='133' fill='%23F7F8F8' rx='120' transform='rotate(45 781 133)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' width='722.274' height='722.274' x='306.726' y='54.706' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3Cfe…TRUNCATED": {
+          "count": 1,
+          "area": 424704
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 160000
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04))": {
+          "count": 4,
+          "area": 44460
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%)": {
+          "count": 1,
+          "area": 211200
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(178, 213, 255) 0%, rgb(223, 209, 255) 100%)": {
+          "count": 1,
+          "area": 211200
+        }
+      },
+      "effects": {
+        "backdrop-filter|blur(20px)": {
+          "count": 1,
+          "area": 105120
+        },
+        "filter|blur(0px)": {
+          "count": 20,
+          "area": 500756.03125
+        },
+        "mix-blend-mode|overlay": {
+          "count": 7,
+          "area": 4842563.109375
+        },
+        "mask-image|radial-gradient": {
+          "count": 9,
+          "area": 5653024
+        },
+        "filter|url(\"#filter0_d_3072_54146\")": {
+          "count": 1,
+          "area": 33243.8671875
+        },
+        "mask-image|raster": {
+          "count": 1,
+          "area": 45268.3629951179
+        },
+        "filter|url(\"#filter1_d_3357_5865\")": {
+          "count": 1,
+          "area": 14674.581420898438
+        },
+        "filter|url(\"#filter2_d_3357_5865\")": {
+          "count": 1,
+          "area": 13336.581420898438
+        },
+        "filter|url(\"#filter4_d_3357_5865\")": {
+          "count": 1,
+          "area": 11552.55419921875
+        },
+        "mask-image|linear-gradient": {
+          "count": 4,
+          "area": 3480080.53125
+        },
+        "mix-blend-mode|lighten": {
+          "count": 6,
+          "area": 960000
+        },
+        "filter|drop-shadow(rgba(0, 0, 0, 0.15) 0px 0px 8px)": {
+          "count": 4,
+          "area": 59208
+        },
+        "filter|drop-shadow(color(srgb 0.941176 0.74902 0 / 0.1) 0px 0px 32px)": {
+          "count": 5,
+          "area": 74792
+        },
+        "filter|drop-shadow(rgb(8, 9, 10) 0px 0px 1px)": {
+          "count": 3,
+          "area": 130762.5
+        },
+        "filter|blur(1.29661px)": {
+          "count": 1,
+          "area": 44390
+        }
+      },
+      "scanned": 5079,
+      "elementsWithImage": 40
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 5052
+        "elements": 5079
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 5079
+        "elements": 5134
       },
       {
         "w": 390,

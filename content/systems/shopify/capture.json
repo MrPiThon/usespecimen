@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:43:43.893Z",
+  "capturedAt": "2026-08-29T04:35:32.434Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 2691,
     "sampleRatio": 0.384
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -745,6 +745,43 @@
       "share": 0.683
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 23,
+    "pattern": null,
+    "wash": {
+      "kind": "radial-gradient",
+      "value": "radial-gradient(rgba(18, 96, 255, 0.35), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0))",
+      "stops": [
+        {
+          "raw": "rgba(18, 96, 255, 0.35)",
+          "hex": "#1260ff",
+          "alpha": 0.35
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0
+        }
+      ],
+      "areaShare": 0.27
+    },
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 7
+      },
+      "filter": null
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -878,7 +915,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.shopify.com/",
     "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
     "viewport": {
@@ -894,7 +931,7 @@
       },
       "rgb(255, 255, 255)": {
         "count": 310,
-        "area": 3596980.3687999137,
+        "area": 3596980.364890326,
         "chars": 5184
       },
       "rgb(161, 161, 170)": {
@@ -1115,7 +1152,7 @@
     "fontFamilies": {
       "Shopify-Inter, Helvetica, Arial, sans-serif": {
         "count": 635,
-        "area": 5877954.834620226,
+        "area": 5877954.830710638,
         "chars": 13234
       },
       "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace": {
@@ -1157,7 +1194,7 @@
       },
       "56px": {
         "count": 23,
-        "area": 800941.7380371094,
+        "area": 800941.7341275215,
         "chars": 420
       },
       "20px": {
@@ -1209,7 +1246,7 @@
       },
       "330": {
         "count": 86,
-        "area": 2567940.3244628906,
+        "area": 2567940.3205533028,
         "chars": 2006
       },
       "400": {
@@ -1281,7 +1318,7 @@
       },
       "60.48px": {
         "count": 19,
-        "area": 652823.9255371094,
+        "area": 652823.9216275215,
         "chars": 326
       },
       "25.2px": {
@@ -1428,7 +1465,7 @@
       },
       "-0.56px": {
         "count": 8,
-        "area": 71496.3115234375,
+        "area": 71496.30761384964,
         "chars": 38
       },
       "-0.36px": {
@@ -1670,7 +1707,7 @@
       },
       "text|56px|330|60.48px|-0.56px|Shopify-Inter, Helvetica, Arial, sans-serif": {
         "count": 8,
-        "area": 71496.3115234375,
+        "area": 71496.30761384964,
         "chars": 38
       },
       "text|18px|420|23.4px|-0.36px|Shopify-Inter, Helvetica, Arial, sans-serif": {
@@ -2059,7 +2096,7 @@
       },
       "5px": {
         "count": 21,
-        "area": 1745901.2077026367,
+        "area": 1745901.295349121,
         "chars": 0
       },
       "16px": {
@@ -2610,6 +2647,114 @@
         "links": 45,
         "overflowed": false
       }
+    },
+    "backgrounds": {
+      "layers": {
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(126.17deg, rgb(95, 213, 182) 32.74%, rgb(134, 92, 255) 100%)": {
+          "count": 1,
+          "area": 158051.25
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(290.7deg, rgb(6, 26, 28) 58.79%, rgb(13, 58, 45) 100%)": {
+          "count": 1,
+          "area": 661618.125
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(10, 44, 48), rgb(6, 21, 24) 80%)": {
+          "count": 1,
+          "area": 692645.625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(rgb(28, 78, 80), rgb(19, 48, 50) 34%, rgb(9, 26, 28) 70%, rgb(6, 26, 28) 100%)": {
+          "count": 1,
+          "area": 498654.1767511368
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(rgb(62, 70, 70), rgb(15, 51, 53) 40%, rgb(6, 26, 28) 70%, rgb(6, 26, 28) 100%)": {
+          "count": 1,
+          "area": 337909.7495891154
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(rgb(42, 67, 68), rgb(6, 26, 28) 70%, rgb(6, 26, 28))": {
+          "count": 1,
+          "area": 302664.9486273229
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(rgb(21, 112, 118), rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0))": {
+          "count": 2,
+          "area": 517184.83168400824
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(rgba(21, 112, 118, 0.4), rgb(6, 26, 28) 75%, rgb(6, 26, 28))": {
+          "count": 1,
+          "area": 208012.707554698
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(36, 71, 73) 0%, rgb(24, 46, 47) 100%)": {
+          "count": 1,
+          "area": 11424
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(in oklab, rgb(44, 0, 127) 42.49%, rgb(0, 10, 29) 100%)": {
+          "count": 1,
+          "area": 1235092.5
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(145deg, rgb(0, 10, 30) 50%, rgba(0, 10, 30, 0.9) 70%, rgba(0, 10, 30, 0) 93%)": {
+          "count": 1,
+          "area": 380160
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(in oklab, rgb(0, 10, 30) 0%, rgba(0, 0, 0, 0) 100%)": {
+          "count": 1,
+          "area": 196200
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(to top in oklab, rgb(0, 10, 30) 0%, rgba(0, 0, 0, 0) 100%)": {
+          "count": 1,
+          "area": 196200
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(rgba(18, 96, 255, 0.35), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0))": {
+          "count": 3,
+          "area": 2457517.947033167
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(170deg, rgb(0, 0, 0), rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0))": {
+          "count": 1,
+          "area": 133695.5625
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgba(2, 8, 8, 0.5), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 90%, rgba(2, 8, 8, 0.5))": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(at 87% 84%, rgba(2, 8, 8, 0.9) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(at 10% 8%, rgba(2, 8, 8, 0.9) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(at 65% 36%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(at 38% 61%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(at 99% 36%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "radial-gradient|auto|repeat|0% 0%|radial-gradient(at 0px 62%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%)": {
+          "count": 1,
+          "area": 140661.5625
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(9, 9, 10), rgb(9, 9, 10))": {
+          "count": 1,
+          "area": 140661.5625
+        }
+      },
+      "effects": {
+        "mask-image|radial-gradient": {
+          "count": 3,
+          "area": 461673.935546875
+        },
+        "mask-image|linear-gradient": {
+          "count": 7,
+          "area": 575288.0703125
+        }
+      },
+      "scanned": 2329,
+      "elementsWithImage": 19
     },
     "viewports": [
       {

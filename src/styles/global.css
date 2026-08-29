@@ -63,7 +63,20 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  /* Canvas, then the file's own decorative layer over it: the wash first, the
+     tiled pattern above it, blended with the mode the file declares.
+
+     Layered on `body` rather than on a fixed overlay element — no z-index to
+     get wrong, no pointer-events to trap, and `background-blend-mode` composes
+     the two layers the same way the source site composes them. A file that
+     declares neither resolves both to `none` and the canvas stays flat, which
+     is what GOV.UK, Nike and Basecamp actually are. */
+  background-color: var(--bg);
+  background-image: var(--bg-pattern, none), var(--bg-wash, none);
+  background-size: var(--bg-pattern-size, auto), auto;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-blend-mode: var(--bg-blend, normal), normal;
   color: var(--fg);
   font-family: var(--sans);
   font-size: var(--size);

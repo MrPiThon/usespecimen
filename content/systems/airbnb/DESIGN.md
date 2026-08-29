@@ -99,6 +99,8 @@ layout:
 motion:
   duration: '0.3s'
   easing: 'cubic-bezier(0.2, 0, 0, 1)'
+backgrounds:
+  wash: 'linear-gradient(rgb(255, 255, 255) 39.9%, rgb(248, 248, 248) 100%)'
 components:
   button:
     background: '{colors.primary}'
@@ -126,12 +128,14 @@ components:
 provenance:
   brand: 'Airbnb'
   source: 'https://www.airbnb.com/'
-  capturedAt: '2026-08-29T03:46:30.252Z'
+  capturedAt: '2026-08-29T04:34:00.391Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -193,6 +197,10 @@ are withheld rather than guessed.
 Cards sit just above the page rather than floating over it, which is right when
 the card is mostly a photograph.
 
+**One barely-there fade**, `#ffffff` to `#f8f8f8`, linear. No pattern, no
+compositing, no tint. The page is effectively flat, and the photography carries
+every bit of visual interest.
+
 ## Shapes
 
 Radii of 4, 8, 12, 32 and 40px, with buttons at 4px. The wide range is the tell:
@@ -220,4 +228,6 @@ box rather than padding. All four states are declared on buttons.
 
 **What this file does not constrain:** almost all of the page structure, and
 deliberately so. Take the colour, type and shape language; the layout is yours.
+
+
 

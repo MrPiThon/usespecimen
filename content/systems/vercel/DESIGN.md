@@ -106,6 +106,10 @@ layout:
 motion:
   duration: '0.1s'
   easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+backgrounds:
+  wash: 'linear-gradient(to top in oklab, rgb(250, 250, 250) 0%, rgba(0, 0, 0, 0) 100%)'
+  mixBlendMode: 'color-burn'
+  maskImage: 'raster'
 components:
   button:
     background: '{colors.primary}'
@@ -128,13 +132,15 @@ components:
 provenance:
   brand: 'Vercel'
   source: 'https://vercel.com/'
-  capturedAt: '2026-08-29T03:48:27.968Z'
+  capturedAt: '2026-08-29T04:38:05.596Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---
+
+
 
 
 
@@ -203,6 +209,15 @@ Flat by construction. Every observed box-shadow resolves to fully transparent â€
 that this page never overrides. Depth comes from the canvas-to-foreground
 inversion, not from shadows.
 
+**Achromatic washes and an unusual composite.** A `linear-gradient` from
+`#fafafa` to transparent covers 49% of painted background area, with
+`mix-blend-mode: color-burn`, a raster `mask-image`, and a very wide
+`blur(48px)`.
+
+`color-burn` is the interesting one: it darkens by burning the layer beneath
+rather than by painting over it, which is how the page gets depth without
+introducing any colour.
+
 ## Shapes
 
 A single 6px radius across surfaces, plus fully pilled controls. Chrome reports
@@ -231,4 +246,6 @@ the standard material curve, run about twice as fast as it usually is.
 - **Don't** fill controls with the accent; it was measured in a focus ring.
 
 **What this file does not constrain:** section count, order or content.
+
+
 

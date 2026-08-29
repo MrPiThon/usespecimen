@@ -83,9 +83,10 @@ typography:
       fontWeight: 500
       lineHeight: 1.5
 rounded:
-  sm: '8px'
-  md: '24px'
-  lg: '30px'
+  sm: '2px'
+  md: '8px'
+  lg: '24px'
+  xl: '30px'
   button: '30px'
 spacing:
   s1: '2px'
@@ -139,12 +140,14 @@ components:
 provenance:
   brand: 'Nike'
   source: 'https://www.nike.com/'
-  capturedAt: '2026-08-29T03:43:28.252Z'
+  capturedAt: '2026-08-29T04:35:00.053Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 ## Overview
@@ -214,6 +217,12 @@ rule rather than a lift, on eight elements. And a genuine two-layer card shadow
 
 Both are built from the ink colour at low alpha rather than from neutral black.
 
+**No background image, gradient or pattern anywhere.** No filters, no blend
+modes, no masks. The canvas is flat white and the photography does all the work.
+
+Given how much imagery this system carries, the absence is deliberate: nothing
+competes with the pictures.
+
 ## Shapes
 
 Radii of 8, 24 and 30px, with **buttons at 30px**. At the observed button height
@@ -251,4 +260,6 @@ duration, one curve, applied almost everywhere.
 sections a page has, the content of the imagery, or the copy itself. Those are
 yours. The measurements above describe a language — an ink, a display gap, a
 measure, a rhythm of image over text — not a page. Build your own pages in it.
+
+
 

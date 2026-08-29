@@ -118,12 +118,14 @@ components:
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-29T03:43:52.530Z'
+  capturedAt: '2026-08-29T04:34:31.099Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -189,6 +191,14 @@ No blur anywhere. Buttons carry a solid offset block —
 `rgb(11, 12, 12) 0px 3px 0px 0px` — which reads as a physical edge rather than a
 shadow, and stays visible in forced-colours mode.
 
+**No background image, gradient or pattern anywhere on the page.** Not one
+element carries a `background-image`, and there is no `filter`, `backdrop-filter`,
+`mask-image` or blend mode in use.
+
+The canvas is flat colour. This is not a gap in the capture — it was checked —
+and adding a subtle gradient "for depth" would be as wrong here as adding a
+transition.
+
 ## Shapes
 
 No border radius. Not on buttons, not on inputs, not on panels. This is the
@@ -230,4 +240,6 @@ because it feels polished would be the single most un-GOV.UK thing you could do.
 **What this file does not constrain:** what the pages say, how many there are,
 or how the content is organised. It constrains how it looks and how it behaves —
 narrow, sharp, text-only, instant.
+
+
 

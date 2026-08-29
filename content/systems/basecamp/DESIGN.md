@@ -6,7 +6,7 @@ categories:
   - saas
   - marketing
 colors:
-  background: '#fff9f5'
+  background: '#fcf7ff'
   foreground: '#29353c'
   primary: '#2377d2'
   primaryForeground: '#29353c'
@@ -165,13 +165,15 @@ components:
 provenance:
   brand: 'Basecamp'
   source: 'https://basecamp.com/'
-  capturedAt: '2026-08-29T03:44:29.510Z'
+  capturedAt: '2026-08-29T04:34:22.177Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---
+
+
 
 
 
@@ -243,6 +245,12 @@ Five shadows, authored in `oklch` and largely inset.
 `oklch(0 0 0 / 0.1125) 0px 0px 0px 1px inset` is a hairline drawn as a shadow
 rather than as a border, which is why no border colour was observed anywhere.
 
+**No decorative background layer.** Two elements carry a `background-image`, but
+both are content — a signature SVG and a logo mark — rather than canvas
+treatment. No gradients, no patterns, no filters, no blend modes.
+
+Flat colour, in a 680px column, with no imagery. The restraint is the system.
+
 ## Shapes
 
 Fractional radii — 3.575, 4.125, 4.95238, 5.5 and 7.61904px — for the same reason
@@ -269,4 +277,6 @@ no exceptions.
 
 **What this file does not constrain:** what you write or how the page is
 organised. It constrains the width, the voice and the tempo.
+
+
 

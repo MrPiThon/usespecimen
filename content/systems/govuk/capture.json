@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:43:52.530Z",
+  "capturedAt": "2026-08-29T04:34:31.099Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1323,
     "sampleRatio": 0.716
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -477,6 +477,19 @@
       "share": 0
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 0,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -612,6 +625,7 @@
   },
   "warnings": [
     "First section carries no heading; the page may open on chrome — a search bar or a breadcrumb — rather than on a headline.",
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
     "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
     "No spacing grid explains 75% of values (best 0.742); site may not be on a grid.",
     "No border radius anywhere; treat as a deliberately sharp system.",
@@ -620,7 +634,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.gov.uk/",
     "title": "Welcome to GOV.UK",
     "viewport": {
@@ -1411,6 +1425,12 @@
         "links": 25,
         "overflowed": false
       }
+    },
+    "backgrounds": {
+      "layers": {},
+      "effects": {},
+      "scanned": 616,
+      "elementsWithImage": 0
     },
     "viewports": [
       {

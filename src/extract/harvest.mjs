@@ -30,7 +30,11 @@ export const harvestFn = () => {
     // 7: adds sectionComposition -- how sections are built, as AGGREGATE COUNTS.
     //    See the note at the measurement for why it is deliberately incapable
     //    of expressing an order.
-    harvestVersion: 7,
+    // 8: adds backgrounds -- the decorative layer. Everything before this
+    //    recorded what colour a surface IS; this records what is painted over
+    //    it, which is most of the difference between a flat page in the right
+    //    palette and one that looks like the site.
+    harvestVersion: 8,
     url: location.href,
     title: document.title,
     viewport: { w: innerWidth, h: innerHeight },
@@ -58,6 +62,11 @@ export const harvestFn = () => {
       contentWidths: {}, sectionRhythm: {}, gridColumns: {}, transitions: {},
       sectionsReliable: false, sectionComposition: null, hero: null, nav: null,
     },
+    // Keyed by a bundle of image + size + repeat off ONE element, never by
+    // property. Recording them separately would let a 10px tile size pair with
+    // a gradient that never runs at 10px -- the same fabricated combination
+    // that typeStyles, states and motion each had to fix.
+    backgrounds: { layers: {}, effects: {}, scanned: 0, elementsWithImage: 0 },
   };
 
   // Role names come from the element that carried the style, so the same
@@ -543,6 +552,94 @@ export const harvestFn = () => {
   // identified by behaviour: near the top, spanning the page, carrying several
   // links, and not part of the hero.
   const heroSection = sections.length ? sections[0].el : null;
+  // --- Background treatment ---------------------------------------------------
+  // Gradients, tiled patterns, grain, and the compositing that makes them read.
+  //
+  // `body` and `html` report `background-image: none` on every site measured,
+  // GOV.UK and Stripe alike, so there is no page-level value to read. The
+  // decoration always sits on large overlay elements, which is why layers are
+  // ranked by painted area rather than by count.
+  //
+  // A full pass rather than the strided sample: decorative layers live on a
+  // handful of elements, and striding can miss the one that paints the canvas.
+  const DECOR_MIN_AREA = 10000; // ~100x100. Below this it is an icon, not a wash.
+  const VALUE_CAP = 600;
+
+  const layerKind = (value) => {
+    if (/^repeating-linear-gradient/.test(value)) return 'repeating-linear-gradient';
+    if (/^repeating-radial-gradient/.test(value)) return 'repeating-radial-gradient';
+    if (/^repeating-conic-gradient/.test(value)) return 'repeating-conic-gradient';
+    if (/^linear-gradient/.test(value)) return 'linear-gradient';
+    if (/^radial-gradient/.test(value)) return 'radial-gradient';
+    if (/^conic-gradient/.test(value)) return 'conic-gradient';
+    if (/^url\(["']?data:image\/svg/.test(value)) return 'svg-tile';
+    if (/^url\(["']?data:/.test(value)) return 'data-uri';
+    if (/^url\(/.test(value)) return 'raster';
+    return 'other';
+  };
+
+  const bumpLayer = (key, area) => {
+    const e = out.backgrounds.layers[key] || (out.backgrounds.layers[key] = { count: 0, area: 0 });
+    e.count += 1;
+    e.area += area;
+  };
+  const bumpEffect = (key, area) => {
+    const e = out.backgrounds.effects[key] || (out.backgrounds.effects[key] = { count: 0, area: 0 });
+    e.count += 1;
+    e.area += area;
+  };
+
+  const allEls = document.querySelectorAll('*');
+  out.backgrounds.scanned = allEls.length;
+  for (const el of allEls) {
+    const tag = el.tagName;
+    if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT' || tag === 'HEAD') continue;
+    const c = getComputedStyle(el);
+    if (c.display === 'none' || c.visibility === 'hidden' || parseFloat(c.opacity) === 0) continue;
+    const rect = rectOf(el);
+    const area = rect.width * rect.height;
+    if (area < DECOR_MIN_AREA) continue;
+
+    const image = c.backgroundImage;
+    if (image && image !== 'none') {
+      out.backgrounds.elementsWithImage += 1;
+      // One declaration can stack several layers. Size, repeat and position are
+      // parallel lists that CSS cycles when shorter, so they are paired by
+      // index rather than assumed to be single values.
+      const images = topSplit(image);
+      const sizes = topSplit(c.backgroundSize);
+      const repeats = topSplit(c.backgroundRepeat);
+      const positions = topSplit(c.backgroundPosition);
+      for (let i = 0; i < images.length; i += 1) {
+        const value = images[i];
+        if (!value || value === 'none') continue;
+        const size = sizes.length ? sizes[i % sizes.length] : 'auto';
+        const repeat = repeats.length ? repeats[i % repeats.length] : 'repeat';
+        const position = positions.length ? positions[i % positions.length] : '0% 0%';
+        // Area is split across stacked layers so a three-layer element does not
+        // out-weigh three separate ones painting the same pixels.
+        bumpLayer([
+          layerKind(value), size, repeat, position,
+          // Truncation is recorded in the key itself rather than silently, so a
+          // clusterer cannot mistake a cut gradient for a complete one.
+          value.length > VALUE_CAP ? `${value.slice(0, VALUE_CAP)}\u2026TRUNCATED` : value,
+        ].join('|'), area / images.length);
+      }
+    }
+
+    // Compositing. `filter` and `backdrop-filter` are what turn a flat wash
+    // into a glow, and `mask-image` is how a decorative layer fades out
+    // instead of ending on a hard edge.
+    if (c.backdropFilter && c.backdropFilter !== 'none') bumpEffect(`backdrop-filter|${c.backdropFilter}`, area);
+    if (c.filter && c.filter !== 'none') bumpEffect(`filter|${c.filter.slice(0, 120)}`, area);
+    if (c.mixBlendMode && c.mixBlendMode !== 'normal') bumpEffect(`mix-blend-mode|${c.mixBlendMode}`, area);
+    if (c.maskImage && c.maskImage !== 'none') {
+      // Masks are long and their exact stops matter far less than the fact and
+      // direction of the fade, so only the kind is kept.
+      bumpEffect(`mask-image|${layerKind(c.maskImage)}`, area);
+    }
+  }
+
   const navEl = Array.prototype.filter.call(
     document.querySelectorAll('header,nav,[role=banner]'),
     (el) => {

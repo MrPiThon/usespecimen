@@ -116,6 +116,9 @@ layout:
 motion:
   duration: '0.32s'
   easing: 'cubic-bezier(0.4, 0, 0.6, 1)'
+backgrounds:
+  wash: 'radial-gradient(100% 33% at 0% 100%, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0))'
+  backdropFilter: 'saturate(1.8) blur(20px)'
 components:
   button:
     background: '{colors.primary}'
@@ -140,12 +143,14 @@ components:
 provenance:
   brand: 'Apple'
   source: 'https://www.apple.com/'
-  capturedAt: '2026-08-29T03:45:45.940Z'
+  capturedAt: '2026-08-29T04:34:11.808Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -216,6 +221,13 @@ stand.
 A single shadow, `rgba(0, 0, 0, 0.22) 3px 5px 30px`: wide, soft and offset
 down-right. One shadow, used once, for the one thing that needs to float.
 
+**A radial scrim rather than a decorative wash**: `#000000` at **50% alpha** out
+to transparent white, covering 85% of painted background area. That is a
+darkening layer for text over imagery, not a colour effect.
+
+The chrome uses `backdrop-filter: saturate(1.8) blur(20px)` — the saturation
+boost is what stops the translucent nav from going grey over photography.
+
 ## Shapes
 
 Two radii, 8px and **980px**. The 980 is a pill expressed as a number large
@@ -244,4 +256,6 @@ animates. A single curve governs essentially the whole page.
 
 **What this file does not constrain:** page composition, section order, or
 content. It gives you a narrow measure against wide imagery, and one timing.
+
+
 

@@ -15,7 +15,8 @@ colors:
   border: '#f5f5f5'
   surface-1: '#f9f0ff'
   text-1: '#000000'
-  text-2: '#696969'
+  text-2: '#1d1d1d'
+  text-3: '#696969'
 typography:
   fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
   headingFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -31,10 +32,10 @@ typography:
     lg: '22.4px'
     xl: '23.3436px'
     2xl: '24px'
-    3xl: '28px'
+    3xl: '26px'
     4xl: '32px'
-    5xl: '50.4px'
-    6xl: '58px'
+    5xl: '36.2698px'
+    6xl: '50px'
   roles:
     body:
       fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -68,21 +69,21 @@ typography:
       fontWeight: 600
     lead-lg:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '28px'
+      fontSize: '26px'
       fontWeight: 600
-      lineHeight: 1.21
+      lineHeight: 1.17
     h1:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '32px'
       fontWeight: 700
-      lineHeight: 1.12
+      lineHeight: 1.17
       letterSpacing: '-0.384px'
     h2:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '32px'
+      fontSize: '50px'
       fontWeight: 700
-      lineHeight: 1.25
-      letterSpacing: '-0.256px'
+      lineHeight: 1.17
+      letterSpacing: '-0.4px'
     h3:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '22.4px'
@@ -90,9 +91,10 @@ typography:
       lineHeight: 1.34
       letterSpacing: '-0.0896px'
     button:
-      fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '18px'
-      fontWeight: 400
+      fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+      fontSize: '14px'
+      fontWeight: 700
+      lineHeight: 1.43
     link:
       fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '14px'
@@ -111,9 +113,9 @@ spacing:
   s2: '4px'
   s3: '6px'
   s4: '8px'
-  s5: '10px'
-  s6: '12px'
-  s7: '16px'
+  s5: '12px'
+  s6: '16px'
+  s7: '19px'
   s8: '20px'
   s9: '24px'
   s10: '32px'
@@ -132,18 +134,20 @@ layout:
   sectionWidth: 'full-bleed'
   sectionMedia: 'text-led'
   sectionCopy: 'moderate'
-  heroHeight: '147vh'
-  heroHeadingSize: '64px'
-  heroAlign: 'center'
+  heroHeight: '87vh'
+  heroHeadingSize: '58px'
+  heroAlign: 'left'
 motion:
   duration: '0.42s'
   easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)'
+backgrounds:
+  wash: 'linear-gradient(151.65deg, rgb(255, 255, 255) 51.8%, rgb(239, 213, 255) 75.7%, rgb(229, 185, 254) 94.4%)'
 components:
   button:
     background: '{colors.primary}'
     foreground: '{colors.primaryForeground}'
     radius: '{rounded.button}'
-    padding: '12px'
+    padding: '10px 10px 11.2px 10px'
     active:
       backgroundColor: '#f5f4f5'
       opacity: '1'
@@ -172,12 +176,14 @@ components:
 provenance:
   brand: 'Slack'
   source: 'https://slack.com/'
-  capturedAt: '2026-08-29T03:47:12.532Z'
+  capturedAt: '2026-08-29T04:36:01.915Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 7
-  clusterVersion: 16
+  harvestVersion: 8
+  clusterVersion: 17
   screenshot: './source.webp'
 ---
+
+
 
 
 
@@ -241,6 +247,12 @@ The median section holds **320 characters**.
 Wide and soft: `rgba(0, 0, 0, 0.1) 0px 0px 32px` is an unoffset 32px blur, a
 glow rather than a drop shadow. Things lift straight up here, they do not lean.
 
+**A three-stop lilac fade**: `#ffffff` → `#efd5ff` → `#e5b9fe`, linear, across
+20% of painted background area. The aubergine at very low volume, used as a
+ground rather than as a fill.
+
+No pattern, no compositing effects — the gradient does all of it.
+
 ## Shapes
 
 Radii of 4, 8, 16 and 48px, with buttons at the smallest. The 48px step is for
@@ -270,4 +282,6 @@ transition measured in this registry, and it is deliberate.
 
 **What this file does not constrain:** page structure, section order, or
 content. It gives you a colour discipline, a type pairing and a tempo.
+
+
 

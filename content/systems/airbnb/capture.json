@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:46:30.252Z",
+  "capturedAt": "2026-08-29T04:34:00.391Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 1278,
-    "elementCount": 3564,
-    "sampled": 963,
-    "sampleRatio": 0.27
+    "elementCount": 3594,
+    "sampled": 951,
+    "sampleRatio": 0.265
   },
-  "harvestVersion": 7,
-  "clusterVersion": 16,
+  "harvestVersion": 8,
+  "clusterVersion": 17,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -487,6 +487,35 @@
       "share": 0.493
     }
   },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 1,
+    "pattern": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(rgb(255, 255, 255) 39.9%, rgb(248, 248, 248) 100%)",
+      "stops": [
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "alpha": 1
+        },
+        {
+          "raw": "rgb(248, 248, 248)",
+          "hex": "#f8f8f8",
+          "alpha": 1
+        }
+      ],
+      "areaShare": 1
+    },
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -611,12 +640,12 @@
     "Ignored #0073e5 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "No spacing grid explains 75% of values (best 0.682); site may not be on a grid.",
     "link box metrics come from 1 element out of 6 distinct shapes; thin evidence for a component token.",
-    "Strided sample: 963 of 3564 elements. Weights are relative only."
+    "Strided sample: 951 of 3594 elements. Weights are relative only."
   ],
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 7,
+    "harvestVersion": 8,
     "url": "https://www.airbnb.com/",
     "title": "Airbnb | Vacation rentals, cabins, beach houses, & more",
     "viewport": {
@@ -711,7 +740,7 @@
       },
       "rgba(255, 255, 255, 0.5)": {
         "count": 1,
-        "area": 3993.75,
+        "area": 3993.7503051757812,
         "chars": 0
       }
     },
@@ -1129,7 +1158,7 @@
       },
       "40px": {
         "count": 9,
-        "area": 50103.78125,
+        "area": 50103.78184509277,
         "chars": 0
       }
     },
@@ -1156,7 +1185,7 @@
       },
       "rgb(255, 255, 255) 0px 1px 0.5px 0px, rgba(0, 0, 0, 0.15) 0px -0.5px 1px 0px, rgba(0, 0, 0, 0.05) 0px -1.2px 0.5px 1px, rgba(0, 0, 0, 0.05) 0px 8px 16px 0px, rgb(255, 255, 255) -0.2px -1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0.5px 0.7px 2.5px 0px inset, rgba(0, 0, 0, 0.05) -1px -3px 8px 0px inset, rgba(0, 0, 0, 0.1) 0.5px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 1px 6px 6px 2px inset": {
         "count": 1,
-        "area": 3718.0625,
+        "area": 3718.062789916992,
         "chars": 0
       }
     },
@@ -1332,7 +1361,7 @@
       },
       "40px": {
         "count": 5,
-        "area": 34771.375,
+        "area": 34771.37530517578,
         "chars": 0
       }
     },
@@ -1344,7 +1373,7 @@
       },
       "rgb(34, 34, 34)": {
         "count": 134,
-        "area": 357859.46875,
+        "area": 357859.4690551758,
         "chars": 1344
       },
       "rgb(108, 108, 108)": {
@@ -1400,8 +1429,8 @@
       }
     },
     "pageBg": "rgb(255, 255, 255)",
-    "elementCount": 3564,
-    "sampled": 963,
+    "elementCount": 3594,
+    "sampled": 951,
     "structure": {
       "sectionCount": 0,
       "sectionDepth": 0,
@@ -1432,21 +1461,32 @@
         "overflowed": false
       }
     },
+    "backgrounds": {
+      "layers": {
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(255, 255, 255) 39.9%, rgb(248, 248, 248) 100%)": {
+          "count": 1,
+          "area": 284543.9895629883
+        }
+      },
+      "effects": {},
+      "scanned": 1193,
+      "elementsWithImage": 1
+    },
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1183
+        "elements": 1193
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1186
+        "elements": 1196
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1195
+        "elements": 1205
       }
     ],
     "mergedFrom": 3,

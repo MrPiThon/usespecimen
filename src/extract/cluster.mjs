@@ -1102,7 +1102,7 @@ export function contrastAudit(colors) {
 
 /** Everything we could not observe, said out loud. This list is the honest
  *  half of the product — an unflagged gap is how a wrong token ships. */
-function collectWarnings(capture, colors, type, spacing, rounded, states, components, layout) {
+function collectWarnings(capture, colors, type, spacing, rounded, states, components, layout, backgrounds) {
   const w = [];
   const { roles } = colors;
   if (colors.roles.background.source === 'browserDefault') {
@@ -1142,6 +1142,24 @@ function collectWarnings(capture, colors, type, spacing, rounded, states, compon
     if (layout.measure && layout.measure.share < 0.2) {
       w.push(`Content measure ${layout.measure.px}px explains only `
         + `${Math.round(layout.measure.share * 100)}% of observed widths; the page may not hold one.`);
+    }
+  }
+  if (backgrounds && !backgrounds.available) {
+    w.push('Capture predates harvest v8; the decorative layer was not measured. '
+      + 'Re-extract to recover gradients, patterns and compositing.');
+  } else if (backgrounds?.available) {
+    if (!backgrounds.decorated) {
+      w.push('No background image, gradient or pattern anywhere on the page. The canvas '
+        + 'is flat colour, and that is the design rather than a gap in the capture.');
+    }
+    if (backgrounds.pattern?.external) {
+      w.push(`Background texture is an external raster tiling at ${backgrounds.pattern.size}. `
+        + 'Its URL is deliberately not published — reproduce the effect rather than '
+        + 'hotlinking the source site\'s asset.');
+    }
+    if (backgrounds.wash?.truncated || backgrounds.pattern?.truncated) {
+      w.push('A background value exceeded the capture limit and was truncated; '
+        + 'read it from the source rather than copying it from here.');
     }
   }
   if (!roles.primary) w.push('No chromatic accent found in buttons, focus rings, links or body text; palette is fully neutral.');
@@ -1345,6 +1363,137 @@ export function layoutTokens(capture) {
   };
 }
 
+/** A background-size small enough to be a repeating tile rather than a wash.
+ *  Measured tiles run 3px (getdesign.md scanlines), 10px (Tailwind's dot grid
+ *  and hatch) and 256px (Linear's grain sheet); the smallest non-tiled washes
+ *  are `auto` or full-element. 320 sits well clear of both. */
+const TILE_MAX_PX = 320;
+
+/** Colour functions that can appear as a gradient stop. None of them nest, so a
+ *  non-greedy match to the first `)` is safe — `color(display-p3 ...)` included. */
+const STOP_RE = /(?:rgba?|hsla?|oklab|oklch|lab|lch|color)\([^()]*\)|#[0-9a-fA-F]{3,8}\b/g;
+
+/**
+ * The decorative layer: gradients, tiled patterns, grain, and the compositing
+ * that makes them read.
+ *
+ * Everything else in this file records what colour a surface IS. This records
+ * what is painted over it, which is most of the difference between a flat page
+ * in the right palette and one that looks like the site. GOV.UK returns nothing
+ * here, and that is a finding rather than a failure.
+ */
+export function backgroundTokens(capture) {
+  const bg = capture.backgrounds;
+  // Captures before harvest v8 never looked, and silence is not evidence.
+  if (!bg) return { available: false };
+
+  const totalArea = Object.values(bg.layers).reduce((sum, w) => sum + w.area, 0);
+  const layers = Object.entries(bg.layers).map(([key, w]) => {
+    const parts = key.split('|');
+    const [kind, size, repeat, position] = parts;
+    const value = parts.slice(4).join('|');
+    // A tile repeats and is small in every axis it sizes.
+    //
+    // `no-repeat` contains the substring `repeat`, so a bare /repeat/ test
+    // matched images that explicitly do not tile — Basecamp's signature SVG and
+    // a Verge `cover` image both came back as textures. The negative has to be
+    // ruled out before the positive.
+    const repeats = !/no-repeat/.test(repeat) && /repeat|round|space/.test(repeat);
+    // A size with `auto`, `cover` or `contain` is scaled to its box, not laid
+    // out on a grid, whatever the other axis says.
+    const scaled = /auto|cover|contain/.test(size);
+    const px = size.match(/(-?[\d.]+)px/g)?.map(parseFloat) ?? [];
+    const tiled = repeats && !scaled && px.length > 0 && px.every(n => n > 0 && n <= TILE_MAX_PX);
+    const stops = [];
+    for (const raw of value.match(STOP_RE) ?? []) {
+      const rgb = parseColor(raw);
+      // parseColor returns null for keywords like `transparent`, which are real
+      // stops but carry no colour worth publishing.
+      if (rgb) stops.push({ raw, hex: toHex(rgb), alpha: round(rgb.a ?? 1, 3) });
+    }
+    return {
+      kind,
+      tiled,
+      size,
+      repeat,
+      position,
+      // An external raster is somebody else's asset. Recording that a 256px
+      // grain sheet tiles over the page is a fact about the design; shipping
+      // the URL into a file people commit invites hotlinking Linear's PNG.
+      value: kind === 'raster' ? null : value,
+      external: kind === 'raster',
+      truncated: /TRUNCATED$/.test(value),
+      stops,
+      count: w.count,
+      areaShare: totalArea ? round(w.area / totalArea, 3) : 0,
+    };
+  }).sort((a, b) => b.areaShare - a.areaShare);
+
+  // Derived from geometry, not from the author's intent: a radial gradient on a
+  // 10px tile IS a dot grid, whatever it was called in the stylesheet.
+  const patternOf = (l) => {
+    if (!l.tiled) return null;
+    if (l.kind.includes('radial')) return 'dots';
+    if (l.kind.includes('linear')) return 'lines';
+    if (l.kind === 'raster' || l.kind === 'data-uri') return 'noise';
+    if (l.kind === 'svg-tile') return 'svg-tile';
+    return null;
+  };
+  const angleOf = (l) => l.value?.match(/\(\s*(-?[\d.]+)deg/)?.[1] ?? null;
+
+  const pattern = layers.find(l => patternOf(l));
+  const wash = layers.find(l => !l.tiled && /gradient/.test(l.kind));
+
+  const effect = (prefix) => {
+    const hit = Object.entries(bg.effects)
+      .filter(([k]) => k.startsWith(`${prefix}|`))
+      .sort((a, b) => b[1].area - a[1].area)[0];
+    return hit ? { value: hit[0].slice(prefix.length + 1), count: hit[1].count } : null;
+  };
+
+  return {
+    available: true,
+    // Said explicitly. A page with no decorative layer at all is a design
+    // choice — GOV.UK's flat canvas is as deliberate as Linear's grain — and an
+    // agent told nothing here would reach for a gradient.
+    //
+    // "Decorated" means a treatment was found, not merely that some element
+    // carries a background-image. Basecamp paints a signature SVG and a logo
+    // that way; neither decorates the canvas, and counting them would have
+    // reported a flat page as textured.
+    decorated: Boolean(pattern || wash || Object.values({
+      a: effect('backdrop-filter'), b: effect('mix-blend-mode'),
+      c: effect('mask-image'), d: effect('filter'),
+    }).some(Boolean)),
+    layerCount: layers.length,
+    pattern: pattern
+      ? {
+        kind: patternOf(pattern),
+        size: pattern.size,
+        angle: angleOf(pattern),
+        value: pattern.value,
+        external: pattern.external,
+        stops: pattern.stops,
+        areaShare: pattern.areaShare,
+      }
+      : null,
+    wash: wash
+      ? {
+        kind: wash.kind,
+        value: wash.value,
+        stops: wash.stops,
+        areaShare: wash.areaShare,
+      }
+      : null,
+    effects: {
+      backdropFilter: effect('backdrop-filter'),
+      mixBlendMode: effect('mix-blend-mode'),
+      maskImage: effect('mask-image'),
+      filter: effect('filter'),
+    },
+  };
+}
+
 export function cluster(capture, { previous } = {}) {
   const stab = stabilizer();
   const colors = colorTokens(capture);
@@ -1365,6 +1514,7 @@ export function cluster(capture, { previous } = {}) {
   }
   const components = componentTokens(capture);
   const layout = layoutTokens(capture);
+  const backgrounds = backgroundTokens(capture);
 
   return {
     source: {
@@ -1404,7 +1554,7 @@ export function cluster(capture, { previous } = {}) {
     // 13: parseColor understands lab/oklab/oklch/display-p3, so sites authoring
     //     in modern colour spaces stop resolving to null andwhite-on-white.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 16,
+    clusterVersion: 17,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
@@ -1419,9 +1569,11 @@ export function cluster(capture, { previous } = {}) {
     // Structure. Colours and type describe the paint; this describes the
     // building, and it is the half a scraped catalog cannot reproduce.
     layout,
+    // The decorative layer painted over the surfaces.
+    backgrounds,
     states,
     audit,
-    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states, components, layout),
+    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states, components, layout, backgrounds),
   };
 }
 

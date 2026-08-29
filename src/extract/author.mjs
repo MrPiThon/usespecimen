@@ -110,6 +110,26 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
       ...(L.hero.align ? { heroAlign: L.hero.align } : {}),
     } : {}),
   } : {};
+  // The decorative layer. Values are emitted verbatim because a gradient string
+  // is directly usable — an agent pastes it — and every stop in it came from
+  // getComputedStyle rather than from a model.
+  const B = cap.backgrounds;
+  const backgrounds = B?.available && B.decorated ? {
+    ...(B.pattern ? {
+      pattern: B.pattern.kind,
+      patternSize: B.pattern.size,
+      ...(B.pattern.angle ? { patternAngle: `${B.pattern.angle}deg` } : {}),
+      // Omitted for an external raster: the effect is reproducible, the asset
+      // belongs to the source site, and a URL here would end up committed into
+      // somebody's repository as a hotlink.
+      ...(B.pattern.value ? { patternImage: B.pattern.value } : {}),
+    } : {}),
+    ...(B.wash?.value ? { wash: B.wash.value } : {}),
+    ...(B.effects.backdropFilter ? { backdropFilter: B.effects.backdropFilter.value } : {}),
+    ...(B.effects.mixBlendMode ? { mixBlendMode: B.effects.mixBlendMode.value } : {}),
+    ...(B.effects.maskImage ? { maskImage: B.effects.maskImage.value } : {}),
+  } : {};
+
   // Omitted entirely when the page animates nothing. The Layout prose says so
   // in words; emitting `duration: null` would invite an agent to fill it in.
   const motion = L?.motion?.duration
@@ -163,6 +183,7 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     ...(Object.keys(elevation).length ? { elevation } : {}),
     ...(Object.keys(layout).length ? { layout } : {}),
     ...(Object.keys(motion).length ? { motion } : {}),
+    ...(Object.keys(backgrounds).length ? { backgrounds } : {}),
     components: {
       button: {
         background: '{colors.primary}',
@@ -286,10 +307,37 @@ function factsFor(section, cap, dark) {
           : null,
       );
     }
-    case 'Elevation & Depth':
-      return cap.elevation.shadows.length
-        ? lines(cap.elevation.shadows.map(s => `- \`${s.value}\` (${s.count} elements)`))
-        : '- No box-shadow observed anywhere on the page.';
+    case 'Elevation & Depth': {
+      // Shadows lift things off the canvas; the decorative layer is what the
+      // canvas is made of. Both are depth, and an agent that reads one without
+      // the other builds a flat page with correct shadows on it.
+      const b = cap.backgrounds;
+      const stops = xs => xs.map(x => `${x.hex}${x.alpha < 1 ? ` at ${Math.round(x.alpha * 100)}%` : ''}`).join(' to ');
+      return lines(
+        cap.elevation.shadows.length
+          ? cap.elevation.shadows.map(s => `- \`${s.value}\` (${s.count} elements)`)
+          : '- No box-shadow observed anywhere on the page.',
+        b?.available && !b.decorated
+          ? '- No background image, gradient or pattern anywhere; the canvas is flat colour.'
+          : null,
+        b?.pattern
+          ? bullet('Pattern', `${b.pattern.kind} tiling at ${b.pattern.size}`
+            + `${b.pattern.angle ? ` at ${b.pattern.angle} degrees` : ''}`
+            + `${b.pattern.stops.length ? `, ${stops(b.pattern.stops)}` : ''}`
+            + `, ${Math.round(b.pattern.areaShare * 100)}% of painted background area`
+            + `${b.pattern.external ? ' (external raster; reproduce it rather than linking it)' : ''}`)
+          : null,
+        b?.wash
+          ? bullet('Wash', `${b.wash.kind}`
+            + `${b.wash.stops.length ? `, ${stops(b.wash.stops)}` : ''}`
+            + `, ${Math.round(b.wash.areaShare * 100)}% of painted background area`)
+          : null,
+        b?.available && Object.values(b.effects).some(Boolean)
+          ? bullet('Compositing', Object.entries(b.effects).filter(([, v]) => v)
+            .map(([k, v]) => `${k} ${v.value}`).join(', '))
+          : null,
+      );
+    }
     case 'Shapes':
       return lines(
         cap.rounded.sharp ? '- No border radius anywhere.' : null,

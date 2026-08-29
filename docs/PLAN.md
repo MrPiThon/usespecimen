@@ -265,6 +265,22 @@ The harvester records counts and never an array, so the data layer is
 by naming what it does not constrain — section order, page composition, copy —
 because direction without that becomes dictation.
 
+**The decorative layer.** Colour tokens describe a flat fill; real pages are not
+flat. Tailwind's canvas is a 10px dot grid, The Verge's is a 118-degree hairline
+tile, Linear's is a 256px grain sheet under a radial vignette blended `overlay`,
+and Stripe's hero is an indigo-to-magenta radial covering 45% of the painted
+background. None of that was in our files, and it is a large part of why a
+generated page with the right palette still looks generic.
+
+harvest v8 measures it, cluster v17 reduces it, and the files carry gradient
+values verbatim — an agent pastes them, and every stop came from
+`getComputedStyle`. One exception: an external raster's URL is withheld and the
+warning tells the consumer to reproduce the texture instead. This site does that
+for its own grain rather than hotlinking Linear's PNG.
+
+Three of thirteen carry no decorative layer at all — GOV.UK, Nike, Basecamp —
+which is the same kind of finding as GOV.UK's absent motion.
+
 GOV.UK's total absence of motion is the clearest case. It is not a hole in the
 capture; it is the system. An agent given the palette alone would add a 150ms
 ease because that feels polished, and would be wrong in a way no colour check
