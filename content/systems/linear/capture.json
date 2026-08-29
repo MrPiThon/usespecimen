@@ -15,7 +15,7 @@
     "sampleRatio": 0.443
   },
   "harvestVersion": 3,
-  "clusterVersion": 9,
+  "clusterVersion": 10,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -54,7 +54,8 @@
         "weightShare": null,
         "variants": [],
         "source": "focusRing",
-        "occurrences": 3
+        "occurrences": 3,
+        "via": "resting"
       },
       "primaryForeground": null,
       "border": {
@@ -751,7 +752,7 @@
     "minRatio": 1.18
   },
   "warnings": [
-    "Accent #5e6ad2 taken from a focus ring, the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
+    "Accent #5e6ad2 taken from a focus ring (resting), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
     "Ignored #e4f222 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "No spacing grid explains 75% of values (best 0.647); site may not be on a grid.",
     "17 distinct type sizes collapsed to 12; the site may not have a real type scale.",

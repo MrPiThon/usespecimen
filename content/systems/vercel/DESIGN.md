@@ -6,13 +6,13 @@ colors:
   background: '#fafafa'
   foreground: '#171717'
   mutedForeground: '#4d4d4d'
-  primary: '#297a3a'
+  primary: '#0072f5'
   text-1: '#171717'
   text-2: '#4d4d4d'
   dark-background: '#000000'
   dark-foreground: '#ededed'
   dark-mutedForeground: '#a1a1a1'
-  dark-primary: '#62c073'
+  dark-primary: '#52a8ff'
 typography:
   fontFamily: 'GeistSans, "GeistSans Fallback"'
   headingFamily: 'GeistSans, "GeistSans Fallback"'
@@ -98,14 +98,14 @@ components:
     focus:
       opacity: '1'
     hover:
-      color: 'hsla(0, 0%, 9%, 1)'
+      color: '#171717'
 provenance:
   brand: 'Vercel'
   source: 'https://vercel.com/'
   capturedAt: '2026-08-29T00:18:45.190Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 3
-  clusterVersion: 9
+  clusterVersion: 10
 ---
 
 ## Overview
@@ -126,11 +126,14 @@ The symmetry is the point: both schemes hold roughly 17:1 for body and 8:1 for
 muted. Inverting this system is not a hue flip, it is a contrast-preserving
 mirror, and matching those ratios matters more than matching the greys.
 
-Two honesty notes from the extraction. The accent candidate `#297a3a` is a
-status green found in text, never on a filled control — do not treat it as a
-brand colour. And the only saturated colour in the interface is the focus ring,
-`hsla(212, 100%, 48%)`. The primary action itself is achromatic: black on
-white, inverting to white on black.
+The accent is `#0072f5`, and where it lives says everything: it appears only in
+the focus ring, never as a fill. The primary action itself is achromatic — black
+on white, inverting to white on black — so the single saturated colour in the
+whole system is spent telling you where the keyboard is.
+
+It inverts too, and not by staying put: the ring lightens to `#52a8ff` in dark
+mode. Holding a fixed accent across both schemes would sink it into the black
+canvas, so the accent moves for the same reason the greys do.
 
 ## Typography
 
@@ -160,9 +163,9 @@ serialisation of a very large number rather than anything a designer typed.
 ## Components
 
 Buttons take a 5% black wash on hover (`#0000000d`) and, on focus-visible, a
-two-ring indicator: 2px white then 4px `hsla(212, 100%, 48%)`. That blue ring
-is the single saturated element in the whole interface. Links darken to
-`hsla(0, 0%, 9%)` on hover.
+two-ring indicator: 2px white then 4px `#0072f5`. The white inner ring is what
+keeps the blue legible against either canvas, so both rings are load-bearing.
+Links darken to `hsla(0, 0%, 9%)` on hover.
 
 ## Do's and Don'ts
 
@@ -170,5 +173,5 @@ is the single saturated element in the whole interface. Links darken to
 - **Do** preserve the contrast symmetry when inverting — about 17:1 for body and
   8:1 for muted in both schemes.
 - **Don't** add drop shadows. This system is flat on purpose.
-- **Don't** promote `#297a3a` to a brand colour; it is a status green that the
-  extractor surfaced for want of any filled accent.
+- **Don't** spend the blue on anything but focus. Filling a button with it would
+  break the one rule the palette is built around.

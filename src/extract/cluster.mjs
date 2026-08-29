@@ -216,22 +216,50 @@ export function semanticColors(capture, primary) {
  * brand value, and that declared value is the observed one. Flattening it would
  * emit a colour that is genuinely on screen but is not the token.
  */
+const COLOR_IN_SHADOW = /rgba?\([^)]+\)|hsla?\([^)]+\)|#[0-9a-f]{3,8}\b/gi;
+
+/** Every box-shadow we hold, resting and state, weighted by elements reached. */
+function* shadowDeclarations(capture) {
+  for (const [value, w] of Object.entries(capture?.shadows ?? {})) {
+    yield { value, weight: w.count ?? 0, source: 'resting' };
+  }
+  // State shadows matter more than resting ones here: a :focus-visible ring is
+  // drawn in the brand colour precisely on the sites too restrained to fill
+  // anything with it. Vercel's whole interface is achromatic but for one ring.
+  for (const [key, w] of Object.entries(capture?.states ?? {})) {
+    const [kind, state, ...rest] = key.split('|');
+    for (const decl of rest.join('|').split(';')) {
+      const i = decl.indexOf(':');
+      if (i < 1 || decl.slice(0, i) !== 'box-shadow') continue;
+      yield { value: decl.slice(i + 1), weight: w.matched ?? 0, source: `${kind}:${state}` };
+    }
+  }
+}
+
 export function shadowAccents(capture) {
   const byHex = new Map();
-  for (const [value, w] of Object.entries(capture?.shadows ?? {})) {
-    for (const m of value.matchAll(/rgba?\([^)]+\)|#[0-9a-f]{3,8}\b/gi)) {
+  for (const { value, weight, source } of shadowDeclarations(capture)) {
+    for (const m of value.matchAll(COLOR_IN_SHADOW)) {
       const raw = parseColor(m[0]);
       if (!raw) continue;
       const rgb = { r: raw.r, g: raw.g, b: raw.b, a: 1 };
       if (toOklch(rgb).C < CHROMATIC) continue;
       const hex = toHex(rgb);
       const hit = byHex.get(hex);
-      if (hit) { hit.weight += w.count; hit.count += w.count; } else {
-        byHex.set(hex, { hex, rgb, weight: w.count, count: w.count, variants: [] });
+      if (hit) {
+        hit.weight += weight;
+        hit.count += weight;
+        hit.sources.add(source);
+      } else {
+        byHex.set(hex, {
+          hex, rgb, weight, count: weight, variants: [], sources: new Set([source]),
+        });
       }
     }
   }
-  return [...byHex.values()].sort(byWeightThen('hex'));
+  return [...byHex.values()]
+    .map(c => ({ ...c, sources: [...c.sources].sort() }))
+    .sort(byWeightThen('hex'));
 }
 
 /** The page backdrop everything else composites against. */
@@ -349,6 +377,7 @@ export function colorTokens(capture) {
   // No count floor on focus rings: only the focused element draws one, so they
   // are always rare, and a chromatic ring is unambiguously the brand colour.
   if (!primary && rings.length) { primary = rings[0]; primarySource = 'focusRing'; }
+  const ringVia = primarySource === 'focusRing' ? (primary.sources ?? []).join(', ') : null;
   if (!primary) {
     primary = iFg.find(isChromatic);
     primarySource = primary ? 'interactiveFg' : null;
@@ -384,7 +413,11 @@ export function colorTokens(capture) {
       ? share(primary, { interactiveBg: shares.iBg, interactiveFg: shares.iFg,
         textColors: shares.text }[primarySource])
       : null,
-    { source: primarySource, occurrences: primary?.count ?? null }),
+    {
+      source: primarySource,
+      occurrences: primary?.count ?? null,
+      ...(ringVia ? { via: ringVia } : {}),
+    }),
     primaryForeground: token(primaryForeground, share(primaryForeground, shares.iFg)),
     border: token(border[0], share(border[0], shares.border)),
   };
@@ -964,9 +997,10 @@ function collectWarnings(capture, colors, type, spacing, rounded, states) {
   if (!roles.foreground) w.push('No text color observed — the capture may have run before render.');
   if (!roles.primary) w.push('No chromatic accent found in buttons, focus rings, links or body text; palette is fully neutral.');
   else if (roles.primary.source === 'focusRing') {
-    w.push(`Accent ${roles.primary.hex} taken from a focus ring, the only chromatic `
-      + 'evidence on the page. The site never fills a button with it, so no '
-      + 'foreground pairing could be observed.');
+    w.push(`Accent ${roles.primary.hex} taken from a focus ring`
+      + (roles.primary.via ? ` (${roles.primary.via})` : '')
+      + ', the only chromatic evidence on the page. The site never fills a button '
+      + 'with it, so no foreground pairing could be observed.');
   } else if (roles.primary.source !== 'interactiveBg') {
     w.push(`Accent taken from ${roles.primary.source}, not a filled button — verify by eye.`);
   }
@@ -1047,8 +1081,10 @@ export function cluster(capture) {
     // 8: adds states from harvest v3 stylesheet rules.
     // 9: rounded.pillValue records the observed pill radius, so nothing
     //    downstream has to invent a conventional 9999px.
+    // 10: accent detection mines STATE box-shadows too, and parseColor learned
+    //     hsl()/hsla(), so focus rings authored in hsl stop being invisible.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 9,
+    clusterVersion: 10,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

@@ -444,10 +444,11 @@ dark-mode example and yields two genuinely different palettes:
 |---|---|---|
 | background | `#fafafa` | `#000000` |
 | foreground | `#171717` | `#ededed` |
-| primary | `#297a3a` | `#62c073` |
+| primary | `#0072f5` | `#52a8ff` |
 
-The accent differs by scheme. A single-scheme capture misses that entirely, and
-no amount of cleverness recovers it from one pass.
+The accent differs by scheme, and lightens rather than staying put — a fixed
+accent would sink into the black canvas. A single-scheme capture misses that
+entirely, and no amount of cleverness recovers it from one pass.
 
 Side effect worth recording: merging widths changed Linear's button radius from
 `9999px` to `8px`, because across three viewports the 8px buttons out-count the
@@ -459,6 +460,22 @@ It also caught an invented value in our own seeder: `rounded.pill` was hardcoded
 to `9999px`. `rounded.pillValue` now carries what was observed — `9999px` for
 Linear, but `100%` for Stripe and `3.35544e+07px` for Vercel, which is Chrome's
 own serialisation of a very large radius.
+
+**9. ~~Accent detection ignored state shadows.~~ DONE, cluster v10.**
+Found while writing Vercel's file. Its brand blue sits in the `:focus-visible`
+ring, but `shadowAccents` only mined the *resting* shadow histogram, so the
+accent fell through to `#297a3a` — a status green found in text, never on a
+control. Two fixes:
+
+- `parseColor` learned `hsl()`/`hsla()`, including `deg` units and slash-alpha.
+  It previously handled only rgb, hex and `color(srgb ...)`, so Vercel's ring —
+  authored as `hsla(212, 100%, 48%)` — would not have parsed even once found.
+- `shadowAccents` now mines state box-shadows alongside resting ones, weighted by
+  elements reached, and records which state supplied the winner.
+
+Vercel's accent is now `#0072f5` (via `button:focus-visible`), lightening to
+`#52a8ff` in dark. Stripe, GOV.UK and Linear are unchanged — their accents come
+from filled controls or resting shadows and never consult the new source.
 
 **7. No component-level tokens.**
 Their button carries `padding: 8px 14px` plus typography and radius references.

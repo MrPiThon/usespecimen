@@ -15,7 +15,7 @@
     "sampleRatio": 0.463
   },
   "harvestVersion": 3,
-  "clusterVersion": 9,
+  "clusterVersion": 10,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -42,11 +42,12 @@
         "variants": []
       },
       "primary": {
-        "hex": "#297a3a",
-        "weightShare": 0.0014,
+        "hex": "#0072f5",
+        "weightShare": null,
         "variants": [],
-        "source": "textColors",
-        "occurrences": 9
+        "source": "focusRing",
+        "occurrences": 75,
+        "via": "button:focus-visible, text:focus-visible"
       },
       "primaryForeground": null
     },
@@ -118,7 +119,7 @@
       },
       {
         "hex": "#297a3a",
-        "role": "primary",
+        "role": null,
         "hue": "green",
         "lightness": 0.515,
         "chroma": 0.125,
@@ -408,7 +409,7 @@
           "rulesConsidered": 1
         },
         "hover": {
-          "color": "hsla(0, 0%, 9%, 1)",
+          "color": "#171717",
           "matchedElements": 2,
           "rulesConsidered": 1
         }
@@ -420,7 +421,7 @@
           "rulesConsidered": 4
         },
         "hover": {
-          "textDecorationColor": "hsla(0, 0%, 79%, 1)",
+          "textDecorationColor": "#c9c9c9",
           "matchedElements": 33,
           "rulesConsidered": 7
         }
@@ -456,23 +457,23 @@
       },
       {
         "pair": "primary/background",
-        "fg": "#297a3a",
+        "fg": "#0072f5",
         "bg": "#fafafa",
-        "ratio": 5.11,
-        "kind": "text",
-        "criterion": "1.4.3 Contrast (Minimum)",
-        "min": 4.5,
-        "note": "accent is body text",
+        "ratio": 4.26,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a focus indicator, judged as a UI component",
         "aa": true,
-        "aaa": false
+        "aaa": null
       }
     ],
     "failures": 0,
     "textFailures": 0,
-    "minRatio": 5.11
+    "minRatio": 4.26
   },
   "warnings": [
-    "Accent taken from textColors, not a filled button — verify by eye.",
+    "Accent #0072f5 taken from a focus ring (button:focus-visible, text:focus-visible), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
     "No borders observed; border token omitted.",
     "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
     "Strided sample: 1559 of 3365 elements. Weights are relative only."
@@ -492,7 +493,7 @@
       "sampleRatio": 0.463
     },
     "harvestVersion": 3,
-    "clusterVersion": 9,
+    "clusterVersion": 10,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -519,11 +520,12 @@
           "variants": []
         },
         "primary": {
-          "hex": "#62c073",
-          "weightShare": 0.0014,
+          "hex": "#52a8ff",
+          "weightShare": null,
           "variants": [],
-          "source": "textColors",
-          "occurrences": 9
+          "source": "focusRing",
+          "occurrences": 75,
+          "via": "button:focus-visible, text:focus-visible"
         },
         "primaryForeground": null
       },
@@ -587,7 +589,7 @@
         },
         {
           "hex": "#62c073",
-          "role": "primary",
+          "role": null,
           "hue": "green",
           "lightness": 0.731,
           "chroma": 0.142,
@@ -877,7 +879,7 @@
             "rulesConsidered": 1
           },
           "hover": {
-            "color": "hsla(0, 0%, 93%, 1)",
+            "color": "#ededed",
             "matchedElements": 2,
             "rulesConsidered": 1
           }
@@ -889,7 +891,7 @@
             "rulesConsidered": 4
           },
           "hover": {
-            "textDecorationColor": "hsla(0, 0%, 27%, 1)",
+            "textDecorationColor": "#454545",
             "matchedElements": 33,
             "rulesConsidered": 7
           }
@@ -925,15 +927,15 @@
         },
         {
           "pair": "primary/background",
-          "fg": "#62c073",
+          "fg": "#52a8ff",
           "bg": "#000000",
-          "ratio": 9.31,
-          "kind": "text",
-          "criterion": "1.4.3 Contrast (Minimum)",
-          "min": 4.5,
-          "note": "accent is body text",
+          "ratio": 8.4,
+          "kind": "nonText",
+          "criterion": "1.4.11 Non-text Contrast",
+          "min": 3,
+          "note": "accent is a focus indicator, judged as a UI component",
           "aa": true,
-          "aaa": true
+          "aaa": null
         }
       ],
       "failures": 0,
@@ -941,7 +943,7 @@
       "minRatio": 8.13
     },
     "warnings": [
-      "Accent taken from textColors, not a filled button — verify by eye.",
+      "Accent #52a8ff taken from a focus ring (button:focus-visible, text:focus-visible), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
       "No borders observed; border token omitted.",
       "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
       "Strided sample: 1568 of 3389 elements. Weights are relative only."

@@ -189,9 +189,11 @@ calling:
 - `deltaE` converts sRGB→OKLab internally. Pass it RGB, not OKLab.
 - `contrastRatio(fg, bg)` flattens `fg` over `bg` itself, so `bg` must already be
   opaque.
-- `parseColor` handles `rgb()/rgba()`, 3/4/6/8-digit hex, and `color(srgb ...)`.
-  It returns `null` for everything else — gradients, `currentColor`, and named
-  colors like `red` are **not** handled, so null-check every parse.
+- `parseColor` handles `rgb()/rgba()`, `hsl()/hsla()` (with `deg` and
+  slash-alpha), 3/4/6/8-digit hex, and `color(srgb ...)`. It returns `null` for
+  everything else — gradients, `currentColor`, and named colors like `red` are
+  **not** handled, so null-check every parse. hsl matters more than it looks:
+  computed style rarely emits it, but authored stylesheet rules are full of it.
 
 Because harvest emits raw strings including translucent ones, the clusterer must
 `parseColor` and then `flatten` against the effective backdrop (`out.pageBg`)
@@ -216,8 +218,12 @@ is what makes the palette recognisable:
   <0.08). Without the chroma bound this returns the link color.
 - **card** — a surface near the background in lightness that the site never fills
   buttons with. Without both guards it returns the brightest CTA on the page.
-- **primary** — highest-weight chromatic cluster in `interactiveBg`, falling back
-  to interactive then body text; the emitted `source` says which.
+- **primary** — highest-weight chromatic cluster in `interactiveBg` (it must
+  recur), then chromatic colours found in box-shadows both resting *and* in
+  `:focus-visible`/`:hover` state rules, then interactive text, then body text.
+  The emitted `source` says which, and `via` names the state for ring accents.
+  A restrained system keeps its brand colour in the focus ring and nowhere else —
+  that is where both Linear's and Vercel's accents come from.
 - **border** — top border cluster by count, not area.
 
 `typography.roles` is built from those bundles. `body` is the style that sets the

@@ -26,7 +26,36 @@ export function parseColor(str) {
     if (parts.length < 3) return null;
     return { r: parts[0] * 255, g: parts[1] * 255, b: parts[2] * 255, a: parts.length > 3 ? parts[3] : 1 };
   }
+  // hsl()/hsla(). Computed style rarely returns these, but stylesheet rules are
+  // full of them — Vercel's entire focus ring is authored in hsla().
+  m = s.match(/^hsla?\(([^)]+)\)$/);
+  if (m) {
+    const parts = m[1].split(/[,\/\s]+/).filter(Boolean);
+    if (parts.length < 3) return null;
+    const h = parseFloat(parts[0]);
+    const sat = parseFloat(parts[1]) / 100;
+    const l = parseFloat(parts[2]) / 100;
+    if ([h, sat, l].some(Number.isNaN)) return null;
+    let a = 1;
+    if (parts.length > 3) {
+      a = parts[3].endsWith('%') ? parseFloat(parts[3]) / 100 : parseFloat(parts[3]);
+      if (Number.isNaN(a)) a = 1;
+    }
+    return { ...hslToRgb(h, sat, l), a };
+  }
   return null;
+}
+
+/** HSL -> sRGB, 0-255 channels. Hue in degrees; other units are rare enough in
+ *  authored CSS that a bare number is the only case worth handling. */
+function hslToRgb(h, s, l) {
+  const c = (1 - Math.abs(2 * l - 1)) * s;
+  const hp = (((h % 360) + 360) % 360) / 60;
+  const x = c * (1 - Math.abs((hp % 2) - 1));
+  const m = l - c / 2;
+  const [r, g, b] = hp < 1 ? [c, x, 0] : hp < 2 ? [x, c, 0] : hp < 3 ? [0, c, x]
+    : hp < 4 ? [0, x, c] : hp < 5 ? [x, 0, c] : [c, 0, x];
+  return { r: (r + m) * 255, g: (g + m) * 255, b: (b + m) * 255 };
 }
 
 export function toHex({ r, g, b }) {
