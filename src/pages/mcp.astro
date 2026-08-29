@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site.mjs';
+
+const config = `{
+  "mcpServers": {
+    "specimen": {
+      "command": "node",
+      "args": ["/absolute/path/to/usespecimen/src/mcp.mjs"]
+    }
+  }
+}`;
+---
+
+<Base
+  title="MCP server — Specimen"
+  description="Let a coding agent search and fetch verified DESIGN.md files without leaving the editor."
+>
+  <div class="prose">
+    <h1 style="margin-top:2rem;">The MCP server</h1>
+    <p>
+      Exposes the registry to a coding agent over the Model Context Protocol, so
+      it can find and fetch a design system without a browser and without you
+      leaving the editor.
+    </p>
+
+    <h2>Install</h2>
+    <p>
+      <strong>Not published to npm yet</strong>, so it runs from a clone. Requires
+      Node 24.
+    </p>
+    <pre><code>git clone https://github.com/MrPiThon/usespecimen
+cd usespecimen
+npm install</code></pre>
+
+    <p>Then point your MCP client at it:</p>
+    <pre><code>{config}</code></pre>
+    <p>
+      The path must be absolute — an MCP client does not run the command from
+      your project directory. To read from a registry other than
+      <code>{SITE}</code>, set <code>SPECIMEN_REGISTRY</code> in the server's
+      environment; there is no argv to pass one on.
+    </p>
+
+    <h2>Tools</h2>
+
+    <h3><code>search_designs</code></h3>
+    <p>
+      Find a system by free text, or filter on facets taken straight from the
+      extracted tokens.
+    </p>
+    <ul>
+      <li><code>query</code> — matched against slug, name, brand and description</li>
+      <li><code>polarity</code> — <code>light</code> or <code>dark</code>, the
+        polarity of the default palette</li>
+      <li><code>supportsDark</code> — only systems that respond to
+        <code>prefers-color-scheme</code></li>
+    </ul>
+    <p>
+      Returns slugs, palettes and the date each system was verified. A search
+      that matches nothing says what the registry does carry, so an agent widens
+      its query instead of concluding the registry is empty.
+    </p>
+
+    <h3><code>get_design</code></h3>
+    <p>
+      Takes a <code>slug</code> and returns that system's DESIGN.md
+      <strong>verbatim</strong> — writing the result to disk reproduces the
+      registry's file byte for byte. Provenance is already inside the
+      frontmatter, so nothing is prepended that would end up committed as part
+      of your DESIGN.md.
+    </p>
+    <p>
+      The file is validated before it is returned. The registry cannot serve a
+      non-conformant file — the build refuses to produce one — but this is the
+      last point before an agent follows the file as though it were sound, so it
+      is checked here rather than assumed.
+    </p>
+
+    <h2>Asking for it</h2>
+    <p>
+      Once connected, an ordinary request is enough: <em>"find a dark design
+      system with a restrained accent and set this project up with it."</em> The
+      agent searches, fetches, writes DESIGN.md, and has the tokens it needs
+      before writing any UI.
+    </p>
+
+    <p style="margin-top:2rem;">
+      Prefer the terminal? <a href="/cli">The CLI</a> does the same job.
+    </p>
+  </div>
+</Base>

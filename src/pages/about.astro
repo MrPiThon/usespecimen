@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const systems = await getCollection('systems');
+const brands = systems.map(s => s.data.provenance.brand).sort();
+// Stated from the data rather than asserted in prose, so the claim cannot drift
+// away from the corpus without someone noticing.
+const derived = systems.filter(s => s.data.provenance.derivedFrom);
+---
+
+<Base
+  title="About — Specimen"
+  description="How these files are made, what we claim, the trademark and provenance policy, and how to have a system removed."
+>
+  <div class="prose">
+    <h1 style="margin-top:2rem;">About</h1>
+
+    <p>
+      Specimen is a registry of <strong>DESIGN.md</strong> files — machine-readable
+      design-system briefs that a coding agent reads so the UI it generates matches
+      a chosen visual language. The format is
+      <a href="https://github.com/google-labs-code/design.md" rel="noopener">a spec from Google Labs</a>,
+      currently alpha.
+    </p>
+
+    <h2>How a file here is made</h2>
+    <p>
+      A headless browser loads the source page at three widths under both colour
+      schemes and reads <code>getComputedStyle</code> on every visible element.
+      Those measurements are clustered into a token set by deterministic code. A
+      model writes the prose sections, and only ever about values it was handed —
+      it never picks a colour.
+    </p>
+    <p>
+      That order matters more than it sounds. Every value in these files was
+      measured from a page that existed on the date the file records. Nothing was
+      described from a screenshot, and no hex code was chosen for looking right.
+    </p>
+
+    <h2>What we claim, and what we don't</h2>
+    <ul>
+      <li><strong>Dated, not current.</strong> Each file records when it was
+        captured. Sites get redesigned; a file is a photograph, not a feed.</li>
+      <li><strong>Measured, not exhaustive.</strong> One page, at three widths.
+        A system's full range lives behind states and routes a crawler doesn't
+        reach, and each file lists what it could not observe rather than
+        filling the gap.</li>
+      <li><strong>Conformant.</strong> Every file passes the spec's section
+        rules at build time. A file that fails cannot reach this site.</li>
+      <li><strong>Not affiliated.</strong> Nothing here is endorsed by, or
+        produced in cooperation with, the companies named.</li>
+    </ul>
+    <p>
+      The capture that produced each file ships beside it, so any claim on a
+      system's page can be checked rather than taken on trust.
+    </p>
+
+    <h2>Trademarks and brand names</h2>
+    <p>
+      Brand names appear for identification only — to say which site a file was
+      measured from. That is nominative use: the name is necessary to identify
+      the subject, no more of it is used than needed, and nothing suggests
+      sponsorship or endorsement.
+    </p>
+    <p>
+      All trademarks belong to their owners{brands.length > 0 && <>, including {brands.join(', ')}</>}.
+      We do not use brand logos as page furniture, and files are named for the{' '}
+      <em>aesthetic</em> rather than the company — <code>Civic Sans</code>, not
+      <code>GOV.UK</code> — so that an agent reading the file is never told to
+      build a company that does not exist.
+    </p>
+
+    <h2>Removal</h2>
+    <p>
+      If you own a brand represented here and would rather it were not, we will
+      remove it. Open an issue on
+      <a href="https://github.com/MrPiThon/usespecimen/issues" rel="noopener">the repository</a>
+      saying which system, or send the same by email. No justification is needed
+      and there is nothing to argue about — removal is the whole process, and the
+      file goes with it.
+    </p>
+
+    <h2>Provenance and licensing</h2>
+    <p>
+      {derived.length === 0
+        ? <>No file in this registry is derived from another corpus. Every one was
+            extracted here, from the live site, by the pipeline described above.</>
+        : <>{derived.length} file(s) are derived from another corpus and carry a
+            <code>derived_from</code> field naming it.</>}
+      {' '}Any file that is ever seeded from a third-party collection will record
+      its origin in that field and carry the upstream licence with it —
+      re-verifying against a live site does not by itself clear an attribution
+      obligation.
+    </p>
+    <p>
+      The extraction pipeline and this site are open source. The design of the
+      systems described belongs to the companies that made them; the measurements
+      and the prose are ours.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Corrections, removals and everything else:
+      <a href="https://github.com/MrPiThon/usespecimen/issues" rel="noopener">github.com/MrPiThon/usespecimen</a>.
+      A correction with evidence — a token we measured wrong, a system that has
+      since been redesigned — is the most useful thing you can send.
+    </p>
+  </div>
+</Base>

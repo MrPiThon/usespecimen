@@ -1,0 +1,77 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site.mjs';
+---
+
+<Base
+  title="CLI — Specimen"
+  description="Fetch a verified DESIGN.md into your repository from the command line."
+>
+  <div class="prose">
+    <h1 style="margin-top:2rem;">The CLI</h1>
+    <p>
+      Fetches a verified DESIGN.md into your repository and prints the prompt to
+      hand your agent. It validates the file before writing it, so a
+      non-conformant file never reaches your working directory.
+    </p>
+
+    <h2>Install</h2>
+    <p>
+      <strong>Not published to npm yet.</strong> The scoped package name is
+      reserved but nothing has been released, so <code>npx</code> will not find
+      it. Until it ships, run it from a clone:
+    </p>
+    <pre><code>git clone https://github.com/MrPiThon/usespecimen
+cd usespecimen
+npm install</code></pre>
+    <p>
+      Requires Node 24. The commands below need no browser — only
+      <code>extract</code> does, and that is for building the registry rather
+      than consuming it.
+    </p>
+
+    <h2>Commands</h2>
+
+    <h3>list</h3>
+    <p>Show what the registry carries, with each system's palette and the date it was verified.</p>
+    <pre><code>npm run list</code></pre>
+
+    <h3>add</h3>
+    <p>
+      Write one system's DESIGN.md into the current directory. Refuses to
+      overwrite an existing file without <code>--force</code>, and refuses
+      outright if the fetched file does not conform to the spec.
+    </p>
+    <pre><code>npm run add -- stripe
+npm run add -- stripe --force</code></pre>
+
+    <h3>Pointing at another registry</h3>
+    <p>
+      Both commands talk to <code>{SITE}</code> by default. <code>--registry</code>
+      points them somewhere else — a local <code>npm run build && npx astro preview</code>,
+      or your own deployment:
+    </p>
+    <pre><code>npm run list -- --registry http://localhost:4321</code></pre>
+
+    <h2>Building the registry</h2>
+    <p>
+      The other half of the CLI is the extraction pipeline. It needs Chromium
+      (<code>npx playwright install chromium</code>) and is only relevant if you
+      are adding systems rather than consuming them.
+    </p>
+    <pre><code>npm run extract -- https://stripe.com
+npm run cluster -- out/stripe/capture.json</code></pre>
+    <p>
+      <code>extract</code> captures three widths under both colour schemes and
+      writes <code>out/&lt;slug&gt;/capture.json</code> plus a screenshot.
+      <code>cluster</code> re-runs the deterministic half over a saved capture
+      with no browser and no network, which is the loop for tuning the clusterer
+      against fixtures.
+    </p>
+
+    <p style="margin-top:2rem;">
+      Prefer to skip the terminal? <a href="/mcp">The MCP server</a> gives an
+      agent the same access without one.
+    </p>
+  </div>
+</Base>
