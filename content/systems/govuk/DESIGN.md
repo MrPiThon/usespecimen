@@ -58,6 +58,8 @@ typography:
       fontSize: '19px'
       fontWeight: 700
       lineHeight: 1.32
+rounded:
+  button: '0px'
 spacing:
   s1: '5px'
   s2: '8px'
@@ -137,6 +139,7 @@ provenance:
 
 
 
+
 ## Overview
 
 Public-service design optimised for being read by everyone, on anything,
@@ -168,8 +171,12 @@ largest heading is deliberately wide.
 
 ## Layout
 
-A 5px base unit rather than the more common 4 or 8, obeyed by 76% of observed
-spacing. The run is 5, 10, 15, 20, 30, 60.
+**No spacing grid in the current capture.** The best candidate explains 74% of
+observed values, just under the threshold — and this system is the registry's
+known boundary case: it has measured either side of the line across captures,
+which is why the clusterer applies hysteresis here. The observed run is 5, 8, 9,
+10, 15, 19, 20, 30, 50, 60, and the 5px rhythm is visible in it even though it
+does not explain enough of the page to be published as a base.
 
 **A 610px measure** — less than half the width of every commercial system in
 this registry, and the single most consequential number in the file. This is a
@@ -243,6 +250,7 @@ because it feels polished would be the single most un-GOV.UK thing you could do.
 **What this file does not constrain:** what the pages say, how many there are,
 or how the content is organised. It constrains how it looks and how it behaves —
 narrow, sharp, text-only, instant.
+
 
 
 

@@ -1,0 +1,444 @@
+---
+// The token sheet: every value in a file rendered as the thing it describes.
+//
+// A table of hex codes tells you a system has `#7f7dfc` in it. A swatch tells
+// you what that is, and the contrast figure beside it tells you whether you can
+// put text on it. The whole point of measuring these values is that we can show
+// them rather than list them, and a competitor scraping a catalogue cannot.
+//
+// Everything renders inside the SYSTEM's own tokens, scoped the same way the
+// component preview is: a `--pv-` custom property block on a wrapper, so a light
+// system renders light on this dark site rather than borrowing its palette.
+import { previewVars } from '../lib/preview.mjs';
+import { parseColor, contrastRatio, flatten, toOklch } from '../lib/color.mjs';
+
+interface Props { data: any; dark?: boolean; }
+const { data, dark = false } = Astro.props;
+
+const prefix = dark ? 'dark-' : '';
+const all = data.colors ?? {};
+const pick = (name: string) => all[`${prefix}${name}`] ?? (dark ? all[name] : undefined) ?? all[name];
+
+const bgHex = pick('background') ?? '#ffffff';
+const bgRgb = parseColor(bgHex) ?? { r: 255, g: 255, b: 255, a: 1 };
+
+/**
+ * Contrast against the colour this token is actually used ON, not against the
+ * site's canvas and not always against the system's either.
+ *
+ * `primaryForeground` is the label colour for a filled control, so it belongs
+ * against `primary`. Measuring it against the page reported Stripe's white
+ * button label as 1:1 and flagged it red — a real pairing scored against a
+ * surface it never touches.
+ */
+function ratio(name: string, hex: string): number | null {
+  const c = parseColor(hex);
+  if (!c) return null;
+  const againstHex = name === 'primaryForeground' ? (pick('primary') ?? bgHex) : bgHex;
+  const against = parseColor(againstHex) ?? bgRgb;
+  return Math.round(contrastRatio(flatten(c, against), against) * 100) / 100;
+}
+
+const ROLE_ORDER = ['background', 'foreground', 'mutedForeground', 'card', 'border',
+  'primary', 'primaryForeground'];
+const isRamp = (n: string) => /^(surface|text)-\d+$/.test(n);
+const isSemantic = (n: string) => ['success', 'danger', 'warning', 'info'].includes(n);
+const isGradient = (n: string) => /^gradient-\d+$/.test(n);
+
+const entries = Object.entries(all)
+  .filter(([n, v]) => typeof v === 'string' && !n.startsWith('dark-'))
+  .map(([n, v]) => [dark && all[`dark-${n}`] ? `${n}` : n, (dark && all[`dark-${n}`]) || v] as [string, string]);
+
+const groups = [
+  { title: 'Roles', note: 'The named jobs a token does.', items: entries.filter(([n]) => ROLE_ORDER.includes(n)).sort((a, b) => ROLE_ORDER.indexOf(a[0]) - ROLE_ORDER.indexOf(b[0])) },
+  { title: 'Ramps', note: 'Ordered tiers: text by contrast, surface by distance from the canvas.', items: entries.filter(([n]) => isRamp(n)) },
+  { title: 'Semantic', note: 'Read from tinted panels — the declared colour, not the composite.', items: entries.filter(([n]) => isSemantic(n)) },
+  { title: 'Gradient stops', note: 'Colours this design uses only inside a gradient. Never painted as a fill.', items: entries.filter(([n]) => isGradient(n)) },
+].filter(g => g.items.length);
+
+// Type scale, largest first, rendered at its real size in the real stack.
+const scale = Object.entries(data.typography?.scale ?? {})
+  .filter(([, v]) => typeof v === 'string')
+  .map(([name, v]) => ({ name, px: parseFloat(v as string) }))
+  .filter(s => Number.isFinite(s.px))
+  .sort((a, b) => b.px - a.px);
+
+const radii = Object.entries(data.rounded ?? {})
+  .filter(([, v]) => typeof v === 'string')
+  .map(([name, v]) => ({ name, value: v as string, px: parseFloat(v as string) }))
+  .filter(r => Number.isFinite(r.px))
+  .sort((a, b) => a.px - b.px);
+
+const shadows = Object.entries(data.elevation ?? {}).filter(([, v]) => typeof v === 'string');
+
+const spacing = Object.entries(data.spacing ?? {})
+  .filter(([n, v]) => n !== 'base' && typeof v === 'string')
+  .map(([name, v]) => ({ name, px: parseFloat(v as string) }))
+  .filter(s => Number.isFinite(s.px) && s.px > 0)
+  .sort((a, b) => a.px - b.px);
+
+const bg = data.backgrounds ?? null;
+const motion = data.motion ?? null;
+const layout = data.layout ?? {};
+const type = data.typography ?? {};
+
+// Sample text sized so a reader can judge the face, not the words.
+const SAMPLE = 'Design tokens measured from the live site';
+---
+
+<div class="sp" style={previewVars(data, { dark })}>
+
+  {groups.length > 0 && (
+    <section class="sp-block">
+      <h3>Colour</h3>
+      {groups.map(g => (
+        <div class="sp-group">
+          <p class="sp-note"><strong>{g.title}</strong> — {g.note}</p>
+          <div class="sw-grid">
+            {g.items.map(([name, hex]) => {
+              const r = ratio(name, hex);
+              // A ratio against the canvas is meaningless for the canvas itself,
+              // and misleading for a decorative stop, so it is shown only where
+              // a reader could act on it.
+              const showRatio = r !== null && name !== 'background' && !isGradient(name);
+              // Pass/fail colouring belongs only to tokens that carry text.
+              // Marking `card` at 1.09:1 red said a surface had failed a
+              // threshold it was never held to — the same source-aware rule the
+              // contrast audit already follows.
+              const isText = /^(foreground|mutedForeground|primaryForeground|text-\d+)$/.test(name);
+              return (
+                <figure class="sw">
+                  <div class="sw-chip" style={`background:${hex}`}></div>
+                  <figcaption>
+                    <span class="sw-name">{name}</span>
+                    <code>{hex}</code>
+                    {showRatio && (
+                      <span
+                        class={`sw-ratio ${isText ? (r >= 4.5 ? 'ok' : r >= 3 ? 'mid' : 'low') : ''}`}
+                        title={name === 'primaryForeground'
+                          ? `${r}:1 against primary — text needs 4.5:1`
+                          : isText
+                            ? `${r}:1 against the canvas — text needs 4.5:1`
+                            : `${r}:1 against the canvas; this token carries no text`}
+                      >{r}:1</span>
+                    )}
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </section>
+  )}
+
+  {scale.length > 0 && (
+    <section class="sp-block">
+      <h3>Type scale</h3>
+      <p class="sp-note">
+        Rendered at the measured size in the file's own stack. Webfonts are not
+        loaded, so the face falls back — the sizes and weights are the measurement.
+      </p>
+      <div class="ty-list">
+        {scale.map(s => (
+          <div class="ty-row">
+            <span class="ty-meta">{s.name}<em>{s.px}px</em></span>
+            <span class="ty-sample" style={`font-size:${s.px}px`}>Ag</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {(type.fontFamily || type.baseSize) && (
+    <section class="sp-block">
+      <h3>Body</h3>
+      <p class="sp-body">{SAMPLE}. {SAMPLE.toLowerCase()}.</p>
+      <p class="sp-note">
+        {[type.fontFamily?.split(',')[0].replace(/['"]/g, ''),
+          type.baseSize, type.lineHeight ? `${type.lineHeight} leading` : null,
+          type.weight ? `weight ${type.weight}` : null,
+          type.letterSpacing ? `tracking ${type.letterSpacing}` : null,
+        ].filter(Boolean).join(' · ')}
+      </p>
+    </section>
+  )}
+
+  {radii.length > 0 && radii.every(r => r.px === 0) && (
+    <section class="sp-block">
+      <h3>Shape</h3>
+      <p class="sp-note">
+        <strong>No radius anywhere.</strong> Every corner in this system is square.
+        Saying so beats omitting the section, which would read as missing data.
+      </p>
+    </section>
+  )}
+
+  {radii.some(r => r.px > 0) && (
+    <section class="sp-block">
+      <h3>Shape</h3>
+      <div class="sh-row">
+        {radii.map(r => (
+          <figure class="sh">
+            <div class="sh-box" style={`border-radius:${r.value}`}></div>
+            <figcaption>{r.name}<em>{r.px >= 999 ? 'full' : r.value}</em></figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {shadows.length > 0 && (
+    <section class="sp-block">
+      <h3>Elevation</h3>
+      <div class="el-row">
+        {shadows.map(([name, value]) => (
+          <figure class="el">
+            <div class="el-box" style={`box-shadow:${value}`}></div>
+            <figcaption>{name}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {spacing.length > 0 && (
+    <section class="sp-block">
+      <h3>Spacing{data.spacing?.base ? ` — ${data.spacing.base} base` : ' — no grid'}</h3>
+      <div class="sc-list">
+        {spacing.map(s => (
+          <div class="sc-row">
+            <span class="sc-meta">{s.px}px</span>
+            <span class="sc-bar" style={`width:${Math.min(s.px, 320)}px`}></span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {(bg?.pattern || bg?.wash) && (
+    <section class="sp-block">
+      <h3>Canvas</h3>
+      <div
+        class="cv"
+        style={[
+          bg.patternImage ? `background-image:${bg.patternImage}` : null,
+          bg.wash && !bg.patternImage ? `background-image:${bg.wash}` : null,
+          bg.patternSize ? `background-size:${bg.patternSize}` : null,
+        ].filter(Boolean).join(';')}
+      ></div>
+      <p class="sp-note">
+        {[bg.pattern ? `${bg.pattern}${bg.patternSize ? ` at ${bg.patternSize}` : ''}` : null,
+          bg.wash ? 'gradient wash' : null,
+          bg.mixBlendMode ? `blended ${bg.mixBlendMode}` : null,
+          bg.backdropFilter ? `backdrop ${bg.backdropFilter}` : null,
+        ].filter(Boolean).join(' · ')}
+        {bg.pattern === 'noise' && !bg.patternImage
+          && ' — the source is an external raster, so its URL is withheld and this tile is not shown.'}
+      </p>
+    </section>
+  )}
+
+  <section class="sp-block">
+    <h3>Motion</h3>
+    {motion
+      ? (
+        <>
+          <button class="mo" type="button">Hover me</button>
+          <p class="sp-note">{motion.duration} {motion.easing} — the file's own timing, applied here.</p>
+        </>
+      )
+      : (
+        <p class="sp-note">
+          <strong>None.</strong> No control on the captured page declared a transition,
+          so state changes in this system are instant. That is a measurement, not a gap.
+        </p>
+      )}
+  </section>
+
+  {(layout.measure || layout.navHeight || layout.sectionWidth) && (
+    <section class="sp-block">
+      <h3>Structure</h3>
+      <dl class="st">
+        {layout.measure && <><dt>Measure</dt><dd>{layout.measure}</dd></>}
+        {layout.sectionSpacing && <><dt>Section gap</dt><dd>{layout.sectionSpacing}</dd></>}
+        {layout.gridColumns && <><dt>Card grid</dt><dd>{layout.gridColumns} columns</dd></>}
+        {layout.navHeight && <><dt>Nav</dt><dd>{layout.navHeight}, {layout.navPosition}</dd></>}
+        {layout.heroHeight && (
+          <><dt>Hero</dt><dd>
+            {[layout.heroHeight, layout.heroHeadingSize, layout.heroAlign].filter(Boolean).join(', ')}
+          </dd></>
+        )}
+        {layout.sectionWidth && (
+          <><dt>Sections</dt><dd>
+            {[layout.sectionWidth,
+              layout.sectionMedia === 'none' ? 'no imagery' : layout.sectionMedia,
+              layout.sectionCopy && `${layout.sectionCopy} copy`].filter(Boolean).join(', ')}
+          </dd></>
+        )}
+      </dl>
+      {layout.measure && (
+        <div class="me" style={`--me:${layout.measure}`}>
+          <span></span>
+          <em>{layout.measure} of 1440px</em>
+        </div>
+      )}
+    </section>
+  )}
+</div>
+
+<style>
+  /* Everything below paints with the previewed system's tokens, never the
+     site's. `--pv-*` come from previewVars(); the fallbacks are the preview's
+     own neutrals, deliberately plain so a thin file looks thin. */
+  .sp {
+    background: var(--pv-bg, #fff);
+    color: var(--pv-fg, #111);
+    font-family: var(--pv-font, system-ui, sans-serif);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: clamp(1rem, 3vw, 2rem);
+    display: grid;
+    gap: 2.25rem;
+    overflow: hidden;
+  }
+  .sp-block > h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--pv-muted, #666);
+  }
+  .sp-note {
+    margin: 0.35rem 0 0;
+    font-size: 0.8rem; line-height: 1.5;
+    color: var(--pv-muted, #666);
+    max-width: 62ch;
+  }
+  /* The site styles `strong` with its own near-white --fg-strong, which landed
+     invisible on a light system's canvas. Everything inside the sheet takes its
+     colour from the previewed file, not from the page around it. */
+  .sp strong { color: inherit; font-weight: 600; }
+  .sp-group { margin-top: 1rem; }
+  .sp-group:first-of-type { margin-top: 0.5rem; }
+
+  .sw-grid {
+    display: grid; gap: 0.6rem; margin-top: 0.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+  .sw { margin: 0; min-width: 0; }
+  .sw-chip {
+    height: 3.25rem; border-radius: var(--pv-radius, 6px);
+    /* A hairline so white-on-white still reads as a swatch. */
+    box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.35);
+  }
+  .sw figcaption {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem;
+    margin-top: 0.35rem; font-size: 0.72rem; line-height: 1.4;
+  }
+  .sw-name { font-weight: 600; }
+  .sw figcaption code { font-size: 0.72rem; color: var(--pv-muted, #666); }
+  .sw-ratio {
+    margin-left: auto; font-variant-numeric: tabular-nums;
+    color: var(--pv-muted, #666);
+  }
+  .sw-ratio.ok { color: #2e7d32; }
+  .sw-ratio.mid { color: #b26a00; }
+  .sw-ratio.low { color: #c62828; }
+
+  .ty-list { display: grid; gap: 0.1rem; margin-top: 0.6rem; }
+  .ty-row {
+    display: flex; align-items: baseline; gap: 1rem;
+    padding: 0.15rem 0; border-bottom: 1px solid rgba(128, 128, 128, 0.14);
+    overflow: hidden;
+  }
+  .ty-meta {
+    flex: 0 0 7rem; font-size: 0.7rem;
+    color: var(--pv-muted, #666); display: flex; justify-content: space-between;
+  }
+  .ty-meta em { font-style: normal; font-variant-numeric: tabular-nums; }
+  .ty-sample { line-height: 1.1; white-space: nowrap; }
+
+  .sp-body {
+    margin: 0.5rem 0 0;
+    font-size: var(--pv-size, 16px);
+    line-height: var(--pv-leading, 1.5);
+    font-weight: var(--pv-weight, 400);
+    letter-spacing: var(--pv-tracking, normal);
+    max-width: 46ch;
+  }
+
+  .sh-row, .el-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.6rem; }
+  .sh { margin: 0; text-align: center; }
+  .sh-box {
+    width: 4rem; height: 4rem;
+    background: var(--pv-card, #f4f4f5);
+    box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.35);
+  }
+  .sh figcaption, .el figcaption {
+    margin-top: 0.35rem; font-size: 0.7rem; color: var(--pv-muted, #666);
+    display: flex; flex-direction: column;
+  }
+  .sh figcaption em { font-style: normal; }
+  .el { margin: 0; }
+  .el-box {
+    width: 7rem; height: 4rem; border-radius: var(--pv-radius, 6px);
+    background: var(--pv-card, #fff);
+  }
+
+  .sc-list { display: grid; gap: 0.3rem; margin-top: 0.6rem; }
+  .sc-row { display: flex; align-items: center; gap: 0.75rem; }
+  .sc-meta {
+    flex: 0 0 3.5rem; font-size: 0.7rem; text-align: right;
+    color: var(--pv-muted, #666); font-variant-numeric: tabular-nums;
+  }
+  .sc-bar {
+    height: 0.6rem; border-radius: 2px;
+    background: var(--pv-primary, var(--pv-fg, #111)); opacity: 0.75;
+  }
+
+  .cv {
+    height: 7rem; margin-top: 0.6rem;
+    border-radius: var(--pv-radius, 6px);
+    background-color: var(--pv-bg, #fff);
+    box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.35);
+  }
+
+  .mo {
+    margin-top: 0.4rem;
+    font: inherit; font-size: 0.85rem;
+    padding: var(--pv-btn-padding, 0.5rem 1rem);
+    border: 1px solid var(--pv-border, rgba(128, 128, 128, 0.4));
+    border-radius: var(--pv-btn-radius, var(--pv-radius, 6px));
+    background: var(--pv-btn-bg, var(--pv-card, #f4f4f5));
+    color: var(--pv-btn-fg, var(--pv-fg, #111));
+    cursor: pointer;
+    /* The previewed file's timing, not the site's. previewVars always sets
+       --motion, so a system that declares none resolves to 0s here. */
+    transition: transform var(--motion, 0s) var(--motion-ease, linear),
+                opacity var(--motion, 0s) var(--motion-ease, linear);
+  }
+  .mo:hover { transform: translateY(-3px); opacity: 0.85; }
+
+  .st {
+    display: grid; grid-template-columns: auto 1fr;
+    gap: 0.3rem 1rem; margin: 0.6rem 0 0; font-size: 0.8rem;
+  }
+  .st dt { color: var(--pv-muted, #666); }
+  .st dd { margin: 0; }
+
+  .me { margin-top: 0.9rem; }
+  .me span {
+    display: block; height: 0.5rem; border-radius: 2px;
+    background: var(--pv-primary, var(--pv-fg, #111)); opacity: 0.55;
+    /* The measure against a 1440px capture viewport, so the bar means something. */
+    width: min(100%, calc(var(--me) / 1440 * 100%));
+  }
+  .me em {
+    display: block; margin-top: 0.3rem; font-style: normal;
+    font-size: 0.7rem; color: var(--pv-muted, #666);
+  }
+
+  @media (max-width: 34rem) {
+    .ty-meta { flex-basis: 5.5rem; }
+  }
+</style>

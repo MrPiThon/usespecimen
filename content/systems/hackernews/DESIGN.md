@@ -52,6 +52,8 @@ typography:
       fontFamily: 'Verdana, Geneva, sans-serif'
       fontSize: '13.33px'
       fontWeight: 400
+rounded:
+  button: '0px'
 spacing:
   s1: '1px'
   s2: '2px'
@@ -73,6 +75,7 @@ provenance:
   harvestVersion: 8
   clusterVersion: 17
 ---
+
 
 ## Overview
 
@@ -147,3 +150,4 @@ instantaneous.
 
 **What this file does not constrain:** everything above the paint. There is no
 measurable layout system here to copy, and that absence is itself the answer.
+

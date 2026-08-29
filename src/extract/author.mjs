@@ -96,6 +96,11 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
   for (const s of t.scale) scale[s.name] = `${s.px}px`;
 
   const rounded = {};
+  // A deliberately sharp system emitted NO rounded group at all, which reads as
+  // "not measured" rather than "measured as zero" — and an agent handed no
+  // radius invents one, which is the failure this project exists to prevent.
+  // Hacker News and GOV.UK are square on purpose; 0px is the measurement.
+  if (cap.rounded.sharp) rounded.button = '0px';
   for (const s of cap.rounded.scale) rounded[s.name] = `${s.px}px`;
   if (cap.rounded.button) rounded.button = cap.rounded.button;
   // The observed pill radius, never a conventional 9999px we made up.

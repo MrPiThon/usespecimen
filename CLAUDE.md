@@ -148,6 +148,23 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   only on pairs the file's own naming makes identifiable — `background`/`canvas`,
   `foreground`/`ink`, `on-x`/`xForeground` — and everything it could not pair is
   listed, because silently checking nothing looks exactly like silently passing.
+- `src/components/Specimen.astro` is the token sheet: every value rendered as
+  the thing it describes rather than listed in a table. Swatches with contrast,
+  the type scale at its measured sizes, radii drawn, shadows cast, spacing as
+  bars, the canvas gradient painted, and a control carrying the file's own
+  timing. It renders inside the previewed system's `--pv-*` block, so a light
+  system stays light on this dark site.
+  Contrast is **pair-aware**: `primaryForeground` is scored against `primary`,
+  not the canvas, and pass/fail colouring is applied only to tokens that carry
+  text — `card` at 1.09:1 is a fact about a surface, not a failure. The site
+  styles `strong` with its own near-white `--fg-strong`, which renders invisible
+  on a light system, so the sheet resets it to `inherit`.
+- The detail page is **tabbed** (Specimen / Preview / Notes / DESIGN.md) rather
+  than one long scroll. Without JS the first panel shows and the raw file stays
+  reachable at `/r/<slug>/DESIGN.md`, which is linked from the panel.
+- A **deliberately sharp** system emits `rounded: { button: '0px' }`. It used to
+  emit no `rounded` group at all, which reads as "not measured" rather than
+  "measured as zero" — and an agent handed no radius invents one.
 - `src/lib/preview.mjs` + `src/components/Preview.astro` render real components
   from one file's tokens. The rule that makes it worth anything: a custom
   property is set **only** where the file declares the token — nothing is filled

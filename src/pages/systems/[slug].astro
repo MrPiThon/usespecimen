@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Preview from '../../components/Preview.astro';
+import Specimen from '../../components/Specimen.astro';
 import { hasDarkPalette, previewGaps } from '../../lib/preview.mjs';
 import Base from '../../layouts/Base.astro';
 import { lint } from '../../lib/design-md.mjs';
@@ -35,10 +36,8 @@ const audit = capture?.audit ?? null;
 // as an observation rather than treated as disqualifying. The extractor decides
 // which pairs are text, because that depends on what the accent actually is.
 const textFailures = audit?.textFailures ?? 0;
-const rawUrl = new URL(`/r/${entry.id}/DESIGN.md`, Astro.site).href;
 const showDark = hasDarkPalette(d);
 const gaps = previewGaps(d);
-const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'string');
 ---
 
 <Base title={`${d.name} — Specimen`} description={d.description}>
@@ -57,65 +56,93 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
     <span class="badge warn">Verified {daysAgo === 0 ? 'today' : `${daysAgo}d ago`}</span>
   </p>
 
+  <div class="get">
+    <pre><code>npx specimen add {entry.id}</code></pre>
+    <div class="get-actions">
+      <button type="button" id="copy" data-raw={raw}>Copy DESIGN.md</button>
+      <a class="btn" href={`/r/${entry.id}/DESIGN.md`} download={`${entry.id}-DESIGN.md`}>Download</a>
+    </div>
+  </div>
+
   <div class="detail" style="margin-top:2rem;">
     <div>
-      <div class="panel" style="margin-bottom:2rem;">
-        <h3>Install</h3>
-        <pre style="margin:0;"><code>npx specimen add {entry.id}</code></pre>
+      {/* Tabs rather than one long scroll. The specimen sheet leads because it
+          is the thing you cannot get from a catalogue: measured values rendered
+          as the thing they describe. */}
+      <div class="tabs" role="tablist" aria-label="System views">
+        <button role="tab" id="t-spec" aria-controls="p-spec" aria-selected="true">Specimen</button>
+        <button role="tab" id="t-prev" aria-controls="p-prev" aria-selected="false" tabindex="-1">Preview</button>
+        <button role="tab" id="t-note" aria-controls="p-note" aria-selected="false" tabindex="-1">Notes</button>
+        <button role="tab" id="t-file" aria-controls="p-file" aria-selected="false" tabindex="-1">DESIGN.md</button>
       </div>
 
-      <h2 style="margin-top:0;">Rendered from this file</h2>
-      <p style="color:var(--muted);font-size:0.9rem;max-width:var(--measure);">
-        Real components driven only by the tokens above. Where the file declares
-        nothing, the preview falls back to a neutral default and draws its own
-        hairlines dashed, so borrowed styling never reads as extracted.
-        {gaps.length > 0 && <> This file supplies {gaps.join(', ')}.</>}
-        {' '}Typefaces are not loaded, so text renders in a fallback face.
-      </p>
-      <div class={`pv-grid ${showDark ? 'two' : ''}`} style="margin-bottom:2.5rem;">
-        <Preview data={d} label={showDark ? 'Light' : 'Preview'} />
-        {showDark && <Preview data={d} dark label="Dark" />}
+      <div class="panels">
+        <section role="tabpanel" id="p-spec" aria-labelledby="t-spec">
+          <Specimen data={d} />
+          {showDark && (
+            <>
+              <h2 class="tp-h">Dark palette</h2>
+              <Specimen data={d} dark />
+            </>
+          )}
+        </section>
+
+        <section role="tabpanel" id="p-prev" aria-labelledby="t-prev" hidden>
+          <p class="tp-note">
+            Real components driven only by the tokens in this file. Where it declares
+            nothing, the preview falls back to a neutral default and draws its own
+            hairlines dashed, so borrowed styling never reads as extracted.
+            {gaps.length > 0 && <> This file supplies {gaps.join(', ')}.</>}
+            {' '}Typefaces are not loaded, so text renders in a fallback face.
+          </p>
+          <div class={`pv-grid ${showDark ? 'two' : ''}`}>
+            <Preview data={d} label={showDark ? 'Light' : 'Preview'} />
+            {showDark && <Preview data={d} dark label="Dark" />}
+          </div>
+
+          {p.screenshot && (
+            <figure style="margin:1.5rem 0 0;">
+              <Image
+                src={p.screenshot}
+                alt={`Screenshot of ${p.brand} captured ${captured.toISOString().slice(0, 10)}`}
+                widths={[640, 960, 1440]}
+                sizes="(max-width: 60rem) 100vw, 46rem"
+                style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);"
+              />
+              <figcaption class="tp-note">
+                The source page as captured. Every token here was measured from this
+                render, not described from it.
+              </figcaption>
+            </figure>
+          )}
+          {p.screenshotDark && (
+            <figure style="margin:1.5rem 0 0;">
+              <Image
+                src={p.screenshotDark}
+                alt={`Screenshot of ${p.brand} in dark mode, captured ${captured.toISOString().slice(0, 10)}`}
+                widths={[640, 960, 1440]}
+                sizes="(max-width: 60rem) 100vw, 46rem"
+                style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);"
+              />
+              <figcaption class="tp-note">
+                The same page under <code>prefers-color-scheme: dark</code>.
+              </figcaption>
+            </figure>
+          )}
+        </section>
+
+        <section role="tabpanel" id="p-note" aria-labelledby="t-note" hidden>
+          <article class="prose"><Content /></article>
+        </section>
+
+        <section role="tabpanel" id="p-file" aria-labelledby="t-file" hidden>
+          <p class="tp-note">
+            Exactly what is in the repository, frontmatter included.
+            <a href={`/r/${entry.id}/DESIGN.md`}>Raw</a>
+          </p>
+          <pre class="scroll"><code>{raw}</code></pre>
+        </section>
       </div>
-
-      {p.screenshot && (
-        <figure style="margin:0 0 2rem;">
-          <Image
-            src={p.screenshot}
-            alt={`Screenshot of ${p.brand} captured ${captured.toISOString().slice(0, 10)}`}
-            widths={[640, 960, 1440]}
-            sizes="(max-width: 60rem) 100vw, 46rem"
-            style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);"
-          />
-          <figcaption style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem;">
-            The source page as captured. Every token on this page was measured from
-            this render, not described from it.
-          </figcaption>
-        </figure>
-      )}
-      {p.screenshotDark && (
-        <figure style="margin:0 0 2rem;">
-          <Image
-            src={p.screenshotDark}
-            alt={`Screenshot of ${p.brand} in dark mode, captured ${captured.toISOString().slice(0, 10)}`}
-            widths={[640, 960, 1440]}
-            sizes="(max-width: 60rem) 100vw, 46rem"
-            style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);"
-          />
-          <figcaption style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem;">
-            The same page under <code>prefers-color-scheme: dark</code>.
-          </figcaption>
-        </figure>
-      )}
-
-      <article class="prose"><Content /></article>
-
-      <h2>The file</h2>
-      <p style="color:var(--muted);font-size:0.9rem;">
-        Exactly what is in the repository, frontmatter included.
-        <a href={`/r/${entry.id}/DESIGN.md`}>Raw</a>
-      </p>
-      <button type="button" id="copy" data-raw={raw}>Copy DESIGN.md</button>
-      <pre class="scroll" style="margin-top:0.75rem;"><code>{raw}</code></pre>
     </div>
 
     <aside>
@@ -130,86 +157,6 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
           <dt>Pipeline</dt><dd>harvest v{p.harvestVersion ?? '—'} / cluster v{p.clusterVersion ?? '—'}</dd>
         </dl>
       </div>
-
-      {(d.layout || d.motion) && (
-        <div class="panel" style="margin-bottom:1rem;">
-          <h3>Structure</h3>
-          <dl class="kv">
-            {d.layout?.measure && <><dt>Measure</dt><dd>{d.layout.measure}</dd></>}
-            {d.layout?.sectionSpacing && <><dt>Section gap</dt><dd>{d.layout.sectionSpacing}</dd></>}
-            {d.layout?.gridColumns && <><dt>Card grid</dt><dd>{d.layout.gridColumns} columns</dd></>}
-            {d.layout?.navHeight && (
-              <><dt>Nav</dt><dd>{d.layout.navHeight}{d.layout.navPosition ? `, ${d.layout.navPosition}` : ''}</dd></>
-            )}
-            {d.layout?.sectionWidth && (
-              <><dt>Sections</dt><dd>
-                {[d.layout.sectionWidth, d.layout.sectionMedia === 'none' ? 'no imagery' : d.layout.sectionMedia,
-                  d.layout.sectionCopy && `${d.layout.sectionCopy} copy`].filter(Boolean).join(', ')}
-              </dd></>
-            )}
-            {d.layout?.heroHeight && (
-              <><dt>Hero</dt><dd>
-                {d.layout.heroHeight}
-                {d.layout.heroHeadingSize ? `, ${d.layout.heroHeadingSize} ${d.layout.heroAlign ?? ''}`.trimEnd() : ''}
-              </dd></>
-            )}
-            {d.backgrounds?.pattern && (
-              <><dt>Pattern</dt><dd>
-                {d.backgrounds.pattern}{d.backgrounds.patternSize ? `, ${d.backgrounds.patternSize}` : ''}
-              </dd></>
-            )}
-            <dt>Canvas</dt>
-            <dd>
-              {/* Flat is a measurement here, not a missing value: three systems
-                  in the corpus carry no decorative layer at all. */}
-              {d.backgrounds
-                ? [d.backgrounds.wash ? 'gradient wash' : null,
-                   d.backgrounds.mixBlendMode ? `blend ${d.backgrounds.mixBlendMode}` : null,
-                   d.backgrounds.backdropFilter ? 'backdrop blur' : null,
-                  ].filter(Boolean).join(', ') || 'textured'
-                : 'flat — no decorative layer'}
-            </dd>
-            <dt>Motion</dt>
-            <dd>
-              {/* An absent motion group is a measurement, not a gap: no control on
-                  the page declared a transition. Saying so beats an em dash. */}
-              {d.motion ? `${d.motion.duration} ${d.motion.easing}` : 'none observed'}
-            </dd>
-          </dl>
-        </div>
-      )}
-
-      {colors.length > 0 && (
-        <div class="panel" style="margin-bottom:1rem;">
-          <h3>Colors</h3>
-          <table>
-            <tbody>
-              {colors.filter(([n]) => !n.startsWith('dark-')).map(([name, hex]) => (
-                <tr>
-                  <td><span class="chip" style={`background:${hex}`}></span>{name}</td>
-                  <td><code>{hex}</code></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-
-      {colors.some(([n]) => n.startsWith('dark-')) && (
-        <div class="panel" style="margin-bottom:1rem;">
-          <h3>Colors — dark</h3>
-          <table>
-            <tbody>
-              {colors.filter(([n]) => n.startsWith('dark-')).map(([name, hex]) => (
-                <tr>
-                  <td><span class="chip" style={`background:${hex}`}></span>{name.slice(5)}</td>
-                  <td><code>{hex}</code></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
 
       {audit && (
         <div class="panel">
@@ -243,6 +190,44 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
     </aside>
   </div>
 
+  <style>
+    .get {
+      display: flex; flex-wrap: wrap; gap: var(--s4);
+      align-items: center; justify-content: space-between;
+      margin-top: var(--s5);
+    }
+    .get pre { margin: 0; flex: 1 1 18rem; }
+    .get-actions { display: flex; gap: var(--s3); }
+
+    .tabs {
+      display: flex; gap: 0.25rem; flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: var(--s5);
+    }
+    .tabs button {
+      background: none; border: 0; cursor: pointer;
+      font: inherit; font-size: 0.85rem;
+      color: var(--muted);
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      /* Sits on the container's own border, so the active tab joins the panel. */
+      margin-bottom: -1px;
+      border-bottom: 2px solid transparent;
+      transition: color var(--motion, 0s) var(--motion-ease, linear);
+    }
+    .tabs button:hover { color: var(--fg-strong); }
+    .tabs button[aria-selected='true'] {
+      color: var(--fg-strong);
+      border-bottom-color: var(--accent, var(--fg-strong));
+    }
+    .tp-note {
+      color: var(--muted); font-size: 0.9rem;
+      max-width: var(--measure); margin: 0 0 var(--s4);
+    }
+    .tp-h { margin: var(--s6) 0 var(--s4); font-size: var(--step-3xl, 1.25rem); }
+    [role='tabpanel'][hidden] { display: none; }
+  </style>
+
   <script is:inline>
     document.getElementById('copy')?.addEventListener('click', async (e) => {
       const btn = e.currentTarget;
@@ -252,5 +237,36 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
         setTimeout(() => { btn.textContent = 'Copy DESIGN.md'; }, 1500);
       } catch { btn.textContent = 'Press Ctrl+C'; }
     });
+
+    // Tabs. Progressive enhancement: without JS every panel but the first is
+    // hidden, and the raw file stays reachable at /r/<slug>/DESIGN.md, which is
+    // linked from the panel and from the sidebar.
+    (() => {
+      const list = document.querySelector('.tabs');
+      if (!list) return;
+      const tabs = [...list.querySelectorAll('[role=tab]')];
+      const select = (tab) => {
+        for (const t of tabs) {
+          const on = t === tab;
+          t.setAttribute('aria-selected', String(on));
+          t.tabIndex = on ? 0 : -1;
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        }
+      };
+      list.addEventListener('click', (e) => {
+        const tab = e.target.closest('[role=tab]');
+        if (tab) select(tab);
+      });
+      list.addEventListener('keydown', (e) => {
+        const i = tabs.indexOf(document.activeElement);
+        if (i < 0) return;
+        const next = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : -1;
+        if (next < 0) return;
+        e.preventDefault();
+        const target = tabs[(next + tabs.length) % tabs.length];
+        target.focus();
+        select(target);
+      });
+    })();
   </script>
 </Base>
