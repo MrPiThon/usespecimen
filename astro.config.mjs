@@ -1,11 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { SITE } from './src/lib/site.mjs';
 
-// The hostname lives here and nowhere else. Everything downstream reads
-// `Astro.site`, so moving to the real domain is this line plus 301s — the path
-// structure (/systems/<slug>, /r/<slug>/DESIGN.md) is fixed from day one.
+// The hostname lives in src/lib/site.mjs and nowhere else, because the CLI needs
+// it too and two copies is one copy too many. Site code reads `Astro.site`.
 export default defineConfig({
-  site: 'https://specimen.coursey.website',
+  site: SITE,
   output: 'static',
   trailingSlash: 'never',
   build: {

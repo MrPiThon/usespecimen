@@ -38,6 +38,11 @@ npm run build                                 # static build to dist/
 ```
 
 ```bash
+npm run list -- --registry http://localhost:4321    # catalog (needs a running site)
+npm run add -- stripe --registry http://localhost:4321
+```
+
+```bash
 npx playwright install chromium               # one-time; already present on this machine
 npm run extract -- https://stripe.com         # → out/stripe/capture.json
 npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
@@ -131,8 +136,11 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 - `public/_headers` carries the CORS and content-type contract for `/r/*`; a
   static build discards `Response` headers, so setting them in the endpoint
   alone would silently do nothing.
-- The hostname is in `astro.config.mjs` and nowhere else. Everything derives
-  from `Astro.site`.
+- The hostname is in `src/lib/site.mjs` and nowhere else — the CLI needs it too,
+  so it cannot live in `astro.config.mjs`, which imports it. Site code still
+  derives URLs from `Astro.site`.
+- `add`/`list` talk to the published site by default; `--registry <origin>`
+  points them at a local `astro preview` for testing.
 
 ### `src/extract/harvest.mjs` — runs inside the page
 

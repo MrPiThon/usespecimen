@@ -4,3 +4,9 @@
   Access-Control-Allow-Origin: *
   Content-Type: text/markdown; charset=utf-8
   Cache-Control: public, max-age=300
+
+# The catalog is JSON, so it needs its own content type ahead of the rule above.
+/r/index.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=300

@@ -202,6 +202,9 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
   both themes, token tables, provenance block, lint badge, install command.
 - `/r/<slug>/DESIGN.md` — raw, plain text, permanent, CORS-open. The URL people
   paste into agent prompts.
+- `/r/index.json` — the machine-readable catalog behind `list` and, later, the
+  MCP server. Carries the token-derived facets (polarity, dark support, palette)
+  so a client can choose a system without fetching every file.
 - `/spec` — a genuinely good explainer of the format, section by section, with a
   live validator. Best organic-traffic asset; theirs is thin.
 - `/validate` — **built.** Paste or upload a DESIGN.md, get conformance plus a
@@ -211,7 +214,12 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
   disagreed with the build would be worse than not offering one. Contrast is
   audited only on pairs the file's naming makes identifiable, and everything it
   could not pair is listed rather than quietly skipped.
-- `/cli`, `/mcp` — install docs for the machine interfaces.
+- `/cli`, `/mcp` — install docs for the machine interfaces. The CLI itself is
+  built: `add <slug>` fetches a system into the working directory and `list`
+  shows the catalog, both against `/r/index.json`. `add` validates the file
+  **before** writing it and refuses a non-conformant one — the registry should
+  never serve such a file, but the client is the last place to catch it and the
+  only one that knows it is about to be handed to an agent.
 - `/submit` — contribute by PR, schema documented.
 - `/about` — provenance policy, trademark policy, opt-out process. Early, not
   boilerplate: it's a trust asset.

@@ -19,6 +19,8 @@ import { cluster, summarize } from './extract/cluster.mjs';
 import { mergeHarvests } from './extract/merge.mjs';
 import { parseColor, deltaE } from './lib/color.mjs';
 import { captureScreenshot } from './extract/screenshot.mjs';
+import { SITE, rawUrl, indexUrl, systemUrl } from './lib/site.mjs';
+import { validateDesignMd } from './lib/validate.mjs';
 
 // Widest first: the primary capture supplies the scalars and the stylesheet
 // data, and the widest layout is the canonical one.
@@ -37,12 +39,17 @@ const USAGE = `specimen — design token extractor (${pkg.name}@${pkg.version})
 Usage:
   node src/cli.mjs extract <url> [<url>...] [options]
   node src/cli.mjs cluster <capture.json> [options]
+  node src/cli.mjs add <slug> [options]
+  node src/cli.mjs list [options]
 
 Commands:
   extract    Crawl live pages, harvest computed styles, cluster into tokens,
              write <out>/<slug>/capture.json.
   cluster    Re-cluster a saved capture. No browser, no network. Accepts a full
              capture.json or a bare harvestFn dump pasted from a browser console.
+  add        Fetch a system's DESIGN.md into the current directory, validated
+             before it lands. Prints the prompt to hand your agent.
+  list       Show what the registry carries.
 
 Options:
   --out <dir>        Output directory (default: out)
@@ -52,6 +59,8 @@ Options:
   --wait <ms>        Settle time after load (default: 1500)
   --timeout <ms>     Navigation timeout (default: 45000)
   --write            cluster: update the source file's tokens in place
+  --registry <url>   Registry origin for add/list (default: the published site)
+  --force            add: overwrite an existing DESIGN.md
   --json             Print token JSON instead of the summary
   --quiet            Suppress the summary
   -h, --help
@@ -172,6 +181,88 @@ function report(data, opts) {
 }
 
 // ---------------------------------------------------------------------------
+
+async function fetchText(url, what) {
+  let res;
+  try {
+    res = await fetch(url);
+  } catch (err) {
+    fail(`Could not reach the registry at ${url}\n  ${err.message}`);
+  }
+  if (res.status === 404) fail(`No ${what} at ${url}\nRun \`list\` to see what exists.`);
+  if (!res.ok) fail(`Registry returned ${res.status} for ${url}`);
+  return res.text();
+}
+
+/**
+ * Fetch one system into the working directory.
+ *
+ * The file is validated BEFORE it is written. A registry shipping a
+ * non-conformant file has already failed upstream, but the client is the last
+ * place to catch it and the only one that knows the file is about to be handed
+ * to an agent — so it checks rather than assuming.
+ */
+async function add(slug, opts) {
+  const url = rawUrl(slug, opts.registry);
+  const body = await fetchText(url, `system called "${slug}"`);
+
+  const verdict = validateDesignMd(body);
+  if (!verdict.ok) {
+    fail(`${url} is not a conformant DESIGN.md, so nothing was written:\n`
+      + verdict.errors.map(e => `  - ${e}`).join('\n'));
+  }
+
+  const target = join(process.cwd(), 'DESIGN.md');
+  if (!opts.force) {
+    try {
+      await readFile(target, 'utf8');
+      fail('DESIGN.md already exists here. Pass --force to overwrite it.');
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+    }
+  }
+  await writeFile(target, body, 'utf8');
+
+  const prov = verdict.data?.provenance ?? {};
+  const captured = prov.capturedAt ? String(prov.capturedAt).slice(0, 10) : 'unknown';
+  log(`Wrote DESIGN.md — ${verdict.data?.name ?? slug}`);
+  log(`  verified ${captured} against ${prov.source ?? 'its source'}`);
+  if (verdict.warnings.length) {
+    log(`  ${verdict.warnings.length} warning(s) — see ${systemUrl(slug, opts.registry)}`);
+  }
+  // The prompt is the point: a file the agent is never told to read is inert.
+  out('');
+  out('Hand this to your agent:');
+  out('');
+  out('  Use DESIGN.md in this repository as the design system for all UI work.');
+  out('  Follow its tokens exactly. Do not substitute colours, type sizes or');
+  out('  spacing values that are not in the file.');
+}
+
+async function list(opts) {
+  const raw = await fetchText(indexUrl(opts.registry), 'catalog');
+  let data;
+  try {
+    data = JSON.parse(raw);
+  } catch {
+    fail(`The catalog at ${indexUrl(opts.registry)} is not valid JSON.`);
+  }
+  if (opts.json) { out(JSON.stringify(data, null, 2)); return; }
+
+  const swatch = (hex) => {
+    const n = parseInt(hex.slice(1), 16);
+    return `\x1b[48;2;${(n >> 16) & 255};${(n >> 8) & 255};${n & 255}m  \x1b[0m`;
+  };
+  out(`${data.count} system${data.count === 1 ? '' : 's'}`);
+  out('');
+  for (const s of data.systems) {
+    out(`  ${s.palette.filter(Boolean).map(swatch).join('')} ${s.slug.padEnd(9)}`
+      + ` ${s.name.padEnd(23)} ${(s.polarity ?? '?') + (s.supportsDark ? '+dark' : '')}`.padEnd(16)
+      + `  verified ${s.capturedAt.slice(0, 10)}`);
+  }
+  out('');
+  out('  specimen add <slug>');
+}
 
 async function extract(urls, opts) {
   let chromium;
@@ -310,6 +401,8 @@ try {
       wait: { type: 'string', default: '1500' },
       timeout: { type: 'string', default: '45000' },
       write: { type: 'boolean', default: false },
+      registry: { type: 'string', default: SITE },
+      force: { type: 'boolean', default: false },
       json: { type: 'boolean', default: false },
       quiet: { type: 'boolean', default: false },
       help: { type: 'boolean', short: 'h', default: false },
@@ -335,6 +428,8 @@ const opts = {
   wait: num(values.wait, 'wait'),
   timeout: num(values.timeout, 'timeout'),
   write: values.write,
+  registry: String(values.registry).replace(/\/+$/, ''),
+  force: values.force,
   json: values.json,
   quiet: values.quiet,
 };
@@ -344,6 +439,15 @@ switch (command) {
     if (!rest.length) fail(`extract needs at least one url.\n\n${USAGE}`);
     if (values.slug && rest.length > 1) fail('--slug only makes sense with a single url.');
     await extract(rest, opts);
+    break;
+  }
+  case 'add': {
+    if (rest.length !== 1) fail(`add needs exactly one slug.\n\n${USAGE}`);
+    await add(rest[0], opts);
+    break;
+  }
+  case 'list': {
+    await list(opts);
     break;
   }
   case 'cluster': {
