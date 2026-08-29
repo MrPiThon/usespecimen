@@ -164,8 +164,8 @@ The scale carries the hierarchy instead, and it is long: 13, 16, 17, 19, 24, 32,
 
 ## Layout
 
-**A 4px grid explaining 98% of observed spacing** — the strictest adherence
-measured anywhere in this registry.
+**A 4px grid explaining 98% of observed spacing** — as strict as anything
+measured here, a hair behind Gumroad's 99%.
 
 A **1390px measure** behind a 60px static nav. The hero runs 0.69 viewports and
 carries no headline at all; the page opens on work, not on a statement.

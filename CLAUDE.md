@@ -424,6 +424,30 @@ The Verge is the instructive one. The violet had not vanished — it survives as
 being the accent when a mint button fill outranked it. The file now says both
 things separately, which is what it should have said all along.
 
+A second pass widened it to typography (is the published face ever named?),
+structure, section counts, composition labels, background patterns, and
+**corpus-wide superlatives** — the claims that cannot be checked against one
+file at a time. Those are the ones that rot as the registry grows: nine were
+true when written and false by the time the corpus reached 23.
+
+| claimed | actually |
+|---|---|
+| apple: "44px is the slimmest here" | The Verge runs 36px |
+| basecamp: "the second narrowest" | fifth, behind gumroad/supabase/substack/govuk |
+| govuk: "less than half of every commercial system" | gumroad is 540 |
+| linear: "the highest grid usage here" | vercel carries one in all four sections |
+| mailchimp: "the second highest" | it *is* the highest at 1259 |
+| notion: "the second strictest grid" | sixth |
+| pentagram: "the strictest adherence" | gumroad 98.5% beats 98.4% |
+| stripe: "1145 characters, the most" | 713, and mailchimp holds the record |
+| stripe: "173 controls, more than any other" | apple animates 232 |
+| tailwindcss: "the strictest spacing grid" | 76.8%, well down the table |
+
+Hedged phrasing is skipped on purpose — "among the thinnest", "a hair behind
+Gumroad's 99%" — as are comparisons that measure a system *against* the extreme
+rather than claiming it ("less than half the width of the widest system here").
+Ties are not contradictions: Nike and Airbnb both run a 96px nav.
+
 When this fails: correct the prose. Never adjust a token to match a sentence.
 
 ## Identity

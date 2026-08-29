@@ -265,7 +265,7 @@ nav is **73px and fixed**, so it stays with you for the whole scroll.
 
 **Section composition across ten sections: contained, text-led, dense copy.**
 Nothing bleeds to the viewport — every section sits inside the 1340px measure —
-and **seven of ten carry a repeating group**, the highest grid usage here. Only
+and **seven of ten carry a repeating group**, among the highest here. Only
 three are image-led, and the median section holds **892 characters**. This is a
 system of cards and prose, not of photographs.
 

@@ -178,8 +178,8 @@ which is why the clusterer applies hysteresis here. The observed run is 5, 8, 9,
 10, 15, 19, 20, 30, 50, 60, and the 5px rhythm is visible in it even though it
 does not explain enough of the page to be published as a base.
 
-**A 610px measure** — less than half the width of every commercial system in
-this registry, and the single most consequential number in the file. This is a
+**A 610px measure** — less than half the width of the widest system in this
+registry, and the single most consequential number in the file. This is a
 reading column, sized for prose rather than for cards.
 
 The page runs **fifteen sections** at a 3-column grid, behind a **62px static**
@@ -237,7 +237,7 @@ because it feels polished would be the single most un-GOV.UK thing you could do.
   central promise.
 - **Do** carry hierarchy with size and weight.
 - **Do** hold everything to the 610px column. It is less than half the width of
-  every commercial system here, and it is the most consequential number in the
+  the widest system here, and it is the most consequential number in the
   file.
 - **Don't** round any corner. Sharpness is the identity.
 - **Don't** add a muted grey text tier. Its absence is deliberate.

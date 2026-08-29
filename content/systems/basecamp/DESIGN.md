@@ -226,7 +226,7 @@ reproducing the ratio, not the rounded pixels.
 values, the loosest in this catalogue. The run is 4, 7, 8, 10, 14, 20, 27, 28,
 38, 66 — spacing here follows the type scale rather than a grid.
 
-**A 680px measure** — the second narrowest here, and close to GOV.UK's reading
+**A 680px measure** — among the narrowest here, and close to GOV.UK's reading
 column rather than to a marketing page. Five sections, two-column grids, and no
 consistent section rhythm.
 

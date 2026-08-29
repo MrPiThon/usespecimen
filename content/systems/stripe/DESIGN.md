@@ -245,11 +245,11 @@ landing, with a 48px left-aligned headline, three media elements and two filled
 calls to action. The nav is 76px and **not sticky** — it scrolls away, which is
 a real choice on a page this long. Only seven links sit in it.
 
-**Section composition across eight sections: full-bleed, balanced, dense copy.**
-All eight span the viewport while holding their content to the 1230px measure —
+**Section composition across nine sections: full-bleed, balanced, dense copy.**
+All nine span the viewport while holding their content to the 1230px measure —
 the bleed-with-a-column pattern. Six of eight carry a repeating group, four are
-image-led, and the median section holds **1145 characters**, the most in the
-registry. Sections here are long and explain themselves.
+image-led, and the median section holds **713 characters**. Sections here are
+long and explain themselves.
 
 ## Elevation & Depth
 
@@ -280,8 +280,8 @@ trailing arrow. Reproduce the padding rather than the tag. Surfaces use the pale
 `#e5edf5` tint with the same colour as their border.
 
 **Motion is applied more widely here than anywhere else measured:** 173 controls
-transition on **0.3s cubic-bezier(0.25, 1, 0.5, 1)**, more than any other system
-in the registry and 89% of everything that animates here. That curve decelerates
+transition on **0.3s cubic-bezier(0.25, 1, 0.5, 1)** — 88% of everything that
+animates here, one of the highest shares measured. That curve decelerates
 hard at the end, which is what gives the page its settled feel.
 
 ## Do's and Don'ts

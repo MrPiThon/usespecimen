@@ -212,7 +212,7 @@ A **1280px measure** behind a **68px sticky** nav. The hero is 0.8 viewports
 with a **64px centred** headline.
 
 **Section composition: full-bleed, text-led, dense copy** — a median of
-**1259 characters** a section, the second highest in the registry.
+**1259 characters** a section, the highest in the registry.
 
 ## Elevation & Depth
 

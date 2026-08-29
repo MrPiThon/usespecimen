@@ -247,7 +247,8 @@ animates. A single curve governs essentially the whole page.
 
 - **Do** keep the text column narrow. A 930px measure beside full-bleed imagery
   is what makes the photography feel enormous.
-- **Do** keep the nav thin and fixed. 44px is the slimmest here.
+- **Do** keep the nav thin and fixed. At 44px it is among the thinnest here,
+  behind only The Verge.
 - **Do** apply one curve everywhere. 0.32s governs 94% of what animates.
 - **Don't** build a 2.33-viewport hero because the measurement mentions one.
   That opening is a run of stacked product panels, which is why its height is

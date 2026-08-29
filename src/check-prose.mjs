@@ -16,7 +16,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { load as parseYaml } from 'js-yaml';
-import { checkProse } from './lib/prose-check.mjs';
+import { checkProse, checkSuperlatives } from './lib/prose-check.mjs';
 
 const ROOT = 'content/systems';
 
@@ -24,6 +24,7 @@ const entries = await readdir(ROOT, { withFileTypes: true });
 const slugs = entries.filter(e => e.isDirectory()).map(e => e.name).sort();
 
 let total = 0;
+const corpus = [];
 for (const slug of slugs) {
   const raw = await readFile(join(ROOT, slug, 'DESIGN.md'), 'utf8');
   const parts = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -37,12 +38,22 @@ for (const slug of slugs) {
     capture = JSON.parse(await readFile(join(ROOT, slug, 'capture.json'), 'utf8'));
   } catch { /* a system may ship without one; the check degrades rather than fails */ }
 
-  const issues = checkProse(slug, parseYaml(parts[1]), parts[2], capture);
+  const data = parseYaml(parts[1]);
+  corpus.push({ slug, data, body: parts[2], capture });
+  const issues = checkProse(slug, data, parts[2], capture);
   if (issues.length) {
     total += issues.length;
     console.error(`\n${slug}`);
     for (const i of issues) console.error(`  - ${i.issue}`);
   }
+}
+
+// Cross-corpus claims need every system loaded, so they run after the loop.
+for (const i of checkSuperlatives(corpus)) {
+  total += 1;
+  console.error(`
+${i.slug}
+  - ${i.issue}`);
 }
 
 if (total) {

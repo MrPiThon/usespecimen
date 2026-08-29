@@ -1,7 +1,7 @@
 ---
 name: 'Utility Slate'
 version: '0.1.0'
-description: 'Documentation-first slate: near-black on off-white, a fuchsia accent, and the strictest spacing grid in this catalogue.'
+description: 'Documentation-first slate: near-black on off-white, a fuchsia accent, and a 10px dot grid tiled across the canvas.'
 categories:
   - developer-tools
   - docs

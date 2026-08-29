@@ -198,7 +198,7 @@ the run is 2, 4, 6, 8, 12, 16, 18, 24, 36, 48. Match the observed values rather
 than imposing a rhythm the system does not keep.
 
 **A 1340px measure**, agreed by 47% of observed content widths, behind a **96px
-fixed** nav carrying 248 links — the tallest navigation in the registry, and it
+fixed** nav carrying 248 links — as tall as any in the registry, and it
 stays with you for the whole scroll.
 
 **Section composition across nineteen sections: mixed width, image-led, sparse

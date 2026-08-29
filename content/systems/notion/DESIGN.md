@@ -206,7 +206,8 @@ Twelve steps from 12px to 96px.
 
 ## Layout
 
-A 4px grid, obeyed by 82.6% of observed spacing — the second strictest in this
+A 4px grid, obeyed by 82.6% of observed spacing — a strict one, though not the
+strictest in this
 catalogue. The run is 3, 4, 6, 8, 12, 15, 16, 24, 32, 40.
 
 **1230px measure, 96px between sections.** Where this diverges from almost
