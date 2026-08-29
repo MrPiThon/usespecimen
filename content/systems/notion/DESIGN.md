@@ -100,6 +100,10 @@ spacing:
   s8: '24px'
   s9: '32px'
   s10: '40px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px 0px, rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px 0px, rgba(0, 0, 0, 0.027) 0px 2.025px 7.847px 0px, rgba(0, 0, 0, 0.04) 0px 4px 18px 0px'
+  shadow-2: 'rgba(0, 0, 0, 0.008) 0px 0.667px 3.502px 0px, rgba(0, 0, 0, 0.016) 0px 2.933px 7.252px 0px, rgba(0, 0, 0, 0.02) 0px 7.2px 14.462px 0px, rgba(0, 0, 0, 0.024) 0px 13.867px 28.348px 0px, rgba(0, 0, 0, 0.03) 0px 23.333px 52.123px 0px, rgba(0, 0, 0, 0.04) 0px 36px 89px 0px'
+  shadow-3: 'rgba(0, 0, 0, 0) 0px 1px 0px 0px'
 components:
   button:
     background: '{colors.primary}'
@@ -137,6 +141,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -201,3 +206,4 @@ Hover, focus-visible and active are all declared, on buttons and links alike.
 - **Don't** shrink the button label. White on `#0075de` is 4.57:1, and small or
   light text on that blue drops below AA immediately.
 - **Don't** ask the `#e6e6e6` border to carry meaning; at 1.25:1 it is a hairline.
+

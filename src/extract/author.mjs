@@ -76,6 +76,13 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
   const spacing = { base: cap.spacing.base ? `${cap.spacing.base}px` : undefined };
   cap.spacing.scale.forEach((px, i) => { spacing[`s${i + 1}`] = `${px}px`; });
 
+  // Shadows are tokens and belong in frontmatter, not only in the prose. The
+  // spec's five groups do not include elevation, but it explicitly preserves
+  // unknown properties, so this is a legal extension rather than a liberty —
+  // the same footing `provenance` sits on.
+  const elevation = {};
+  cap.elevation.shadows.forEach((sh, i) => { elevation[`shadow-${i + 1}`] = sh.value; });
+
   const boxOf = (kind) => {
     const b = cap.components?.[kind];
     if (!b) return {};
@@ -120,6 +127,7 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     },
     rounded,
     spacing,
+    ...(Object.keys(elevation).length ? { elevation } : {}),
     components: {
       button: {
         background: '{colors.primary}',

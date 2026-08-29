@@ -45,6 +45,8 @@ export function themeVars(data) {
   const colors = data?.colors ?? {};
   const type = data?.typography ?? {};
   const rounded = data?.rounded ?? {};
+  const spacing = data?.spacing ?? {};
+  const elevation = data?.elevation ?? {};
 
   const out = [];
   for (const [cssVar, token] of Object.entries(COLOR_MAP)) {
@@ -62,11 +64,18 @@ export function themeVars(data) {
   if (rounded.button) out.push(['--radius-button', rounded.button]);
   if (rounded.pill) out.push(['--radius-pill', rounded.pill]);
 
-  // Type scale, straight from the file. Used for headings so the page climbs the
-  // system's own steps instead of a set this site made up.
+  // Type scale, straight from the file. Headings climb the system's own steps
+  // instead of a ladder this site made up.
   for (const [step, value] of Object.entries(type.scale ?? {})) {
     out.push([`--step-${step}`, value]);
   }
+  // Observed spacing. `base` is skipped: this system has no grid, and the value
+  // would be null anyway. The stylesheet picks which steps to use for what —
+  // that selection is unavoidably ours, but every value is the file's.
+  for (const [step, value] of Object.entries(spacing)) {
+    if (step !== 'base') out.push([`--space-${step.replace(/^s/, '')}`, value]);
+  }
+  for (const [name, value] of Object.entries(elevation)) out.push([`--${name}`, value]);
 
   return out.map(([k, v]) => `  ${k}: ${v};`).join('\n');
 }

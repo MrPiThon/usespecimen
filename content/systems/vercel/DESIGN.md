@@ -88,6 +88,10 @@ spacing:
   s8: '24px'
   s9: '40px'
   s10: '44px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px'
+  shadow-2: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px inset'
+  shadow-3: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px'
 components:
   button:
     background: '{colors.primary}'
@@ -115,6 +119,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 
 ## Overview
@@ -184,4 +189,5 @@ Links darken to `hsla(0, 0%, 9%)` on hover.
 - **Don't** add drop shadows. This system is flat on purpose.
 - **Don't** spend the blue on anything but focus. Filling a button with it would
   break the one rule the palette is built around.
+
 

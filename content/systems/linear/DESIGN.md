@@ -137,6 +137,12 @@ spacing:
   s8: '16px'
   s9: '24px'
   s10: '32px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0.2) 0px 0px 0px 1px'
+  shadow-2: 'rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset'
+  shadow-3: 'rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset'
+  shadow-4: 'rgba(0, 0, 0, 0.25) 0px 2px 32px 0px'
+  shadow-5: 'rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset'
 components:
   button:
     background: '{colors.primary}'
@@ -156,6 +162,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 
 ## Overview
@@ -236,4 +243,5 @@ on the focus ring instead. Surfaces sit a step above the canvas with a
   That restraint is the system, not an oversight.
 - **Don't** invent a spacing scale. This system genuinely does not have one.
 - **Don't** rely on border colour alone to indicate state at 1.18:1.
+
 

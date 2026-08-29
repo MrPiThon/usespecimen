@@ -208,6 +208,15 @@ from the contrast audit's failures and the extractor's own warnings. Every compe
 has a model look at a screenshot and describe it, which is exactly why none of
 them can date or verify their files.
 
+**A gap the format has, found by wearing it.** Shadows were only ever in the
+prose and in `capture.json`, never in frontmatter — so a consumer could read a
+system's colours and radii programmatically but had to parse English to learn
+its elevation. `author` now emits an `elevation` group. The spec's five token
+groups do not include it, but it explicitly preserves unknown properties, so
+this sits on the same footing as `provenance`. Layout, hero and section
+structure remain genuinely unexpressible in DESIGN.md; that is a limit of the
+format rather than of the extractor.
+
 **Drift monitoring.** Once the pipeline exists, scheduled re-capture is nearly
 free, and it produces the feature that turns a directory into a subscription:
 *verified against the live site 6 days ago*, plus a visible diff when a source

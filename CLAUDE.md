@@ -441,6 +441,12 @@ Neither applies on this Windows machine, where Chromium is already installed.
   ever filled with the accent (its own Do's say to spend it on focus and
   selection), and it has no spacing grid, so the steps are its observed values.
   It is dark-only, so the site has no light mode and no theme toggle.
+  What it takes: colours, the font stack, base size, leading, both weights,
+  tracking, all five radii, the **type scale** (headings are its own steps, not a
+  ladder invented here), the **observed spacing steps**, and the **shadows**.
+  What it cannot take: layout, hero and section structure, because DESIGN.md has
+  no vocabulary for them — its Layout section is spacing prose and its Components
+  group covers button, link and surface only.
   `--faint` (3.45:1) is the one token held back from small text — it is the
   system's quietest tier, fine where it is used at size and a failing pair at
   label size, and shipping it would contradict the audit we publish elsewhere.

@@ -121,6 +121,12 @@ spacing:
   s8: '24px'
   s9: '30px'
   s10: '40px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0) 0px -1px 0px 0px inset'
+  shadow-2: 'rgb(82, 0, 255) 0px -1px 0px 0px inset'
+  shadow-3: 'rgb(19, 19, 19) 0px -1px 0px 0px inset'
+  shadow-4: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px inset'
+  shadow-5: 'rgb(255, 255, 255) 0px 3px 0px 20px, rgba(0, 0, 0, 0.3) -8px -30px 30px 0px'
 components:
   button:
     background: '{colors.primary}'
@@ -155,6 +161,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -215,3 +222,4 @@ room for a leading marker. Buttons declare all four states, links only hover.
 - **Don't** loosen the 1.3 line height. The density is the point.
 - **Don't** round the containers. Sharp boxes with circular buttons is the
   signature.
+

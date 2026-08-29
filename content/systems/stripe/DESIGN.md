@@ -127,6 +127,11 @@ spacing:
   s8: '32px'
   s9: '40px'
   s10: '64px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0.1) 0px 20.187px 40.374px -20.187px'
+  shadow-2: 'rgba(50, 50, 93, 0.12) 0px 16px 32px 0px'
+  shadow-3: 'rgba(23, 23, 23, 0.06) 0px 3px 6px 0px'
+  shadow-4: 'rgba(23, 23, 23, 0.08) 0px 15px 35px 0px'
 components:
   button:
     background: '{colors.primary}'
@@ -148,6 +153,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 
 ## Overview
@@ -216,4 +222,5 @@ trailing arrow. Reproduce the padding rather than the tag. Surfaces use the pale
 - **Don't** use the border colour to carry meaning. At 1.18:1 it is invisible to
   many readers and fails non-text contrast.
 - **Don't** introduce a second accent hue. This system has exactly one.
+
 

@@ -40,8 +40,21 @@
   --radius-pill: 9999px;
 
   --measure: 68ch;
-  /* Observed spacing, not a grid. This system does not have one. */
-  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
+
+  /* Spacing references the system's OWN observed steps, injected as --space-N.
+     Which step does what is this site's decision; the values are not. There is
+     no grid to round them to — the system does not have one. */
+  --s1: var(--space-2, 4px);
+  --s2: var(--space-5, 8px);
+  --s3: var(--space-7, 12px);
+  --s4: var(--space-8, 16px);
+  --s5: var(--space-9, 24px);
+  --s6: var(--space-10, 32px);
+
+  /* Elevation, also the system's own. Linear separates planes with inset
+     hairlines and glows rather than drop shadows, so the site does too. */
+  --edge: var(--shadow-3, inset 0 0 0 1px rgba(255, 255, 255, 0.05));
+  --lift: var(--shadow-4, 0 2px 32px rgba(0, 0, 0, 0.25));
 
   color-scheme: dark;
 }
@@ -74,9 +87,11 @@ h1, h2, h3 {
   letter-spacing: -0.02em;
   margin: 0 0 var(--s2);
 }
-h1 { font-size: clamp(1.9rem, 1.3rem + 2vw, 2.6rem); }
-h2 { font-size: 1.35rem; margin-top: var(--s6); }
-h3 { font-size: 1.05rem; margin-top: var(--s5); }
+/* Heading sizes are steps from the system's own scale, not a ladder invented
+   here. It specifies no responsive behaviour, so neither do we. */
+h1 { font-size: var(--step-6xl, 38px); }
+h2 { font-size: var(--step-4xl, 24px); margin-top: var(--s6); }
+h3 { font-size: var(--step-3xl, 20px); margin-top: var(--s5); }
 p, ul, ol { margin: 0 0 var(--s3); }
 strong { color: var(--fg-strong); font-weight: 550; }
 
@@ -101,6 +116,7 @@ pre {
 
 .site-header {
   border-bottom: 1px solid var(--border);
+  box-shadow: var(--lift);
   position: sticky; top: 0; z-index: 10;
   background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(10px);
@@ -136,6 +152,7 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
+  box-shadow: var(--edge);
   padding: var(--s4);
   text-decoration: none;
   color: inherit;
@@ -143,7 +160,7 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
 }
 .card:hover { border-color: var(--faint); background: var(--surface-2); }
 .card h3 { margin: 0 0 4px; font-size: 1rem; }
-.card p { color: var(--muted); font-size: 0.875rem; margin: 0 0 var(--s3); }
+.card p { color: var(--muted); font-size: var(--step-lg, 14px); margin: 0 0 var(--s3); }
 
 .swatches { display: flex; gap: 4px; }
 .swatch {
@@ -159,10 +176,11 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
+  box-shadow: var(--edge);
   padding: var(--s4);
 }
 .panel h2, .panel h3 {
-  margin-top: 0; font-size: 0.75rem; text-transform: uppercase;
+  margin-top: 0; font-size: var(--step-sm, 12px); text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--muted); font-weight: 550;
 }
 
@@ -173,7 +191,7 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
 .badge {
   display: inline-flex; align-items: center; gap: 6px;
   border-radius: var(--radius-pill); padding: 2px 10px;
-  font-size: 0.78rem; font-weight: 550;
+  font-size: var(--step-sm, 12px); font-weight: 550;
   border: 1px solid currentColor;
 }
 .badge.pass { color: var(--ok); }
@@ -319,7 +337,7 @@ th { color: var(--muted); font-weight: 550; }
 #q::placeholder { color: var(--muted); }
 .facet-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .facet-label {
-  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em;
+  font-size: var(--step-sm, 12px); text-transform: uppercase; letter-spacing: 0.07em;
   color: var(--muted); min-width: 6.5rem;
 }
 .chip-btn {

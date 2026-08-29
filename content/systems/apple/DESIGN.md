@@ -103,6 +103,8 @@ spacing:
   s8: '13px'
   s9: '14px'
   s10: '15px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0.22) 3px 5px 30px 0px'
 components:
   button:
     background: '{colors.primary}'
@@ -132,6 +134,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -195,3 +198,4 @@ and active are all declared on links.
 - **Don't** treat 12px as your reading size — that measurement is chrome.
 - **Don't** brighten the blue. At 4.7:1 it is tuned to sit quietly beside
   photography, and a louder blue changes what the page is for.
+

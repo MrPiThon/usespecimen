@@ -85,6 +85,12 @@ spacing:
   s8: '16px'
   s9: '20px'
   s10: '24px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0.1) 0px 3px 2.5px 0px, rgba(0, 0, 0, 0.15) 0px 1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 0.8px 0.4px 0px, rgb(255, 255, 255) 0px 1px 1.5px 0px inset, rgba(58, 58, 58, 0.02) 0px 10px 15px 0px inset, rgba(255, 255, 255, 0.6) 0px -1.5px 0.8px 0px inset, rgba(0, 0, 0, 0.3) 0px -1.5px 0.75px 0px inset'
+  shadow-2: 'rgba(0, 0, 0, 0.02) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 8px 24px 0px'
+  shadow-3: 'rgb(255, 255, 255) 0px 1px 0.5px 0px, rgba(0, 0, 0, 0.15) 0px -0.5px 1px 0px, rgba(0, 0, 0, 0.05) 0px -1.2px 0.5px 1px, rgba(0, 0, 0, 0.05) 0px 8px 16px 0px, rgb(255, 255, 255) -0.2px -1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0.5px 0.7px 2.5px 0px inset, rgba(0, 0, 0, 0.05) -1px -3px 8px 0px inset, rgba(0, 0, 0, 0.1) 0.5px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 1px 6px 6px 2px inset'
+  shadow-4: 'rgba(0, 0, 0, 0) 0px 2px 12px 0px'
+  shadow-5: 'rgba(0, 0, 0, 0.1) 0px 6px 20px 0px'
 components:
   button:
     background: '{colors.primary}'
@@ -117,6 +123,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -181,3 +188,4 @@ box rather than padding. All four states are declared on buttons.
 - **Don't** treat 12px as the reading size — that measurement is chrome.
 - **Don't** promote the rejected `#0073e5` to an accent. It appeared once, and
   once is a campaign rather than a system.
+

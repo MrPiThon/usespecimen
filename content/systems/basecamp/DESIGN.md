@@ -120,6 +120,12 @@ spacing:
   s8: '28px'
   s9: '38px'
   s10: '66px'
+elevation:
+  shadow-1: 'oklch(0 0 0 / 0.1125) 0px 0px 0px 1px inset, oklch(0 0 0 / 0.04) 0px 2.2px 17.6px -5.5px, oklch(0 0 0 / 0.04) 0px 3.3px 22px -6.6px, oklch(0 0 0 / 0.04) 0px 3.3px 8.8px -7.7px, oklch(0 0 0 / 0.04) 0px 5.5px 13.2px -9.9px, oklch(0 0 0 / 0.04) 0px 7.7px 17.6px -12.1px'
+  shadow-2: 'oklch(0 0 0 / 0.1125) 0px 0px 0px 1px inset, oklch(0 0 0 / 0.04) 0px 3.04762px 24.3809px -7.61904px, oklch(0 0 0 / 0.04) 0px 4.57142px 30.4762px -9.14285px, oklch(0 0 0 / 0.04) 0px 4.57142px 12.1905px -10.6667px, oklch(0 0 0 / 0.04) 0px 7.61904px 18.2857px -13.7143px, oklch(0 0 0 / 0.04) 0px 10.6667px 24.3809px -16.7619px'
+  shadow-3: 'oklch(0 0 0 / 0.1) 0px 2.4px 19.2px -6px, oklch(0 0 0 / 0.1) 0px 3.6px 24px -7.2px, oklch(0 0 0 / 0.1) 0px 3.6px 9.6px -8.4px, oklch(0 0 0 / 0.1) 0px 6px 14.4px -10.8px, oklch(0 0 0 / 0.1) 0px 8.4px 19.2px -13.2px'
+  shadow-4: 'oklch(0 0 0 / 0.05) 0px 1.1px 17.6px -5.5px, oklch(0 0 0 / 0.05) 0px 2.2px 22px -6.6px, oklch(0 0 0 / 0.05) 0px 2.2px 8.8px -7.7px, oklch(0 0 0 / 0.05) 0px 4.4px 13.2px -9.9px, oklch(0 0 0 / 0.05) 0px 6.6px 17.6px -12.1px'
+  shadow-5: 'oklch(0 0 0 / 0.0625) 0px 0px 0px 1px, oklch(0 0 0 / 0.04) 0px 2.2px 17.6px -5.5px, oklch(0 0 0 / 0.04) 0px 3.3px 22px -6.6px, oklch(0 0 0 / 0.04) 0px 3.3px 8.8px -7.7px, oklch(0 0 0 / 0.04) 0px 5.5px 13.2px -9.9px, oklch(0 0 0 / 0.04) 0px 7.7px 17.6px -12.1px'
 components:
   button:
     background: '{colors.primary}'
@@ -150,6 +156,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -217,3 +224,4 @@ exists in the system at all.
 - **Don't** add a muted text tier. This system genuinely has one text colour.
 - **Don't** impose a spacing grid. It does not have one, and adding it would
   regularise exactly what makes it feel unhurried.
+

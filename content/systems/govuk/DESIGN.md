@@ -69,6 +69,9 @@ spacing:
   s8: '30px'
   s9: '50px'
   s10: '60px'
+elevation:
+  shadow-1: 'rgb(11, 12, 12) 0px 3px 0px 0px'
+  shadow-2: 'rgb(8, 61, 41) 0px 2px 0px 0px'
 components:
   button:
     background: '{colors.primary}'
@@ -111,6 +114,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 
 ## Overview
@@ -177,4 +181,5 @@ exactly — it is engineered to survive high-contrast modes and to be unmissable
 - **Don't** round any corner. Sharpness is the identity.
 - **Don't** add a muted grey text tier. Its absence is deliberate.
 - **Don't** drop the yellow focus state or replace it with a default outline.
+
 

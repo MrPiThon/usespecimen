@@ -117,6 +117,12 @@ spacing:
   s8: '20px'
   s9: '24px'
   s10: '32px'
+elevation:
+  shadow-1: 'rgba(0, 0, 0, 0.1) 0px 0px 32px 0px'
+  shadow-2: 'rgba(131, 56, 138, 0.08) 0px 4.8px 14px 6.4px'
+  shadow-3: 'rgb(97, 31, 105) 0px 0px 0px 1px inset'
+  shadow-4: 'rgba(0, 0, 0, 0.08) 0px 1px 3px 0px'
+  shadow-5: 'rgb(255, 255, 255) 0px 0px 0px 1px inset'
 components:
   button:
     background: '{colors.primary}'
@@ -156,6 +162,7 @@ provenance:
   harvestVersion: 4
   clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -221,3 +228,4 @@ focus-visible, active — is declared on both.
   hierarchy.
 - **Don't** rely on the `#f5f5f5` border for structure; at 1.09:1 it is barely
   there.
+
