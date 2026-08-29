@@ -334,7 +334,14 @@ failure on a real site, not chosen a priori:
   wins whenever nothing else fits.
 
 Changing any of them without re-running the reference sites is how the palette
-quietly regresses. Bump `clusterVersion` when you do — drift diffs are only
+quietly regresses.
+
+Every one of them is also a **boundary a measurement can land on**. GOV.UK sits
+1.1% under `GRID_THRESHOLD`, and a ~2% wobble between captures once flipped its
+`spacing.base` from 5px to null on an unchanged page. `cluster(harvest,
+{ previous })` therefore applies hysteresis inside a 5% dead band, and records
+every near-boundary decision in `stability.notes`. Pass `previous` from any path
+that re-clusters, or drift monitoring will report noise as change. Bump `clusterVersion` when you do — drift diffs are only
 meaningful within one version.
 
 Output is deterministic and carries `harvestVersion` + `clusterVersion`, so a

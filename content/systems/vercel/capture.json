@@ -15,7 +15,7 @@
     "sampleRatio": 0.464
   },
   "harvestVersion": 4,
-  "clusterVersion": 11,
+  "clusterVersion": 12,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -2483,5 +2483,9 @@
       "height": 900,
       "format": "webp"
     }
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
   }
 }

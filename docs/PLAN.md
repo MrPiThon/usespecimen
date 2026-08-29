@@ -200,7 +200,25 @@ them can date or verify their files.
 **Drift monitoring.** Once the pipeline exists, scheduled re-capture is nearly
 free, and it produces the feature that turns a directory into a subscription:
 *verified against the live site 6 days ago*, plus a visible diff when a source
-site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
+site redesigns. That's Phase 2, but the `capture.json` schema is designed for it
+now — and one lesson has already arrived early.
+
+**Threshold decisions chatter.** GOV.UK's grid share measured 0.757 and then
+0.742 across two captures of an unchanged page, flipping `spacing.base` from 5px
+to "no grid" on a ~2% wobble. A drift signal that fires when nothing changed is
+worse than no signal, because it trains people to ignore the real ones. Two
+things follow, both built:
+
+- **Hysteresis.** `cluster()` takes the previous token set and will not flip a
+  decision whose margin is inside a 5% dead band. `extract`, `author` and
+  `cluster --write` all pass it, so re-running is idempotent across a boundary.
+- **Visibility.** Every near-boundary decision is recorded in `stability.notes`
+  with its margin, so a future drift check can discount exactly those tokens
+  rather than treating all changes alike.
+
+Only scalar decisions are held. Roles like the accent resolve to whole clusters,
+so they are flagged and not held — reconstructing a cluster from a previous hex
+would be guesswork.
 
 ---
 

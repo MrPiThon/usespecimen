@@ -215,18 +215,19 @@ async function author(slug, opts) {
   }
   if (!src.harvest) fail(`${from} has no harvest data; re-run \`extract\`.`);
 
+  const dir = join(opts.content, slug);
+  const previous = await previousTokens(dir);
   const cap = {
     capturedAt: src.capturedAt,
     tool: src.tool,
     method: src.method,
-    ...cluster(src.harvest),
+    ...cluster(src.harvest, { previous }),
     supportsDark: src.supportsDark ?? false,
-    dark: src.darkHarvest ? cluster(src.darkHarvest) : null,
+    dark: src.darkHarvest ? cluster(src.darkHarvest, { previous: previous?.dark }) : null,
     harvest: src.harvest,
     darkHarvest: src.darkHarvest ?? null,
   };
 
-  const dir = join(opts.content, slug);
   const target = join(dir, 'DESIGN.md');
   if (!opts.force) {
     try {
@@ -274,6 +275,17 @@ async function author(slug, opts) {
   out('');
   out('The body is a fact sheet, not prose. Every line is a measured value —');
   out('rewrite them into prose without adding any value that is not there.');
+}
+
+/** The previous token set for a slug, if there is one. Re-clustering without it
+ *  lets a threshold decision flip on measurement noise and read as real drift. */
+async function previousTokens(dir) {
+  try {
+    return JSON.parse(await readFile(join(dir, 'capture.json'), 'utf8'));
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
+    return undefined;
+  }
 }
 
 async function fetchText(url, what) {
@@ -401,10 +413,13 @@ async function extract(urls, opts) {
         // are the same colour written two ways.
         const supportsDark = Boolean(dark && light && differentScheme(light, dark));
 
+        const slug = opts.slug || slugify(light.url || url);
+        const dir = join(opts.out, slug);
+        const previous = await previousTokens(dir);
         const data = record({
-          tokens: cluster(light),
+          tokens: cluster(light, { previous }),
           harvest: light,
-          dark: supportsDark ? cluster(dark) : null,
+          dark: supportsDark ? cluster(dark, { previous: previous?.dark }) : null,
           darkHarvest: supportsDark ? dark : null,
           supportsDark,
           capturedAt: new Date().toISOString(),
@@ -413,8 +428,6 @@ async function extract(urls, opts) {
             + ` (${opts.schemes.join(' + ')})`,
         });
 
-        const slug = opts.slug || slugify(light.url || url);
-        const dir = join(opts.out, slug);
         const path = await writeCapture(dir, data);
         const shots = [
           [lightRun.shot, 'source.webp'],
@@ -463,7 +476,9 @@ async function recluster(path, opts) {
     fail(`${path} does not look like a capture: no harvest data found.`);
   }
 
-  const tokens = cluster(harvest);
+  // The file we are re-clustering is its own previous state, which is what makes
+  // `cluster --write` idempotent across a borderline threshold.
+  const tokens = cluster(harvest, { previous: source.harvest ? source : undefined });
   const data = source.harvest
     // Re-clustering is not a re-capture: capturedAt and method describe when the
     // page was actually visited and must survive untouched.

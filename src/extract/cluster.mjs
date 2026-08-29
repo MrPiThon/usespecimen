@@ -77,6 +77,49 @@ const RAMP_MIN_SHARE = 0.02;
  *  we have measured declares more. */
 const MAX_RAMP = 5;
 
+/**
+ * Relative distance from a threshold inside which a decision is treated as
+ * unstable — a re-capture could land on the other side without the site having
+ * changed at all.
+ *
+ * Measured: GOV.UK's grid share moved 0.757 to 0.742 between two captures of an
+ * unchanged page, flipping `spacing.base` from 5px to "no grid". That is a ~2%
+ * wobble, so 5% covers ordinary sampling noise with room.
+ *
+ * This matters because drift monitoring is the point of dating these files. A
+ * token that changes has to mean the SITE changed; a token that changes because
+ * a measurement crossed a line is a false alarm that trains people to ignore
+ * real ones.
+ */
+const DEAD_BAND = 0.05;
+
+/**
+ * Records how close each threshold decision came to flipping, and — given the
+ * previous token set — declines to flip on a margin thinner than the noise.
+ * Hysteresis is the standard answer to boundary chatter.
+ */
+function stabilizer() {
+  const notes = [];
+  return {
+    notes,
+    choose(decision, { measured, threshold, value, prior }) {
+      const margin = threshold === 0 ? Infinity : (measured - threshold) / Math.abs(threshold);
+      if (Math.abs(margin) > DEAD_BAND) return value;
+      // `undefined` means no previous capture; `null` is a real prior verdict
+      // ("this site has no grid") and holds symmetrically.
+      const hold = prior !== undefined && prior !== value;
+      notes.push({
+        decision,
+        measured: round(measured, 4),
+        threshold,
+        margin: round(margin, 4),
+        ...(hold ? { held: prior, wouldHaveBeen: value } : { held: null }),
+      });
+      return hold ? prior : value;
+    },
+  };
+}
+
 const WHITE = { r: 255, g: 255, b: 255, a: 1 };
 const MAX_VARIANTS = 6;
 const MAX_TYPE_STEPS = 12;
@@ -886,7 +929,7 @@ export function typographyTokens(capture) {
 const GRID_CANDIDATES = [8, 6, 5, 4];
 const GRID_THRESHOLD = 0.75;
 
-export function spacingTokens(capture) {
+export function spacingTokens(capture, { stab, prior } = {}) {
   // spacings is COUNT-ONLY: harvest passes `{count: 1}` as the weight object, so
   // area and chars are structurally zero here. Weighting by anything else
   // silently returns nothing.
@@ -905,9 +948,17 @@ export function spacingTokens(capture) {
       : 0,
   }));
   const grid = shares.find(s => s.share >= GRID_THRESHOLD) || null;
+  const best = Math.max(0, ...shares.map(s => s.share));
+  // The base is a scalar, so it can be held outright. Role decisions elsewhere
+  // resolve to whole clusters and are only flagged, not held — see `stability`.
+  const base = stab
+    ? stab.choose('spacing.base', {
+      measured: best, threshold: GRID_THRESHOLD, value: grid?.base ?? null, prior,
+    })
+    : grid?.base ?? null;
 
   return {
-    base: grid?.base ?? null,
+    base,
     gridConfidence: round(grid?.share ?? Math.max(0, ...shares.map(s => s.share)), 3),
     gridCandidates: shares.map(s => ({ base: s.base, share: round(s.share, 3) })),
     scale: entries.slice(0, 10).map(e => e.px).sort((a, b) => a - b),
@@ -1101,14 +1152,24 @@ function collectWarnings(capture, colors, type, spacing, rounded, states, compon
 }
 
 /** Raw harvest output → token set. Pure; no I/O, no network, no model. */
-export function cluster(capture) {
+export function cluster(capture, { previous } = {}) {
+  const stab = stabilizer();
   const colors = colorTokens(capture);
   const typography = typographyTokens(capture);
-  const spacing = spacingTokens(capture);
+  const spacing = spacingTokens(capture, { stab, prior: previous?.spacing?.base });
   const rounded = roundedTokens(capture);
   const elevation = elevationTokens(capture);
   const audit = contrastAudit(colors);
   const states = stateTokens(capture);
+  // Flagged, not held: an accent decision resolves to a whole cluster, and
+  // reconstructing one from a previous hex would be guesswork.
+  const accent = colors.roles.primary;
+  if (accent?.occurrences != null && accent.source === 'interactiveBg') {
+    stab.choose('colors.primary', {
+      measured: accent.occurrences, threshold: MIN_ACCENT_COUNT,
+      value: accent.hex, prior: undefined,
+    });
+  }
   const components = componentTokens(capture);
 
   return {
@@ -1144,12 +1205,18 @@ export function cluster(capture) {
     // 10: accent detection mines STATE box-shadows too, and parseColor learned
     //     hsl()/hsla(), so focus rings authored in hsl stop being invisible.
     // 11: adds components — box metrics per kind from harvest v4.
+    // 12: adds `stability`, and spacing.base holds its previous value when the
+    //     grid share lands within DEAD_BAND of the threshold.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 11,
+    clusterVersion: 12,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
     spacing,
+    // Decisions that came within DEAD_BAND of their threshold. A drift check
+    // should discount a change to any of these: it may be the measurement
+    // moving rather than the site.
+    stability: { deadBand: DEAD_BAND, notes: stab.notes },
     rounded,
     elevation,
     components,
