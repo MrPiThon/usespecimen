@@ -17,7 +17,7 @@ const tokenTree: z.ZodType<unknown> = z.lazy(() =>
  *  incumbent ships and the thing we exist not to. Brand attribution lives here
  *  and never in `name`, so the artifact an agent reads can't tell it to build a
  *  company that doesn't exist. */
-const provenance = z.object({
+const provenance = (image: ImageFn) => z.object({
   brand: z.string(),
   source: z.string().url(),
   capturedAt: z.coerce.date(),
@@ -27,7 +27,16 @@ const provenance = z.object({
   // MIT obligation from awesome-design-md travels with anything seeded from it.
   // Re-verifying against the live site does not by itself clear it.
   derivedFrom: z.string().optional(),
+  // Collection-relative path to the proof shot, run through Astro's asset
+  // pipeline. WebP rather than the AVIF the plan names — Chromium cannot encode
+  // AVIF, and a native encoder is not worth adding to a browser-only pipeline.
+  screenshot: image().optional(),
+  screenshotDark: image().optional(),
 });
+
+/** Astro hands the schema factory an `image()` helper; typing it loosely here
+ *  keeps this file free of framework-internal type imports. */
+type ImageFn = () => z.ZodType<unknown>;
 
 const systems = defineCollection({
   loader: glob({
@@ -37,7 +46,7 @@ const systems = defineCollection({
     // content/systems/stripe/DESIGN.md and `specimen add stripe` lines up.
     generateId: ({ entry }) => entry.split('/')[0],
   }),
-  schema: z.object({
+  schema: ({ image }: { image: ImageFn }) => z.object({
     // The only field the spec requires. Named for the aesthetic, not the
     // company: "Indigo Infrastructure", never "Stripe".
     name: z.string().min(1),
@@ -48,7 +57,7 @@ const systems = defineCollection({
     rounded: z.record(z.string(), tokenTree).optional(),
     spacing: z.record(z.string(), tokenTree).optional(),
     components: z.record(z.string(), tokenTree).optional(),
-    provenance,
+    provenance: provenance(image),
   // Unknown top-level properties are preserved with a warning, per the spec, so
   // the schema must not strip them.
   }).passthrough(),

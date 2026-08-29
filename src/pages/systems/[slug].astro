@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import { lint } from '../../lib/design-md.mjs';
 import { readCapture, readDesignFile } from '../../lib/system-files.mjs';
@@ -58,6 +59,36 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
         <h3>Install</h3>
         <pre style="margin:0;"><code>npx specimen add {entry.id}</code></pre>
       </div>
+
+      {p.screenshot && (
+        <figure style="margin:0 0 2rem;">
+          <Image
+            src={p.screenshot}
+            alt={`Screenshot of ${p.brand} captured ${captured.toISOString().slice(0, 10)}`}
+            widths={[640, 960, 1440]}
+            sizes="(max-width: 60rem) 100vw, 46rem"
+            style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);"
+          />
+          <figcaption style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem;">
+            The source page as captured. Every token on this page was measured from
+            this render, not described from it.
+          </figcaption>
+        </figure>
+      )}
+      {p.screenshotDark && (
+        <figure style="margin:0 0 2rem;">
+          <Image
+            src={p.screenshotDark}
+            alt={`Screenshot of ${p.brand} in dark mode, captured ${captured.toISOString().slice(0, 10)}`}
+            widths={[640, 960, 1440]}
+            sizes="(max-width: 60rem) 100vw, 46rem"
+            style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);"
+          />
+          <figcaption style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem;">
+            The same page under <code>prefers-color-scheme: dark</code>.
+          </figcaption>
+        </figure>
+      )}
 
       <article class="prose"><Content /></article>
 

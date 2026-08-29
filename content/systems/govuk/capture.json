@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:29:16.468Z",
+  "capturedAt": "2026-08-29T00:37:14.194Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -1305,7 +1305,12 @@
         "elements": 616
       }
     ],
-    "mergedFrom": 3
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
   },
   "darkHarvest": null
 }

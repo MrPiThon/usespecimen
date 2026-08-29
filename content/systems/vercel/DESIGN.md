@@ -105,10 +105,12 @@ components:
 provenance:
   brand: 'Vercel'
   source: 'https://vercel.com/'
-  capturedAt: '2026-08-29T00:29:53.574Z'
+  capturedAt: '2026-08-29T00:36:08.461Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
   clusterVersion: 11
+  screenshot: './source.webp'
+  screenshotDark: './source-dark.webp'
 ---
 
 ## Overview

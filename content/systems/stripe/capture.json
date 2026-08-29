@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:28:57.225Z",
+  "capturedAt": "2026-08-29T00:35:20.586Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -866,7 +866,7 @@
       },
       "rgb(10, 37, 64)": {
         "count": 3,
-        "area": 7770.146484375,
+        "area": 7759.125,
         "chars": 63
       },
       "rgb(66, 84, 102)": {
@@ -1052,7 +1052,7 @@
     "fontFamilies": {
       "sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1387,
-        "area": 9607797.990114037,
+        "area": 9607786.968629662,
         "chars": 34082
       },
       "sohne-var, sans-serif": {
@@ -1064,7 +1064,7 @@
     "fontSizes": {
       "14px": {
         "count": 45,
-        "area": 68482.0664447248,
+        "area": 68471.0449603498,
         "chars": 415
       },
       "48px": {
@@ -1166,7 +1166,7 @@
       },
       "400": {
         "count": 446,
-        "area": 1388197.4353131643,
+        "area": 1388186.4138287893,
         "chars": 5648
       }
     },
@@ -1308,7 +1308,7 @@
       },
       "19.6px": {
         "count": 3,
-        "area": 7770.146484375,
+        "area": 7759.125,
         "chars": 63
       },
       "21px": {
@@ -1802,7 +1802,7 @@
       },
       "text|14px|400|19.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 3,
-        "area": 7770.146484375,
+        "area": 7759.125,
         "chars": 63
       },
       "text|14px|300|21px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
@@ -1955,7 +1955,7 @@
     "componentBoxes": {
       "link|0px|0px|0px|normal": {
         "count": 135,
-        "area": 551421.3208618164,
+        "area": 551421.325012207,
         "chars": 1350
       },
       "button|12px 0px|0px|4px|4px": {
@@ -2336,7 +2336,7 @@
     "interactiveRadius": {
       "0px": {
         "count": 459,
-        "area": 9614026.480852604,
+        "area": 9614026.485002995,
         "chars": 3988
       },
       "4px": {
@@ -2353,7 +2353,7 @@
     "interactiveFg": {
       "rgb(83, 58, 253)": {
         "count": 168,
-        "area": 774683.4375610352,
+        "area": 774683.4417114258,
         "chars": 923
       },
       "rgb(6, 27, 49)": {
@@ -2508,7 +2508,12 @@
         "elements": 2999
       }
     ],
-    "mergedFrom": 3
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
   },
   "darkHarvest": null
 }

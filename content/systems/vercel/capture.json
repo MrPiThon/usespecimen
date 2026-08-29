@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:29:53.574Z",
+  "capturedAt": "2026-08-29T00:36:08.461Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,9 +10,9 @@
       "h": 900
     },
     "docHeight": 5333,
-    "elementCount": 3383,
+    "elementCount": 3362,
     "sampled": 1559,
-    "sampleRatio": 0.461
+    "sampleRatio": 0.464
   },
   "harvestVersion": 4,
   "clusterVersion": 11,
@@ -497,7 +497,7 @@
     "No borders observed; border token omitted.",
     "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
     "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
-    "Strided sample: 1559 of 3383 elements. Weights are relative only."
+    "Strided sample: 1559 of 3362 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -509,7 +509,7 @@
         "h": 900
       },
       "docHeight": 5333,
-      "elementCount": 3365,
+      "elementCount": 3362,
       "sampled": 1568,
       "sampleRatio": 0.466
     },
@@ -992,7 +992,7 @@
       "No borders observed; border token omitted.",
       "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
       "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
-      "Strided sample: 1568 of 3365 elements. Weights are relative only."
+      "Strided sample: 1568 of 3362 elements. Weights are relative only."
     ]
   },
   "harvest": {
@@ -1709,26 +1709,31 @@
       }
     },
     "pageBg": "rgb(250, 250, 250)",
-    "elementCount": 3383,
+    "elementCount": 3362,
     "sampled": 1559,
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1129
+        "elements": 1122
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1127
+        "elements": 1120
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1127
+        "elements": 1120
       }
     ],
-    "mergedFrom": 3
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
   },
   "darkHarvest": {
     "harvestVersion": 4,
@@ -2453,25 +2458,30 @@
       }
     },
     "pageBg": "rgb(0, 0, 0)",
-    "elementCount": 3365,
+    "elementCount": 3362,
     "sampled": 1568,
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1123
+        "elements": 1122
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1121
+        "elements": 1120
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1121
+        "elements": 1120
       }
     ],
-    "mergedFrom": 3
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
   }
 }

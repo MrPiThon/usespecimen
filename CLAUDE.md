@@ -91,7 +91,10 @@ Note the version: PLAN.md says Astro 6, but the registry serves **7.2.9**. The
 Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 `defineCollection`/`render` from `astro:content`).
 
-- `content/systems/<slug>/` holds `DESIGN.md` + `capture.json`. The directory
+- `content/systems/<slug>/` holds `DESIGN.md`, `capture.json` and `source.webp`
+  (plus `source-dark.webp` where the site has a dark scheme). The shots are
+  referenced from frontmatter via Astro's `image()` schema helper, so the asset
+  pipeline emits responsive variants and there is no second copy under `public/`. The directory
   name is the slug, so `/systems/stripe` and `specimen add stripe` line up.
 - `src/content.config.ts` is where validation lives. The Zod schema mirrors the
   Google spec and adds a **required** `provenance` block — an undated file is
@@ -168,6 +171,16 @@ keys on `kind|size|weight|lineHeight|tracking|family` so type properties that
 page uses 16px and weight 600 says nothing about whether 16px is ever bold — so
 any typography role built from them is a combination that may never have existed.
 Family is last in the key because a font stack can contain `|`.
+
+### `src/extract/screenshot.mjs` — proof shots
+
+WebP, **not** the AVIF the plan originally named. Chromium cannot encode AVIF:
+`canvas.toBlob(cb, 'image/avif')` silently hands back a PNG whose `blob.type`
+reads `"image/png"`, so the obvious implementation writes PNG bytes into a
+`.avif` file and nothing complains. The encoder checks `blob.type` and returns
+null rather than falling back — an extension that lies about its contents is
+worse than a missing file. Encoding real AVIF would need a native dependency in
+a pipeline that otherwise only needs the browser.
 
 ### `src/extract/merge.mjs` — one harvest per scheme
 

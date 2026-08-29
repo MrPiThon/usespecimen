@@ -147,10 +147,11 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-29T00:29:08.804Z'
+  capturedAt: '2026-08-29T00:37:06.457Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
   clusterVersion: 11
+  screenshot: './source.webp'
 ---
 
 ## Overview

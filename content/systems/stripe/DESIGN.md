@@ -138,10 +138,11 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-29T00:28:57.225Z'
+  capturedAt: '2026-08-29T00:35:20.586Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
   clusterVersion: 11
+  screenshot: './source.webp'
 ---
 
 ## Overview

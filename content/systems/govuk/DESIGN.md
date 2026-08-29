@@ -104,10 +104,11 @@ components:
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-29T00:29:16.468Z'
+  capturedAt: '2026-08-29T00:37:14.194Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
   clusterVersion: 11
+  screenshot: './source.webp'
 ---
 
 ## Overview

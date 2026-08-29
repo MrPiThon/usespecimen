@@ -2,3 +2,8 @@
 # reviewed as diffs and re-diffed against future captures for drift, so
 # line-ending churn from mixed-platform contributors is real noise, not cosmetic.
 * text=auto eol=lf
+
+# Screenshots are binary; never let eol normalisation near them.
+*.webp binary
+*.avif binary
+*.png binary

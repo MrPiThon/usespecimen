@@ -18,6 +18,7 @@ import { harvestFn } from './extract/harvest.mjs';
 import { cluster, summarize } from './extract/cluster.mjs';
 import { mergeHarvests } from './extract/merge.mjs';
 import { parseColor, deltaE } from './extract/color.mjs';
+import { captureScreenshot } from './extract/screenshot.mjs';
 
 // Widest first: the primary capture supplies the scalars and the stylesheet
 // data, and the widest layout is the canonical one.
@@ -129,14 +130,19 @@ async function captureScheme(browser, url, scheme, opts) {
     await page.waitForTimeout(opts.wait);
 
     const captures = [];
+    let shot = null;
     for (const viewport of opts.viewports) {
       await page.setViewportSize(viewport);
       // Media queries and resize observers need a beat before the computed
       // styles are worth reading.
       await page.waitForTimeout(500);
       captures.push({ viewport, harvest: await page.evaluate(harvestFn) });
+      // Proof shot from the widest viewport only — the canonical layout.
+      if (!shot) shot = await captureScreenshot(page);
     }
-    return mergeHarvests(captures);
+    const harvest = mergeHarvests(captures);
+    harvest.screenshot = shot ? { width: shot.width, height: shot.height, format: shot.format } : null;
+    return { harvest, shot };
   } finally {
     await context.close();
   }
@@ -199,8 +205,10 @@ async function extract(urls, opts) {
         for (const scheme of opts.schemes) {
           sweep[scheme] = await captureScheme(browser, url, scheme, opts);
         }
-        const light = sweep.light ?? sweep[opts.schemes[0]];
-        const dark = sweep.dark ?? null;
+        const lightRun = sweep.light ?? sweep[opts.schemes[0]];
+        const darkRun = sweep.dark ?? null;
+        const light = lightRun.harvest;
+        const dark = darkRun?.harvest ?? null;
         // A site that ignores prefers-color-scheme hands back the same page
         // twice. A "dark" palette identical to the light one is noise dressed as
         // a feature, so this comparison decides whether one is emitted at all.
@@ -221,10 +229,19 @@ async function extract(urls, opts) {
         });
 
         const slug = opts.slug || slugify(light.url || url);
-        const path = await writeCapture(join(opts.out, slug), data);
+        const dir = join(opts.out, slug);
+        const path = await writeCapture(dir, data);
+        const shots = [
+          [lightRun.shot, 'source.webp'],
+          [supportsDark ? darkRun?.shot : null, 'source-dark.webp'],
+        ];
+        for (const [shot, name] of shots) {
+          if (shot) await writeFile(join(dir, name), shot.buffer);
+        }
         log(`  wrote ${path}  (${data.warnings.length} warnings, `
           + `${data.audit.failures} contrast failures`
-          + `${supportsDark ? ', + dark palette' : ''})`);
+          + `${supportsDark ? ', + dark palette' : ''}`
+          + `${lightRun.shot ? `, ${Math.round(lightRun.shot.buffer.length / 1024)}KB shot` : ''})`);
         results.push(data);
         report(data, opts);
       } catch (err) {

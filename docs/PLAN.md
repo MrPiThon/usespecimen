@@ -149,7 +149,7 @@ Ours carries one.
 |---|---|---|
 | Framework | Astro 6, static | Hundreds–thousands of near-static pages is SSG's job. Zero JS by default. Next.js would ship a runtime we don't need. |
 | Content | Content Layer + Zod, `src/content.config.ts` | `glob()` over `content/systems/**/DESIGN.md`, schema mirrors the spec. A malformed file fails the build. |
-| Source of truth | Git, one dir per system | `DESIGN.md`, `capture.json`, `source.avif`. PRs for contributions; provenance is commit history. No CMS, no DB in v1. |
+| Source of truth | Git, one dir per system | `DESIGN.md`, `capture.json`, `source.webp`. PRs for contributions; provenance is commit history. No CMS, no DB in v1. |
 | Search | Pagefind + prebuilt facet index | Static, no backend. Facets from frontmatter. Vector search only if it earns its keep. |
 | Hosting | Cloudflare Pages | Same edge the incumbent sits on, free at this scale, Workers ready for the API tier. |
 | Styling | CSS custom properties | We sell design credibility. Tailwind defaults produce the look customers are escaping. |
@@ -502,9 +502,20 @@ is false there and true for the other three, which is the reader's cue.
 Thin evidence is flagged: Vercel's button token rests on one element out of two
 distinct shapes, and the file says so.
 
-**8. No screenshots.**
-`source.avif` is specified and absent, and §4.1's "preview beside the source"
-claim needs it.
+**8. ~~No screenshots.~~ DONE — but as WebP, not AVIF.**
+Every capture now writes a viewport-sized proof shot beside `capture.json`, one
+per colour scheme, referenced from frontmatter and run through Astro's asset
+pipeline into responsive `srcset` variants. 20–57KB each.
+
+**The format changed, and the reason is a trap worth recording.** Chromium cannot
+encode AVIF: `canvas.toBlob(cb, 'image/avif')` silently returns a **PNG**, with
+`blob.type` reading `"image/png"`. Nothing throws. A naive implementation writes
+PNG bytes into a file named `.avif` and every check passes. Encoding AVIF
+properly means a native dependency (sharp/libavif) in a pipeline that otherwise
+needs only the browser we already run, so the files are `source.webp` —
+browser-encoded, universally supported, about a quarter the size of the PNG. The
+encoder verifies `blob.type` and returns null rather than falling back, because a
+file whose extension lies about its contents is worse than no file.
 
 ## Verify before building
 
