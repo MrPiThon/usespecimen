@@ -77,6 +77,9 @@ layout:
   gridColumns: 3
   navHeight: '62px'
   navPosition: 'static'
+  sectionWidth: 'contained'
+  sectionMedia: 'none'
+  sectionCopy: 'sparse'
   heroHeight: '12vh'
 components:
   button:
@@ -115,11 +118,15 @@ components:
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-29T03:24:36.837Z'
+  capturedAt: '2026-08-29T03:43:52.530Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -168,6 +175,14 @@ nav carrying 25 links. There is no hero in the marketing sense: the first
 section is 0.12 viewports and carries **no heading at all**, because the page
 opens on search and links rather than on a headline.
 
+**Section composition across fifteen sections: contained, no imagery, sparse
+copy.** Not one section bleeds, not one carries a repeating group, and **not one
+is image-led** — there is no content photography on this page at all. The median
+section holds **74 characters**.
+
+Fifteen short, contained, text-only blocks in a 610px column is the entire
+layout system. It is austere by design and does not want decorating.
+
 ## Elevation & Depth
 
 No blur anywhere. Buttons carry a solid offset block —
@@ -201,10 +216,18 @@ because it feels polished would be the single most un-GOV.UK thing you could do.
 - **Do** keep body copy at 19px. Shrinking it to 16px breaks the system's
   central promise.
 - **Do** carry hierarchy with size and weight.
+- **Do** hold everything to the 610px column. It is less than half the width of
+  every commercial system here, and it is the most consequential number in the
+  file.
 - **Don't** round any corner. Sharpness is the identity.
 - **Don't** add a muted grey text tier. Its absence is deliberate.
 - **Don't** drop the yellow focus state or replace it with a default outline.
+- **Don't** add photography. Fifteen sections, no imagery, no card grids, 74
+  characters a section — this system is text and links.
+- **Don't** add transitions. Not one control on this page declares one, and a
+  150ms ease "for polish" is the single most un-GOV.UK change you could make.
 
-
-
+**What this file does not constrain:** what the pages say, how many there are,
+or how the content is organised. It constrains how it looks and how it behaves —
+narrow, sharp, text-only, instant.
 

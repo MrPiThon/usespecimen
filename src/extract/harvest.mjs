@@ -27,7 +27,10 @@ export const harvestFn = () => {
     // 6: section detection validates that sections partition their parent, and
     //    reports sectionsReliable. v5 accepted stacked full-height layers as
     //    sections and called Tailwind's whole document a 1288vh hero.
-    harvestVersion: 6,
+    // 7: adds sectionComposition -- how sections are built, as AGGREGATE COUNTS.
+    //    See the note at the measurement for why it is deliberately incapable
+    //    of expressing an order.
+    harvestVersion: 7,
     url: location.href,
     title: document.title,
     viewport: { w: innerWidth, h: innerHeight },
@@ -53,7 +56,7 @@ export const harvestFn = () => {
     structure: {
       sectionCount: 0, sectionDepth: 0, sectionHeights: [],
       contentWidths: {}, sectionRhythm: {}, gridColumns: {}, transitions: {},
-      sectionsReliable: false, hero: null, nav: null,
+      sectionsReliable: false, sectionComposition: null, hero: null, nav: null,
     },
   };
 
@@ -353,6 +356,82 @@ export const harvestFn = () => {
   out.structure.sectionCount = sections.length;
   out.structure.sectionDepth = secDepth;
   out.structure.sectionHeights = sections.map((sec) => Math.round(sec.r.height));
+
+  // How sections are BUILT, as counts over the whole page.
+  //
+  // Deliberately aggregate. A DESIGN.md is a design language, not a wireframe
+  // of one page, and the difference decides whether a model can use it. An
+  // ordered list -- "hero, then product grid, then editorial" -- describes a
+  // single artifact and stops making sense the moment someone asks for a page
+  // the source site does not have. A distribution is grammar: "sections here
+  // bleed to the viewport, hold their content to the measure, and usually lead
+  // with an image" applies to a checkout page as readily as to a homepage.
+  //
+  // So this records counts and never an array. The shape itself refuses to
+  // carry an order, which is a stronger guarantee than a convention would be.
+  if (sections.length) {
+    // Icons are not composition. 5000px^2 is about a 70x70 box, comfortably
+    // above any icon and below any image being used as content.
+    const MEDIA_MIN_AREA = 5000;
+    const MEDIA_LED_SHARE = 0.25;
+    let bleed = 0;
+    let gridded = 0;
+    let mediaLed = 0;
+    const charCounts = [];
+
+    for (const sec of sections) {
+      const area = sec.r.width * sec.r.height;
+      if (sec.r.width >= vw - 4) bleed += 1;
+
+      // Nested media double-counts: a <picture> and the <img> inside it are
+      // both matched, and stacked absolute layers compound it. Stripe summed to
+      // 383% of its own section area before this. Count only the outermost.
+      let media = 0;
+      const counted = [];
+      for (const m of sec.el.querySelectorAll('img,video,canvas,picture,svg')) {
+        if (!isVisible(m)) continue;
+        if (counted.some((c) => c.contains(m))) continue;
+        const mr = rectOf(m);
+        const ma = mr.width * mr.height;
+        if (ma < MEDIA_MIN_AREA) continue;
+        counted.push(m);
+        media += ma;
+      }
+      if (area > 0 && media / area > MEDIA_LED_SHARE) mediaLed += 1;
+
+      // A repeating group: three or more siblings laid out at the same width.
+      // That is a card deck whatever the markup calls itself.
+      let repeats = false;
+      for (const d of sec.el.querySelectorAll('*')) {
+        const c = getComputedStyle(d);
+        if (!/grid|flex/.test(c.display)) continue;
+        const ch = kids(d);
+        if (ch.length < 3) continue;
+        const widths = ch.map((x) => Math.round(rectOf(x).width));
+        if (widths.filter((w) => Math.abs(w - widths[0]) <= 4).length >= 3) { repeats = true; break; }
+      }
+      if (repeats) gridded += 1;
+
+      let chars = 0;
+      const walk = document.createTreeWalker(sec.el, NodeFilter.SHOW_TEXT);
+      for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+        const t = (n.textContent || '').trim();
+        if (t) chars += t.length;
+      }
+      charCounts.push(chars);
+    }
+
+    charCounts.sort((a, b) => a - b);
+    out.structure.sectionComposition = {
+      total: sections.length,
+      bleed,
+      gridded,
+      mediaLed,
+      // Median, not mean: one 4465-character section should not make a page of
+      // 100-character sections look prose-heavy.
+      charsMedian: charCounts[Math.floor(charCounts.length / 2)] ?? 0,
+    };
+  }
 
   // The measure: how wide content is allowed to get. Full-bleed boxes are
   // excluded because they are the canvas rather than the column.

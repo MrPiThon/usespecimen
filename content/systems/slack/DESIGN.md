@@ -15,8 +15,7 @@ colors:
   border: '#f5f5f5'
   surface-1: '#f9f0ff'
   text-1: '#000000'
-  text-2: '#1d1d1d'
-  text-3: '#696969'
+  text-2: '#696969'
 typography:
   fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
   headingFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -32,10 +31,10 @@ typography:
     lg: '22.4px'
     xl: '23.3436px'
     2xl: '24px'
-    3xl: '26px'
+    3xl: '28px'
     4xl: '32px'
-    5xl: '36.2698px'
-    6xl: '50px'
+    5xl: '50.4px'
+    6xl: '58px'
   roles:
     body:
       fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -69,21 +68,21 @@ typography:
       fontWeight: 600
     lead-lg:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '26px'
+      fontSize: '28px'
       fontWeight: 600
-      lineHeight: 1.17
+      lineHeight: 1.21
     h1:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '32px'
       fontWeight: 700
-      lineHeight: 1.17
+      lineHeight: 1.12
       letterSpacing: '-0.384px'
     h2:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '50px'
+      fontSize: '32px'
       fontWeight: 700
-      lineHeight: 1.17
-      letterSpacing: '-0.4px'
+      lineHeight: 1.25
+      letterSpacing: '-0.256px'
     h3:
       fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '22.4px'
@@ -91,10 +90,9 @@ typography:
       lineHeight: 1.34
       letterSpacing: '-0.0896px'
     button:
-      fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
-      fontSize: '14px'
-      fontWeight: 700
-      lineHeight: 1.43
+      fontFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+      fontSize: '18px'
+      fontWeight: 400
     link:
       fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
       fontSize: '14px'
@@ -113,9 +111,9 @@ spacing:
   s2: '4px'
   s3: '6px'
   s4: '8px'
-  s5: '12px'
-  s6: '16px'
-  s7: '19px'
+  s5: '10px'
+  s6: '12px'
+  s7: '16px'
   s8: '20px'
   s9: '24px'
   s10: '32px'
@@ -131,9 +129,12 @@ layout:
   gridColumns: 2
   navHeight: '80px'
   navPosition: 'absolute'
-  heroHeight: '87vh'
-  heroHeadingSize: '58px'
-  heroAlign: 'left'
+  sectionWidth: 'full-bleed'
+  sectionMedia: 'text-led'
+  sectionCopy: 'moderate'
+  heroHeight: '147vh'
+  heroHeadingSize: '64px'
+  heroAlign: 'center'
 motion:
   duration: '0.42s'
   easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)'
@@ -142,7 +143,7 @@ components:
     background: '{colors.primary}'
     foreground: '{colors.primaryForeground}'
     radius: '{rounded.button}'
-    padding: '10px 10px 11.2px 10px'
+    padding: '12px'
     active:
       backgroundColor: '#f5f4f5'
       opacity: '1'
@@ -171,11 +172,15 @@ components:
 provenance:
   brand: 'Slack'
   source: 'https://slack.com/'
-  capturedAt: '2026-08-29T03:25:05.614Z'
+  capturedAt: '2026-08-29T03:47:12.532Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -225,6 +230,12 @@ is why the hero's colour runs to the very top of the page.
 The hero is **0.87 viewports, full bleed**, with a 58px left-aligned headline,
 one media element and two filled calls to action.
 
+**Section composition across eleven sections: full-bleed, text-led, moderate
+copy.** All eleven bleed, five carry a repeating group, but **only one is
+image-led** — unusual for a page that feels this illustrated, because the
+artwork is largely inline SVG below the size threshold rather than photography.
+The median section holds **320 characters**.
+
 ## Elevation & Depth
 
 Wide and soft: `rgba(0, 0, 0, 0.1) 0px 0px 32px` is an unoffset 32px blur, a
@@ -247,14 +258,16 @@ transition measured in this registry, and it is deliberate.
 
 ## Do's and Don'ts
 
-- **Do** keep the accent dark. Its 11:1 contrast is what makes it usable for
+- **Do** keep the aubergine dark. Its 11:1 contrast is what makes it usable for
   text, and lightening it toward a conventional purple costs that.
-- **Do** tint the surface rather than greying it. `#f9f0ff` is the aubergine at
-  low volume.
-- **Don't** add a third text tier. Two values and a size scale carry the
-  hierarchy.
+- **Do** tint surfaces rather than greying them.
+- **Do** let the motion be slow. 0.42s on an aggressive ease-out is four times
+  Linear's, and it is the most distinctive behavioural fact in this file.
+- **Don't** add a third text tier. Two values and a size scale carry hierarchy.
 - **Don't** rely on the `#f5f5f5` border for structure; at 1.09:1 it is barely
   there.
+- **Don't** lean on photography. Only one of eleven sections is image-led.
 
-
+**What this file does not constrain:** page structure, section order, or
+content. It gives you a colour discipline, a type pairing and a tempo.
 

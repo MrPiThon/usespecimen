@@ -157,6 +157,11 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   promoted over their base names *before* resolving `{colors.primary}`-style
   references, or component tokens resolve to the light accent while the dark
   preview renders.
+- Proof shots are referenced from frontmatter as `provenance.screenshot`, which
+  `author` emits by discovering which files exist in the capture directory
+  **before** building the frontmatter. They used to be copied afterwards and
+  referenced by nothing: seventeen `source.webp` files existed in the repository
+  and not one had ever reached a page.
 - `src/lib/system-files.mjs` reads `DESIGN.md` from disk rather than using
   `entry.body`, because the Content Layer strips frontmatter and the file people
   paste into an agent is the whole thing. Verified byte-identical at
@@ -472,7 +477,46 @@ Constants, each with the measurement behind it:
 | `HERO_MAX_RATIO` | 2 | Real heroes across the corpus run 0.76–1.59 viewports. Apple's first section is 2.33 and holds several stacked product panels, so its height is withheld and its headline kept. |
 | `MEASURE_TOLERANCE` | max(4px, 2%) | Sibling containers land a pixel or two apart at the same measure; 2% groups those without merging a 1230px column into a 1440px bleed. |
 | nav candidate | ≥3 links, width > 50vw, top < 1vh, topmost wins | Notion's first `<header>` in document order is the *hero's* header (`H1`, `P`, `HeroCTA`), so `querySelector('header')` measured a 308px block of hero text. GOV.UK's real masthead sits at y=324 behind a cookie bar, so a fixed 200px cutoff reported it had no navigation. |
+| media, per section | outermost only, ≥5000px² | A `<picture>` and its `<img>` both match, and stacked layers compound: Stripe summed to 383% of its own section area before nested media were skipped. 5000px² is above any icon, below any content image. |
 | CTA cluster | walk ≤5 ancestors from the headline | A pixel window fails: Linear renders a fake product sidebar as live DOM inside its hero, so `Pulse`, `Inbox` and `My issues` all counted as calls to action. The cluster is a different branch of the tree. Level 0 is strong evidence; deeper is reported as weak. |
+
+### Grammar, not transcription
+
+The load-bearing rule for anything structural. A DESIGN.md is a design
+*language*, not a wireframe of one page, and the test for whether a fact belongs
+in it is:
+
+> Does this fact still make sense on a page the source site does not have?
+
+Build a checkout page in Nike's language. The 1340px measure applies. `0.3s
+ease` applies. A 96px fixed nav applies. "19 sections: hero, product grid,
+editorial, footer CTA" is meaningless — there is no checkout equivalent.
+
+Grammar transfers. Transcription does not. And the failure mode of getting this
+wrong is not merely less creativity: a model handed a section sequence will try
+to satisfy it, so you get a homepage-shaped checkout page. Over-specification
+buys mismatch, not fidelity.
+
+So `sectionComposition` records **counts and never an array** — the shape itself
+cannot express an order, which is a stronger guarantee than a convention. What
+is published is a repertoire: `sectionWidth` (full-bleed / contained / mixed),
+`sectionMedia` (image-led / balanced / text-led / none), `sectionCopy`
+(sparse / moderate / dense), and grid prevalence.
+
+Bands rather than raw ratios, because the ratio is evidence and the band is the
+instruction. Each cut sits in an observed gap: bleed measured 0% on three sites
+and 100% on two with Nike alone at 53%; media-led ran 0, 0, 30, 50, 64, 74;
+median characters per section ran 74, 96, 249, 536, 892, 1145.
+
+`MIN_COMPOSITION_SECTIONS` is 4. Apple's three sections are 2100/1764/957px
+containers each holding several panels, so its shares quantise to thirds and its
+median section carries 9400 characters — the same coarseness that withholds its
+hero height.
+
+Each file's **Do's and Don'ts** closes with what the file deliberately does *not*
+constrain. That is the mechanism that keeps direction from becoming dictation,
+and it is also just true: naming the open ground is more honest than implying
+the file covers everything.
 
 Section detection either partitions the page or it does not. When it does not
 (`sectionsReliable: false` — app shells, stacked overlays: airbnb, tailwindcss,

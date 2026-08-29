@@ -238,6 +238,33 @@ palette have told you anything:
 | Slack | 1230px | 0.87vh, 58px left | **0.42s**, four times Linear's |
 | Airbnb | 1430px | withheld — app shell | 0.3s |
 
+**Composition, and the line we will not cross.** The obvious next step was to
+classify sections — "hero, then feature grid, then testimonial" — and it is the
+wrong step. That describes one artifact and stops making sense the moment
+someone asks for a page the source site does not have. A model handed a section
+sequence tries to satisfy it, so you get a homepage-shaped checkout page.
+
+What ships instead is the section *repertoire*: whether sections bleed or stay
+contained, whether they lead with imagery or with words, and how much copy a
+section carries. Those are rules, they apply to any page, and they separate the
+corpus sharply:
+
+| | sections | media | copy |
+|---|---|---|---|
+| GOV.UK | contained | **none** | sparse (74 chars) |
+| Nike | mixed | image-led (14/19) | sparse (96 chars) |
+| Basecamp | contained | **none** | moderate (536) |
+| Stripe | full-bleed | balanced | dense (1145) |
+
+Two of thirteen sites use no content imagery at all. That is not something a
+palette records, and it is the difference between a page that looks like
+Basecamp and one that looks like a stock template wearing Basecamp's colours.
+
+The harvester records counts and never an array, so the data layer is
+*incapable* of expressing an order. And every file's Do's and Don'ts now closes
+by naming what it does not constrain — section order, page composition, copy —
+because direction without that becomes dictation.
+
 GOV.UK's total absence of motion is the clearest case. It is not a hole in the
 capture; it is the system. An agent given the palette alone would add a 150ms
 ease because that feels polished, and would be wrong in a way no colour check

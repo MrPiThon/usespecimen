@@ -173,11 +173,16 @@ components:
 provenance:
   brand: 'The Verge'
   source: 'https://www.theverge.com/'
-  capturedAt: '2026-08-29T03:23:47.835Z'
+  capturedAt: '2026-08-29T03:47:49.977Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
+  screenshotDark: './source-dark.webp'
 ---
+
+
+
 
 
 
@@ -247,11 +252,15 @@ page; do not build a system of transitions on one measurement.
 
 - **Do** keep the violet at full saturation. A muted version stops working as a
   signal in a page this dense.
-- **Do** pair the serif body with a sans display. Collapsing to one family loses
-  the editorial character entirely.
+- **Do** pair the serif body with a sans display.
+- **Do** keep the measure narrow at 800px. It is what makes a wall of headlines
+  readable.
 - **Don't** loosen the 1.3 line height. The density is the point.
 - **Don't** round the containers. Sharp boxes with circular buttons is the
   signature.
+- **Don't** build a motion system from this file. One control declares a
+  transition; that is not enough to generalise from.
 
-
+**What this file does not constrain:** page structure, which could not be read
+here, and motion, which was measured on a single element.
 

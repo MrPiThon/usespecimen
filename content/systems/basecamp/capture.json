@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:24:28.253Z",
+  "capturedAt": "2026-08-29T03:44:29.510Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1344,
     "sampleRatio": 0.73
   },
-  "harvestVersion": 6,
-  "clusterVersion": 15,
+  "harvestVersion": 7,
+  "clusterVersion": 16,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -25,7 +25,7 @@
     "polarity": "light",
     "roles": {
       "background": {
-        "hex": "#fef3f3",
+        "hex": "#fff9f5",
         "weightShare": 1,
         "variants": [],
         "source": "pageBg"
@@ -56,18 +56,18 @@
         {
           "name": "text-1",
           "hex": "#29353c",
-          "contrast": 11.58,
+          "contrast": 12.06,
           "charShare": 0.8443
         }
       ]
     },
     "palette": [
       {
-        "hex": "#fef3f3",
+        "hex": "#fff9f5",
         "role": "background",
         "hue": "neutral",
-        "lightness": 0.973,
-        "chroma": 0.012,
+        "lightness": 0.986,
+        "chroma": 0.008,
         "count": 3
       },
       {
@@ -510,6 +510,17 @@
       "share": 0.59
     },
     "rhythm": null,
+    "composition": {
+      "total": 5,
+      "bleedCount": 0,
+      "griddedCount": 4,
+      "mediaLedCount": 0,
+      "charsMedian": 536,
+      "sectionWidth": "contained",
+      "sectionMedia": "none",
+      "sectionCopy": "moderate",
+      "gridPrevalence": 0.8
+    },
     "columns": {
       "count": 2,
       "occurrences": 1
@@ -595,8 +606,8 @@
       {
         "pair": "foreground/background",
         "fg": "#29353c",
-        "bg": "#fef3f3",
-        "ratio": 11.58,
+        "bg": "#fff9f5",
+        "ratio": 12.06,
         "kind": "text",
         "criterion": "1.4.3 Contrast (Minimum)",
         "min": 4.5,
@@ -619,8 +630,8 @@
       {
         "pair": "primary/background",
         "fg": "#2377d2",
-        "bg": "#fef3f3",
-        "ratio": 4.16,
+        "bg": "#fff9f5",
+        "ratio": 4.34,
         "kind": "nonText",
         "criterion": "1.4.11 Non-text Contrast",
         "min": 3,
@@ -655,8 +666,8 @@
       "sampled": 1340,
       "sampleRatio": 0.727
     },
-    "harvestVersion": 6,
-    "clusterVersion": 15,
+    "harvestVersion": 7,
+    "clusterVersion": 16,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1189,6 +1200,17 @@
         "share": 0.59
       },
       "rhythm": null,
+      "composition": {
+        "total": 5,
+        "bleedCount": 0,
+        "griddedCount": 4,
+        "mediaLedCount": 0,
+        "charsMedian": 536,
+        "sectionWidth": "contained",
+        "sectionMedia": "none",
+        "sectionCopy": "moderate",
+        "gridPrevalence": 0.8
+      },
       "columns": {
         "count": 2,
         "occurrences": 1
@@ -1323,7 +1345,7 @@
     ]
   },
   "harvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
     "viewport": {
@@ -1349,7 +1371,7 @@
       }
     },
     "bgColors": {
-      "oklch(0.9727 0.0119 17.36)": {
+      "oklch(0.9856 0.0084 56.32)": {
         "count": 3,
         "area": 12097525.6875,
         "chars": 0
@@ -2580,7 +2602,7 @@
         "chars": 1005
       }
     },
-    "pageBg": "oklch(0.9727 0.0119 17.36)",
+    "pageBg": "oklch(0.9856 0.0084 56.32)",
     "elementCount": 1842,
     "sampled": 1344,
     "structure": {
@@ -2613,6 +2635,13 @@
         "0.3s ease": 1
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 5,
+        "bleed": 0,
+        "gridded": 4,
+        "mediaLed": 0,
+        "charsMedian": 536
+      },
       "hero": {
         "heightRatio": 0.87,
         "headingSize": 38,
@@ -2655,7 +2684,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
     "viewport": {
@@ -3973,6 +4002,13 @@
         "0.3s ease": 1
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 5,
+        "bleed": 0,
+        "gridded": 4,
+        "mediaLed": 0,
+        "charsMedian": 536
+      },
       "hero": {
         "heightRatio": 0.87,
         "headingSize": 38,

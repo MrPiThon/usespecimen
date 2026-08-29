@@ -6,7 +6,7 @@ categories:
   - saas
   - marketing
 colors:
-  background: '#fef3f3'
+  background: '#fff9f5'
   foreground: '#29353c'
   primary: '#2377d2'
   primaryForeground: '#29353c'
@@ -131,6 +131,9 @@ layout:
   gridColumns: 2
   navHeight: '76px'
   navPosition: 'absolute'
+  sectionWidth: 'contained'
+  sectionMedia: 'none'
+  sectionCopy: 'moderate'
   heroHeight: '87vh'
   heroHeadingSize: '38px'
   heroAlign: 'left'
@@ -162,11 +165,16 @@ components:
 provenance:
   brand: 'Basecamp'
   source: 'https://basecamp.com/'
-  capturedAt: '2026-08-29T03:24:28.253Z'
+  capturedAt: '2026-08-29T03:44:29.510Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
+  screenshotDark: './source-dark.webp'
 ---
+
+
+
 
 
 
@@ -221,6 +229,14 @@ The hero is **0.87 viewports** with a 38px left-aligned headline, **no media and
 no call to action**: an opening made entirely of words. The nav is 76px and
 absolutely positioned over it.
 
+**Section composition across five sections: contained, no imagery, moderate
+copy.** Nothing bleeds, four of five carry a repeating group, and **no section
+is image-led** — there is no content photography on this page. The median
+section holds **536 characters**.
+
+A page of words and lists inside a 680px column, with no pictures at all, is the
+whole layout.
+
 ## Elevation & Depth
 
 Five shadows, authored in `oklch` and largely inset.
@@ -242,12 +258,15 @@ no exceptions.
 
 ## Do's and Don'ts
 
-- **Do** tint the canvas. `#f5faf6` rather than `#ffffff` is most of the calm.
-- **Do** derive the scale in rems rather than copying the fractional pixels.
-- **Don't** ship the accent's label pairing as measured — 2.78:1 fails AA.
-- **Don't** add a muted text tier. This system genuinely has one text colour.
-- **Don't** impose a spacing grid. It does not have one, and adding it would
-  regularise exactly what makes it feel unhurried.
+- **Do** hold everything to the 680px column. This is close to a reading measure,
+  not a marketing width.
+- **Do** open on words. The hero carries a 38px headline with no media and no
+  call to action at all.
+- **Do** build with lists and repeating groups; four of five sections carry one.
+- **Don't** add photography. No section on this page is image-led.
+- **Don't** speed up or slow down the 0.15s ease; it is applied to 99% of
+  everything that animates, with no exceptions.
 
-
+**What this file does not constrain:** what you write or how the page is
+organised. It constrains the width, the voice and the tempo.
 

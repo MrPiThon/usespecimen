@@ -136,6 +136,9 @@ layout:
   gridColumns: 2
   navHeight: '72px'
   navPosition: 'sticky'
+  sectionWidth: 'full-bleed'
+  sectionMedia: 'image-led'
+  sectionCopy: 'moderate'
   heroHeight: '94vh'
   heroHeadingSize: '96px'
   heroAlign: 'left'
@@ -172,11 +175,15 @@ components:
 provenance:
   brand: 'Shopify'
   source: 'https://www.shopify.com/'
-  capturedAt: '2026-08-29T03:25:45.878Z'
+  capturedAt: '2026-08-29T03:43:43.893Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -233,6 +240,11 @@ reachable the whole way down.
 The call-to-action count here is weakly evidenced — it was found several levels
 above the headline — so check it against the live page before relying on it.
 
+**Section composition across fourteen sections: full-bleed, image-led, moderate
+copy.** All fourteen span the viewport with content held to the 1260px measure;
+nine are image-led and six carry a repeating group. The median section holds
+**249 characters** — enough for a headline and a short paragraph, not an essay.
+
 ## Elevation & Depth
 
 Effectively flat. The declared shadows resolve to fully transparent — a reset
@@ -254,13 +266,15 @@ radius — note the asymmetry, which leaves room for a trailing icon. Links take
 
 ## Do's and Don'ts
 
-- **Do** keep headings lighter than body copy. Inverting that ratio is the
-  fastest way to lose the character.
-- **Do** treat the mint as scarce. It is the only chromatic value in the system.
-- **Don't** soften the canvas to a near-black. Pure `#000000` is what makes the
-  surface ladder readable.
-- **Don't** assume the mint is safe as a button fill without checking — the
-  extractor found it in text, not on a control.
+- **Do** bleed sections full width and hold content to 1260px.
+- **Do** lead with imagery — nine of fourteen sections are image-led — and keep
+  copy near 250 characters a section.
+- **Do** keep the nav sticky. A 45-link catalogue has to stay reachable.
+- **Don't** shrink the 96px display size; the scale steps hard from body to
+  headline on purpose.
+- **Don't** treat the hero call-to-action count as settled — it is weakly
+  evidenced here.
 
-
+**What this file does not constrain:** the merchandising, the section order, or
+how many sections a page runs. Those are yours.
 

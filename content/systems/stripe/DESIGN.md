@@ -137,6 +137,9 @@ layout:
   gridColumns: 2
   navHeight: '76px'
   navPosition: 'relative'
+  sectionWidth: 'full-bleed'
+  sectionMedia: 'balanced'
+  sectionCopy: 'dense'
   heroHeight: '76vh'
   heroHeadingSize: '48px'
   heroAlign: 'left'
@@ -159,11 +162,15 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-29T03:26:01.508Z'
+  capturedAt: '2026-08-29T03:44:08.593Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -219,6 +226,12 @@ landing, with a 48px left-aligned headline, three media elements and two filled
 calls to action. The nav is 76px and **not sticky** — it scrolls away, which is
 a real choice on a page this long. Only seven links sit in it.
 
+**Section composition across eight sections: full-bleed, balanced, dense copy.**
+All eight span the viewport while holding their content to the 1230px measure —
+the bleed-with-a-column pattern. Six of eight carry a repeating group, four are
+image-led, and the median section holds **1145 characters**, the most in the
+registry. Sections here are long and explain themselves.
+
 ## Elevation & Depth
 
 Shadows are wide, soft and tinted blue rather than neutral:
@@ -244,12 +257,16 @@ hard at the end, which is what gives the page its settled feel.
 
 ## Do's and Don'ts
 
-- **Do** keep the indigo scarce. It reads as confident because it is rare.
-- **Do** preserve the 300 body weight; raising it to 400 loses the character.
-- **Don't** use the border colour to carry meaning. At 1.18:1 it is invisible to
-  many readers and fails non-text contrast.
-- **Don't** introduce a second accent hue. This system has exactly one.
+- **Do** keep the navy for body text and the indigo for action. The separation
+  is the system.
+- **Do** bleed sections to the viewport while holding content to 1230px.
+- **Do** write real prose. A median section here carries 1145 characters, and a
+  layout this generous looks empty with captions in it.
+- **Don't** use the indigo for large areas of text.
+- **Don't** flatten the 4px grid into 8px; the half-steps are used.
+- **Don't** shorten the 0.3s easing. That long decelerating curve is why the
+  page feels settled rather than snappy.
 
-
-
+**What this file does not constrain:** section order, page composition, imagery,
+or copy. It gives you an ink, a grid, a measure and a tempo — not a page.
 

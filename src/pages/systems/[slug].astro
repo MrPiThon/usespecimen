@@ -141,6 +141,12 @@ const colors = Object.entries(d.colors ?? {}).filter(([, v]) => typeof v === 'st
             {d.layout?.navHeight && (
               <><dt>Nav</dt><dd>{d.layout.navHeight}{d.layout.navPosition ? `, ${d.layout.navPosition}` : ''}</dd></>
             )}
+            {d.layout?.sectionWidth && (
+              <><dt>Sections</dt><dd>
+                {[d.layout.sectionWidth, d.layout.sectionMedia === 'none' ? 'no imagery' : d.layout.sectionMedia,
+                  d.layout.sectionCopy && `${d.layout.sectionCopy} copy`].filter(Boolean).join(', ')}
+              </dd></>
+            )}
             {d.layout?.heroHeight && (
               <><dt>Hero</dt><dd>
                 {d.layout.heroHeight}

@@ -110,6 +110,9 @@ layout:
   gridColumns: 2
   navHeight: '64px'
   navPosition: 'relative'
+  sectionWidth: 'full-bleed'
+  sectionMedia: 'image-led'
+  sectionCopy: 'moderate'
   heroHeight: '159vh'
   heroHeadingSize: '96px'
   heroAlign: 'center'
@@ -148,11 +151,15 @@ components:
 provenance:
   brand: 'Notion'
   source: 'https://www.notion.com/'
-  capturedAt: '2026-08-29T03:25:30.858Z'
+  capturedAt: '2026-08-29T03:46:44.441Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -202,6 +209,11 @@ Centred display type at that size is the signature. Most systems here align
 their hero left; this one puts the headline in the middle of the screen and
 makes it very large.
 
+**Section composition across four sections: full-bleed, image-led, moderate
+copy.** All four bleed, three are image-led and three carry a repeating group,
+with a median of **489 characters**. Four is a small sample — treat the shares
+as indicative rather than settled.
+
 ## Elevation & Depth
 
 Barely there, deliberately. The largest shadow begins
@@ -226,12 +238,14 @@ The curve accelerates into the end rather than easing out of it.
 
 ## Do's and Don'ts
 
-- **Do** keep the serif body. Substituting a sans changes what the product is.
-- **Do** preserve the tight top of the text ladder — three near-blacks doing
-  different jobs is the texture.
-- **Don't** shrink the button label. White on `#0075de` is 4.57:1, and small or
-  light text on that blue drops below AA immediately.
-- **Don't** ask the `#e6e6e6` border to carry meaning; at 1.25:1 it is a hairline.
+- **Do** centre the hero headline and make it very large. 96px centred over a
+  full-bleed 1.59-viewport opening is the signature, and almost nothing else in
+  this registry does it.
+- **Do** bleed sections and hold content to 1230px.
+- **Don't** left-align the display type. It is the one thing that would make
+  this read as a different system.
+- **Don't** over-read the section shares — they come from only four sections.
 
-
+**What this file does not constrain:** what the sections contain or how many
+there are. Take the centred display voice and the measure; build your own page.
 

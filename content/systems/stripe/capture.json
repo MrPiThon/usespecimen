@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:26:01.508Z",
+  "capturedAt": "2026-08-29T03:44:08.593Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 5719,
     "sampleRatio": 0.663
   },
-  "harvestVersion": 6,
-  "clusterVersion": 15,
+  "harvestVersion": 7,
+  "clusterVersion": 16,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -694,6 +694,17 @@
       "occurrences": 9,
       "share": 0.6
     },
+    "composition": {
+      "total": 8,
+      "bleedCount": 8,
+      "griddedCount": 6,
+      "mediaLedCount": 4,
+      "charsMedian": 1145,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "balanced",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.75
+    },
     "columns": {
       "count": 2,
       "occurrences": 16
@@ -808,7 +819,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://stripe.com/",
     "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
     "viewport": {
@@ -2440,6 +2451,13 @@
         "0.2s ease": 2
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 8,
+        "bleed": 8,
+        "gridded": 6,
+        "mediaLed": 4,
+        "charsMedian": 1145
+      },
       "hero": {
         "heightRatio": 0.76,
         "headingSize": 48,

@@ -126,11 +126,15 @@ components:
 provenance:
   brand: 'Airbnb'
   source: 'https://www.airbnb.com/'
-  capturedAt: '2026-08-29T03:22:58.109Z'
+  capturedAt: '2026-08-29T03:46:30.252Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -205,11 +209,15 @@ box rather than padding. All four states are declared on buttons.
 
 - **Do** keep `#222222` rather than black. The softness is what makes the
   neutrals feel warm.
-- **Do** use the large radii on media and the small ones on controls. Applying
-  one radius everywhere flattens the distinction.
+- **Do** use the large radii on media and the small ones on controls.
+- **Do** hold content to 1430px, the widest measure in the registry.
 - **Don't** treat 12px as the reading size — that measurement is chrome.
 - **Don't** promote the rejected `#0073e5` to an accent. It appeared once, and
   once is a campaign rather than a system.
+- **Don't** infer a page structure from this file. The section layout could not
+  be read — this is an app shell — so hero and rhythm are absent by measurement,
+  not by oversight.
 
-
+**What this file does not constrain:** almost all of the page structure, and
+deliberately so. Take the colour, type and shape language; the layout is yours.
 

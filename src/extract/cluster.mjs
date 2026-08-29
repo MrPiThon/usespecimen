@@ -1127,6 +1127,10 @@ function collectWarnings(capture, colors, type, spacing, rounded, states, compon
       w.push('Navigation measured taller than a fifth of the viewport — likely a menu '
         + 'caught open; its height was withheld rather than published.');
     }
+    if (layout.sectionsReliable && !layout.composition) {
+      w.push('Too few sections to describe how they are composed; section width, media '
+        + 'emphasis and copy density are withheld rather than reported from a handful.');
+    }
     if (layout.hero && layout.hero.heightRatio == null) {
       w.push(`First section is ${layout.hero.heightRatioMeasured} viewports tall — most likely `
         + 'a run of stacked panels rather than one hero, so its height was withheld.');
@@ -1271,6 +1275,56 @@ export function layoutTokens(capture) {
     }
     : null;
 
+  // Section composition, as a repertoire rather than a running order.
+  //
+  // Bands, not raw ratios, because the ratio is evidence and the band is the
+  // instruction. Each cut sits in an observed gap rather than at a round
+  // number: bleed measured 0% on three sites and 100% on two, with Nike alone
+  // at 53%, so anything inside 0.3-0.7 is genuinely mixed. Media-led ran 0, 0,
+  // 30, 50, 64 and 74. Median characters per section ran 74, 96, 249, 536, 892
+  // and 1145, which separates a page of captions from a page of prose.
+  const BLEED_MOSTLY = 0.7;
+  const BLEED_RARELY = 0.3;
+  const MEDIA_LED = 0.6;
+  const MEDIA_SOME = 0.35;
+  const COPY_SPARSE = 150;
+  const COPY_DENSE = 600;
+
+  // A distribution over three sections is not a distribution. Apple's three are
+  // 2100, 1764 and 957px containers each holding several stacked panels, so its
+  // shares quantise to thirds and its median section carries 9400 characters —
+  // the same coarseness that already withheld its hero height. Four is the
+  // point where the observed corpus starts reporting shares that match the site.
+  const MIN_COMPOSITION_SECTIONS = 4;
+  const comp = st.sectionComposition;
+  const composition = (comp && comp.total >= MIN_COMPOSITION_SECTIONS && st.sectionsReliable)
+    ? (() => {
+      const share = (n) => n / comp.total;
+      const bleed = share(comp.bleed);
+      const media = share(comp.mediaLed);
+      return {
+        // Counts kept alongside the labels: the label is what an agent acts
+        // on, the count is what a reader checks it against.
+        total: comp.total,
+        bleedCount: comp.bleed,
+        griddedCount: comp.gridded,
+        mediaLedCount: comp.mediaLed,
+        charsMedian: comp.charsMedian,
+        sectionWidth: bleed >= BLEED_MOSTLY ? 'full-bleed'
+          : bleed <= BLEED_RARELY ? 'contained' : 'mixed',
+        // "none" is its own answer, not a low score. Basecamp runs five
+        // sections with no content imagery at all, and an agent told
+        // "text-led" would still reach for a photograph.
+        sectionMedia: comp.mediaLed === 0 ? 'none'
+          : media >= MEDIA_LED ? 'image-led'
+            : media >= MEDIA_SOME ? 'balanced' : 'text-led',
+        sectionCopy: comp.charsMedian < COPY_SPARSE ? 'sparse'
+          : comp.charsMedian < COPY_DENSE ? 'moderate' : 'dense',
+        gridPrevalence: round(share(comp.gridded), 2),
+      };
+    })()
+    : null;
+
   // Section detection either partitioned the page or it did not. When it did
   // not, everything derived from sections is withheld — the measure, the grid,
   // the nav and the motion are read independently and still stand.
@@ -1281,6 +1335,7 @@ export function layoutTokens(capture) {
     sections: ok ? st.sectionCount : null,
     measure: dominant(st.contentWidths, MEASURE_TOLERANCE),
     rhythm: ok ? dominant(st.sectionRhythm, MEASURE_TOLERANCE) : null,
+    composition,
     columns,
     hero: ok ? hero : null,
     // A nav measured taller than a fifth of the viewport is a mega-menu caught
@@ -1349,7 +1404,7 @@ export function cluster(capture, { previous } = {}) {
     // 13: parseColor understands lab/oklab/oklch/display-p3, so sites authoring
     //     in modern colour spaces stop resolving to null andwhite-on-white.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 15,
+    clusterVersion: 16,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

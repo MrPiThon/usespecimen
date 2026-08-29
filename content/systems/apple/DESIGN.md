@@ -140,11 +140,15 @@ components:
 provenance:
   brand: 'Apple'
   source: 'https://www.apple.com/'
-  capturedAt: '2026-08-29T03:23:09.226Z'
+  capturedAt: '2026-08-29T03:45:45.940Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -200,6 +204,13 @@ That is not one hero but a run of stacked product panels; it does carry a 56px
 centred headline over four media elements. Treat the opening as a sequence you
 scroll, not a view you land on.
 
+**Section composition could not be described.** The page resolves to only three
+sections — containers of 2100, 1764 and 957px, each holding several stacked
+product panels — and shares over three items are not a distribution. Section
+width, media emphasis and copy density are withheld rather than reported from a
+handful. The measure, rhythm, grid and motion are independent measurements and
+stand.
+
 ## Elevation & Depth
 
 A single shadow, `rgba(0, 0, 0, 0.22) 3px 5px 30px`: wide, soft and offset
@@ -221,11 +232,16 @@ animates. A single curve governs essentially the whole page.
 
 ## Do's and Don'ts
 
-- **Do** pill everything interactive. The 980px radius is the identity.
-- **Do** use `#1d1d1f` rather than black. The softening is deliberate.
-- **Don't** treat 12px as your reading size — that measurement is chrome.
-- **Don't** brighten the blue. At 4.7:1 it is tuned to sit quietly beside
-  photography, and a louder blue changes what the page is for.
+- **Do** keep the text column narrow. A 930px measure beside full-bleed imagery
+  is what makes the photography feel enormous.
+- **Do** keep the nav thin and fixed. 44px is the slimmest here.
+- **Do** apply one curve everywhere. 0.32s governs 94% of what animates.
+- **Don't** build a 2.33-viewport hero because the measurement mentions one.
+  That opening is a run of stacked product panels, which is why its height is
+  withheld rather than published.
+- **Don't** read the section shares from this file; there were too few sections
+  to describe.
 
-
+**What this file does not constrain:** page composition, section order, or
+content. It gives you a narrow measure against wide imagery, and one timing.
 

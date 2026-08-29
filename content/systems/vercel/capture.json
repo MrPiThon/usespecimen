@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:26:36.066Z",
+  "capturedAt": "2026-08-29T03:48:27.968Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 5333,
-    "elementCount": 3383,
+    "elementCount": 3389,
     "sampled": 1559,
-    "sampleRatio": 0.461
+    "sampleRatio": 0.46
   },
-  "harvestVersion": 6,
-  "clusterVersion": 15,
+  "harvestVersion": 7,
+  "clusterVersion": 16,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -427,6 +427,17 @@
       "occurrences": 1,
       "share": 1
     },
+    "composition": {
+      "total": 4,
+      "bleedCount": 0,
+      "griddedCount": 4,
+      "mediaLedCount": 3,
+      "charsMedian": 579,
+      "sectionWidth": "contained",
+      "sectionMedia": "image-led",
+      "sectionCopy": "moderate",
+      "gridPrevalence": 1
+    },
     "columns": null,
     "hero": {
       "heightRatio": 0.93,
@@ -548,7 +559,7 @@
     "No borders observed; border token omitted.",
     "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
     "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
-    "Strided sample: 1559 of 3383 elements. Weights are relative only."
+    "Strided sample: 1559 of 3389 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -560,12 +571,12 @@
         "h": 900
       },
       "docHeight": 5333,
-      "elementCount": 3380,
+      "elementCount": 3389,
       "sampled": 1568,
-      "sampleRatio": 0.464
+      "sampleRatio": 0.463
     },
-    "harvestVersion": 6,
-    "clusterVersion": 15,
+    "harvestVersion": 7,
+    "clusterVersion": 16,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -994,6 +1005,17 @@
         "occurrences": 1,
         "share": 1
       },
+      "composition": {
+        "total": 4,
+        "bleedCount": 0,
+        "griddedCount": 4,
+        "mediaLedCount": 3,
+        "charsMedian": 579,
+        "sectionWidth": "contained",
+        "sectionMedia": "image-led",
+        "sectionCopy": "moderate",
+        "gridPrevalence": 1
+      },
       "columns": null,
       "hero": {
         "heightRatio": 0.93,
@@ -1115,11 +1137,11 @@
       "No borders observed; border token omitted.",
       "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
       "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
-      "Strided sample: 1568 of 3380 elements. Weights are relative only."
+      "Strided sample: 1568 of 3389 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://vercel.com/",
     "title": "Agentic Infrastructure - Vercel",
     "viewport": {
@@ -1832,7 +1854,7 @@
       }
     },
     "pageBg": "rgb(250, 250, 250)",
-    "elementCount": 3383,
+    "elementCount": 3389,
     "sampled": 1559,
     "structure": {
       "sectionCount": 4,
@@ -1859,6 +1881,13 @@
         "1s ease": 1
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 4,
+        "bleed": 0,
+        "gridded": 4,
+        "mediaLed": 3,
+        "charsMedian": 579
+      },
       "hero": {
         "heightRatio": 0.93,
         "headingSize": 64,
@@ -1880,17 +1909,17 @@
       {
         "w": 1440,
         "h": 900,
-        "elements": 1129
+        "elements": 1131
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1127
+        "elements": 1129
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1127
+        "elements": 1129
       }
     ],
     "mergedFrom": 3,
@@ -1901,7 +1930,7 @@
     }
   },
   "darkHarvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://vercel.com/",
     "title": "Agentic Infrastructure - Vercel",
     "viewport": {
@@ -2614,7 +2643,7 @@
       }
     },
     "pageBg": "rgb(0, 0, 0)",
-    "elementCount": 3380,
+    "elementCount": 3389,
     "sampled": 1568,
     "structure": {
       "sectionCount": 4,
@@ -2641,6 +2670,13 @@
         "1s ease": 1
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 4,
+        "bleed": 0,
+        "gridded": 4,
+        "mediaLed": 3,
+        "charsMedian": 579
+      },
       "hero": {
         "heightRatio": 0.93,
         "headingSize": 64,
@@ -2662,17 +2698,17 @@
       {
         "w": 1440,
         "h": 900,
-        "elements": 1128
+        "elements": 1131
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1126
+        "elements": 1129
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1126
+        "elements": 1129
       }
     ],
     "mergedFrom": 3,

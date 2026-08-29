@@ -97,6 +97,9 @@ layout:
   sectionSpacing: '40px'
   navHeight: '64px'
   navPosition: 'sticky'
+  sectionWidth: 'contained'
+  sectionMedia: 'image-led'
+  sectionCopy: 'moderate'
   heroHeight: '93vh'
   heroHeadingSize: '64px'
   heroAlign: 'left'
@@ -125,11 +128,16 @@ components:
 provenance:
   brand: 'Vercel'
   source: 'https://vercel.com/'
-  capturedAt: '2026-08-29T03:26:36.066Z'
+  capturedAt: '2026-08-29T03:48:27.968Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
+  screenshotDark: './source-dark.webp'
 ---
+
+
+
 
 
 
@@ -183,6 +191,11 @@ No repeating card grid was found. The hero is **0.93 viewports** with a 64px
 left-aligned headline, two media elements and two filled calls to action, under
 a **64px sticky** nav.
 
+**Section composition across four sections: contained, image-led, moderate
+copy.** Nothing bleeds, **all four carry a repeating group**, three are
+image-led, and the median section holds **579 characters**. Four is a small
+sample; read the shares as indicative.
+
 ## Elevation & Depth
 
 Flat by construction. Every observed box-shadow resolves to fully transparent —
@@ -208,13 +221,14 @@ the standard material curve, run about twice as fast as it usually is.
 
 ## Do's and Don'ts
 
-- **Do** keep it achromatic. Colour is reserved for focus and status, nothing else.
-- **Do** preserve the contrast symmetry when inverting — about 17:1 for body and
-  8:1 for muted in both schemes.
-- **Don't** add drop shadows. This system is flat on purpose.
-- **Don't** spend the blue on anything but focus. Filling a button with it would
-  break the one rule the palette is built around.
+- **Do** keep sections tight. 40px between them is the closest spacing in the
+  registry and it is what makes the page feel engineered rather than airy.
+- **Do** hold content to 1390px — 60% of observed widths agree on it, the
+  strongest agreement measured anywhere here.
+- **Do** build with repeating groups; all four sections carry one.
+- **Don't** loosen the 0.1s timing. This is the standard material curve run
+  about twice as fast as usual, and the speed is the character.
+- **Don't** fill controls with the accent; it was measured in a focus ring.
 
-
-
+**What this file does not constrain:** section count, order or content.
 

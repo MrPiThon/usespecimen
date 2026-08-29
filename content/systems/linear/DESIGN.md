@@ -14,7 +14,6 @@ colors:
   primary: '#5e6ad2'
   border: '#1c1d1e'
   surface-1: '#0f1011'
-  surface-2: '#161718'
   text-1: '#f7f8f8'
   text-2: '#d0d6e0'
   text-3: '#8a8f98'
@@ -149,6 +148,9 @@ layout:
   gridColumns: 2
   navHeight: '73px'
   navPosition: 'fixed'
+  sectionWidth: 'contained'
+  sectionMedia: 'text-led'
+  sectionCopy: 'dense'
   heroHeight: '114vh'
   heroHeadingSize: '64px'
   heroAlign: 'left'
@@ -169,11 +171,15 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-29T03:25:17.125Z'
+  capturedAt: '2026-08-29T03:44:19.499Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
 ---
+
+
+
 
 
 
@@ -243,6 +249,12 @@ The hero is **1.14 viewports** — it deliberately overflows the fold — carryi
 64px left-aligned headline, one piece of media and a single call to action. The
 nav is **73px and fixed**, so it stays with you for the whole scroll.
 
+**Section composition across ten sections: contained, text-led, dense copy.**
+Nothing bleeds to the viewport — every section sits inside the 1340px measure —
+and **seven of ten carry a repeating group**, the highest grid usage here. Only
+three are image-led, and the median section holds **892 characters**. This is a
+system of cards and prose, not of photographs.
+
 ## Elevation & Depth
 
 Five distinct shadows, including inset treatments such as
@@ -268,10 +280,15 @@ everything that animates. Nothing here lingers.
 - **Do** keep type small and tracking tight; loosening either breaks the density.
 - **Do** spend the lavender on focus and selection states rather than on fills.
   That restraint is the system, not an oversight.
+- **Do** hold sections inside the 1340px measure and give them 128px of air.
+  Nothing bleeds here, and the gap is unusually wide on purpose.
+- **Do** build with cards. Seven of ten sections carry a repeating group.
 - **Don't** invent a spacing scale. This system genuinely does not have one.
 - **Don't** rely on border colour alone to indicate state at 1.18:1.
+- **Don't** slow the motion. 0.1s is four times faster than Slack's, and the
+  immediacy is the product's whole argument about itself.
 
-
-
-
+**What this file does not constrain:** how many sections a page has, what they
+contain, their order, or the copy. It describes a language — dark, dense, fast,
+contained, card-built. Write your own pages in it.
 

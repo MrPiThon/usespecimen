@@ -11,7 +11,7 @@
 // errors go to stderr, so `--json` pipes cleanly.
 
 import { parseArgs } from 'node:util';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { harvestFn } from './extract/harvest.mjs';
@@ -273,10 +273,21 @@ async function author(slug, opts) {
     }
   }
 
+  // Which proof shots exist has to be known BEFORE the frontmatter is built:
+  // they are referenced from it. They are still copied afterwards, below.
+  const available = [];
+  for (const shot of ['source.webp', 'source-dark.webp']) {
+    try {
+      await access(join(opts.out, source, shot));
+      available.push(shot);
+    } catch { /* not captured for this system */ }
+  }
+
   const generated = authorSystem(cap, {
     ...meta,
     brand: meta.brand || brandFromUrl(cap.source.url),
     dark: cap.supportsDark ? cap.dark : null,
+    shots: available,
   });
   const file = keepBody === null
     ? generated
@@ -300,13 +311,9 @@ ${keepBody}
   await writeFile(join(dir, 'capture.json'), `${JSON.stringify(cap, null, 2)}\n`, 'utf8');
   // Proof shots travel with the system directory.
   const shots = [];
-  for (const shot of ['source.webp', 'source-dark.webp']) {
-    try {
-      await writeFile(join(dir, shot), await readFile(join(opts.out, source, shot)));
-      shots.push(shot);
-    } catch (err) {
-      if (err.code !== 'ENOENT') throw err;
-    }
+  for (const shot of available) {
+    await writeFile(join(dir, shot), await readFile(join(opts.out, source, shot)));
+    shots.push(shot);
   }
 
   log(`Wrote ${dir}/${keepBody === null ? '' : '  (frontmatter only; prose kept)'}`);

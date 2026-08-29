@@ -45,7 +45,7 @@ export function brandFromUrl(url) {
   }
 }
 
-export function buildFrontmatter(cap, { name, description, brand, dark, categories }) {
+export function buildFrontmatter(cap, { name, description, brand, dark, categories, shots = [] }) {
   const roles = cap.colors.roles;
   const t = cap.typography;
 
@@ -97,6 +97,13 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     ...(L.columns ? { gridColumns: L.columns.count } : {}),
     ...(L.nav?.height ? { navHeight: `${L.nav.height}px` } : {}),
     ...(L.nav?.position ? { navPosition: L.nav.position } : {}),
+    // How sections are built. Rules, not a running order — see the note in
+    // harvest, which records counts and cannot express a sequence.
+    ...(L.composition ? {
+      sectionWidth: L.composition.sectionWidth,
+      sectionMedia: L.composition.sectionMedia,
+      sectionCopy: L.composition.sectionCopy,
+    } : {}),
     ...(L.hero ? {
       ...(L.hero.heightRatio ? { heroHeight: `${Math.round(L.hero.heightRatio * 100)}vh` } : {}),
       ...(L.hero.headingSize ? { heroHeadingSize: `${L.hero.headingSize}px` } : {}),
@@ -179,6 +186,12 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
       method: cap.method,
       harvestVersion: cap.harvestVersion,
       clusterVersion: cap.clusterVersion,
+      // Collection-relative, so Astro's image() helper resolves it and emits
+      // responsive variants. Without these keys the proof shots sit in the
+      // system directory referenced by nothing, which is how seventeen of them
+      // came to exist without a single one ever reaching a page.
+      ...(shots.includes('source.webp') ? { screenshot: './source.webp' } : {}),
+      ...(shots.includes('source-dark.webp') ? { screenshotDark: './source-dark.webp' } : {}),
     },
   };
 }
@@ -246,8 +259,20 @@ function factsFor(section, cap, dark) {
           ].join(', '))
           : null,
         L?.sections ? bullet('Sections', `${L.sections} on the captured page`) : null,
+        L?.composition
+          ? bullet('Section composition', [
+            `${L.composition.sectionWidth}`,
+            `${L.composition.sectionMedia === 'none' ? 'no content imagery'
+              : L.composition.sectionMedia}`,
+            `${L.composition.sectionCopy} copy (${L.composition.charsMedian} characters per section, median)`,
+            `${L.composition.griddedCount} of ${L.composition.total} carry a repeating group`,
+          ].join('; '))
+          : null,
         h
-          ? bullet('Hero', [
+          // Named conditionally on purpose. These are the proportions of a hero
+          // where a page has one — an interior page in this language should not
+          // grow a 94vh opening because the homepage had one.
+          ? bullet('Hero, where a page has one', [
             h.heightRatio ? `${Math.round(h.heightRatio * 100)}vh`
               : `${h.heightRatioMeasured} viewports tall, too tall to read as one hero`,
             h.headingSize ? `${h.headingSize}px ${h.align}-aligned heading` : null,

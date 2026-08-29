@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:23:09.226Z",
+  "capturedAt": "2026-08-29T03:45:45.940Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 1867,
     "sampleRatio": 0.318
   },
-  "harvestVersion": 6,
-  "clusterVersion": 15,
+  "harvestVersion": 7,
+  "clusterVersion": 16,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -585,6 +585,7 @@
       "occurrences": 7,
       "share": 0.538
     },
+    "composition": null,
     "columns": {
       "count": 2,
       "occurrences": 7
@@ -741,6 +742,7 @@
   },
   "warnings": [
     "Hero call-to-action count (1) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "Too few sections to describe how they are composed; section width, media emphasis and copy density are withheld rather than reported from a handful.",
     "First section is 2.33 viewports tall — most likely a run of stacked panels rather than one hero, so its height was withheld.",
     "No spacing grid explains 75% of values (best 0.473); site may not be on a grid.",
     "button box metrics come from 2 elements out of 3 distinct shapes; thin evidence for a component token.",
@@ -749,7 +751,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://www.apple.com/",
     "title": "Apple",
     "viewport": {
@@ -1674,7 +1676,7 @@
     "interactiveRadius": {
       "0px": {
         "count": 260,
-        "area": 20103887.375,
+        "area": 20103852.29345703,
         "chars": 1356
       },
       "980px": {
@@ -1696,7 +1698,7 @@
       },
       "rgb(0, 102, 204)": {
         "count": 69,
-        "area": 7364083.34375,
+        "area": 7364048.262207031,
         "chars": 252
       },
       "rgb(41, 151, 255)": {
@@ -1829,6 +1831,13 @@
         "0.1s linear": 1
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 3,
+        "bleed": 3,
+        "gridded": 1,
+        "mediaLed": 3,
+        "charsMedian": 9400
+      },
       "hero": {
         "heightRatio": 2.33,
         "headingSize": 56,

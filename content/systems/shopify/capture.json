@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:25:45.878Z",
+  "capturedAt": "2026-08-29T03:43:43.893Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 2691,
     "sampleRatio": 0.384
   },
-  "harvestVersion": 6,
-  "clusterVersion": 15,
+  "harvestVersion": 7,
+  "clusterVersion": 16,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -706,6 +706,17 @@
       "occurrences": 7,
       "share": 0.304
     },
+    "composition": {
+      "total": 14,
+      "bleedCount": 14,
+      "griddedCount": 6,
+      "mediaLedCount": 9,
+      "charsMedian": 249,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "image-led",
+      "sectionCopy": "moderate",
+      "gridPrevalence": 0.43
+    },
     "columns": {
       "count": 2,
       "occurrences": 3
@@ -867,7 +878,7 @@
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://www.shopify.com/",
     "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
     "viewport": {
@@ -2048,7 +2059,7 @@
       },
       "5px": {
         "count": 21,
-        "area": 1745901.2858886719,
+        "area": 1745901.2077026367,
         "chars": 0
       },
       "16px": {
@@ -2576,6 +2587,13 @@
         "0.2s cubic-bezier(0.4, 0, 0.2, 1)": 28
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 14,
+        "bleed": 14,
+        "gridded": 6,
+        "mediaLed": 9,
+        "charsMedian": 249
+      },
       "hero": {
         "heightRatio": 0.94,
         "headingSize": 96,

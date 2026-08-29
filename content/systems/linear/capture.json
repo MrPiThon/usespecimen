@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T03:25:17.125Z",
+  "capturedAt": "2026-08-29T03:44:19.499Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 9960,
-    "elementCount": 15386,
-    "sampled": 6850,
-    "sampleRatio": 0.445
+    "elementCount": 15268,
+    "sampled": 6768,
+    "sampleRatio": 0.443
   },
-  "harvestVersion": 6,
-  "clusterVersion": 15,
+  "harvestVersion": 7,
+  "clusterVersion": 16,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,12 +32,12 @@
       },
       "foreground": {
         "hex": "#d0d6e0",
-        "weightShare": 0.3592,
+        "weightShare": 0.3585,
         "variants": []
       },
       "card": {
         "hex": "#0f1011",
-        "weightShare": 0.1285,
+        "weightShare": 0.1288,
         "variants": [
           "#0d0e0f",
           "#101112",
@@ -46,7 +46,7 @@
       },
       "mutedForeground": {
         "hex": "#8a8f98",
-        "weightShare": 0.3558,
+        "weightShare": 0.3577,
         "variants": []
       },
       "primary": {
@@ -60,7 +60,7 @@
       "primaryForeground": null,
       "border": {
         "hex": "#1c1d1e",
-        "weightShare": 0.6402,
+        "weightShare": 0.6468,
         "variants": []
       }
     },
@@ -70,13 +70,7 @@
           "name": "surface-1",
           "hex": "#0f1011",
           "deltaL": 0.033,
-          "areaShare": 0.1285
-        },
-        {
-          "name": "surface-2",
-          "hex": "#161718",
-          "deltaL": 0.065,
-          "areaShare": 0.0036
+          "areaShare": 0.1288
         }
       ],
       "text": [
@@ -84,25 +78,25 @@
           "name": "text-1",
           "hex": "#f7f8f8",
           "contrast": 18.73,
-          "charShare": 0.0913
+          "charShare": 0.0894
         },
         {
           "name": "text-2",
           "hex": "#d0d6e0",
           "contrast": 13.64,
-          "charShare": 0.3592
+          "charShare": 0.3585
         },
         {
           "name": "text-3",
           "hex": "#8a8f98",
           "contrast": 6.13,
-          "charShare": 0.3558
+          "charShare": 0.3577
         },
         {
           "name": "text-4",
           "hex": "#62666d",
           "contrast": 3.45,
-          "charShare": 0.0986
+          "charShare": 0.0985
         }
       ]
     },
@@ -121,7 +115,7 @@
         "hue": "neutral",
         "lightness": 0.172,
         "chroma": 0.003,
-        "count": 108
+        "count": 107
       },
       {
         "hex": "#e4f222",
@@ -130,14 +124,6 @@
         "lightness": 0.92,
         "chroma": 0.201,
         "count": 3
-      },
-      {
-        "hex": "#161718",
-        "role": null,
-        "hue": "neutral",
-        "lightness": 0.204,
-        "chroma": 0.003,
-        "count": 19
       },
       {
         "hex": "#1c85e8",
@@ -162,6 +148,14 @@
         "lightness": 0.195,
         "chroma": 0.026,
         "count": 7
+      },
+      {
+        "hex": "#161718",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.204,
+        "chroma": 0.003,
+        "count": 16
       },
       {
         "hex": "#e5e5e6",
@@ -201,7 +195,7 @@
         "hue": "neutral",
         "lightness": 0.874,
         "chroma": 0.015,
-        "count": 269
+        "count": 265
       },
       {
         "hex": "#8a8f98",
@@ -209,7 +203,7 @@
         "hue": "neutral",
         "lightness": 0.649,
         "chroma": 0.015,
-        "count": 434
+        "count": 429
       },
       {
         "hex": "#260809",
@@ -241,7 +235,7 @@
         "hue": "neutral",
         "lightness": 0.978,
         "chroma": 0.001,
-        "count": 61
+        "count": 60
       },
       {
         "hex": "#121414",
@@ -367,63 +361,63 @@
         "name": "xs",
         "px": 10,
         "rem": 0.769,
-        "weightShare": 0.0177,
+        "weightShare": 0.0179,
         "variants": []
       },
       {
         "name": "sm",
         "px": 12,
         "rem": 0.923,
-        "weightShare": 0.2157,
+        "weightShare": 0.2163,
         "variants": []
       },
       {
         "name": "base",
         "px": 13,
         "rem": 1,
-        "weightShare": 0.2657,
+        "weightShare": 0.2601,
         "variants": []
       },
       {
         "name": "lg",
         "px": 14,
         "rem": 1.077,
-        "weightShare": 0.1048,
+        "weightShare": 0.1058,
         "variants": []
       },
       {
         "name": "xl",
         "px": 15,
         "rem": 1.154,
-        "weightShare": 0.2347,
+        "weightShare": 0.2371,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 16,
         "rem": 1.231,
-        "weightShare": 0.0058,
+        "weightShare": 0.0059,
         "variants": []
       },
       {
         "name": "3xl",
         "px": 20,
         "rem": 1.538,
-        "weightShare": 0.0305,
+        "weightShare": 0.0308,
         "variants": []
       },
       {
         "name": "4xl",
         "px": 24,
         "rem": 1.846,
-        "weightShare": 0.0653,
+        "weightShare": 0.066,
         "variants": []
       },
       {
         "name": "5xl",
         "px": 32,
         "rem": 2.462,
-        "weightShare": 0.0162,
+        "weightShare": 0.0164,
         "variants": []
       },
       {
@@ -437,14 +431,14 @@
         "name": "7xl",
         "px": 40,
         "rem": 3.077,
-        "weightShare": 0.0066,
+        "weightShare": 0.0067,
         "variants": []
       },
       {
         "name": "up-9",
         "px": 48,
         "rem": 3.692,
-        "weightShare": 0.0125,
+        "weightShare": 0.0127,
         "variants": []
       }
     ],
@@ -481,8 +475,8 @@
         "fontWeight": 400,
         "lineHeight": 1.54,
         "letterSpacing": "-0.039px",
-        "elements": 18,
-        "chars": 1350
+        "elements": 17,
+        "chars": 1295
       },
       "caption-sm": {
         "fontFamily": "Inter Variable",
@@ -600,23 +594,23 @@
   },
   "spacing": {
     "base": null,
-    "gridConfidence": 0.641,
+    "gridConfidence": 0.647,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.371
+        "share": 0.377
       },
       {
         "base": 6,
-        "share": 0.278
+        "share": 0.275
       },
       {
         "base": 5,
-        "share": 0.078
+        "share": 0.075
       },
       {
         "base": 4,
-        "share": 0.641
+        "share": 0.647
       }
     ],
     "scale": [
@@ -642,17 +636,17 @@
       {
         "name": "sm",
         "px": 4,
-        "count": 46
+        "count": 45
       },
       {
         "name": "md",
         "px": 6,
-        "count": 34
+        "count": 33
       },
       {
         "name": "lg",
         "px": 8,
-        "count": 82
+        "count": 80
       },
       {
         "name": "xl",
@@ -662,7 +656,7 @@
       {
         "name": "2xl",
         "px": 12,
-        "count": 57
+        "count": 56
       }
     ],
     "button": "8px",
@@ -674,7 +668,7 @@
     "shadows": [
       {
         "value": "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px",
-        "count": 18
+        "count": 16
       },
       {
         "value": "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset",
@@ -686,11 +680,11 @@
       },
       {
         "value": "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px",
-        "count": 10
+        "count": 9
       },
       {
         "value": "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset",
-        "count": 10
+        "count": 9
       }
     ],
     "flat": false
@@ -728,6 +722,17 @@
       "px": 128,
       "occurrences": 8,
       "share": 0.667
+    },
+    "composition": {
+      "total": 10,
+      "bleedCount": 0,
+      "griddedCount": 7,
+      "mediaLedCount": 3,
+      "charsMedian": 892,
+      "sectionWidth": "contained",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.7
     },
     "columns": {
       "count": 2,
@@ -827,15 +832,15 @@
     "Hero call-to-action count (1) was found several levels above the headline, so it may include controls that are not part of the hero.",
     "Accent #5e6ad2 taken from a focus ring (resting), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
     "Ignored #e4f222 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
-    "No spacing grid explains 75% of values (best 0.641); site may not be on a grid.",
+    "No spacing grid explains 75% of values (best 0.647); site may not be on a grid.",
     "17 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "Found 71 state rules but none target elements on this page; the site's own CSS is likely among the 54 cross-origin sheets.",
-    "Strided sample: 6850 of 15386 elements. Weights are relative only."
+    "Strided sample: 6768 of 15268 elements. Weights are relative only."
   ],
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 6,
+    "harvestVersion": 7,
     "url": "https://linear.app/",
     "title": "Linear – The system for product development",
     "viewport": {
@@ -845,9 +850,9 @@
     "docHeight": 9960,
     "textColors": {
       "rgb(138, 143, 152)": {
-        "count": 434,
-        "area": 1325354.2141113281,
-        "chars": 6791
+        "count": 429,
+        "area": 1318952.7766113281,
+        "chars": 6756
       },
       "rgb(8, 9, 10)": {
         "count": 30,
@@ -855,19 +860,19 @@
         "chars": 898
       },
       "rgb(247, 248, 248)": {
-        "count": 61,
-        "area": 1100602.8635253906,
-        "chars": 1743
+        "count": 60,
+        "area": 1080082.8635253906,
+        "chars": 1688
       },
       "rgb(208, 214, 224)": {
-        "count": 269,
-        "area": 1310517.432006836,
-        "chars": 6856
+        "count": 265,
+        "area": 1287072.932006836,
+        "chars": 6772
       },
       "rgb(98, 102, 109)": {
-        "count": 296,
-        "area": 272320.5894165039,
-        "chars": 1882
+        "count": 294,
+        "area": 257588.2573852539,
+        "chars": 1860
       },
       "rgb(109, 120, 213)": {
         "count": 3,
@@ -1046,16 +1051,6 @@
         "area": 437760,
         "chars": 0
       },
-      "rgb(22, 23, 24)": {
-        "count": 6,
-        "area": 285970,
-        "chars": 110
-      },
-      "rgba(255, 255, 255, 0.03)": {
-        "count": 2,
-        "area": 845,
-        "chars": 0
-      },
       "rgb(98, 102, 109)": {
         "count": 1,
         "area": 31.5,
@@ -1065,13 +1060,23 @@
         "count": 2,
         "area": 230400,
         "chars": 0
+      },
+      "rgb(22, 23, 24)": {
+        "count": 3,
+        "area": 57194,
+        "chars": 55
+      },
+      "rgba(255, 255, 255, 0.03)": {
+        "count": 1,
+        "area": 169,
+        "chars": 0
       }
     },
     "borderColors": {
       "rgba(255, 255, 255, 0.08)": {
-        "count": 153,
-        "area": 18816136.8102417,
-        "chars": 75
+        "count": 152,
+        "area": 18815289.4039917,
+        "chars": 69
       },
       "rgb(229, 229, 230)": {
         "count": 6,
@@ -1084,8 +1089,8 @@
         "chars": 0
       },
       "rgba(255, 255, 255, 0.05)": {
-        "count": 17,
-        "area": 2856335,
+        "count": 16,
+        "area": 2855659,
         "chars": 0
       },
       "rgb(46, 46, 50)": {
@@ -1099,13 +1104,13 @@
         "chars": 0
       },
       "rgba(255, 255, 255, 0.12)": {
-        "count": 26,
-        "area": 2370096,
+        "count": 24,
+        "area": 2133596,
         "chars": 0
       },
       "rgba(0, 0, 0, 0)": {
-        "count": 34,
-        "area": 564586,
+        "count": 33,
+        "area": 528866,
         "chars": 0
       },
       "rgb(243, 78, 82)": {
@@ -1131,9 +1136,9 @@
     },
     "fontFamilies": {
       "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1083,
-        "area": 4279830.612243652,
-        "chars": 17904
+        "count": 1071,
+        "area": 4214732.342712402,
+        "chars": 17708
       },
       "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
         "count": 221,
@@ -1143,9 +1148,9 @@
     },
     "fontSizes": {
       "13px": {
-        "count": 333,
-        "area": 1039564.951171875,
-        "chars": 5217
+        "count": 325,
+        "area": 978876.451171875,
+        "chars": 5056
       },
       "64px": {
         "count": 3,
@@ -1163,9 +1168,9 @@
         "chars": 2057
       },
       "12px": {
-        "count": 439,
-        "area": 526270.6482543945,
-        "chars": 4234
+        "count": 436,
+        "area": 522635.71075439453,
+        "chars": 4205
       },
       "20px": {
         "count": 7,
@@ -1198,9 +1203,9 @@
         "chars": 40
       },
       "11px": {
-        "count": 10,
-        "area": 7527.7890625,
-        "chars": 64
+        "count": 9,
+        "area": 6752.95703125,
+        "chars": 58
       },
       "32px": {
         "count": 4,
@@ -1235,18 +1240,18 @@
         "chars": 1134
       },
       "400": {
-        "count": 902,
-        "area": 2658881.153137207,
-        "chars": 12711
+        "count": 894,
+        "area": 2617012.809387207,
+        "chars": 12599
       },
       "500": {
-        "count": 30,
-        "area": 127703.375,
-        "chars": 616
+        "count": 26,
+        "area": 104258.875,
+        "chars": 532
       },
       "510": {
         "count": 336,
-        "area": 1800470.0021972656,
+        "area": 1800684.5764160156,
         "chars": 4992
       },
       "590": {
@@ -1257,9 +1262,9 @@
     },
     "lineHeights": {
       "19.5px": {
-        "count": 214,
-        "area": 408035.888671875,
-        "chars": 2221
+        "count": 212,
+        "area": 404915.888671875,
+        "chars": 2205
       },
       "32px": {
         "count": 6,
@@ -1282,14 +1287,14 @@
         "chars": 634
       },
       "14px": {
-        "count": 254,
-        "area": 236856.64453125,
-        "chars": 1910
+        "count": 251,
+        "area": 233896.55078125,
+        "chars": 1881
       },
       "16px": {
-        "count": 153,
-        "area": 174062.2109375,
-        "chars": 1529
+        "count": 150,
+        "area": 165307.9609375,
+        "chars": 1466
       },
       "26.6px": {
         "count": 7,
@@ -1297,9 +1302,9 @@
         "chars": 598
       },
       "20px": {
-        "count": 73,
-        "area": 622099.15625,
-        "chars": 2579
+        "count": 69,
+        "area": 571762.65625,
+        "chars": 2491
       },
       "28px": {
         "count": 3,
@@ -1358,7 +1363,7 @@
       },
       "17.6px": {
         "count": 4,
-        "area": 3078.90625,
+        "area": 3151.48046875,
         "chars": 28
       }
     },
@@ -1409,9 +1414,9 @@
         "chars": 756
       },
       "-0.039px": {
-        "count": 22,
-        "area": 356650.8125,
-        "chars": 1404
+        "count": 21,
+        "area": 336130.8125,
+        "chars": 1349
       },
       "-0.704px": {
         "count": 4,
@@ -1501,9 +1506,9 @@
         "chars": 741
       },
       "text|12px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 100,
-        "area": 49091.7109375,
-        "chars": 431
+        "count": 99,
+        "area": 47427.4609375,
+        "chars": 425
       },
       "h3|20px|590|26.6px|-0.24px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 3,
@@ -1526,9 +1531,9 @@
         "chars": 24
       },
       "text|12px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 93,
-        "area": 75705.546875,
-        "chars": 785
+        "count": 91,
+        "area": 73592.859375,
+        "chars": 762
       },
       "text|13px|510|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 6,
@@ -1602,7 +1607,7 @@
       },
       "text|12px|510|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 8,
-        "area": 6110,
+        "area": 6252,
         "chars": 56
       },
       "text|15px|300|20px|-0.06px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
@@ -1631,34 +1636,34 @@
         "chars": 38
       },
       "text|13px|500|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 14,
-        "area": 69719.375,
-        "chars": 126
+        "count": 12,
+        "area": 53506.875,
+        "chars": 99
       },
       "text|11px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 6,
-        "area": 4448.8828125,
-        "chars": 36
+        "count": 5,
+        "area": 3601.4765625,
+        "chars": 30
       },
       "text|13px|400|20px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 18,
-        "area": 350519.8125,
-        "chars": 1350
+        "count": 17,
+        "area": 329999.8125,
+        "chars": 1295
       },
       "text|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 16,
-        "area": 24960,
-        "chars": 128
+        "count": 14,
+        "area": 21840,
+        "chars": 112
       },
       "text|13px|500|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 16,
-        "area": 57984,
-        "chars": 490
+        "count": 14,
+        "area": 50752,
+        "chars": 433
       },
       "text|13px|400|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 5,
-        "area": 43573.46875,
-        "chars": 57
+        "count": 4,
+        "area": 29969.46875,
+        "chars": 51
       },
       "text|13px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 2,
@@ -1767,7 +1772,7 @@
       },
       "text|11px|510|17.6px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 4,
-        "area": 3078.90625,
+        "area": 3151.48046875,
         "chars": 28
       },
       "text|12px|300|19.2px|-0.048px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
@@ -1907,8 +1912,8 @@
     },
     "radii": {
       "6px": {
-        "count": 34,
-        "area": 3143258.1971435547,
+        "count": 33,
+        "area": 3114758.1971435547,
         "chars": 0
       },
       "9999px": {
@@ -1917,14 +1922,14 @@
         "chars": 371
       },
       "12px": {
-        "count": 57,
-        "area": 26373786.421875,
+        "count": 56,
+        "area": 26165786.421875,
         "chars": 0
       },
       "8px": {
-        "count": 82,
-        "area": 8231603.984375,
-        "chars": 862
+        "count": 80,
+        "area": 8175363.984375,
+        "chars": 807
       },
       "2px": {
         "count": 15,
@@ -1937,9 +1942,9 @@
         "chars": 0
       },
       "4px": {
-        "count": 46,
-        "area": 324495.6640625,
-        "chars": 96
+        "count": 45,
+        "area": 323648.2578125,
+        "chars": 90
       },
       "50%": {
         "count": 63,
@@ -1967,8 +1972,8 @@
         "chars": 21
       },
       "999px": {
-        "count": 18,
-        "area": 4224,
+        "count": 16,
+        "area": 3712,
         "chars": 0
       },
       "3px": {
@@ -1976,19 +1981,19 @@
         "area": 15465.3125,
         "chars": 0
       },
-      "5px": {
-        "count": 6,
-        "area": 3520.3125,
-        "chars": 12
-      },
-      "24px": {
-        "count": 2,
-        "area": 845,
-        "chars": 0
-      },
       "1.5px": {
         "count": 1,
         "area": 31.5,
+        "chars": 0
+      },
+      "5px": {
+        "count": 3,
+        "area": 704.0625,
+        "chars": 6
+      },
+      "24px": {
+        "count": 1,
+        "area": 169,
         "chars": 0
       }
     },
@@ -2009,9 +2014,9 @@
         "chars": 0
       },
       "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px": {
-        "count": 18,
-        "area": 605190.9899291992,
-        "chars": 808
+        "count": 16,
+        "area": 548950.9899291992,
+        "chars": 753
       },
       "rgb(35, 37, 42) 0px 0px 0px 1px inset": {
         "count": 6,
@@ -2034,13 +2039,13 @@
         "chars": 0
       },
       "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px": {
-        "count": 10,
-        "area": 2052000,
+        "count": 9,
+        "area": 1844000,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset": {
-        "count": 10,
-        "area": 2368,
+        "count": 9,
+        "area": 2112,
         "chars": 0
       },
       "rgb(35, 37, 42) 0px 0px 0px 1px inset, rgba(8, 9, 10, 0.8) 0px 0px 32px 0px": {
@@ -2059,39 +2064,39 @@
         "chars": 39
       },
       "rgba(0, 0, 0, 0.06) 0px 4px 4px -1px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px": {
-        "count": 2,
-        "area": 845,
+        "count": 1,
+        "area": 169,
         "chars": 0
       }
     },
     "spacings": {
       "1": {
-        "count": 18,
+        "count": 17,
         "area": 0,
         "chars": 0
       },
       "2": {
-        "count": 116,
+        "count": 117,
         "area": 0,
         "chars": 0
       },
       "3": {
-        "count": 43,
+        "count": 40,
         "area": 0,
         "chars": 0
       },
       "4": {
-        "count": 532,
+        "count": 525,
         "area": 0,
         "chars": 0
       },
       "5": {
-        "count": 36,
+        "count": 30,
         "area": 0,
         "chars": 0
       },
       "6": {
-        "count": 528,
+        "count": 511,
         "area": 0,
         "chars": 0
       },
@@ -2101,27 +2106,27 @@
         "chars": 0
       },
       "8": {
-        "count": 816,
+        "count": 813,
         "area": 0,
         "chars": 0
       },
       "10": {
-        "count": 91,
+        "count": 84,
         "area": 0,
         "chars": 0
       },
       "11": {
-        "count": 45,
+        "count": 43,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 203,
+        "count": 196,
         "area": 0,
         "chars": 0
       },
       "14": {
-        "count": 33,
+        "count": 31,
         "area": 0,
         "chars": 0
       },
@@ -2146,7 +2151,7 @@
         "chars": 0
       },
       "20": {
-        "count": 44,
+        "count": 43,
         "area": 0,
         "chars": 0
       },
@@ -2206,7 +2211,7 @@
         "chars": 0
       },
       "40": {
-        "count": 39,
+        "count": 38,
         "area": 0,
         "chars": 0
       },
@@ -2499,8 +2504,8 @@
       }
     },
     "pageBg": "rgb(8, 9, 10)",
-    "elementCount": 15386,
-    "sampled": 6850,
+    "elementCount": 15268,
+    "sampled": 6768,
     "structure": {
       "sectionCount": 10,
       "sectionDepth": 1,
@@ -2557,6 +2562,13 @@
         "0.1s ease": 42
       },
       "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 10,
+        "bleed": 0,
+        "gridded": 7,
+        "mediaLed": 3,
+        "charsMedian": 892
+      },
       "hero": {
         "heightRatio": 1.14,
         "headingSize": 64,
@@ -2578,17 +2590,17 @@
       {
         "w": 1440,
         "h": 900,
-        "elements": 5091
+        "elements": 5052
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 5146
+        "elements": 5079
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 5149
+        "elements": 5137
       }
     ],
     "mergedFrom": 3,

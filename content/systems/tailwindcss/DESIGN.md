@@ -160,11 +160,16 @@ components:
 provenance:
   brand: 'Tailwind CSS'
   source: 'https://tailwindcss.com/'
-  capturedAt: '2026-08-29T03:23:19.602Z'
+  capturedAt: '2026-08-29T03:47:22.516Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 6
-  clusterVersion: 15
+  harvestVersion: 7
+  clusterVersion: 16
+  screenshot: './source.webp'
+  screenshotDark: './source-dark.webp'
 ---
+
+
+
 
 
 
@@ -235,13 +240,15 @@ animates — 100% agreement.
 
 ## Do's and Don'ts
 
-- **Do** keep the line height at 2.0. It is the single decision that makes this
-  work for documentation.
-- **Do** keep the canvas off-white and reserve pure white for raised surfaces.
-- **Don't** set body text in the fuchsia. At 3.22:1 it is a UI colour, and using
-  it for prose fails AA.
-- **Don't** move to a 4px grid because it is more common. The 8px step is what
-  gives the reference pages their rhythm.
+- **Do** build with three-column grids; nine of them appear, where most systems
+  here settle on two.
+- **Do** hold content to 1360px.
+- **Do** apply 0.15s uniformly — every animating control on the page uses it,
+  with 100% agreement.
+- **Don't** infer a page structure or a navigation pattern from this file.
+  Neither could be read: the content root is a stack of full-height layers, and
+  no element qualified as a page banner.
 
-
+**What this file does not constrain:** page structure and navigation, which were
+not measurable here. Colour, type, shape, grid and motion stand.
 
