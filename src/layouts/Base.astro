@@ -4,7 +4,7 @@
 import '@fontsource-variable/inter';
 import '../styles/global.css';
 import { getEntry } from 'astro:content';
-import { THEME_SLUG, themeVars, themeCredit } from '../lib/theme.mjs';
+import { THEME_SLUG, themeVars } from '../lib/theme.mjs';
 
 // The site is styled by a file in its own registry. If that entry ever stops
 // validating, the build fails here rather than silently falling back to the
@@ -13,7 +13,6 @@ import { THEME_SLUG, themeVars, themeCredit } from '../lib/theme.mjs';
 const theme = await getEntry('systems', THEME_SLUG);
 if (!theme) throw new Error(`Theme system "${THEME_SLUG}" is not in the collection.`);
 const vars = themeVars(theme.data);
-const credit = themeCredit(theme.data);
 
 interface Props { title: string; description?: string; }
 const { title, description } = Astro.props;
@@ -21,6 +20,8 @@ const path = Astro.url.pathname;
 // Every absolute URL derives from the one `site` value in astro.config.mjs, so a
 // domain move stays a one-line change.
 const canonical = new URL(path, Astro.site).href;
+// Stamped at build. A static year goes stale the moment it turns January.
+const year = new Date().getFullYear();
 ---
 <!doctype html>
 <html lang="en">
@@ -55,20 +56,45 @@ ${vars}
 
     <footer class="site-footer">
       <div class="wrap">
-        <p>
-          Every file here was extracted from the live site by a headless browser,
-          dated, spec-linted and contrast-audited. Brand names are used for
-          identification only — see <a href="/about">provenance, trademarks and
-          removal</a>. <a href="/submit">Corrections welcome</a>.
-        </p>
-        <p>
-          This site is styled by <a href={`/systems/${THEME_SLUG}`}>{credit.name}</a>,
-          a file in its own catalogue — the tokens above are read from its
-          frontmatter at build time, not copied. It declares no foreground for its
-          accent and no spacing grid, so nothing here is filled with the accent and
-          the spacing is its own observed steps. It is dark-only, so this site is
-          too.
-        </p>
+        <div class="footer-cols">
+          <div class="footer-about">
+            <a class="brand" href="/">Specimen</a>
+            <p>
+              Verified DESIGN.md files for coding agents. Every token is measured
+              from the live site by a headless browser — dated, spec-linted and
+              contrast-audited, never described from a screenshot.
+            </p>
+          </div>
+
+          <nav aria-labelledby="f-cat">
+            <h2 id="f-cat">Catalogue</h2>
+            <a href="/systems">Systems</a>
+            <a href="/spec">The spec</a>
+            <a href="/validate">Validate a file</a>
+          </nav>
+
+          <nav aria-labelledby="f-tools">
+            <h2 id="f-tools">Tools</h2>
+            <a href="/cli">CLI</a>
+            <a href="/mcp">MCP server</a>
+            <a href={`/r/${THEME_SLUG}/DESIGN.md`}>Raw endpoint</a>
+          </nav>
+
+          <nav aria-labelledby="f-project">
+            <h2 id="f-project">Project</h2>
+            <a href="/about">About</a>
+            <a href="/submit">Submit or correct</a>
+            <a href="https://github.com/MrPiThon/usespecimen" rel="noopener">GitHub</a>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; {year} Specimen. Brand names are used for identification only —
+            see <a href="/about">provenance, trademarks and removal</a>.
+          </p>
+          <p>Website designed and developed by Coursey Creative.</p>
+        </div>
       </div>
     </footer>
 

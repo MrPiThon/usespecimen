@@ -173,10 +173,54 @@ a, button, input, .card, .chip { transition: all var(--motion, 0s) var(--motion-
 
 .site-footer {
   border-top: 1px solid var(--border);
-  margin-top: 5rem; padding: var(--s6) 0;
+  /* The system's own rhythm, so the footer sits off the page content by the
+     same distance its sections sit off each other. */
+  margin-top: var(--section-gap, 5rem);
+  padding: var(--s6) 0;
   color: var(--muted); font-size: 0.9rem;
 }
-.site-footer a { color: var(--fg); }
+.site-footer a { color: var(--fg); text-decoration: none; }
+.site-footer a:hover { color: var(--fg-strong); text-decoration: underline; }
+
+.footer-cols {
+  display: grid; gap: var(--s6);
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: start;
+}
+.footer-about p { margin: var(--s3) 0 0; max-width: 42ch; }
+.footer-about .brand { font-size: 1rem; }
+
+.site-footer nav { display: flex; flex-direction: column; gap: var(--s2); }
+.site-footer nav h2 {
+  margin: 0 0 var(--s2);
+  font-size: var(--step-sm, 0.75rem);
+  font-weight: var(--heading-weight, 600);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  /* --muted, not --faint. The system's quietest tier is 3.45:1, which is fine
+     at size and a failing pair at label size — and this site publishes a
+     contrast audit, so it does not get to ship the thing it flags. */
+  color: var(--muted);
+}
+.site-footer nav a { color: var(--muted); }
+
+.footer-bottom {
+  display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5);
+  justify-content: space-between; align-items: baseline;
+  margin-top: var(--s6);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--border);
+}
+.footer-bottom p { margin: 0; }
+/* Same rule: small text stays on --muted. */
+.footer-bottom p:last-child { color: var(--muted); }
+
+@media (max-width: 60rem) {
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .footer-about { grid-column: 1 / -1; }
+}
+@media (max-width: 34rem) {
+  .footer-cols { grid-template-columns: 1fr; }
+}
 
 button, .btn {
   font: inherit;

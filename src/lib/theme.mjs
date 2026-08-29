@@ -143,13 +143,3 @@ export function themeVars(data) {
 
   return out.map(([k, v]) => `  ${k}: ${v};`).join('\n');
 }
-
-/** What the footer says. Built from the file so it cannot claim a system the
- *  site is not actually wearing. */
-export function themeCredit(data) {
-  return {
-    name: data?.name ?? 'Unknown',
-    brand: data?.provenance?.brand ?? null,
-    capturedAt: data?.provenance?.capturedAt ?? null,
-  };
-}
