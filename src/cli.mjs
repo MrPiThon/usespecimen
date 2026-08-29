@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { harvestFn } from './extract/harvest.mjs';
 import { cluster, summarize } from './extract/cluster.mjs';
 import { mergeHarvests } from './extract/merge.mjs';
+import { authorSystem, brandFromUrl } from './extract/author.mjs';
 import { parseColor, deltaE } from './lib/color.mjs';
 import { captureScreenshot } from './extract/screenshot.mjs';
 import { SITE, rawUrl, indexUrl, systemUrl } from './lib/site.mjs';
@@ -39,6 +40,7 @@ const USAGE = `specimen — design token extractor (${pkg.name}@${pkg.version})
 Usage:
   node src/cli.mjs extract <url> [<url>...] [options]
   node src/cli.mjs cluster <capture.json> [options]
+  node src/cli.mjs author <slug> --name <name> [options]
   node src/cli.mjs add <slug> [options]
   node src/cli.mjs list [options]
 
@@ -47,6 +49,9 @@ Commands:
              write <out>/<slug>/capture.json.
   cluster    Re-cluster a saved capture. No browser, no network. Accepts a full
              capture.json or a bare harvestFn dump pasted from a browser console.
+  author     Turn out/<slug>/capture.json into content/systems/<slug>/, with
+             frontmatter derived from the tokens and a fact-sheet body to write
+             prose over. Never invents a value.
   add        Fetch a system's DESIGN.md into the current directory, validated
              before it lands. Prints the prompt to hand your agent.
   list       Show what the registry carries.
@@ -60,7 +65,13 @@ Options:
   --timeout <ms>     Navigation timeout (default: 45000)
   --write            cluster: update the source file's tokens in place
   --registry <url>   Registry origin for add/list (default: the published site)
-  --force            add: overwrite an existing DESIGN.md
+  --name <name>      author: the aesthetic's name, not the company's
+  --description <s>  author: one line for the catalog
+  --brand <name>     author: attribution (default: guessed from the source host)
+  --content <dir>    author: target directory (default: content/systems)
+  --from <slug>      author: capture directory under out/ when it differs from
+                     the target slug (www.gov.uk extracts to gov, ships as govuk)
+  --force            author/add: overwrite an existing DESIGN.md
   --json             Print token JSON instead of the summary
   --quiet            Suppress the summary
   -h, --help
@@ -181,6 +192,89 @@ function report(data, opts) {
 }
 
 // ---------------------------------------------------------------------------
+
+/**
+ * Capture -> content/systems/<slug>/. Re-clusters from the stored harvest rather
+ * than trusting the tokens already in the file: copying a stale capture is
+ * exactly how frontmatter and the clusterer drift apart, and this command exists
+ * to make that impossible.
+ */
+async function author(slug, opts) {
+  if (!opts.name) fail('author needs --name. Name the aesthetic, not the company:\n'
+    + '  --name "Indigo Infrastructure", not --name "Stripe"');
+
+  // The capture directory and the published slug need not match: www.gov.uk
+  // extracts to `gov` but ships as `govuk`.
+  const source = opts.from || slug;
+  const from = join(opts.out, source, 'capture.json');
+  let src;
+  try {
+    src = JSON.parse(await readFile(from, 'utf8'));
+  } catch (err) {
+    fail(`Could not read ${from}: ${err.message}\nRun \`extract\` first.`);
+  }
+  if (!src.harvest) fail(`${from} has no harvest data; re-run \`extract\`.`);
+
+  const cap = {
+    capturedAt: src.capturedAt,
+    tool: src.tool,
+    method: src.method,
+    ...cluster(src.harvest),
+    supportsDark: src.supportsDark ?? false,
+    dark: src.darkHarvest ? cluster(src.darkHarvest) : null,
+    harvest: src.harvest,
+    darkHarvest: src.darkHarvest ?? null,
+  };
+
+  const dir = join(opts.content, slug);
+  const target = join(dir, 'DESIGN.md');
+  if (!opts.force) {
+    try {
+      await readFile(target, 'utf8');
+      fail(`${target} already exists. Pass --force to overwrite it — the prose in `
+        + 'it will be lost.');
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+    }
+  }
+
+  const file = authorSystem(cap, {
+    name: opts.name,
+    description: opts.description,
+    brand: opts.brand || brandFromUrl(cap.source.url),
+    dark: cap.supportsDark ? cap.dark : null,
+  });
+
+  // The scaffold must pass the same gate the build applies, or `author` has
+  // produced something that cannot ship.
+  const verdict = validateDesignMd(file);
+  if (!verdict.ok) {
+    fail('The generated file does not conform, which is a bug in author.mjs:\n'
+      + verdict.errors.map(e => `  - ${e}`).join('\n'));
+  }
+
+  await mkdir(dir, { recursive: true });
+  await writeFile(target, file, 'utf8');
+  await writeFile(join(dir, 'capture.json'), `${JSON.stringify(cap, null, 2)}\n`, 'utf8');
+  // Proof shots travel with the system directory.
+  const shots = [];
+  for (const shot of ['source.webp', 'source-dark.webp']) {
+    try {
+      await writeFile(join(dir, shot), await readFile(join(opts.out, source, shot)));
+      shots.push(shot);
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+    }
+  }
+
+  log(`Wrote ${dir}/`);
+  log(`  DESIGN.md, capture.json${shots.length ? `, ${shots.join(', ')}` : ''}`);
+  log(`  cluster v${cap.clusterVersion}, ${cap.warnings.length} warning(s)`
+    + `${cap.supportsDark ? ', + dark palette' : ''}`);
+  out('');
+  out('The body is a fact sheet, not prose. Every line is a measured value —');
+  out('rewrite them into prose without adding any value that is not there.');
+}
 
 async function fetchText(url, what) {
   let res;
@@ -402,6 +496,11 @@ try {
       timeout: { type: 'string', default: '45000' },
       write: { type: 'boolean', default: false },
       registry: { type: 'string', default: SITE },
+      name: { type: 'string' },
+      description: { type: 'string' },
+      brand: { type: 'string' },
+      content: { type: 'string', default: 'content/systems' },
+      from: { type: 'string' },
       force: { type: 'boolean', default: false },
       json: { type: 'boolean', default: false },
       quiet: { type: 'boolean', default: false },
@@ -429,6 +528,11 @@ const opts = {
   timeout: num(values.timeout, 'timeout'),
   write: values.write,
   registry: String(values.registry).replace(/\/+$/, ''),
+  name: values.name,
+  description: values.description,
+  brand: values.brand,
+  content: values.content,
+  from: values.from,
   force: values.force,
   json: values.json,
   quiet: values.quiet,
@@ -439,6 +543,11 @@ switch (command) {
     if (!rest.length) fail(`extract needs at least one url.\n\n${USAGE}`);
     if (values.slug && rest.length > 1) fail('--slug only makes sense with a single url.');
     await extract(rest, opts);
+    break;
+  }
+  case 'author': {
+    if (rest.length !== 1) fail(`author needs exactly one slug.\n\n${USAGE}`);
+    await author(rest[0], opts);
     break;
   }
   case 'add': {

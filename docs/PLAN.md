@@ -185,8 +185,15 @@ light/dark  harvested  token       the 8      contrast  date and
 3 widths    across DOM scale       sections   check     method
 ```
 
-Stages 1–3 are deterministic. The model in stage 4 only writes prose about
-values it was handed — it never invents a hex code. Every competitor currently
+Stages 1–3 are deterministic, and so is most of stage 4: `specimen author`
+turns a capture into `content/systems/<slug>/`, deriving all frontmatter from
+the token set and emitting the body as a **per-section fact sheet** rather than
+prose. Every line of it is a measured value.
+
+That is what makes "the model only writes prose about values it was handed"
+enforceable rather than aspirational — the values are literally in the file
+before anyone writes a sentence. The Do's and Don'ts section is derived too,
+from the contrast audit's failures and the extractor's own warnings. Every competitor currently
 has a model look at a screenshot and describe it, which is exactly why none of
 them can date or verify their files.
 

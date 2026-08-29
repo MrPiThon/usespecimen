@@ -47,6 +47,7 @@ npm run mcp                                         # MCP server on stdio
 npx playwright install chromium               # one-time; already present on this machine
 npm run extract -- https://stripe.com         # → out/stripe/capture.json
 npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
+npm run author -- stripe --name "Indigo Infrastructure"   # capture -> content/
 ```
 
 - Node 24, ESM only; extractor sources are `.mjs`, and `package.json` sets
@@ -73,6 +74,13 @@ npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
 - **`out/` is gitignored.** Captures only enter the repo when copied into
   `content/systems/<slug>/`. `main` pushes to `MrPiThon/usespecimen`, and CI runs
   the build plus a raw-file identity check on every push and PR.
+- `author` writes `content/systems/<slug>/` and **refuses to overwrite** an
+  existing DESIGN.md without `--force`, because the prose in it is the one part
+  no command can regenerate. It re-clusters from the stored harvest rather than
+  trusting the capture's tokens, and validates its own output against the build's
+  linter before writing — a scaffold that could not ship would be a bug in
+  `author.mjs`, not a file to fix by hand. Use `--from` when the capture
+  directory and the published slug differ (`www.gov.uk` extracts to `gov`).
 - To iterate on clustering without launching Playwright, paste the body of
   `harvestFn` into a browser console on any target page. `cluster` takes that
   bare dump as well as a full `capture.json`.
