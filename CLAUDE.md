@@ -433,6 +433,17 @@ Neither applies on this Windows machine, where Chromium is already installed.
   backend, indexes at build.
 - **CSS custom properties, no Tailwind.** We sell design credibility; Tailwind's
   defaults produce the exact look our customers are trying to escape.
+- **The site wears one of its own files.** `src/lib/theme.mjs` reads
+  `content/systems/linear/DESIGN.md` at build time and emits its tokens as the
+  site's custom properties — the values in `global.css` are fallbacks only.
+  Change that file and the site changes. Two of its constraints are followed
+  rather than worked around: it declares no `primaryForeground`, so nothing is
+  ever filled with the accent (its own Do's say to spend it on focus and
+  selection), and it has no spacing grid, so the steps are its observed values.
+  It is dark-only, so the site has no light mode and no theme toggle.
+  `--faint` (3.45:1) is the one token held back from small text — it is the
+  system's quietest tier, fine where it is used at size and a failing pair at
+  label size, and shipping it would contradict the audit we publish elsewhere.
 - **No auth, no billing, no accounts** until Phase 3.
 
 ## The spec (conform to it exactly)

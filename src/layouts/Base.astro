@@ -1,5 +1,16 @@
 ---
 import '../styles/global.css';
+import { getEntry } from 'astro:content';
+import { THEME_SLUG, themeVars, themeCredit } from '../lib/theme.mjs';
+
+// The site is styled by a file in its own registry. If that entry ever stops
+// validating, the build fails here rather than silently falling back to the
+// stylesheet defaults — a registry that cannot wear its own file has a problem
+// worth stopping for.
+const theme = await getEntry('systems', THEME_SLUG);
+if (!theme) throw new Error(`Theme system "${THEME_SLUG}" is not in the collection.`);
+const vars = themeVars(theme.data);
+const credit = themeCredit(theme.data);
 
 interface Props { title: string; description?: string; }
 const { title, description } = Astro.props;
@@ -19,13 +30,9 @@ const canonical = new URL(path, Astro.site).href;
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={canonical} />
-    <!-- Applied before first paint so a chosen theme never flashes the other one. -->
-    <script is:inline>
-      try {
-        const t = localStorage.getItem('theme');
-        if (t) document.documentElement.dataset.theme = t;
-      } catch {}
-    </script>
+    <style set:html={`:root {
+${vars}
+}`}></style>
   </head>
   <body>
     <header class="site-header">
@@ -37,7 +44,6 @@ const canonical = new URL(path, Astro.site).href;
           <a href="/validate" aria-current={path === '/validate' ? 'page' : undefined}>Validate</a>
           <a href="/cli" aria-current={path === '/cli' ? 'page' : undefined}>CLI</a>
           <a href="/mcp" aria-current={path === '/mcp' ? 'page' : undefined}>MCP</a>
-          <button id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
         </nav>
       </div>
     </header>
@@ -52,18 +58,16 @@ const canonical = new URL(path, Astro.site).href;
           identification only — see <a href="/about">provenance, trademarks and
           removal</a>. <a href="/submit">Corrections welcome</a>.
         </p>
+        <p>
+          This site is styled by <a href={`/systems/${THEME_SLUG}`}>{credit.name}</a>,
+          a file in its own catalogue — the tokens above are read from its
+          frontmatter at build time, not copied. It declares no foreground for its
+          accent and no spacing grid, so nothing here is filled with the accent and
+          the spacing is its own observed steps. It is dark-only, so this site is
+          too.
+        </p>
       </div>
     </footer>
 
-    <script is:inline>
-      document.getElementById('theme')?.addEventListener('click', () => {
-        const root = document.documentElement;
-        const dark = root.dataset.theme
-          ? root.dataset.theme === 'dark'
-          : matchMedia('(prefers-color-scheme: dark)').matches;
-        root.dataset.theme = dark ? 'light' : 'dark';
-        try { localStorage.setItem('theme', root.dataset.theme); } catch {}
-      });
-    </script>
   </body>
 </html>
