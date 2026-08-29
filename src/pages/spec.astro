@@ -1,0 +1,149 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { SECTIONS, splitSections } from '../lib/design-md.mjs';
+
+const systems = await getCollection('systems');
+const bySlug = Object.fromEntries(systems.map(s => [s.id, s]));
+
+// Each section is illustrated by whichever file makes the point best, pulled
+// live from the collection. Documentation quoting real files cannot drift away
+// from them, and a section whose example vanished would be visible immediately.
+const ILLUSTRATE = {
+  Overview: 'govuk',
+  Colors: 'linear',
+  Typography: 'govuk',
+  Layout: 'linear',
+  'Elevation & Depth': 'vercel',
+  Shapes: 'govuk',
+  Components: 'govuk',
+  "Do's and Don'ts": 'stripe',
+};
+
+const PURPOSE = {
+  Overview: 'What the system is for and when to reach for it. The one section an agent reads to decide whether this is the right aesthetic at all.',
+  Colors: 'Every colour role, with the contrast that matters stated rather than implied.',
+  Typography: 'Families, sizes, weights, leading and tracking — as combinations that actually occur together.',
+  Layout: 'Spacing scale and grid. The honest answer is sometimes that there is no grid.',
+  'Elevation & Depth': 'How the system separates planes: shadows, or something else, or nothing.',
+  Shapes: 'Radii, and whether the system is deliberately sharp.',
+  Components: 'Concrete recipes for the parts an agent will build first.',
+  "Do's and Don'ts": 'The rules that keep a generated interface in character. The most load-bearing section, and the one most often written as filler.',
+};
+
+const excerpt = (name) => {
+  const entry = bySlug[ILLUSTRATE[name]] ?? systems.find(s => s.body?.includes(`## ${name}`));
+  if (!entry) return null;
+  const hit = splitSections(entry.body ?? '').find(s => s.canonical === name);
+  if (!hit?.content) return null;
+  const text = hit.content.length > 420 ? `${hit.content.slice(0, 420).trimEnd()}…` : hit.content;
+  return { text, slug: entry.id, name: entry.data.name };
+};
+
+const sections = SECTIONS.map(name => ({ name, purpose: PURPOSE[name], example: excerpt(name) }));
+const sample = bySlug.govuk;
+---
+
+<Base
+  title="The DESIGN.md format — Specimen"
+  description="What a DESIGN.md contains, section by section, with real examples and the rules a conformant file has to follow."
+>
+  <div class="prose">
+    <h1 style="margin-top:2rem;">The DESIGN.md format</h1>
+    <p>
+      A DESIGN.md is a design-system brief written for a machine. You put one in
+      a repository, tell your coding agent to follow it, and the UI it generates
+      matches a chosen visual language instead of defaulting to whatever the
+      model saw most in training.
+    </p>
+    <p>
+      The format is <a href="https://github.com/google-labs-code/design.md" rel="noopener">a
+      spec from Google Labs</a> and is currently <strong>alpha</strong>. This page
+      describes it as the spec defines it, illustrated with files from this
+      registry. To check a file of your own, use <a href="/validate">the validator</a>.
+    </p>
+
+    <h2>Shape of a file</h2>
+    <p>
+      Optional YAML frontmatter carrying tokens, then a markdown body of exactly
+      eight sections. The frontmatter is what an agent reads for values; the body
+      is what it reads for judgement.
+    </p>
+
+    <h2>Frontmatter</h2>
+    <p>
+      <code>name</code> is the only required property. <code>version</code> and
+      <code>description</code> are optional. Tokens live in five groups:
+      <code>colors</code>, <code>typography</code>, <code>rounded</code>,
+      <code>spacing</code> and <code>components</code>.
+    </p>
+    <p>
+      One token may reference another with <code>{'{'}path.to.token{'}'}</code>,
+      which is how a component points at a colour rather than repeating its hex:
+    </p>
+    <pre><code>components:
+  button:
+    background: '{'{'}colors.primary{'}'}'
+    foreground: '{'{'}colors.primaryForeground{'}'}'</code></pre>
+    <p>
+      A reference that resolves to nothing is an error, not a blank. Our build
+      refuses such a file and so does the validator.
+    </p>
+    <p>
+      Unknown properties are <em>preserved</em>, with a warning. The spec is
+      alpha and deliberately does not punish files that carry more than it knows
+      about — which is why the provenance block every file here carries is legal
+      rather than an extension anyone had to sanction.
+    </p>
+
+    <h2>The eight sections</h2>
+    <p>
+      All eight must be present, once each, as <code>##</code> headings, in this
+      order. A duplicate heading is an error. An unrecognised section is kept
+      with a warning.
+    </p>
+
+    {sections.map((s, i) => (
+      <section style="margin-top:2rem;">
+        <h3 style="margin-bottom:0.25rem;">{i + 1}. {s.name}</h3>
+        <p style="color:var(--muted);margin-bottom:0.6rem;">{s.purpose}</p>
+        {s.example && (
+          <>
+            <blockquote style="margin:0;padding:0.75rem 1rem;border-left:3px solid var(--border);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;">
+              <p style="margin:0;white-space:pre-wrap;font-size:0.9rem;">{s.example.text}</p>
+            </blockquote>
+            <p style="font-size:0.85rem;color:var(--muted);margin-top:0.4rem;">
+              from <a href={`/systems/${s.example.slug}`}>{s.example.name}</a>
+            </p>
+          </>
+        )}
+      </section>
+    ))}
+
+    <h2 style="margin-top:3rem;">What makes a file conformant</h2>
+    <ul>
+      <li><strong>Errors</strong> — missing or duplicated sections, sections out
+        of order, absent <code>name</code>, frontmatter that is not valid YAML,
+        and token references that resolve to nothing.</li>
+      <li><strong>Warnings</strong> — unknown sections and unknown properties.
+        Both are preserved.</li>
+    </ul>
+    <p>
+      Every file in this registry is checked against those rules at build time,
+      so a non-conformant file cannot reach the site. You can run the same check
+      on your own file — it is the same code — at <a href="/validate">/validate</a>.
+    </p>
+
+    {sample && (
+      <>
+        <h2>A complete file</h2>
+        <p>
+          <a href={`/systems/${sample.id}`}>{sample.data.name}</a> is a short one
+          worth reading end to end: <a href={`/r/${sample.id}/DESIGN.md`}>raw</a>,
+          or <a href={`/systems/${sample.id}`}>on its page</a> with the tokens
+          rendered and the source screenshot beside them.
+        </p>
+      </>
+    )}
+  </div>
+</Base>

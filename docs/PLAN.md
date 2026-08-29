@@ -210,8 +210,10 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
 - `/r/index.json` — the machine-readable catalog behind `list` and, later, the
   MCP server. Carries the token-derived facets (polarity, dark support, palette)
   so a client can choose a system without fetching every file.
-- `/spec` — a genuinely good explainer of the format, section by section, with a
-  live validator. Best organic-traffic asset; theirs is thin.
+- `/spec` — **built.** The format section by section, each illustrated with a
+  real excerpt pulled live from the collection rather than an invented sample,
+  so the documentation cannot drift away from the files it describes. Links to
+  `/validate` rather than duplicating it.
 - `/validate` — **built.** Paste or upload a DESIGN.md, get conformance plus a
   contrast audit. Free, no account, nothing uploaded — it runs entirely in the
   browser. It runs the *same* linter the build enforces and the same YAML parser
@@ -234,7 +236,10 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
   exists, and both pages are now written. They say plainly that nothing is
   published to npm yet and give the clone-and-run path instead — a documented
   `npx @usespecimen/cli` that does not resolve would be worse than no page.
-- `/submit` — contribute by PR, schema documented.
+- `/submit` — **built.** Leads with corrections rather than new systems: every
+  file ships the capture it came from, which makes it falsifiable, and that only
+  means anything if people check. States the four things a PR has to satisfy,
+  including that no value may be typed by hand.
 - `/about` — **built.** Provenance policy, trademark policy, removal process.
   The brand list and the "no file here is derived from another corpus" claim are
   rendered *from the collection*, so neither can drift away from what the

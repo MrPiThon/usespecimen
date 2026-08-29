@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Contribute — Specimen"
+  description="How to add a system, correct a token, or report one that has gone stale."
+>
+  <div class="prose">
+    <h1 style="margin-top:2rem;">Contribute</h1>
+    <p>
+      Everything here lives in
+      <a href="https://github.com/MrPiThon/usespecimen" rel="noopener">one git repository</a>,
+      one directory per system. Contributions arrive as pull requests and the
+      provenance is the commit history.
+    </p>
+
+    <h2>The most useful thing you can send</h2>
+    <p>
+      Not a new system — <strong>a correction</strong>. Every file states values
+      it claims were measured from a live page on a stated date, and every one
+      ships the capture it came from. That makes each of them falsifiable, which
+      is the whole point, and it only works if people actually check.
+    </p>
+    <ul>
+      <li><strong>A token we got wrong.</strong> Open an issue with the system,
+        the token, and what it should be. The capture beside the file is the
+        evidence to argue from.</li>
+      <li><strong>A system that has been redesigned.</strong> The file is dated,
+        so it is not wrong so much as expired. Say so and it gets re-captured.</li>
+      <li><strong>A heuristic that misfires.</strong> The clusterer decides which
+        colour is the accent, which text size is body, which surface is a card.
+        Each rule was tuned against a handful of real sites and every one of them
+        has a case it gets wrong. Those are the interesting bugs.</li>
+    </ul>
+
+    <h2>Adding a system</h2>
+    <p>
+      Run the extractor, put the result in <code>content/systems/&lt;slug&gt;/</code>,
+      write the prose, open a pull request:
+    </p>
+    <pre><code>npm run extract -- https://example.com
+# then move out/example/ to content/systems/example/</code></pre>
+    <p>
+      A system directory holds <code>DESIGN.md</code>, the
+      <code>capture.json</code> it was derived from, and
+      <code>source.webp</code>. The capture is not optional — a file without one
+      cannot be checked, and an unfalsifiable file is the thing this registry
+      exists not to publish.
+    </p>
+
+    <h2>What a pull request has to satisfy</h2>
+    <ul>
+      <li><strong>It builds.</strong> A file that breaks the spec's section
+        rules, duplicates a heading or references a token that does not exist
+        fails CI. Run <a href="/validate">the validator</a> first.</li>
+      <li><strong>Every value was measured.</strong> No hex code, size or radius
+        may be typed by hand. The prose describes values the extractor produced;
+        it never introduces new ones.</li>
+      <li><strong>It says what it could not see.</strong> A missing token is
+        omitted and explained, never filled in with something plausible.</li>
+      <li><strong>Named for the aesthetic.</strong> <code>name: Civic Sans</code>,
+        not <code>name: GOV.UK</code>. Brand attribution belongs in the
+        provenance block, so an agent reading the file is never told to build a
+        company that does not exist.</li>
+    </ul>
+
+    <p>
+      The frontmatter schema and the section rules are documented on
+      <a href="/spec">the spec page</a>. Removal requests and trademark questions
+      are on <a href="/about">about</a>.
+    </p>
+  </div>
+</Base>

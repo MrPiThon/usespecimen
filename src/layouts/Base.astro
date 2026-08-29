@@ -33,6 +33,7 @@ const canonical = new URL(path, Astro.site).href;
         <a class="brand" href="/">Specimen</a>
         <nav>
           <a href="/systems" aria-current={path.startsWith('/systems') ? 'page' : undefined}>Systems</a>
+          <a href="/spec" aria-current={path === '/spec' ? 'page' : undefined}>Spec</a>
           <a href="/validate" aria-current={path === '/validate' ? 'page' : undefined}>Validate</a>
           <a href="/cli" aria-current={path === '/cli' ? 'page' : undefined}>CLI</a>
           <a href="/mcp" aria-current={path === '/mcp' ? 'page' : undefined}>MCP</a>
@@ -49,7 +50,7 @@ const canonical = new URL(path, Astro.site).href;
           Every file here was extracted from the live site by a headless browser,
           dated, spec-linted and contrast-audited. Brand names are used for
           identification only — see <a href="/about">provenance, trademarks and
-          removal</a>.
+          removal</a>. <a href="/submit">Corrections welcome</a>.
         </p>
       </div>
     </footer>

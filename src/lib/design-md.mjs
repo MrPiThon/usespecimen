@@ -110,6 +110,22 @@ export function checkTokenRefs(data) {
 }
 
 /**
+ * Split a body into its level-2 sections, each with the prose beneath it.
+ *
+ * Built on parseSections so the two can never disagree about what counts as a
+ * heading — a fenced `## Colors` inside an example block is not one.
+ */
+export function splitSections(body) {
+  const lines = String(body ?? '').split(/\r?\n/);
+  const found = parseSections(body);
+  return found.map((section, i) => {
+    const start = section.line; // parseSections lines are 1-based
+    const end = i + 1 < found.length ? found[i + 1].line - 1 : lines.length;
+    return { ...section, content: lines.slice(start, end).join('\n').trim() };
+  });
+}
+
+/**
  * Resolve a `{path.to.token}` reference against the frontmatter.
  *
  * Returns a literal unchanged, and null when the reference dangles — though
