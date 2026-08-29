@@ -1,0 +1,761 @@
+{
+  "capturedAt": "2026-08-29T04:57:15.824Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://news.ycombinator.com/",
+    "title": "Hacker News",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 1214,
+    "elementCount": 2430,
+    "sampled": 2307,
+    "sampleRatio": 0.949
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 17,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#f6f6ef",
+        "weightShare": 1,
+        "variants": [],
+        "source": "largestBgCluster"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.4359,
+        "variants": []
+      },
+      "card": {
+        "hex": "#ffffff",
+        "weightShare": 0.0044,
+        "variants": []
+      },
+      "mutedForeground": {
+        "hex": "#828282",
+        "weightShare": 0.5624,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#ff6600",
+        "weightShare": null,
+        "variants": [],
+        "source": "surfaceFill",
+        "occurrences": 6
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#767676",
+        "weightShare": 0.5,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#ffffff",
+          "deltaL": 0.029,
+          "areaShare": 0.0044
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 19.35,
+          "charShare": 0.4359
+        },
+        {
+          "name": "text-2",
+          "hex": "#828282",
+          "contrast": 3.54,
+          "charShare": 0.5624
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#f6f6ef",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0.971,
+        "chroma": 0.009,
+        "count": 3
+      },
+      {
+        "hex": "#ff6600",
+        "role": "primary",
+        "hue": "orange",
+        "lightness": 0.696,
+        "chroma": 0.204,
+        "count": 6
+      },
+      {
+        "hex": "#ffffff",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#828282",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.607,
+        "chroma": 0,
+        "count": 807
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 144
+      },
+      {
+        "hex": "#222222",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.252,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#767676",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.566,
+        "chroma": 0,
+        "count": 3
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 3,
+      "text": 3,
+      "border": 2,
+      "interactive": 0
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Verdana",
+      "class": "sans",
+      "stack": "Verdana, Geneva, sans-serif",
+      "sizePx": 10.67,
+      "weight": 400,
+      "lineHeightPx": null,
+      "lineHeightRatio": null,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Verdana",
+      "class": "sans",
+      "stack": "Verdana, Geneva, sans-serif",
+      "largestPx": null,
+      "weight": null,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "Verdana",
+        "class": "sans",
+        "stack": "Verdana, Geneva, sans-serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "2xs",
+        "px": 9.33333,
+        "rem": 0.7,
+        "weightShare": 0.272,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 10.6667,
+        "rem": 0.8,
+        "weightShare": 0.144,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.9,
+        "weightShare": 0.1401,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 13.3333,
+        "rem": 1,
+        "weightShare": 0.2993,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 14.6667,
+        "rem": 1.1,
+        "weightShare": 0.1445,
+        "variants": [
+          15
+        ]
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 5,
+    "roles": {
+      "body": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "10.67px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 123,
+        "chars": 907
+      },
+      "body-sm": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "9.33px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 118,
+        "chars": 778
+      },
+      "body-lg": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 60,
+        "chars": 395
+      },
+      "lead": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "13.33px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 63,
+        "chars": 183
+      },
+      "lead-lg": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "14.67px",
+        "fontWeight": 400,
+        "lineHeight": 1.27,
+        "letterSpacing": null,
+        "elements": 30,
+        "chars": 81
+      },
+      "link": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "13.33px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 62,
+        "chars": 2838
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 15
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.02,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.02
+      },
+      {
+        "base": 6,
+        "share": 0
+      },
+      {
+        "base": 5,
+        "share": 0.01
+      },
+      {
+        "base": 4,
+        "share": 0.02
+      }
+    ],
+    "scale": [
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "distinctValues": 5
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [],
+    "button": null,
+    "pill": false,
+    "pillValue": null,
+    "sharp": true
+  },
+  "elevation": {
+    "shadows": [],
+    "flat": true
+  },
+  "components": {
+    "link": {
+      "padding": "0px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 197,
+      "variants": 1,
+      "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": false,
+    "sections": null,
+    "measure": null,
+    "rhythm": null,
+    "composition": null,
+    "columns": null,
+    "hero": null,
+    "nav": null,
+    "motion": {
+      "duration": null,
+      "easing": null,
+      "occurrences": 0,
+      "share": 0
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 0,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 3
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#f6f6ef",
+        "ratio": 19.35,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#828282",
+        "bg": "#f6f6ef",
+        "ratio": 3.54,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#ff6600",
+        "bg": "#f6f6ef",
+        "ratio": 2.7,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "border/background",
+        "fg": "#767676",
+        "bg": "#f6f6ef",
+        "ratio": 4.18,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": true,
+        "aaa": null
+      }
+    ],
+    "failures": 2,
+    "textFailures": 2,
+    "minRatio": 2.7
+  },
+  "warnings": [
+    "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
+    "Accent #ff6600 taken from a recurring coloured surface — the page has no styled control, focus ring or chromatic text to read it from. It is the brand colour of a masthead or panel, not of a button.",
+    "No spacing grid explains 75% of values (best 0.02); site may not be on a grid.",
+    "No border radius anywhere; treat as a deliberately sharp system.",
+    "Found 3 state rules but none target elements on this page.",
+    "Strided sample: 2307 of 2430 elements. Weights are relative only."
+  ],
+  "supportsDark": false,
+  "dark": null,
+  "harvest": {
+    "harvestVersion": 8,
+    "url": "https://news.ycombinator.com/",
+    "title": "Hacker News",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 1214,
+    "textColors": {
+      "rgb(34, 34, 34)": {
+        "count": 3,
+        "area": 29321.25,
+        "chars": 18
+      },
+      "rgb(0, 0, 0)": {
+        "count": 144,
+        "area": 607514.4614257812,
+        "chars": 4557
+      },
+      "rgb(130, 130, 130)": {
+        "count": 807,
+        "area": 967954.4375,
+        "chars": 5880
+      }
+    },
+    "bgColors": {
+      "rgb(246, 246, 239)": {
+        "count": 3,
+        "area": 3229255.721923828,
+        "chars": 0
+      },
+      "rgb(255, 102, 0)": {
+        "count": 6,
+        "area": 75566.15625,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 3,
+        "area": 14697,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "rgb(255, 255, 255)": {
+        "count": 3,
+        "area": 1200,
+        "chars": 0
+      },
+      "rgb(118, 118, 118)": {
+        "count": 3,
+        "area": 14697,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "Verdana, Geneva, sans-serif": {
+        "count": 954,
+        "area": 1604790.1489257812,
+        "chars": 10455
+      }
+    },
+    "fontSizes": {
+      "13.3333px": {
+        "count": 145,
+        "area": 418958.703125,
+        "chars": 3129
+      },
+      "10.6667px": {
+        "count": 207,
+        "area": 214969.21875,
+        "chars": 1506
+      },
+      "9.33333px": {
+        "count": 354,
+        "area": 338514.6875,
+        "chars": 2844
+      },
+      "12px": {
+        "count": 186,
+        "area": 356612.296875,
+        "chars": 1465
+      },
+      "15px": {
+        "count": 1,
+        "area": 1985.0625,
+        "chars": 11
+      },
+      "14.6667px": {
+        "count": 61,
+        "area": 273750.18017578125,
+        "chars": 1500
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 951,
+        "area": 1599669.0864257812,
+        "chars": 10422
+      },
+      "700": {
+        "count": 3,
+        "area": 5121.0625,
+        "chars": 33
+      }
+    },
+    "lineHeights": {
+      "12px": {
+        "count": 20,
+        "area": 26847,
+        "chars": 108
+      },
+      "18.6667px": {
+        "count": 121,
+        "area": 336502.39892578125,
+        "chars": 1943
+      }
+    },
+    "letterSpacings": {},
+    "typeStyles": {
+      "text|13.3333px|400|12px|normal|Verdana, Geneva, sans-serif": {
+        "count": 2,
+        "area": 14487,
+        "chars": 12
+      },
+      "link|13.3333px|700|12px|normal|Verdana, Geneva, sans-serif": {
+        "count": 2,
+        "area": 3136,
+        "chars": 22
+      },
+      "link|13.3333px|400|12px|normal|Verdana, Geneva, sans-serif": {
+        "count": 16,
+        "area": 9224,
+        "chars": 74
+      },
+      "text|13.3333px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 63,
+        "area": 76620.703125,
+        "chars": 183
+      },
+      "link|13.3333px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 62,
+        "area": 315491,
+        "chars": 2838
+      },
+      "text|10.6667px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 123,
+        "area": 140740.640625,
+        "chars": 907
+      },
+      "text|9.33333px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 118,
+        "area": 218497.46875,
+        "chars": 778
+      },
+      "link|9.33333px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 236,
+        "area": 120017.21875,
+        "chars": 2066
+      },
+      "link|10.6667px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 24,
+        "area": 11476.359375,
+        "chars": 156
+      },
+      "text|12px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 60,
+        "area": 247480.96875,
+        "chars": 395
+      },
+      "link|15px|700|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 1,
+        "area": 1985.0625,
+        "chars": 11
+      },
+      "link|12px|400|normal|normal|Verdana, Geneva, sans-serif": {
+        "count": 126,
+        "area": 109131.328125,
+        "chars": 1070
+      },
+      "text|14.6667px|400|18.6667px|normal|Verdana, Geneva, sans-serif": {
+        "count": 30,
+        "area": 11440.40625,
+        "chars": 81
+      },
+      "link|14.6667px|400|18.6667px|normal|Verdana, Geneva, sans-serif": {
+        "count": 31,
+        "area": 262309.77392578125,
+        "chars": 1419
+      },
+      "text|10.6667px|400|18.6667px|normal|Verdana, Geneva, sans-serif": {
+        "count": 60,
+        "area": 62752.21875,
+        "chars": 443
+      }
+    },
+    "states": {},
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 197,
+        "area": 257012.859375,
+        "chars": 2552
+      }
+    },
+    "styleSheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 3
+    },
+    "radii": {},
+    "shadows": {},
+    "spacings": {
+      "1": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "2": {
+        "count": 96,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 89,
+        "area": 0,
+        "chars": 0
+      },
+      "5": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {},
+    "interactiveRadius": {
+      "0px": {
+        "count": 591,
+        "area": 920530.6333007812,
+        "chars": 7656
+      }
+    },
+    "interactiveFg": {
+      "rgb(0, 0, 0)": {
+        "count": 147,
+        "area": 608714.4614257812,
+        "chars": 4557
+      },
+      "rgb(130, 130, 130)": {
+        "count": 444,
+        "area": 311816.171875,
+        "chars": 3099
+      }
+    },
+    "headingSizes": {},
+    "headingFamilies": {},
+    "headingWeights": {},
+    "pageBg": "rgba(0, 0, 0, 0)",
+    "elementCount": 2430,
+    "sampled": 2307,
+    "structure": {
+      "sectionCount": 0,
+      "sectionDepth": 7,
+      "sectionHeights": [],
+      "contentWidths": {},
+      "sectionRhythm": {},
+      "gridColumns": {},
+      "transitions": {},
+      "sectionsReliable": false,
+      "sectionComposition": null,
+      "hero": null,
+      "nav": null
+    },
+    "backgrounds": {
+      "layers": {},
+      "effects": {},
+      "scanned": 810,
+      "elementsWithImage": 0
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 810
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 810
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 810
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": null,
+    "screenshotError": "page.evaluate: EncodingError: The source image cannot be decoded."
+  },
+  "darkHarvest": null
+}

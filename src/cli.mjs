@@ -154,6 +154,7 @@ async function captureScheme(browser, url, scheme, opts) {
 
     const captures = [];
     let shot = null;
+    let shotError = null;
     for (const viewport of opts.viewports) {
       await page.setViewportSize(viewport);
       // Media queries and resize observers need a beat before the computed
@@ -161,10 +162,24 @@ async function captureScheme(browser, url, scheme, opts) {
       await page.waitForTimeout(500);
       captures.push({ viewport, harvest: await page.evaluate(harvestFn) });
       // Proof shot from the widest viewport only — the canonical layout.
-      if (!shot) shot = await captureScreenshot(page);
+      //
+      // Never fatal. The shot is evidence, not the extraction: Hacker News
+      // threw `EncodingError: The source image cannot be decoded` out of the
+      // in-page encoder and lost an otherwise clean token capture with it. The
+      // rest of this pipeline omits what it cannot measure and says so, and a
+      // screenshot is no different.
+      if (!shot) {
+        try {
+          shot = await captureScreenshot(page);
+        } catch (err) {
+          shotError = err.message;
+        }
+      }
     }
     const harvest = mergeHarvests(captures);
     harvest.screenshot = shot ? { width: shot.width, height: shot.height, format: shot.format } : null;
+    // Recorded rather than swallowed, so a system with no proof shot says why.
+    if (shotError) harvest.screenshotError = shotError;
     return { harvest, shot };
   } finally {
     await context.close();

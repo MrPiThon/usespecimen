@@ -1,0 +1,2031 @@
+{
+  "capturedAt": "2026-08-29T04:54:08.903Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://www.pentagram.com/",
+    "title": "Pentagram — The world’s largest independent design consultancy",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 25493,
+    "elementCount": 11118,
+    "sampled": 4716,
+    "sampleRatio": 0.424
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 17,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#1a1a1a",
+        "weightShare": 0.1033,
+        "variants": []
+      },
+      "card": {
+        "hex": "#e3e4e5",
+        "weightShare": 0.0073,
+        "variants": []
+      },
+      "mutedForeground": {
+        "hex": "#767676",
+        "weightShare": 0.3894,
+        "variants": [
+          "#707070"
+        ]
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#333333",
+        "weightShare": 1,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#e3e4e5",
+          "deltaL": 0.082,
+          "areaShare": 0.0073
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#1a1a1a",
+          "contrast": 17.4,
+          "charShare": 0.1033
+        },
+        {
+          "name": "text-2",
+          "hex": "#767676",
+          "contrast": 4.54,
+          "charShare": 0.3894
+        },
+        {
+          "name": "text-3",
+          "hex": "#8c8c8c",
+          "contrast": 3.36,
+          "charShare": 0.1328
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 228
+      },
+      {
+        "hex": "#222222",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.252,
+        "chroma": 0,
+        "count": 36
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 25
+      },
+      {
+        "hex": "#e3e4e5",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.918,
+        "chroma": 0.002,
+        "count": 3
+      },
+      {
+        "hex": "#ededed",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.947,
+        "chroma": 0,
+        "count": 420
+      },
+      {
+        "hex": "#767676",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.566,
+        "chroma": 0,
+        "count": 486
+      },
+      {
+        "hex": "#8c8c8c",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.64,
+        "chroma": 0,
+        "count": 123
+      },
+      {
+        "hex": "#1a1a1a",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.218,
+        "chroma": 0,
+        "count": 327
+      },
+      {
+        "hex": "#333333",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.321,
+        "chroma": 0,
+        "count": 17
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 5,
+      "text": 4,
+      "border": 1,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Plain",
+      "class": "sans",
+      "stack": "Plain, Arial, sans-serif",
+      "sizePx": 16,
+      "weight": 400,
+      "lineHeightPx": 20,
+      "lineHeightRatio": 1.25,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Plain",
+      "class": "sans",
+      "stack": "Plain, Arial, sans-serif",
+      "largestPx": 52,
+      "weight": 400,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "Plain",
+        "class": "sans",
+        "stack": "Plain, Arial, sans-serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "sm",
+        "px": 13,
+        "rem": 0.813,
+        "weightShare": 0.1531,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 16,
+        "rem": 1,
+        "weightShare": 0.8046,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 17,
+        "rem": 1.063,
+        "weightShare": 0.0003,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 19,
+        "rem": 1.188,
+        "weightShare": 0.0002,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 24,
+        "rem": 1.5,
+        "weightShare": 0.0209,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 32,
+        "rem": 2,
+        "weightShare": 0.0104,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 36,
+        "rem": 2.25,
+        "weightShare": 0.0035,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 41,
+        "rem": 2.563,
+        "weightShare": 0.0035,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 52,
+        "rem": 3.25,
+        "weightShare": 0.0035,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 9,
+    "roles": {
+      "body": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 524,
+        "chars": 38801
+      },
+      "body-sm": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 474,
+        "chars": 8661
+      },
+      "body-lg": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "24px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": "-0.24px",
+        "elements": 8,
+        "chars": 1164
+      },
+      "h2": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 501
+      },
+      "h3": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 189,
+        "chars": 3819
+      },
+      "h4": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 72,
+        "chars": 1326
+      },
+      "button": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 30
+      },
+      "link": {
+        "fontFamily": "Plain",
+        "fontStack": "Plain, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 41,
+        "chars": 504
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 19
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.984,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.659
+      },
+      {
+        "base": 6,
+        "share": 0.296
+      },
+      {
+        "base": 5,
+        "share": 0.008
+      },
+      {
+        "base": 4,
+        "share": 0.984
+      }
+    ],
+    "scale": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64,
+      96
+    ],
+    "distinctValues": 19
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 445
+      },
+      {
+        "name": "md",
+        "px": 8,
+        "count": 18
+      }
+    ],
+    "button": "4px",
+    "pill": true,
+    "pillValue": "9999px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [],
+    "flat": true
+  },
+  "components": {
+    "link": {
+      "padding": "8px 24px 0px 0px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 61,
+      "variants": 3,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "6px 8px",
+      "borderWidth": null,
+      "radius": "4px",
+      "gap": null,
+      "elements": 5,
+      "variants": 5,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 20,
+    "measure": {
+      "px": 1390,
+      "occurrences": 94,
+      "share": 0.427
+    },
+    "rhythm": {
+      "px": 48,
+      "occurrences": 14,
+      "share": 0.636
+    },
+    "composition": {
+      "total": 20,
+      "bleedCount": 20,
+      "griddedCount": 13,
+      "mediaLedCount": 16,
+      "charsMedian": 1139,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "image-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.65
+    },
+    "columns": null,
+    "hero": {
+      "heightRatio": 0.69,
+      "heightRatioMeasured": 0.69,
+      "headingSize": null,
+      "align": null,
+      "media": 24,
+      "fullBleed": true,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": {
+      "height": 60,
+      "position": "static",
+      "links": 6,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.2s",
+      "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "occurrences": 7,
+      "share": 0.875
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 149,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(7.5px)",
+        "count": 1
+      },
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 170
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "backgroundColor": "#000000",
+          "matchedElements": 38,
+          "rulesConsidered": 3
+        },
+        "focus": {
+          "outlineColor": "transparent",
+          "matchedElements": 76,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "backgroundColor": "rgba(0, 0, 0, 0.15)",
+          "matchedElements": 38,
+          "rulesConsidered": 8
+        }
+      },
+      "h2": {
+        "hover": {
+          "textDecorationColor": "#1a1a1a",
+          "matchedElements": 4,
+          "rulesConsidered": 2
+        }
+      },
+      "h4": {
+        "hover": {
+          "textDecorationColor": "#ffffff",
+          "matchedElements": 24,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "focus": {
+          "outlineColor": "transparent",
+          "matchedElements": 423,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#767676",
+          "matchedElements": 18,
+          "rulesConsidered": 4
+        }
+      },
+      "text": {
+        "focus": {
+          "outlineColor": "transparent",
+          "matchedElements": 5,
+          "rulesConsidered": 3
+        },
+        "hover": {
+          "backgroundColor": "rgba(0, 0, 0, 0.14)",
+          "matchedElements": 86,
+          "rulesConsidered": 2
+        }
+      }
+    },
+    "declarations": 25
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#1a1a1a",
+        "bg": "#ffffff",
+        "ratio": 17.4,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#767676",
+        "bg": "#ffffff",
+        "ratio": 4.54,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "border/background",
+        "fg": "#333333",
+        "bg": "#ffffff",
+        "ratio": 12.63,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": true,
+        "aaa": null
+      }
+    ],
+    "failures": 0,
+    "textFailures": 0,
+    "minRatio": 4.54
+  },
+  "warnings": [
+    "First section carries no heading; the page may open on chrome — a search bar or a breadcrumb — rather than on a headline.",
+    "No chromatic accent found in buttons, focus rings, links or body text; palette is fully neutral.",
+    "Strided sample: 4716 of 11118 elements. Weights are relative only."
+  ],
+  "supportsDark": false,
+  "dark": null,
+  "harvest": {
+    "harvestVersion": 8,
+    "url": "https://www.pentagram.com/",
+    "title": "Pentagram — The world’s largest independent design consultancy",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 25493,
+    "textColors": {
+      "rgb(26, 26, 26)": {
+        "count": 327,
+        "area": 2147284.1386635303,
+        "chars": 5847
+      },
+      "rgb(255, 255, 255)": {
+        "count": 272,
+        "area": 3695266.4533691406,
+        "chars": 8996
+      },
+      "rgba(255, 255, 255, 0.56)": {
+        "count": 177,
+        "area": 2244705.3359375,
+        "chars": 12195
+      },
+      "rgb(140, 140, 140)": {
+        "count": 123,
+        "area": 915328.45703125,
+        "chars": 7515
+      },
+      "rgb(118, 118, 118)": {
+        "count": 228,
+        "area": 3675762.265625,
+        "chars": 18672
+      },
+      "rgba(0, 0, 0, 0.56)": {
+        "count": 258,
+        "area": 613517.80078125,
+        "chars": 3360
+      }
+    },
+    "bgColors": {
+      "rgb(255, 255, 255)": {
+        "count": 207,
+        "area": 150978876.75,
+        "chars": 0
+      },
+      "rgb(227, 228, 229)": {
+        "count": 3,
+        "area": 1344262.5,
+        "chars": 0
+      },
+      "rgba(232, 232, 232, 0.8)": {
+        "count": 3,
+        "area": 77367.25,
+        "chars": 0
+      },
+      "rgb(34, 34, 34)": {
+        "count": 36,
+        "area": 18072591.75,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 25,
+        "area": 12363467.21875,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.07)": {
+        "count": 417,
+        "area": 822464.7421875,
+        "chars": 4170
+      },
+      "rgba(255, 255, 255, 0.12)": {
+        "count": 21,
+        "area": 54790.86328125,
+        "chars": 57
+      }
+    },
+    "borderColors": {
+      "rgb(51, 51, 51)": {
+        "count": 17,
+        "area": 687801,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "Plain, Arial, sans-serif": {
+        "count": 1385,
+        "area": 13291864.451407671,
+        "chars": 56585
+      }
+    },
+    "fontSizes": {
+      "19px": {
+        "count": 1,
+        "area": 1,
+        "chars": 9
+      },
+      "16px": {
+        "count": 872,
+        "area": 10430617.20116353,
+        "chars": 45530
+      },
+      "52px": {
+        "count": 7,
+        "area": 344955.7275390625,
+        "chars": 198
+      },
+      "13px": {
+        "count": 474,
+        "area": 1222813.09375,
+        "chars": 8661
+      },
+      "32px": {
+        "count": 5,
+        "area": 405186.53759765625,
+        "chars": 591
+      },
+      "17px": {
+        "count": 2,
+        "area": 2,
+        "chars": 18
+      },
+      "41px": {
+        "count": 7,
+        "area": 266029.6875,
+        "chars": 198
+      },
+      "24px": {
+        "count": 10,
+        "area": 450472.4069824219,
+        "chars": 1182
+      },
+      "36px": {
+        "count": 7,
+        "area": 171786.796875,
+        "chars": 198
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 1366,
+        "area": 13010517.451407671,
+        "chars": 56357
+      },
+      "500": {
+        "count": 19,
+        "area": 281347,
+        "chars": 228
+      }
+    },
+    "lineHeights": {
+      "25px": {
+        "count": 3,
+        "area": 3,
+        "chars": 27
+      },
+      "20px": {
+        "count": 857,
+        "area": 10378572.63866353,
+        "chars": 45182
+      },
+      "54.6px": {
+        "count": 7,
+        "area": 344955.7275390625,
+        "chars": 198
+      },
+      "16.25px": {
+        "count": 474,
+        "area": 1222813.09375,
+        "chars": 8661
+      },
+      "38.4px": {
+        "count": 4,
+        "area": 396273.72509765625,
+        "chars": 582
+      },
+      "16px": {
+        "count": 15,
+        "area": 52044.5625,
+        "chars": 348
+      },
+      "60px": {
+        "count": 3,
+        "area": 22283.4375,
+        "chars": 27
+      },
+      "43.05px": {
+        "count": 7,
+        "area": 266029.6875,
+        "chars": 198
+      },
+      "28.8px": {
+        "count": 8,
+        "area": 437101.7819824219,
+        "chars": 1164
+      },
+      "37.8px": {
+        "count": 7,
+        "area": 171786.796875,
+        "chars": 198
+      }
+    },
+    "letterSpacings": {
+      "-1.04px": {
+        "count": 7,
+        "area": 344955.7275390625,
+        "chars": 198
+      },
+      "-0.32px": {
+        "count": 5,
+        "area": 405186.53759765625,
+        "chars": 591
+      },
+      "-0.615px": {
+        "count": 7,
+        "area": 266029.6875,
+        "chars": 198
+      },
+      "-0.24px": {
+        "count": 10,
+        "area": 450472.4069824219,
+        "chars": 1182
+      },
+      "-0.36px": {
+        "count": 7,
+        "area": 171786.796875,
+        "chars": 198
+      }
+    },
+    "typeStyles": {
+      "text|19px|500|25px|normal|Plain, Arial, sans-serif": {
+        "count": 1,
+        "area": 1,
+        "chars": 9
+      },
+      "h2|16px|500|20px|normal|Plain, Arial, sans-serif": {
+        "count": 1,
+        "area": 1,
+        "chars": 15
+      },
+      "link|16px|400|20px|normal|Plain, Arial, sans-serif": {
+        "count": 41,
+        "area": 139204.703125,
+        "chars": 504
+      },
+      "text|16px|400|20px|normal|Plain, Arial, sans-serif": {
+        "count": 524,
+        "area": 7765251.12303853,
+        "chars": 38801
+      },
+      "h3|52px|400|54.6px|-1.04px|Plain, Arial, sans-serif": {
+        "count": 7,
+        "area": 344955.7275390625,
+        "chars": 198
+      },
+      "h4|16px|400|20px|normal|Plain, Arial, sans-serif": {
+        "count": 72,
+        "area": 396170,
+        "chars": 1326
+      },
+      "h3|16px|400|20px|normal|Plain, Arial, sans-serif": {
+        "count": 189,
+        "area": 1696035.3125,
+        "chars": 3819
+      },
+      "text|13px|400|16.25px|normal|Plain, Arial, sans-serif": {
+        "count": 474,
+        "area": 1222813.09375,
+        "chars": 8661
+      },
+      "text|32px|400|38.4px|-0.32px|Plain, Arial, sans-serif": {
+        "count": 4,
+        "area": 396273.72509765625,
+        "chars": 582
+      },
+      "text|16px|400|16px|normal|Plain, Arial, sans-serif": {
+        "count": 15,
+        "area": 52044.5625,
+        "chars": 348
+      },
+      "h3|16px|500|20px|normal|Plain, Arial, sans-serif": {
+        "count": 15,
+        "area": 281343,
+        "chars": 186
+      },
+      "h2|16px|400|20px|normal|Plain, Arial, sans-serif": {
+        "count": 12,
+        "area": 95730.9375,
+        "chars": 501
+      },
+      "button|16px|400|20px|normal|Plain, Arial, sans-serif": {
+        "count": 3,
+        "area": 4836.5625,
+        "chars": 30
+      },
+      "button|32px|400|60px|-0.32px|Plain, Arial, sans-serif": {
+        "count": 1,
+        "area": 8912.8125,
+        "chars": 9
+      },
+      "text|17px|500|25px|normal|Plain, Arial, sans-serif": {
+        "count": 2,
+        "area": 2,
+        "chars": 18
+      },
+      "h3|41px|400|43.05px|-0.615px|Plain, Arial, sans-serif": {
+        "count": 7,
+        "area": 266029.6875,
+        "chars": 198
+      },
+      "text|24px|400|28.8px|-0.24px|Plain, Arial, sans-serif": {
+        "count": 8,
+        "area": 437101.7819824219,
+        "chars": 1164
+      },
+      "button|24px|400|60px|-0.24px|Plain, Arial, sans-serif": {
+        "count": 2,
+        "area": 13370.625,
+        "chars": 18
+      },
+      "h3|36px|400|37.8px|-0.36px|Plain, Arial, sans-serif": {
+        "count": 7,
+        "area": 171786.796875,
+        "chars": 198
+      }
+    },
+    "states": {
+      "button|active|box-shadow:none": {
+        "rules": 2,
+        "matched": 9
+      },
+      "button|hover|background-color:rgba(0, 0, 0, 0.14)": {
+        "rules": 2,
+        "matched": 6
+      },
+      "button|hover|color:rgb(26, 26, 26)": {
+        "rules": 3,
+        "matched": 35
+      },
+      "link|hover|color:#767676": {
+        "rules": 7,
+        "matched": 18
+      },
+      "text|focus|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|color:rgba(255, 255, 255, 0.9)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "h2|hover|text-decoration-color:#1A1A1A": {
+        "rules": 1,
+        "matched": 4
+      },
+      "h2|hover|text-decoration-color:#FFFFFF": {
+        "rules": 1,
+        "matched": 4
+      },
+      "text|focus|border-color:rgb(204, 204, 204);box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:rgba(0, 0, 0, 0.07)": {
+        "rules": 1,
+        "matched": 4
+      },
+      "link|hover|color:#8C8C8C": {
+        "rules": 2,
+        "matched": 8
+      },
+      "link|hover|color:#FFFFFF": {
+        "rules": 1,
+        "matched": 6
+      },
+      "button|hover|color:#FFFFFF": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus|outline-color:transparent": {
+        "rules": 1,
+        "matched": 423
+      },
+      "button|focus|outline-color:transparent": {
+        "rules": 1,
+        "matched": 76
+      },
+      "text|focus|outline-color:transparent": {
+        "rules": 1,
+        "matched": 5
+      },
+      "link|hover|color:#1A1A1A": {
+        "rules": 6,
+        "matched": 12
+      },
+      "button|hover|color:#1A1A1A": {
+        "rules": 2,
+        "matched": 5
+      },
+      "button|hover|color:#767676": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|hover|background-color:rgba(0, 0, 0, 0.14)": {
+        "rules": 1,
+        "matched": 86
+      },
+      "button|hover|background-color:rgba(0, 0, 0, 0.15)": {
+        "rules": 1,
+        "matched": 38
+      },
+      "text|hover|color:#767676": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|active|background-color:#000000": {
+        "rules": 1,
+        "matched": 38
+      },
+      "button|active|color:#FFFFFF": {
+        "rules": 1,
+        "matched": 38
+      },
+      "h4|hover|text-decoration-color:#FFFFFF": {
+        "rules": 1,
+        "matched": 24
+      }
+    },
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 260,
+        "area": 36737723.53173828,
+        "chars": 185
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 5,
+        "area": 28129,
+        "chars": 19
+      },
+      "button|0px|0px|9999px|normal": {
+        "count": 12,
+        "area": 3888,
+        "chars": 0
+      },
+      "link|8px 24px 0px 0px|0px|0px|normal": {
+        "count": 61,
+        "area": 2030447.0625,
+        "chars": 0
+      },
+      "button|7px 8px 7px 12px|0px|4px|normal": {
+        "count": 3,
+        "area": 13526.15625,
+        "chars": 0
+      },
+      "button|6px 8px|0px|4px|normal": {
+        "count": 5,
+        "area": 27805.75,
+        "chars": 0
+      },
+      "link|8px 0px 0px 0px|0px|0px|normal": {
+        "count": 2,
+        "area": 133632,
+        "chars": 0
+      },
+      "button|7px 0px|0px|4px|normal": {
+        "count": 4,
+        "area": 4624,
+        "chars": 0
+      }
+    },
+    "styleSheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 170
+    },
+    "radii": {
+      "9999px": {
+        "count": 12,
+        "area": 3888,
+        "chars": 0
+      },
+      "4px": {
+        "count": 445,
+        "area": 959246.85546875,
+        "chars": 4227
+      },
+      "8px": {
+        "count": 18,
+        "area": 8070724.03125,
+        "chars": 0
+      }
+    },
+    "shadows": {},
+    "spacings": {
+      "2": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 373,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "7": {
+        "count": 13,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 1405,
+        "area": 0,
+        "chars": 0
+      },
+      "9": {
+        "count": 10,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 526,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 37,
+        "area": 0,
+        "chars": 0
+      },
+      "19": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 108,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 73,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 16,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 153,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 15,
+        "area": 0,
+        "chars": 0
+      },
+      "70": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 25,
+        "area": 0,
+        "chars": 0
+      },
+      "138": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(255, 255, 255)": {
+        "count": 201,
+        "area": 6087743.0625,
+        "chars": 0
+      },
+      "rgba(255, 255, 255, 0.12)": {
+        "count": 9,
+        "area": 40578.46875,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.07)": {
+        "count": 15,
+        "area": 95334,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 4,
+        "area": 4624,
+        "chars": 0
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 974,
+        "area": 74213601.84814453,
+        "chars": 558
+      },
+      "9999px": {
+        "count": 12,
+        "area": 3888,
+        "chars": 0
+      },
+      "4px": {
+        "count": 28,
+        "area": 140536.46875,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(26, 26, 26)": {
+        "count": 932,
+        "area": 73307404.84423828,
+        "chars": 27
+      },
+      "rgb(255, 255, 255)": {
+        "count": 61,
+        "area": 1001881.92578125,
+        "chars": 336
+      },
+      "rgb(140, 140, 140)": {
+        "count": 21,
+        "area": 48739.546875,
+        "chars": 195
+      }
+    },
+    "headingSizes": {
+      "16px": {
+        "count": 289,
+        "area": 2469280.25,
+        "chars": 5847
+      },
+      "52px": {
+        "count": 7,
+        "area": 344955.7275390625,
+        "chars": 198
+      },
+      "41px": {
+        "count": 7,
+        "area": 266029.6875,
+        "chars": 198
+      },
+      "36px": {
+        "count": 7,
+        "area": 171786.796875,
+        "chars": 198
+      }
+    },
+    "headingFamilies": {
+      "Plain, Arial, sans-serif": {
+        "count": 310,
+        "area": 3252052.4619140625,
+        "chars": 6441
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 294,
+        "area": 2970708.4619140625,
+        "chars": 6240
+      },
+      "500": {
+        "count": 16,
+        "area": 281344,
+        "chars": 201
+      }
+    },
+    "pageBg": "rgb(255, 255, 255)",
+    "elementCount": 11118,
+    "sampled": 4716,
+    "structure": {
+      "sectionCount": 20,
+      "sectionDepth": 2,
+      "sectionHeights": [
+        617,
+        931,
+        1770,
+        889,
+        259,
+        1543,
+        891,
+        2085,
+        949,
+        2082,
+        919,
+        336,
+        1701,
+        919,
+        298,
+        1773,
+        889,
+        298,
+        1450,
+        1793
+      ],
+      "contentWidths": {
+        "510": 1,
+        "540": 2,
+        "560": 2,
+        "570": 3,
+        "580": 1,
+        "650": 3,
+        "670": 21,
+        "690": 14,
+        "750": 15,
+        "810": 1,
+        "820": 1,
+        "840": 1,
+        "870": 4,
+        "890": 1,
+        "900": 9,
+        "920": 19,
+        "1230": 3,
+        "1250": 4,
+        "1280": 6,
+        "1340": 9,
+        "1390": 94,
+        "1410": 2,
+        "1420": 4
+      },
+      "sectionRhythm": {
+        "48": 14,
+        "64": 4,
+        "96": 4
+      },
+      "gridColumns": {},
+      "transitions": {
+        "0.25s cubic-bezier(0.59, 0.01, 0.28, 1)": 1,
+        "0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)": 7
+      },
+      "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 20,
+        "bleed": 20,
+        "gridded": 13,
+        "mediaLed": 16,
+        "charsMedian": 1139
+      },
+      "hero": {
+        "heightRatio": 0.69,
+        "headingSize": null,
+        "align": null,
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 24,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 60,
+        "position": "static",
+        "links": 6,
+        "overflowed": false
+      }
+    },
+    "backgrounds": {
+      "layers": {
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/13c90943-5d0d-49e2-b648-3b98b86010f3/OBAMA_PRESIDENTIAL_CENTER_BIERUT_8.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C186%2C3000%2C1284&w=32&fit=crop&blur=200&h=20&s=b5a4721fc1ae1db7f18b882d88b8bb8f\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/4b23498a-79a1-4f67-91d7-e0eb81c54297/ISO_CS_01.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=203%2C0%2C3241%2C2160&w=32&fit=crop&blur=200&h=20&s=82385c3fb128975ce368072cea99612f\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/1a013404-2e62-42cd-a60c-ce797f15e936/SM_MOSAICROOMS_CAROUSEL.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3504%2C1502&w=32&fit=crop&blur=200&h=20&s=0bb80ea1f64a04954a3123794f94f976\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/72e5797b-1684-4dc0-8ad9-96cd2d102d04/Pfizer_Carouselcopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C7000%2C3000&w=32&fit=crop&blur=200&h=20&s=ea932e08fd47e62f5cc218a0733225b1\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/9882e3ec-3315-4cf7-9fd7-5e8f51c90d99/ICD_Carousel.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C5600%2C2400&w=32&fit=crop&blur=200&h=20&s=527ea57735b6e886ef48ce10d5469df3\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/d3f30e6c-8679-4cf3-b823-969b57c5cf01/HM_HIUT_carousel.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=1%2C262%2C3913%2C1677&w=32&fit=crop&blur=200&h=20&s=544ac0c5a6f25ebd6cdea8549ddf5a6f\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/da8e62f4-9fde-42f9-a0f7-19e8edbcc074/Carousel3.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2800%2C1200&w=32&fit=crop&blur=200&h=20&s=8735ade829231d399ce031ada4cba5e8\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/1b339bda-8de8-495a-acda-bbd3d125c62b/HP_01_Guggenheim_Cover_Resize.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C138%2C3200%2C1373&w=32&fit=crop&blur=200&h=20&s=205a9273508992f54a0fc4b123904aca\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/1b7e8e04-aa50-4fea-af4d-af1bcc2d4f5b/Rugiet_Carousel.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3500%2C1500&w=32&fit=crop&blur=200&h=20&s=ecffeb7742a64e90ac2227543138e48d\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/acc8ad50-cf04-4825-8cf1-a220bca4214b/folger_carousel_1.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C7000%2C3000&w=32&fit=crop&blur=200&h=20&s=6af2cd51d16cd23f1e2f6dfe28058089\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/13a946b2-be86-4bb5-b50b-d2f7ce1a504f/NHM_Penta_Web_Homepage.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2500%2C1072&w=32&fit=crop&blur=200&h=20&s=0e0985809f3ac244b6bd55e9eaf6b656\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/b0c613a9-f1b5-45e4-8884-8564d5767e5e/JM_BEHOLD7-3.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3840%2C1646&w=32&fit=crop&blur=200&h=20&s=9e62affd4dbf7093c392c97652eb7c8f\")": {
+          "count": 1,
+          "area": 888682.5
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/93b516fc-bd4f-4e8d-bbbd-22f528ff6a11/Yoto3_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=4d857313ab12aa6ed82e0f44d213d52a\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/828a4a99-a57b-4a5a-b546-a20ccdfe4b75/DEUS_Mini_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=643c8db2da8f4b105c0f11c4c40c3592\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/79b9c3aa-fc81-4f4c-a51e-0aaa9a0b2ab0/JM_Caligra24.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C1%2C1991%2C2787&w=32&fit=crop&blur=200&h=23&s=54f49ad21c34b13ae3cc6b74592491ba\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/67a5765b-ec1c-4bcf-a940-d502ecd77ef3/Gush_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=6e677730c982273b520b31dd9302e41f\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/0a5be74f-172b-4719-a32e-af83665198d9/oehler-nouvelle-maison-house-book-0-cover.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=156%2C0%2C4500%2C3000&w=32&fit=crop&blur=200&h=20&s=25dd6cd4c7d41f24ab0bbdc4fc92bf52\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/fb4b5df3-0961-48f8-84e6-6be8958af458/SM_SADAMADA_1.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=132%2C0%2C1418%2C946&w=32&fit=crop&blur=200&h=20&s=cf6028b43942166b1bfc4969b1ac4d2e\")": {
+          "count": 1,
+          "area": 569159.9377441406
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/1a934296-1954-49c9-98b7-586e5253adbe/_DeNiroCon_WebsiteCoverImage-2.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C4999%2C3333&w=32&fit=crop&blur=200&h=20&s=df7bc66292ee9b58909566b3bf76df38\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f8503d72-c29c-423e-9373-56607b356bbe/Thumbnail.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1800%2C1200&w=32&fit=crop&blur=200&h=20&s=01cbe9e79e157d7f962294c10e0c7c77\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/334e7fff-307b-425c-85e0-50e416387303/SITP_2026_THUMBNAIL.psd?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3000%2C2000&w=32&fit=crop&blur=200&h=20&s=558f85f5f679d44d4354e2dd7429a435\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f2bff00d-62c9-40b5-b7ab-536424c720da/MW_DeBijloke_01Coverv3.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=151%2C0%2C1621%2C1080&w=32&fit=crop&blur=200&h=20&s=f7c0fae7f82f15b5eca2e76e2062f1f6\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/e0353333-a765-49c3-8793-03d27cb44230/Rice50-Stout-01.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=390%2C0%2C4219%2C2813&w=32&fit=crop&blur=200&h=20&s=01934a617ed3c362b9c1ae5fdbec09e0\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/d1bf3473-6793-4a87-8825-e7bcd37e0c4e/1_Jetour_casestudy_title_1STILL.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3840%2C2560&w=32&fit=crop&blur=200&h=20&s=22e8ea4ddc07e5e2800c96c897a6c05b\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/67948693-b73c-48dc-b1ae-7d7705ff1369/single1080x1920copy.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1440%2C2560&w=32&fit=crop&blur=200&h=23&s=7635f4c8c22fcb635369c15c12468b64\")": {
+          "count": 1,
+          "area": 99231.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2024.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C3000&w=32&fit=crop&blur=200&h=23&s=7215ea2302a925b7c87a221bd451c3e0\")": {
+          "count": 1,
+          "area": 117600
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2023.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C3000&w=32&fit=crop&blur=200&h=23&s=3070e298e7b999e06dc5f5b624d9737d\")": {
+          "count": 1,
+          "area": 117600
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2022.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C3000&w=32&fit=crop&blur=200&h=23&s=9f7f6c32788752b4ae9e2388c8c0b6f9\")": {
+          "count": 1,
+          "area": 117600
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2021.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1685%2C3000&w=32&fit=crop&blur=200&h=23&s=42ebbef089a3f7a2e07254628f579f5d\")": {
+          "count": 1,
+          "area": 99060.9375
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2019.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C3000&w=32&fit=crop&blur=200&h=23&s=73280f6dd844b4d7493fade852c444fb\")": {
+          "count": 1,
+          "area": 117600
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2018.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C3000&w=32&fit=crop&blur=200&h=23&s=33421399bc645cc73adc5ba938ba2995\")": {
+          "count": 1,
+          "area": 117600
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2017.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1503%2C3000&w=32&fit=crop&blur=200&h=23&s=0b034c5f9fb41a5390f61533a3929654\")": {
+          "count": 1,
+          "area": 88364.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2016.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1499%2C3000&w=32&fit=crop&blur=200&h=23&s=24aa80f71d108efa31071450f5fc5a35\")": {
+          "count": 1,
+          "area": 88127.8125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2015.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1501%2C3000&w=32&fit=crop&blur=200&h=23&s=100411b70dc8ab7fd4922392536dd91d\")": {
+          "count": 1,
+          "area": 88265.625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2014.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1500%2C3000&w=32&fit=crop&blur=200&h=23&s=925af316dbe48f3bd22706a9e889f7c8\")": {
+          "count": 1,
+          "area": 88200
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2013.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1500%2C3000&w=32&fit=crop&blur=200&h=23&s=75740cae804f9849c8eeeb19fe088d23\")": {
+          "count": 1,
+          "area": 88200
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2012.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1550%2C3000&w=32&fit=crop&blur=200&h=23&s=240205689e7255104900679723c16d0e\")": {
+          "count": 1,
+          "area": 91133.4375
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/4cd0c1ad-0ad8-4b46-87cd-03cfcdb74c70/SITP2011.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1493%2C3000&w=32&fit=crop&blur=200&h=23&s=b6f7e0b457b3ec4e73cde9d61abdb051\")": {
+          "count": 1,
+          "area": 87793.125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2010.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1325%2C3000&w=32&fit=crop&blur=200&h=23&s=b7a9a10d20918be30a7949fc0a9943e9\")": {
+          "count": 1,
+          "area": 77916.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2009.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1426%2C3000&w=32&fit=crop&blur=200&h=23&s=7eca61cafaa742764952c3aa8ada3d52\")": {
+          "count": 1,
+          "area": 83855.625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2008.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1426%2C3000&w=32&fit=crop&blur=200&h=23&s=ffaac0acb4f97b86d89183562c84b150\")": {
+          "count": 1,
+          "area": 83855.625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2007.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2060%2C3000&w=32&fit=crop&blur=200&h=23&s=f24991e7cd264b094fc2040144a122ef\")": {
+          "count": 1,
+          "area": 121124.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2006.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1425%2C3000&w=32&fit=crop&blur=200&h=23&s=f0f36491a89ec7ac0992931ac41d00cc\")": {
+          "count": 1,
+          "area": 83796.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/e3441a2e-4adb-4470-9eb8-598ec2474249/SITP2005.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1473%2C3000&w=32&fit=crop&blur=200&h=23&s=1a70ad2750df397fecd3bf7b9b4aa379\")": {
+          "count": 1,
+          "area": 86605.3125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2003.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2089%2C3000&w=32&fit=crop&blur=200&h=23&s=bc211fc267dc74bf31ff0f1b71b0a4ac\")": {
+          "count": 1,
+          "area": 122810.625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2001.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1500%2C3000&w=32&fit=crop&blur=200&h=23&s=7b6b99705a669b9bed2adfe587f17767\")": {
+          "count": 1,
+          "area": 88200
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP2000.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1484%2C3000&w=32&fit=crop&blur=200&h=23&s=bee9d1676cfa0905430b2cbc924b8199\")": {
+          "count": 1,
+          "area": 87261.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP1999.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1500%2C3000&w=32&fit=crop&blur=200&h=23&s=075b0e0fe324a231b5738e631b6eb023\")": {
+          "count": 1,
+          "area": 88200
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP1998.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1539%2C3000&w=32&fit=crop&blur=200&h=23&s=6464c609248e6db6dbe1a813cdc91b42\")": {
+          "count": 1,
+          "area": 90483.75
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP1997.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1467%2C3000&w=32&fit=crop&blur=200&h=23&s=4ec162654af8683eafb07fe32ee10058\")": {
+          "count": 1,
+          "area": 86244.375
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP1996.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2094%2C3000&w=32&fit=crop&blur=200&h=23&s=4033b29e481eb72f42185c62c81c4c59\")": {
+          "count": 1,
+          "area": 123138.75
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce804caf-ad6f-480d-ba21-9ebc4d7a7dcb/SITP1995.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1467%2C3000&w=32&fit=crop&blur=200&h=23&s=9a757bbed8977044f716398e9fbb5935\")": {
+          "count": 1,
+          "area": 86244.375
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/0372d77b-77e0-4994-957f-6380fc5c4528/Pfizer_CaseStudy_1_THUMBNAIL.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=203%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=f4c5cad8472d5d2000d4cbc35e0734b0\")": {
+          "count": 1,
+          "area": 223659.89013671875
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/231bbc2e-f10f-4597-908c-7f64059dc363/LenLen-Pentagram-TrabuccoCampos_1copy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=b0a7a2ef852b2ef3593aa11187442104\")": {
+          "count": 1,
+          "area": 53619.8974609375
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ca2c4892-0746-4443-b3c5-6ebec35f38f5/NothingPersonal_Slide1_PeopleMotion_mp4copy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=cf444a4629d7fde3624247f46a88ab7e\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/cbd29310-2863-45a7-b984-87b3aa5bac41/Blog1QUEENScopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=4c14fd5c1a9fea858289c036421d8c43\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/4bb3cb7a-1c9f-4d2e-b8cb-1305e9ba2526/1_Rugiet_Welcome-Kit.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C4883%2C3255&w=32&fit=crop&blur=200&h=20&s=a5c03e6b92bc6c4ff52c4d00edc474ab\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/c0219ce9-2d03-434a-84fb-183c7a899ff7/01_UN_HERO.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=300%2C0%2C3240%2C2160&w=32&fit=crop&blur=200&h=20&s=0e5264fa758b517dfa73aa193933b97e\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/3ddeb852-af69-4051-bd36-0184e9d8d0d7/DL_Imperial_01_THUMB.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=237%2C0%2C2431%2C1620&w=32&fit=crop&blur=200&h=20&s=e61798439ec0c975d12e8f2800a38941\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/67de16f3-065d-433f-850a-e04814a63839/Dataland_1_Logocopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=300%2C0%2C3240%2C2160&w=32&fit=crop&blur=200&h=20&s=616642153613116f3292d44e709c8f1e\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/e266df35-5458-46ed-8319-586c814b2d2d/ssg.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=51158d1c99ef26e724e039ce9144cd61\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/96cee092-f395-4f14-a2d4-a2b686da69d2/gl.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=2214b781fd174d6e19e4e90d798734c1\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/96cee092-f395-4f14-a2d4-a2b686da69d2/grale.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=58%2C0%2C964%2C1349&w=32&fit=crop&blur=200&h=23&s=4ea5e2a862c3abba9e872144d0370532\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/96cee092-f395-4f14-a2d4-a2b686da69d2/ggw.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=14dc8d7ef2327c15eb8d8bdd76712af1\")": {
+          "count": 1,
+          "area": 114313.39453125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/2698ef89-b9c5-4c9e-9dc3-98323b9b4eb8/Bait_cover_image_homepage.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C5216%2C3476&w=32&fit=crop&blur=200&h=20&s=b8975e2f9baf7ad7866d11d3f2dafdc8\")": {
+          "count": 1,
+          "area": 1291776
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/11bdf02a-2bb3-42f6-be6d-82a122a4c246/SM_T4P_Carousel.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=2855%2C0%2C10289%2C6859&w=32&fit=crop&blur=200&h=20&s=aaea8b8cf8bd8dbc5104b0e0b647914e\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/48f85f1a-995a-4345-8882-bf534657fac1/01_TFS_Logo.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=387%2C0%2C3321%2C2214&w=32&fit=crop&blur=200&h=20&s=da7553a5797a864a7c7a2fe6886da876\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ce49c7d8-6fc7-47c6-ba2c-ca28bdf59647/01_ASDCC_MainTitle_THUMBNAIL.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=300%2C0%2C3240%2C2160&w=32&fit=crop&blur=200&h=20&s=a653fb7ea855a1d643fc195ebb7845e7\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/e71db5d7-fcd0-462d-bf6a-c3c9c1bb5c11/01_TL_Logo_Gradient_16x9_STILL.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=407%2C0%2C3242%2C2160&w=32&fit=crop&blur=200&h=20&s=71d458234f66e0ba3e9d648f3dd6f5f8\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/c67c4e8f-10c8-48fd-89d8-a3c16ecfae35/snl50_Thumb_.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=191%2C0%2C3458%2C2160&w=32&fit=crop&blur=200&h=20&s=a1b51bcfc3640444c264679941502917\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/9f3593c3-eaca-45c7-b11d-216b733eb3c3/MW_BrasilBrasil_cover.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2991%2C1870&w=32&fit=crop&blur=200&h=20&s=dc49b106f6d8e600d8729ae5dbf397d1\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/59a73367-b262-45d8-a664-36061bbba7a4/03_snl50_logo_cycle-2-ezgif.com-resize.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1280%2C720&w=32&fit=crop&blur=200&h=23&s=e62eec1d9dcdff8f8a4cf04451d2e8b4\")": {
+          "count": 1,
+          "area": 314061.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/952e1988-1dcb-46c4-9e8c-044c027f4c81/ROTATION_WideScreen.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C640%2C360&w=32&fit=crop&blur=200&h=23&s=5a04f7565ffe3a0d00d56c5d355f5f82\")": {
+          "count": 1,
+          "area": 313595.625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/03_SNL48_LogoMoves_1.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1280%2C720&w=32&fit=crop&blur=200&h=23&s=513734291ff726db6e01c75264eb5137\")": {
+          "count": 1,
+          "area": 314061.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/315a60bf-4134-44da-9d55-500fbabe1d3b/EMO_SNL2020_3.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1280%2C720&w=32&fit=crop&blur=200&h=23&s=f21ab8ab8a1340a42b9269e514126359\")": {
+          "count": 1,
+          "area": 314061.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1280%2C720&w=32&fit=crop&blur=200&h=23&s=006abf1fa808f78a573ae785399cdfff\")": {
+          "count": 1,
+          "area": 314061.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/650b79d7-55fe-4fa9-99c7-fadf070350ff/40.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1280%2C720&w=32&fit=crop&blur=200&h=23&s=4ed8789ff1914e85d742674e0adebe2f\")": {
+          "count": 1,
+          "area": 314061.5625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/3bf4f86b-c364-4127-9506-4de211f32c93/snlx.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1280%2C720&w=32&fit=crop&blur=200&h=23&s=0715a8398896e7777b8ea40deff20856\")": {
+          "count": 1,
+          "area": 313352.8125
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C960%2C540&w=32&fit=crop&blur=200&h=23&s=70f726c951f7b08cf958e04ab52a75cc\")": {
+          "count": 1,
+          "area": 313595.625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/13c90943-5d0d-49e2-b648-3b98b86010f3/OBAMA_PRESIDENTIAL_CENTER_BIERUT_2.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3000%2C2000&w=32&fit=crop&blur=200&h=20&s=34bbc06e0403178f8be470b13c6219de\")": {
+          "count": 1,
+          "area": 1291776
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/53635403-e30c-46c2-98af-1165b5b098ae/LAKE_Blog_01.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=973%2C0%2C10512%2C7008&w=32&fit=crop&blur=200&h=20&s=9ca04b469af0a4cda4fe4a0aedc4bce4\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/783b5ce8-c260-4d77-a1a2-b21090c86d43/pp-case-1.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=300%2C0%2C3240%2C2160&w=32&fit=crop&blur=200&h=20&s=cb3c9a9a449bfc1eb9c318e895021468\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/d3c4f86f-48e0-4aab-9420-5a1b06bfd8b5/WindhamCampbellPrizes2025_Pentagram-TrabuccoCampos_thumbnail.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3873%2C2582&w=32&fit=crop&blur=200&h=20&s=3d3b2189dc022494dfe0aed5e5a8f920\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/cbe5c119-4f57-4b9c-9e14-23526641bee2/tht-case-1.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=317%2C0%2C3429%2C2286&w=32&fit=crop&blur=200&h=20&s=2c9c74ef29cb87432f2b8f19c02871af\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/a51c5a30-7b63-43d5-9228-e12b7c80ff3d/1_Mozilla_Logocopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=01b9ab8f9d1cf42bed11a7d067b98fe9\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/42e537aa-ee12-4328-a09c-d623ca9ef559/HM_HIUT_01.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=97%2C0%2C2805%2C1870&w=32&fit=crop&blur=200&h=20&s=1cf3c0aae5bb3c5af460edbb0f6e7ee3\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/3c68cc0c-0ba4-49cc-bc66-bfcccbb64077/Mastercard_Module_Animation.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1644%2C2304&w=32&fit=crop&blur=200&h=23&s=1eb270c4b104cd12aaa27e4681e03a41\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f873871b-8761-4dcb-b5cd-45b6cb78b271/FP_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=b73fe3ba18ca8328165fb72207ea82c9\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/aa96842f-1289-4030-914a-d823d22330e2/Liberty_Prologue_Tile.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C4000%2C5600&w=32&fit=crop&blur=200&h=23&s=a625f764df2942fb324b2789fdbeba9f\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/353d18f6-efeb-4dbb-8adf-7d2574364357/Westinghouse_module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=7%2C13%2C1993%2C2787&w=32&fit=crop&blur=200&h=23&s=4cab10ccaa6aa635907077f47fe8d18e\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/5aabc035-8c3f-4b11-9fe4-410d04bbf03f/ICP_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=813c37a879b3506ae83cd3b9f533bd75\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/78063a59-974a-4701-bf3f-0e85ab16138d/Wien_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=486f8514f364283bf204e040fd936f18\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/40bc7fab-6a29-4c3e-9d49-968be034faed/killngeve.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1642%2C2300&w=32&fit=crop&blur=200&h=23&s=480829d910cde8235e44f26c8ec824b4\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/72d12510-aeb7-4bbe-9719-53d3ad27a6e2/joslyn4.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=c0ede5ca81d6b6392e0cec9c1b546fae\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/dc3739f1-b6ce-4a58-b149-0ccfa5e95526/ieee_caseStudy_thumbnail.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=220f61cf1f58d24442e89767b8fe1103\")": {
+          "count": 1,
+          "area": 107700.4091796875
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/7df00052-c8e6-4195-ab04-baab144a1ba8/GV_Cover_3.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C4717%2C3145&w=32&fit=crop&blur=200&h=20&s=588d84f66de1c92046de8bebbf699140\")": {
+          "count": 1,
+          "area": 443780.7585449219
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/5bcb73e5-7a81-4d60-a222-64706dbbb436/Thumbnail7.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2700%2C1800&w=32&fit=crop&blur=200&h=20&s=a1316bde8ee1354fa34be15882468123\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/cc6e7c9a-33aa-458a-bb18-0dcc933fcbce/Capacity_Web_1_Logocopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=300%2C0%2C3240%2C2160&w=32&fit=crop&blur=200&h=20&s=0487d790294be82c1eaf0f926d97eebd\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/98795ae0-2d6d-451e-9009-33f2968d89aa/260414_CTM_Thumbnail_Animated_1080x608.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=84%2C0%2C912%2C608&w=32&fit=crop&blur=200&h=20&s=8c1c66389966e1adee11ff6746668de9\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/57852ff0-c8d5-4025-8b12-d293662f25dc/MW_GEIUK_01_cover.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=161%2C0%2C1621%2C1080&w=32&fit=crop&blur=200&h=20&s=0a5ea513d7e30ea3cabeafcb03674cd8\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/2641bb9e-b7d0-47de-8cbb-d1d48b718789/SpeakData_Thumbnail.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3840%2C2560&w=32&fit=crop&blur=200&h=20&s=ceaf53f485ec6b8b252a315652cfd90a\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/5af4281a-77ed-4ac1-b0cc-f925cee433bf/MTA_Thumbmail.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2160%2C1440&w=32&fit=crop&blur=200&h=20&s=aa11125a4853c6d3a6728567dd1e8123\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ac5bfa5a-6b61-4560-b395-a544a8cc3b6e/savoy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C5669%2C7937&w=32&fit=crop&blur=200&h=23&s=bb3731eacfa8f5d9aac27653b24e31b8\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/96e2c58d-b67c-4e98-ad15-de701932cdac/RIPPLE_lockup_IN2.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1644%2C2304&w=32&fit=crop&blur=200&h=23&s=c49b61e22db5d9f341e02842552995fd\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/baf68e53-c157-4b62-be70-6e09e1c435b0/RA_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=937d74368b46966e533da4bc72a415a1\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/1c6f356b-bfe4-49a4-a068-e8690c0f1f4a/UAL_Module.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=14f4f7fc5212f17f74f367fe193893ff\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/e6960397-3ff8-4435-8a38-0dc6657cff45/NYCBeaches_Moudle.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=7%2C20%2C1974%2C2761&w=32&fit=crop&blur=200&h=23&s=e9f574ecefe8a75c325f432dcea2f5f2\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/cd4e9dbf-4a18-4d57-9c82-f6bc4d406017/SNL50_Vert.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C1644%2C2304&w=32&fit=crop&blur=200&h=23&s=7ff5f60f2dc5f0e3f3bdd4b9a3cd80c1\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/7b0b665c-e85f-41b3-a6ba-a1ca6b07bfd9/CH1.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=3c3143810cd65b41bd596bcf227de854\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/85d50796-da25-4187-90dd-735cd7c6daaa/highline.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2000%2C2800&w=32&fit=crop&blur=200&h=23&s=e93a208e89bc526cb8a6c0341a0bd325\")": {
+          "count": 1,
+          "area": 119161.640625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/227ec365-9169-4dec-a408-16c0afaaf338/JM_Caligra01.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C57%2C2617%2C1743&w=32&fit=crop&blur=200&h=20&s=2fa72bb46806200dcebe0ec43c91579a\")": {
+          "count": 1,
+          "area": 569159.9377441406
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/e1e10922-b8d4-4525-bc48-25baee9f7877/MINIDEUS_Movcopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=b8e3b414efab7a23a38bc300a203126a\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/0242b1f4-3f2f-4248-8b58-305a0de528df/JM_BEHOLD_001_WEB.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3840%2C2558&w=32&fit=crop&blur=200&h=20&s=f4f4002443c9cdb4c94d2fd4aefe323a\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/acac1ddf-545f-43a9-a656-507ceb1ac25a/JM_Karri_01.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=96%2C0%2C2804%2C1870&w=32&fit=crop&blur=200&h=20&s=845076a85d9b26c4af38e4b10dde61ff\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/c450bc42-e78a-4da5-abe5-1e595bff70a2/2025_MAR_31_INCELLDERM14580_Open.jpeg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C188%2C4500%2C2998&w=32&fit=crop&blur=200&h=20&s=91424caaa80d995b1e509aab8d06e343\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/a1bb537c-e4f0-4fd7-9944-249581e38dea/2025_MAR_31_INCELLDERM14648_250414_v1_naturalcopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C447%2C5334%2C3553&w=32&fit=crop&blur=200&h=20&s=2a44dbdcd56bc7d1ade285e9e4b7f1d0\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/dc80560b-1084-4e99-9924-dae0b86b1fae/JM_3DaysinChina_1a.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=181%2C0%2C3458%2C2160&w=32&fit=crop&blur=200&h=20&s=d8b9a5fc700e0b270bafdae0733bb8fc\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/433e10c2-3c33-456f-9741-7a4d52c20c34/JM_Loka.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C2993%2C1870&w=32&fit=crop&blur=200&h=20&s=953ebc8979386e19a08e7a908f424ee1\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2024.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=3715fd78443114df5c0f9de605b8faaa\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ff5c0cfa-53f9-4b49-af46-326115b03775/2023.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=bf59d1668846983177ec856e81d9c954\")": {
+          "count": 1,
+          "area": 281892.1875
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2022.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=2974a3689a3c62fd0bfb831dae34b5d0\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ff5c0cfa-53f9-4b49-af46-326115b03775/2021.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=b9b7a5c64829a405b81d5e5d0b908dbe\")": {
+          "count": 1,
+          "area": 281892.1875
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2020.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=9d7befa901e48d5027be3a3a39074e6d\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2019.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=2006e017d58bd6e06746766be16f1b0a\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/9f8e6000-e463-4fac-9fdf-88dc7eee9581/2018.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3000%2C1870&w=32&fit=crop&blur=200&h=23&s=0e06d70be60621ed9ba85e88edcfb9a3\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2017.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=78e786df942f9cbcde932c44c5ebea3f\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2016.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=60962c93faf3e6b2e3ceb4511611cb76\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2014.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=a03dd48fbea93edf0a5b4144ad88df6e\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/bdd4408f-4fc2-418f-ac10-d306c2914ec9/2013.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=f5fd75129914d7715b4ea1ea3ff8aa6d\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/f03fd874-7024-44de-bd3e-2832cdfa510a/2012.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=%2C%2C%2C&w=32&fit=crop&blur=200&h=23&s=53abae45ae344c0f722c99cd8fbdf800\")": {
+          "count": 1,
+          "area": 282929.0625
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/fbe61554-bf60-452e-900f-e94761efec77/1_WorldCup94BallMichaelGerickePentagram.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=234%2C0%2C2532%2C1688&w=32&fit=crop&blur=200&h=20&s=50dee98aea4414b881aae973418c46b2\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/640e6ca6-9029-4779-b151-b5ff74a21fb6/MW_WesAnderson7.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=291%2C0%2C3032%2C2022&w=32&fit=crop&blur=200&h=20&s=499585aa25f482187bf00c16cef40989\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/ef64e746-bd09-4305-9d7e-749e4cd6c3ac/AH_MedExpress_01_THUMBNAIL.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=273%2C0%2C2987%2C1990&w=32&fit=crop&blur=200&h=20&s=25359b86ad9d2018072e811fcecdc031\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/87d41e40-8017-4d1f-82c4-c71344803305/DDAA2026_SiteBlog_1copy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=300%2C0%2C3240%2C2160&w=32&fit=crop&blur=200&h=20&s=4e6f0c31f657d5d0ffd2de8abac556f8\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/4828e880-04eb-4ec5-9589-2aa1ac7d389e/1___GWC_Motion_OOOutlinecopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=6aa2ed2f32771d70add4d2adced2b085\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/11c01ad5-fb7c-42b3-ab4e-789066f8678c/LFNY-Stout-01copy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=6067c3929e28ef3a9f634f86c6bb2297\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/1bbc61d5-e2db-499e-a190-b583021fd193/DL_StPaulsCathedral_Cover.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=228%2C0%2C2533%2C1688&w=32&fit=crop&blur=200&h=20&s=309a52e98c000d558bf0adf3199ec2fc\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/54b85b7e-1212-467d-a9ad-abc0953c4049/SM_MOSAICROOMS_01.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=151%2C0%2C1621%2C1080&w=32&fit=crop&blur=200&h=20&s=a9ddad3575b5ad46648f2e22e592fd52\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/3207bbb8-89b0-480a-8350-18418fd1e39e/_01_WSPC_CaseStudycopy.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=150%2C0%2C1620%2C1080&w=32&fit=crop&blur=200&h=20&s=e2e5e6f694fa6cf55c9154bfb6f92e19\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/58b37e23-a7df-4c4e-a81b-6712f670d860/MoN_cover_image_homepage.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=453%2C299%2C4310%2C2870&w=32&fit=crop&blur=200&h=20&s=95999a6cee80077740119619cd4dacf1\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/658ccbae-a1d4-4f99-aa38-c35cb3536f0e/FolgerShakespeareLibrary_1.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=92%2C0%2C2815%2C1877&w=32&fit=crop&blur=200&h=20&s=7bbb7b69e44e422ce8238dce231738cb\")": {
+          "count": 1,
+          "area": 569159.9377441406
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/0de93832-68b8-4918-9a81-3bfa57dc15ed/DL_LDF25_COVERIMAGE.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=304%2C0%2C3377%2C2250&w=32&fit=crop&blur=200&h=20&s=095f1eadebaad8198d5ffaf6c9d02004\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/3e225820-ca33-48f3-ab66-47132e81cfb5/1_Museo-Casa-Kahlo.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C32%2C6739%2C4488&w=32&fit=crop&blur=200&h=20&s=f4e4b3008fc7c96005810d9527ed9ec2\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/88a45a08-99fb-4dac-b73e-a58f270bd9ad/SM_Engalin_01.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=146%2C0%2C1621%2C1080&w=32&fit=crop&blur=200&h=20&s=e2fb105e3aab744ba9858a7ae370ebbb\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/67441c6b-ae38-46c8-8f03-69fe356a3acf/ChibaTechWebHero.gif?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C80%2C1920%2C1279&w=32&fit=crop&blur=200&h=20&s=d207798e1736a7e3fc80de44c9bcb648\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/2e09d1b1-9919-4f7c-aa4b-aa8e98592644/TriennaleThumbnail.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=0%2C0%2C3000%2C2000&w=32&fit=crop&blur=200&h=20&s=fce3182395f595b400d93ba373478b1d\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|cover|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/16552174-e43a-4ea3-9c3c-39de63c1cbee/DL_LDB_NEWS1.png?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=330%2C0%2C3377%2C2250&w=32&fit=crop&blur=200&h=20&s=f7d24ff0c9797b8f993b512d4fcb98f3\")": {
+          "count": 1,
+          "area": 138612.12524414062
+        },
+        "raster|auto|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/180be941-7ea8-4aa3-b61e-ad7ecdfcbcd6/oehler-nouvelle-maison-house-book-1.jpg?auto=compress%2Cformat%2Cfalse&crop=entropy&fit=min&fm=jpg&q=80&rect=565%2C0%2C1870%2C1870&w=20&fit=crop&blur=200&h=20&s=44a02872fc80499c70dbd061b80c272d\")": {
+          "count": 1,
+          "area": 49284
+        },
+        "raster|auto|repeat|0% 0%|url(\"https://pentagram-production.imgix.net/fb27cfa8-3337-48b2-b9fb-8ad3f8d0479a/boston_LR.jpg?auto=compress%2Cformat%2Cfalse&fit=min&fm=jpg&q=80&rect=4%2C0%2C1192%2C1192&w=20&fit=crop&blur=200&h=20&s=bfe7d3791680a318ce21d6fd06c4820c\")": {
+          "count": 1,
+          "area": 49284
+        }
+      },
+      "effects": {
+        "backdrop-filter|blur(7.5px)": {
+          "count": 1,
+          "area": 23823.25
+        }
+      },
+      "scanned": 3706,
+      "elementsWithImage": 149
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 3706
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 3706
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 3706
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": null
+}

@@ -1,0 +1,3186 @@
+{
+  "capturedAt": "2026-08-29T04:56:01.515Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://gumroad.com/",
+    "title": "Earn your first dollar online with Gumroad",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 900,
+    "elementCount": 1995,
+    "sampled": 1468,
+    "sampleRatio": 0.736
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 17,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#f4f4f0",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.9366,
+        "variants": []
+      },
+      "card": null,
+      "mutedForeground": null,
+      "primary": {
+        "hex": "#ff90e8",
+        "weightShare": 0.0035,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 3
+      },
+      "primaryForeground": {
+        "hex": "#000000",
+        "weightShare": 0.8628,
+        "variants": []
+      },
+      "border": {
+        "hex": "#d1d5dc",
+        "weightShare": 0.7286,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 19.05,
+          "charShare": 0.9366
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#f4f4f0",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0.966,
+        "chroma": 0.005,
+        "count": 27
+      },
+      {
+        "hex": "#ffffff",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 382
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 18
+      },
+      {
+        "hex": "#ffc900",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.859,
+        "chroma": 0.176,
+        "count": 22
+      },
+      {
+        "hex": "#dc341e",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.586,
+        "chroma": 0.207,
+        "count": 12
+      },
+      {
+        "hex": "#f1f333",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.933,
+        "chroma": 0.193,
+        "count": 12
+      },
+      {
+        "hex": "#ff90e8",
+        "role": "primary",
+        "hue": "pink",
+        "lightness": 0.799,
+        "chroma": 0.17,
+        "count": 3
+      },
+      {
+        "hex": "#d1d5dc",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.872,
+        "chroma": 0.01,
+        "count": 306
+      },
+      {
+        "hex": "#8c8c89",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.639,
+        "chroma": 0.004,
+        "count": 6
+      },
+      {
+        "hex": "#242423",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.26,
+        "chroma": 0.002,
+        "count": 6
+      },
+      {
+        "hex": "#f7f7f4",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.976,
+        "chroma": 0.004,
+        "count": 3
+      }
+    ],
+    "semantic": {
+      "warning": {
+        "hex": "#ffc900",
+        "occurrences": 22,
+        "paintsBorder": false
+      },
+      "danger": {
+        "hex": "#dc341e",
+        "occurrences": 12,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 7,
+      "text": 3,
+      "border": 5,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "ABC Favorit",
+      "class": "unknown",
+      "stack": "\"ABC Favorit\"",
+      "sizePx": 20,
+      "weight": 500,
+      "lineHeightPx": 32.6,
+      "lineHeightRatio": 1.63,
+      "lineHeightInferred": false,
+      "letterSpacing": "-0.4px"
+    },
+    "heading": {
+      "family": "ABC Favorit",
+      "class": "unknown",
+      "stack": "\"ABC Favorit\"",
+      "largestPx": 192,
+      "weight": 500,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "ABC Favorit",
+        "class": "unknown",
+        "stack": "\"ABC Favorit\""
+      },
+      {
+        "family": "Arial",
+        "class": "unknown",
+        "stack": "Arial"
+      }
+    ],
+    "scale": [
+      {
+        "name": "2xs",
+        "px": 14,
+        "rem": 0.7,
+        "weightShare": 0.0325,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 16,
+        "rem": 0.8,
+        "weightShare": 0.0576,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 18,
+        "rem": 0.9,
+        "weightShare": 0.2533,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 20,
+        "rem": 1,
+        "weightShare": 0.3559,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 24,
+        "rem": 1.2,
+        "weightShare": 0.1907,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 30,
+        "rem": 1.5,
+        "weightShare": 0.0227,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 36,
+        "rem": 1.8,
+        "weightShare": 0.0424,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 48,
+        "rem": 2.4,
+        "weightShare": 0.0309,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 60,
+        "rem": 3,
+        "weightShare": 0.0041,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 72,
+        "rem": 3.6,
+        "weightShare": 0.007,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 96,
+        "rem": 4.8,
+        "weightShare": 0.0012,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 128,
+        "rem": 6.4,
+        "weightShare": 0.0009,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 13,
+    "roles": {
+      "body": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "20px",
+        "fontWeight": 500,
+        "lineHeight": 1.63,
+        "letterSpacing": "-0.4px",
+        "elements": 12,
+        "chars": 2919
+      },
+      "body-sm": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.56,
+        "letterSpacing": "-0.4px",
+        "elements": 18,
+        "chars": 1797
+      },
+      "caption": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.63,
+        "letterSpacing": "-0.4px",
+        "elements": 18,
+        "chars": 273
+      },
+      "caption-sm": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.43,
+        "letterSpacing": "-0.4px",
+        "elements": 12,
+        "chars": 372
+      },
+      "body-lg": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "24px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": "-0.4px",
+        "elements": 8,
+        "chars": 365
+      },
+      "lead": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "30px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": "-0.4px",
+        "elements": 4,
+        "chars": 260
+      },
+      "h1": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "36px",
+        "fontWeight": 500,
+        "lineHeight": 1.11,
+        "letterSpacing": "-0.4px",
+        "elements": 1,
+        "chars": 43
+      },
+      "h2": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "36px",
+        "fontWeight": 400,
+        "lineHeight": 1.11,
+        "letterSpacing": "-0.4px",
+        "elements": 2,
+        "chars": 126
+      },
+      "h3": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "18px",
+        "fontWeight": 700,
+        "lineHeight": 1.56,
+        "letterSpacing": "-0.4px",
+        "elements": 12,
+        "chars": 138
+      },
+      "button": {
+        "fontFamily": "Arial",
+        "fontStack": "Arial",
+        "class": "unknown",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 3
+      },
+      "link": {
+        "fontFamily": "ABC Favorit",
+        "fontStack": "\"ABC Favorit\"",
+        "class": "unknown",
+        "fontSize": "24px",
+        "fontWeight": 500,
+        "lineHeight": 1.33,
+        "letterSpacing": "-0.4px",
+        "elements": 204,
+        "chars": 1820
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 39
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.985,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.519
+      },
+      {
+        "base": 6,
+        "share": 0.483
+      },
+      {
+        "base": 5,
+        "share": 0.013
+      },
+      {
+        "base": 4,
+        "share": 0.985
+      }
+    ],
+    "scale": [
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64
+    ],
+    "distinctValues": 22
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 42
+      },
+      {
+        "name": "md",
+        "px": 16,
+        "count": 29
+      },
+      {
+        "name": "lg",
+        "px": 24,
+        "count": 30
+      }
+    ],
+    "button": "3.35544e+07px",
+    "pill": true,
+    "pillValue": "3.35544e+07px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [],
+    "flat": true
+  },
+  "components": {
+    "link": {
+      "padding": "8px 16px",
+      "borderWidth": "1px",
+      "radius": "3.35544e+07px",
+      "gap": null,
+      "elements": 108,
+      "variants": 6,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "0px 24px",
+      "borderWidth": "1px",
+      "radius": "4px",
+      "gap": null,
+      "elements": 1,
+      "variants": 2,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 9,
+    "measure": {
+      "px": 540,
+      "occurrences": 18,
+      "share": 0.34
+    },
+    "rhythm": {
+      "px": 96,
+      "occurrences": 4,
+      "share": 0.333
+    },
+    "composition": {
+      "total": 9,
+      "bleedCount": 6,
+      "griddedCount": 3,
+      "mediaLedCount": 2,
+      "charsMedian": 172,
+      "sectionWidth": "mixed",
+      "sectionMedia": "text-led",
+      "sectionCopy": "moderate",
+      "gridPrevalence": 0.33
+    },
+    "columns": {
+      "count": 2,
+      "occurrences": 1
+    },
+    "hero": {
+      "heightRatio": 1.77,
+      "heightRatioMeasured": 1.77,
+      "headingSize": null,
+      "align": null,
+      "media": 5,
+      "fullBleed": false,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": null,
+    "motion": {
+      "duration": "0.15s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 106,
+      "share": 0.862
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 0,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 124
+    },
+    "roles": {
+      "button": {
+        "focus": {
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 2,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "hover": {
+          "boxShadow": "0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000",
+          "matchedElements": 102,
+          "rulesConsidered": 6
+        }
+      },
+      "text": {
+        "focus": {
+          "borderColor": "#ff90e8",
+          "matchedElements": 2,
+          "rulesConsidered": 2
+        }
+      }
+    },
+    "declarations": 9
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#f4f4f0",
+        "ratio": 19.05,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#000000",
+        "bg": "#ff90e8",
+        "ratio": 10.41,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#ff90e8",
+        "bg": "#f4f4f0",
+        "ratio": 1.83,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": false,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#d1d5dc",
+        "bg": "#f4f4f0",
+        "ratio": 1.34,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 2,
+    "textFailures": 0,
+    "minRatio": 1.34
+  },
+  "warnings": [
+    "First section carries no heading; the page may open on chrome — a search bar or a breadcrumb — rather than on a headline.",
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
+    "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "13 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
+    "Strided sample: 1468 of 1995 elements. Weights are relative only."
+  ],
+  "supportsDark": true,
+  "dark": {
+    "source": {
+      "url": "https://gumroad.com/",
+      "title": "Earn your first dollar online with Gumroad",
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "docHeight": 900,
+      "elementCount": 1995,
+      "sampled": 1468,
+      "sampleRatio": 0.736
+    },
+    "harvestVersion": 8,
+    "clusterVersion": 17,
+    "tuning": {
+      "colorMerge": 0.045,
+      "chromatic": 0.03,
+      "gridThreshold": 0.75
+    },
+    "colors": {
+      "polarity": "dark",
+      "roles": {
+        "background": {
+          "hex": "#242423",
+          "weightShare": 1,
+          "variants": [],
+          "source": "pageBg"
+        },
+        "foreground": {
+          "hex": "#ffffff",
+          "weightShare": 0.93,
+          "variants": []
+        },
+        "card": null,
+        "mutedForeground": null,
+        "primary": {
+          "hex": "#ff90e8",
+          "weightShare": 0.0775,
+          "variants": [],
+          "source": "interactiveBg",
+          "occurrences": 13
+        },
+        "primaryForeground": {
+          "hex": "#000000",
+          "weightShare": 0.042,
+          "variants": []
+        },
+        "border": {
+          "hex": "#717170",
+          "weightShare": 0.8881,
+          "variants": []
+        }
+      },
+      "ramps": {
+        "surface": [],
+        "text": [
+          {
+            "name": "text-1",
+            "hex": "#ffffff",
+            "contrast": 15.54,
+            "charShare": 0.93
+          },
+          {
+            "name": "text-2",
+            "hex": "#bdbdbd",
+            "contrast": 8.29,
+            "charShare": 0.0325
+          }
+        ]
+      },
+      "palette": [
+        {
+          "hex": "#000000",
+          "role": "primaryForeground",
+          "hue": "neutral",
+          "lightness": 0,
+          "chroma": 0,
+          "count": 31
+        },
+        {
+          "hex": "#242423",
+          "role": "background",
+          "hue": "neutral",
+          "lightness": 0.26,
+          "chroma": 0.002,
+          "count": 369
+        },
+        {
+          "hex": "#ffc900",
+          "role": null,
+          "hue": "yellow",
+          "lightness": 0.859,
+          "chroma": 0.176,
+          "count": 22
+        },
+        {
+          "hex": "#ff90e8",
+          "role": "primary",
+          "hue": "pink",
+          "lightness": 0.799,
+          "chroma": 0.17,
+          "count": 13
+        },
+        {
+          "hex": "#dc341e",
+          "role": null,
+          "hue": "red",
+          "lightness": 0.586,
+          "chroma": 0.207,
+          "count": 12
+        },
+        {
+          "hex": "#f1f333",
+          "role": null,
+          "hue": "yellow",
+          "lightness": 0.933,
+          "chroma": 0.193,
+          "count": 12
+        },
+        {
+          "hex": "#ffffff",
+          "role": "foreground",
+          "hue": "neutral",
+          "lightness": 1,
+          "chroma": 0,
+          "count": 17
+        },
+        {
+          "hex": "#717170",
+          "role": "border",
+          "hue": "neutral",
+          "lightness": 0.547,
+          "chroma": 0.001,
+          "count": 373
+        },
+        {
+          "hex": "#bdbdbd",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.799,
+          "chroma": 0,
+          "count": 12
+        },
+        {
+          "hex": "#929191",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.658,
+          "chroma": 0.001,
+          "count": 3
+        },
+        {
+          "hex": "#666665",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.509,
+          "chroma": 0.001,
+          "count": 3
+        }
+      ],
+      "semantic": {
+        "warning": {
+          "hex": "#ffc900",
+          "occurrences": 22,
+          "paintsBorder": false
+        },
+        "danger": {
+          "hex": "#dc341e",
+          "occurrences": 12,
+          "paintsBorder": false
+        }
+      },
+      "accentRejected": [],
+      "clusterCounts": {
+        "bg": 7,
+        "text": 4,
+        "border": 4,
+        "interactive": 4
+      }
+    },
+    "typography": {
+      "body": {
+        "family": "ABC Favorit",
+        "class": "unknown",
+        "stack": "\"ABC Favorit\"",
+        "sizePx": 20,
+        "weight": 500,
+        "lineHeightPx": 32.6,
+        "lineHeightRatio": 1.63,
+        "lineHeightInferred": false,
+        "letterSpacing": "-0.4px"
+      },
+      "heading": {
+        "family": "ABC Favorit",
+        "class": "unknown",
+        "stack": "\"ABC Favorit\"",
+        "largestPx": 192,
+        "weight": 500,
+        "sharesBodyFamily": true
+      },
+      "families": [
+        {
+          "family": "ABC Favorit",
+          "class": "unknown",
+          "stack": "\"ABC Favorit\""
+        },
+        {
+          "family": "Arial",
+          "class": "unknown",
+          "stack": "Arial"
+        }
+      ],
+      "scale": [
+        {
+          "name": "2xs",
+          "px": 14,
+          "rem": 0.7,
+          "weightShare": 0.0325,
+          "variants": []
+        },
+        {
+          "name": "xs",
+          "px": 16,
+          "rem": 0.8,
+          "weightShare": 0.0576,
+          "variants": []
+        },
+        {
+          "name": "sm",
+          "px": 18,
+          "rem": 0.9,
+          "weightShare": 0.2533,
+          "variants": []
+        },
+        {
+          "name": "base",
+          "px": 20,
+          "rem": 1,
+          "weightShare": 0.3559,
+          "variants": []
+        },
+        {
+          "name": "lg",
+          "px": 24,
+          "rem": 1.2,
+          "weightShare": 0.1907,
+          "variants": []
+        },
+        {
+          "name": "xl",
+          "px": 30,
+          "rem": 1.5,
+          "weightShare": 0.0227,
+          "variants": []
+        },
+        {
+          "name": "2xl",
+          "px": 36,
+          "rem": 1.8,
+          "weightShare": 0.0424,
+          "variants": []
+        },
+        {
+          "name": "3xl",
+          "px": 48,
+          "rem": 2.4,
+          "weightShare": 0.0309,
+          "variants": []
+        },
+        {
+          "name": "4xl",
+          "px": 60,
+          "rem": 3,
+          "weightShare": 0.0041,
+          "variants": []
+        },
+        {
+          "name": "5xl",
+          "px": 72,
+          "rem": 3.6,
+          "weightShare": 0.007,
+          "variants": []
+        },
+        {
+          "name": "6xl",
+          "px": 96,
+          "rem": 4.8,
+          "weightShare": 0.0012,
+          "variants": []
+        },
+        {
+          "name": "7xl",
+          "px": 128,
+          "rem": 6.4,
+          "weightShare": 0.0009,
+          "variants": []
+        }
+      ],
+      "scaleTruncated": true,
+      "distinctSizes": 13,
+      "roles": {
+        "body": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "20px",
+          "fontWeight": 500,
+          "lineHeight": 1.63,
+          "letterSpacing": "-0.4px",
+          "elements": 12,
+          "chars": 2919
+        },
+        "body-sm": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "18px",
+          "fontWeight": 400,
+          "lineHeight": 1.56,
+          "letterSpacing": "-0.4px",
+          "elements": 18,
+          "chars": 1797
+        },
+        "caption": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "16px",
+          "fontWeight": 400,
+          "lineHeight": 1.63,
+          "letterSpacing": "-0.4px",
+          "elements": 18,
+          "chars": 273
+        },
+        "caption-sm": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "14px",
+          "fontWeight": 400,
+          "lineHeight": 1.43,
+          "letterSpacing": "-0.4px",
+          "elements": 12,
+          "chars": 372
+        },
+        "body-lg": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "24px",
+          "fontWeight": 400,
+          "lineHeight": 1.33,
+          "letterSpacing": "-0.4px",
+          "elements": 8,
+          "chars": 365
+        },
+        "lead": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "30px",
+          "fontWeight": 400,
+          "lineHeight": 1.2,
+          "letterSpacing": "-0.4px",
+          "elements": 4,
+          "chars": 260
+        },
+        "h1": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "36px",
+          "fontWeight": 500,
+          "lineHeight": 1.11,
+          "letterSpacing": "-0.4px",
+          "elements": 1,
+          "chars": 43
+        },
+        "h2": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "36px",
+          "fontWeight": 400,
+          "lineHeight": 1.11,
+          "letterSpacing": "-0.4px",
+          "elements": 2,
+          "chars": 126
+        },
+        "h3": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "18px",
+          "fontWeight": 700,
+          "lineHeight": 1.56,
+          "letterSpacing": "-0.4px",
+          "elements": 12,
+          "chars": 138
+        },
+        "button": {
+          "fontFamily": "Arial",
+          "fontStack": "Arial",
+          "class": "unknown",
+          "fontSize": "16px",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "letterSpacing": null,
+          "elements": 3,
+          "chars": 3
+        },
+        "link": {
+          "fontFamily": "ABC Favorit",
+          "fontStack": "\"ABC Favorit\"",
+          "class": "unknown",
+          "fontSize": "24px",
+          "fontWeight": 500,
+          "lineHeight": 1.33,
+          "letterSpacing": "-0.4px",
+          "elements": 204,
+          "chars": 1820
+        }
+      },
+      "rolesAvailable": true,
+      "distinctStyles": 39
+    },
+    "spacing": {
+      "base": 4,
+      "gridConfidence": 0.985,
+      "gridCandidates": [
+        {
+          "base": 8,
+          "share": 0.519
+        },
+        {
+          "base": 6,
+          "share": 0.483
+        },
+        {
+          "base": 5,
+          "share": 0.013
+        },
+        {
+          "base": 4,
+          "share": 0.985
+        }
+      ],
+      "scale": [
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        40,
+        48,
+        64
+      ],
+      "distinctValues": 22
+    },
+    "stability": {
+      "deadBand": 0.05,
+      "notes": []
+    },
+    "rounded": {
+      "scale": [
+        {
+          "name": "sm",
+          "px": 4,
+          "count": 42
+        },
+        {
+          "name": "md",
+          "px": 16,
+          "count": 29
+        },
+        {
+          "name": "lg",
+          "px": 24,
+          "count": 30
+        }
+      ],
+      "button": "3.35544e+07px",
+      "pill": true,
+      "pillValue": "3.35544e+07px",
+      "sharp": false
+    },
+    "elevation": {
+      "shadows": [],
+      "flat": true
+    },
+    "components": {
+      "link": {
+        "padding": "8px 16px",
+        "borderWidth": "1px",
+        "radius": "3.35544e+07px",
+        "gap": null,
+        "elements": 108,
+        "variants": 6,
+        "dominantUnstyled": false
+      },
+      "button": {
+        "padding": "0px 24px",
+        "borderWidth": "1px",
+        "radius": "4px",
+        "gap": null,
+        "elements": 1,
+        "variants": 2,
+        "dominantUnstyled": false
+      }
+    },
+    "layout": {
+      "available": true,
+      "sectionsReliable": true,
+      "sections": 9,
+      "measure": {
+        "px": 540,
+        "occurrences": 18,
+        "share": 0.34
+      },
+      "rhythm": {
+        "px": 96,
+        "occurrences": 4,
+        "share": 0.333
+      },
+      "composition": {
+        "total": 9,
+        "bleedCount": 6,
+        "griddedCount": 3,
+        "mediaLedCount": 2,
+        "charsMedian": 172,
+        "sectionWidth": "mixed",
+        "sectionMedia": "text-led",
+        "sectionCopy": "moderate",
+        "gridPrevalence": 0.33
+      },
+      "columns": {
+        "count": 2,
+        "occurrences": 1
+      },
+      "hero": {
+        "heightRatio": 1.77,
+        "heightRatioMeasured": 1.77,
+        "headingSize": null,
+        "align": null,
+        "media": 5,
+        "fullBleed": false,
+        "ctas": 0,
+        "ctasFilled": 0,
+        "ctaEvidence": "none"
+      },
+      "nav": null,
+      "motion": {
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "occurrences": 106,
+        "share": 0.862
+      }
+    },
+    "backgrounds": {
+      "available": true,
+      "decorated": false,
+      "layerCount": 0,
+      "pattern": null,
+      "wash": null,
+      "effects": {
+        "backdropFilter": null,
+        "mixBlendMode": null,
+        "maskImage": null,
+        "filter": null
+      }
+    },
+    "states": {
+      "available": true,
+      "sheets": {
+        "total": 1,
+        "readable": 1,
+        "blocked": 0,
+        "stateRules": 124
+      },
+      "roles": {
+        "button": {
+          "focus": {
+            "outlineColor": "rgba(0, 0, 0, 0)",
+            "matchedElements": 2,
+            "rulesConsidered": 1
+          }
+        },
+        "link": {
+          "hover": {
+            "boxShadow": "0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000",
+            "matchedElements": 102,
+            "rulesConsidered": 6
+          }
+        },
+        "text": {
+          "focus": {
+            "borderColor": "#ff90e8",
+            "matchedElements": 2,
+            "rulesConsidered": 2
+          }
+        }
+      },
+      "declarations": 9
+    },
+    "audit": {
+      "pairs": [
+        {
+          "pair": "foreground/background",
+          "fg": "#ffffff",
+          "bg": "#242423",
+          "ratio": 15.54,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": null,
+          "aa": true,
+          "aaa": true
+        },
+        {
+          "pair": "primaryForeground/primary",
+          "fg": "#000000",
+          "bg": "#ff90e8",
+          "ratio": 10.41,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": "label sitting on the accent fill",
+          "aa": true,
+          "aaa": true
+        },
+        {
+          "pair": "primary/background",
+          "fg": "#ff90e8",
+          "bg": "#242423",
+          "ratio": 7.7,
+          "kind": "nonText",
+          "criterion": "1.4.11 Non-text Contrast",
+          "min": 3,
+          "note": "accent is a button fill, judged as a UI component",
+          "aa": true,
+          "aaa": null
+        },
+        {
+          "pair": "border/background",
+          "fg": "#717170",
+          "bg": "#242423",
+          "ratio": 3.18,
+          "kind": "nonText",
+          "criterion": "1.4.11 Non-text Contrast",
+          "min": 3,
+          "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+          "aa": true,
+          "aaa": null
+        }
+      ],
+      "failures": 0,
+      "textFailures": 0,
+      "minRatio": 3.18
+    },
+    "warnings": [
+      "First section carries no heading; the page may open on chrome — a search bar or a breadcrumb — rather than on a headline.",
+      "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
+      "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+      "13 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+      "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
+      "Strided sample: 1468 of 1995 elements. Weights are relative only."
+    ]
+  },
+  "harvest": {
+    "harvestVersion": 8,
+    "url": "https://gumroad.com/",
+    "title": "Earn your first dollar online with Gumroad",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 900,
+    "textColors": {
+      "rgb(0, 0, 0)": {
+        "count": 454,
+        "area": 5673720.088066101,
+        "chars": 10733
+      },
+      "rgb(255, 255, 255)": {
+        "count": 50,
+        "area": 575564.265625,
+        "chars": 645
+      },
+      "oklab(0.259939 -0.000510752 0.00176638 / 0.5)": {
+        "count": 6,
+        "area": 21013.875,
+        "chars": 81
+      }
+    },
+    "bgColors": {
+      "rgb(244, 244, 240)": {
+        "count": 27,
+        "area": 41020938.8125,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 382,
+        "area": 33412309.72478485,
+        "chars": 2736
+      },
+      "rgb(0, 0, 0)": {
+        "count": 18,
+        "area": 1852834.578125,
+        "chars": 132
+      },
+      "rgb(241, 243, 51)": {
+        "count": 12,
+        "area": 149286,
+        "chars": 0
+      },
+      "rgb(220, 52, 30)": {
+        "count": 12,
+        "area": 149286,
+        "chars": 0
+      },
+      "rgb(255, 201, 0)": {
+        "count": 22,
+        "area": 1342733.375,
+        "chars": 0
+      },
+      "rgb(255, 144, 232)": {
+        "count": 3,
+        "area": 7200,
+        "chars": 3
+      }
+    },
+    "borderColors": {
+      "rgb(0, 0, 0)": {
+        "count": 63,
+        "area": 2211386.796875,
+        "chars": 141
+      },
+      "rgba(0, 0, 0, 0)": {
+        "count": 5,
+        "area": 21696.1875,
+        "chars": 34
+      },
+      "rgb(36, 36, 35)": {
+        "count": 6,
+        "area": 70108,
+        "chars": 0
+      },
+      "oklab(0.259939 -0.000510752 0.00176638 / 0.5)": {
+        "count": 42,
+        "area": 8313706.15625,
+        "chars": 0
+      },
+      "oklch(0.872 0.01 258.338)": {
+        "count": 306,
+        "area": 1894794.349784851,
+        "chars": 2730
+      },
+      "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)": {
+        "count": 3,
+        "area": 48787.5,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "\"ABC Favorit\"": {
+        "count": 507,
+        "area": 6263098.228691101,
+        "chars": 11456
+      },
+      "Arial": {
+        "count": 3,
+        "area": 7200,
+        "chars": 3
+      }
+    },
+    "fontSizes": {
+      "16px": {
+        "count": 63,
+        "area": 283034.90625,
+        "chars": 660
+      },
+      "18px": {
+        "count": 140,
+        "area": 1140094.428894043,
+        "chars": 2903
+      },
+      "96px": {
+        "count": 2,
+        "area": 98461.90625,
+        "chars": 14
+      },
+      "24px": {
+        "count": 212,
+        "area": 1527226.967765808,
+        "chars": 2185
+      },
+      "20px": {
+        "count": 39,
+        "area": 1406405.9375,
+        "chars": 4078
+      },
+      "36px": {
+        "count": 19,
+        "area": 510545,
+        "chars": 486
+      },
+      "48px": {
+        "count": 9,
+        "area": 500230.125,
+        "chars": 354
+      },
+      "192px": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "30px": {
+        "count": 4,
+        "area": 182664,
+        "chars": 260
+      },
+      "14px": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      },
+      "72px": {
+        "count": 4,
+        "area": 237917.6875,
+        "chars": 80
+      },
+      "128px": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      },
+      "60px": {
+        "count": 4,
+        "area": 97463.8125,
+        "chars": 47
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 153,
+        "area": 2576378.984375,
+        "chars": 4940
+      },
+      "500": {
+        "count": 345,
+        "area": 3632502.119316101,
+        "chars": 6381
+      },
+      "700": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      }
+    },
+    "lineHeights": {
+      "16px": {
+        "count": 3,
+        "area": 1553.25,
+        "chars": 12
+      },
+      "28px": {
+        "count": 167,
+        "area": 1589960.366394043,
+        "chars": 4062
+      },
+      "96px": {
+        "count": 2,
+        "area": 98461.90625,
+        "chars": 14
+      },
+      "32px": {
+        "count": 212,
+        "area": 1527226.967765808,
+        "chars": 2185
+      },
+      "26px": {
+        "count": 51,
+        "area": 253267.78125,
+        "chars": 564
+      },
+      "24px": {
+        "count": 9,
+        "area": 28213.875,
+        "chars": 84
+      },
+      "40px": {
+        "count": 19,
+        "area": 510545,
+        "chars": 486
+      },
+      "60px": {
+        "count": 7,
+        "area": 364536.9375,
+        "chars": 209
+      },
+      "172.8px": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "36px": {
+        "count": 4,
+        "area": 182664,
+        "chars": 260
+      },
+      "32.5px": {
+        "count": 12,
+        "area": 956540,
+        "chars": 2919
+      },
+      "20px": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      },
+      "72px": {
+        "count": 4,
+        "area": 237917.6875,
+        "chars": 80
+      },
+      "48px": {
+        "count": 6,
+        "area": 233157,
+        "chars": 192
+      },
+      "115.2px": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      }
+    },
+    "letterSpacings": {
+      "-0.4px": {
+        "count": 507,
+        "area": 6263098.228691101,
+        "chars": 11456
+      }
+    },
+    "typeStyles": {
+      "text|16px|500|16px|-0.4px|\"ABC Favorit\"": {
+        "count": 3,
+        "area": 1553.25,
+        "chars": 12
+      },
+      "link|18px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 8,
+        "area": 44459.609375,
+        "chars": 58
+      },
+      "h1|96px|400|96px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 64713,
+        "chars": 7
+      },
+      "text|96px|400|96px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 33748.90625,
+        "chars": 7
+      },
+      "text|24px|400|32px|-0.4px|\"ABC Favorit\"": {
+        "count": 8,
+        "area": 145002,
+        "chars": 365
+      },
+      "link|20px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 9,
+        "area": 142086,
+        "chars": 114
+      },
+      "text|16px|400|26px|-0.4px|\"ABC Favorit\"": {
+        "count": 18,
+        "area": 43285.6875,
+        "chars": 273
+      },
+      "text|16px|400|24px|-0.4px|\"ABC Favorit\"": {
+        "count": 3,
+        "area": 15981.75,
+        "chars": 63
+      },
+      "link|16px|400|24px|-0.4px|\"ABC Favorit\"": {
+        "count": 3,
+        "area": 5032.125,
+        "chars": 18
+      },
+      "text|36px|400|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 14,
+        "area": 321255,
+        "chars": 254
+      },
+      "text|18px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 18,
+        "area": 521648.3125,
+        "chars": 1797
+      },
+      "text|20px|500|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 103603.9375,
+        "chars": 372
+      },
+      "text|48px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 2,
+        "area": 167233.125,
+        "chars": 99
+      },
+      "h2|48px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 99840,
+        "chars": 63
+      },
+      "text|20px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 6,
+        "area": 204176,
+        "chars": 673
+      },
+      "h1|192px|500|172.8px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "text|30px|400|36px|-0.4px|\"ABC Favorit\"": {
+        "count": 4,
+        "area": 182664,
+        "chars": 260
+      },
+      "text|20px|500|32.5px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 956540,
+        "chars": 2919
+      },
+      "h3|18px|700|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      },
+      "text|14px|400|20px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      },
+      "h2|72px|400|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 51359.625,
+        "chars": 23
+      },
+      "link|24px|500|32px|-0.4px|\"ABC Favorit\"": {
+        "count": 204,
+        "area": 1382224.967765808,
+        "chars": 1820
+      },
+      "h3|48px|500|48px|-0.4px|\"ABC Favorit\"": {
+        "count": 4,
+        "area": 134277,
+        "chars": 126
+      },
+      "h1|72px|500|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 131395.5,
+        "chars": 43
+      },
+      "button|16px|400|24px|normal|Arial": {
+        "count": 3,
+        "area": 7200,
+        "chars": 3
+      },
+      "link|16px|400|26px|-0.4px|\"ABC Favorit\"": {
+        "count": 33,
+        "area": 209982.09375,
+        "chars": 291
+      },
+      "h1|72px|400|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 36293.625,
+        "chars": 7
+      },
+      "text|72px|400|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 18868.9375,
+        "chars": 7
+      },
+      "h2|36px|400|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 2,
+        "area": 108480,
+        "chars": 126
+      },
+      "h1|128px|500|115.2px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      },
+      "h2|60px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 38078.4375,
+        "chars": 23
+      },
+      "h1|48px|500|48px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 67584,
+        "chars": 43
+      },
+      "h1|60px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 26694.375,
+        "chars": 7
+      },
+      "text|60px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 13131,
+        "chars": 7
+      },
+      "h1|60px|500|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 19560,
+        "chars": 10
+      },
+      "h2|48px|400|48px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 31296,
+        "chars": 23
+      },
+      "link|18px|500|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 102,
+        "area": 512569.38201904297,
+        "chars": 910
+      },
+      "h3|36px|500|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 2,
+        "area": 41690,
+        "chars": 63
+      },
+      "h1|36px|500|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 39120,
+        "chars": 43
+      }
+    },
+    "states": {
+      "link|hover|border-color:#000": {
+        "rules": 1,
+        "matched": 12
+      },
+      "link|hover|background-color:oklch(96.7% .003 264.542)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|background-color:#ff90e8": {
+        "rules": 1,
+        "matched": 4
+      },
+      "link|hover|color:#000": {
+        "rules": 1,
+        "matched": 5
+      },
+      "link|hover|color:#ff90e8": {
+        "rules": 1,
+        "matched": 16
+      },
+      "link|hover|box-shadow:0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000": {
+        "rules": 1,
+        "matched": 102
+      },
+      "text|focus|border-color:rgb(255 144 232)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|box-shadow:0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000": {
+        "rules": 2,
+        "matched": 2
+      },
+      "button|focus|outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 2
+      }
+    },
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 17,
+        "area": 91423.59375,
+        "chars": 97
+      },
+      "link|6px|1px|3.35544e+07px|6px": {
+        "count": 1,
+        "area": 3276.21875,
+        "chars": 0
+      },
+      "link|8px 16px|1px|3.35544e+07px|normal": {
+        "count": 108,
+        "area": 716610.8399047852,
+        "chars": 949
+      },
+      "link|8px 24px|0px|0px|normal": {
+        "count": 2,
+        "area": 18961.234375,
+        "chars": 19
+      },
+      "link|0px 40px|1px|4px|normal": {
+        "count": 3,
+        "area": 36414,
+        "chars": 38
+      },
+      "button|8px|1px|6px|normal": {
+        "count": 1,
+        "area": 1764,
+        "chars": 0
+      },
+      "link|0px|0px|0px|4px": {
+        "count": 1,
+        "area": 1677.375,
+        "chars": 6
+      },
+      "button|0px 24px|1px|4px|normal": {
+        "count": 1,
+        "area": 3168,
+        "chars": 1
+      }
+    },
+    "styleSheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 124
+    },
+    "radii": {
+      "3.35544e+07px": {
+        "count": 353,
+        "area": 2667533.381034851,
+        "chars": 2769
+      },
+      "4px": {
+        "count": 42,
+        "area": 561461.5,
+        "chars": 117
+      },
+      "6px": {
+        "count": 3,
+        "area": 5292,
+        "chars": 0
+      },
+      "24px": {
+        "count": 30,
+        "area": 6033290.15625,
+        "chars": 0
+      },
+      "16px": {
+        "count": 29,
+        "area": 5345428.71875,
+        "chars": 0
+      }
+    },
+    "shadows": {},
+    "spacings": {
+      "4": {
+        "count": 50,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 353,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 943,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 451,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 40,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 160,
+        "area": 0,
+        "chars": 0
+      },
+      "35": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "36": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 19,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 10,
+        "area": 0,
+        "chars": 0
+      },
+      "56": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "58": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 57,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "89": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "115": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "128": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "144": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "150": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "160": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(0, 0, 0)": {
+        "count": 11,
+        "area": 157134.578125,
+        "chars": 132
+      },
+      "rgb(255, 255, 255)": {
+        "count": 310,
+        "area": 1907801.193534851,
+        "chars": 2736
+      },
+      "rgb(255, 144, 232)": {
+        "count": 3,
+        "area": 7200,
+        "chars": 3
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 58,
+        "area": 263880.453125,
+        "chars": 328
+      },
+      "3.35544e+07px": {
+        "count": 315,
+        "area": 1930121.381034851,
+        "chars": 2769
+      },
+      "4px": {
+        "count": 12,
+        "area": 149286,
+        "chars": 117
+      },
+      "6px": {
+        "count": 3,
+        "area": 5292,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(0, 0, 0)": {
+        "count": 326,
+        "area": 1967071.037284851,
+        "chars": 2773
+      },
+      "rgb(255, 255, 255)": {
+        "count": 59,
+        "area": 376476.671875,
+        "chars": 423
+      },
+      "oklab(0.259939 -0.000510752 0.00176638 / 0.5)": {
+        "count": 3,
+        "area": 5032.125,
+        "chars": 18
+      }
+    },
+    "headingSizes": {
+      "96px": {
+        "count": 1,
+        "area": 64713,
+        "chars": 7
+      },
+      "48px": {
+        "count": 7,
+        "area": 332997,
+        "chars": 255
+      },
+      "192px": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "18px": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      },
+      "72px": {
+        "count": 3,
+        "area": 219048.75,
+        "chars": 73
+      },
+      "36px": {
+        "count": 5,
+        "area": 189290,
+        "chars": 232
+      },
+      "128px": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      },
+      "60px": {
+        "count": 3,
+        "area": 84332.8125,
+        "chars": 40
+      }
+    },
+    "headingFamilies": {
+      "\"ABC Favorit\"": {
+        "count": 33,
+        "area": 1194182.76953125,
+        "chars": 765
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 9,
+        "area": 456755.0625,
+        "chars": 279
+      },
+      "500": {
+        "count": 12,
+        "area": 676010.58203125,
+        "chars": 348
+      },
+      "700": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      }
+    },
+    "pageBg": "rgb(244, 244, 240)",
+    "elementCount": 1995,
+    "sampled": 1468,
+    "structure": {
+      "sectionCount": 9,
+      "sectionDepth": 4,
+      "sectionHeights": [
+        1590,
+        1068,
+        549,
+        750,
+        934,
+        704,
+        464,
+        504,
+        542
+      ],
+      "contentWidths": {
+        "520": 1,
+        "540": 18,
+        "560": 1,
+        "570": 1,
+        "590": 1,
+        "620": 1,
+        "630": 6,
+        "660": 4,
+        "670": 2,
+        "720": 2,
+        "770": 2,
+        "830": 2,
+        "860": 1,
+        "900": 2,
+        "1020": 1,
+        "1090": 1,
+        "1120": 3,
+        "1150": 4
+      },
+      "sectionRhythm": {
+        "32": 2,
+        "80": 1,
+        "96": 4,
+        "128": 2,
+        "160": 1,
+        "256": 2
+      },
+      "gridColumns": {
+        "2": 1
+      },
+      "transitions": {
+        "0.1s cubic-bezier(0.4, 0, 0.2, 1)": 1,
+        "0.2s cubic-bezier(0.4, 0, 0.2, 1)": 16,
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 106
+      },
+      "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 9,
+        "bleed": 6,
+        "gridded": 3,
+        "mediaLed": 2,
+        "charsMedian": 172
+      },
+      "hero": {
+        "heightRatio": 1.77,
+        "headingSize": null,
+        "align": null,
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 5,
+        "fullBleed": false
+      },
+      "nav": null
+    },
+    "backgrounds": {
+      "layers": {},
+      "effects": {},
+      "scanned": 665,
+      "elementsWithImage": 0
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 665
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 665
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 665
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": {
+    "harvestVersion": 8,
+    "url": "https://gumroad.com/",
+    "title": "Earn your first dollar online with Gumroad",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 900,
+    "textColors": {
+      "rgb(255, 255, 255)": {
+        "count": 465,
+        "area": 5990489.331375122,
+        "chars": 10657
+      },
+      "rgb(0, 0, 0)": {
+        "count": 30,
+        "area": 219957.796875,
+        "chars": 367
+      },
+      "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)": {
+        "count": 3,
+        "area": 15981.75,
+        "chars": 63
+      },
+      "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      }
+    },
+    "bgColors": {
+      "rgb(36, 36, 35)": {
+        "count": 369,
+        "area": 12936633.249343872,
+        "chars": 2730
+      },
+      "rgb(0, 0, 0)": {
+        "count": 31,
+        "area": 63164411.3125,
+        "chars": 6
+      },
+      "rgb(255, 255, 255)": {
+        "count": 17,
+        "area": 31706.1875,
+        "chars": 5
+      },
+      "rgb(255, 144, 232)": {
+        "count": 13,
+        "area": 160532.390625,
+        "chars": 130
+      },
+      "rgb(241, 243, 51)": {
+        "count": 12,
+        "area": 149286,
+        "chars": 0
+      },
+      "rgb(220, 52, 30)": {
+        "count": 12,
+        "area": 149286,
+        "chars": 0
+      },
+      "rgb(255, 201, 0)": {
+        "count": 22,
+        "area": 1342733.375,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "oklab(0.999994 0.0000455678 0.0000200868 / 0.35)": {
+        "count": 373,
+        "area": 11956980.749343872,
+        "chars": 2736
+      },
+      "rgba(0, 0, 0, 0)": {
+        "count": 5,
+        "area": 21696.1875,
+        "chars": 34
+      },
+      "rgb(0, 0, 0)": {
+        "count": 38,
+        "area": 462906.578125,
+        "chars": 135
+      },
+      "rgb(36, 36, 35)": {
+        "count": 6,
+        "area": 70108,
+        "chars": 0
+      },
+      "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)": {
+        "count": 3,
+        "area": 48787.5,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "\"ABC Favorit\"": {
+        "count": 507,
+        "area": 6263098.253250122,
+        "chars": 11456
+      },
+      "Arial": {
+        "count": 3,
+        "area": 7200,
+        "chars": 3
+      }
+    },
+    "fontSizes": {
+      "16px": {
+        "count": 63,
+        "area": 283034.90625,
+        "chars": 660
+      },
+      "18px": {
+        "count": 140,
+        "area": 1140094.4162597656,
+        "chars": 2903
+      },
+      "96px": {
+        "count": 2,
+        "area": 98461.90625,
+        "chars": 14
+      },
+      "24px": {
+        "count": 212,
+        "area": 1527227.0049591064,
+        "chars": 2185
+      },
+      "20px": {
+        "count": 39,
+        "area": 1406405.9375,
+        "chars": 4078
+      },
+      "36px": {
+        "count": 19,
+        "area": 510545,
+        "chars": 486
+      },
+      "48px": {
+        "count": 9,
+        "area": 500230.125,
+        "chars": 354
+      },
+      "192px": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "30px": {
+        "count": 4,
+        "area": 182664,
+        "chars": 260
+      },
+      "14px": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      },
+      "72px": {
+        "count": 4,
+        "area": 237917.6875,
+        "chars": 80
+      },
+      "128px": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      },
+      "60px": {
+        "count": 4,
+        "area": 97463.8125,
+        "chars": 47
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 153,
+        "area": 2576378.984375,
+        "chars": 4940
+      },
+      "500": {
+        "count": 345,
+        "area": 3632502.143875122,
+        "chars": 6381
+      },
+      "700": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      }
+    },
+    "lineHeights": {
+      "16px": {
+        "count": 3,
+        "area": 1553.25,
+        "chars": 12
+      },
+      "28px": {
+        "count": 167,
+        "area": 1589960.3537597656,
+        "chars": 4062
+      },
+      "96px": {
+        "count": 2,
+        "area": 98461.90625,
+        "chars": 14
+      },
+      "32px": {
+        "count": 212,
+        "area": 1527227.0049591064,
+        "chars": 2185
+      },
+      "26px": {
+        "count": 51,
+        "area": 253267.78125,
+        "chars": 564
+      },
+      "24px": {
+        "count": 9,
+        "area": 28213.875,
+        "chars": 84
+      },
+      "40px": {
+        "count": 19,
+        "area": 510545,
+        "chars": 486
+      },
+      "60px": {
+        "count": 7,
+        "area": 364536.9375,
+        "chars": 209
+      },
+      "172.8px": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "36px": {
+        "count": 4,
+        "area": 182664,
+        "chars": 260
+      },
+      "32.5px": {
+        "count": 12,
+        "area": 956540,
+        "chars": 2919
+      },
+      "20px": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      },
+      "72px": {
+        "count": 4,
+        "area": 237917.6875,
+        "chars": 80
+      },
+      "48px": {
+        "count": 6,
+        "area": 233157,
+        "chars": 192
+      },
+      "115.2px": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      }
+    },
+    "letterSpacings": {
+      "-0.4px": {
+        "count": 507,
+        "area": 6263098.253250122,
+        "chars": 11456
+      }
+    },
+    "typeStyles": {
+      "text|16px|500|16px|-0.4px|\"ABC Favorit\"": {
+        "count": 3,
+        "area": 1553.25,
+        "chars": 12
+      },
+      "link|18px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 8,
+        "area": 44459.609375,
+        "chars": 58
+      },
+      "h1|96px|400|96px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 64713,
+        "chars": 7
+      },
+      "text|96px|400|96px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 33748.90625,
+        "chars": 7
+      },
+      "text|24px|400|32px|-0.4px|\"ABC Favorit\"": {
+        "count": 8,
+        "area": 145002,
+        "chars": 365
+      },
+      "link|20px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 9,
+        "area": 142086,
+        "chars": 114
+      },
+      "text|16px|400|26px|-0.4px|\"ABC Favorit\"": {
+        "count": 18,
+        "area": 43285.6875,
+        "chars": 273
+      },
+      "text|16px|400|24px|-0.4px|\"ABC Favorit\"": {
+        "count": 3,
+        "area": 15981.75,
+        "chars": 63
+      },
+      "link|16px|400|24px|-0.4px|\"ABC Favorit\"": {
+        "count": 3,
+        "area": 5032.125,
+        "chars": 18
+      },
+      "text|36px|400|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 14,
+        "area": 321255,
+        "chars": 254
+      },
+      "text|18px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 18,
+        "area": 521648.3125,
+        "chars": 1797
+      },
+      "text|20px|500|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 103603.9375,
+        "chars": 372
+      },
+      "text|48px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 2,
+        "area": 167233.125,
+        "chars": 99
+      },
+      "h2|48px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 99840,
+        "chars": 63
+      },
+      "text|20px|400|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 6,
+        "area": 204176,
+        "chars": 673
+      },
+      "h1|192px|500|172.8px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "text|30px|400|36px|-0.4px|\"ABC Favorit\"": {
+        "count": 4,
+        "area": 182664,
+        "chars": 260
+      },
+      "text|20px|500|32.5px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 956540,
+        "chars": 2919
+      },
+      "h3|18px|700|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      },
+      "text|14px|400|20px|-0.4px|\"ABC Favorit\"": {
+        "count": 12,
+        "area": 43869.375,
+        "chars": 372
+      },
+      "h2|72px|400|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 51359.625,
+        "chars": 23
+      },
+      "link|24px|500|32px|-0.4px|\"ABC Favorit\"": {
+        "count": 204,
+        "area": 1382225.0049591064,
+        "chars": 1820
+      },
+      "h3|48px|500|48px|-0.4px|\"ABC Favorit\"": {
+        "count": 4,
+        "area": 134277,
+        "chars": 126
+      },
+      "h1|72px|500|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 131395.5,
+        "chars": 43
+      },
+      "button|16px|400|24px|normal|Arial": {
+        "count": 3,
+        "area": 7200,
+        "chars": 3
+      },
+      "link|16px|400|26px|-0.4px|\"ABC Favorit\"": {
+        "count": 33,
+        "area": 209982.09375,
+        "chars": 291
+      },
+      "h1|72px|400|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 36293.625,
+        "chars": 7
+      },
+      "text|72px|400|72px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 18868.9375,
+        "chars": 7
+      },
+      "h2|36px|400|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 2,
+        "area": 108480,
+        "chars": 126
+      },
+      "h1|128px|500|115.2px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      },
+      "h2|60px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 38078.4375,
+        "chars": 23
+      },
+      "h1|48px|500|48px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 67584,
+        "chars": 43
+      },
+      "h1|60px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 26694.375,
+        "chars": 7
+      },
+      "text|60px|400|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 13131,
+        "chars": 7
+      },
+      "h1|60px|500|60px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 19560,
+        "chars": 10
+      },
+      "h2|48px|400|48px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 31296,
+        "chars": 23
+      },
+      "link|18px|500|28px|-0.4px|\"ABC Favorit\"": {
+        "count": 102,
+        "area": 512569.3693847656,
+        "chars": 910
+      },
+      "h3|36px|500|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 2,
+        "area": 41690,
+        "chars": 63
+      },
+      "h1|36px|500|40px|-0.4px|\"ABC Favorit\"": {
+        "count": 1,
+        "area": 39120,
+        "chars": 43
+      }
+    },
+    "states": {
+      "link|hover|border-color:#000": {
+        "rules": 1,
+        "matched": 12
+      },
+      "link|hover|background-color:oklch(96.7% .003 264.542)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|background-color:#ff90e8": {
+        "rules": 1,
+        "matched": 4
+      },
+      "link|hover|color:#000": {
+        "rules": 1,
+        "matched": 5
+      },
+      "link|hover|color:#ff90e8": {
+        "rules": 1,
+        "matched": 16
+      },
+      "link|hover|box-shadow:0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000": {
+        "rules": 1,
+        "matched": 102
+      },
+      "text|focus|border-color:rgb(255 144 232)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|box-shadow:0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000": {
+        "rules": 2,
+        "matched": 2
+      },
+      "button|focus|outline-color:rgba(0, 0, 0, 0)": {
+        "rules": 1,
+        "matched": 2
+      }
+    },
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 17,
+        "area": 91423.59375,
+        "chars": 97
+      },
+      "link|6px|1px|3.35544e+07px|6px": {
+        "count": 1,
+        "area": 3276.21875,
+        "chars": 0
+      },
+      "link|8px 16px|1px|3.35544e+07px|normal": {
+        "count": 108,
+        "area": 716610.8765258789,
+        "chars": 949
+      },
+      "link|8px 24px|0px|0px|normal": {
+        "count": 2,
+        "area": 18961.234375,
+        "chars": 19
+      },
+      "link|0px 40px|1px|4px|normal": {
+        "count": 3,
+        "area": 36414,
+        "chars": 38
+      },
+      "button|8px|1px|6px|normal": {
+        "count": 1,
+        "area": 1764,
+        "chars": 0
+      },
+      "link|0px|0px|0px|4px": {
+        "count": 1,
+        "area": 1677.375,
+        "chars": 6
+      },
+      "button|0px 24px|1px|4px|normal": {
+        "count": 1,
+        "area": 3168,
+        "chars": 1
+      }
+    },
+    "styleSheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 124
+    },
+    "radii": {
+      "3.35544e+07px": {
+        "count": 353,
+        "area": 2667533.405593872,
+        "chars": 2769
+      },
+      "4px": {
+        "count": 42,
+        "area": 561461.5,
+        "chars": 117
+      },
+      "6px": {
+        "count": 3,
+        "area": 5292,
+        "chars": 0
+      },
+      "24px": {
+        "count": 30,
+        "area": 6033290.15625,
+        "chars": 0
+      },
+      "16px": {
+        "count": 29,
+        "area": 5345428.71875,
+        "chars": 0
+      }
+    },
+    "shadows": {},
+    "spacings": {
+      "4": {
+        "count": 50,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 353,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 943,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 451,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 40,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 160,
+        "area": 0,
+        "chars": 0
+      },
+      "35": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "36": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 19,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 10,
+        "area": 0,
+        "chars": 0
+      },
+      "56": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "58": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 57,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "89": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "115": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "128": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "144": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "150": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "160": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(255, 255, 255)": {
+        "count": 1,
+        "area": 3802.1875,
+        "chars": 5
+      },
+      "rgb(0, 0, 0)": {
+        "count": 1,
+        "area": 7714.84375,
+        "chars": 6
+      },
+      "rgb(255, 144, 232)": {
+        "count": 13,
+        "area": 160532.390625,
+        "chars": 130
+      },
+      "rgb(36, 36, 35)": {
+        "count": 309,
+        "area": 1900086.374343872,
+        "chars": 2730
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 58,
+        "area": 263880.453125,
+        "chars": 328
+      },
+      "3.35544e+07px": {
+        "count": 315,
+        "area": 1930121.405593872,
+        "chars": 2769
+      },
+      "4px": {
+        "count": 12,
+        "area": 149286,
+        "chars": 117
+      },
+      "6px": {
+        "count": 3,
+        "area": 5292,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(255, 255, 255)": {
+        "count": 374,
+        "area": 2184245.280593872,
+        "chars": 3079
+      },
+      "rgb(0, 0, 0)": {
+        "count": 14,
+        "area": 164334.578125,
+        "chars": 135
+      }
+    },
+    "headingSizes": {
+      "96px": {
+        "count": 1,
+        "area": 64713,
+        "chars": 7
+      },
+      "48px": {
+        "count": 7,
+        "area": 332997,
+        "chars": 255
+      },
+      "192px": {
+        "count": 1,
+        "area": 167915.36328125,
+        "chars": 10
+      },
+      "18px": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      },
+      "72px": {
+        "count": 3,
+        "area": 219048.75,
+        "chars": 73
+      },
+      "36px": {
+        "count": 5,
+        "area": 189290,
+        "chars": 232
+      },
+      "128px": {
+        "count": 1,
+        "area": 74468.71875,
+        "chars": 10
+      },
+      "60px": {
+        "count": 3,
+        "area": 84332.8125,
+        "chars": 40
+      }
+    },
+    "headingFamilies": {
+      "\"ABC Favorit\"": {
+        "count": 33,
+        "area": 1194182.76953125,
+        "chars": 765
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 9,
+        "area": 456755.0625,
+        "chars": 279
+      },
+      "500": {
+        "count": 12,
+        "area": 676010.58203125,
+        "chars": 348
+      },
+      "700": {
+        "count": 12,
+        "area": 61417.125,
+        "chars": 138
+      }
+    },
+    "pageBg": "rgb(36, 36, 35)",
+    "elementCount": 1995,
+    "sampled": 1468,
+    "structure": {
+      "sectionCount": 9,
+      "sectionDepth": 4,
+      "sectionHeights": [
+        1590,
+        1068,
+        549,
+        750,
+        934,
+        704,
+        464,
+        504,
+        542
+      ],
+      "contentWidths": {
+        "520": 1,
+        "540": 18,
+        "560": 1,
+        "570": 1,
+        "590": 1,
+        "620": 1,
+        "630": 6,
+        "660": 4,
+        "670": 2,
+        "720": 2,
+        "770": 2,
+        "830": 2,
+        "860": 1,
+        "900": 2,
+        "1020": 1,
+        "1090": 1,
+        "1120": 3,
+        "1150": 4
+      },
+      "sectionRhythm": {
+        "32": 2,
+        "80": 1,
+        "96": 4,
+        "128": 2,
+        "160": 1,
+        "256": 2
+      },
+      "gridColumns": {
+        "2": 1
+      },
+      "transitions": {
+        "0.1s cubic-bezier(0.4, 0, 0.2, 1)": 1,
+        "0.2s cubic-bezier(0.4, 0, 0.2, 1)": 16,
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 106
+      },
+      "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 9,
+        "bleed": 6,
+        "gridded": 3,
+        "mediaLed": 2,
+        "charsMedian": 172
+      },
+      "hero": {
+        "heightRatio": 1.77,
+        "headingSize": null,
+        "align": null,
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 5,
+        "fullBleed": false
+      },
+      "nav": null
+    },
+    "backgrounds": {
+      "layers": {},
+      "effects": {},
+      "scanned": 665,
+      "elementsWithImage": 0
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 665
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 665
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 665
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  }
+}

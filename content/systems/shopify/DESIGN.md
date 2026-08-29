@@ -197,6 +197,7 @@ provenance:
 
 
 
+
 ## Overview
 
 Commerce on a pure black canvas, with exactly one chromatic colour in the whole
@@ -300,6 +301,7 @@ radius — note the asymmetry, which leaves room for a trailing icon. Links take
 
 **What this file does not constrain:** the merchandising, the section order, or
 how many sections a page runs. Those are yours.
+
 
 
 

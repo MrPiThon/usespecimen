@@ -7,7 +7,7 @@ export function parseColor(str) {
   if (s === 'transparent') return { r: 0, g: 0, b: 0, a: 0 };
   let m = s.match(/^rgba?\(([^)]+)\)$/);
   if (m) {
-    const parts = m[1].split(/[,\/\s]+/).filter(Boolean).map(Number);
+    const parts = m[1].split(/[,\/\s]+/).filter(Boolean).map(noneAsZero).map(Number);
     if (parts.length < 3 || parts.slice(0, 3).some(Number.isNaN)) return null;
     return { r: parts[0], g: parts[1], b: parts[2], a: parts.length > 3 ? parts[3] : 1 };
   }
@@ -22,7 +22,7 @@ export function parseColor(str) {
   // color(srgb r g b / a) — emitted by some engines for wide-gamut authored colors
   m = s.match(/^color\(srgb\s+([^)]+)\)$/);
   if (m) {
-    const parts = m[1].split(/[\/\s]+/).filter(Boolean).map(Number);
+    const parts = m[1].split(/[\/\s]+/).filter(Boolean).map(noneAsZero).map(Number);
     if (parts.length < 3) return null;
     return { r: parts[0] * 255, g: parts[1] * 255, b: parts[2] * 255, a: parts.length > 3 ? parts[3] : 1 };
   }
@@ -178,8 +178,22 @@ export function hueFamily({ C, h }) {
 
 /** Parse a modern colour's component list. `pcts` gives what 100% means for
  *  each slot, since `oklch(50% ...)` is 0.5 but `lab(50% ...)` is 50. */
+/**
+ * CSS Color 4's missing-component keyword. `oklch(0 0 none / 0.54)` is a real
+ * value Chrome serialises — Figma's whole muted text tier is authored that way
+ * — and `none` resolves to zero when the colour is actually used.
+ *
+ * Worth handling for the same reason lab/oklch were: unparsed here does not
+ * mean "no answer", it means a role silently goes missing. Figma came back with
+ * no mutedForeground, no card, and a white border, because every candidate for
+ * those carried a `none` hue. The `color()` branch was worse than unparsed —
+ * it returned `{r: null}`, which passes a null check and corrupts downstream
+ * maths rather than failing.
+ */
+const noneAsZero = p => (p === 'none' ? '0' : p);
+
 function numbers(body, pcts) {
-  const parts = body.split(/[,\/\s]+/).filter(Boolean);
+  const parts = body.split(/[,\/\s]+/).filter(Boolean).map(noneAsZero);
   if (parts.length < 3) return [null];
   const out = parts.slice(0, 3).map((p, i) => (p.endsWith('%')
     ? (parseFloat(p) / 100) * pcts[i]

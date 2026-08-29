@@ -427,6 +427,25 @@ export function colorTokens(capture) {
     primary = text.find(isChromatic);
     primarySource = primary ? 'textColors' : null;
   }
+  // Last resort: a recurring chromatic SURFACE.
+  //
+  // The general bgColors histogram is deliberately excluded from every step
+  // above, because a single large fill is a promotion rather than a brand — the
+  // yellow panel that once became Linear's accent. That exclusion is right, and
+  // it also made Hacker News come out "fully neutral": its #ff6600 masthead is
+  // painted on a table, the page has no styled control anywhere, and nothing
+  // chromatic reaches the chain.
+  //
+  // Reached only when the page is otherwise entirely neutral, so it can never
+  // outrank a button fill, a focus ring or a link. The recurrence floor still
+  // applies, which is what keeps the one-off promo panel out.
+  if (!primary) {
+    // `bg`, not the surface ramp: the ramp is built further down and is gated
+    // on area share to find real surfaces, which is the wrong test for a small
+    // brand masthead.
+    primary = bg.find(c => isChromatic(c) && recurring(c) && c.rgb !== backdrop.rgb);
+    primarySource = primary ? 'surfaceFill' : null;
+  }
 
   // A surface is not an accent and not a state. Semantic colours are resolved
   // first so they can be excluded here: a warning tint sitting behind a banner
@@ -649,7 +668,15 @@ export function stateTokens(capture) {
       const i = decl.indexOf(':');
       if (i < 1) continue;
       const prop = camel(decl.slice(0, i));
-      props[prop] = normalizeStateValue(prop, decl.slice(i + 1));
+      const value = normalizeStateValue(prop, decl.slice(i + 1));
+      // Harvest resolves var() against a matched element. When that fails the
+      // declaration is still a reference, not a value, and publishing it hands
+      // an agent something it cannot use: Framer's link:hover survived as a
+      // 400-character chain of nested framer-* fallbacks, and Figma's as
+      // `var(--fig-theme-border-hover, ...)`. Omit rather than emit a token
+      // whose value is "look somewhere else".
+      if (/var\(/.test(value)) continue;
+      props[prop] = value;
     }
     if (Object.keys(props).length) {
       // rulesConsidered is the honest caveat: CSS cascades, we pick one rule, and
@@ -1168,6 +1195,10 @@ function collectWarnings(capture, colors, type, spacing, rounded, states, compon
       + (roles.primary.via ? ` (${roles.primary.via})` : '')
       + ', the only chromatic evidence on the page. The site never fills a button '
       + 'with it, so no foreground pairing could be observed.');
+  } else if (roles.primary.source === 'surfaceFill') {
+    w.push(`Accent ${roles.primary.hex} taken from a recurring coloured surface — the page `
+      + 'has no styled control, focus ring or chromatic text to read it from. It is the '
+      + 'brand colour of a masthead or panel, not of a button.');
   } else if (roles.primary.source !== 'interactiveBg') {
     w.push(`Accent taken from ${roles.primary.source}, not a filled button — verify by eye.`);
   }

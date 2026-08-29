@@ -665,11 +665,6 @@
         }
       },
       "link": {
-        "active": {
-          "color": "var(--sk-button-color-active, rgb(0, 0, 0))",
-          "matchedElements": 99,
-          "rulesConsidered": 1
-        },
         "focus": {
           "outlineColor": "#0071e3",
           "matchedElements": 1,
@@ -687,18 +682,12 @@
         }
       },
       "text": {
-        "active": {
-          "color": "var(--sk-button-color-active, rgb(0, 0, 0))",
-          "matchedElements": 9,
-          "rulesConsidered": 1
-        },
         "focus-visible": {
           "opacity": "1",
           "matchedElements": 22,
           "rulesConsidered": 1
         },
         "hover": {
-          "color": "var(--sk-button-color-hover, rgb(0, 0, 0))",
           "borderColor": "rgba(0, 0, 0, 0)",
           "matchedElements": 9,
           "rulesConsidered": 1

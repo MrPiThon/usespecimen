@@ -1,0 +1,2536 @@
+{
+  "capturedAt": "2026-08-29T04:55:52.846Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://mailchimp.com/",
+    "title": "Email & SMS Marketing Platform | Mailchimp",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5956,
+    "elementCount": 8401,
+    "sampled": 2371,
+    "sampleRatio": 0.282
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 17,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.3549,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f5f5f5",
+        "weightShare": 0.1531,
+        "variants": [
+          "#f0f4f6"
+        ]
+      },
+      "mutedForeground": null,
+      "primary": {
+        "hex": "#ffe01b",
+        "weightShare": 0.798,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 21
+      },
+      "primaryForeground": {
+        "hex": "#231e15",
+        "weightShare": 0.6579,
+        "variants": []
+      },
+      "border": {
+        "hex": "#403b3b",
+        "weightShare": 0.3529,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f5f5f5",
+          "deltaL": 0.03,
+          "areaShare": 0.1531
+        },
+        {
+          "name": "surface-2",
+          "hex": "#bfbfbf",
+          "deltaL": 0.195,
+          "areaShare": 0.0412
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 21,
+          "charShare": 0.3549
+        },
+        {
+          "name": "text-2",
+          "hex": "#231e15",
+          "contrast": 16.56,
+          "charShare": 0.3711
+        },
+        {
+          "name": "text-3",
+          "hex": "#004e56",
+          "contrast": 9.44,
+          "charShare": 0.0273
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 25
+      },
+      {
+        "hex": "#f5f5f5",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.97,
+        "chroma": 0,
+        "count": 114
+      },
+      {
+        "hex": "#231e15",
+        "role": "primaryForeground",
+        "hue": "neutral",
+        "lightness": 0.238,
+        "chroma": 0.018,
+        "count": 28
+      },
+      {
+        "hex": "#e7b75f",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.805,
+        "chroma": 0.12,
+        "count": 3
+      },
+      {
+        "hex": "#ffe01b",
+        "role": "primary",
+        "hue": "yellow",
+        "lightness": 0.905,
+        "chroma": 0.184,
+        "count": 55
+      },
+      {
+        "hex": "#808080",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.598,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#bfbfbf",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.805,
+        "chroma": 0,
+        "count": 15
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 271
+      },
+      {
+        "hex": "#004e56",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.387,
+        "chroma": 0.066,
+        "count": 27
+      },
+      {
+        "hex": "#403b3b",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.357,
+        "chroma": 0.007,
+        "count": 15
+      },
+      {
+        "hex": "#bcbab6",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.789,
+        "chroma": 0.006,
+        "count": 4
+      },
+      {
+        "hex": "#706d67",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.535,
+        "chroma": 0.01,
+        "count": 12
+      },
+      {
+        "hex": "#dedede",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.901,
+        "chroma": 0,
+        "count": 1
+      }
+    ],
+    "semantic": {
+      "warning": {
+        "hex": "#e7b75f",
+        "occurrences": 3,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 8,
+      "text": 7,
+      "border": 5,
+      "interactive": 2
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Graphik Web",
+      "class": "sans",
+      "stack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+      "sizePx": 14,
+      "weight": 400,
+      "lineHeightPx": 20.16,
+      "lineHeightRatio": 1.44,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Means Web",
+      "class": "serif",
+      "stack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif",
+      "largestPx": 64,
+      "weight": 400,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "Graphik Web",
+        "class": "sans",
+        "stack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif"
+      },
+      {
+        "family": "Means Web",
+        "class": "serif",
+        "stack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 11,
+        "rem": 0.846,
+        "weightShare": 0.1458,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.923,
+        "weightShare": 0.1228,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 13,
+        "rem": 1,
+        "weightShare": 0.2421,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 14,
+        "rem": 1.077,
+        "weightShare": 0.2235,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 15,
+        "rem": 1.154,
+        "weightShare": 0.0065,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 16,
+        "rem": 1.231,
+        "weightShare": 0.1613,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 17,
+        "rem": 1.308,
+        "weightShare": 0.0072,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 20,
+        "rem": 1.538,
+        "weightShare": 0.0138,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 28,
+        "rem": 2.154,
+        "weightShare": 0.04,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 29.25,
+        "rem": 2.25,
+        "weightShare": 0.0066,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 38.4,
+        "rem": 2.954,
+        "weightShare": 0.0066,
+        "variants": []
+      },
+      {
+        "name": "up-9",
+        "px": 40,
+        "rem": 3.077,
+        "weightShare": 0.0101,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 19,
+    "roles": {
+      "body": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.44,
+        "letterSpacing": null,
+        "elements": 102,
+        "chars": 4866
+      },
+      "body-sm": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.54,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 2125
+      },
+      "caption": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 34,
+        "chars": 2598
+      },
+      "caption-sm": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "11px",
+        "fontWeight": 400,
+        "lineHeight": 1.45,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 2745
+      },
+      "body-lg": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 500,
+        "lineHeight": 2,
+        "letterSpacing": null,
+        "elements": 102,
+        "chars": 882
+      },
+      "lead": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": null,
+        "elements": 4,
+        "chars": 320
+      },
+      "h1": {
+        "fontFamily": "Means Web",
+        "fontStack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif",
+        "class": "serif",
+        "fontSize": "36px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": null,
+        "elements": 1,
+        "chars": 21
+      },
+      "h2": {
+        "fontFamily": "Means Web",
+        "fontStack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif",
+        "class": "serif",
+        "fontSize": "28px",
+        "fontWeight": 400,
+        "lineHeight": 1.13,
+        "letterSpacing": null,
+        "elements": 13,
+        "chars": 785
+      },
+      "h3": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "17px",
+        "fontWeight": 400,
+        "lineHeight": 1.41,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 168
+      },
+      "button": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 500,
+        "lineHeight": 1.2,
+        "letterSpacing": "0.13px",
+        "elements": 9,
+        "chars": 87
+      },
+      "link": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.35,
+        "letterSpacing": null,
+        "elements": 77,
+        "chars": 1029
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 67
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.869,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.737
+      },
+      {
+        "base": 6,
+        "share": 0.241
+      },
+      {
+        "base": 5,
+        "share": 0.141
+      },
+      {
+        "base": 4,
+        "share": 0.869
+      }
+    ],
+    "scale": [
+      2,
+      5,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32,
+      48
+    ],
+    "distinctValues": 37
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 3,
+        "count": 26
+      },
+      {
+        "name": "md",
+        "px": 4,
+        "count": 104
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "count": 102
+      },
+      {
+        "name": "xl",
+        "px": 24,
+        "count": 24
+      },
+      {
+        "name": "2xl",
+        "px": 26,
+        "count": 45
+      }
+    ],
+    "button": "16px",
+    "pill": true,
+    "pillValue": "50%",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.086) 0px 15.547px 44px 0px",
+        "count": 102
+      },
+      {
+        "value": "rgb(35, 30, 21) 0px 0px 0px 1px",
+        "count": 19
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.06) 0px 4px 16px 0px",
+        "count": 4
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px",
+        "count": 3
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "16px",
+      "borderWidth": null,
+      "radius": "16px",
+      "gap": "16px",
+      "elements": 34,
+      "variants": 9,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "8px",
+      "borderWidth": null,
+      "radius": "3px",
+      "gap": null,
+      "elements": 3,
+      "variants": 4,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 9,
+    "measure": {
+      "px": 1280,
+      "occurrences": 20,
+      "share": 0.328
+    },
+    "rhythm": {
+      "px": 80,
+      "occurrences": 8,
+      "share": 0.571
+    },
+    "composition": {
+      "total": 9,
+      "bleedCount": 8,
+      "griddedCount": 1,
+      "mediaLedCount": 2,
+      "charsMedian": 1259,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.11
+    },
+    "columns": null,
+    "hero": {
+      "heightRatio": 0.8,
+      "heightRatioMeasured": 0.8,
+      "headingSize": 64,
+      "align": "center",
+      "media": 2,
+      "fullBleed": true,
+      "ctas": 1,
+      "ctasFilled": 1,
+      "ctaEvidence": "strong"
+    },
+    "nav": {
+      "height": 68,
+      "position": "sticky",
+      "links": 185,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.15s",
+      "easing": "ease",
+      "occurrences": 188,
+      "share": 0.723
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 0,
+    "pattern": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 4
+      },
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 14,
+      "readable": 13,
+      "blocked": 1,
+      "stateRules": 467
+    },
+    "roles": {
+      "button": {
+        "focus": {
+          "outlineColor": "#000000",
+          "matchedElements": 25,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "color": "#ffffff",
+          "borderColor": "#68b631",
+          "matchedElements": 17,
+          "rulesConsidered": 9
+        }
+      },
+      "h3": {
+        "focus-visible": {
+          "outlineColor": "#4bc4c2",
+          "matchedElements": 10,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "focus": {
+          "backgroundColor": "rgba(35, 30, 21, 0.05)",
+          "matchedElements": 133,
+          "rulesConsidered": 9
+        },
+        "focus-visible": {
+          "outlineColor": "#4bc4c2",
+          "matchedElements": 165,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "color": "#002023",
+          "matchedElements": 348,
+          "rulesConsidered": 15
+        }
+      },
+      "text": {
+        "active": {
+          "color": "#000000",
+          "backgroundColor": "#ffffff",
+          "matchedElements": 78,
+          "rulesConsidered": 2
+        },
+        "focus": {
+          "borderColor": "#4bc4c2",
+          "boxShadow": "rgba(0, 124, 137, 0.2) 0px 0px 0px 0.125rem",
+          "matchedElements": 10,
+          "rulesConsidered": 11
+        },
+        "focus-visible": {
+          "outlineColor": "rgba(35, 30, 21, 0.5)",
+          "matchedElements": 20,
+          "rulesConsidered": 2
+        },
+        "hover": {
+          "color": "#403b3b",
+          "matchedElements": 10,
+          "rulesConsidered": 11
+        }
+      }
+    },
+    "declarations": 73
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#ffffff",
+        "ratio": 21,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#231e15",
+        "bg": "#ffe01b",
+        "ratio": 12.56,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#ffe01b",
+        "bg": "#ffffff",
+        "ratio": 1.32,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": false,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#403b3b",
+        "bg": "#ffffff",
+        "ratio": 11.01,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": true,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.32
+  },
+  "warnings": [
+    "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "19 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Strided sample: 2371 of 8401 elements. Weights are relative only."
+  ],
+  "supportsDark": false,
+  "dark": null,
+  "harvest": {
+    "harvestVersion": 8,
+    "url": "https://mailchimp.com/",
+    "title": "Email & SMS Marketing Platform | Mailchimp",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5956,
+    "textColors": {
+      "rgb(0, 78, 86)": {
+        "count": 27,
+        "area": 6424069.770019531,
+        "chars": 633
+      },
+      "rgb(255, 255, 255)": {
+        "count": 74,
+        "area": 1613670.6083984375,
+        "chars": 5098
+      },
+      "rgb(35, 30, 21)": {
+        "count": 284,
+        "area": 1945637.6899490356,
+        "chars": 8618
+      },
+      "rgb(0, 0, 0)": {
+        "count": 271,
+        "area": 2650880.1243782043,
+        "chars": 8242
+      },
+      "rgb(255, 224, 27)": {
+        "count": 15,
+        "area": 237634.25317382812,
+        "chars": 240
+      },
+      "rgba(35, 30, 21, 0.65)": {
+        "count": 12,
+        "area": 7766.25,
+        "chars": 105
+      },
+      "rgb(64, 59, 59)": {
+        "count": 15,
+        "area": 37675.46875,
+        "chars": 285
+      }
+    },
+    "bgColors": {
+      "rgb(255, 255, 255)": {
+        "count": 25,
+        "area": 19728972.5625,
+        "chars": 0
+      },
+      "rgb(35, 30, 21)": {
+        "count": 22,
+        "area": 4110123.765625,
+        "chars": 48
+      },
+      "rgba(35, 30, 21, 0)": {
+        "count": 5,
+        "area": 34693.96875,
+        "chars": 48
+      },
+      "rgb(255, 224, 27)": {
+        "count": 55,
+        "area": 2841746.1081619263,
+        "chars": 377
+      },
+      "rgba(0, 0, 0, 0.25)": {
+        "count": 3,
+        "area": 1668198,
+        "chars": 0
+      },
+      "rgb(245, 245, 245)": {
+        "count": 12,
+        "area": 5682051.3125,
+        "chars": 0
+      },
+      "rgb(240, 244, 246)": {
+        "count": 102,
+        "area": 541823.98046875,
+        "chars": 0
+      },
+      "rgb(231, 183, 95)": {
+        "count": 3,
+        "area": 3297876.9375,
+        "chars": 0
+      },
+      "rgba(35, 30, 21, 0.3)": {
+        "count": 12,
+        "area": 5580,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.5)": {
+        "count": 3,
+        "area": 2411592,
+        "chars": 0
+      },
+      "rgb(36, 28, 21)": {
+        "count": 6,
+        "area": 365641,
+        "chars": 27
+      },
+      "rgb(188, 186, 182)": {
+        "count": 4,
+        "area": 256,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "rgb(222, 222, 222)": {
+        "count": 1,
+        "area": 41760,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 5,
+        "area": 27018.40625,
+        "chars": 51
+      },
+      "rgba(35, 30, 21, 0.3)": {
+        "count": 4,
+        "area": 57834.56640625,
+        "chars": 0
+      },
+      "rgb(188, 186, 182)": {
+        "count": 6,
+        "area": 125891.8359375,
+        "chars": 0
+      },
+      "rgb(35, 30, 21)": {
+        "count": 6,
+        "area": 33033.75390625,
+        "chars": 0
+      },
+      "rgb(64, 59, 59)": {
+        "count": 12,
+        "area": 2701295.7670898438,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 644,
+        "area": 11315694.226917267,
+        "chars": 21518
+      },
+      "\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 54,
+        "area": 1601639.93775177,
+        "chars": 1703
+      }
+    },
+    "fontSizes": {
+      "16px": {
+        "count": 210,
+        "area": 8017847.053222656,
+        "chars": 3746
+      },
+      "13px": {
+        "count": 218,
+        "area": 995994.9096679688,
+        "chars": 5622
+      },
+      "11px": {
+        "count": 42,
+        "area": 419015.875,
+        "chars": 3385
+      },
+      "64px": {
+        "count": 2,
+        "area": 199411.48559570312,
+        "chars": 45
+      },
+      "20px": {
+        "count": 4,
+        "area": 130432,
+        "chars": 320
+      },
+      "15px": {
+        "count": 7,
+        "area": 80020,
+        "chars": 152
+      },
+      "40px": {
+        "count": 6,
+        "area": 273180.625,
+        "chars": 235
+      },
+      "23px": {
+        "count": 4,
+        "area": 41100,
+        "chars": 84
+      },
+      "14px": {
+        "count": 106,
+        "area": 1105613.9827766418,
+        "chars": 5190
+      },
+      "48px": {
+        "count": 4,
+        "area": 156725.3623046875,
+        "chars": 75
+      },
+      "32px": {
+        "count": 2,
+        "area": 4848.15625,
+        "chars": 8
+      },
+      "12px": {
+        "count": 45,
+        "area": 436664.90625,
+        "chars": 2851
+      },
+      "38.4px": {
+        "count": 4,
+        "area": 153939.451171875,
+        "chars": 153
+      },
+      "17px": {
+        "count": 8,
+        "area": 89005.5,
+        "chars": 168
+      },
+      "28px": {
+        "count": 26,
+        "area": 600164.4367752075,
+        "chars": 929
+      },
+      "46.08px": {
+        "count": 2,
+        "area": 34377.718505859375,
+        "chars": 30
+      },
+      "36px": {
+        "count": 2,
+        "area": 73642.5146484375,
+        "chars": 45
+      },
+      "29.25px": {
+        "count": 4,
+        "area": 77717.25,
+        "chars": 153
+      },
+      "37.44px": {
+        "count": 2,
+        "area": 27632.9375,
+        "chars": 30
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 483,
+        "area": 11464069.135372162,
+        "chars": 20770
+      },
+      "500": {
+        "count": 188,
+        "area": 1380614.216796875,
+        "chars": 2187
+      },
+      "600": {
+        "count": 3,
+        "area": 49392,
+        "chars": 48
+      },
+      "700": {
+        "count": 24,
+        "area": 23258.8125,
+        "chars": 216
+      }
+    },
+    "lineHeights": {
+      "21.6px": {
+        "count": 43,
+        "area": 6577907.645019531,
+        "chars": 1402
+      },
+      "17.55px": {
+        "count": 91,
+        "area": 143902.93701171875,
+        "chars": 1322
+      },
+      "14.3px": {
+        "count": 12,
+        "area": 24350.33203125,
+        "chars": 151
+      },
+      "12.1px": {
+        "count": 1,
+        "area": 1212.5,
+        "chars": 2
+      },
+      "19.5px": {
+        "count": 29,
+        "area": 188109.7578125,
+        "chars": 648
+      },
+      "76.8px": {
+        "count": 2,
+        "area": 199411.48559570312,
+        "chars": 45
+      },
+      "32px": {
+        "count": 131,
+        "area": 1257530.986328125,
+        "chars": 1843
+      },
+      "24px": {
+        "count": 47,
+        "area": 462836.875,
+        "chars": 839
+      },
+      "20px": {
+        "count": 26,
+        "area": 390610.546875,
+        "chars": 2375
+      },
+      "40px": {
+        "count": 6,
+        "area": 159408.78125,
+        "chars": 161
+      },
+      "30px": {
+        "count": 4,
+        "area": 41100,
+        "chars": 84
+      },
+      "21px": {
+        "count": 4,
+        "area": 63294,
+        "chars": 324
+      },
+      "16.25px": {
+        "count": 44,
+        "area": 96345.8828125,
+        "chars": 812
+      },
+      "48px": {
+        "count": 2,
+        "area": 44646.125,
+        "chars": 30
+      },
+      "28px": {
+        "count": 6,
+        "area": 87229.75,
+        "chars": 328
+      },
+      "16px": {
+        "count": 42,
+        "area": 388951.5,
+        "chars": 3096
+      },
+      "45px": {
+        "count": 2,
+        "area": 118620,
+        "chars": 82
+      },
+      "20.16px": {
+        "count": 102,
+        "area": 1042319.9827766418,
+        "chars": 4866
+      },
+      "18px": {
+        "count": 44,
+        "area": 435826.875,
+        "chars": 2840
+      },
+      "15.6px": {
+        "count": 9,
+        "area": 73920,
+        "chars": 87
+      },
+      "57.6px": {
+        "count": 2,
+        "area": 112079.2373046875,
+        "chars": 45
+      },
+      "38.4px": {
+        "count": 4,
+        "area": 153939.451171875,
+        "chars": 153
+      },
+      "31.5px": {
+        "count": 13,
+        "area": 514750.05517578125,
+        "chars": 785
+      },
+      "34.16px": {
+        "count": 12,
+        "area": 83522.55347442627,
+        "chars": 140
+      },
+      "18.4px": {
+        "count": 6,
+        "area": 6,
+        "chars": 96
+      },
+      "46.08px": {
+        "count": 2,
+        "area": 34377.718505859375,
+        "chars": 30
+      },
+      "46.8px": {
+        "count": 2,
+        "area": 73642.5146484375,
+        "chars": 45
+      },
+      "29.25px": {
+        "count": 4,
+        "area": 77717.25,
+        "chars": 153
+      },
+      "37.44px": {
+        "count": 2,
+        "area": 27632.9375,
+        "chars": 30
+      },
+      "35px": {
+        "count": 1,
+        "area": 1891.828125,
+        "chars": 4
+      },
+      "15px": {
+        "count": 1,
+        "area": 838.03125,
+        "chars": 11
+      },
+      "16.5px": {
+        "count": 2,
+        "area": 39400.625,
+        "chars": 392
+      }
+    },
+    "letterSpacings": {
+      "-1.2px": {
+        "count": 2,
+        "area": 199411.48559570312,
+        "chars": 45
+      },
+      "-0.5px": {
+        "count": 12,
+        "area": 386217.326171875,
+        "chars": 459
+      },
+      "-1px": {
+        "count": 6,
+        "area": 106656.78100585938,
+        "chars": 90
+      },
+      "0.13px": {
+        "count": 9,
+        "area": 73920,
+        "chars": 87
+      },
+      "-0.96px": {
+        "count": 2,
+        "area": 112079.2373046875,
+        "chars": 45
+      }
+    },
+    "typeStyles": {
+      "link|16px|400|21.6px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 27,
+        "area": 6424069.770019531,
+        "chars": 633
+      },
+      "text|13px|400|17.55px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 11,
+        "area": 33161.53076171875,
+        "chars": 269
+      },
+      "link|13px|400|17.55px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 77,
+        "area": 108040.65625,
+        "chars": 1029
+      },
+      "button|13px|500|14.3px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 3,
+        "area": 12230.943115234375,
+        "chars": 45
+      },
+      "link|13px|500|14.3px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 2,
+        "area": 6121.388916015625,
+        "chars": 26
+      },
+      "text|13px|500|14.3px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 7,
+        "area": 5998,
+        "chars": 80
+      },
+      "text|16px|400|21.6px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 16,
+        "area": 153837.875,
+        "chars": 769
+      },
+      "text|11px|500|12.1px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 1,
+        "area": 1212.5,
+        "chars": 2
+      },
+      "link|13px|500|19.5px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 17,
+        "area": 130385.5078125,
+        "chars": 225
+      },
+      "h1|64px|400|76.8px|-1.2px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 147450,
+        "chars": 21
+      },
+      "text|64px|400|76.8px|-1.2px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 51961.485595703125,
+        "chars": 24
+      },
+      "text|20px|400|32px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 4,
+        "area": 130432,
+        "chars": 320
+      },
+      "link|15px|600|24px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 3,
+        "area": 49392,
+        "chars": 48
+      },
+      "text|16px|400|20px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 5,
+        "area": 39370,
+        "chars": 229
+      },
+      "text|16px|500|20px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 3,
+        "area": 3743.296875,
+        "chars": 21
+      },
+      "h2|40px|400|40px|-0.5px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 4,
+        "area": 154560.625,
+        "chars": 153
+      },
+      "h3|23px|400|30px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 4,
+        "area": 41100,
+        "chars": 84
+      },
+      "text|14px|400|21px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 4,
+        "area": 63294,
+        "chars": 324
+      },
+      "link|15px|500|32px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 4,
+        "area": 30628,
+        "chars": 104
+      },
+      "link|16px|400|32px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 9,
+        "area": 55999,
+        "chars": 165
+      },
+      "text|13px|500|16.25px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 2,
+        "area": 2081.25,
+        "chars": 21
+      },
+      "text|13px|400|16.25px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 27,
+        "area": 83264.3828125,
+        "chars": 659
+      },
+      "h2|48px|400|48px|-1px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 39993.75,
+        "chars": 26
+      },
+      "text|48px|400|48px|-1px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 4652.375,
+        "chars": 4
+      },
+      "text|16px|400|28px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 2,
+        "area": 83216,
+        "chars": 300
+      },
+      "link|16px|400|28px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 4,
+        "area": 4013.75,
+        "chars": 28
+      },
+      "text|13px|400|20px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 18,
+        "area": 347497.25,
+        "chars": 2125
+      },
+      "text|32px|400|40px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 2,
+        "area": 4848.15625,
+        "chars": 8
+      },
+      "text|13px|700|16.25px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 9,
+        "area": 3630,
+        "chars": 60
+      },
+      "text|13px|500|17.55px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 3,
+        "area": 2700.75,
+        "chars": 24
+      },
+      "text|13px|500|19.5px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 3,
+        "area": 4335,
+        "chars": 48
+      },
+      "text|13px|500|16px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 3,
+        "area": 10548.75,
+        "chars": 105
+      },
+      "link|13px|400|16.25px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 6,
+        "area": 7370.25,
+        "chars": 72
+      },
+      "h2|40px|400|45px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 2,
+        "area": 118620,
+        "chars": 82
+      },
+      "text|16px|500|32px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 102,
+        "area": 929151.986328125,
+        "chars": 882
+      },
+      "text|14px|400|20.16px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 102,
+        "area": 1042319.9827766418,
+        "chars": 4866
+      },
+      "text|11px|500|16px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 9,
+        "area": 9526.96875,
+        "chars": 141
+      },
+      "text|11px|400|16px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 18,
+        "area": 353543,
+        "chars": 2745
+      },
+      "text|16px|400|24px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 7,
+        "area": 109112.625,
+        "chars": 330
+      },
+      "link|13px|400|19.5px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 9,
+        "area": 53389.25,
+        "chars": 375
+      },
+      "h3|16px|400|24px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 15,
+        "area": 82279.875,
+        "chars": 111
+      },
+      "link|11px|700|16px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 12,
+        "area": 15332.78125,
+        "chars": 105
+      },
+      "text|12px|400|18px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 34,
+        "area": 405823.5,
+        "chars": 2598
+      },
+      "link|12px|700|18px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 2,
+        "area": 3013.5,
+        "chars": 34
+      },
+      "button|13px|500|15.6px|0.13px|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 9,
+        "area": 73920,
+        "chars": 87
+      },
+      "h1|48px|400|57.6px|-0.96px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 82935,
+        "chars": 21
+      },
+      "text|48px|400|57.6px|-0.96px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 29144.2373046875,
+        "chars": 24
+      },
+      "h2|38.4px|400|38.4px|-0.5px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 4,
+        "area": 153939.451171875,
+        "chars": 153
+      },
+      "h3|17px|400|24px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 8,
+        "area": 89005.5,
+        "chars": 168
+      },
+      "link|12px|500|18px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 8,
+        "area": 26989.875,
+        "chars": 208
+      },
+      "text|16px|500|24px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 12,
+        "area": 131040,
+        "chars": 168
+      },
+      "h2|28px|400|31.5px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 13,
+        "area": 514750.05517578125,
+        "chars": 785
+      },
+      "text|28px|400|34.16px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 12,
+        "area": 83522.55347442627,
+        "chars": 140
+      },
+      "link|13px|400|32px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 12,
+        "area": 111320,
+        "chars": 372
+      },
+      "text|16px|400|18.4px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 6,
+        "area": 6,
+        "chars": 96
+      },
+      "h2|46.08px|400|46.08px|-1px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 30079.656005859375,
+        "chars": 26
+      },
+      "text|46.08px|400|46.08px|-1px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 4298.0625,
+        "chars": 4
+      },
+      "h1|36px|400|46.8px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 48153.984375,
+        "chars": 21
+      },
+      "text|36px|400|46.8px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 25488.5302734375,
+        "chars": 24
+      },
+      "h2|29.25px|400|29.25px|-0.5px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 4,
+        "area": 77717.25,
+        "chars": 153
+      },
+      "h2|37.44px|400|37.44px|-1px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 24821.0625,
+        "chars": 26
+      },
+      "text|37.44px|400|37.44px|-1px|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 2811.875,
+        "chars": 4
+      },
+      "link|16px|400|24px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 2,
+        "area": 2006.875,
+        "chars": 14
+      },
+      "text|28px|400|35px|normal|\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 1,
+        "area": 1891.828125,
+        "chars": 4
+      },
+      "text|12px|400|15px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 1,
+        "area": 838.03125,
+        "chars": 11
+      },
+      "text|11px|400|16.5px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 1,
+        "area": 38118.09375,
+        "chars": 375
+      },
+      "link|11px|700|16.5px|normal|\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 1,
+        "area": 1282.53125,
+        "chars": 17
+      }
+    },
+    "states": {
+      "link|hover|color:rgb(0, 32, 35)": {
+        "rules": 2,
+        "matched": 348
+      },
+      "link|hover|color:#231e15;background-color:rgba(255,224,27,.65);box-shadow:0 0 0 calc(3.25*.0625rem)rgba(255,224,27,.65)": {
+        "rules": 1,
+        "matched": 28
+      },
+      "link|focus|color:#231e15;background-color:rgba(255,224,27,.65);box-shadow:0 0 0 calc(3.25*.0625rem)rgba(255,224,27,.65)": {
+        "rules": 1,
+        "matched": 28
+      },
+      "link|focus-visible|outline-color:rgb(75, 196, 194)": {
+        "rules": 3,
+        "matched": 165
+      },
+      "link|hover|color:var(--cta-hovered-text-color,#231e15);box-shadow:0 0 0 calc(1*.0625rem)#231e15,0 .375em0 0 #231e15": {
+        "rules": 2,
+        "matched": 20
+      },
+      "link|active|box-shadow:0 0 0 calc(1*.0625rem)#231e15,0 var(--animation-depth,calc(3.25*.0625rem))0 0 #231e15": {
+        "rules": 2,
+        "matched": 20
+      },
+      "link|focus|box-shadow:0 0 0 calc(1*.0625rem)#231e15,0 var(--animation-depth,calc(3.25*.0625rem))0 0 #231e15": {
+        "rules": 2,
+        "matched": 20
+      },
+      "link|hover|color:#231e15": {
+        "rules": 2,
+        "matched": 15
+      },
+      "link|hover|background-color:rgb(255, 224, 27)": {
+        "rules": 1,
+        "matched": 11
+      },
+      "text|active|background-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 5
+      },
+      "text|active|color:rgb(0, 0, 0);background-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 78
+      },
+      "text|hover|background-color:rgb(232, 241, 250)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|outline-color:rgb(0, 124, 137)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|color:#231e15;box-shadow:0 0 0 .125em rgba(255,224,27,.65)": {
+        "rules": 3,
+        "matched": 30
+      },
+      "link|focus|color:#231e15;box-shadow:0 0 0 .125em rgba(255,224,27,.65)": {
+        "rules": 3,
+        "matched": 30
+      },
+      "text|hover|color:rgb(35, 108, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|color:rgb(35, 108, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|hover|color:rgb(213, 43, 30)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|color:rgb(213, 43, 30)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|hover|color:rgb(0, 134, 0)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|color:rgb(0, 134, 0)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|hover|color:rgb(44, 160, 28)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|color:rgb(44, 160, 28)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|hover|color:rgb(255, 224, 27)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|color:rgb(255, 224, 27)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|outline-color:rgb(75, 196, 194)": {
+        "rules": 1,
+        "matched": 10
+      },
+      "link|focus-visible|opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|background-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|background-color:rgba(35, 30, 21, 0.05)": {
+        "rules": 4,
+        "matched": 208
+      },
+      "link|focus-visible|background-color:rgba(35, 30, 21, 0.05);outline-color:rgb(75, 196, 194)": {
+        "rules": 1,
+        "matched": 55
+      },
+      "link|focus|background-color:rgba(35, 30, 21, 0.05)": {
+        "rules": 1,
+        "matched": 133
+      },
+      "h3|focus-visible|outline-color:rgb(75, 196, 194)": {
+        "rules": 1,
+        "matched": 10
+      },
+      "link|hover|background-color:rgb(239, 238, 234)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|background-color:rgb(246, 246, 244)": {
+        "rules": 1,
+        "matched": 12
+      },
+      "link|focus|color:rgb(255, 255, 255);background-color:rgb(0, 124, 137)": {
+        "rules": 1,
+        "matched": 12
+      },
+      "link|focus|color:rgb(35, 30, 21);background-color:rgb(246, 246, 244)": {
+        "rules": 1,
+        "matched": 12
+      },
+      "button|hover|background-color:rgba(35, 30, 21, 0.05)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|hover|color:rgb(64, 59, 59);background-color:rgb(246, 246, 244)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus|outline-color:rgb(75, 196, 194)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|border-color:rgb(64, 59, 59)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus|border-color:rgb(75, 196, 194);box-shadow:rgba(0, 124, 137, 0.2) 0px 0px 0px 0.125rem": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|background-color:rgb(246, 246, 244)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "text|hover|color:rgb(64, 59, 59)": {
+        "rules": 1,
+        "matched": 10
+      },
+      "text|hover|border-color:rgb(64, 59, 59)": {
+        "rules": 1,
+        "matched": 10
+      },
+      "text|focus|border-color:rgb(75, 196, 194);box-shadow:rgba(0, 124, 137, 0.2) 0px 0px 0px 0.125rem": {
+        "rules": 1,
+        "matched": 10
+      },
+      "text|hover|background-color:rgba(35, 30, 21, 0.05)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus-visible|outline-color:rgb(75, 196, 194)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|box-shadow:rgba(0, 0, 0, 0.25) 0px 0.5rem 3.23888rem": {
+        "rules": 1,
+        "matched": 34
+      },
+      "link|focus-visible|outline-color:rgb(0, 208, 224)": {
+        "rules": 1,
+        "matched": 34
+      },
+      "link|focus-visible|color:#231e15": {
+        "rules": 1,
+        "matched": 4
+      },
+      "link|hover|color:#231e15;background-color:transparent;box-shadow:none": {
+        "rules": 1,
+        "matched": 4
+      },
+      "link|hover|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|active|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|active|background-color:rgba(35, 30, 21, 0.08)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 3,
+        "matched": 5
+      },
+      "link|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|color:rgb(86, 86, 86)": {
+        "rules": 3,
+        "matched": 4
+      },
+      "button|hover|opacity:1": {
+        "rules": 1,
+        "matched": 5
+      },
+      "button|hover|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
+        "rules": 2,
+        "matched": 15
+      },
+      "button|focus|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
+        "rules": 2,
+        "matched": 15
+      },
+      "button|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 4,
+        "matched": 25
+      },
+      "text|focus|border-color:rgb(0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|outline-color:rgb(75, 196, 194)": {
+        "rules": 2,
+        "matched": 2
+      },
+      "button|hover|color:rgb(255, 255, 255);border-color:rgb(104, 182, 49)": {
+        "rules": 1,
+        "matched": 17
+      },
+      "button|focus|color:rgb(255, 255, 255);border-color:rgb(104, 182, 49)": {
+        "rules": 1,
+        "matched": 17
+      },
+      "text|focus|box-shadow:rgb(33, 150, 243) 0px 0px 1px": {
+        "rules": 1,
+        "matched": 3
+      },
+      "link|hover|color:rgb(56, 96, 190)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|hover|opacity:0.6": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|opacity:0.7": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|color:rgb(34, 133, 247)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|outline-color:rgba(35, 30, 21, 0.5)": {
+        "rules": 1,
+        "matched": 20
+      },
+      "link|hover|color:rgb(35, 30, 21)": {
+        "rules": 1,
+        "matched": 4
+      }
+    },
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 57,
+        "area": 1304017.28125,
+        "chars": 649
+      },
+      "link|6px 0px|0px|0px|normal": {
+        "count": 5,
+        "area": 7315.125,
+        "chars": 0
+      },
+      "link|0px|0px|3px|normal": {
+        "count": 1,
+        "area": 6412.6875,
+        "chars": 0
+      },
+      "button|8px|0px|3px|normal": {
+        "count": 3,
+        "area": 12230.943115234375,
+        "chars": 45
+      },
+      "link|8px|0px|3px|normal": {
+        "count": 4,
+        "area": 13673.693603515625,
+        "chars": 26
+      },
+      "button|8px|0px|3px|normal 2px": {
+        "count": 1,
+        "area": 2758.5,
+        "chars": 0
+      },
+      "link|12px 24px|0px|26px|normal": {
+        "count": 7,
+        "area": 47644.0546875,
+        "chars": 77
+      },
+      "link|12px 24px|0px|40px|normal": {
+        "count": 1,
+        "area": 16464,
+        "chars": 16
+      },
+      "link|0px 40px 0px 0px|0px|30px|normal": {
+        "count": 4,
+        "area": 30628,
+        "chars": 104
+      },
+      "link|0px 40px 0px 0px|0px|32px|normal": {
+        "count": 3,
+        "area": 16597,
+        "chars": 55
+      },
+      "link|16px|0px|16px|16px": {
+        "count": 34,
+        "area": 1698367.97265625,
+        "chars": 0
+      },
+      "button|10px 0px|1px|26px|normal": {
+        "count": 1,
+        "area": 7070,
+        "chars": 9
+      },
+      "button|10px 0px|0px|26px|normal": {
+        "count": 2,
+        "area": 14140,
+        "chars": 20
+      }
+    },
+    "styleSheets": {
+      "total": 14,
+      "readable": 13,
+      "blocked": 1,
+      "stateRules": 467
+    },
+    "radii": {
+      "3px": {
+        "count": 26,
+        "area": 141426.18238067627,
+        "chars": 211
+      },
+      "26px": {
+        "count": 45,
+        "area": 581076.2109375,
+        "chars": 684
+      },
+      "40px": {
+        "count": 15,
+        "area": 328496,
+        "chars": 48
+      },
+      "24px": {
+        "count": 24,
+        "area": 5010270.375,
+        "chars": 208
+      },
+      "30px": {
+        "count": 7,
+        "area": 55006.1015625,
+        "chars": 104
+      },
+      "32px": {
+        "count": 9,
+        "area": 55999,
+        "chars": 165
+      },
+      "50%": {
+        "count": 18,
+        "area": 5184,
+        "chars": 0
+      },
+      "10px": {
+        "count": 12,
+        "area": 195558.8046875,
+        "chars": 0
+      },
+      "8px": {
+        "count": 3,
+        "area": 17551.125,
+        "chars": 0
+      },
+      "16px": {
+        "count": 102,
+        "area": 4424968.177677155,
+        "chars": 0
+      },
+      "4px": {
+        "count": 104,
+        "area": 542335.98046875,
+        "chars": 0
+      },
+      "20px": {
+        "count": 12,
+        "area": 2701295.7670898438,
+        "chars": 0
+      },
+      "100px": {
+        "count": 6,
+        "area": 640,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgb(35, 30, 21) 0px 0px 0px 1px": {
+        "count": 19,
+        "area": 186385.4296875,
+        "chars": 213
+      },
+      "rgba(0, 0, 0, 0.06) 0px 4px 16px 0px": {
+        "count": 4,
+        "area": 1218614.5,
+        "chars": 0
+      },
+      "rgba(35, 30, 21, 0.15) 0px 0px 20px 3px": {
+        "count": 3,
+        "area": 593890.390625,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.086) 0px 15.547px 44px 0px": {
+        "count": 102,
+        "area": 4424968.177677155,
+        "chars": 0
+      },
+      "rgb(255, 255, 255) 0px 0px 0px 0px": {
+        "count": 3,
+        "area": 18049.78125,
+        "chars": 48
+      },
+      "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px": {
+        "count": 3,
+        "area": 341001,
+        "chars": 0
+      },
+      "rgb(35, 30, 21) 0px 0px 0px 0px": {
+        "count": 1,
+        "area": 15225,
+        "chars": 12
+      }
+    },
+    "spacings": {
+      "2": {
+        "count": 17,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "5": {
+        "count": 39,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 302,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 80,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 152,
+        "area": 0,
+        "chars": 0
+      },
+      "14": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "15": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 618,
+        "area": 0,
+        "chars": 0
+      },
+      "18": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 38,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 185,
+        "area": 0,
+        "chars": 0
+      },
+      "25": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "28": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "29": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "30": {
+        "count": 15,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 32,
+        "area": 0,
+        "chars": 0
+      },
+      "38": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 10,
+        "area": 0,
+        "chars": 0
+      },
+      "44": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "45": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "47": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 17,
+        "area": 0,
+        "chars": 0
+      },
+      "50": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "51": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "58": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "60": {
+        "count": 7,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "68": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "72": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "74": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 17,
+        "area": 0,
+        "chars": 0
+      },
+      "117": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "124": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "139": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "155": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgba(35, 30, 21, 0)": {
+        "count": 5,
+        "area": 34693.96875,
+        "chars": 48
+      },
+      "rgb(255, 224, 27)": {
+        "count": 21,
+        "area": 206988.0546875,
+        "chars": 237
+      },
+      "rgb(35, 30, 21)": {
+        "count": 5,
+        "area": 27770.1875,
+        "chars": 48
+      },
+      "rgb(36, 28, 21)": {
+        "count": 3,
+        "area": 24640,
+        "chars": 27
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 187,
+        "area": 6743448.176269531,
+        "chars": 2307
+      },
+      "3px": {
+        "count": 14,
+        "area": 57903.62890625,
+        "chars": 71
+      },
+      "26px": {
+        "count": 41,
+        "area": 355508.2109375,
+        "chars": 684
+      },
+      "40px": {
+        "count": 3,
+        "area": 49392,
+        "chars": 48
+      },
+      "30px": {
+        "count": 4,
+        "area": 30628,
+        "chars": 104
+      },
+      "32px": {
+        "count": 9,
+        "area": 55999,
+        "chars": 165
+      },
+      "16px": {
+        "count": 102,
+        "area": 4424968.177677155,
+        "chars": 0
+      },
+      "24px": {
+        "count": 8,
+        "area": 26989.875,
+        "chars": 208
+      },
+      "4px": {
+        "count": 2,
+        "area": 512,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(0, 78, 86)": {
+        "count": 74,
+        "area": 6548998.582519531,
+        "chars": 633
+      },
+      "rgb(255, 255, 255)": {
+        "count": 23,
+        "area": 169892.625,
+        "chars": 522
+      },
+      "rgb(35, 30, 21)": {
+        "count": 163,
+        "area": 593607.43359375,
+        "chars": 2360
+      },
+      "rgb(64, 59, 59)": {
+        "count": 6,
+        "area": 7370.25,
+        "chars": 72
+      },
+      "rgb(0, 0, 0)": {
+        "count": 104,
+        "area": 4425480.177677155,
+        "chars": 0
+      }
+    },
+    "headingSizes": {
+      "64px": {
+        "count": 1,
+        "area": 147450,
+        "chars": 21
+      },
+      "40px": {
+        "count": 6,
+        "area": 273180.625,
+        "chars": 235
+      },
+      "23px": {
+        "count": 4,
+        "area": 41100,
+        "chars": 84
+      },
+      "48px": {
+        "count": 2,
+        "area": 122928.75,
+        "chars": 47
+      },
+      "16px": {
+        "count": 15,
+        "area": 82279.875,
+        "chars": 111
+      },
+      "38.4px": {
+        "count": 4,
+        "area": 153939.451171875,
+        "chars": 153
+      },
+      "17px": {
+        "count": 8,
+        "area": 89005.5,
+        "chars": 168
+      },
+      "28px": {
+        "count": 13,
+        "area": 514750.05517578125,
+        "chars": 785
+      },
+      "46.08px": {
+        "count": 1,
+        "area": 30079.656005859375,
+        "chars": 26
+      },
+      "36px": {
+        "count": 1,
+        "area": 48153.984375,
+        "chars": 21
+      },
+      "29.25px": {
+        "count": 4,
+        "area": 77717.25,
+        "chars": 153
+      },
+      "37.44px": {
+        "count": 1,
+        "area": 24821.0625,
+        "chars": 26
+      }
+    },
+    "headingFamilies": {
+      "\"Means Web\", Georgia, Times, \"Times New Roman\", serif": {
+        "count": 33,
+        "area": 1393020.8342285156,
+        "chars": 1467
+      },
+      "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif": {
+        "count": 27,
+        "area": 212385.375,
+        "chars": 363
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 60,
+        "area": 1605406.2092285156,
+        "chars": 1830
+      }
+    },
+    "pageBg": "rgb(255, 255, 255)",
+    "elementCount": 8401,
+    "sampled": 2371,
+    "structure": {
+      "sectionCount": 9,
+      "sectionDepth": 0,
+      "sectionHeights": [
+        720,
+        1368,
+        195,
+        234,
+        380,
+        644,
+        805,
+        324,
+        176
+      ],
+      "contentWidths": {
+        "520": 1,
+        "570": 1,
+        "600": 1,
+        "630": 8,
+        "640": 4,
+        "680": 2,
+        "690": 1,
+        "720": 1,
+        "730": 3,
+        "810": 1,
+        "830": 7,
+        "850": 2,
+        "960": 1,
+        "1170": 1,
+        "1200": 1,
+        "1220": 1,
+        "1230": 1,
+        "1240": 3,
+        "1280": 17,
+        "1300": 3,
+        "1410": 1
+      },
+      "sectionRhythm": {
+        "40": 2,
+        "64": 2,
+        "80": 8,
+        "117": 2
+      },
+      "gridColumns": {},
+      "transitions": {
+        "0.2s cubic-bezier(0, 0, 0, 1)": 1,
+        "0.15s ease": 188,
+        "0.15s ease-in-out": 7,
+        "0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7)": 18,
+        "0.3s ease": 1,
+        "0.3s ease-in-out": 4,
+        "0.32s ease": 4,
+        "0.2s ease": 36,
+        "0.1s ease": 1
+      },
+      "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 9,
+        "bleed": 8,
+        "gridded": 1,
+        "mediaLed": 2,
+        "charsMedian": 1259
+      },
+      "hero": {
+        "heightRatio": 0.8,
+        "headingSize": 64,
+        "align": "center",
+        "ctas": 1,
+        "ctaLevel": 0,
+        "ctasFilled": 1,
+        "media": 2,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 68,
+        "position": "sticky",
+        "links": 185,
+        "overflowed": false
+      }
+    },
+    "backgrounds": {
+      "layers": {},
+      "effects": {
+        "mask-image|linear-gradient": {
+          "count": 4,
+          "area": 374883.375
+        }
+      },
+      "scanned": 2749,
+      "elementsWithImage": 0
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 2749
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 2826
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 2826
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": null
+}

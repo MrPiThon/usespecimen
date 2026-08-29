@@ -132,8 +132,6 @@ components:
     border: '{colors.border}'
   link:
     padding: '4px 20px 4px 0px'
-    active:
-      color: 'var(--sk-button-color-active, rgb(0, 0, 0))'
     focus:
       outlineColor: '#0071e3'
     focus-visible:
@@ -149,6 +147,7 @@ provenance:
   clusterVersion: 17
   screenshot: './source.webp'
 ---
+
 
 
 
@@ -258,6 +257,7 @@ animates. A single curve governs essentially the whole page.
 
 **What this file does not constrain:** page composition, section order, or
 content. It gives you a narrow measure against wide imagery, and one timing.
+
 
 
 

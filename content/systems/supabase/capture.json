@@ -1,0 +1,4027 @@
+{
+  "capturedAt": "2026-08-29T04:53:45.969Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://supabase.com/",
+    "title": "Supabase | The Postgres Development Platform",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 7747,
+    "elementCount": 23229,
+    "sampled": 2083,
+    "sampleRatio": 0.09
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 17,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#fdfdfd",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#030303",
+        "weightShare": 0.1595,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f6f5fd",
+        "weightShare": 0.0092,
+        "variants": [
+          "#f7f7f7",
+          "#f9f9f9",
+          "#fafafa"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#696969",
+        "weightShare": 0.6742,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#0c0f24",
+        "weightShare": 0.0595,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 3
+      },
+      "primaryForeground": {
+        "hex": "#fefefe",
+        "weightShare": 0.119,
+        "variants": []
+      },
+      "border": {
+        "hex": "#e9e9e9",
+        "weightShare": 0.691,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f6f5fd",
+          "deltaL": 0.022,
+          "areaShare": 0.0092
+        },
+        {
+          "name": "surface-2",
+          "hex": "#f8f3ef",
+          "deltaL": 0.028,
+          "areaShare": 0.0052
+        },
+        {
+          "name": "surface-3",
+          "hex": "#eeeeee",
+          "deltaL": 0.044,
+          "areaShare": 0.0078
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#030303",
+          "contrast": 20.3,
+          "charShare": 0.1595
+        },
+        {
+          "name": "text-2",
+          "hex": "#696969",
+          "contrast": 5.42,
+          "charShare": 0.6742
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 149
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 21
+      },
+      {
+        "hex": "#0c0f24",
+        "role": "primary",
+        "hue": "purple",
+        "lightness": 0.179,
+        "chroma": 0.043,
+        "count": 3
+      },
+      {
+        "hex": "#f6f5fd",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.973,
+        "chroma": 0.011,
+        "count": 12
+      },
+      {
+        "hex": "#eeeeee",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.951,
+        "chroma": 0,
+        "count": 30
+      },
+      {
+        "hex": "#002533",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.247,
+        "chroma": 0.048,
+        "count": 2
+      },
+      {
+        "hex": "#1a2dcc",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.424,
+        "chroma": 0.237,
+        "count": 2
+      },
+      {
+        "hex": "#f8f3ef",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.967,
+        "chroma": 0.008,
+        "count": 6
+      },
+      {
+        "hex": "#72e3ad",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.835,
+        "chroma": 0.13,
+        "count": 3
+      },
+      {
+        "hex": "#a9f1ca",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.9,
+        "chroma": 0.09,
+        "count": 2
+      },
+      {
+        "hex": "#030303",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.1,
+        "chroma": 0,
+        "count": 118
+      },
+      {
+        "hex": "#be93e4",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.733,
+        "chroma": 0.123,
+        "count": 3
+      },
+      {
+        "hex": "#d1d1d1",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.86,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#15593b",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.414,
+        "chroma": 0.084,
+        "count": 30
+      },
+      {
+        "hex": "#e9e9e9",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.934,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#464646",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.394,
+        "chroma": 0,
+        "count": 31
+      },
+      {
+        "hex": "#696969",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.521,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#3ecf8e",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.762,
+        "chroma": 0.154,
+        "count": 80
+      },
+      {
+        "hex": "#00482f",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.355,
+        "chroma": 0.078,
+        "count": 56
+      },
+      {
+        "hex": "#3fcf8e",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.763,
+        "chroma": 0.154,
+        "count": 2
+      },
+      {
+        "hex": "#a0a0a0",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.706,
+        "chroma": 0,
+        "count": 48
+      },
+      {
+        "hex": "#6b35dc",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.504,
+        "chroma": 0.233,
+        "count": 12
+      },
+      {
+        "hex": "#95e6b8",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.86,
+        "chroma": 0.103,
+        "count": 45
+      },
+      {
+        "hex": "#d9d9d9",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.884,
+        "chroma": 0,
+        "count": 42
+      }
+    ],
+    "semantic": {
+      "success": {
+        "hex": "#3fcf8e",
+        "occurrences": 4,
+        "paintsBorder": true
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 15,
+      "text": 14,
+      "border": 7,
+      "interactive": 6
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Inter",
+      "class": "sans",
+      "stack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+      "sizePx": 15,
+      "weight": 450,
+      "lineHeightPx": 22.5,
+      "lineHeightRatio": 1.5,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Manrope",
+      "class": "sans",
+      "stack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "largestPx": 34,
+      "weight": 600,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "Inter",
+        "class": "sans",
+        "stack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "family": "Manrope",
+        "class": "sans",
+        "stack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
+      },
+      {
+        "family": "Source Code Pro",
+        "class": "mono",
+        "stack": "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace"
+      },
+      {
+        "family": "Departure Mono Superbase",
+        "class": "mono",
+        "stack": "\"Departure Mono Superbase\", ui-monospace, monospace"
+      }
+    ],
+    "scale": [
+      {
+        "name": "2xs",
+        "px": 12,
+        "rem": 0.8,
+        "weightShare": 0.0617,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 13,
+        "rem": 0.867,
+        "weightShare": 0.0382,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 14,
+        "rem": 0.933,
+        "weightShare": 0.3861,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 15,
+        "rem": 1,
+        "weightShare": 0.4084,
+        "variants": [
+          15.2
+        ]
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "rem": 1.067,
+        "weightShare": 0.0198,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 18,
+        "rem": 1.2,
+        "weightShare": 0.0014,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 22,
+        "rem": 1.467,
+        "weightShare": 0.0508,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 25.6,
+        "rem": 1.707,
+        "weightShare": 0.0016,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 32,
+        "rem": 2.133,
+        "weightShare": 0.0016,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 34,
+        "rem": 2.267,
+        "weightShare": 0.0272,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 46,
+        "rem": 3.067,
+        "weightShare": 0.0032,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 11,
+    "roles": {
+      "body": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 450,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 29,
+        "chars": 3983
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 450,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 139,
+        "chars": 2713
+      },
+      "caption": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 450,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 20,
+        "chars": 434
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 450,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 9,
+        "chars": 66
+      },
+      "h2": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 144
+      },
+      "h3": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "34px",
+        "fontWeight": 600,
+        "lineHeight": 1.11,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 182
+      },
+      "h4": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 228
+      },
+      "h6": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 600,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 96
+      },
+      "button": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 450,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 72
+      },
+      "link": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 450,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 5,
+        "chars": 89
+      },
+      "mono": {
+        "fontFamily": "Source Code Pro",
+        "fontStack": "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace",
+        "class": "mono",
+        "fontSize": "13px",
+        "fontWeight": 500,
+        "lineHeight": 1.7,
+        "letterSpacing": null,
+        "elements": 117,
+        "chars": 405
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 34
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.883,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.707
+      },
+      {
+        "base": 6,
+        "share": 0.245
+      },
+      {
+        "base": 5,
+        "share": 0.088
+      },
+      {
+        "base": 4,
+        "share": 0.883
+      }
+    ],
+    "scale": [
+      1,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32
+    ],
+    "distinctValues": 22
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 39
+      },
+      {
+        "name": "md",
+        "px": 6,
+        "count": 28
+      },
+      {
+        "name": "lg",
+        "px": 8,
+        "count": 89
+      },
+      {
+        "name": "xl",
+        "px": 12,
+        "count": 17
+      },
+      {
+        "name": "2xl",
+        "px": 16,
+        "count": 18
+      }
+    ],
+    "button": "6px",
+    "pill": true,
+    "pillValue": "3.35544e+07px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 4
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 2
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.12) 0px 0px 0px 1px inset",
+        "count": 2
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "40px 24px",
+      "borderWidth": "1px",
+      "radius": "8px",
+      "gap": null,
+      "elements": 2,
+      "variants": 10,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "16px 0px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 3,
+      "variants": 5,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 9,
+    "measure": {
+      "px": 560,
+      "occurrences": 20,
+      "share": 0.274
+    },
+    "rhythm": {
+      "px": 96,
+      "occurrences": 5,
+      "share": 0.625
+    },
+    "composition": {
+      "total": 9,
+      "bleedCount": 9,
+      "griddedCount": 7,
+      "mediaLedCount": 2,
+      "charsMedian": 660,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.78
+    },
+    "columns": {
+      "count": 6,
+      "occurrences": 2
+    },
+    "hero": {
+      "heightRatio": 1.05,
+      "heightRatioMeasured": 1.05,
+      "headingSize": 16,
+      "align": "left",
+      "media": 5,
+      "fullBleed": true,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": {
+      "height": 65,
+      "position": "relative",
+      "links": 7,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.15s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 18,
+      "share": 0.72
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 4,
+    "pattern": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(oklch(0.1 0 34 / 0.0812725) 0px, oklab(0.1 0 0 / 0.0406362) 100%)",
+      "stops": [
+        {
+          "raw": "oklch(0.1 0 34 / 0.0812725)",
+          "hex": "#030303",
+          "alpha": 0.081,
+          "chroma": 0
+        },
+        {
+          "raw": "oklab(0.1 0 0 / 0.0406362)",
+          "hex": "#030303",
+          "alpha": 0.041,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.627
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(4px)",
+        "count": 1
+      },
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 1
+      },
+      "filter": {
+        "value": "drop-shadow(rgba(0, 0, 0, 0.05) 0px 1px 1px)",
+        "count": 15
+      }
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 6,
+      "readable": 2,
+      "blocked": 4,
+      "stateRules": 5
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#030303",
+        "bg": "#fdfdfd",
+        "ratio": 20.28,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#696969",
+        "bg": "#fdfdfd",
+        "ratio": 5.4,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#fefefe",
+        "bg": "#0c0f24",
+        "ratio": 18.77,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0c0f24",
+        "bg": "#fdfdfd",
+        "ratio": 18.61,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#e9e9e9",
+        "bg": "#fdfdfd",
+        "ratio": 1.19,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.19
+  },
+  "warnings": [
+    "link box metrics come from 2 elements out of 10 distinct shapes; thin evidence for a component token.",
+    "Found 5 state rules but none target elements on this page; the site's own CSS is likely among the 4 cross-origin sheets.",
+    "Strided sample: 2083 of 23229 elements. Weights are relative only."
+  ],
+  "supportsDark": true,
+  "dark": {
+    "source": {
+      "url": "https://supabase.com/",
+      "title": "Supabase | The Postgres Development Platform",
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "docHeight": 7747,
+      "elementCount": 23145,
+      "sampled": 2053,
+      "sampleRatio": 0.089
+    },
+    "harvestVersion": 8,
+    "clusterVersion": 17,
+    "tuning": {
+      "colorMerge": 0.045,
+      "chromatic": 0.03,
+      "gridThreshold": 0.75
+    },
+    "colors": {
+      "polarity": "dark",
+      "roles": {
+        "background": {
+          "hex": "#131413",
+          "weightShare": 1,
+          "variants": [],
+          "source": "pageBg"
+        },
+        "foreground": {
+          "hex": "#edefee",
+          "weightShare": 0.1624,
+          "variants": [
+            "#f8f3ef"
+          ]
+        },
+        "card": {
+          "hex": "#202121",
+          "weightShare": 0.0058,
+          "variants": [
+            "#232524"
+          ]
+        },
+        "mutedForeground": {
+          "hex": "#989a99",
+          "weightShare": 0.6972,
+          "variants": [
+            "#a1a1a1"
+          ]
+        },
+        "primary": {
+          "hex": "#0c0f24",
+          "weightShare": 0.0595,
+          "variants": [],
+          "source": "interactiveBg",
+          "occurrences": 3
+        },
+        "primaryForeground": {
+          "hex": "#edefee",
+          "weightShare": 0.2677,
+          "variants": []
+        },
+        "border": {
+          "hex": "#232524",
+          "weightShare": 0.7079,
+          "variants": [
+            "#202121"
+          ]
+        }
+      },
+      "ramps": {
+        "surface": [
+          {
+            "name": "surface-1",
+            "hex": "#17181f",
+            "deltaL": 0.02,
+            "areaShare": 0.005
+          },
+          {
+            "name": "surface-2",
+            "hex": "#0b0e0d",
+            "deltaL": 0.03,
+            "areaShare": 0.0052
+          },
+          {
+            "name": "surface-3",
+            "hex": "#202121",
+            "deltaL": 0.058,
+            "areaShare": 0.0058
+          }
+        ],
+        "text": [
+          {
+            "name": "text-1",
+            "hex": "#ffffff",
+            "contrast": 18.46,
+            "charShare": 0.0551
+          },
+          {
+            "name": "text-2",
+            "hex": "#edefee",
+            "contrast": 15.97,
+            "charShare": 0.1624
+          },
+          {
+            "name": "text-3",
+            "hex": "#989a99",
+            "contrast": 6.51,
+            "charShare": 0.6972
+          }
+        ]
+      },
+      "palette": [
+        {
+          "hex": "#181a19",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.215,
+          "chroma": 0.003,
+          "count": 83
+        },
+        {
+          "hex": "#131413",
+          "role": "background",
+          "hue": "neutral",
+          "lightness": 0.19,
+          "chroma": 0.003,
+          "count": 78
+        },
+        {
+          "hex": "#000000",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0,
+          "chroma": 0,
+          "count": 21
+        },
+        {
+          "hex": "#0c0f24",
+          "role": "primary",
+          "hue": "purple",
+          "lightness": 0.179,
+          "chroma": 0.043,
+          "count": 3
+        },
+        {
+          "hex": "#002533",
+          "role": null,
+          "hue": "teal",
+          "lightness": 0.247,
+          "chroma": 0.048,
+          "count": 2
+        },
+        {
+          "hex": "#1a2dcc",
+          "role": null,
+          "hue": "blue",
+          "lightness": 0.424,
+          "chroma": 0.237,
+          "count": 2
+        },
+        {
+          "hex": "#202121",
+          "role": "card",
+          "hue": "neutral",
+          "lightness": 0.248,
+          "chroma": 0.002,
+          "count": 30
+        },
+        {
+          "hex": "#0b0e0d",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.16,
+          "chroma": 0.005,
+          "count": 6
+        },
+        {
+          "hex": "#17181f",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.21,
+          "chroma": 0.015,
+          "count": 3
+        },
+        {
+          "hex": "#006239",
+          "role": null,
+          "hue": "green",
+          "lightness": 0.437,
+          "chroma": 0.104,
+          "count": 3
+        },
+        {
+          "hex": "#002918",
+          "role": null,
+          "hue": "green",
+          "lightness": 0.248,
+          "chroma": 0.056,
+          "count": 2
+        },
+        {
+          "hex": "#0c0f0e",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.165,
+          "chroma": 0.005,
+          "count": 3
+        },
+        {
+          "hex": "#edefee",
+          "role": "foreground",
+          "hue": "neutral",
+          "lightness": 0.95,
+          "chroma": 0.003,
+          "count": 120
+        },
+        {
+          "hex": "#7938b2",
+          "role": null,
+          "hue": "purple",
+          "lightness": 0.488,
+          "chroma": 0.186,
+          "count": 3
+        },
+        {
+          "hex": "#3b3c3b",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.355,
+          "chroma": 0.002,
+          "count": 6
+        },
+        {
+          "hex": "#ffffff",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 1,
+          "chroma": 0,
+          "count": 79
+        },
+        {
+          "hex": "#acadad",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.747,
+          "chroma": 0.001,
+          "count": 5
+        },
+        {
+          "hex": "#989a99",
+          "role": "mutedForeground",
+          "hue": "neutral",
+          "lightness": 0.684,
+          "chroma": 0.003,
+          "count": 6
+        },
+        {
+          "hex": "#bcbdbc",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.798,
+          "chroma": 0.003,
+          "count": 9
+        },
+        {
+          "hex": "#232524",
+          "role": "border",
+          "hue": "neutral",
+          "lightness": 0.261,
+          "chroma": 0.002,
+          "count": 126
+        },
+        {
+          "hex": "#95e6b8",
+          "role": null,
+          "hue": "green",
+          "lightness": 0.86,
+          "chroma": 0.103,
+          "count": 68
+        },
+        {
+          "hex": "#00bd58",
+          "role": null,
+          "hue": "green",
+          "lightness": 0.698,
+          "chroma": 0.192,
+          "count": 72
+        },
+        {
+          "hex": "#3ecf8e",
+          "role": null,
+          "hue": "green",
+          "lightness": 0.762,
+          "chroma": 0.154,
+          "count": 2
+        },
+        {
+          "hex": "#303231",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.314,
+          "chroma": 0.002,
+          "count": 42
+        }
+      ],
+      "semantic": {
+        "success": {
+          "hex": "#3ecf8e",
+          "occurrences": 7,
+          "paintsBorder": true
+        }
+      },
+      "accentRejected": [],
+      "clusterCounts": {
+        "bg": 15,
+        "text": 10,
+        "border": 6,
+        "interactive": 7
+      }
+    },
+    "typography": {
+      "body": {
+        "family": "Inter",
+        "class": "sans",
+        "stack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "sizePx": 15,
+        "weight": 450,
+        "lineHeightPx": 22.5,
+        "lineHeightRatio": 1.5,
+        "lineHeightInferred": false,
+        "letterSpacing": null
+      },
+      "heading": {
+        "family": "Manrope",
+        "class": "sans",
+        "stack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "largestPx": 34,
+        "weight": 600,
+        "sharesBodyFamily": false
+      },
+      "families": [
+        {
+          "family": "Inter",
+          "class": "sans",
+          "stack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "family": "Manrope",
+          "class": "sans",
+          "stack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
+        },
+        {
+          "family": "Source Code Pro",
+          "class": "mono",
+          "stack": "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace"
+        },
+        {
+          "family": "Departure Mono Superbase",
+          "class": "mono",
+          "stack": "\"Departure Mono Superbase\", ui-monospace, monospace"
+        }
+      ],
+      "scale": [
+        {
+          "name": "2xs",
+          "px": 12,
+          "rem": 0.8,
+          "weightShare": 0.0614,
+          "variants": []
+        },
+        {
+          "name": "xs",
+          "px": 13,
+          "rem": 0.867,
+          "weightShare": 0.0422,
+          "variants": []
+        },
+        {
+          "name": "sm",
+          "px": 14,
+          "rem": 0.933,
+          "weightShare": 0.3845,
+          "variants": []
+        },
+        {
+          "name": "base",
+          "px": 15,
+          "rem": 1,
+          "weightShare": 0.4067,
+          "variants": [
+            15.2
+          ]
+        },
+        {
+          "name": "lg",
+          "px": 16,
+          "rem": 1.067,
+          "weightShare": 0.0197,
+          "variants": []
+        },
+        {
+          "name": "xl",
+          "px": 18,
+          "rem": 1.2,
+          "weightShare": 0.0014,
+          "variants": []
+        },
+        {
+          "name": "2xl",
+          "px": 22,
+          "rem": 1.467,
+          "weightShare": 0.0506,
+          "variants": []
+        },
+        {
+          "name": "3xl",
+          "px": 25.6,
+          "rem": 1.707,
+          "weightShare": 0.0016,
+          "variants": []
+        },
+        {
+          "name": "4xl",
+          "px": 32,
+          "rem": 2.133,
+          "weightShare": 0.0016,
+          "variants": []
+        },
+        {
+          "name": "5xl",
+          "px": 34,
+          "rem": 2.267,
+          "weightShare": 0.027,
+          "variants": []
+        },
+        {
+          "name": "6xl",
+          "px": 46,
+          "rem": 3.067,
+          "weightShare": 0.0032,
+          "variants": []
+        }
+      ],
+      "scaleTruncated": false,
+      "distinctSizes": 11,
+      "roles": {
+        "body": {
+          "fontFamily": "Inter",
+          "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+          "class": "sans",
+          "fontSize": "15px",
+          "fontWeight": 450,
+          "lineHeight": 1.5,
+          "letterSpacing": null,
+          "elements": 29,
+          "chars": 3983
+        },
+        "body-sm": {
+          "fontFamily": "Inter",
+          "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+          "class": "sans",
+          "fontSize": "14px",
+          "fontWeight": 450,
+          "lineHeight": 1.43,
+          "letterSpacing": null,
+          "elements": 139,
+          "chars": 2713
+        },
+        "caption": {
+          "fontFamily": "Inter",
+          "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+          "class": "sans",
+          "fontSize": "12px",
+          "fontWeight": 450,
+          "lineHeight": 1.33,
+          "letterSpacing": null,
+          "elements": 20,
+          "chars": 434
+        },
+        "body-lg": {
+          "fontFamily": "Inter",
+          "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+          "class": "sans",
+          "fontSize": "16px",
+          "fontWeight": 450,
+          "lineHeight": 1.5,
+          "letterSpacing": null,
+          "elements": 9,
+          "chars": 66
+        },
+        "h2": {
+          "fontFamily": "Manrope",
+          "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "class": "sans",
+          "fontSize": "16px",
+          "fontWeight": 600,
+          "lineHeight": 1.5,
+          "letterSpacing": null,
+          "elements": 12,
+          "chars": 144
+        },
+        "h3": {
+          "fontFamily": "Manrope",
+          "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "class": "sans",
+          "fontSize": "34px",
+          "fontWeight": 600,
+          "lineHeight": 1.11,
+          "letterSpacing": null,
+          "elements": 8,
+          "chars": 182
+        },
+        "h4": {
+          "fontFamily": "Manrope",
+          "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "class": "sans",
+          "fontSize": "14px",
+          "fontWeight": 500,
+          "lineHeight": 1.43,
+          "letterSpacing": null,
+          "elements": 12,
+          "chars": 228
+        },
+        "h6": {
+          "fontFamily": "Manrope",
+          "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "class": "sans",
+          "fontSize": "15px",
+          "fontWeight": 600,
+          "lineHeight": 1.5,
+          "letterSpacing": null,
+          "elements": 12,
+          "chars": 96
+        },
+        "button": {
+          "fontFamily": "Inter",
+          "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+          "class": "sans",
+          "fontSize": "14px",
+          "fontWeight": 450,
+          "lineHeight": 1.43,
+          "letterSpacing": null,
+          "elements": 6,
+          "chars": 72
+        },
+        "link": {
+          "fontFamily": "Inter",
+          "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+          "class": "sans",
+          "fontSize": "12px",
+          "fontWeight": 450,
+          "lineHeight": 1.33,
+          "letterSpacing": null,
+          "elements": 5,
+          "chars": 89
+        },
+        "mono": {
+          "fontFamily": "Source Code Pro",
+          "fontStack": "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace",
+          "class": "mono",
+          "fontSize": "13px",
+          "fontWeight": 500,
+          "lineHeight": 1.7,
+          "letterSpacing": null,
+          "elements": 90,
+          "chars": 450
+        }
+      },
+      "rolesAvailable": true,
+      "distinctStyles": 34
+    },
+    "spacing": {
+      "base": 4,
+      "gridConfidence": 0.883,
+      "gridCandidates": [
+        {
+          "base": 8,
+          "share": 0.707
+        },
+        {
+          "base": 6,
+          "share": 0.245
+        },
+        {
+          "base": 5,
+          "share": 0.088
+        },
+        {
+          "base": 4,
+          "share": 0.883
+        }
+      ],
+      "scale": [
+        1,
+        4,
+        6,
+        8,
+        10,
+        12,
+        16,
+        20,
+        24,
+        32
+      ],
+      "distinctValues": 22
+    },
+    "stability": {
+      "deadBand": 0.05,
+      "notes": []
+    },
+    "rounded": {
+      "scale": [
+        {
+          "name": "sm",
+          "px": 4,
+          "count": 39
+        },
+        {
+          "name": "md",
+          "px": 6,
+          "count": 28
+        },
+        {
+          "name": "lg",
+          "px": 8,
+          "count": 89
+        },
+        {
+          "name": "xl",
+          "px": 12,
+          "count": 17
+        },
+        {
+          "name": "2xl",
+          "px": 16,
+          "count": 18
+        }
+      ],
+      "button": "6px",
+      "pill": true,
+      "pillValue": "3.35544e+07px",
+      "sharp": false
+    },
+    "elevation": {
+      "shadows": [
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "count": 4
+        },
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "count": 2
+        },
+        {
+          "value": "rgba(255, 255, 255, 0.12) 0px 0px 0px 1px inset",
+          "count": 2
+        }
+      ],
+      "flat": false
+    },
+    "components": {
+      "link": {
+        "padding": "40px 24px",
+        "borderWidth": "1px",
+        "radius": "8px",
+        "gap": null,
+        "elements": 2,
+        "variants": 10,
+        "dominantUnstyled": true
+      },
+      "button": {
+        "padding": "16px 0px",
+        "borderWidth": null,
+        "radius": null,
+        "gap": null,
+        "elements": 3,
+        "variants": 5,
+        "dominantUnstyled": false
+      }
+    },
+    "layout": {
+      "available": true,
+      "sectionsReliable": true,
+      "sections": 9,
+      "measure": {
+        "px": 560,
+        "occurrences": 20,
+        "share": 0.274
+      },
+      "rhythm": {
+        "px": 96,
+        "occurrences": 5,
+        "share": 0.625
+      },
+      "composition": {
+        "total": 9,
+        "bleedCount": 9,
+        "griddedCount": 7,
+        "mediaLedCount": 2,
+        "charsMedian": 660,
+        "sectionWidth": "full-bleed",
+        "sectionMedia": "text-led",
+        "sectionCopy": "dense",
+        "gridPrevalence": 0.78
+      },
+      "columns": {
+        "count": 6,
+        "occurrences": 2
+      },
+      "hero": {
+        "heightRatio": 1.05,
+        "heightRatioMeasured": 1.05,
+        "headingSize": 16,
+        "align": "left",
+        "media": 8,
+        "fullBleed": true,
+        "ctas": 0,
+        "ctasFilled": 0,
+        "ctaEvidence": "none"
+      },
+      "nav": {
+        "height": 65,
+        "position": "relative",
+        "links": 7,
+        "overflowed": false
+      },
+      "motion": {
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "occurrences": 18,
+        "share": 0.72
+      }
+    },
+    "backgrounds": {
+      "available": true,
+      "decorated": true,
+      "layerCount": 4,
+      "pattern": null,
+      "wash": {
+        "kind": "linear-gradient",
+        "value": "linear-gradient(oklch(0.95 0.001485 159 / 0.075125) 0px, oklch(0.215 0.0025 159) 100%)",
+        "stops": [
+          {
+            "raw": "oklch(0.95 0.001485 159 / 0.075125)",
+            "hex": "#eeefee",
+            "alpha": 0.075,
+            "chroma": 0.0015
+          },
+          {
+            "raw": "oklch(0.215 0.0025 159)",
+            "hex": "#181a19",
+            "alpha": 1,
+            "chroma": 0.0025
+          }
+        ],
+        "areaShare": 0.627
+      },
+      "effects": {
+        "backdropFilter": {
+          "value": "blur(4px)",
+          "count": 1
+        },
+        "mixBlendMode": null,
+        "maskImage": {
+          "value": "linear-gradient",
+          "count": 1
+        },
+        "filter": {
+          "value": "drop-shadow(rgba(0, 0, 0, 0.05) 0px 1px 1px)",
+          "count": 15
+        }
+      }
+    },
+    "states": {
+      "available": true,
+      "sheets": {
+        "total": 6,
+        "readable": 2,
+        "blocked": 4,
+        "stateRules": 5
+      },
+      "roles": {},
+      "declarations": 0
+    },
+    "audit": {
+      "pairs": [
+        {
+          "pair": "foreground/background",
+          "fg": "#edefee",
+          "bg": "#131413",
+          "ratio": 15.99,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": null,
+          "aa": true,
+          "aaa": true
+        },
+        {
+          "pair": "mutedForeground/background",
+          "fg": "#989a99",
+          "bg": "#131413",
+          "ratio": 6.52,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": null,
+          "aa": true,
+          "aaa": false
+        },
+        {
+          "pair": "primaryForeground/primary",
+          "fg": "#edefee",
+          "bg": "#0c0f24",
+          "ratio": 16.39,
+          "kind": "text",
+          "criterion": "1.4.3 Contrast (Minimum)",
+          "min": 4.5,
+          "note": "label sitting on the accent fill",
+          "aa": true,
+          "aaa": true
+        },
+        {
+          "pair": "primary/background",
+          "fg": "#0c0f24",
+          "bg": "#131413",
+          "ratio": 1.02,
+          "kind": "nonText",
+          "criterion": "1.4.11 Non-text Contrast",
+          "min": 3,
+          "note": "accent is a button fill, judged as a UI component",
+          "aa": false,
+          "aaa": null
+        },
+        {
+          "pair": "border/background",
+          "fg": "#232524",
+          "bg": "#131413",
+          "ratio": 1.2,
+          "kind": "nonText",
+          "criterion": "1.4.11 Non-text Contrast",
+          "min": 3,
+          "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+          "aa": false,
+          "aaa": null
+        }
+      ],
+      "failures": 2,
+      "textFailures": 0,
+      "minRatio": 1.02
+    },
+    "warnings": [
+      "link box metrics come from 2 elements out of 10 distinct shapes; thin evidence for a component token.",
+      "Found 5 state rules but none target elements on this page; the site's own CSS is likely among the 4 cross-origin sheets.",
+      "Strided sample: 2053 of 23145 elements. Weights are relative only."
+    ]
+  },
+  "harvest": {
+    "harvestVersion": 8,
+    "url": "https://supabase.com/",
+    "title": "Supabase | The Postgres Development Platform",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 7747,
+    "textColors": {
+      "rgb(0, 72, 47)": {
+        "count": 56,
+        "area": 17951.81640625,
+        "chars": 98
+      },
+      "rgb(0, 168, 90)": {
+        "count": 6,
+        "area": 947.318359375,
+        "chars": 6
+      },
+      "rgb(62, 207, 142)": {
+        "count": 75,
+        "area": 12613.21728515625,
+        "chars": 75
+      },
+      "rgb(109, 217, 168)": {
+        "count": 16,
+        "area": 2801.82666015625,
+        "chars": 16
+      },
+      "rgb(0, 26, 16)": {
+        "count": 2,
+        "area": 5635.28125,
+        "chars": 38
+      },
+      "oklch(0.1 0 34)": {
+        "count": 118,
+        "area": 470693.2126464844,
+        "chars": 1692
+      },
+      "oklch(0.394455 0 34)": {
+        "count": 7,
+        "area": 28738.21875,
+        "chars": 126
+      },
+      "rgb(63, 207, 142)": {
+        "count": 5,
+        "area": 71849.1875,
+        "chars": 63
+      },
+      "oklch(0.52065 0 34)": {
+        "count": 170,
+        "area": 1851267.69921875,
+        "chars": 7151
+      },
+      "rgb(160, 160, 160)": {
+        "count": 48,
+        "area": 8760.84375,
+        "chars": 54
+      },
+      "rgb(21, 89, 59)": {
+        "count": 30,
+        "area": 32622.46875,
+        "chars": 228
+      },
+      "rgb(82, 82, 82)": {
+        "count": 24,
+        "area": 9550.546875,
+        "chars": 63
+      },
+      "rgb(107, 53, 220)": {
+        "count": 12,
+        "area": 7957.59375,
+        "chars": 45
+      },
+      "rgb(180, 83, 9)": {
+        "count": 3,
+        "area": 1989,
+        "chars": 15
+      },
+      "rgb(255, 255, 255)": {
+        "count": 5,
+        "area": 169120,
+        "chars": 408
+      },
+      "rgba(255, 255, 255, 0.65)": {
+        "count": 5,
+        "area": 17180,
+        "chars": 176
+      },
+      "rgba(255, 255, 255, 0.6)": {
+        "count": 4,
+        "area": 42384,
+        "chars": 275
+      },
+      "rgba(255, 255, 255, 0.7)": {
+        "count": 2,
+        "area": 17920,
+        "chars": 32
+      },
+      "rgb(149, 230, 184)": {
+        "count": 45,
+        "area": 7281.22265625,
+        "chars": 45
+      }
+    },
+    "bgColors": {
+      "oklch(0.995 0 34)": {
+        "count": 87,
+        "area": 4510072.15625,
+        "chars": 72
+      },
+      "oklab(0.966905 0.00362429 0.00666207 / 0.85)": {
+        "count": 3,
+        "area": 1872,
+        "chars": 0
+      },
+      "rgb(248, 243, 239)": {
+        "count": 3,
+        "area": 49325.109375,
+        "chars": 0
+      },
+      "oklch(1 0 34)": {
+        "count": 62,
+        "area": 4791329.34765625,
+        "chars": 57
+      },
+      "oklch(0.52065 0 34)": {
+        "count": 6,
+        "area": 164.16187500953674,
+        "chars": 0
+      },
+      "rgb(169, 241, 202)": {
+        "count": 2,
+        "area": 1920,
+        "chars": 0
+      },
+      "rgb(63, 207, 142)": {
+        "count": 2,
+        "area": 72,
+        "chars": 0
+      },
+      "oklch(0.1 0 34 / 0.0812725)": {
+        "count": 3,
+        "area": 192,
+        "chars": 0
+      },
+      "oklab(0.52065 0 0 / 0.3)": {
+        "count": 6,
+        "area": 600,
+        "chars": 0
+      },
+      "oklab(0.52065 0 0 / 0.1)": {
+        "count": 30,
+        "area": 76804,
+        "chars": 0
+      },
+      "oklab(0.57843 0.0338314 -0.232163 / 0.05)": {
+        "count": 3,
+        "area": 49149,
+        "chars": 0
+      },
+      "rgb(190, 147, 228)": {
+        "count": 3,
+        "area": 960,
+        "chars": 0
+      },
+      "oklch(0.1 0 34 / 0.0268156)": {
+        "count": 3,
+        "area": 1920,
+        "chars": 0
+      },
+      "oklab(0.1 0 0 / 0.0187709)": {
+        "count": 3,
+        "area": 10292,
+        "chars": 0
+      },
+      "rgb(12, 15, 36)": {
+        "count": 3,
+        "area": 104448,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 21,
+        "area": 111648,
+        "chars": 0
+      },
+      "rgb(114, 227, 173)": {
+        "count": 3,
+        "area": 17401.625,
+        "chars": 0
+      },
+      "oklch(0 0 0 / 0.015)": {
+        "count": 3,
+        "area": 29749.59375,
+        "chars": 0
+      },
+      "rgb(0, 37, 51)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      },
+      "color(display-p3 0.118 0.176 0.769)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "oklch(0.1 0 34 / 0.146418)": {
+        "count": 42,
+        "area": 120042.875,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0)": {
+        "count": 4,
+        "area": 4174.21875,
+        "chars": 0
+      },
+      "oklch(0.1 0 34 / 0.0812725)": {
+        "count": 123,
+        "area": 5592830.65625,
+        "chars": 93
+      },
+      "oklab(0.52065 0 0 / 0.7)": {
+        "count": 2,
+        "area": 4447.22265625,
+        "chars": 0
+      },
+      "rgb(63, 207, 142)": {
+        "count": 2,
+        "area": 1920,
+        "chars": 0
+      },
+      "oklch(0.1 0 34)": {
+        "count": 3,
+        "area": 12636.75,
+        "chars": 36
+      },
+      "oklab(0.52065 0 0 / 0.1)": {
+        "count": 3,
+        "area": 69120,
+        "chars": 0
+      },
+      "oklab(0.685565 -0.144466 0.057858 / 0.75)": {
+        "count": 3,
+        "area": 17401.625,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 195,
+        "area": 32864.6982421875,
+        "chars": 195
+      },
+      "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 259,
+        "area": 1826717.01171875,
+        "chars": 8673
+      },
+      "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 62,
+        "area": 856801.2907714844,
+        "chars": 1333
+      },
+      "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace": {
+        "count": 117,
+        "area": 60880.453125,
+        "chars": 405
+      }
+    },
+    "fontSizes": {
+      "15.2px": {
+        "count": 78,
+        "area": 13702.86328125,
+        "chars": 78
+      },
+      "15px": {
+        "count": 125,
+        "area": 880059.6108398438,
+        "chars": 4254
+      },
+      "14px": {
+        "count": 236,
+        "area": 969723.3999023438,
+        "chars": 4095
+      },
+      "12px": {
+        "count": 27,
+        "area": 107332.078125,
+        "chars": 654
+      },
+      "46px": {
+        "count": 2,
+        "area": 57776,
+        "chars": 34
+      },
+      "16px": {
+        "count": 21,
+        "area": 29011.5,
+        "chars": 210
+      },
+      "22px": {
+        "count": 10,
+        "area": 221455.83276367188,
+        "chars": 539
+      },
+      "34px": {
+        "count": 14,
+        "area": 416700.60888671875,
+        "chars": 288
+      },
+      "13px": {
+        "count": 117,
+        "area": 60880.453125,
+        "chars": 405
+      },
+      "32px": {
+        "count": 1,
+        "area": 11033,
+        "chars": 17
+      },
+      "18px": {
+        "count": 1,
+        "area": 2519.671875,
+        "chars": 15
+      },
+      "25.6px": {
+        "count": 1,
+        "area": 7068.43505859375,
+        "chars": 17
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 195,
+        "area": 32864.6982421875,
+        "chars": 195
+      },
+      "450": {
+        "count": 224,
+        "area": 1867585.359375,
+        "chars": 8650
+      },
+      "500": {
+        "count": 169,
+        "area": 301943.94921875,
+        "chars": 1089
+      },
+      "600": {
+        "count": 45,
+        "area": 574869.4470214844,
+        "chars": 672
+      }
+    },
+    "lineHeights": {
+      "15.2px": {
+        "count": 78,
+        "area": 13702.86328125,
+        "chars": 78
+      },
+      "20px": {
+        "count": 192,
+        "area": 855981.8125,
+        "chars": 3425
+      },
+      "22.5px": {
+        "count": 44,
+        "area": 859304.8828125,
+        "chars": 4124
+      },
+      "19.25px": {
+        "count": 2,
+        "area": 1474.73046875,
+        "chars": 11
+      },
+      "16px": {
+        "count": 28,
+        "area": 90561.328125,
+        "chars": 565
+      },
+      "46px": {
+        "count": 2,
+        "area": 57776,
+        "chars": 34
+      },
+      "24px": {
+        "count": 21,
+        "area": 29011.5,
+        "chars": 210
+      },
+      "29.3333px": {
+        "count": 8,
+        "area": 85935.83276367188,
+        "chars": 157
+      },
+      "37.7778px": {
+        "count": 13,
+        "area": 404445.20263671875,
+        "chars": 271
+      },
+      "22.1px": {
+        "count": 117,
+        "area": 60880.453125,
+        "chars": 405
+      },
+      "19.5px": {
+        "count": 2,
+        "area": 21840,
+        "chars": 131
+      },
+      "30.25px": {
+        "count": 2,
+        "area": 135520,
+        "chars": 382
+      },
+      "22.75px": {
+        "count": 3,
+        "area": 108790.5,
+        "chars": 630
+      },
+      "40.8px": {
+        "count": 1,
+        "area": 12255.40625,
+        "chars": 17
+      },
+      "15px": {
+        "count": 78,
+        "area": 13351.19677734375,
+        "chars": 78
+      },
+      "38.4px": {
+        "count": 1,
+        "area": 11033,
+        "chars": 17
+      },
+      "14px": {
+        "count": 39,
+        "area": 5810.63818359375,
+        "chars": 39
+      },
+      "25.2px": {
+        "count": 1,
+        "area": 2519.671875,
+        "chars": 15
+      },
+      "30.72px": {
+        "count": 1,
+        "area": 7068.43505859375,
+        "chars": 17
+      }
+    },
+    "letterSpacings": {
+      "-0.16px": {
+        "count": 3,
+        "area": 10172.609375,
+        "chars": 45
+      }
+    },
+    "typeStyles": {
+      "text|15.2px|400|15.2px|normal|\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 78,
+        "area": 13702.86328125,
+        "chars": 78
+      },
+      "text|15px|500|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 5635.28125,
+        "chars": 38
+      },
+      "link|15px|500|22.5px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 3,
+        "area": 8730.703125,
+        "chars": 45
+      },
+      "text|14px|500|19.25px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 1474.73046875,
+        "chars": 11
+      },
+      "text|12px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 20,
+        "area": 53263.484375,
+        "chars": 434
+      },
+      "text|46px|500|46px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 2,
+        "area": 57776,
+        "chars": 34
+      },
+      "text|14px|450|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 139,
+        "area": 657464.46875,
+        "chars": 2713
+      },
+      "h2|16px|600|24px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 12,
+        "area": 29002.5,
+        "chars": 144
+      },
+      "text|22px|450|29.3333px|-0.16px|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 7652.9375,
+        "chars": 30
+      },
+      "h3|34px|600|37.7778px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 8,
+        "area": 335820.19873046875,
+        "chars": 182
+      },
+      "button|14px|450|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 6,
+        "area": 25518.625,
+        "chars": 72
+      },
+      "text|34px|600|37.7778px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 4,
+        "area": 55709.16015625,
+        "chars": 72
+      },
+      "text|13px|500|22.1px|normal|\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace": {
+        "count": 117,
+        "area": 60880.453125,
+        "chars": 405
+      },
+      "link|12px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 5,
+        "area": 32228.59375,
+        "chars": 89
+      },
+      "h4|14px|500|20px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 12,
+        "area": 75720,
+        "chars": 228
+      },
+      "link|14px|450|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 3,
+        "area": 12832.5,
+        "chars": 63
+      },
+      "text|14px|500|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 30,
+        "area": 78810.9375,
+        "chars": 311
+      },
+      "text|12px|450|19.5px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 21840,
+        "chars": 131
+      },
+      "text|22px|450|30.25px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 2,
+        "area": 135520,
+        "chars": 382
+      },
+      "text|15px|450|22.5px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 29,
+        "area": 804876.328125,
+        "chars": 3983
+      },
+      "text|14px|450|22.75px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 3,
+        "area": 108790.5,
+        "chars": 630
+      },
+      "text|14px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 3301,
+        "chars": 28
+      },
+      "text|34px|600|40.8px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 12255.40625,
+        "chars": 17
+      },
+      "text|16px|450|24px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 9,
+        "area": 9,
+        "chars": 66
+      },
+      "h6|15px|600|22.5px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 12,
+        "area": 45697.8515625,
+        "chars": 96
+      },
+      "text|15px|400|15px|normal|\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 78,
+        "area": 13351.19677734375,
+        "chars": 78
+      },
+      "text|32px|600|38.4px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 11033,
+        "chars": 17
+      },
+      "text|14px|400|14px|normal|\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 39,
+        "area": 5810.63818359375,
+        "chars": 39
+      },
+      "text|34px|500|37.7778px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 12915.84375,
+        "chars": 17
+      },
+      "text|18px|450|25.2px|-0.16px|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 1,
+        "area": 2519.671875,
+        "chars": 15
+      },
+      "h3|22px|600|29.3333px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 4,
+        "area": 66239.4033203125,
+        "chars": 91
+      },
+      "text|22px|600|29.3333px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 2,
+        "area": 12043.491943359375,
+        "chars": 36
+      },
+      "text|15px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 1,
+        "area": 1768.25,
+        "chars": 14
+      },
+      "text|25.6px|600|30.72px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 7068.43505859375,
+        "chars": 17
+      }
+    },
+    "states": {},
+    "componentBoxes": {
+      "link|4px 10px|1px|6px|normal": {
+        "count": 2,
+        "area": 5103.3125,
+        "chars": 0
+      },
+      "button|4px|1px|6px|normal": {
+        "count": 1,
+        "area": 624,
+        "chars": 0
+      },
+      "link|0px|0px|0px|4px": {
+        "count": 1,
+        "area": 2910.234375,
+        "chars": 15
+      },
+      "link|8px|0px|6px|12px": {
+        "count": 1,
+        "area": 1769.109375,
+        "chars": 0
+      },
+      "link|0px|0px|12px|20px": {
+        "count": 3,
+        "area": 315600,
+        "chars": 0
+      },
+      "button|8px 32px|1px|3.35544e+07px|normal": {
+        "count": 2,
+        "area": 11098.375,
+        "chars": 24
+      },
+      "button|16px 0px|0px|0px|normal": {
+        "count": 3,
+        "area": 16260,
+        "chars": 0
+      },
+      "link|6px 12px|1px|3.35544e+07px|6px": {
+        "count": 1,
+        "area": 4769.53125,
+        "chars": 19
+      },
+      "link|0px|1px|8px|normal": {
+        "count": 2,
+        "area": 403718.5625,
+        "chars": 0
+      },
+      "link|40px 24px|1px|8px|normal": {
+        "count": 2,
+        "area": 93628,
+        "chars": 0
+      },
+      "link|0px|0px|0px|normal": {
+        "count": 42,
+        "area": 682319.4375,
+        "chars": 53
+      },
+      "button|32px 22px|0px|8px|32px": {
+        "count": 2,
+        "area": 72960,
+        "chars": 0
+      },
+      "link|8px 12px|1px|6px|normal": {
+        "count": 2,
+        "area": 10360.4375,
+        "chars": 0
+      },
+      "link|8px 16px|1px|6px|normal": {
+        "count": 2,
+        "area": 11071.65625,
+        "chars": 0
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 2,
+        "area": 2937.125,
+        "chars": 0
+      }
+    },
+    "styleSheets": {
+      "total": 6,
+      "readable": 2,
+      "blocked": 4,
+      "stateRules": 5
+    },
+    "radii": {
+      "6px": {
+        "count": 28,
+        "area": 162074.1875,
+        "chars": 0
+      },
+      "12px": {
+        "count": 17,
+        "area": 2087956,
+        "chars": 0
+      },
+      "11px": {
+        "count": 6,
+        "area": 729534,
+        "chars": 0
+      },
+      "8px": {
+        "count": 89,
+        "area": 2994587.25,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 77,
+        "area": 89829.35328125954,
+        "chars": 129
+      },
+      "4px": {
+        "count": 39,
+        "area": 89976,
+        "chars": 0
+      },
+      "16px": {
+        "count": 18,
+        "area": 1190065.78125,
+        "chars": 0
+      },
+      "7px": {
+        "count": 3,
+        "area": 106080,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px": {
+        "count": 4,
+        "area": 4174.21875,
+        "chars": 0
+      },
+      "rgba(255, 255, 255, 0.12) 0px 0px 0px 1px inset": {
+        "count": 2,
+        "area": 72960,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px": {
+        "count": 2,
+        "area": 1568,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "1": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "2": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 58,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 60,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 378,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 73,
+        "area": 0,
+        "chars": 0
+      },
+      "14": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 147,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 43,
+        "area": 0,
+        "chars": 0
+      },
+      "22": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 88,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 28,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 19,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "90": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 13,
+        "area": 0,
+        "chars": 0
+      },
+      "97": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "120": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "128": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "oklch(0.995 0 34)": {
+        "count": 18,
+        "area": 81973.15625,
+        "chars": 72
+      },
+      "oklab(0.966905 0.00362429 0.00666207 / 0.85)": {
+        "count": 3,
+        "area": 1872,
+        "chars": 0
+      },
+      "oklch(1 0 34)": {
+        "count": 15,
+        "area": 1308158.34375,
+        "chars": 57
+      },
+      "rgb(12, 15, 36)": {
+        "count": 3,
+        "area": 104448,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 3,
+        "area": 104448,
+        "chars": 0
+      },
+      "rgb(114, 227, 173)": {
+        "count": 3,
+        "area": 17401.625,
+        "chars": 0
+      },
+      "rgb(0, 37, 51)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      },
+      "color(display-p3 0.118 0.176 0.769)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      }
+    },
+    "interactiveRadius": {
+      "6px": {
+        "count": 22,
+        "area": 82999.484375,
+        "chars": 0
+      },
+      "0px": {
+        "count": 140,
+        "area": 2050110.375,
+        "chars": 140
+      },
+      "12px": {
+        "count": 9,
+        "area": 846756,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 9,
+        "area": 39827.21875,
+        "chars": 129
+      },
+      "8px": {
+        "count": 22,
+        "area": 1638681.75,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "oklch(0.1 0 34)": {
+        "count": 164,
+        "area": 4542500.8125,
+        "chars": 72
+      },
+      "oklch(0.52065 0 34)": {
+        "count": 23,
+        "area": 57428,
+        "chars": 0
+      },
+      "rgb(0, 72, 47)": {
+        "count": 3,
+        "area": 8730.703125,
+        "chars": 45
+      },
+      "oklch(0.394455 0 34)": {
+        "count": 10,
+        "area": 31795.3125,
+        "chars": 120
+      },
+      "rgba(255, 255, 255, 0.7)": {
+        "count": 2,
+        "area": 17920,
+        "chars": 32
+      }
+    },
+    "headingSizes": {
+      "16px": {
+        "count": 12,
+        "area": 29002.5,
+        "chars": 144
+      },
+      "34px": {
+        "count": 8,
+        "area": 335820.19873046875,
+        "chars": 182
+      },
+      "14px": {
+        "count": 12,
+        "area": 75720,
+        "chars": 228
+      },
+      "15px": {
+        "count": 12,
+        "area": 45697.8515625,
+        "chars": 96
+      },
+      "22px": {
+        "count": 4,
+        "area": 66239.4033203125,
+        "chars": 91
+      }
+    },
+    "headingFamilies": {
+      "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 48,
+        "area": 552479.9536132812,
+        "chars": 741
+      }
+    },
+    "headingWeights": {
+      "500": {
+        "count": 12,
+        "area": 75720,
+        "chars": 228
+      },
+      "600": {
+        "count": 36,
+        "area": 476759.95361328125,
+        "chars": 513
+      }
+    },
+    "pageBg": "oklch(0.995 0 34)",
+    "elementCount": 23229,
+    "sampled": 2083,
+    "structure": {
+      "sectionCount": 9,
+      "sectionDepth": 0,
+      "sectionHeights": [
+        949,
+        270,
+        862,
+        696,
+        898,
+        812,
+        909,
+        373,
+        375
+      ],
+      "contentWidths": {
+        "510": 4,
+        "520": 1,
+        "540": 14,
+        "560": 20,
+        "640": 1,
+        "720": 1,
+        "750": 1,
+        "770": 2,
+        "1070": 1,
+        "1090": 15,
+        "1280": 13
+      },
+      "sectionRhythm": {
+        "40": 1,
+        "96": 5,
+        "128": 2
+      },
+      "gridColumns": {
+        "2": 1,
+        "4": 1,
+        "5": 1,
+        "6": 2
+      },
+      "transitions": {
+        "0.2s cubic-bezier(0, 0, 0.2, 1)": 7,
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 18
+      },
+      "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 9,
+        "bleed": 9,
+        "gridded": 7,
+        "mediaLed": 2,
+        "charsMedian": 660
+      },
+      "hero": {
+        "heightRatio": 1.05,
+        "headingSize": 16,
+        "align": "left",
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 5,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 65,
+        "position": "relative",
+        "links": 7,
+        "overflowed": false
+      }
+    },
+    "backgrounds": {
+      "layers": {
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(oklch(0.1 0 34 / 0.0812725) 0px, oklab(0.1 0 0 / 0.0406362) 100%)": {
+          "count": 7,
+          "area": 846400
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(to top, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%, oklch(1 0 34) 85%)": {
+          "count": 1,
+          "area": 105966
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(253, 73, 168) 0%, rgb(253, 41, 128) 10%, rgb(252, 26, 88) 20%, rgb(250, 31, 65) 30%, rgb(250, 39, 51) 40%, rgb(251, 61, 38) 50%, rgb(252, 84, 31) 60%, rgb(254, 106, 30) 70%, rgb(254, 119, 29) 80%, rgb(255, 134, 27) 90%, rgb(255, 143, 27) 100%)": {
+          "count": 1,
+          "area": 360960
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(to left bottom, color(display-p3 0.275 0.306 0.8) 0%, color(display-p3 0.118 0.176 0.769) 100%)": {
+          "count": 1,
+          "area": 36480
+        }
+      },
+      "effects": {
+        "backdrop-filter|blur(4px)": {
+          "count": 1,
+          "area": 93600
+        },
+        "filter|url(\"#filter5_bd_467_4905\")": {
+          "count": 1,
+          "area": 23336.234769355506
+        },
+        "filter|blur(0px)": {
+          "count": 1,
+          "area": 197120
+        },
+        "mask-image|linear-gradient": {
+          "count": 1,
+          "area": 892800
+        },
+        "filter|drop-shadow(rgba(0, 0, 0, 0.05) 0px 1px 1px)": {
+          "count": 15,
+          "area": 1004400
+        },
+        "mask-image|radial-gradient": {
+          "count": 1,
+          "area": 267851.25
+        }
+      },
+      "scanned": 7743,
+      "elementsWithImage": 10
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 7743
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 7743
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 7743
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": {
+    "harvestVersion": 8,
+    "url": "https://supabase.com/",
+    "title": "Supabase | The Postgres Development Platform",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 7747,
+    "textColors": {
+      "rgb(0, 189, 88)": {
+        "count": 72,
+        "area": 12451.1494140625,
+        "chars": 72
+      },
+      "rgb(62, 207, 142)": {
+        "count": 41,
+        "area": 110144.51806640625,
+        "chars": 330
+      },
+      "rgb(149, 230, 184)": {
+        "count": 65,
+        "area": 10803.06591796875,
+        "chars": 65
+      },
+      "rgb(225, 252, 215)": {
+        "count": 29,
+        "area": 5058.9501953125,
+        "chars": 29
+      },
+      "rgb(248, 243, 239)": {
+        "count": 2,
+        "area": 5635.28125,
+        "chars": 38
+      },
+      "rgb(148, 230, 183)": {
+        "count": 3,
+        "area": 8730.703125,
+        "chars": 45
+      },
+      "oklch(0.95 0.00275 159)": {
+        "count": 118,
+        "area": 470693.2126464844,
+        "chars": 1692
+      },
+      "oklch(0.798 0.00275 159)": {
+        "count": 7,
+        "area": 28738.21875,
+        "chars": 126
+      },
+      "oklch(0.684 0.00275 159)": {
+        "count": 170,
+        "area": 1851267.69921875,
+        "chars": 7151
+      },
+      "rgb(255, 255, 255)": {
+        "count": 79,
+        "area": 197047.1552734375,
+        "chars": 587
+      },
+      "rgb(189, 164, 255)": {
+        "count": 9,
+        "area": 4774.875,
+        "chars": 33
+      },
+      "rgba(255, 255, 255, 0.65)": {
+        "count": 5,
+        "area": 17180,
+        "chars": 176
+      },
+      "rgba(255, 255, 255, 0.6)": {
+        "count": 4,
+        "area": 42384,
+        "chars": 275
+      },
+      "rgba(255, 255, 255, 0.7)": {
+        "count": 2,
+        "area": 17920,
+        "chars": 32
+      }
+    },
+    "bgColors": {
+      "oklch(0.215 0.0025 159)": {
+        "count": 74,
+        "area": 4847783.87890625,
+        "chars": 57
+      },
+      "oklab(0.159931 -0.00527729 0.000593349 / 0.85)": {
+        "count": 3,
+        "area": 1872,
+        "chars": 0
+      },
+      "rgb(11, 14, 13)": {
+        "count": 3,
+        "area": 49325.109375,
+        "chars": 0
+      },
+      "oklch(0.19 0.0025 159)": {
+        "count": 75,
+        "area": 4453617.625,
+        "chars": 72
+      },
+      "oklch(0.684 0.00275 159)": {
+        "count": 6,
+        "area": 164.16187500953674,
+        "chars": 0
+      },
+      "rgb(0, 41, 24)": {
+        "count": 2,
+        "area": 1920,
+        "chars": 0
+      },
+      "rgb(62, 207, 142)": {
+        "count": 2,
+        "area": 72,
+        "chars": 0
+      },
+      "oklch(0.95 0.001485 159 / 0.075125)": {
+        "count": 3,
+        "area": 192,
+        "chars": 0
+      },
+      "oklab(0.684 -0.00256735 0.000985512 / 0.3)": {
+        "count": 6,
+        "area": 600,
+        "chars": 0
+      },
+      "oklab(0.684 -0.00256735 0.000985512 / 0.1)": {
+        "count": 27,
+        "area": 57604,
+        "chars": 0
+      },
+      "oklab(0.57843 0.0338314 -0.232163 / 0.05)": {
+        "count": 3,
+        "area": 49149,
+        "chars": 0
+      },
+      "rgb(121, 56, 178)": {
+        "count": 3,
+        "area": 960,
+        "chars": 0
+      },
+      "oklch(0.95 0.00275 159 / 0.0328947)": {
+        "count": 6,
+        "area": 21120,
+        "chars": 0
+      },
+      "oklab(0.95 -0.00256735 0.000985512 / 0.0230263)": {
+        "count": 3,
+        "area": 10292,
+        "chars": 0
+      },
+      "rgb(12, 15, 36)": {
+        "count": 3,
+        "area": 104448,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 21,
+        "area": 111648,
+        "chars": 0
+      },
+      "rgb(0, 98, 57)": {
+        "count": 3,
+        "area": 17401.625,
+        "chars": 0
+      },
+      "oklch(0 0 0 / 0.12)": {
+        "count": 3,
+        "area": 29749.59375,
+        "chars": 0
+      },
+      "rgb(0, 37, 51)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      },
+      "color(display-p3 0.118 0.176 0.769)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "oklch(0.95 0.001375 159 / 0.134738)": {
+        "count": 42,
+        "area": 120042.875,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0)": {
+        "count": 4,
+        "area": 4174.21875,
+        "chars": 0
+      },
+      "oklch(0.95 0.001485 159 / 0.075125)": {
+        "count": 123,
+        "area": 5592830.65625,
+        "chars": 93
+      },
+      "oklab(0.684 -0.00256735 0.000985512 / 0.7)": {
+        "count": 2,
+        "area": 4447.22265625,
+        "chars": 0
+      },
+      "rgb(62, 207, 142)": {
+        "count": 2,
+        "area": 1920,
+        "chars": 0
+      },
+      "oklch(0.95 0.00275 159)": {
+        "count": 3,
+        "area": 12636.75,
+        "chars": 36
+      },
+      "oklab(0.684 -0.00256735 0.000985512 / 0.1)": {
+        "count": 3,
+        "area": 69120,
+        "chars": 0
+      },
+      "oklab(0.7623 -0.144565 0.0545538 / 0.3)": {
+        "count": 3,
+        "area": 17401.625,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 195,
+        "area": 32864.6982421875,
+        "chars": 195
+      },
+      "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 259,
+        "area": 1826717.01171875,
+        "chars": 8673
+      },
+      "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 62,
+        "area": 856801.2907714844,
+        "chars": 1333
+      },
+      "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace": {
+        "count": 90,
+        "area": 66445.828125,
+        "chars": 450
+      }
+    },
+    "fontSizes": {
+      "15.2px": {
+        "count": 78,
+        "area": 13702.86328125,
+        "chars": 78
+      },
+      "15px": {
+        "count": 125,
+        "area": 880059.6108398438,
+        "chars": 4254
+      },
+      "14px": {
+        "count": 236,
+        "area": 969723.3999023438,
+        "chars": 4095
+      },
+      "12px": {
+        "count": 27,
+        "area": 107332.078125,
+        "chars": 654
+      },
+      "46px": {
+        "count": 2,
+        "area": 57776,
+        "chars": 34
+      },
+      "16px": {
+        "count": 21,
+        "area": 29011.5,
+        "chars": 210
+      },
+      "22px": {
+        "count": 10,
+        "area": 221455.83276367188,
+        "chars": 539
+      },
+      "34px": {
+        "count": 14,
+        "area": 416700.60888671875,
+        "chars": 288
+      },
+      "13px": {
+        "count": 90,
+        "area": 66445.828125,
+        "chars": 450
+      },
+      "32px": {
+        "count": 1,
+        "area": 11033,
+        "chars": 17
+      },
+      "18px": {
+        "count": 1,
+        "area": 2519.671875,
+        "chars": 15
+      },
+      "25.6px": {
+        "count": 1,
+        "area": 7068.43505859375,
+        "chars": 17
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 195,
+        "area": 32864.6982421875,
+        "chars": 195
+      },
+      "450": {
+        "count": 224,
+        "area": 1867585.359375,
+        "chars": 8650
+      },
+      "500": {
+        "count": 142,
+        "area": 307509.32421875,
+        "chars": 1134
+      },
+      "600": {
+        "count": 45,
+        "area": 574869.4470214844,
+        "chars": 672
+      }
+    },
+    "lineHeights": {
+      "15.2px": {
+        "count": 78,
+        "area": 13702.86328125,
+        "chars": 78
+      },
+      "20px": {
+        "count": 192,
+        "area": 855981.8125,
+        "chars": 3425
+      },
+      "22.5px": {
+        "count": 44,
+        "area": 859304.8828125,
+        "chars": 4124
+      },
+      "19.25px": {
+        "count": 2,
+        "area": 1474.73046875,
+        "chars": 11
+      },
+      "16px": {
+        "count": 28,
+        "area": 90561.328125,
+        "chars": 565
+      },
+      "46px": {
+        "count": 2,
+        "area": 57776,
+        "chars": 34
+      },
+      "24px": {
+        "count": 21,
+        "area": 29011.5,
+        "chars": 210
+      },
+      "29.3333px": {
+        "count": 8,
+        "area": 85935.83276367188,
+        "chars": 157
+      },
+      "37.7778px": {
+        "count": 13,
+        "area": 404445.20263671875,
+        "chars": 271
+      },
+      "22.1px": {
+        "count": 90,
+        "area": 66445.828125,
+        "chars": 450
+      },
+      "19.5px": {
+        "count": 2,
+        "area": 21840,
+        "chars": 131
+      },
+      "30.25px": {
+        "count": 2,
+        "area": 135520,
+        "chars": 382
+      },
+      "22.75px": {
+        "count": 3,
+        "area": 108790.5,
+        "chars": 630
+      },
+      "40.8px": {
+        "count": 1,
+        "area": 12255.40625,
+        "chars": 17
+      },
+      "15px": {
+        "count": 78,
+        "area": 13351.19677734375,
+        "chars": 78
+      },
+      "38.4px": {
+        "count": 1,
+        "area": 11033,
+        "chars": 17
+      },
+      "14px": {
+        "count": 39,
+        "area": 5810.63818359375,
+        "chars": 39
+      },
+      "25.2px": {
+        "count": 1,
+        "area": 2519.671875,
+        "chars": 15
+      },
+      "30.72px": {
+        "count": 1,
+        "area": 7068.43505859375,
+        "chars": 17
+      }
+    },
+    "letterSpacings": {
+      "-0.16px": {
+        "count": 3,
+        "area": 10172.609375,
+        "chars": 45
+      }
+    },
+    "typeStyles": {
+      "text|15.2px|400|15.2px|normal|\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 78,
+        "area": 13702.86328125,
+        "chars": 78
+      },
+      "text|15px|500|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 5635.28125,
+        "chars": 38
+      },
+      "link|15px|500|22.5px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 3,
+        "area": 8730.703125,
+        "chars": 45
+      },
+      "text|14px|500|19.25px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 1474.73046875,
+        "chars": 11
+      },
+      "text|12px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 20,
+        "area": 53263.484375,
+        "chars": 434
+      },
+      "text|46px|500|46px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 2,
+        "area": 57776,
+        "chars": 34
+      },
+      "text|14px|450|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 139,
+        "area": 657464.46875,
+        "chars": 2713
+      },
+      "h2|16px|600|24px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 12,
+        "area": 29002.5,
+        "chars": 144
+      },
+      "text|22px|450|29.3333px|-0.16px|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 7652.9375,
+        "chars": 30
+      },
+      "h3|34px|600|37.7778px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 8,
+        "area": 335820.19873046875,
+        "chars": 182
+      },
+      "button|14px|450|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 6,
+        "area": 25518.625,
+        "chars": 72
+      },
+      "text|34px|600|37.7778px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 4,
+        "area": 55709.16015625,
+        "chars": 72
+      },
+      "text|13px|500|22.1px|normal|\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace": {
+        "count": 90,
+        "area": 66445.828125,
+        "chars": 450
+      },
+      "link|12px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 5,
+        "area": 32228.59375,
+        "chars": 89
+      },
+      "h4|14px|500|20px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 12,
+        "area": 75720,
+        "chars": 228
+      },
+      "link|14px|450|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 3,
+        "area": 12832.5,
+        "chars": 63
+      },
+      "text|14px|500|20px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 30,
+        "area": 78810.9375,
+        "chars": 311
+      },
+      "text|12px|450|19.5px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 21840,
+        "chars": 131
+      },
+      "text|22px|450|30.25px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 2,
+        "area": 135520,
+        "chars": 382
+      },
+      "text|15px|450|22.5px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 29,
+        "area": 804876.328125,
+        "chars": 3983
+      },
+      "text|14px|450|22.75px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 3,
+        "area": 108790.5,
+        "chars": 630
+      },
+      "text|14px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 2,
+        "area": 3301,
+        "chars": 28
+      },
+      "text|34px|600|40.8px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 12255.40625,
+        "chars": 17
+      },
+      "text|16px|450|24px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 9,
+        "area": 9,
+        "chars": 66
+      },
+      "h6|15px|600|22.5px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 12,
+        "area": 45697.8515625,
+        "chars": 96
+      },
+      "text|15px|400|15px|normal|\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 78,
+        "area": 13351.19677734375,
+        "chars": 78
+      },
+      "text|32px|600|38.4px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 11033,
+        "chars": 17
+      },
+      "text|14px|400|14px|normal|\"Departure Mono Superbase\", ui-monospace, monospace": {
+        "count": 39,
+        "area": 5810.63818359375,
+        "chars": 39
+      },
+      "text|34px|500|37.7778px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 12915.84375,
+        "chars": 17
+      },
+      "text|18px|450|25.2px|-0.16px|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 1,
+        "area": 2519.671875,
+        "chars": 15
+      },
+      "h3|22px|600|29.3333px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 4,
+        "area": 66239.4033203125,
+        "chars": 91
+      },
+      "text|22px|600|29.3333px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 2,
+        "area": 12043.491943359375,
+        "chars": 36
+      },
+      "text|15px|450|16px|normal|Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif": {
+        "count": 1,
+        "area": 1768.25,
+        "chars": 14
+      },
+      "text|25.6px|600|30.72px|normal|Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 1,
+        "area": 7068.43505859375,
+        "chars": 17
+      }
+    },
+    "states": {},
+    "componentBoxes": {
+      "link|4px 10px|1px|6px|normal": {
+        "count": 2,
+        "area": 5103.3125,
+        "chars": 0
+      },
+      "button|4px|1px|6px|normal": {
+        "count": 1,
+        "area": 624,
+        "chars": 0
+      },
+      "link|0px|0px|0px|4px": {
+        "count": 1,
+        "area": 2910.234375,
+        "chars": 15
+      },
+      "link|8px|0px|6px|12px": {
+        "count": 1,
+        "area": 1769.109375,
+        "chars": 0
+      },
+      "link|0px|0px|12px|20px": {
+        "count": 3,
+        "area": 315600,
+        "chars": 0
+      },
+      "button|8px 32px|1px|3.35544e+07px|normal": {
+        "count": 2,
+        "area": 11098.375,
+        "chars": 24
+      },
+      "button|16px 0px|0px|0px|normal": {
+        "count": 3,
+        "area": 16260,
+        "chars": 0
+      },
+      "link|6px 12px|1px|3.35544e+07px|6px": {
+        "count": 1,
+        "area": 4769.53125,
+        "chars": 19
+      },
+      "link|0px|1px|8px|normal": {
+        "count": 2,
+        "area": 403718.5625,
+        "chars": 0
+      },
+      "link|40px 24px|1px|8px|normal": {
+        "count": 2,
+        "area": 93628,
+        "chars": 0
+      },
+      "link|0px|0px|0px|normal": {
+        "count": 42,
+        "area": 682319.4375,
+        "chars": 53
+      },
+      "button|32px 22px|0px|8px|32px": {
+        "count": 2,
+        "area": 72960,
+        "chars": 0
+      },
+      "link|8px 12px|1px|6px|normal": {
+        "count": 2,
+        "area": 10360.4375,
+        "chars": 0
+      },
+      "link|8px 16px|1px|6px|normal": {
+        "count": 2,
+        "area": 11071.65625,
+        "chars": 0
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 2,
+        "area": 2937.125,
+        "chars": 0
+      }
+    },
+    "styleSheets": {
+      "total": 6,
+      "readable": 2,
+      "blocked": 4,
+      "stateRules": 5
+    },
+    "radii": {
+      "6px": {
+        "count": 28,
+        "area": 162074.1875,
+        "chars": 0
+      },
+      "12px": {
+        "count": 17,
+        "area": 2087956,
+        "chars": 0
+      },
+      "11px": {
+        "count": 6,
+        "area": 729534,
+        "chars": 0
+      },
+      "8px": {
+        "count": 89,
+        "area": 2994587.25,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 77,
+        "area": 89829.35328125954,
+        "chars": 129
+      },
+      "4px": {
+        "count": 39,
+        "area": 89976,
+        "chars": 0
+      },
+      "16px": {
+        "count": 18,
+        "area": 1190065.78125,
+        "chars": 0
+      },
+      "7px": {
+        "count": 3,
+        "area": 106080,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px": {
+        "count": 4,
+        "area": 4174.21875,
+        "chars": 0
+      },
+      "rgba(255, 255, 255, 0.12) 0px 0px 0px 1px inset": {
+        "count": 2,
+        "area": 72960,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px": {
+        "count": 2,
+        "area": 1568,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "1": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "2": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 58,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 60,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 378,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 73,
+        "area": 0,
+        "chars": 0
+      },
+      "14": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 147,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 43,
+        "area": 0,
+        "chars": 0
+      },
+      "22": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 88,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 28,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 19,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "90": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 13,
+        "area": 0,
+        "chars": 0
+      },
+      "97": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "120": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "128": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "oklch(0.215 0.0025 159)": {
+        "count": 27,
+        "area": 1364612.875,
+        "chars": 57
+      },
+      "oklab(0.159931 -0.00527729 0.000593349 / 0.85)": {
+        "count": 3,
+        "area": 1872,
+        "chars": 0
+      },
+      "oklch(0.19 0.0025 159)": {
+        "count": 6,
+        "area": 25518.625,
+        "chars": 72
+      },
+      "rgb(12, 15, 36)": {
+        "count": 3,
+        "area": 104448,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 3,
+        "area": 104448,
+        "chars": 0
+      },
+      "rgb(0, 98, 57)": {
+        "count": 3,
+        "area": 17401.625,
+        "chars": 0
+      },
+      "rgb(0, 37, 51)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      },
+      "color(display-p3 0.118 0.176 0.769)": {
+        "count": 2,
+        "area": 67968,
+        "chars": 0
+      }
+    },
+    "interactiveRadius": {
+      "6px": {
+        "count": 22,
+        "area": 82999.484375,
+        "chars": 0
+      },
+      "0px": {
+        "count": 140,
+        "area": 2050110.375,
+        "chars": 140
+      },
+      "12px": {
+        "count": 9,
+        "area": 846756,
+        "chars": 0
+      },
+      "3.35544e+07px": {
+        "count": 9,
+        "area": 39827.21875,
+        "chars": 129
+      },
+      "8px": {
+        "count": 22,
+        "area": 1638681.75,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "oklch(0.95 0.00275 159)": {
+        "count": 164,
+        "area": 4542500.8125,
+        "chars": 72
+      },
+      "oklch(0.684 0.00275 159)": {
+        "count": 23,
+        "area": 57428,
+        "chars": 0
+      },
+      "rgb(148, 230, 183)": {
+        "count": 3,
+        "area": 8730.703125,
+        "chars": 45
+      },
+      "oklch(0.798 0.00275 159)": {
+        "count": 10,
+        "area": 31795.3125,
+        "chars": 120
+      },
+      "rgba(255, 255, 255, 0.7)": {
+        "count": 2,
+        "area": 17920,
+        "chars": 32
+      }
+    },
+    "headingSizes": {
+      "16px": {
+        "count": 12,
+        "area": 29002.5,
+        "chars": 144
+      },
+      "34px": {
+        "count": 8,
+        "area": 335820.19873046875,
+        "chars": 182
+      },
+      "14px": {
+        "count": 12,
+        "area": 75720,
+        "chars": 228
+      },
+      "15px": {
+        "count": 12,
+        "area": 45697.8515625,
+        "chars": 96
+      },
+      "22px": {
+        "count": 4,
+        "area": 66239.4033203125,
+        "chars": 91
+      }
+    },
+    "headingFamilies": {
+      "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif": {
+        "count": 48,
+        "area": 552479.9536132812,
+        "chars": 741
+      }
+    },
+    "headingWeights": {
+      "500": {
+        "count": 12,
+        "area": 75720,
+        "chars": 228
+      },
+      "600": {
+        "count": 36,
+        "area": 476759.95361328125,
+        "chars": 513
+      }
+    },
+    "pageBg": "oklch(0.19 0.0025 159)",
+    "elementCount": 23145,
+    "sampled": 2053,
+    "structure": {
+      "sectionCount": 9,
+      "sectionDepth": 0,
+      "sectionHeights": [
+        949,
+        270,
+        862,
+        696,
+        898,
+        812,
+        909,
+        373,
+        375
+      ],
+      "contentWidths": {
+        "510": 4,
+        "520": 1,
+        "540": 14,
+        "560": 20,
+        "640": 1,
+        "720": 1,
+        "750": 1,
+        "770": 2,
+        "1070": 1,
+        "1090": 15,
+        "1280": 13
+      },
+      "sectionRhythm": {
+        "40": 1,
+        "96": 5,
+        "128": 2
+      },
+      "gridColumns": {
+        "2": 1,
+        "4": 1,
+        "5": 1,
+        "6": 2
+      },
+      "transitions": {
+        "0.2s cubic-bezier(0, 0, 0.2, 1)": 7,
+        "0.15s cubic-bezier(0.4, 0, 0.2, 1)": 18
+      },
+      "sectionsReliable": true,
+      "sectionComposition": {
+        "total": 9,
+        "bleed": 9,
+        "gridded": 7,
+        "mediaLed": 2,
+        "charsMedian": 660
+      },
+      "hero": {
+        "heightRatio": 1.05,
+        "headingSize": 16,
+        "align": "left",
+        "ctas": 0,
+        "ctaLevel": -1,
+        "ctasFilled": 0,
+        "media": 8,
+        "fullBleed": true
+      },
+      "nav": {
+        "height": 65,
+        "position": "relative",
+        "links": 7,
+        "overflowed": false
+      }
+    },
+    "backgrounds": {
+      "layers": {
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(oklch(0.95 0.001485 159 / 0.075125) 0px, oklch(0.215 0.0025 159) 100%)": {
+          "count": 7,
+          "area": 846400
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(to top, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%, oklch(0.215 0.0025 159) 85%)": {
+          "count": 1,
+          "area": 105966
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(rgb(253, 73, 168) 0%, rgb(253, 41, 128) 10%, rgb(252, 26, 88) 20%, rgb(250, 31, 65) 30%, rgb(250, 39, 51) 40%, rgb(251, 61, 38) 50%, rgb(252, 84, 31) 60%, rgb(254, 106, 30) 70%, rgb(254, 119, 29) 80%, rgb(255, 134, 27) 90%, rgb(255, 143, 27) 100%)": {
+          "count": 1,
+          "area": 360960
+        },
+        "linear-gradient|auto|repeat|0% 0%|linear-gradient(to left bottom, color(display-p3 0.275 0.306 0.8) 0%, color(display-p3 0.118 0.176 0.769) 100%)": {
+          "count": 1,
+          "area": 36480
+        }
+      },
+      "effects": {
+        "backdrop-filter|blur(4px)": {
+          "count": 1,
+          "area": 93600
+        },
+        "filter|url(\"#filter5_bd_467_4905\")": {
+          "count": 1,
+          "area": 23336.234769355506
+        },
+        "filter|blur(0px)": {
+          "count": 1,
+          "area": 197120
+        },
+        "mask-image|linear-gradient": {
+          "count": 1,
+          "area": 892800
+        },
+        "filter|drop-shadow(rgba(0, 0, 0, 0.05) 0px 1px 1px)": {
+          "count": 15,
+          "area": 1004400
+        },
+        "mask-image|radial-gradient": {
+          "count": 1,
+          "area": 267851.25
+        }
+      },
+      "scanned": 7715,
+      "elementsWithImage": 10
+    },
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 7715
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 7715
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 7715
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  }
+}

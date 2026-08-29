@@ -196,6 +196,7 @@ provenance:
 
 
 
+
 ## Overview
 
 A deep aubergine on white — a purple dark enough that it reads as ink until you
@@ -291,6 +292,7 @@ transition measured in this registry, and it is deliberate.
 
 **What this file does not constrain:** page structure, section order, or
 content. It gives you a colour discipline, a type pairing and a tempo.
+
 
 
 

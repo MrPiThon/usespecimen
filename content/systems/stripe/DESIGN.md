@@ -188,6 +188,7 @@ provenance:
 
 
 
+
 ## Overview
 
 A restraint-first aesthetic for financial and developer products. Almost the
@@ -297,6 +298,7 @@ hard at the end, which is what gives the page its settled feel.
 
 **What this file does not constrain:** section order, page composition, imagery,
 or copy. It gives you an ink, a grid, a measure and a tempo — not a page.
+
 
 
 

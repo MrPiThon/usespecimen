@@ -183,6 +183,7 @@ provenance:
 
 
 
+
 ## Overview
 
 A sage-tinted canvas, generous type, and an unhurried rhythm that comes partly
@@ -279,6 +280,7 @@ no exceptions.
 
 **What this file does not constrain:** what you write or how the page is
 organised. It constrains the width, the voice and the tempo.
+
 
 
 

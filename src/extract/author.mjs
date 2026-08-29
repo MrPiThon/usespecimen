@@ -214,7 +214,13 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     ...(Object.keys(backgrounds).length ? { backgrounds } : {}),
     components: {
       button: {
-        background: '{colors.primary}',
+        // Same rule as the foreground below, which was guarded while this was
+        // not: reference only what the extractor observed. Pentagram has no
+        // chromatic accent anywhere on the page — correctly, it is a black and
+        // white system — and an unconditional {colors.primary} produced a
+        // dangling reference that failed its own build. A button with no fill
+        // is the truthful token for a system that fills no buttons.
+        ...(colors.primary ? { background: '{colors.primary}' } : {}),
         // Only reference a foreground the extractor observed; a dangling
         // reference would (correctly) fail the build.
         ...(colors.primaryForeground ? { foreground: '{colors.primaryForeground}' } : {}),

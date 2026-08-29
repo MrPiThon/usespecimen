@@ -185,6 +185,7 @@ provenance:
 
 
 
+
 ## Overview
 
 Documentation-first, and tuned for long reading rather than for a landing page.
@@ -270,6 +271,7 @@ animates — 100% agreement.
 
 **What this file does not constrain:** page structure and navigation, which were
 not measurable here. Colour, type, shape, grid and motion stand.
+
 
 
 
