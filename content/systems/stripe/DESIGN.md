@@ -15,6 +15,7 @@ colors:
   text-1: '#061b31'
   text-2: '#50617a'
   text-3: '#64748d'
+  success: '#00d66f'
 typography:
   fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
   headingFamily: 'sohne-var, "SF Pro Display", sans-serif'
@@ -23,18 +24,18 @@ typography:
   weight: 300
   headingWeight: 300
   scale:
-    4xs: '8px'
     3xs: '9px'
     2xs: '10px'
-    xs: '12px'
-    sm: '14px'
+    xs: '11px'
+    sm: '12px'
     base: '16px'
     lg: '18px'
     xl: '20px'
     2xl: '22px'
     3xl: '26px'
-    4xl: '32px'
-    5xl: '48px'
+    4xl: '28px'
+    5xl: '32px'
+    6xl: '48px'
   roles:
     body:
       fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
@@ -42,6 +43,16 @@ typography:
       fontWeight: 300
       lineHeight: 1.4
     body-sm:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '12px'
+      fontWeight: 300
+      lineHeight: 1.45
+    caption:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '11px'
+      fontWeight: 300
+      lineHeight: 1.4
+    caption-sm:
       fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
       fontSize: '10px'
       fontWeight: 300
@@ -54,16 +65,22 @@ typography:
       lineHeight: 1.4
     lead:
       fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '20px'
+      fontWeight: 300
+      lineHeight: 1.2
+      letterSpacing: '-0.2px'
+    lead-lg:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
       fontSize: '22px'
       fontWeight: 300
       lineHeight: 1.1
       letterSpacing: '-0.22px'
     h2:
       fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
-      fontSize: '32px'
+      fontSize: '22px'
       fontWeight: 300
-      lineHeight: 1.1
-      letterSpacing: '-0.64px'
+      lineHeight: 1.2
+      letterSpacing: '-0.22px'
     h3:
       fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
       fontSize: '22px'
@@ -86,12 +103,12 @@ typography:
       fontWeight: 300
       lineHeight: 1.25
 rounded:
-  sm: '4px'
-  md: '5px'
-  lg: '6px'
-  xl: '8px'
+  sm: '1px'
+  md: '4px'
+  lg: '5px'
+  xl: '6px'
   button: '4px'
-  pill: '9999px'
+  pill: '100%'
 spacing:
   base: '4px'
   s1: '4px'
@@ -115,10 +132,10 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-29T00:12:07.814Z'
-  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
+  capturedAt: '2026-08-29T00:16:40.277Z'
+  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 3
-  clusterVersion: 8
+  clusterVersion: 9
 ---
 
 ## Overview

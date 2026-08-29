@@ -16,6 +16,17 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { harvestFn } from './extract/harvest.mjs';
 import { cluster, summarize } from './extract/cluster.mjs';
+import { mergeHarvests } from './extract/merge.mjs';
+import { parseColor, deltaE } from './extract/color.mjs';
+
+// Widest first: the primary capture supplies the scalars and the stylesheet
+// data, and the widest layout is the canonical one.
+const VIEWPORTS = [
+  { width: 1440, height: 900 },
+  { width: 768, height: 1024 },
+  { width: 390, height: 844 },
+];
+const SCHEMES = ['light', 'dark'];
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const pkg = JSON.parse(await readFile(join(HERE, '..', 'package.json'), 'utf8'));
@@ -35,7 +46,8 @@ Commands:
 Options:
   --out <dir>        Output directory (default: out)
   --slug <name>      Override the derived directory name (single url only)
-  --viewport <WxH>   Viewport for the crawl (default: 1440x900)
+  --viewport <WxH>   Single viewport instead of the 1440/768/390 sweep
+  --light-only       Skip the dark-scheme pass
   --wait <ms>        Settle time after load (default: 1500)
   --timeout <ms>     Navigation timeout (default: 45000)
   --write            cluster: update the source file's tokens in place
@@ -84,13 +96,61 @@ function parseViewport(value) {
  *  whole product rests on, so it leads. The raw harvest rides along last: it is
  *  what lets `cluster` re-run offline without another crawl, and what a future
  *  drift check diffs against. */
-const record = ({ tokens, harvest, method, capturedAt }) => ({
+const record = ({ tokens, harvest, method, capturedAt, dark, darkHarvest, supportsDark }) => ({
   capturedAt,
   tool: `${pkg.name}@${pkg.version}`,
   method,
   ...tokens,
+  // A second palette, not a second file. Null when the site ignores
+  // prefers-color-scheme, which is itself a fact worth recording.
+  supportsDark: supportsDark ?? false,
+  dark: dark ?? null,
   harvest,
+  darkHarvest: darkHarvest ?? null,
 });
+
+/**
+ * One page load per colour scheme, then a sweep of viewport widths within it.
+ * Reloading per scheme rather than toggling after load, because a site that
+ * picks its theme in JS at boot will not react to emulateMedia afterwards.
+ */
+async function captureScheme(browser, url, scheme, opts) {
+  const context = await browser.newContext({
+    colorScheme: scheme,
+    viewport: opts.viewports[0],
+  });
+  try {
+    const page = await context.newPage();
+    // domcontentloaded then a best-effort wait for quiet: `networkidle` alone
+    // never settles on sites that long-poll, and timing out there would lose a
+    // page we could have harvested perfectly well.
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: opts.timeout });
+    await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+    await page.waitForTimeout(opts.wait);
+
+    const captures = [];
+    for (const viewport of opts.viewports) {
+      await page.setViewportSize(viewport);
+      // Media queries and resize observers need a beat before the computed
+      // styles are worth reading.
+      await page.waitForTimeout(500);
+      captures.push({ viewport, harvest: await page.evaluate(harvestFn) });
+    }
+    return mergeHarvests(captures);
+  } finally {
+    await context.close();
+  }
+}
+
+/** Did the dark pass actually produce a different page? */
+function differentScheme(light, dark) {
+  const a = parseColor(light.pageBg);
+  const b = parseColor(dark.pageBg);
+  if (!a || !b) return light.pageBg !== dark.pageBg;
+  // Well above the just-noticeable step, so a hairline anti-aliasing difference
+  // never gets reported as dark-mode support.
+  return deltaE(a, b) > 0.02;
+}
 
 async function writeCapture(dir, data) {
   await mkdir(dir, { recursive: true });
@@ -133,36 +193,43 @@ async function extract(urls, opts) {
 
   try {
     for (const url of urls) {
-      const page = await browser.newPage({ viewport: opts.viewport });
       try {
         log(`→ ${url}`);
-        // domcontentloaded then a best-effort wait for quiet: `networkidle` alone
-        // never settles on sites that long-poll, and timing out there would lose
-        // a page we could have harvested perfectly well.
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: opts.timeout });
-        await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
-        await page.waitForTimeout(opts.wait);
+        const sweep = {};
+        for (const scheme of opts.schemes) {
+          sweep[scheme] = await captureScheme(browser, url, scheme, opts);
+        }
+        const light = sweep.light ?? sweep[opts.schemes[0]];
+        const dark = sweep.dark ?? null;
+        // A site that ignores prefers-color-scheme hands back the same page
+        // twice. A "dark" palette identical to the light one is noise dressed as
+        // a feature, so this comparison decides whether one is emitted at all.
+        // Compared perceptually, not as strings: rgb(0,0,0) and rgba(0,0,0,1)
+        // are the same colour written two ways.
+        const supportsDark = Boolean(dark && light && differentScheme(light, dark));
 
-        const harvest = await page.evaluate(harvestFn);
         const data = record({
-          tokens: cluster(harvest),
-          harvest,
+          tokens: cluster(light),
+          harvest: light,
+          dark: supportsDark ? cluster(dark) : null,
+          darkHarvest: supportsDark ? dark : null,
+          supportsDark,
           capturedAt: new Date().toISOString(),
-          method: `playwright/chromium ${version} computed styles `
-            + `@ ${opts.viewport.width}x${opts.viewport.height}`,
+          method: `playwright/chromium ${version} computed styles @ `
+            + `${opts.viewports.map(v => `${v.width}x${v.height}`).join(', ')}`
+            + ` (${opts.schemes.join(' + ')})`,
         });
 
-        const slug = opts.slug || slugify(harvest.url || url);
+        const slug = opts.slug || slugify(light.url || url);
         const path = await writeCapture(join(opts.out, slug), data);
         log(`  wrote ${path}  (${data.warnings.length} warnings, `
-          + `${data.audit.failures} contrast failures)`);
+          + `${data.audit.failures} contrast failures`
+          + `${supportsDark ? ', + dark palette' : ''})`);
         results.push(data);
         report(data, opts);
       } catch (err) {
         log(`  failed: ${err.message.split('\n')[0]}`);
         failures.push({ url, error: err.message.split('\n')[0] });
-      } finally {
-        await page.close();
       }
     }
   } finally {
@@ -221,7 +288,8 @@ try {
     options: {
       out: { type: 'string', default: 'out' },
       slug: { type: 'string' },
-      viewport: { type: 'string', default: '1440x900' },
+      viewport: { type: 'string' },
+      'light-only': { type: 'boolean', default: false },
       wait: { type: 'string', default: '1500' },
       timeout: { type: 'string', default: '45000' },
       write: { type: 'boolean', default: false },
@@ -245,7 +313,8 @@ if (values.help || !command) {
 const opts = {
   out: values.out,
   slug: values.slug,
-  viewport: parseViewport(values.viewport),
+  viewports: values.viewport ? [parseViewport(values.viewport)] : VIEWPORTS,
+  schemes: values['light-only'] ? ['light'] : SCHEMES,
   wait: num(values.wait, 'wait'),
   timeout: num(values.timeout, 'timeout'),
   write: values.write,

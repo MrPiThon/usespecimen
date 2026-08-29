@@ -16,6 +16,7 @@ colors:
   text-4: '#62666d'
   success: '#27a644'
   danger: '#f34e52'
+  warning: '#e4f222'
 typography:
   fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
   headingFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
@@ -31,12 +32,12 @@ typography:
     lg: '14px'
     xl: '15px'
     2xl: '16px'
-    3xl: '18px'
+    3xl: '20px'
     4xl: '24px'
     5xl: '32px'
-    6xl: '48px'
-    7xl: '64px'
-    up-9: '72px'
+    6xl: '38px'
+    7xl: '40px'
+    up-9: '48px'
   roles:
     body:
       fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
@@ -68,6 +69,12 @@ typography:
       lineHeight: 1.6
       letterSpacing: '-0.165px'
     lead:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '20px'
+      fontWeight: 400
+      lineHeight: 1.33
+      letterSpacing: '-0.24px'
+    lead-lg:
       fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
       fontSize: '24px'
       fontWeight: 400
@@ -112,7 +119,7 @@ rounded:
   lg: '8px'
   xl: '9px'
   2xl: '12px'
-  button: '9999px'
+  button: '8px'
   pill: '9999px'
 spacing:
   s1: '2px'
@@ -121,9 +128,9 @@ spacing:
   s4: '7px'
   s5: '8px'
   s6: '10px'
-  s7: '11px'
-  s8: '12px'
-  s9: '16px'
+  s7: '12px'
+  s8: '16px'
+  s9: '24px'
   s10: '32px'
 components:
   button:
@@ -135,10 +142,10 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-29T00:12:11.118Z'
-  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
+  capturedAt: '2026-08-29T00:16:50.778Z'
+  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 3
-  clusterVersion: 8
+  clusterVersion: 9
 ---
 
 ## Overview

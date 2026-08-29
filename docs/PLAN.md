@@ -425,10 +425,40 @@ ships in `capture.json` as the caveat. The rigorous fix is CDP
 `CSS.forcePseudoState` plus a computed-style read, which needs a capture stage
 outside `harvestFn` — worth doing when states become load-bearing.
 
-**6. One viewport, one colour scheme.**
-Section 6 of this plan specifies light/dark at three widths. We capture
-1440x900, light, once. Dark capture would also give the light/dark polarity
-facet real data instead of an inference from background luminance.
+**6. ~~One viewport, one colour scheme.~~ DONE, cluster v9.**
+`extract` now sweeps 1440 / 768 / 390 under both `prefers-color-scheme` values —
+six harvests per site. Widths are merged per scheme (`src/extract/merge.mjs`);
+schemes are clustered separately into two palettes.
+
+One page load per scheme rather than toggling `emulateMedia` after load, because
+a site that picks its theme in JS at boot will not react to a toggle. Only the
+value histograms are summed: `document.styleSheets` does not vary with viewport,
+so summing state rules would triple their counts for no information.
+
+`supportsDark` is decided by comparing the two page backgrounds perceptually, not
+as strings. **None of the three reference sites support it** — Stripe and GOV.UK
+are light-only, Linear is dark-only — so the dark path was verified against
+vercel.com, which yields two genuinely different palettes:
+
+| | light | dark |
+|---|---|---|
+| background | `#fafafa` | `#000000` |
+| foreground | `#171717` | `#ededed` |
+| primary | `#297a3a` | `#62c073` |
+
+The accent differs by scheme. A single-scheme capture misses that entirely, and
+no amount of cleverness recovers it from one pass.
+
+Side effect worth recording: merging widths changed Linear's button radius from
+`9999px` to `8px`, because across three viewports the 8px buttons out-count the
+pill CTA. Both are observed; the wider sweep simply has a different centre of
+gravity, and `area` weights still scale with viewport so the widest capture
+dominates any area-ranked role.
+
+It also caught an invented value in our own seeder: `rounded.pill` was hardcoded
+to `9999px`. `rounded.pillValue` now carries what was observed — `9999px` for
+Linear, but `100%` for Stripe and `3.35544e+07px` for Vercel, which is Chrome's
+own serialisation of a very large radius.
 
 **7. No component-level tokens.**
 Their button carries `padding: 8px 14px` plus typography and radius references.

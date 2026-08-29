@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-08-29T00:12:11.118Z",
+  "capturedAt": "2026-08-29T00:16:50.778Z",
   "tool": "@usespecimen/extractor@0.0.0",
-  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
     "url": "https://linear.app/",
     "title": "Linear – The system for product development",
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 9960,
-    "elementCount": 4993,
-    "sampled": 2923,
-    "sampleRatio": 0.585
+    "elementCount": 15265,
+    "sampled": 6765,
+    "sampleRatio": 0.443
   },
   "harvestVersion": 3,
-  "clusterVersion": 8,
+  "clusterVersion": 9,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,20 +32,21 @@
       },
       "foreground": {
         "hex": "#d0d6e0",
-        "weightShare": 0.3625,
+        "weightShare": 0.3585,
         "variants": []
       },
       "card": {
         "hex": "#0f1011",
-        "weightShare": 0.1156,
+        "weightShare": 0.1288,
         "variants": [
           "#0d0e0f",
-          "#101112"
+          "#101112",
+          "#121314"
         ]
       },
       "mutedForeground": {
         "hex": "#8a8f98",
-        "weightShare": 0.3333,
+        "weightShare": 0.3577,
         "variants": []
       },
       "primary": {
@@ -53,12 +54,12 @@
         "weightShare": null,
         "variants": [],
         "source": "focusRing",
-        "occurrences": 1
+        "occurrences": 3
       },
       "primaryForeground": null,
       "border": {
         "hex": "#1c1d1e",
-        "weightShare": 0.6931,
+        "weightShare": 0.6468,
         "variants": []
       }
     },
@@ -68,7 +69,7 @@
           "name": "surface-1",
           "hex": "#0f1011",
           "deltaL": 0.033,
-          "areaShare": 0.1156
+          "areaShare": 0.1288
         }
       ],
       "text": [
@@ -76,25 +77,25 @@
           "name": "text-1",
           "hex": "#f7f8f8",
           "contrast": 18.73,
-          "charShare": 0.0816
+          "charShare": 0.0894
         },
         {
           "name": "text-2",
           "hex": "#d0d6e0",
           "contrast": 13.64,
-          "charShare": 0.3625
+          "charShare": 0.3585
         },
         {
           "name": "text-3",
           "hex": "#8a8f98",
           "contrast": 6.13,
-          "charShare": 0.3333
+          "charShare": 0.3577
         },
         {
           "name": "text-4",
           "hex": "#62666d",
           "contrast": 3.45,
-          "charShare": 0.0957
+          "charShare": 0.0985
         }
       ]
     },
@@ -105,7 +106,7 @@
         "hue": "neutral",
         "lightness": 0.139,
         "chroma": 0.003,
-        "count": 10
+        "count": 24
       },
       {
         "hex": "#0f1011",
@@ -113,7 +114,7 @@
         "hue": "neutral",
         "lightness": 0.172,
         "chroma": 0.003,
-        "count": 44
+        "count": 107
       },
       {
         "hex": "#e4f222",
@@ -121,7 +122,15 @@
         "hue": "yellow",
         "lightness": 0.92,
         "chroma": 0.201,
-        "count": 1
+        "count": 3
+      },
+      {
+        "hex": "#1c85e8",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.613,
+        "chroma": 0.174,
+        "count": 2
       },
       {
         "hex": "#0a140e",
@@ -129,7 +138,7 @@
         "hue": "neutral",
         "lightness": 0.179,
         "chroma": 0.019,
-        "count": 4
+        "count": 7
       },
       {
         "hex": "#201011",
@@ -137,30 +146,14 @@
         "hue": "neutral",
         "lightness": 0.195,
         "chroma": 0.026,
-        "count": 4
+        "count": 7
       },
       {
-        "hex": "#1c1d1e",
-        "role": "border",
-        "hue": "neutral",
-        "lightness": 0.229,
-        "chroma": 0.002,
-        "count": 38
-      },
-      {
-        "hex": "#141516",
+        "hex": "#161718",
         "role": null,
         "hue": "neutral",
-        "lightness": 0.196,
-        "chroma": 0.002,
-        "count": 5
-      },
-      {
-        "hex": "#07220a",
-        "role": null,
-        "hue": "green",
-        "lightness": 0.223,
-        "chroma": 0.055,
+        "lightness": 0.204,
+        "chroma": 0.003,
         "count": 16
       },
       {
@@ -169,7 +162,23 @@
         "hue": "neutral",
         "lightness": 0.922,
         "chroma": 0.001,
-        "count": 2
+        "count": 6
+      },
+      {
+        "hex": "#07220a",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.223,
+        "chroma": 0.055,
+        "count": 19
+      },
+      {
+        "hex": "#1c1d1e",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.229,
+        "chroma": 0.002,
+        "count": 77
       },
       {
         "hex": "#000000",
@@ -177,15 +186,7 @@
         "hue": "neutral",
         "lightness": 0,
         "chroma": 0,
-        "count": 5
-      },
-      {
-        "hex": "#260809",
-        "role": null,
-        "hue": "red",
-        "lightness": 0.187,
-        "chroma": 0.051,
-        "count": 3
+        "count": 14
       },
       {
         "hex": "#d0d6e0",
@@ -193,7 +194,7 @@
         "hue": "neutral",
         "lightness": 0.874,
         "chroma": 0.015,
-        "count": 107
+        "count": 265
       },
       {
         "hex": "#8a8f98",
@@ -201,7 +202,15 @@
         "hue": "neutral",
         "lightness": 0.649,
         "chroma": 0.015,
-        "count": 180
+        "count": 429
+      },
+      {
+        "hex": "#260809",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.187,
+        "chroma": 0.051,
+        "count": 6
       },
       {
         "hex": "#2e2e32",
@@ -209,7 +218,7 @@
         "hue": "neutral",
         "lightness": 0.303,
         "chroma": 0.007,
-        "count": 5
+        "count": 14
       },
       {
         "hex": "#171a28",
@@ -217,7 +226,7 @@
         "hue": "neutral",
         "lightness": 0.221,
         "chroma": 0.029,
-        "count": 1
+        "count": 3
       },
       {
         "hex": "#f7f8f8",
@@ -225,7 +234,31 @@
         "hue": "neutral",
         "lightness": 0.978,
         "chroma": 0.001,
-        "count": 20
+        "count": 60
+      },
+      {
+        "hex": "#121414",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.189,
+        "chroma": 0.003,
+        "count": 3
+      },
+      {
+        "hex": "#4ea7fc",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.712,
+        "chroma": 0.151,
+        "count": 8
+      },
+      {
+        "hex": "#eb5757",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.653,
+        "chroma": 0.183,
+        "count": 6
       },
       {
         "hex": "#f7bf8b",
@@ -236,28 +269,20 @@
         "count": 22
       },
       {
-        "hex": "#4ea7fc",
-        "role": null,
-        "hue": "blue",
-        "lightness": 0.712,
-        "chroma": 0.151,
-        "count": 4
-      },
-      {
         "hex": "#f79ce0",
         "role": null,
         "hue": "pink",
         "lightness": 0.805,
         "chroma": 0.137,
-        "count": 41
+        "count": 45
       },
       {
-        "hex": "#eb5757",
+        "hex": "#8fa6ff",
         "role": null,
-        "hue": "red",
-        "lightness": 0.653,
-        "chroma": 0.183,
-        "count": 3
+        "hue": "blue",
+        "lightness": 0.744,
+        "chroma": 0.131,
+        "count": 16
       },
       {
         "hex": "#ffdf9f",
@@ -266,42 +291,23 @@
         "lightness": 0.916,
         "chroma": 0.088,
         "count": 10
-      },
-      {
-        "hex": "#e2e4e7",
-        "role": null,
-        "hue": "neutral",
-        "lightness": 0.918,
-        "chroma": 0.005,
-        "count": 81
-      },
-      {
-        "hex": "#83dcdc",
-        "role": null,
-        "hue": "teal",
-        "lightness": 0.839,
-        "chroma": 0.086,
-        "count": 9
-      },
-      {
-        "hex": "#8fa6ff",
-        "role": null,
-        "hue": "blue",
-        "lightness": 0.744,
-        "chroma": 0.131,
-        "count": 8
       }
     ],
     "semantic": {
       "success": {
         "hex": "#27a644",
-        "occurrences": 9,
+        "occurrences": 16,
         "paintsBorder": true
       },
       "danger": {
         "hex": "#f34e52",
-        "occurrences": 8,
+        "occurrences": 14,
         "paintsBorder": true
+      },
+      "warning": {
+        "hex": "#e4f222",
+        "occurrences": 3,
+        "paintsBorder": false
       }
     },
     "accentRejected": [
@@ -311,7 +317,7 @@
       }
     ],
     "clusterCounts": {
-      "bg": 20,
+      "bg": 22,
       "text": 12,
       "border": 8,
       "interactive": 3
@@ -354,89 +360,89 @@
         "name": "xs",
         "px": 10,
         "rem": 0.769,
-        "weightShare": 0.0202,
+        "weightShare": 0.0179,
         "variants": []
       },
       {
         "name": "sm",
         "px": 12,
         "rem": 0.923,
-        "weightShare": 0.1879,
+        "weightShare": 0.2164,
         "variants": []
       },
       {
         "name": "base",
         "px": 13,
         "rem": 1,
-        "weightShare": 0.2434,
+        "weightShare": 0.2598,
         "variants": []
       },
       {
         "name": "lg",
         "px": 14,
         "rem": 1.077,
-        "weightShare": 0.1757,
+        "weightShare": 0.1059,
         "variants": []
       },
       {
         "name": "xl",
         "px": 15,
         "rem": 1.154,
-        "weightShare": 0.2354,
+        "weightShare": 0.2372,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 16,
         "rem": 1.231,
-        "weightShare": 0.0044,
+        "weightShare": 0.0059,
         "variants": []
       },
       {
         "name": "3xl",
-        "px": 18,
-        "rem": 1.385,
-        "weightShare": 0.0023,
+        "px": 20,
+        "rem": 1.538,
+        "weightShare": 0.0308,
         "variants": []
       },
       {
         "name": "4xl",
         "px": 24,
         "rem": 1.846,
-        "weightShare": 0.0635,
+        "weightShare": 0.066,
         "variants": []
       },
       {
         "name": "5xl",
         "px": 32,
         "rem": 2.462,
-        "weightShare": 0.019,
+        "weightShare": 0.0164,
         "variants": []
       },
       {
         "name": "6xl",
-        "px": 48,
-        "rem": 3.692,
-        "weightShare": 0.0286,
+        "px": 38,
+        "rem": 2.923,
+        "weightShare": 0.0071,
         "variants": []
       },
       {
         "name": "7xl",
-        "px": 64,
-        "rem": 4.923,
-        "weightShare": 0.0117,
+        "px": 40,
+        "rem": 3.077,
+        "weightShare": 0.0067,
         "variants": []
       },
       {
         "name": "up-9",
-        "px": 72,
-        "rem": 5.538,
-        "weightShare": 0.0044,
+        "px": 48,
+        "rem": 3.692,
+        "weightShare": 0.0127,
         "variants": []
       }
     ],
     "scaleTruncated": true,
-    "distinctSizes": 14,
+    "distinctSizes": 17,
     "roles": {
       "body": {
         "fontFamily": "Inter Variable",
@@ -446,8 +452,8 @@
         "fontWeight": 400,
         "lineHeight": 1.6,
         "letterSpacing": "-0.165px",
-        "elements": 48,
-        "chars": 1487
+        "elements": 107,
+        "chars": 3536
       },
       "body-sm": {
         "fontFamily": "Inter Variable",
@@ -457,8 +463,8 @@
         "fontWeight": 400,
         "lineHeight": 1.5,
         "letterSpacing": "-0.182px",
-        "elements": 3,
-        "chars": 172
+        "elements": 11,
+        "chars": 440
       },
       "caption": {
         "fontFamily": "Inter Variable",
@@ -468,8 +474,8 @@
         "fontWeight": 400,
         "lineHeight": 1.54,
         "letterSpacing": "-0.039px",
-        "elements": 8,
-        "chars": 620
+        "elements": 17,
+        "chars": 1295
       },
       "caption-sm": {
         "fontFamily": "Inter Variable",
@@ -479,8 +485,8 @@
         "fontWeight": 510,
         "lineHeight": 1.4,
         "letterSpacing": null,
-        "elements": 18,
-        "chars": 529
+        "elements": 38,
+        "chars": 1077
       },
       "body-lg": {
         "fontFamily": "Inter Variable",
@@ -490,10 +496,21 @@
         "fontWeight": 400,
         "lineHeight": 1.6,
         "letterSpacing": "-0.165px",
-        "elements": 20,
-        "chars": 20
+        "elements": 40,
+        "chars": 40
       },
       "lead": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": "-0.24px",
+        "elements": 4,
+        "chars": 547
+      },
+      "lead-lg": {
         "fontFamily": "Inter Variable",
         "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
         "class": "sans",
@@ -501,8 +518,8 @@
         "fontWeight": 400,
         "lineHeight": 1.33,
         "letterSpacing": "-0.288px",
-        "elements": 4,
-        "chars": 547
+        "elements": 10,
+        "chars": 1045
       },
       "h2": {
         "fontFamily": "Inter Variable",
@@ -523,8 +540,8 @@
         "fontWeight": 510,
         "lineHeight": 1.5,
         "letterSpacing": "-0.13px",
-        "elements": 5,
-        "chars": 38
+        "elements": 17,
+        "chars": 124
       },
       "h4": {
         "fontFamily": "Inter Variable",
@@ -534,8 +551,8 @@
         "fontWeight": 590,
         "lineHeight": 1.75,
         "letterSpacing": null,
-        "elements": 1,
-        "chars": 8
+        "elements": 3,
+        "chars": 24
       },
       "button": {
         "fontFamily": "Inter Variable",
@@ -545,8 +562,8 @@
         "fontWeight": 510,
         "lineHeight": 2.75,
         "letterSpacing": null,
-        "elements": 2,
-        "chars": 24
+        "elements": 6,
+        "chars": 72
       },
       "link": {
         "fontFamily": "Inter Variable",
@@ -556,8 +573,8 @@
         "fontWeight": 400,
         "lineHeight": 1.5,
         "letterSpacing": "-0.13px",
-        "elements": 36,
-        "chars": 260
+        "elements": 108,
+        "chars": 780
       },
       "mono": {
         "fontFamily": "Berkeley Mono",
@@ -567,32 +584,32 @@
         "fontWeight": 400,
         "lineHeight": 1.71,
         "letterSpacing": null,
-        "elements": 172,
-        "chars": 1252
+        "elements": 204,
+        "chars": 1385
       }
     },
     "rolesAvailable": true,
-    "distinctStyles": 54
+    "distinctStyles": 67
   },
   "spacing": {
     "base": null,
-    "gridConfidence": 0.665,
+    "gridConfidence": 0.647,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.382
+        "share": 0.377
       },
       {
         "base": 6,
-        "share": 0.261
+        "share": 0.275
       },
       {
         "base": 5,
-        "share": 0.066
+        "share": 0.075
       },
       {
         "base": 4,
-        "share": 0.665
+        "share": 0.647
       }
     ],
     "scale": [
@@ -602,66 +619,67 @@
       7,
       8,
       10,
-      11,
       12,
       16,
+      24,
       32
     ],
-    "distinctValues": 45
+    "distinctValues": 53
   },
   "rounded": {
     "scale": [
       {
         "name": "sm",
         "px": 4,
-        "count": 20
+        "count": 45
       },
       {
         "name": "md",
         "px": 6,
-        "count": 10
+        "count": 33
       },
       {
         "name": "lg",
         "px": 8,
-        "count": 27
+        "count": 80
       },
       {
         "name": "xl",
         "px": 9,
-        "count": 18
+        "count": 38
       },
       {
         "name": "2xl",
         "px": 12,
-        "count": 25
+        "count": 56
       }
     ],
-    "button": "9999px",
+    "button": "8px",
     "pill": true,
+    "pillValue": "9999px",
     "sharp": false
   },
   "elevation": {
     "shadows": [
       {
-        "value": "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset",
-        "count": 7
-      },
-      {
         "value": "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px",
-        "count": 6
+        "count": 16
       },
       {
-        "value": "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px",
-        "count": 4
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset",
+        "count": 14
       },
       {
         "value": "rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset",
-        "count": 4
+        "count": 12
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px",
+        "count": 9
       },
       {
         "value": "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset",
-        "count": 4
+        "count": 9
       }
     ],
     "flat": false
@@ -735,11 +753,13 @@
   "warnings": [
     "Accent #5e6ad2 taken from a focus ring, the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
     "Ignored #e4f222 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
-    "No spacing grid explains 75% of values (best 0.665); site may not be on a grid.",
-    "14 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "No spacing grid explains 75% of values (best 0.647); site may not be on a grid.",
+    "17 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "Found 71 state rules but none target elements on this page; the site's own CSS is likely among the 54 cross-origin sheets.",
-    "Strided sample: 2923 of 4993 elements. Weights are relative only."
+    "Strided sample: 6765 of 15265 elements. Weights are relative only."
   ],
+  "supportsDark": false,
+  "dark": null,
   "harvest": {
     "harvestVersion": 3,
     "url": "https://linear.app/",
@@ -751,44 +771,44 @@
     "docHeight": 9960,
     "textColors": {
       "rgb(138, 143, 152)": {
-        "count": 180,
-        "area": 564790.0883789062,
-        "chars": 2700
+        "count": 429,
+        "area": 1318952.7766113281,
+        "chars": 6756
       },
       "rgb(8, 9, 10)": {
-        "count": 8,
-        "area": 123144.5,
-        "chars": 260
+        "count": 30,
+        "area": 350766.8125,
+        "chars": 898
       },
       "rgb(247, 248, 248)": {
-        "count": 20,
-        "area": 536404.75390625,
-        "chars": 661
+        "count": 60,
+        "area": 1080082.8635253906,
+        "chars": 1688
       },
       "rgb(208, 214, 224)": {
-        "count": 107,
-        "area": 594244.0170898438,
-        "chars": 2936
+        "count": 265,
+        "area": 1287072.932006836,
+        "chars": 6772
       },
       "rgb(98, 102, 109)": {
-        "count": 130,
-        "area": 127725.37133789062,
-        "chars": 775
+        "count": 294,
+        "area": 256890.0405883789,
+        "chars": 1860
       },
       "rgb(109, 120, 213)": {
-        "count": 1,
-        "area": 1513.875,
-        "chars": 7
+        "count": 3,
+        "area": 4266,
+        "chars": 21
       },
       "rgba(0, 0, 0, 0)": {
-        "count": 4,
-        "area": 341164.03125,
-        "chars": 515
+        "count": 7,
+        "area": 343640.0625,
+        "chars": 539
       },
       "rgb(247, 156, 224)": {
-        "count": 41,
-        "area": 21105.25,
-        "chars": 157
+        "count": 45,
+        "area": 22987.25,
+        "chars": 171
       },
       "rgb(247, 191, 139)": {
         "count": 22,
@@ -796,9 +816,9 @@
         "chars": 231
       },
       "rgb(226, 228, 231)": {
-        "count": 81,
-        "area": 24873,
-        "chars": 97
+        "count": 100,
+        "area": 33610.25,
+        "chars": 125
       },
       "rgb(255, 223, 159)": {
         "count": 10,
@@ -806,20 +826,20 @@
         "chars": 130
       },
       "rgb(131, 220, 220)": {
-        "count": 9,
-        "area": 10483.5,
-        "chars": 78
+        "count": 10,
+        "area": 11827.5,
+        "chars": 88
       },
       "rgb(143, 166, 255)": {
-        "count": 8,
-        "area": 9140.5,
-        "chars": 68
+        "count": 16,
+        "area": 20027.5,
+        "chars": 149
       }
     },
     "bgColors": {
       "rgb(8, 9, 10)": {
-        "count": 8,
-        "area": 43743871,
+        "count": 18,
+        "area": 73503035.53125,
         "chars": 0
       },
       "rgb(35, 37, 42)": {
@@ -828,124 +848,119 @@
         "chars": 0
       },
       "rgb(229, 229, 230)": {
-        "count": 2,
-        "area": 7916,
-        "chars": 18
+        "count": 6,
+        "area": 23748,
+        "chars": 54
       },
       "rgb(9, 10, 11)": {
-        "count": 1,
-        "area": 950400,
+        "count": 3,
+        "area": 2138400,
         "chars": 0
       },
       "rgb(16, 17, 18)": {
-        "count": 1,
-        "area": 950400,
+        "count": 3,
+        "area": 2138400,
         "chars": 0
       },
       "rgb(18, 20, 20)": {
-        "count": 1,
-        "area": 400,
+        "count": 3,
+        "area": 900,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.02)": {
-        "count": 9,
-        "area": 219284,
+        "count": 24,
+        "area": 411195,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.04)": {
-        "count": 1,
-        "area": 5824,
+        "count": 3,
+        "area": 13104,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.01)": {
-        "count": 1,
-        "area": 754688,
+        "count": 3,
+        "area": 1698048,
         "chars": 0
       },
       "rgb(46, 46, 50)": {
-        "count": 5,
-        "area": 2136.53125,
+        "count": 14,
+        "area": 4600.9453125,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.05)": {
-        "count": 3,
-        "area": 9871.875,
-        "chars": 26
+        "count": 9,
+        "area": 27481.40625,
+        "chars": 78
       },
       "rgb(15, 16, 17)": {
-        "count": 34,
-        "area": 4823750.828857422,
-        "chars": 349
+        "count": 76,
+        "area": 9031370.4899292,
+        "chars": 698
       },
       "rgb(0, 0, 0)": {
-        "count": 5,
-        "area": 7200,
+        "count": 14,
+        "area": 12600,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.08)": {
-        "count": 36,
-        "area": 8632,
+        "count": 77,
+        "area": 14900,
         "chars": 0
       },
       "rgb(235, 87, 87)": {
-        "count": 3,
-        "area": 147,
+        "count": 6,
+        "area": 294,
         "chars": 0
       },
       "rgb(78, 167, 252)": {
-        "count": 4,
-        "area": 196,
+        "count": 8,
+        "area": 392,
         "chars": 0
       },
       "rgb(220, 255, 255)": {
-        "count": 1,
-        "area": 49,
+        "count": 2,
+        "area": 98,
         "chars": 0
       },
       "rgb(39, 166, 68)": {
-        "count": 1,
-        "area": 49,
+        "count": 2,
+        "area": 98,
         "chars": 0
       },
       "rgba(109, 120, 213, 0.15)": {
-        "count": 1,
-        "area": 1513.875,
-        "chars": 7
-      },
-      "rgb(98, 102, 109)": {
-        "count": 1,
-        "area": 31.5,
-        "chars": 0
+        "count": 3,
+        "area": 4266,
+        "chars": 21
       },
       "rgba(255, 255, 255, 0.2)": {
-        "count": 1,
-        "area": 16,
+        "count": 3,
+        "area": 44.96048340201378,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.07)": {
-        "count": 2,
-        "area": 7732.65625,
+        "count": 4,
+        "area": 15465.3125,
         "chars": 0
       },
       "rgba(243, 78, 82, 0.1)": {
-        "count": 4,
-        "area": 53760,
+        "count": 7,
+        "area": 105024,
         "chars": 0
       },
       "rgba(255, 0, 0, 0.12)": {
-        "count": 3,
-        "area": 3629,
-        "chars": 27
+        "count": 6,
+        "area": 6720.5,
+        "chars": 50
       },
       "rgba(39, 166, 68, 0.07)": {
-        "count": 4,
-        "area": 75264,
+        "count": 7,
+        "area": 126528,
         "chars": 0
       },
       "rgba(0, 255, 5, 0.1)": {
-        "count": 16,
-        "area": 10753.25,
-        "chars": 75
+        "count": 19,
+        "area": 15054.25,
+        "chars": 107
       },
       "rgb(59, 59, 59)": {
         "count": 1,
@@ -953,85 +968,110 @@
         "chars": 0
       },
       "rgb(228, 242, 34)": {
+        "count": 3,
+        "area": 437760,
+        "chars": 0
+      },
+      "rgb(98, 102, 109)": {
         "count": 1,
-        "area": 207360,
+        "area": 31.5,
+        "chars": 0
+      },
+      "rgb(28, 133, 232)": {
+        "count": 2,
+        "area": 230400,
+        "chars": 0
+      },
+      "rgb(22, 23, 24)": {
+        "count": 3,
+        "area": 57194,
+        "chars": 55
+      },
+      "rgba(255, 255, 255, 0.03)": {
+        "count": 1,
+        "area": 169,
         "chars": 0
       }
     },
     "borderColors": {
       "rgba(255, 255, 255, 0.08)": {
-        "count": 70,
-        "area": 9503219.266357422,
-        "chars": 25
+        "count": 152,
+        "area": 18815289.4039917,
+        "chars": 69
       },
       "rgb(229, 229, 230)": {
-        "count": 2,
-        "area": 7916,
-        "chars": 18
+        "count": 6,
+        "area": 23748,
+        "chars": 54
       },
       "rgb(36, 40, 44)": {
-        "count": 1,
-        "area": 784,
+        "count": 3,
+        "area": 1764,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.05)": {
-        "count": 3,
-        "area": 874728,
+        "count": 16,
+        "area": 2855659,
         "chars": 0
       },
       "rgb(46, 46, 50)": {
-        "count": 2,
-        "area": 4062.375,
-        "chars": 14
+        "count": 6,
+        "area": 9140.34375,
+        "chars": 42
       },
       "rgb(35, 37, 42)": {
-        "count": 3,
-        "area": 2227056,
+        "count": 6,
+        "area": 3614373,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.12)": {
-        "count": 10,
-        "area": 998048,
+        "count": 24,
+        "area": 2133596,
         "chars": 0
       },
       "rgba(0, 0, 0, 0)": {
-        "count": 28,
-        "area": 451584,
+        "count": 33,
+        "area": 528866,
         "chars": 0
       },
       "rgb(243, 78, 82)": {
-        "count": 4,
-        "area": 53760,
+        "count": 7,
+        "area": 105024,
         "chars": 0
       },
       "rgb(39, 166, 68)": {
-        "count": 4,
-        "area": 75264,
+        "count": 7,
+        "area": 126528,
         "chars": 0
       },
       "color(srgb 0.0313726 0.0352941 0.0392157 / 0.05)": {
         "count": 2,
         "area": 17734.5,
         "chars": 0
+      },
+      "color(srgb 0.0313726 0.0352941 0.0392157 / 0.1)": {
+        "count": 6,
+        "area": 23615.8125,
+        "chars": 0
       }
     },
     "fontFamilies": {
       "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 439,
-        "area": 1898586.9626464844,
-        "chars": 7196
+        "count": 1070,
+        "area": 4213713.657165527,
+        "chars": 17699
       },
       "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
-        "count": 182,
-        "area": 504523.42431640625,
-        "chars": 1419
+        "count": 221,
+        "area": 564931.8305664062,
+        "chars": 1729
       }
     },
     "fontSizes": {
       "13px": {
-        "count": 124,
-        "area": 402533.828125,
-        "chars": 2097
+        "count": 324,
+        "area": 978555.982421875,
+        "chars": 5047
       },
       "64px": {
         "count": 3,
@@ -1039,29 +1079,29 @@
         "chars": 101
       },
       "15px": {
-        "count": 65,
-        "area": 313564.0625,
-        "chars": 2028
+        "count": 141,
+        "area": 751994.859375,
+        "chars": 4608
       },
       "14px": {
-        "count": 180,
-        "area": 502405.328125,
-        "chars": 1514
+        "count": 230,
+        "area": 583927.80078125,
+        "chars": 2057
       },
       "12px": {
-        "count": 185,
-        "area": 228561.03002929688,
-        "chars": 1619
+        "count": 436,
+        "area": 522171.71075439453,
+        "chars": 4205
       },
       "20px": {
-        "count": 1,
-        "area": 16747.82958984375,
-        "chars": 17
+        "count": 7,
+        "area": 166377.92907714844,
+        "chars": 598
       },
       "16px": {
-        "count": 4,
-        "area": 30632.875,
-        "chars": 38
+        "count": 12,
+        "area": 78673.546875,
+        "chars": 114
       },
       "48px": {
         "count": 7,
@@ -1069,73 +1109,88 @@
         "chars": 246
       },
       "24px": {
-        "count": 4,
-        "area": 184162.9921875,
-        "chars": 547
+        "count": 16,
+        "area": 509012.71875,
+        "chars": 1282
       },
       "10px": {
-        "count": 23,
-        "area": 13272.625,
-        "chars": 174
+        "count": 46,
+        "area": 26545.25,
+        "chars": 348
       },
       "18px": {
-        "count": 20,
-        "area": 4882.5,
-        "chars": 20
+        "count": 40,
+        "area": 9765,
+        "chars": 40
       },
       "11px": {
-        "count": 2,
-        "area": 1694.8125,
-        "chars": 12
+        "count": 9,
+        "area": 6518.740234375,
+        "chars": 58
       },
       "32px": {
-        "count": 2,
-        "area": 99090,
-        "chars": 164
+        "count": 4,
+        "area": 217781.4375,
+        "chars": 318
       },
       "72px": {
         "count": 1,
         "area": 104004,
         "chars": 38
+      },
+      "56px": {
+        "count": 3,
+        "area": 80106.55908203125,
+        "chars": 101
+      },
+      "40px": {
+        "count": 6,
+        "area": 175519.302734375,
+        "chars": 130
+      },
+      "38px": {
+        "count": 6,
+        "area": 66132.14624023438,
+        "chars": 137
       }
     },
     "fontWeights": {
       "300": {
-        "count": 4,
-        "area": 60134.03125,
-        "chars": 378
+        "count": 12,
+        "area": 165855.666015625,
+        "chars": 1134
       },
       "400": {
-        "count": 463,
-        "area": 1401374.4440917969,
-        "chars": 5907
+        "count": 893,
+        "area": 2616692.340637207,
+        "chars": 12590
       },
       "500": {
-        "count": 8,
-        "area": 17960.875,
-        "chars": 159
+        "count": 26,
+        "area": 104258.875,
+        "chars": 532
       },
       "510": {
-        "count": 138,
-        "area": 883957.19140625,
-        "chars": 2111
+        "count": 336,
+        "area": 1799986.3596191406,
+        "chars": 4992
       },
       "590": {
-        "count": 8,
-        "area": 39683.84521484375,
-        "chars": 60
+        "count": 24,
+        "area": 91852.24645996094,
+        "chars": 180
       }
     },
     "lineHeights": {
       "19.5px": {
-        "count": 82,
-        "area": 159200.109375,
-        "chars": 933
+        "count": 212,
+        "area": 404915.888671875,
+        "chars": 2205
       },
       "32px": {
-        "count": 3,
-        "area": 7705.5,
-        "chars": 32
+        "count": 6,
+        "area": 16507,
+        "chars": 65
       },
       "64px": {
         "count": 3,
@@ -1143,44 +1198,44 @@
         "chars": 101
       },
       "24px": {
-        "count": 229,
-        "area": 702895.21875,
-        "chars": 2879
+        "count": 329,
+        "area": 1100695.671875,
+        "chars": 5191
       },
       "21px": {
-        "count": 7,
-        "area": 45459.078125,
-        "chars": 243
+        "count": 24,
+        "area": 99996.80078125,
+        "chars": 634
       },
       "14px": {
-        "count": 105,
-        "area": 110508.578125,
-        "chars": 767
+        "count": 251,
+        "area": 233896.55078125,
+        "chars": 1881
       },
       "16px": {
-        "count": 67,
-        "area": 63602.921875,
-        "chars": 549
+        "count": 150,
+        "area": 164843.9609375,
+        "chars": 1466
       },
       "26.6px": {
-        "count": 1,
-        "area": 16747.82958984375,
-        "chars": 17
+        "count": 7,
+        "area": 166377.92907714844,
+        "chars": 598
       },
       "20px": {
-        "count": 29,
-        "area": 256708.875,
-        "chars": 1170
+        "count": 68,
+        "area": 571442.1875,
+        "chars": 2482
       },
       "28px": {
-        "count": 1,
-        "area": 17633.4375,
-        "chars": 8
+        "count": 3,
+        "area": 39675.234375,
+        "chars": 24
       },
       "16.8px": {
-        "count": 47,
-        "area": 106422.34252929688,
-        "chars": 776
+        "count": 102,
+        "area": 201208.49884033203,
+        "chars": 1648
       },
       "48px": {
         "count": 7,
@@ -1188,19 +1243,19 @@
         "chars": 246
       },
       "31.92px": {
-        "count": 4,
-        "area": 184162.9921875,
-        "chars": 547
+        "count": 16,
+        "area": 509012.71875,
+        "chars": 1282
       },
       "28.8px": {
-        "count": 20,
-        "area": 4882.5,
-        "chars": 20
+        "count": 40,
+        "area": 9765,
+        "chars": 40
       },
       "36px": {
-        "count": 2,
-        "area": 99090,
-        "chars": 164
+        "count": 4,
+        "area": 217781.4375,
+        "chars": 318
       },
       "72px": {
         "count": 1,
@@ -1208,9 +1263,29 @@
         "chars": 38
       },
       "44px": {
-        "count": 2,
-        "area": 11904.75,
-        "chars": 24
+        "count": 12,
+        "area": 211233.552734375,
+        "chars": 202
+      },
+      "61.6px": {
+        "count": 3,
+        "area": 80106.55908203125,
+        "chars": 101
+      },
+      "41.8px": {
+        "count": 6,
+        "area": 66132.14624023438,
+        "chars": 137
+      },
+      "19.2px": {
+        "count": 10,
+        "area": 52671.1455078125,
+        "chars": 438
+      },
+      "17.6px": {
+        "count": 4,
+        "area": 2917.263671875,
+        "chars": 28
       }
     },
     "letterSpacings": {
@@ -1220,24 +1295,24 @@
         "chars": 101
       },
       "-0.165px": {
-        "count": 81,
-        "area": 258312.53125,
-        "chars": 1670
+        "count": 175,
+        "area": 645996.119140625,
+        "chars": 3929
       },
       "-0.182px": {
-        "count": 8,
-        "area": 46339.953125,
-        "chars": 232
+        "count": 27,
+        "area": 102389.95703125,
+        "chars": 625
       },
       "-0.24px": {
-        "count": 1,
-        "area": 16747.82958984375,
-        "chars": 17
+        "count": 7,
+        "area": 166377.92907714844,
+        "chars": 598
       },
       "-0.13px": {
-        "count": 80,
-        "area": 167775.796875,
-        "chars": 1064
+        "count": 212,
+        "area": 431246.857421875,
+        "chars": 2592
       },
       "-1.056px": {
         "count": 7,
@@ -1245,34 +1320,59 @@
         "chars": 246
       },
       "-0.288px": {
-        "count": 4,
-        "area": 184162.9921875,
-        "chars": 547
+        "count": 16,
+        "area": 509012.71875,
+        "chars": 1282
       },
       "-0.15px": {
-        "count": 23,
-        "area": 13272.625,
-        "chars": 174
+        "count": 46,
+        "area": 26545.25,
+        "chars": 348
       },
       "-0.06px": {
-        "count": 4,
-        "area": 60134.03125,
-        "chars": 378
+        "count": 8,
+        "area": 120268.0625,
+        "chars": 756
       },
       "-0.039px": {
-        "count": 10,
-        "area": 165500.40625,
-        "chars": 647
+        "count": 21,
+        "area": 336130.8125,
+        "chars": 1349
       },
       "-0.704px": {
-        "count": 2,
-        "area": 99090,
-        "chars": 164
+        "count": 4,
+        "area": 217781.4375,
+        "chars": 318
       },
       "-1.584px": {
         "count": 1,
         "area": 104004,
         "chars": 38
+      },
+      "-1.232px": {
+        "count": 3,
+        "area": 80106.55908203125,
+        "chars": 101
+      },
+      "-0.88px": {
+        "count": 6,
+        "area": 175519.302734375,
+        "chars": 130
+      },
+      "-0.836px": {
+        "count": 6,
+        "area": 66132.14624023438,
+        "chars": 137
+      },
+      "-0.132px": {
+        "count": 4,
+        "area": 2579.2197265625,
+        "chars": 23
+      },
+      "-0.048px": {
+        "count": 4,
+        "area": 45587.603515625,
+        "chars": 378
       }
     },
     "typeStyles": {
@@ -1282,14 +1382,14 @@
         "chars": 16
       },
       "link|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 5,
-        "area": 10985.5,
-        "chars": 32
+        "count": 7,
+        "area": 14928.5,
+        "chars": 44
       },
       "link|13px|510|32px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 2333.5,
-        "chars": 7
+        "count": 3,
+        "area": 7000.5,
+        "chars": 21
       },
       "text|64px|510|64px|-1.408px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 3,
@@ -1297,104 +1397,104 @@
         "chars": 101
       },
       "text|15px|400|24px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 48,
-        "area": 194634.828125,
-        "chars": 1487
+        "count": 107,
+        "area": 513622.65625,
+        "chars": 3536
       },
       "text|15px|510|24px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 9,
-        "area": 55448.640625,
-        "chars": 140
+        "count": 18,
+        "area": 111411.015625,
+        "chars": 270
       },
       "text|14px|590|21px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 861.328125,
-        "chars": 6
-      },
-      "text|13px|510|normal|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 11,
-        "area": 10623.75,
-        "chars": 101
-      },
-      "button|12px|510|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 9984,
+        "count": 3,
+        "area": 1937.98828125,
         "chars": 18
       },
+      "text|13px|510|normal|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 33,
+        "area": 23903.4375,
+        "chars": 303
+      },
+      "button|12px|510|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 6,
+        "area": 22464,
+        "chars": 54
+      },
       "text|12px|510|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 50,
-        "area": 51012.796875,
-        "chars": 323
+        "count": 111,
+        "area": 104196.74609375,
+        "chars": 741
       },
       "text|12px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 46,
-        "area": 18366.859375,
-        "chars": 173
+        "count": 99,
+        "area": 47427.4609375,
+        "chars": 425
       },
       "h3|20px|590|26.6px|-0.24px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 16747.82958984375,
-        "chars": 17
+        "count": 3,
+        "area": 37682.61657714844,
+        "chars": 51
       },
       "text|14px|400|21px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 3,
-        "area": 30749.25,
-        "chars": 172
+        "count": 11,
+        "area": 68765.15625,
+        "chars": 440
       },
       "text|12px|400|20px|-0.182px|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
-        "count": 1,
-        "area": 2525.625,
-        "chars": 13
+        "count": 3,
+        "area": 5682.65625,
+        "chars": 39
       },
       "h4|16px|590|28px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 17633.4375,
-        "chars": 8
+        "count": 3,
+        "area": 39675.234375,
+        "chars": 24
       },
       "text|12px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 33,
-        "area": 33304.03125,
-        "chars": 274
+        "count": 91,
+        "area": 73592.859375,
+        "chars": 762
       },
       "text|13px|510|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 1669.0625,
-        "chars": 13
+        "count": 6,
+        "area": 4592.34375,
+        "chars": 39
       },
       "text|12px|400|16.8px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 21,
-        "area": 15775.152587890625,
-        "chars": 136
+        "count": 52,
+        "area": 34238.78936767578,
+        "chars": 352
       },
       "text|13px|400|16px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 20088.5,
-        "chars": 120
+        "count": 6,
+        "area": 45199.125,
+        "chars": 360
       },
       "text|13px|510|16px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 305,
-        "chars": 4
+        "count": 3,
+        "area": 686.25,
+        "chars": 12
       },
       "text|13px|510|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 18,
-        "area": 55948.546875,
-        "chars": 454
+        "count": 38,
+        "area": 129441.685546875,
+        "chars": 917
       },
       "text|12px|510|16.8px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 18,
-        "area": 47240.390625,
-        "chars": 529
+        "count": 38,
+        "area": 94941.03515625,
+        "chars": 1077
       },
       "button|12px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 4062.375,
-        "chars": 14
+        "count": 6,
+        "area": 9140.34375,
+        "chars": 42
       },
       "text|12px|400|16.8px|normal|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
-        "count": 8,
-        "area": 43406.79931640625,
-        "chars": 111
+        "count": 12,
+        "area": 72028.67431640625,
+        "chars": 219
       },
       "h2|48px|510|48px|-1.056px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 6,
@@ -1407,109 +1507,109 @@
         "chars": 30
       },
       "text|24px|400|31.92px|-0.288px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 184162.9921875,
-        "chars": 547
+        "count": 10,
+        "area": 376621.4921875,
+        "chars": 1045
       },
       "text|10px|400|14px|-0.15px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 16,
-        "area": 10450.5625,
-        "chars": 126
+        "count": 32,
+        "area": 20901.125,
+        "chars": 252
       },
       "text|16px|590|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 1094.6875,
-        "chars": 6
-      },
-      "text|15px|590|20px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 3346.5625,
-        "chars": 23
-      },
-      "text|12px|510|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 2883,
-        "chars": 28
-      },
-      "text|15px|300|20px|-0.06px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 60134.03125,
-        "chars": 378
-      },
-      "text|18px|400|28.8px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 20,
-        "area": 4882.5,
-        "chars": 20
-      },
-      "text|13px|400|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 8883.125,
-        "chars": 74
-      },
-      "text|10px|400|16px|-0.15px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 7,
-        "area": 2822.0625,
-        "chars": 48
-      },
-      "text|14px|510|32px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 4134.5,
-        "chars": 19
-      },
-      "text|13px|500|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 3496.875,
-        "chars": 25
-      },
-      "text|11px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 1694.8125,
-        "chars": 12
-      },
-      "text|13px|400|20px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 8,
-        "area": 162434.90625,
-        "chars": 620
-      },
-      "text|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 6240,
-        "chars": 32
-      },
-      "text|13px|500|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 4,
-        "area": 14464,
-        "chars": 134
-      },
-      "text|13px|400|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 13124,
+        "count": 3,
+        "area": 3284.0625,
         "chars": 18
       },
+      "text|15px|590|20px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 8,
+        "area": 6693.125,
+        "chars": 46
+      },
+      "text|12px|510|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 8,
+        "area": 5788,
+        "chars": 56
+      },
+      "text|15px|300|20px|-0.06px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 8,
+        "area": 120268.0625,
+        "chars": 756
+      },
+      "text|18px|400|28.8px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 40,
+        "area": 9765,
+        "chars": 40
+      },
+      "text|13px|400|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 8,
+        "area": 17766.25,
+        "chars": 148
+      },
+      "text|10px|400|16px|-0.15px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 14,
+        "area": 5644.125,
+        "chars": 96
+      },
+      "text|14px|510|32px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 8269,
+        "chars": 38
+      },
+      "text|13px|500|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 12,
+        "area": 53506.875,
+        "chars": 99
+      },
+      "text|11px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 5,
+        "area": 3601.4765625,
+        "chars": 30
+      },
+      "text|13px|400|20px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 17,
+        "area": 329999.8125,
+        "chars": 1295
+      },
+      "text|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 14,
+        "area": 21840,
+        "chars": 112
+      },
+      "text|13px|500|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 14,
+        "area": 50752,
+        "chars": 433
+      },
+      "text|13px|400|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 29649,
+        "chars": 42
+      },
       "text|13px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 1,
-        "area": 1608,
-        "chars": 15
+        "count": 2,
+        "area": 3216,
+        "chars": 30
       },
       "text|13px|400|16px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 3065.5,
-        "chars": 27
+        "count": 4,
+        "area": 6131,
+        "chars": 54
       },
       "text|13px|400|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 12,
-        "area": 17233.125,
-        "chars": 101
+        "count": 26,
+        "area": 35855.015625,
+        "chars": 212
       },
       "text|14px|400|21px|normal|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
-        "count": 1,
-        "area": 5779.25,
-        "chars": 43
+        "count": 2,
+        "area": 11558.5,
+        "chars": 86
       },
       "text|14px|400|24px|normal|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
-        "count": 172,
-        "area": 452811.75,
-        "chars": 1252
+        "count": 204,
+        "area": 475662,
+        "chars": 1385
       },
       "text|13px|510|32px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 1,
@@ -1522,9 +1622,9 @@
         "chars": 164
       },
       "text|14px|510|21px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 8069.25,
-        "chars": 22
+        "count": 8,
+        "area": 17735.15625,
+        "chars": 90
       },
       "h2|72px|510|72px|-1.584px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 1,
@@ -1532,19 +1632,84 @@
         "chars": 38
       },
       "button|16px|510|44px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 2,
-        "area": 11904.75,
-        "chars": 24
+        "count": 6,
+        "area": 35714.25,
+        "chars": 72
       },
       "h3|13px|510|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 5,
-        "area": 15600,
-        "chars": 38
+        "count": 17,
+        "area": 51285,
+        "chars": 124
       },
       "link|13px|400|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 36,
-        "area": 48048.4375,
-        "chars": 260
+        "count": 108,
+        "area": 146421.1875,
+        "chars": 780
+      },
+      "text|56px|510|61.6px|-1.232px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 80106.55908203125,
+        "chars": 101
+      },
+      "h2|32px|510|36px|-0.704px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 102816,
+        "chars": 124
+      },
+      "text|32px|510|36px|-0.704px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 15875.4375,
+        "chars": 30
+      },
+      "h2|40px|510|44px|-0.88px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 6,
+        "area": 175519.302734375,
+        "chars": 130
+      },
+      "text|20px|400|26.6px|-0.24px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 128695.3125,
+        "chars": 547
+      },
+      "text|38px|510|41.8px|-0.836px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 5,
+        "area": 36205.583740234375,
+        "chars": 99
+      },
+      "h2|24px|510|31.92px|-0.288px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 5,
+        "area": 122967.5859375,
+        "chars": 207
+      },
+      "text|24px|510|31.92px|-0.288px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 9423.640625,
+        "chars": 30
+      },
+      "text|12px|590|19.2px|-0.132px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 2579.2197265625,
+        "chars": 23
+      },
+      "text|11px|510|17.6px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 2917.263671875,
+        "chars": 28
+      },
+      "text|12px|300|19.2px|-0.048px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 45587.603515625,
+        "chars": 378
+      },
+      "text|12px|400|19.2px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 4504.322265625,
+        "chars": 37
+      },
+      "h2|38px|510|41.8px|-0.836px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 29926.5625,
+        "chars": 38
       }
     },
     "states": {},
@@ -1556,58 +1721,73 @@
     },
     "radii": {
       "6px": {
-        "count": 10,
-        "area": 2260740,
+        "count": 33,
+        "area": 3114758.1971435547,
         "chars": 0
       },
       "9999px": {
-        "count": 72,
-        "area": 112644.75,
-        "chars": 188
+        "count": 151,
+        "area": 226914.25,
+        "chars": 371
       },
       "12px": {
-        "count": 25,
-        "area": 13769274.609375,
+        "count": 56,
+        "area": 26165786.421875,
         "chars": 0
       },
       "8px": {
-        "count": 27,
-        "area": 3623132.4375,
-        "chars": 367
+        "count": 80,
+        "area": 8175363.984375,
+        "chars": 807
       },
       "2px": {
-        "count": 7,
-        "area": 6582.75,
-        "chars": 45
+        "count": 15,
+        "area": 14475.25,
+        "chars": 100
       },
       "400px": {
-        "count": 1,
-        "area": 160000,
+        "count": 3,
+        "area": 360000,
         "chars": 0
       },
       "4px": {
-        "count": 20,
-        "area": 187628.6875,
-        "chars": 32
+        "count": 45,
+        "area": 323648.2578125,
+        "chars": 90
       },
       "50%": {
-        "count": 28,
-        "area": 5413,
+        "count": 63,
+        "area": 11919,
         "chars": 0
       },
       "9px": {
-        "count": 18,
-        "area": 619489.3288574219,
+        "count": 38,
+        "area": 1278650.9899291992,
         "chars": 0
       },
       "16px": {
-        "count": 6,
-        "area": 1075268.375,
-        "chars": 14
+        "count": 18,
+        "area": 2736218.34375,
+        "chars": 42
       },
       "22px": {
-        "count": 2,
-        "area": 1702304.53125,
+        "count": 4,
+        "area": 2604115.90625,
+        "chars": 0
+      },
+      "0px": {
+        "count": 10,
+        "area": 31411.75,
+        "chars": 21
+      },
+      "999px": {
+        "count": 16,
+        "area": 3712,
+        "chars": 0
+      },
+      "3px": {
+        "count": 4,
+        "area": 15465.3125,
         "chars": 0
       },
       "1.5px": {
@@ -1615,76 +1795,71 @@
         "area": 31.5,
         "chars": 0
       },
-      "0px": {
-        "count": 7,
-        "area": 17251.75,
-        "chars": 21
+      "5px": {
+        "count": 3,
+        "area": 704.0625,
+        "chars": 6
       },
-      "999px": {
-        "count": 7,
-        "area": 1792,
-        "chars": 0
-      },
-      "3px": {
-        "count": 2,
-        "area": 7732.65625,
+      "24px": {
+        "count": 1,
+        "area": 169,
         "chars": 0
       }
     },
     "shadows": {
       "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px": {
-        "count": 2,
-        "area": 7916,
-        "chars": 18
+        "count": 6,
+        "area": 23748,
+        "chars": 54
       },
       "rgba(0, 0, 0, 0.2) 0px 0px 0px 2px": {
-        "count": 1,
-        "area": 754688,
+        "count": 3,
+        "area": 1698048,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset": {
-        "count": 4,
-        "area": 4060,
+        "count": 12,
+        "area": 9135,
         "chars": 0
       },
       "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px": {
-        "count": 6,
-        "area": 247609.32885742188,
-        "chars": 349
+        "count": 16,
+        "area": 548950.9899291992,
+        "chars": 753
       },
       "rgb(35, 37, 42) 0px 0px 0px 1px inset": {
-        "count": 3,
-        "area": 2465677.5,
+        "count": 6,
+        "area": 3763551.5,
         "chars": 0
       },
       "rgba(0, 0, 0, 0.4) 0px 1px 0px 0px": {
-        "count": 1,
-        "area": 29158,
+        "count": 3,
+        "area": 80032,
         "chars": 0
       },
       "rgba(94, 106, 210, 0.4) 0px 0px 0px 3px": {
-        "count": 1,
-        "area": 1820,
+        "count": 3,
+        "area": 5114.1971435546875,
         "chars": 0
       },
       "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset": {
-        "count": 7,
-        "area": 59208,
+        "count": 14,
+        "area": 118416,
         "chars": 0
       },
       "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px": {
-        "count": 4,
-        "area": 896000,
+        "count": 9,
+        "area": 1844000,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset": {
-        "count": 4,
-        "area": 1024,
+        "count": 9,
+        "area": 2112,
         "chars": 0
       },
       "rgb(35, 37, 42) 0px 0px 0px 1px inset, rgba(8, 9, 10, 0.8) 0px 0px 32px 0px": {
-        "count": 1,
-        "area": 752640,
+        "count": 2,
+        "area": 1151360,
         "chars": 0
       },
       "rgb(35, 37, 42) 1px 0px 0px 0px inset": {
@@ -1693,114 +1868,124 @@
         "chars": 0
       },
       "rgba(255, 255, 255, 0.03) 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.04) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.6) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 4px 0px": {
+        "count": 3,
+        "area": 18966.75,
+        "chars": 39
+      },
+      "rgba(0, 0, 0, 0.06) 0px 4px 4px -1px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px": {
         "count": 1,
-        "area": 6322.25,
-        "chars": 13
+        "area": 169,
+        "chars": 0
       }
     },
     "spacings": {
       "1": {
-        "count": 6,
+        "count": 17,
         "area": 0,
         "chars": 0
       },
       "2": {
-        "count": 40,
+        "count": 117,
         "area": 0,
         "chars": 0
       },
       "3": {
-        "count": 14,
+        "count": 40,
         "area": 0,
         "chars": 0
       },
       "4": {
-        "count": 244,
+        "count": 525,
         "area": 0,
         "chars": 0
       },
       "5": {
-        "count": 12,
+        "count": 30,
         "area": 0,
         "chars": 0
       },
       "6": {
-        "count": 205,
+        "count": 511,
         "area": 0,
         "chars": 0
       },
       "7": {
-        "count": 29,
+        "count": 81,
         "area": 0,
         "chars": 0
       },
       "8": {
-        "count": 326,
+        "count": 812,
         "area": 0,
         "chars": 0
       },
       "10": {
-        "count": 37,
+        "count": 84,
         "area": 0,
         "chars": 0
       },
       "11": {
-        "count": 16,
+        "count": 43,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 76,
+        "count": 196,
         "area": 0,
         "chars": 0
       },
       "14": {
-        "count": 13,
+        "count": 30,
         "area": 0,
         "chars": 0
       },
       "15": {
-        "count": 3,
+        "count": 10,
         "area": 0,
         "chars": 0
       },
       "16": {
-        "count": 18,
+        "count": 67,
         "area": 0,
         "chars": 0
       },
       "18": {
-        "count": 4,
+        "count": 5,
         "area": 0,
         "chars": 0
       },
       "19": {
-        "count": 9,
+        "count": 23,
         "area": 0,
         "chars": 0
       },
       "20": {
-        "count": 13,
+        "count": 43,
         "area": 0,
         "chars": 0
       },
       "23": {
-        "count": 2,
+        "count": 7,
         "area": 0,
         "chars": 0
       },
       "24": {
-        "count": 16,
+        "count": 61,
         "area": 0,
         "chars": 0
       },
       "26": {
-        "count": 1,
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "28": {
+        "count": 9,
         "area": 0,
         "chars": 0
       },
       "29": {
-        "count": 1,
+        "count": 3,
         "area": 0,
         "chars": 0
       },
@@ -1810,27 +1995,32 @@
         "chars": 0
       },
       "32": {
-        "count": 90,
+        "count": 110,
         "area": 0,
         "chars": 0
       },
-      "35": {
-        "count": 5,
-        "area": 0,
-        "chars": 0
-      },
-      "36": {
-        "count": 15,
-        "area": 0,
-        "chars": 0
-      },
-      "39": {
+      "33": {
         "count": 1,
         "area": 0,
         "chars": 0
       },
+      "35": {
+        "count": 13,
+        "area": 0,
+        "chars": 0
+      },
+      "36": {
+        "count": 30,
+        "area": 0,
+        "chars": 0
+      },
+      "39": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
       "40": {
-        "count": 7,
+        "count": 38,
         "area": 0,
         "chars": 0
       },
@@ -1840,17 +2030,22 @@
         "chars": 0
       },
       "47": {
-        "count": 1,
+        "count": 2,
         "area": 0,
         "chars": 0
       },
       "48": {
-        "count": 4,
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "51": {
+        "count": 1,
         "area": 0,
         "chars": 0
       },
       "56": {
-        "count": 1,
+        "count": 4,
         "area": 0,
         "chars": 0
       },
@@ -1859,23 +2054,28 @@
         "area": 0,
         "chars": 0
       },
+      "63": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
       "64": {
-        "count": 4,
+        "count": 8,
         "area": 0,
         "chars": 0
       },
       "69": {
-        "count": 1,
+        "count": 2,
         "area": 0,
         "chars": 0
       },
       "71": {
-        "count": 1,
+        "count": 2,
         "area": 0,
         "chars": 0
       },
       "72": {
-        "count": 1,
+        "count": 2,
         "area": 0,
         "chars": 0
       },
@@ -1885,7 +2085,7 @@
         "chars": 0
       },
       "79": {
-        "count": 1,
+        "count": 3,
         "area": 0,
         "chars": 0
       },
@@ -1894,12 +2094,22 @@
         "area": 0,
         "chars": 0
       },
-      "93": {
+      "91": {
         "count": 1,
         "area": 0,
         "chars": 0
       },
+      "93": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
       "95": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
         "count": 1,
         "area": 0,
         "chars": 0
@@ -1909,8 +2119,18 @@
         "area": 0,
         "chars": 0
       },
+      "127": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
       "128": {
-        "count": 4,
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "131": {
+        "count": 1,
         "area": 0,
         "chars": 0
       },
@@ -1920,31 +2140,31 @@
         "chars": 0
       },
       "159": {
-        "count": 3,
+        "count": 5,
         "area": 0,
         "chars": 0
       }
     },
     "interactiveBg": {
       "rgb(229, 229, 230)": {
-        "count": 2,
-        "area": 7916,
-        "chars": 18
+        "count": 6,
+        "area": 23748,
+        "chars": 54
       },
       "rgba(255, 255, 255, 0.02)": {
-        "count": 4,
-        "area": 3136,
+        "count": 8,
+        "area": 6272,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.04)": {
-        "count": 1,
-        "area": 5824,
+        "count": 3,
+        "area": 13104,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.05)": {
-        "count": 2,
-        "area": 7346.25,
-        "chars": 13
+        "count": 6,
+        "area": 21798.75,
+        "chars": 39
       },
       "rgb(228, 242, 34)": {
         "count": 1,
@@ -1954,88 +2174,88 @@
     },
     "interactiveRadius": {
       "6px": {
-        "count": 1,
-        "area": 3328,
+        "count": 3,
+        "area": 9984,
         "chars": 0
       },
       "9999px": {
-        "count": 20,
-        "area": 40181.75,
-        "chars": 79
+        "count": 39,
+        "area": 80189.25,
+        "chars": 153
       },
       "0px": {
-        "count": 71,
-        "area": 331558.9445800781,
-        "chars": 260
+        "count": 197,
+        "area": 1331297.093232423,
+        "chars": 780
       },
       "8px": {
-        "count": 16,
-        "area": 706524.4375,
-        "chars": 18
+        "count": 44,
+        "area": 802479.984375,
+        "chars": 54
       },
       "16px": {
-        "count": 2,
-        "area": 4062.375,
-        "chars": 14
+        "count": 6,
+        "area": 9140.34375,
+        "chars": 42
       },
       "50%": {
-        "count": 1,
-        "area": 1024,
+        "count": 3,
+        "area": 2832,
         "chars": 0
       },
       "4px": {
-        "count": 12,
-        "area": 136846.375,
+        "count": 26,
+        "area": 220002.125,
         "chars": 0
       }
     },
     "interactiveFg": {
       "rgb(247, 248, 248)": {
-        "count": 20,
-        "area": 995438.796875,
-        "chars": 13
+        "count": 51,
+        "area": 1929313.90625,
+        "chars": 39
       },
       "rgb(138, 143, 152)": {
-        "count": 45,
-        "area": 68168.875,
-        "chars": 290
+        "count": 128,
+        "area": 178372.3125,
+        "chars": 822
       },
       "rgb(8, 9, 10)": {
-        "count": 2,
-        "area": 7916,
-        "chars": 18
+        "count": 6,
+        "area": 23748,
+        "chars": 54
       },
       "rgb(255, 255, 255)": {
-        "count": 31,
-        "area": 64475.772705078125,
+        "count": 72,
+        "area": 134382.17135742307,
         "chars": 0
       },
       "rgb(98, 102, 109)": {
-        "count": 11,
-        "area": 18616.0625,
-        "chars": 36
+        "count": 20,
+        "area": 35256.0625,
+        "chars": 72
       },
       "rgb(226, 228, 231)": {
-        "count": 1,
-        "area": 784,
+        "count": 2,
+        "area": 1568,
         "chars": 0
       },
       "rgb(208, 214, 224)": {
-        "count": 13,
-        "area": 68126.375,
-        "chars": 14
+        "count": 39,
+        "area": 153284.34375,
+        "chars": 42
       }
     },
     "headingSizes": {
       "20px": {
-        "count": 1,
-        "area": 16747.82958984375,
-        "chars": 17
+        "count": 3,
+        "area": 37682.61657714844,
+        "chars": 51
       },
       "16px": {
-        "count": 1,
-        "area": 17633.4375,
-        "chars": 8
+        "count": 3,
+        "area": 39675.234375,
+        "chars": 24
       },
       "48px": {
         "count": 6,
@@ -2048,32 +2268,71 @@
         "chars": 38
       },
       "13px": {
+        "count": 17,
+        "area": 51285,
+        "chars": 124
+      },
+      "32px": {
+        "count": 1,
+        "area": 102816,
+        "chars": 124
+      },
+      "40px": {
+        "count": 6,
+        "area": 175519.302734375,
+        "chars": 130
+      },
+      "24px": {
         "count": 5,
-        "area": 15600,
+        "area": 122967.5859375,
+        "chars": 207
+      },
+      "38px": {
+        "count": 1,
+        "area": 29926.5625,
         "chars": 38
       }
     },
     "headingFamilies": {
       "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
-        "count": 14,
-        "area": 524391.7397460938,
-        "chars": 317
+        "count": 43,
+        "area": 1034282.7747802734,
+        "chars": 952
       }
     },
     "headingWeights": {
       "510": {
-        "count": 12,
-        "area": 490010.47265625,
-        "chars": 292
+        "count": 37,
+        "area": 956924.923828125,
+        "chars": 877
       },
       "590": {
-        "count": 2,
-        "area": 34381.26708984375,
-        "chars": 25
+        "count": 6,
+        "area": 77357.85095214844,
+        "chars": 75
       }
     },
     "pageBg": "rgb(8, 9, 10)",
-    "elementCount": 4993,
-    "sampled": 2923
-  }
+    "elementCount": 15265,
+    "sampled": 6765,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 5052
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 5079
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 5134
+      }
+    ],
+    "mergedFrom": 3
+  },
+  "darkHarvest": null
 }

@@ -51,6 +51,10 @@ npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
   loosening the schema when a file fails.
 - Playwright is a **devDependency**. The ingestion pipeline is never part of the
   web app, so the site build must never import from `src/extract/`.
+- `extract` sweeps **1440 / 768 / 390 under light and dark** — six harvests per
+  site. Widths merge per scheme (`src/extract/merge.mjs`), schemes cluster
+  separately. `--viewport WxH` pins a single width, `--light-only` skips the dark
+  pass; both make a run roughly 6x faster when iterating.
 - `extract` accepts several urls at once; one failure doesn't abort the rest and
   the exit code is non-zero if any failed. `--json` prints the token set on
   stdout while progress goes to stderr, so it pipes. `--slug` overrides the
@@ -158,6 +162,18 @@ keys on `kind|size|weight|lineHeight|tracking|family` so type properties that
 page uses 16px and weight 600 says nothing about whether 16px is ever bold — so
 any typography role built from them is a combination that may never have existed.
 Family is last in the key because a font stack can contain `|`.
+
+### `src/extract/merge.mjs` — one harvest per scheme
+
+Sums only the value histograms across viewport widths. Everything else comes from
+the primary (widest) capture, for a specific reason: `document.styleSheets` does
+not change with viewport, so the state rules are identical at every width and
+summing them would triple their counts while adding nothing.
+
+Accepts a known bias: `area` weights scale with the viewport, so the widest
+capture dominates any area-ranked role. That is the right default — the widest
+layout is canonical — but a mobile-only surface can be out-weighed by the same
+element at desktop.
 
 ### `src/extract/color.mjs` — the math
 

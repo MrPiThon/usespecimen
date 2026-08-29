@@ -22,16 +22,25 @@ typography:
     xs: '13.3333px'
     sm: '16px'
     base: '19px'
-    lg: '24px'
-    xl: '28.5px'
-    2xl: '36px'
-    3xl: '64px'
+    lg: '21px'
+    xl: '24px'
+    2xl: '28.5px'
+    3xl: '32px'
+    4xl: '36px'
+    5xl: '40px'
+    6xl: '50px'
+    7xl: '64px'
   roles:
     body:
       fontFamily: '"GDS Transport", arial, sans-serif'
       fontSize: '19px'
       fontWeight: 400
       lineHeight: 1.32
+    body-sm:
+      fontFamily: '"GDS Transport", arial, sans-serif'
+      fontSize: '16px'
+      fontWeight: 400
+      lineHeight: 1.25
     h2:
       fontFamily: '"GDS Transport", arial, sans-serif'
       fontSize: '36px'
@@ -48,16 +57,15 @@ typography:
       fontWeight: 700
       lineHeight: 1.32
 spacing:
-  base: '5px'
   s1: '5px'
-  s2: '6px'
-  s3: '8px'
+  s2: '8px'
+  s3: '9px'
   s4: '10px'
   s5: '15px'
-  s6: '16px'
-  s7: '19px'
-  s8: '20px'
-  s9: '30px'
+  s6: '19px'
+  s7: '20px'
+  s8: '30px'
+  s9: '50px'
   s10: '60px'
 components:
   button:
@@ -94,10 +102,10 @@ components:
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-29T00:12:13.375Z'
-  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
+  capturedAt: '2026-08-29T00:16:58.377Z'
+  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 3
-  clusterVersion: 8
+  clusterVersion: 9
 ---
 
 ## Overview

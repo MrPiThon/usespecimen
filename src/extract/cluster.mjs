@@ -857,13 +857,19 @@ export function roundedTokens(capture) {
   // is the shape token; genuinely square systems fall out as `sharp`.
   const button = entriesOf(capture.interactiveRadius, 'count')
     .find(e => parseFloat(e.value) > 0)?.value ?? null;
+  // The OBSERVED pill value, not a conventional 9999px. Browsers serialise very
+  // large radii their own way — Chrome hands back "3.35544e+07px" — and that
+  // ugly string is what the site actually declares.
+  const pillValue = all.find(e => isPillValue(e.value))?.value
+    ?? (button && isPillValue(button) ? button : null);
 
   return {
     // Note: harvest gates on `borderRadius` but keys on `borderTopLeftRadius`,
     // so asymmetric radii are recorded by one corner only.
     scale: ascending.map((r, i) => ({ name: RADIUS_NAMES[i], px: r.px, count: r.count })),
     button,
-    pill: all.some(e => isPillValue(e.value)) || (!!button && isPillValue(button)),
+    pill: Boolean(pillValue),
+    pillValue,
     sharp: all.length === 0,
   };
 }
@@ -1039,8 +1045,10 @@ export function cluster(capture) {
     //    angles applied to OKLCH — every red was labelled orange, so the `hue`
     //    facet moves on any palette containing one.
     // 8: adds states from harvest v3 stylesheet rules.
+    // 9: rounded.pillValue records the observed pill radius, so nothing
+    //    downstream has to invent a conventional 9999px.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 8,
+    clusterVersion: 9,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-08-29T00:12:07.814Z",
+  "capturedAt": "2026-08-29T00:16:40.277Z",
   "tool": "@usespecimen/extractor@0.0.0",
-  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
     "url": "https://stripe.com/",
     "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 14668,
-    "elementCount": 2862,
-    "sampled": 1913,
-    "sampleRatio": 0.668
+    "elementCount": 8688,
+    "sampled": 5764,
+    "sampleRatio": 0.663
   },
   "harvestVersion": 3,
-  "clusterVersion": 8,
+  "clusterVersion": 9,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,36 +32,38 @@
       },
       "foreground": {
         "hex": "#061b31",
-        "weightShare": 0.2421,
+        "weightShare": 0.2266,
         "variants": []
       },
       "card": {
         "hex": "#e5edf5",
-        "weightShare": 0.1263,
+        "weightShare": 0.1461,
         "variants": [
-          "#e3ecf7"
+          "#e3ecf7",
+          "#eaeff7",
+          "#ecf0f4"
         ]
       },
       "mutedForeground": {
         "hex": "#50617a",
-        "weightShare": 0.2857,
+        "weightShare": 0.2987,
         "variants": []
       },
       "primary": {
         "hex": "#533afd",
-        "weightShare": 0.6499,
+        "weightShare": 0.6809,
         "variants": [],
         "source": "interactiveBg",
-        "occurrences": 7
+        "occurrences": 19
       },
       "primaryForeground": {
         "hex": "#ffffff",
-        "weightShare": 0.0855,
+        "weightShare": 0.0832,
         "variants": []
       },
       "border": {
         "hex": "#e5edf5",
-        "weightShare": 0.6026,
+        "weightShare": 0.5981,
         "variants": []
       }
     },
@@ -71,13 +73,13 @@
           "name": "surface-1",
           "hex": "#f8fafd",
           "deltaL": 0.016,
-          "areaShare": 0.1157
+          "areaShare": 0.1337
         },
         {
           "name": "surface-2",
           "hex": "#e5edf5",
           "deltaL": 0.058,
-          "areaShare": 0.1263
+          "areaShare": 0.1461
         }
       ],
       "text": [
@@ -85,19 +87,19 @@
           "name": "text-1",
           "hex": "#061b31",
           "contrast": 17.37,
-          "charShare": 0.2421
+          "charShare": 0.2266
         },
         {
           "name": "text-2",
           "hex": "#50617a",
           "contrast": 6.3,
-          "charShare": 0.2857
+          "charShare": 0.2987
         },
         {
           "name": "text-3",
           "hex": "#64748d",
           "contrast": 4.75,
-          "charShare": 0.2191
+          "charShare": 0.218
         }
       ]
     },
@@ -108,7 +110,7 @@
         "hue": "neutral",
         "lightness": 1,
         "chroma": 0,
-        "count": 26
+        "count": 88
       },
       {
         "hex": "#e5edf5",
@@ -116,15 +118,7 @@
         "hue": "neutral",
         "lightness": 0.942,
         "chroma": 0.014,
-        "count": 19
-      },
-      {
-        "hex": "#0d1738",
-        "role": null,
-        "hue": "blue",
-        "lightness": 0.217,
-        "chroma": 0.066,
-        "count": 1
+        "count": 75
       },
       {
         "hex": "#f8fafd",
@@ -132,7 +126,15 @@
         "hue": "neutral",
         "lightness": 0.984,
         "chroma": 0.005,
-        "count": 10
+        "count": 32
+      },
+      {
+        "hex": "#0d1738",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.217,
+        "chroma": 0.066,
+        "count": 5
       },
       {
         "hex": "#533afd",
@@ -140,7 +142,7 @@
         "hue": "purple",
         "lightness": 0.521,
         "chroma": 0.268,
-        "count": 7
+        "count": 19
       },
       {
         "hex": "#ffe0d1",
@@ -148,14 +150,14 @@
         "hue": "orange",
         "lightness": 0.928,
         "chroma": 0.04,
-        "count": 2
+        "count": 6
       },
       {
-        "hex": "#e2e4ff",
+        "hex": "#0a2540",
         "role": null,
-        "hue": "purple",
-        "lightness": 0.926,
-        "chroma": 0.037,
+        "hue": "blue",
+        "lightness": 0.26,
+        "chroma": 0.06,
         "count": 3
       },
       {
@@ -164,15 +166,7 @@
         "hue": "neutral",
         "lightness": 0.94,
         "chroma": 0.03,
-        "count": 3
-      },
-      {
-        "hex": "#0a2540",
-        "role": null,
-        "hue": "blue",
-        "lightness": 0.26,
-        "chroma": 0.06,
-        "count": 1
+        "count": 8
       },
       {
         "hex": "#50617a",
@@ -180,23 +174,15 @@
         "hue": "blue",
         "lightness": 0.488,
         "chroma": 0.045,
-        "count": 153
+        "count": 476
       },
       {
-        "hex": "#000000",
+        "hex": "#e2e4ff",
         "role": null,
-        "hue": "neutral",
-        "lightness": 0,
-        "chroma": 0,
-        "count": 1
-      },
-      {
-        "hex": "#00d66f",
-        "role": null,
-        "hue": "green",
-        "lightness": 0.767,
-        "chroma": 0.201,
-        "count": 1
+        "hue": "purple",
+        "lightness": 0.926,
+        "chroma": 0.037,
+        "count": 6
       },
       {
         "hex": "#061b31",
@@ -204,7 +190,7 @@
         "hue": "blue",
         "lightness": 0.219,
         "chroma": 0.051,
-        "count": 106
+        "count": 348
       },
       {
         "hex": "#64748d",
@@ -212,7 +198,31 @@
         "hue": "blue",
         "lightness": 0.555,
         "chroma": 0.044,
-        "count": 51
+        "count": 109
+      },
+      {
+        "hex": "#7f7dfc",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.653,
+        "chroma": 0.184,
+        "count": 31
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#00d66f",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.767,
+        "chroma": 0.201,
+        "count": 3
       },
       {
         "hex": "#839bc8",
@@ -220,7 +230,7 @@
         "hue": "blue",
         "lightness": 0.688,
         "chroma": 0.072,
-        "count": 4
+        "count": 12
       },
       {
         "hex": "#a3b5d6",
@@ -228,7 +238,7 @@
         "hue": "blue",
         "lightness": 0.77,
         "chroma": 0.051,
-        "count": 3
+        "count": 9
       },
       {
         "hex": "#3c4f69",
@@ -236,15 +246,7 @@
         "hue": "blue",
         "lightness": 0.423,
         "chroma": 0.05,
-        "count": 17
-      },
-      {
-        "hex": "#8087ff",
-        "role": null,
-        "hue": "purple",
-        "lightness": 0.673,
-        "chroma": 0.175,
-        "count": 4
+        "count": 51
       },
       {
         "hex": "#1a2c44",
@@ -252,23 +254,15 @@
         "hue": "blue",
         "lightness": 0.29,
         "chroma": 0.05,
+        "count": 33
+      },
+      {
+        "hex": "#8087ff",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.673,
+        "chroma": 0.175,
         "count": 11
-      },
-      {
-        "hex": "#7d8ba4",
-        "role": null,
-        "hue": "blue",
-        "lightness": 0.634,
-        "chroma": 0.041,
-        "count": 7
-      },
-      {
-        "hex": "#81b81a",
-        "role": null,
-        "hue": "green",
-        "lightness": 0.718,
-        "chroma": 0.182,
-        "count": 1
       },
       {
         "hex": "#273951",
@@ -276,7 +270,15 @@
         "hue": "blue",
         "lightness": 0.341,
         "chroma": 0.049,
-        "count": 16
+        "count": 48
+      },
+      {
+        "hex": "#81b81a",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.718,
+        "chroma": 0.182,
+        "count": 2
       },
       {
         "hex": "#2ca25e",
@@ -284,7 +286,7 @@
         "hue": "green",
         "lightness": 0.631,
         "chroma": 0.145,
-        "count": 1
+        "count": 3
       },
       {
         "hex": "#ff6118",
@@ -292,19 +294,20 @@
         "hue": "orange",
         "lightness": 0.69,
         "chroma": 0.206,
-        "count": 8
+        "count": 24
       }
     ],
-    "semantic": {},
-    "accentRejected": [
-      {
-        "hex": "#0a2540",
-        "occurrences": 1
+    "semantic": {
+      "success": {
+        "hex": "#00d66f",
+        "occurrences": 3,
+        "paintsBorder": false
       }
-    ],
+    },
+    "accentRejected": [],
     "clusterCounts": {
-      "bg": 12,
-      "text": 16,
+      "bg": 13,
+      "text": 17,
       "border": 9,
       "interactive": 4
     }
@@ -338,92 +341,92 @@
     ],
     "scale": [
       {
-        "name": "4xs",
-        "px": 8,
-        "rem": 0.5,
-        "weightShare": 0.0072,
-        "variants": []
-      },
-      {
         "name": "3xs",
         "px": 9,
         "rem": 0.563,
-        "weightShare": 0.0299,
+        "weightShare": 0.0347,
         "variants": []
       },
       {
         "name": "2xs",
         "px": 10,
         "rem": 0.625,
-        "weightShare": 0.0677,
+        "weightShare": 0.0681,
         "variants": []
       },
       {
         "name": "xs",
-        "px": 12,
-        "rem": 0.75,
-        "weightShare": 0.0177,
+        "px": 11,
+        "rem": 0.688,
+        "weightShare": 0.0143,
         "variants": []
       },
       {
         "name": "sm",
-        "px": 14,
-        "rem": 0.875,
-        "weightShare": 0.0183,
+        "px": 12,
+        "rem": 0.75,
+        "weightShare": 0.0208,
         "variants": []
       },
       {
         "name": "base",
         "px": 16,
         "rem": 1,
-        "weightShare": 0.3855,
+        "weightShare": 0.4027,
         "variants": []
       },
       {
         "name": "lg",
         "px": 18,
         "rem": 1.125,
-        "weightShare": 0.0548,
+        "weightShare": 0.0918,
         "variants": []
       },
       {
         "name": "xl",
         "px": 20,
         "rem": 1.25,
-        "weightShare": 0.0078,
+        "weightShare": 0.1341,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 22,
         "rem": 1.375,
-        "weightShare": 0.1641,
+        "weightShare": 0.0899,
         "variants": []
       },
       {
         "name": "3xl",
         "px": 26,
         "rem": 1.625,
-        "weightShare": 0.1583,
+        "weightShare": 0.0544,
         "variants": []
       },
       {
         "name": "4xl",
-        "px": 32,
-        "rem": 2,
-        "weightShare": 0.0442,
+        "px": 28,
+        "rem": 1.75,
+        "weightShare": 0.0171,
         "variants": []
       },
       {
         "name": "5xl",
+        "px": 32,
+        "rem": 2,
+        "weightShare": 0.0148,
+        "variants": []
+      },
+      {
+        "name": "6xl",
         "px": 48,
         "rem": 3,
-        "weightShare": 0.037,
+        "weightShare": 0.0133,
         "variants": []
       }
     ],
     "scaleTruncated": true,
-    "distinctSizes": 15,
+    "distinctSizes": 19,
     "roles": {
       "body": {
         "fontFamily": "sohne-var",
@@ -433,10 +436,32 @@
         "fontWeight": 300,
         "lineHeight": 1.4,
         "letterSpacing": null,
-        "elements": 24,
-        "chars": 1544
+        "elements": 81,
+        "chars": 4976
       },
       "body-sm": {
+        "fontFamily": "sohne-var",
+        "fontStack": "sohne-var, \"SF Pro Display\", sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 300,
+        "lineHeight": 1.45,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 291
+      },
+      "caption": {
+        "fontFamily": "sohne-var",
+        "fontStack": "sohne-var, \"SF Pro Display\", sans-serif",
+        "class": "sans",
+        "fontSize": "11px",
+        "fontWeight": 300,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 36,
+        "chars": 328
+      },
+      "caption-sm": {
         "fontFamily": "sohne-var",
         "fontStack": "sohne-var, \"SF Pro Display\", sans-serif",
         "class": "sans",
@@ -444,8 +469,8 @@
         "fontWeight": 300,
         "lineHeight": 1.15,
         "letterSpacing": "0.1px",
-        "elements": 17,
-        "chars": 201
+        "elements": 51,
+        "chars": 603
       },
       "body-lg": {
         "fontFamily": "sohne-var",
@@ -455,10 +480,21 @@
         "fontWeight": 300,
         "lineHeight": 1.4,
         "letterSpacing": null,
-        "elements": 7,
-        "chars": 566
+        "elements": 20,
+        "chars": 2829
       },
       "lead": {
+        "fontFamily": "sohne-var",
+        "fontStack": "sohne-var, \"SF Pro Display\", sans-serif",
+        "class": "sans",
+        "fontSize": "20px",
+        "fontWeight": 300,
+        "lineHeight": 1.2,
+        "letterSpacing": "-0.2px",
+        "elements": 20,
+        "chars": 2092
+      },
+      "lead-lg": {
         "fontFamily": "sohne-var",
         "fontStack": "sohne-var, \"SF Pro Display\", sans-serif",
         "class": "sans",
@@ -466,17 +502,17 @@
         "fontWeight": 300,
         "lineHeight": 1.1,
         "letterSpacing": "-0.22px",
-        "elements": 8,
-        "chars": 1216
+        "elements": 12,
+        "chars": 1670
       },
       "h2": {
         "fontFamily": "sohne-var",
         "fontStack": "sohne-var, \"SF Pro Display\", sans-serif",
         "class": "sans",
-        "fontSize": "32px",
+        "fontSize": "22px",
         "fontWeight": 300,
-        "lineHeight": 1.1,
-        "letterSpacing": "-0.64px",
+        "lineHeight": 1.2,
+        "letterSpacing": "-0.22px",
         "elements": 4,
         "chars": 145
       },
@@ -488,8 +524,8 @@
         "fontWeight": 300,
         "lineHeight": 1.1,
         "letterSpacing": "-0.22px",
-        "elements": 12,
-        "chars": 645
+        "elements": 18,
+        "chars": 906
       },
       "h4": {
         "fontFamily": "sohne-var",
@@ -499,8 +535,8 @@
         "fontWeight": 300,
         "lineHeight": 1.4,
         "letterSpacing": null,
-        "elements": 8,
-        "chars": 513
+        "elements": 17,
+        "chars": 1082
       },
       "button": {
         "fontFamily": "sohne-var",
@@ -521,32 +557,32 @@
         "fontWeight": 300,
         "lineHeight": 1.25,
         "letterSpacing": null,
-        "elements": 85,
-        "chars": 1091
+        "elements": 255,
+        "chars": 3273
       }
     },
     "rolesAvailable": true,
-    "distinctStyles": 62
+    "distinctStyles": 89
   },
   "spacing": {
     "base": 4,
-    "gridConfidence": 0.789,
+    "gridConfidence": 0.786,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.646
+        "share": 0.664
       },
       {
         "base": 6,
-        "share": 0.211
+        "share": 0.226
       },
       {
         "base": 5,
-        "share": 0.095
+        "share": 0.1
       },
       {
         "base": 4,
-        "share": 0.789
+        "share": 0.786
       }
     ],
     "scale": [
@@ -561,48 +597,53 @@
       40,
       64
     ],
-    "distinctValues": 29
+    "distinctValues": 32
   },
   "rounded": {
     "scale": [
       {
         "name": "sm",
-        "px": 4,
-        "count": 58
+        "px": 1,
+        "count": 31
       },
       {
         "name": "md",
-        "px": 5,
-        "count": 6
+        "px": 4,
+        "count": 151
       },
       {
         "name": "lg",
-        "px": 6,
-        "count": 35
+        "px": 5,
+        "count": 30
       },
       {
         "name": "xl",
-        "px": 8,
-        "count": 4
+        "px": 6,
+        "count": 130
       }
     ],
     "button": "4px",
     "pill": true,
+    "pillValue": "100%",
     "sharp": false
   },
   "elevation": {
     "shadows": [
       {
+        "value": "rgba(0, 0, 0, 0.1) 0px 20.187px 40.374px -20.187px",
+        "count": 6
+      },
+      {
         "value": "rgba(50, 50, 93, 0.12) 0px 16px 32px 0px",
-        "count": 2
+        "count": 6
       },
       {
         "value": "rgba(23, 23, 23, 0.06) 0px 3px 6px 0px",
-        "count": 1
+        "count": 3
       },
       {
         "value": "rgba(23, 23, 23, 0.08) 0px 15px 35px 0px",
-        "count": 1
+        "count": 3
       }
     ],
     "flat": false
@@ -686,11 +727,12 @@
     "minRatio": 1.18
   },
   "warnings": [
-    "Ignored #0a2540 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
-    "15 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "19 distinct type sizes collapsed to 12; the site may not have a real type scale.",
     "Interaction states unavailable: all 7 stylesheets are cross-origin, so hover, focus and active could not be read at all.",
-    "Strided sample: 1913 of 2862 elements. Weights are relative only."
+    "Strided sample: 5764 of 8688 elements. Weights are relative only."
   ],
+  "supportsDark": false,
+  "dark": null,
   "harvest": {
     "harvestVersion": 3,
     "url": "https://stripe.com/",
@@ -702,64 +744,64 @@
     "docHeight": 14668,
     "textColors": {
       "rgb(6, 27, 49)": {
-        "count": 106,
-        "area": 1017469.7333984375,
-        "chars": 2746
+        "count": 348,
+        "area": 2377787.5711987168,
+        "chars": 7665
       },
       "rgb(255, 255, 255)": {
-        "count": 23,
-        "area": 233508.84765625,
-        "chars": 461
+        "count": 85,
+        "area": 756100.5017089844,
+        "chars": 1779
       },
       "rgb(100, 116, 141)": {
-        "count": 51,
-        "area": 1024061.0922851562,
-        "chars": 2485
+        "count": 109,
+        "area": 2405379.832041951,
+        "chars": 7374
       },
       "rgb(129, 184, 26)": {
-        "count": 1,
-        "area": 159410.8828125,
-        "chars": 125
+        "count": 2,
+        "area": 291459.8671875,
+        "chars": 250
       },
       "rgb(45, 37, 100)": {
-        "count": 1,
-        "area": 55873.140625,
-        "chars": 46
+        "count": 3,
+        "area": 141668.84155273438,
+        "chars": 138
       },
       "rgba(0, 14, 255, 0.5)": {
-        "count": 1,
-        "area": 159410.8828125,
-        "chars": 125
+        "count": 2,
+        "area": 291459.8671875,
+        "chars": 250
       },
       "rgb(83, 58, 253)": {
-        "count": 41,
-        "area": 160635.78125,
-        "chars": 579
+        "count": 109,
+        "area": 431773.40625,
+        "chars": 1514
       },
       "rgb(26, 44, 68)": {
-        "count": 10,
-        "area": 31296,
-        "chars": 124
+        "count": 30,
+        "area": 61238.600505270064,
+        "chars": 372
       },
       "rgb(39, 57, 81)": {
-        "count": 16,
-        "area": 7647.203125,
-        "chars": 108
+        "count": 48,
+        "area": 16897.05653082952,
+        "chars": 324
       },
       "rgb(80, 97, 122)": {
-        "count": 153,
-        "area": 615429.2143554688,
-        "chars": 3240
+        "count": 476,
+        "area": 1845455.610025215,
+        "chars": 10104
       },
       "rgb(255, 97, 24)": {
-        "count": 8,
-        "area": 3958.5,
-        "chars": 48
+        "count": 24,
+        "area": 7974.960559312254,
+        "chars": 144
       },
       "rgb(60, 79, 105)": {
-        "count": 16,
-        "area": 21530.125,
-        "chars": 169
+        "count": 48,
+        "area": 40332.02619604021,
+        "chars": 507
       },
       "rgb(125, 139, 164)": {
         "count": 7,
@@ -767,147 +809,167 @@
         "chars": 135
       },
       "rgb(131, 155, 200)": {
-        "count": 4,
-        "area": 252518.0390625,
-        "chars": 481
+        "count": 12,
+        "area": 555729.4919433594,
+        "chars": 1443
       },
       "rgb(163, 181, 214)": {
-        "count": 3,
-        "area": 70165.9814453125,
-        "chars": 309
+        "count": 9,
+        "area": 209235.06567382812,
+        "chars": 927
       },
       "rgb(115, 137, 255)": {
-        "count": 3,
-        "area": 6849.609375,
-        "chars": 39
+        "count": 9,
+        "area": 20548.828125,
+        "chars": 117
       },
       "rgb(0, 0, 0)": {
-        "count": 1,
-        "area": 1,
-        "chars": 58
+        "count": 47,
+        "area": 38577.37919482868,
+        "chars": 582
       },
       "rgb(10, 37, 64)": {
-        "count": 1,
-        "area": 2697.50830078125,
-        "chars": 22
+        "count": 3,
+        "area": 8055.78662109375,
+        "chars": 66
       },
       "rgb(66, 84, 102)": {
-        "count": 1,
-        "area": 5817,
-        "chars": 42
+        "count": 3,
+        "area": 17451,
+        "chars": 126
+      },
+      "rgb(40, 99, 177)": {
+        "count": 2,
+        "area": 15316.968998592347,
+        "chars": 14
       }
     },
     "bgColors": {
       "rgb(83, 58, 253)": {
-        "count": 7,
-        "area": 57408.625,
-        "chars": 113
+        "count": 19,
+        "area": 195043.125,
+        "chars": 313
       },
       "rgb(255, 255, 255)": {
-        "count": 23,
-        "area": 18244943.390625,
-        "chars": 20
+        "count": 79,
+        "area": 34847927.30716564,
+        "chars": 60
       },
       "rgba(255, 255, 255, 0.65)": {
-        "count": 1,
-        "area": 10174.5,
-        "chars": 19
+        "count": 3,
+        "area": 36101,
+        "chars": 57
       },
       "rgb(229, 237, 245)": {
-        "count": 16,
-        "area": 3662060.125,
+        "count": 60,
+        "area": 8687515.127615307,
         "chars": 0
       },
       "rgb(255, 224, 209)": {
-        "count": 2,
-        "area": 10993,
+        "count": 6,
+        "area": 21725.005332466215,
         "chars": 0
       },
       "rgba(248, 250, 253, 0.45)": {
-        "count": 1,
-        "area": 365400,
+        "count": 3,
+        "area": 684498.0549641028,
         "chars": 0
       },
       "rgba(255, 255, 255, 0.38)": {
-        "count": 1,
-        "area": 5240,
+        "count": 3,
+        "area": 9816.017129205167,
         "chars": 0
       },
       "rgb(0, 214, 111)": {
-        "count": 1,
-        "area": 2820,
+        "count": 3,
+        "area": 5282.663157556206,
         "chars": 0
       },
       "rgb(0, 0, 0)": {
-        "count": 1,
-        "area": 2820,
+        "count": 3,
+        "area": 5282.663666397333,
         "chars": 0
       },
       "rgb(248, 250, 253)": {
-        "count": 9,
-        "area": 3076471.5,
-        "chars": 18
+        "count": 29,
+        "area": 7302360.025556713,
+        "chars": 226
       },
       "rgba(255, 255, 255, 0)": {
-        "count": 12,
-        "area": 87083.75,
-        "chars": 135
+        "count": 31,
+        "area": 234312.0625,
+        "chars": 374
       },
       "rgb(226, 228, 255)": {
-        "count": 3,
-        "area": 4800,
+        "count": 6,
+        "area": 9600,
         "chars": 0
       },
       "rgb(232, 233, 255)": {
-        "count": 3,
-        "area": 4800,
+        "count": 8,
+        "area": 12800,
         "chars": 0
       },
       "rgb(13, 23, 56)": {
-        "count": 1,
-        "area": 3371557.5,
+        "count": 5,
+        "area": 7434554.4375,
         "chars": 0
       },
       "rgb(227, 236, 247)": {
-        "count": 3,
-        "area": 19143.8994140625,
-        "chars": 14
+        "count": 9,
+        "area": 35816.939697265625,
+        "chars": 42
       },
       "rgb(242, 247, 254)": {
-        "count": 1,
-        "area": 294840,
+        "count": 3,
+        "area": 729890,
         "chars": 0
       },
       "rgb(44, 162, 94)": {
-        "count": 1,
-        "area": 64,
+        "count": 3,
+        "area": 192,
         "chars": 0
       },
       "rgb(10, 37, 64)": {
-        "count": 1,
-        "area": 4485.625,
-        "chars": 8
+        "count": 3,
+        "area": 13456.875,
+        "chars": 24
+      },
+      "rgb(236, 240, 244)": {
+        "count": 4,
+        "area": 43763.01270362362,
+        "chars": 0
+      },
+      "rgba(40, 99, 177, 0.1)": {
+        "count": 2,
+        "area": 15316.968998592347,
+        "chars": 0
+      },
+      "rgb(127, 125, 252)": {
+        "count": 31,
+        "area": 6169.114317283034,
+        "chars": 0
       }
     },
     "borderColors": {
       "rgb(255, 255, 255)": {
-        "count": 2,
-        "area": 4807.75,
+        "count": 4,
+        "area": 7695.75,
         "chars": 0
       },
       "rgb(229, 237, 245)": {
-        "count": 47,
-        "area": 18225511.0625,
+        "count": 125,
+        "area": 30212295.46511353,
         "chars": 0
       },
       "rgb(185, 185, 249)": {
-        "count": 10,
-        "area": 79642.5,
-        "chars": 134
+        "count": 27,
+        "area": 219429.5625,
+        "chars": 371
       },
       "rgb(246, 249, 252)": {
-        "count": 2,
-        "area": 211669.375,
+        "count": 6,
+        "area": 396516.91066656075,
         "chars": 0
       },
       "rgba(0, 0, 0, 0)": {
@@ -916,58 +978,58 @@
         "chars": 0
       },
       "rgb(214, 217, 252)": {
-        "count": 9,
-        "area": 19440,
+        "count": 26,
+        "area": 51680,
         "chars": 0
       },
       "rgb(226, 228, 255)": {
-        "count": 3,
-        "area": 4800,
+        "count": 6,
+        "area": 9600,
         "chars": 0
       },
       "rgb(83, 58, 253)": {
-        "count": 1,
-        "area": 308,
+        "count": 3,
+        "area": 643.5,
         "chars": 0
       },
       "rgb(24, 38, 89)": {
-        "count": 2,
-        "area": 2965424.96875,
+        "count": 6,
+        "area": 5416773.46875,
         "chars": 0
       },
       "rgba(72, 52, 219, 0.698)": {
-        "count": 1,
-        "area": 9375.75,
-        "chars": 20
+        "count": 3,
+        "area": 34503.5,
+        "chars": 60
       },
       "rgba(255, 255, 255, 0.12)": {
-        "count": 1,
-        "area": 4485.625,
-        "chars": 8
+        "count": 3,
+        "area": 13456.875,
+        "chars": 24
       }
     },
     "fontFamilies": {
       "sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 447,
-        "area": 3881452.6352539062,
-        "chars": 11342
+        "count": 1376,
+        "area": 9585614.755250756,
+        "chars": 33831
       }
     },
     "fontSizes": {
       "14px": {
-        "count": 34,
-        "area": 39967.47705078125,
-        "chars": 208
+        "count": 44,
+        "area": 65489.58158144355,
+        "chars": 410
       },
       "48px": {
-        "count": 12,
-        "area": 540676.3916015625,
-        "chars": 420
+        "count": 13,
+        "area": 582135.9150390625,
+        "chars": 451
       },
       "16px": {
-        "count": 194,
-        "area": 960080.0153808594,
-        "chars": 4372
+        "count": 596,
+        "area": 3075060.8588867188,
+        "chars": 13623
       },
       "32px": {
         "count": 11,
@@ -975,34 +1037,34 @@
         "chars": 501
       },
       "26px": {
-        "count": 24,
-        "area": 793827.6247558594,
-        "chars": 1795
+        "count": 32,
+        "area": 815190.5075268559,
+        "chars": 1839
       },
       "10px": {
-        "count": 93,
-        "area": 94047.46875,
-        "chars": 768
+        "count": 279,
+        "area": 186664.13426945172,
+        "chars": 2304
       },
       "9px": {
-        "count": 19,
-        "area": 41376.375,
-        "chars": 339
+        "count": 73,
+        "area": 93920.85178439226,
+        "chars": 1173
       },
       "8px": {
-        "count": 12,
-        "area": 18139.640625,
-        "chars": 82
+        "count": 36,
+        "area": 33980.69283194095,
+        "chars": 246
       },
       "12px": {
-        "count": 9,
-        "area": 41689.0849609375,
-        "chars": 201
+        "count": 73,
+        "area": 106505.92904698104,
+        "chars": 705
       },
       "11px": {
-        "count": 5,
-        "area": 9870.75,
-        "chars": 47
+        "count": 53,
+        "area": 71824.07529953402,
+        "chars": 483
       },
       "56px": {
         "count": 1,
@@ -1010,43 +1072,63 @@
         "chars": 31
       },
       "18px": {
-        "count": 11,
-        "area": 189381.1884765625,
-        "chars": 621
+        "count": 28,
+        "area": 812369.892578125,
+        "chars": 3107
       },
       "22px": {
-        "count": 20,
-        "area": 703848.625,
-        "chars": 1861
+        "count": 41,
+        "area": 1100835.3659667969,
+        "chars": 3040
       },
       "20px": {
-        "count": 1,
-        "area": 29352.75,
-        "chars": 88
+        "count": 53,
+        "area": 1307345.890625,
+        "chars": 4537
       },
       "15px": {
-        "count": 1,
-        "area": 4485.625,
-        "chars": 8
+        "count": 3,
+        "area": 13456.875,
+        "chars": 24
+      },
+      "40px": {
+        "count": 4,
+        "area": 382504.65625,
+        "chars": 342
+      },
+      "28px": {
+        "count": 19,
+        "area": 320261.37451171875,
+        "chars": 579
+      },
+      "21.12px": {
+        "count": 6,
+        "area": 72931.97705078125,
+        "chars": 235
+      },
+      "34px": {
+        "count": 11,
+        "area": 130426.55834960938,
+        "chars": 201
       }
     },
     "fontWeights": {
       "300": {
-        "count": 297,
-        "area": 3386157.0190429688,
-        "chars": 9426
+        "count": 937,
+        "area": 8203322.836050873,
+        "chars": 28304
       },
       "400": {
-        "count": 150,
-        "area": 495295.6162109375,
-        "chars": 1916
+        "count": 439,
+        "area": 1382291.919199883,
+        "chars": 5527
       }
     },
     "lineHeights": {
       "14px": {
-        "count": 37,
-        "area": 42352.96875,
-        "chars": 254
+        "count": 99,
+        "area": 64952.57594438642,
+        "chars": 650
       },
       "55.2px": {
         "count": 4,
@@ -1054,9 +1136,9 @@
         "chars": 342
       },
       "16px": {
-        "count": 34,
-        "area": 181097.484375,
-        "chars": 432
+        "count": 95,
+        "area": 546878.6200701278,
+        "chars": 1209
       },
       "35.2px": {
         "count": 11,
@@ -1069,64 +1151,64 @@
         "chars": 1773
       },
       "15px": {
-        "count": 4,
-        "area": 9240,
-        "chars": 52
+        "count": 12,
+        "area": 19921.43480590731,
+        "chars": 156
       },
       "29.9px": {
-        "count": 4,
-        "area": 18480,
-        "chars": 22
+        "count": 12,
+        "area": 39842.88277099654,
+        "chars": 66
       },
       "11.5px": {
-        "count": 40,
-        "area": 29831.46875,
-        "chars": 346
+        "count": 120,
+        "area": 63757.048580328,
+        "chars": 1038
       },
       "10.8px": {
-        "count": 11,
-        "area": 27999.25,
-        "chars": 223
+        "count": 33,
+        "area": 52450.57639461197,
+        "chars": 669
       },
       "8.96px": {
-        "count": 8,
-        "area": 17352,
-        "chars": 71
+        "count": 24,
+        "area": 32505.219388633966,
+        "chars": 213
       },
       "12px": {
-        "count": 8,
-        "area": 22960,
-        "chars": 120
+        "count": 24,
+        "area": 43010.60062285885,
+        "chars": 360
       },
       "8.56px": {
-        "count": 4,
-        "area": 787.640625,
-        "chars": 11
+        "count": 12,
+        "area": 1475.4734433069825,
+        "chars": 33
       },
       "8px": {
-        "count": 12,
-        "area": 13216,
-        "chars": 81
+        "count": 36,
+        "area": 24757.318065971136,
+        "chars": 243
       },
       "11.7px": {
-        "count": 6,
-        "area": 11362.125,
-        "chars": 100
+        "count": 18,
+        "area": 21284.485607370734,
+        "chars": 300
       },
       "12.6px": {
-        "count": 2,
-        "area": 2015,
-        "chars": 16
+        "count": 6,
+        "area": 3774.666886135936,
+        "chars": 48
       },
       "20px": {
-        "count": 87,
-        "area": 174365.625,
-        "chars": 1128
+        "count": 261,
+        "area": 522374.2012103498,
+        "chars": 3384
       },
       "49.44px": {
-        "count": 4,
-        "area": 84296.3447265625,
-        "chars": 57
+        "count": 5,
+        "area": 125755.8681640625,
+        "chars": 88
       },
       "57.68px": {
         "count": 1,
@@ -1139,24 +1221,24 @@
         "chars": 21
       },
       "22.4px": {
-        "count": 49,
-        "area": 506844.2497558594,
-        "chars": 2361
+        "count": 176,
+        "area": 2051075.3369140625,
+        "chars": 8873
       },
       "25.2px": {
-        "count": 11,
-        "area": 189381.1884765625,
-        "chars": 621
+        "count": 24,
+        "area": 760889.892578125,
+        "chars": 2884
       },
       "24.2px": {
-        "count": 20,
-        "area": 703848.625,
-        "chars": 1861
+        "count": 30,
+        "area": 943806.357421875,
+        "chars": 2576
       },
       "17.4px": {
-        "count": 1,
-        "area": 11459.3349609375,
-        "chars": 97
+        "count": 3,
+        "area": 33422.607421875,
+        "chars": 291
       },
       "28px": {
         "count": 1,
@@ -1164,19 +1246,74 @@
         "chars": 88
       },
       "19.2px": {
-        "count": 7,
-        "area": 51629.0625,
-        "chars": 95
+        "count": 21,
+        "area": 175903.125,
+        "chars": 285
       },
       "19.6px": {
-        "count": 1,
-        "area": 2697.50830078125,
-        "chars": 22
+        "count": 3,
+        "area": 8055.78662109375,
+        "chars": 66
       },
       "21px": {
-        "count": 1,
-        "area": 5817,
-        "chars": 42
+        "count": 3,
+        "area": 17451,
+        "chars": 126
+      },
+      "46px": {
+        "count": 4,
+        "area": 382504.65625,
+        "chars": 342
+      },
+      "29.96px": {
+        "count": 19,
+        "area": 320261.37451171875,
+        "chars": 579
+      },
+      "23.232px": {
+        "count": 6,
+        "area": 72931.97705078125,
+        "chars": 235
+      },
+      "15.4px": {
+        "count": 38,
+        "area": 46858.029257451184,
+        "chars": 342
+      },
+      "9px": {
+        "count": 16,
+        "area": 16411.12289627362,
+        "chars": 156
+      },
+      "35.7px": {
+        "count": 4,
+        "area": 43103.2509765625,
+        "chars": 57
+      },
+      "35.02px": {
+        "count": 7,
+        "area": 87323.30737304688,
+        "chars": 144
+      },
+      "21.6px": {
+        "count": 19,
+        "area": 200792.05322265625,
+        "chars": 801
+      },
+      "26.4px": {
+        "count": 11,
+        "area": 157029.00854492188,
+        "chars": 464
+      },
+      "24px": {
+        "count": 32,
+        "area": 730415.0625,
+        "chars": 2588
+      },
+      "22.5px": {
+        "count": 4,
+        "area": 51480,
+        "chars": 223
       }
     },
     "letterSpacings": {
@@ -1186,9 +1323,9 @@
         "chars": 22
       },
       "-0.96px": {
-        "count": 12,
-        "area": 540676.3916015625,
-        "chars": 420
+        "count": 13,
+        "area": 582135.9150390625,
+        "chars": 451
       },
       "-0.64px": {
         "count": 11,
@@ -1201,44 +1338,44 @@
         "chars": 1773
       },
       "0.1px": {
-        "count": 42,
-        "area": 38655.21875,
-        "chars": 392
+        "count": 126,
+        "area": 82781.04880188499,
+        "chars": 1176
       },
       "-0.78px": {
-        "count": 4,
-        "area": 18480,
-        "chars": 22
+        "count": 12,
+        "area": 39842.88277099654,
+        "chars": 66
       },
       "-0.3px": {
-        "count": 18,
-        "area": 11987.25,
-        "chars": 111
+        "count": 54,
+        "area": 22573.187153079547,
+        "chars": 333
       },
       "-0.081px": {
-        "count": 3,
-        "area": 13350,
-        "chars": 18
+        "count": 9,
+        "area": 25008.36180625856,
+        "chars": 54
       },
       "-0.27px": {
-        "count": 4,
-        "area": 741.125,
-        "chars": 14
+        "count": 16,
+        "area": 4904.96929886844,
+        "chars": 66
       },
       "0.036px": {
-        "count": 1,
-        "area": 1228.25,
-        "chars": 14
+        "count": 3,
+        "area": 3106.5995395705104,
+        "chars": 42
       },
       "-0.33px": {
-        "count": 3,
-        "area": 974.75,
-        "chars": 12
+        "count": 9,
+        "area": 2465.4324605893344,
+        "chars": 36
       },
       "-0.36px": {
-        "count": 1,
-        "area": 4448,
-        "chars": 13
+        "count": 47,
+        "area": 15552.493569895625,
+        "chars": 83
       },
       "-1.4px": {
         "count": 1,
@@ -1246,14 +1383,39 @@
         "chars": 31
       },
       "-0.22px": {
-        "count": 20,
-        "area": 703848.625,
-        "chars": 1861
+        "count": 41,
+        "area": 1100835.3659667969,
+        "chars": 3040
       },
       "-0.2px": {
-        "count": 1,
-        "area": 29352.75,
-        "chars": 88
+        "count": 53,
+        "area": 1307345.890625,
+        "chars": 4537
+      },
+      "-0.8px": {
+        "count": 4,
+        "area": 382504.65625,
+        "chars": 342
+      },
+      "-0.28px": {
+        "count": 19,
+        "area": 320261.37451171875,
+        "chars": 579
+      },
+      "-0.2112px": {
+        "count": 6,
+        "area": 72931.97705078125,
+        "chars": 235
+      },
+      "-0.68px": {
+        "count": 9,
+        "area": 77241.84399414062,
+        "chars": 109
+      },
+      "-0.34px": {
+        "count": 2,
+        "area": 53184.71435546875,
+        "chars": 92
       }
     },
     "typeStyles": {
@@ -1283,9 +1445,9 @@
         "chars": 342
       },
       "link|16px|400|16px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 18,
-        "area": 147602.25,
-        "chars": 263
+        "count": 51,
+        "area": 462935.25,
+        "chars": 758
       },
       "h2|32px|300|35.2px|-0.64px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 4,
@@ -1303,134 +1465,134 @@
         "chars": 496
       },
       "text|10px|300|15px|0.1px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 9240,
-        "chars": 52
+        "count": 12,
+        "area": 19921.43480590731,
+        "chars": 156
       },
       "text|26px|400|29.9px|-0.78px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 18480,
-        "chars": 22
+        "count": 12,
+        "area": 39842.88277099654,
+        "chars": 66
       },
       "text|10px|300|11.5px|0.1px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 17,
-        "area": 19323.265625,
-        "chars": 201
+        "count": 51,
+        "area": 41660.94071386941,
+        "chars": 603
       },
       "text|10px|400|11.5px|0.1px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 21,
-        "area": 10091.953125,
-        "chars": 139
+        "count": 63,
+        "area": 21198.67328210827,
+        "chars": 417
       },
       "text|10px|400|11.5px|-0.3px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 416.25,
-        "chars": 6
-      },
-      "text|9px|300|10.8px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 5148,
-        "chars": 85
-      },
-      "text|8px|400|8.96px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 8,
-        "area": 17352,
-        "chars": 71
-      },
-      "text|10px|300|12px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 19120,
-        "chars": 94
-      },
-      "text|8px|300|8.56px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 787.640625,
-        "chars": 11
-      },
-      "text|10px|300|8px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 12,
-        "area": 13216,
-        "chars": 81
-      },
-      "text|9px|300|10.8px|-0.081px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 3,
-        "area": 13350,
+        "count": 6,
+        "area": 897.4345843503252,
         "chars": 18
       },
+      "text|9px|300|10.8px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 12,
+        "area": 9643.670548105612,
+        "chars": 255
+      },
+      "text|8px|400|8.96px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 24,
+        "area": 32505.219388633966,
+        "chars": 213
+      },
+      "text|10px|300|12px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 12,
+        "area": 35817.199567038566,
+        "chars": 282
+      },
+      "text|8px|300|8.56px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 12,
+        "area": 1475.4734433069825,
+        "chars": 33
+      },
+      "text|10px|300|8px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 36,
+        "area": 24757.318065971136,
+        "chars": 243
+      },
+      "text|9px|300|10.8px|-0.081px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 9,
+        "area": 25008.36180625856,
+        "chars": 54
+      },
       "text|9px|300|11.7px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 10621,
-        "chars": 86
+        "count": 6,
+        "area": 19896.148306146264,
+        "chars": 258
       },
       "text|9px|300|11.7px|-0.27px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 741.125,
-        "chars": 14
+        "count": 12,
+        "area": 1388.3373012244701,
+        "chars": 42
       },
       "text|12px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 19008,
-        "chars": 60
+        "count": 14,
+        "area": 40398.0132220611,
+        "chars": 238
       },
       "text|9px|400|10.8px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 9501.25,
-        "chars": 120
+        "count": 12,
+        "area": 17798.544040247798,
+        "chars": 360
       },
       "text|10px|300|12px|-0.3px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 4,
-        "area": 3840,
-        "chars": 26
+        "count": 12,
+        "area": 7193.401055820286,
+        "chars": 78
       },
       "text|9px|300|12.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 2015,
-        "chars": 16
+        "count": 6,
+        "area": 3774.666886135936,
+        "chars": 48
       },
       "text|10px|300|14px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 16,
-        "area": 10755,
-        "chars": 86
+        "count": 48,
+        "area": 20147.170942805707,
+        "chars": 258
       },
       "text|10px|400|14px|-0.3px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 12,
-        "area": 7731,
-        "chars": 79
+        "count": 36,
+        "area": 14482.351512908936,
+        "chars": 237
       },
       "text|10px|400|14px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 314,
-        "chars": 4
-      },
-      "text|14px|400|20px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 1535.3125,
-        "chars": 8
-      },
-      "text|12px|300|16px|0.036px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 1228.25,
-        "chars": 14
-      },
-      "text|12px|400|16px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 5545.5,
-        "chars": 17
-      },
-      "text|11px|300|16px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 8896,
-        "chars": 35
-      },
-      "text|11px|300|16px|-0.33px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 3,
-        "area": 974.75,
+        "area": 588.2097386717796,
         "chars": 12
       },
+      "text|14px|400|20px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 3,
+        "area": 3883.263710349798,
+        "chars": 24
+      },
+      "text|12px|300|16px|0.036px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 3,
+        "area": 3106.5995395705104,
+        "chars": 42
+      },
+      "text|12px|400|16px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 6,
+        "area": 14026.215293578804,
+        "chars": 51
+      },
+      "text|11px|300|16px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 6,
+        "area": 22500.613581493497,
+        "chars": 105
+      },
+      "text|11px|300|16px|-0.33px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 9,
+        "area": 2465.4324605893344,
+        "chars": 36
+      },
       "text|12px|400|16px|-0.36px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 4448,
-        "chars": 13
+        "count": 3,
+        "area": 11250.306069895625,
+        "chars": 39
       },
       "text|48px|300|49.44px|-0.96px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
@@ -1448,9 +1610,9 @@
         "chars": 21
       },
       "text|16px|300|22.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 24,
-        "area": 341051.5334472656,
-        "chars": 1544
+        "count": 81,
+        "area": 1107049.0629882812,
+        "chars": 4976
       },
       "link|16px|300|22.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
@@ -1458,24 +1620,24 @@
         "chars": 17
       },
       "text|18px|300|25.2px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 7,
-        "area": 147351.515625,
-        "chars": 566
+        "count": 20,
+        "area": 718860.2197265625,
+        "chars": 2829
       },
       "h3|22px|300|24.2px|-0.22px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 12,
-        "area": 221464.6875,
-        "chars": 645
+        "count": 18,
+        "area": 315927.9375,
+        "chars": 906
       },
       "text|16px|400|16px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 7,
-        "area": 12402.734375,
-        "chars": 78
+        "count": 17,
+        "area": 30594.203125,
+        "chars": 178
       },
       "text|16px|400|22.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 3,
-        "area": 3391.828125,
-        "chars": 20
+        "count": 18,
+        "area": 23255.53125,
+        "chars": 136
       },
       "text|26px|300|29.12px|-0.26px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 8,
@@ -1483,24 +1645,24 @@
         "chars": 1277
       },
       "h4|16px|400|22.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 13,
-        "area": 40955.66943359375,
-        "chars": 267
+        "count": 39,
+        "area": 122867.00830078125,
+        "chars": 801
       },
       "link|16px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 16,
-        "area": 37038.09375,
-        "chars": 214
+        "count": 48,
+        "area": 111114.28125,
+        "chars": 642
       },
       "h4|16px|300|22.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 8,
-        "area": 118939,
-        "chars": 513
+        "count": 17,
+        "area": 247819.4375,
+        "chars": 1082
       },
       "text|16px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 11,
-        "area": 31733.3125,
-        "chars": 241
+        "count": 26,
+        "area": 71733.75,
+        "chars": 587
       },
       "text|18px|400|25.2px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 4,
@@ -1513,9 +1675,9 @@
         "chars": 14
       },
       "text|22px|300|24.2px|-0.22px|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 8,
-        "area": 482383.9375,
-        "chars": 1216
+        "count": 12,
+        "area": 627878.419921875,
+        "chars": 1670
       },
       "h3|32px|300|35.2px|-0.64px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
@@ -1523,14 +1685,14 @@
         "chars": 16
       },
       "text|12px|300|17.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 11459.3349609375,
-        "chars": 97
+        "count": 3,
+        "area": 33422.607421875,
+        "chars": 291
       },
       "text|14px|400|14px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 3090.9375,
-        "chars": 29
+        "count": 6,
+        "area": 9272.8125,
+        "chars": 87
       },
       "text|20px|300|28px|-0.2px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
@@ -1538,34 +1700,169 @@
         "chars": 88
       },
       "text|16px|400|19.2px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 7,
-        "area": 51629.0625,
-        "chars": 95
+        "count": 21,
+        "area": 175903.125,
+        "chars": 285
       },
       "link|16px|300|20px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 85,
-        "area": 168503.4375,
-        "chars": 1091
+        "count": 255,
+        "area": 505510.3125,
+        "chars": 3273
       },
       "text|16px|300|20px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 4326.875,
-        "chars": 29
+        "count": 3,
+        "area": 12980.625,
+        "chars": 87
       },
       "text|14px|400|19.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 2697.50830078125,
-        "chars": 22
+        "count": 3,
+        "area": 8055.78662109375,
+        "chars": 66
       },
       "text|14px|300|21px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1,
-        "area": 5817,
-        "chars": 42
+        "count": 3,
+        "area": 17451,
+        "chars": 126
       },
       "button|15px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 3,
+        "area": 13456.875,
+        "chars": 24
+      },
+      "text|12px|300|normal|-0.36px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 44,
+        "area": 4302.1875,
+        "chars": 44
+      },
+      "text|40px|300|46px|-0.8px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 382504.65625,
+        "chars": 342
+      },
+      "h2|28px|300|29.96px|-0.28px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 64237.779052734375,
+        "chars": 145
+      },
+      "text|28px|300|29.96px|-0.28px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 11,
+        "area": 230928.02490234375,
+        "chars": 404
+      },
+      "h3|21.12px|300|23.232px|-0.2112px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 6,
+        "area": 72931.97705078125,
+        "chars": 235
+      },
+      "text|11px|300|15.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 36,
+        "area": 31541.060258858837,
+        "chars": 328
+      },
+      "text|9px|300|9px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 12,
+        "area": 12894.49089862965,
+        "chars": 132
+      },
+      "text|9px|400|9px|-0.27px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 3516.63199764397,
+        "chars": 24
+      },
+      "text|11px|400|15.4px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 2,
+        "area": 15316.968998592347,
+        "chars": 14
+      },
+      "text|34px|300|35.7px|-0.68px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
-        "area": 4485.625,
-        "chars": 8
+        "area": 33314.28125,
+        "chars": 43
+      },
+      "h2|48px|300|49.44px|-0.96px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 1,
+        "area": 41459.5234375,
+        "chars": 31
+      },
+      "text|34px|300|35.02px|-0.68px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 13338.217529296875,
+        "chars": 21
+      },
+      "h3|20px|300|22.4px|-0.2px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 12,
+        "area": 161073.1875,
+        "chars": 645
+      },
+      "text|16px|400|21.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 8,
+        "area": 71553.25244140625,
+        "chars": 110
+      },
+      "text|16px|300|21.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 11,
+        "area": 129238.80078125,
+        "chars": 691
+      },
+      "h4|34px|300|35.7px|-0.68px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 3,
+        "area": 9788.9697265625,
+        "chars": 14
+      },
+      "text|20px|300|22.4px|-0.2px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 8,
+        "area": 386504.890625,
+        "chars": 1216
+      },
+      "h3|28px|300|29.96px|-0.28px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 1,
+        "area": 18211.5,
+        "chars": 16
+      },
+      "text|34px|300|35.02px|-0.34px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 2,
+        "area": 53184.71435546875,
+        "chars": 92
+      },
+      "h2|22px|300|26.4px|-0.22px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 47916.456787109375,
+        "chars": 145
+      },
+      "text|22px|300|26.4px|-0.22px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 6,
+        "area": 100086.9580078125,
+        "chars": 303
+      },
+      "h3|20px|300|24px|-0.2px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 12,
+        "area": 144288.90625,
+        "chars": 496
+      },
+      "h2|34px|300|35.02px|-0.68px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 1,
+        "area": 20800.37548828125,
+        "chars": 31
+      },
+      "h3|18px|300|22.5px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 51480,
+        "chars": 223
+      },
+      "text|20px|300|24px|-0.2px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 20,
+        "area": 586126.15625,
+        "chars": 2092
+      },
+      "h4|28px|300|29.96px|-0.28px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 3,
+        "area": 6884.070556640625,
+        "chars": 14
+      },
+      "h3|22px|300|26.4px|-0.22px|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 1,
+        "area": 9025.59375,
+        "chars": 16
       }
     },
     "states": {},
@@ -1577,38 +1874,38 @@
     },
     "radii": {
       "6px": {
-        "count": 35,
-        "area": 7876744.946044922,
-        "chars": 18
+        "count": 130,
+        "area": 17552988.876176525,
+        "chars": 226
       },
       "4px": {
-        "count": 58,
-        "area": 419355.09375,
-        "chars": 327
+        "count": 151,
+        "area": 1066418.0716832578,
+        "chars": 838
       },
       "5px": {
-        "count": 6,
-        "area": 2249364.5,
+        "count": 30,
+        "area": 6571035.125,
         "chars": 0
       },
       "16px": {
-        "count": 1,
-        "area": 5240,
+        "count": 3,
+        "area": 9816.017129205167,
         "chars": 0
       },
       "0px": {
-        "count": 1,
-        "area": 2410,
+        "count": 3,
+        "area": 4514.618345849216,
         "chars": 0
       },
       "100%": {
-        "count": 3,
-        "area": 893067.66796875,
+        "count": 9,
+        "area": 2217752.869140625,
         "chars": 0
       },
       "3px": {
-        "count": 2,
-        "area": 4600,
+        "count": 6,
+        "area": 11634.74570722878,
         "chars": 0
       },
       "8px": {
@@ -1617,116 +1914,136 @@
         "chars": 0
       },
       "2px": {
-        "count": 2,
-        "area": 2048,
+        "count": 6,
+        "area": 6144,
         "chars": 0
       },
       "50%": {
-        "count": 3,
-        "area": 2664,
+        "count": 9,
+        "area": 7992,
+        "chars": 0
+      },
+      "1px": {
+        "count": 31,
+        "area": 6169.114317283034,
         "chars": 0
       }
     },
     "shadows": {
       "rgba(23, 23, 23, 0.08) 0px 15px 35px 0px": {
-        "count": 1,
-        "area": 365400,
+        "count": 3,
+        "area": 684498.0549641028,
         "chars": 0
       },
       "rgba(23, 23, 23, 0.06) 0px 3px 6px 0px": {
-        "count": 1,
-        "area": 333102,
+        "count": 3,
+        "area": 623994.6861035805,
         "chars": 0
       },
       "rgba(50, 50, 93, 0.12) 0px 16px 32px 0px": {
-        "count": 2,
-        "area": 120258,
+        "count": 6,
+        "area": 304167.89025878906,
         "chars": 0
+      },
+      "rgba(0, 0, 0, 0.1) 0px 20.187px 40.374px -20.187px": {
+        "count": 6,
+        "area": 152651.10611476004,
+        "chars": 172
       }
     },
     "spacings": {
+      "1": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
       "2": {
-        "count": 11,
+        "count": 34,
         "area": 0,
         "chars": 0
       },
       "3": {
-        "count": 6,
+        "count": 18,
         "area": 0,
         "chars": 0
       },
       "4": {
-        "count": 48,
+        "count": 117,
         "area": 0,
         "chars": 0
       },
       "6": {
-        "count": 51,
+        "count": 144,
         "area": 0,
         "chars": 0
       },
       "7": {
-        "count": 3,
+        "count": 13,
         "area": 0,
         "chars": 0
       },
       "8": {
-        "count": 153,
+        "count": 456,
         "area": 0,
         "chars": 0
       },
       "9": {
-        "count": 3,
+        "count": 9,
         "area": 0,
         "chars": 0
       },
       "10": {
-        "count": 24,
+        "count": 86,
         "area": 0,
         "chars": 0
       },
       "11": {
-        "count": 6,
+        "count": 16,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 38,
+        "count": 102,
+        "area": 0,
+        "chars": 0
+      },
+      "13": {
+        "count": 8,
         "area": 0,
         "chars": 0
       },
       "14": {
-        "count": 14,
+        "count": 43,
         "area": 0,
         "chars": 0
       },
       "15": {
-        "count": 11,
+        "count": 26,
         "area": 0,
         "chars": 0
       },
       "16": {
-        "count": 131,
+        "count": 404,
         "area": 0,
         "chars": 0
       },
       "18": {
-        "count": 2,
+        "count": 4,
         "area": 0,
         "chars": 0
       },
       "20": {
-        "count": 6,
+        "count": 14,
         "area": 0,
         "chars": 0
       },
       "22": {
-        "count": 2,
+        "count": 6,
         "area": 0,
         "chars": 0
       },
       "24": {
-        "count": 40,
+        "count": 144,
         "area": 0,
         "chars": 0
       },
@@ -1736,47 +2053,52 @@
         "chars": 0
       },
       "32": {
-        "count": 41,
+        "count": 118,
         "area": 0,
         "chars": 0
       },
       "34": {
-        "count": 1,
+        "count": 3,
         "area": 0,
         "chars": 0
       },
       "36": {
-        "count": 4,
+        "count": 10,
         "area": 0,
         "chars": 0
       },
       "40": {
-        "count": 16,
+        "count": 69,
         "area": 0,
         "chars": 0
       },
       "48": {
-        "count": 4,
+        "count": 46,
         "area": 0,
         "chars": 0
       },
       "52": {
-        "count": 1,
+        "count": 3,
         "area": 0,
         "chars": 0
       },
       "56": {
-        "count": 2,
+        "count": 26,
         "area": 0,
         "chars": 0
       },
       "64": {
-        "count": 46,
+        "count": 70,
         "area": 0,
         "chars": 0
       },
       "71": {
         "count": 13,
+        "area": 0,
+        "chars": 0
+      },
+      "72": {
+        "count": 1,
         "area": 0,
         "chars": 0
       },
@@ -1793,58 +2115,58 @@
     },
     "interactiveBg": {
       "rgb(83, 58, 253)": {
-        "count": 7,
-        "area": 57408.625,
-        "chars": 113
+        "count": 19,
+        "area": 195043.125,
+        "chars": 313
       },
       "rgba(255, 255, 255, 0.65)": {
-        "count": 1,
-        "area": 10174.5,
-        "chars": 19
+        "count": 3,
+        "area": 36101,
+        "chars": 57
       },
       "rgb(255, 255, 255)": {
-        "count": 1,
-        "area": 6669.75,
-        "chars": 9
+        "count": 3,
+        "area": 19453.4375,
+        "chars": 27
       },
       "rgba(255, 255, 255, 0)": {
-        "count": 12,
-        "area": 87083.75,
-        "chars": 135
+        "count": 31,
+        "area": 234312.0625,
+        "chars": 374
       },
       "rgb(226, 228, 255)": {
-        "count": 3,
-        "area": 4800,
+        "count": 6,
+        "area": 9600,
         "chars": 0
       },
       "rgb(232, 233, 255)": {
-        "count": 3,
-        "area": 4800,
+        "count": 8,
+        "area": 12800,
         "chars": 0
       },
       "rgb(10, 37, 64)": {
-        "count": 1,
-        "area": 4485.625,
-        "chars": 8
+        "count": 3,
+        "area": 13456.875,
+        "chars": 24
       }
     },
     "interactiveRadius": {
       "0px": {
-        "count": 155,
-        "area": 4336596.120849609,
-        "chars": 1322
+        "count": 455,
+        "area": 9609641.323565006,
+        "chars": 3932
       },
       "4px": {
-        "count": 42,
-        "area": 332699.09375,
-        "chars": 327
+        "count": 103,
+        "area": 851334.21875,
+        "chars": 838
       }
     },
     "interactiveFg": {
       "rgb(83, 58, 253)": {
-        "count": 59,
-        "area": 270968.2302246094,
-        "chars": 318
+        "count": 168,
+        "area": 774683.4365234375,
+        "chars": 923
       },
       "rgb(6, 27, 49)": {
         "count": 5,
@@ -1852,13 +2174,13 @@
         "chars": 43
       },
       "rgb(255, 255, 255)": {
-        "count": 13,
-        "area": 194470,
-        "chars": 141
+        "count": 37,
+        "area": 508003.5,
+        "chars": 397
       },
       "rgb(0, 0, 0)": {
-        "count": 26,
-        "area": 3792743.375,
+        "count": 69,
+        "area": 8199576.558916569,
         "chars": 0
       },
       "rgb(125, 139, 164)": {
@@ -1867,24 +2189,24 @@
         "chars": 17
       },
       "rgba(16, 16, 16, 0.3)": {
-        "count": 1,
-        "area": 1600,
+        "count": 2,
+        "area": 3200,
         "chars": 0
       },
       "rgb(0, 0, 238)": {
-        "count": 4,
-        "area": 216686.6875,
+        "count": 12,
+        "area": 431979.03125,
         "chars": 0
       },
       "rgb(115, 137, 255)": {
-        "count": 3,
-        "area": 6849.609375,
-        "chars": 39
+        "count": 9,
+        "area": 20548.828125,
+        "chars": 117
       },
       "rgb(80, 97, 122)": {
-        "count": 85,
-        "area": 168503.4375,
-        "chars": 1091
+        "count": 255,
+        "area": 505510.3125,
+        "chars": 3273
       }
     },
     "headingSizes": {
@@ -1904,42 +2226,86 @@
         "chars": 31
       },
       "22px": {
-        "count": 12,
-        "area": 221464.6875,
-        "chars": 645
+        "count": 23,
+        "area": 372869.9880371094,
+        "chars": 1067
       },
       "16px": {
-        "count": 21,
-        "area": 159894.66943359375,
-        "chars": 780
+        "count": 56,
+        "area": 370686.44580078125,
+        "chars": 1883
       },
       "48px": {
-        "count": 3,
-        "area": 19143.8994140625,
-        "chars": 14
+        "count": 4,
+        "area": 60603.4228515625,
+        "chars": 45
+      },
+      "28px": {
+        "count": 8,
+        "area": 89333.349609375,
+        "chars": 175
+      },
+      "21.12px": {
+        "count": 6,
+        "area": 72931.97705078125,
+        "chars": 235
+      },
+      "20px": {
+        "count": 24,
+        "area": 305362.09375,
+        "chars": 1141
+      },
+      "34px": {
+        "count": 4,
+        "area": 30589.34521484375,
+        "chars": 45
+      },
+      "18px": {
+        "count": 4,
+        "area": 51480,
+        "chars": 223
       }
     },
     "headingFamilies": {
       "sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 54,
-        "area": 795504.5695800781,
-        "chars": 2127
+        "count": 147,
+        "area": 1748857.935546875,
+        "chars": 5502
       }
     },
     "headingWeights": {
       "300": {
-        "count": 41,
-        "area": 754548.9001464844,
-        "chars": 1860
+        "count": 108,
+        "area": 1625990.9272460938,
+        "chars": 4701
       },
       "400": {
-        "count": 13,
-        "area": 40955.66943359375,
-        "chars": 267
+        "count": 39,
+        "area": 122867.00830078125,
+        "chars": 801
       }
     },
     "pageBg": "rgba(0, 0, 0, 0)",
-    "elementCount": 2862,
-    "sampled": 1913
-  }
+    "elementCount": 8688,
+    "sampled": 5764,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 2862
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 2913
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 2913
+      }
+    ],
+    "mergedFrom": 3
+  },
+  "darkHarvest": null
 }

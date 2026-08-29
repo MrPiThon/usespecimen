@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-08-29T00:12:13.375Z",
+  "capturedAt": "2026-08-29T00:16:58.377Z",
   "tool": "@usespecimen/extractor@0.0.0",
-  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
     "url": "https://www.gov.uk/",
     "title": "Welcome to GOV.UK",
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 4923,
-    "elementCount": 616,
-    "sampled": 441,
+    "elementCount": 1848,
+    "sampled": 1323,
     "sampleRatio": 0.716
   },
   "harvestVersion": 3,
-  "clusterVersion": 8,
+  "clusterVersion": 9,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -37,16 +37,16 @@
       },
       "card": {
         "hex": "#f4f8fb",
-        "weightShare": 0.513,
+        "weightShare": 0.5196,
         "variants": []
       },
       "mutedForeground": null,
       "primary": {
         "hex": "#0f7a52",
-        "weightShare": 0.6749,
+        "weightShare": 0.7108,
         "variants": [],
         "source": "interactiveBg",
-        "occurrences": 2
+        "occurrences": 6
       },
       "primaryForeground": {
         "hex": "#ffffff",
@@ -55,7 +55,7 @@
       },
       "border": {
         "hex": "#cecece",
-        "weightShare": 0.6061,
+        "weightShare": 0.5865,
         "variants": []
       }
     },
@@ -65,7 +65,7 @@
           "name": "surface-1",
           "hex": "#f4f8fb",
           "deltaL": 0.023,
-          "areaShare": 0.513
+          "areaShare": 0.5196
         }
       ],
       "text": [
@@ -84,7 +84,7 @@
         "hue": "neutral",
         "lightness": 0.977,
         "chroma": 0.006,
-        "count": 4
+        "count": 12
       },
       {
         "hex": "#ffffff",
@@ -92,7 +92,7 @@
         "hue": "neutral",
         "lightness": 1,
         "chroma": 0,
-        "count": 4
+        "count": 12
       },
       {
         "hex": "#1d70b8",
@@ -100,7 +100,7 @@
         "hue": "blue",
         "lightness": 0.535,
         "chroma": 0.136,
-        "count": 4
+        "count": 12
       },
       {
         "hex": "#0f7a52",
@@ -108,7 +108,7 @@
         "hue": "green",
         "lightness": 0.514,
         "chroma": 0.11,
-        "count": 2
+        "count": 6
       },
       {
         "hex": "#d2e2f1",
@@ -116,7 +116,7 @@
         "hue": "neutral",
         "lightness": 0.905,
         "chroma": 0.027,
-        "count": 1
+        "count": 3
       },
       {
         "hex": "#0b0c0c",
@@ -124,7 +124,7 @@
         "hue": "neutral",
         "lightness": 0.153,
         "chroma": 0.002,
-        "count": 48
+        "count": 144
       },
       {
         "hex": "#1a65a6",
@@ -132,7 +132,7 @@
         "hue": "blue",
         "lightness": 0.497,
         "chroma": 0.125,
-        "count": 77
+        "count": 231
       },
       {
         "hex": "#cecece",
@@ -140,7 +140,7 @@
         "hue": "neutral",
         "lightness": 0.851,
         "chroma": 0,
-        "count": 20
+        "count": 61
       },
       {
         "hex": "#000000",
@@ -148,7 +148,7 @@
         "hue": "neutral",
         "lightness": 0,
         "chroma": 0,
-        "count": 1
+        "count": 3
       },
       {
         "hex": "#8eb8dc",
@@ -156,16 +156,11 @@
         "hue": "blue",
         "lightness": 0.765,
         "chroma": 0.069,
-        "count": 4
+        "count": 12
       }
     ],
     "semantic": {},
-    "accentRejected": [
-      {
-        "hex": "#1d70b8",
-        "occurrences": 1
-      }
-    ],
+    "accentRejected": [],
     "clusterCounts": {
       "bg": 5,
       "text": 4,
@@ -217,47 +212,75 @@
         "name": "sm",
         "px": 16,
         "rem": 0.842,
-        "weightShare": 0.0319,
+        "weightShare": 0.0234,
         "variants": []
       },
       {
         "name": "base",
         "px": 19,
         "rem": 1,
-        "weightShare": 0.9049,
+        "weightShare": 0.9135,
         "variants": []
       },
       {
         "name": "lg",
-        "px": 24,
-        "rem": 1.263,
-        "weightShare": 0.0196,
+        "px": 21,
+        "rem": 1.105,
+        "weightShare": 0.0052,
         "variants": []
       },
       {
         "name": "xl",
+        "px": 24,
+        "rem": 1.263,
+        "weightShare": 0.0144,
+        "variants": []
+      },
+      {
+        "name": "2xl",
         "px": 28.5,
         "rem": 1.5,
         "weightShare": 0.0034,
         "variants": []
       },
       {
-        "name": "2xl",
-        "px": 36,
-        "rem": 1.895,
-        "weightShare": 0.0215,
+        "name": "3xl",
+        "px": 32,
+        "rem": 1.684,
+        "weightShare": 0.0072,
         "variants": []
       },
       {
-        "name": "3xl",
+        "name": "4xl",
+        "px": 36,
+        "rem": 1.895,
+        "weightShare": 0.0143,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 40,
+        "rem": 2.105,
+        "weightShare": 0.0051,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 50,
+        "rem": 2.632,
+        "weightShare": 0.0051,
+        "variants": []
+      },
+      {
+        "name": "7xl",
         "px": 64,
         "rem": 3.368,
-        "weightShare": 0.0152,
+        "weightShare": 0.0051,
         "variants": []
       }
     ],
     "scaleTruncated": false,
-    "distinctSizes": 7,
+    "distinctSizes": 11,
     "roles": {
       "body": {
         "fontFamily": "GDS Transport",
@@ -267,8 +290,19 @@
         "fontWeight": 400,
         "lineHeight": 1.32,
         "letterSpacing": null,
-        "elements": 31,
-        "chars": 1704
+        "elements": 95,
+        "chars": 5154
+      },
+      "body-sm": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 4,
+        "chars": 84
       },
       "h2": {
         "fontFamily": "GDS Transport",
@@ -278,8 +312,8 @@
         "fontWeight": 700,
         "lineHeight": 1.11,
         "letterSpacing": null,
-        "elements": 5,
-        "chars": 82
+        "elements": 10,
+        "chars": 164
       },
       "button": {
         "fontFamily": "GDS Transport",
@@ -289,8 +323,8 @@
         "fontWeight": 400,
         "lineHeight": 1,
         "letterSpacing": null,
-        "elements": 2,
-        "chars": 50
+        "elements": 6,
+        "chars": 150
       },
       "link": {
         "fontFamily": "GDS Transport",
@@ -300,63 +334,64 @@
         "fontWeight": 700,
         "lineHeight": 1.32,
         "letterSpacing": null,
-        "elements": 36,
-        "chars": 783
+        "elements": 108,
+        "chars": 2349
       }
     },
     "rolesAvailable": true,
-    "distinctStyles": 19
+    "distinctStyles": 25
   },
   "spacing": {
-    "base": 5,
-    "gridConfidence": 0.757,
+    "base": null,
+    "gridConfidence": 0.742,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.061
+        "share": 0.054
       },
       {
         "base": 6,
-        "share": 0.13
+        "share": 0.109
       },
       {
         "base": 5,
-        "share": 0.757
+        "share": 0.742
       },
       {
         "base": 4,
-        "share": 0.183
+        "share": 0.133
       }
     ],
     "scale": [
       5,
-      6,
       8,
+      9,
       10,
       15,
-      16,
       19,
       20,
       30,
+      50,
       60
     ],
-    "distinctValues": 11
+    "distinctValues": 16
   },
   "rounded": {
     "scale": [],
     "button": null,
     "pill": false,
+    "pillValue": null,
     "sharp": true
   },
   "elevation": {
     "shadows": [
       {
         "value": "rgb(11, 12, 12) 0px 3px 0px 0px",
-        "count": 3
+        "count": 9
       },
       {
         "value": "rgb(8, 61, 41) 0px 2px 0px 0px",
-        "count": 2
+        "count": 6
       }
     ],
     "flat": false
@@ -495,11 +530,13 @@
     "minRatio": 1.57
   },
   "warnings": [
-    "Ignored #1d70b8 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
     "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "No spacing grid explains 75% of values (best 0.742); site may not be on a grid.",
     "No border radius anywhere; treat as a deliberately sharp system.",
-    "Strided sample: 441 of 616 elements. Weights are relative only."
+    "Strided sample: 1323 of 1848 elements. Weights are relative only."
   ],
+  "supportsDark": false,
+  "dark": null,
   "harvest": {
     "harvestVersion": 3,
     "url": "https://www.gov.uk/",
@@ -511,117 +548,117 @@
     "docHeight": 4923,
     "textColors": {
       "rgb(11, 12, 12)": {
-        "count": 48,
-        "area": 753610.484375,
-        "chars": 1994
+        "count": 144,
+        "area": 2235218.84375,
+        "chars": 5982
       },
       "rgb(255, 255, 255)": {
-        "count": 6,
-        "area": 194137.765625,
-        "chars": 131
+        "count": 18,
+        "area": 437412.078125,
+        "chars": 393
       },
       "rgb(26, 101, 166)": {
-        "count": 76,
-        "area": 364146.984375,
-        "chars": 1666
+        "count": 228,
+        "area": 1055601.0625,
+        "chars": 4998
       },
       "rgb(0, 0, 0)": {
-        "count": 1,
-        "area": 1,
-        "chars": 15
+        "count": 3,
+        "area": 3,
+        "chars": 45
       },
       "rgb(29, 112, 184)": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       }
     },
     "bgColors": {
       "rgb(244, 248, 251)": {
-        "count": 4,
-        "area": 8846145,
+        "count": 12,
+        "area": 19204878.5625,
         "chars": 0
       },
       "rgb(255, 255, 255)": {
-        "count": 4,
-        "area": 7611725,
+        "count": 12,
+        "area": 16371220.59375,
         "chars": 0
       },
       "rgb(15, 122, 82)": {
-        "count": 2,
-        "area": 17637.34375,
-        "chars": 50
+        "count": 6,
+        "area": 62634.6875,
+        "chars": 150
       },
       "rgb(29, 112, 184)": {
-        "count": 4,
-        "area": 766419,
+        "count": 12,
+        "area": 1313332.125,
         "chars": 0
       },
       "rgb(210, 226, 241)": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       }
     },
     "borderColors": {
       "rgba(0, 0, 0, 0)": {
-        "count": 3,
-        "area": 485637.34375,
-        "chars": 50
+        "count": 9,
+        "area": 999594.6875,
+        "chars": 150
       },
       "rgb(29, 112, 184)": {
-        "count": 5,
-        "area": 4005600,
+        "count": 19,
+        "area": 6253151.15625,
         "chars": 0
       },
       "rgb(244, 248, 251)": {
-        "count": 1,
-        "area": 2997.421875,
-        "chars": 4
+        "count": 3,
+        "area": 8992.265625,
+        "chars": 12
       },
       "rgb(206, 206, 206)": {
-        "count": 20,
-        "area": 1345050,
+        "count": 61,
+        "area": 3818430,
         "chars": 0
       },
       "rgb(142, 184, 220)": {
-        "count": 4,
-        "area": 123270,
-        "chars": 43
+        "count": 12,
+        "area": 315960,
+        "chars": 129
       },
       "rgb(11, 12, 12)": {
-        "count": 3,
-        "area": 16284.046875,
-        "chars": 36
+        "count": 9,
+        "area": 52928.09375,
+        "chars": 108
       }
     },
     "fontFamilies": {
       "\"GDS Transport\", arial, sans-serif": {
-        "count": 131,
-        "area": 1311896.234375,
-        "chars": 3806
+        "count": 393,
+        "area": 3728234.984375,
+        "chars": 11418
       },
       "Arial": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       }
     },
     "fontSizes": {
       "24px": {
-        "count": 4,
-        "area": 66331,
-        "chars": 75
+        "count": 9,
+        "area": 121251,
+        "chars": 165
       },
       "19px": {
-        "count": 112,
-        "area": 954600.265625,
-        "chars": 3456
+        "count": 342,
+        "area": 2870844.3125,
+        "chars": 10466
       },
       "16px": {
-        "count": 8,
-        "area": 22011.96875,
-        "chars": 122
+        "count": 18,
+        "area": 45542.359375,
+        "chars": 268
       },
       "64px": {
         "count": 1,
@@ -629,53 +666,73 @@
         "chars": 58
       },
       "13.3333px": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       },
       "36px": {
-        "count": 5,
-        "area": 111200,
-        "chars": 82
+        "count": 10,
+        "area": 252800,
+        "chars": 164
       },
       "28.5px": {
+        "count": 3,
+        "area": 3,
+        "chars": 39
+      },
+      "50px": {
         "count": 1,
-        "area": 1,
-        "chars": 13
+        "area": 113634,
+        "chars": 58
+      },
+      "21px": {
+        "count": 3,
+        "area": 34920,
+        "chars": 60
+      },
+      "40px": {
+        "count": 1,
+        "area": 58546.125,
+        "chars": 58
+      },
+      "32px": {
+        "count": 5,
+        "area": 72942.1875,
+        "chars": 82
       }
     },
     "fontWeights": {
       "400": {
-        "count": 75,
-        "area": 739998.953125,
-        "chars": 2550
+        "count": 225,
+        "area": 2240208.796875,
+        "chars": 7650
       },
       "700": {
-        "count": 57,
-        "area": 574397.28125,
-        "chars": 1269
+        "count": 171,
+        "area": 1495526.1875,
+        "chars": 3807
       }
     },
     "lineHeights": {
       "30px": {
-        "count": 3,
-        "area": 66330,
-        "chars": 60
+        "count": 6,
+        "area": 121248,
+        "chars": 120
       },
       "25px": {
-        "count": 102,
-        "area": 876225.09375,
-        "chars": 3166
+        "count": 315,
+        "area": 2684499.046875,
+        "chars": 9656
       },
       "19px": {
-        "count": 3,
-        "area": 19663.21875,
-        "chars": 62
+        "count": 9,
+        "area": 68712.3125,
+        "chars": 186
       },
       "20px": {
-        "count": 8,
-        "area": 19015.546875,
-        "chars": 131
+        "count": 18,
+        "area": 36553.09375,
+        "chars": 295
       },
       "68.48px": {
         "count": 1,
@@ -683,62 +740,77 @@
         "chars": 58
       },
       "40px": {
-        "count": 5,
-        "area": 111200,
-        "chars": 82
+        "count": 10,
+        "area": 252800,
+        "chars": 164
       },
       "24.7px": {
-        "count": 6,
-        "area": 58710.953125,
-        "chars": 215
+        "count": 18,
+        "area": 152549.953125,
+        "chars": 645
       },
       "37.5px": {
+        "count": 3,
+        "area": 3,
+        "chars": 39
+      },
+      "53.5px": {
         "count": 1,
-        "area": 1,
-        "chars": 13
+        "area": 113634,
+        "chars": 58
+      },
+      "42.8px": {
+        "count": 1,
+        "area": 58546.125,
+        "chars": 58
+      },
+      "35.5556px": {
+        "count": 5,
+        "area": 72942.1875,
+        "chars": 82
       }
     },
     "letterSpacings": {},
     "typeStyles": {
       "h2|24px|700|30px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 3,
-        "area": 66330,
-        "chars": 60
+        "count": 6,
+        "area": 121248,
+        "chars": 120
       },
       "text|19px|400|25px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 31,
-        "area": 535929.6875,
-        "chars": 1704
+        "count": 95,
+        "area": 1627461.375,
+        "chars": 5154
       },
       "button|19px|400|19px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 2,
-        "area": 17637.34375,
-        "chars": 50
+        "count": 6,
+        "area": 62634.6875,
+        "chars": 150
       },
       "link|19px|400|19px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 2025.875,
-        "chars": 12
+        "count": 3,
+        "area": 6077.625,
+        "chars": 36
       },
       "link|16px|400|20px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 1,
-        "chars": 20
+        "count": 3,
+        "area": 3,
+        "chars": 60
       },
       "h2|24px|700|normal|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 1,
-        "chars": 15
+        "count": 3,
+        "area": 3,
+        "chars": 45
       },
       "text|16px|700|normal|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 2997.421875,
-        "chars": 4
+        "count": 3,
+        "area": 8992.265625,
+        "chars": 12
       },
       "text|19px|700|20px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 1,
-        "chars": 13
+        "count": 3,
+        "area": 3,
+        "chars": 39
       },
       "text|64px|700|68.48px|normal|\"GDS Transport\", arial, sans-serif": {
         "count": 1,
@@ -746,54 +818,84 @@
         "chars": 58
       },
       "text|19px|700|25px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 15750,
-        "chars": 6
+        "count": 3,
+        "area": 35850,
+        "chars": 18
       },
       "button|13.3333px|400|normal|normal|Arial": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       },
       "h2|36px|700|40px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 5,
-        "area": 111200,
-        "chars": 82
+        "count": 10,
+        "area": 252800,
+        "chars": 164
       },
       "link|19px|700|24.7px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 6,
-        "area": 58710.953125,
-        "chars": 215
+        "count": 18,
+        "area": 152549.953125,
+        "chars": 645
       },
       "link|19px|700|25px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 36,
-        "area": 158926.40625,
-        "chars": 783
+        "count": 108,
+        "area": 476779.21875,
+        "chars": 2349
       },
       "h2|16px|700|20px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 1,
-        "area": 2727.5,
-        "chars": 20
+        "count": 2,
+        "area": 5455,
+        "chars": 40
       },
       "button|16px|400|20px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 3,
-        "area": 16284.046875,
-        "chars": 36
+        "count": 6,
+        "area": 31088.09375,
+        "chars": 72
       },
       "text|16px|400|20px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 2,
-        "area": 2,
-        "chars": 42
+        "count": 4,
+        "area": 4,
+        "chars": 84
       },
       "link|19px|400|25px|normal|\"GDS Transport\", arial, sans-serif": {
-        "count": 34,
-        "area": 165619,
-        "chars": 673
+        "count": 102,
+        "area": 483600.015625,
+        "chars": 2019
       },
       "h2|28.5px|700|37.5px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 3,
+        "area": 3,
+        "chars": 39
+      },
+      "text|50px|700|53.5px|normal|\"GDS Transport\", arial, sans-serif": {
         "count": 1,
-        "area": 1,
-        "chars": 13
+        "area": 113634,
+        "chars": 58
+      },
+      "h2|21px|700|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 3,
+        "area": 34920,
+        "chars": 60
+      },
+      "text|40px|700|42.8px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 58546.125,
+        "chars": 58
+      },
+      "h2|32px|700|35.5556px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 5,
+        "area": 72942.1875,
+        "chars": 82
+      },
+      "h2|19px|700|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 4048.4375,
+        "chars": 20
+      },
+      "button|19px|400|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 3,
+        "area": 21840,
+        "chars": 36
       }
     },
     "states": {
@@ -947,157 +1049,216 @@
     "radii": {},
     "shadows": {
       "rgb(8, 61, 41) 0px 2px 0px 0px": {
-        "count": 2,
-        "area": 17637.34375,
-        "chars": 50
+        "count": 6,
+        "area": 62634.6875,
+        "chars": 150
       },
       "rgb(11, 12, 12) 0px 3px 0px 0px": {
-        "count": 3,
-        "area": 16284.046875,
-        "chars": 36
+        "count": 9,
+        "area": 52928.09375,
+        "chars": 108
       }
     },
     "spacings": {
       "5": {
-        "count": 24,
+        "count": 72,
         "area": 0,
         "chars": 0
       },
       "6": {
-        "count": 2,
-        "area": 0,
-        "chars": 0
-      },
-      "8": {
-        "count": 5,
-        "area": 0,
-        "chars": 0
-      },
-      "10": {
-        "count": 9,
-        "area": 0,
-        "chars": 0
-      },
-      "15": {
-        "count": 33,
-        "area": 0,
-        "chars": 0
-      },
-      "16": {
-        "count": 1,
-        "area": 0,
-        "chars": 0
-      },
-      "19": {
-        "count": 20,
-        "area": 0,
-        "chars": 0
-      },
-      "20": {
-        "count": 7,
-        "area": 0,
-        "chars": 0
-      },
-      "30": {
         "count": 6,
         "area": 0,
         "chars": 0
       },
-      "40": {
+      "8": {
+        "count": 15,
+        "area": 0,
+        "chars": 0
+      },
+      "9": {
+        "count": 7,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 29,
+        "area": 0,
+        "chars": 0
+      },
+      "15": {
+        "count": 105,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "19": {
+        "count": 60,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 19,
+        "area": 0,
+        "chars": 0
+      },
+      "25": {
         "count": 1,
         "area": 0,
         "chars": 0
       },
+      "26": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "28": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "30": {
+        "count": 26,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "50": {
+        "count": 11,
+        "area": 0,
+        "chars": 0
+      },
       "60": {
-        "count": 7,
+        "count": 8,
         "area": 0,
         "chars": 0
       }
     },
     "interactiveBg": {
       "rgb(15, 122, 82)": {
-        "count": 2,
-        "area": 17637.34375,
-        "chars": 50
+        "count": 6,
+        "area": 62634.6875,
+        "chars": 150
       },
       "rgb(29, 112, 184)": {
-        "count": 1,
-        "area": 5994,
+        "count": 3,
+        "area": 17982,
         "chars": 0
       },
       "rgb(210, 226, 241)": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       }
     },
     "interactiveRadius": {
       "0px": {
-        "count": 86,
-        "area": 437723.546875,
-        "chars": 1782
+        "count": 258,
+        "area": 1290129.359375,
+        "chars": 5346
       }
     },
     "interactiveFg": {
       "rgb(255, 255, 255)": {
-        "count": 5,
-        "area": 33657.265625,
-        "chars": 50
+        "count": 15,
+        "area": 110694.453125,
+        "chars": 150
       },
       "rgb(26, 101, 166)": {
-        "count": 76,
-        "area": 364146.984375,
-        "chars": 1666
+        "count": 228,
+        "area": 1055601.0625,
+        "chars": 4998
       },
       "rgb(29, 112, 184)": {
-        "count": 1,
-        "area": 2500,
-        "chars": 13
+        "count": 3,
+        "area": 7500,
+        "chars": 39
       },
       "rgb(11, 12, 12)": {
-        "count": 4,
-        "area": 37419.296875,
-        "chars": 53
+        "count": 12,
+        "area": 116333.84375,
+        "chars": 159
       }
     },
     "headingSizes": {
       "24px": {
-        "count": 4,
-        "area": 66331,
-        "chars": 75
+        "count": 9,
+        "area": 121251,
+        "chars": 165
       },
       "36px": {
-        "count": 5,
-        "area": 111200,
-        "chars": 82
+        "count": 10,
+        "area": 252800,
+        "chars": 164
       },
       "16px": {
-        "count": 1,
-        "area": 2727.5,
-        "chars": 20
+        "count": 2,
+        "area": 5455,
+        "chars": 40
       },
       "28.5px": {
+        "count": 3,
+        "area": 3,
+        "chars": 39
+      },
+      "21px": {
+        "count": 3,
+        "area": 34920,
+        "chars": 60
+      },
+      "32px": {
+        "count": 5,
+        "area": 72942.1875,
+        "chars": 82
+      },
+      "19px": {
         "count": 1,
-        "area": 1,
-        "chars": 13
+        "area": 4048.4375,
+        "chars": 20
       }
     },
     "headingFamilies": {
       "\"GDS Transport\", arial, sans-serif": {
-        "count": 11,
-        "area": 180259.5,
-        "chars": 190
+        "count": 33,
+        "area": 491419.625,
+        "chars": 570
       }
     },
     "headingWeights": {
       "700": {
-        "count": 11,
-        "area": 180259.5,
-        "chars": 190
+        "count": 33,
+        "area": 491419.625,
+        "chars": 570
       }
     },
     "pageBg": "rgb(255, 255, 255)",
-    "elementCount": 616,
-    "sampled": 441
-  }
+    "elementCount": 1848,
+    "sampled": 1323,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 616
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 616
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 616
+      }
+    ],
+    "mergedFrom": 3
+  },
+  "darkHarvest": null
 }
