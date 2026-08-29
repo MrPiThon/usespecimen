@@ -37,6 +37,12 @@ jobs:
       - name: Build site (fails on any spec violation)
         run: npm run build
 
+      # Prose is hand-written against a capture, and captures get re-taken. A
+      # file whose words contradict its own tokens is a broken promise in the
+      # same way a spec violation is, so it fails here rather than shipping.
+      - name: Check prose agrees with the tokens
+        run: npm run check
+
       - name: Check raw files are byte-identical to source
         run: |
           for f in content/systems/*/DESIGN.md; do

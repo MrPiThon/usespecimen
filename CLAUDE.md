@@ -392,6 +392,40 @@ Output is deterministic and carries `harvestVersion` + `clusterVersion`, so a
 drift diff can tell a redesign from a pipeline change. That is the schema
 groundwork for Phase 2 re-capture.
 
+## Prose drift (`npm run check`)
+
+The build refuses a file that breaks the spec. It has nothing to say about a
+file whose **prose asserts a number its own frontmatter contradicts**, and that
+is the likelier failure: every body is hand-written against a capture, and every
+capture gets re-taken. `src/lib/prose-check.mjs` compares the two and CI fails
+on a disagreement.
+
+Deliberately narrow — a drift check that cries wolf gets switched off. It
+verifies hex codes, contrast ratios, spacing-grid claims, grid-confidence
+percentages, motion durations and sharpness. It does **not** check bare pixel
+values, because prose legitimately cross-references other systems ("second only
+to Airbnb's 1430px").
+
+Two false-positive classes are excluded by design: WCAG's own thresholds
+(4.5:1 is a bar prose cites, not a measurement), and dark-palette pairings,
+which are computed against `dark-background` rather than the light canvas.
+
+What the first run found, all real:
+
+| | claimed | measured |
+|---|---|---|
+| GOV.UK | a 5px base obeyed by 76% | no base at all — the registry's grid boundary case |
+| Linear | grid explains 67% | 64% |
+| Basecamp | canvas `#f5faf6`, green cast | `#fcf7ff`, violet cast |
+| The Verge | accent `#5200ff` violet at 7.49:1 | `#3cffd0` mint at 1.28:1, carrying black at 16.41 |
+
+The Verge is the instructive one. The violet had not vanished — it survives as
+`inset 0 -1px 0 0 #5200ff` on `link:hover` across 98 links — but it stopped
+being the accent when a mint button fill outranked it. The file now says both
+things separately, which is what it should have said all along.
+
+When this fails: correct the prose. Never adjust a token to match a sentence.
+
 ## Identity
 
 | Thing | Value |

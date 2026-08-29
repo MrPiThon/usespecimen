@@ -194,8 +194,8 @@ Use it where calm matters more than density.
 
 ## Colors
 
-The canvas is `#f5faf6` — white with a green cast, doing more work than its
-subtlety suggests. Body copy is `#29353c` at 11.92:1: a blue-grey rather than a
+The canvas is `#fcf7ff` — white with a faint violet cast, doing more work than
+its subtlety suggests. Body copy is `#29353c` at 11.92:1: a blue-grey rather than a
 black, softer than the near-blacks most systems reach for.
 
 There is **one** text tier. No muted grey qualified, so none is declared —

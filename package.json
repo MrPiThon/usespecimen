@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Design token extractor for Specimen — captures a live site's computed styles and clusters them into a DESIGN.md token set.",
+  "description": "Design token extractor for Specimen \u2014 captures a live site's computed styles and clusters them into a DESIGN.md token set.",
   "scripts": {
     "extract": "node src/cli.mjs extract",
     "cluster": "node src/cli.mjs cluster",
@@ -14,7 +14,8 @@
     "add": "node src/cli.mjs add",
     "list": "node src/cli.mjs list",
     "mcp": "node src/mcp.mjs",
-    "author": "node src/cli.mjs author"
+    "author": "node src/cli.mjs author",
+    "check": "node src/check-prose.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

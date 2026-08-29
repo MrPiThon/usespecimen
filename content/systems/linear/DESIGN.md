@@ -249,7 +249,7 @@ scale runs twelve steps from 10px to 72px.
 ## Layout
 
 **This system has no consistent spacing grid.** The best candidate base unit
-explains only 67% of observed values, and the run includes 7px and 11px
+explains only 64% of observed values, and the run includes 7px and 11px
 alongside the expected 4, 8, 12, 16, 32.
 
 Do not impose a grid it does not have; match the observed values instead.

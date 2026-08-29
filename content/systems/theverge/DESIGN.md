@@ -1,7 +1,7 @@
 ---
 name: 'Vivid Editorial'
 version: '0.1.0'
-description: 'Newsroom energy: near-black on white with an electric violet doing all the signalling.'
+description: 'Newsroom energy: near-black on white, a serif for reading, a mint fill for action, and an electric violet reserved for link hover.'
 categories:
   - editorial
   - marketing
@@ -201,8 +201,8 @@ provenance:
 
 ## Overview
 
-Newsroom energy: near-black on white, a serif for reading, and an electric
-violet that does every piece of signalling on the page.
+Newsroom energy: near-black on white, a serif for reading, a bright mint
+filling the controls, and an electric violet held back for one job.
 
 Reach for this when there is a lot of text, it changes constantly, and readers
 need to be pulled through it.
@@ -213,9 +213,17 @@ White canvas, `#131313` body copy at 18.58:1, and a three-step text ladder down
 through `#4a4a4a` and `#636363` to 6.01:1 — every tier still comfortably legible,
 which is what a page of dense headlines needs.
 
-The accent is `#5200ff`, a genuinely electric violet at 7.49:1. It carries white
-at the same ratio, so it works as a fill and as text, and at that saturation it
-does not need size to be noticed.
+**The accent is `#3cffd0`, a bright mint**, measured on a filled control. It
+sits at 1.28:1 against white — nothing like a text colour — and carries
+`#000000` at **16.41:1**. It is a fill you put black on, and using it for text
+on white would be unreadable.
+
+**The violet `#5200ff` is still here, doing exactly one job.** It appears as
+`inset 0 -1px 0 0 #5200ff` on `link:hover` across **98 links** — an underline
+that arrives on hover, and nowhere else. It is a state colour, not the brand
+fill, and this file separates the two rather than collapsing them.
+
+Button states run green: `#68b631` on hover and focus, `#2c6415` on active.
 
 Surfaces are `#f6f6f6`; borders `#e9e9e9` at 1.21:1.
 
@@ -271,8 +279,10 @@ page; do not build a system of transitions on one measurement.
 
 ## Do's and Don'ts
 
-- **Do** keep the violet at full saturation. A muted version stops working as a
-  signal in a page this dense.
+- **Do** keep the violet for link hover only. Its whole effect comes from being
+  the one thing that appears when you point at a link.
+- **Do** put black on the mint. At 1.28:1 against white it is a fill, never a
+  text colour.
 - **Do** pair the serif body with a sans display.
 - **Do** keep the measure narrow at 800px. It is what makes a wall of headlines
   readable.
