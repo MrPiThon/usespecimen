@@ -308,3 +308,28 @@ th { color: var(--muted); font-weight: 550; }
 .v-list.warn li, .v-list li.warn { color: var(--warn); }
 #results h3 { font-size: 0.8rem; text-transform: uppercase;
   letter-spacing: 0.06em; color: var(--muted); margin: 1.25rem 0 0.4rem; }
+
+/* ---- catalog filters ---- */
+#q {
+  width: 100%; font: inherit;
+  background: var(--bg); color: var(--fg);
+  border: 1px solid var(--border-strong); border-radius: var(--radius);
+  padding: 0.5rem 0.7rem;
+}
+#q:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.facet-row { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.facet-label {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--muted); min-width: 6.5rem;
+}
+.chip-btn {
+  font: inherit; font-size: 0.85rem;
+  padding: 0.15rem 0.7rem; border-radius: 100px;
+  border: 1px solid var(--border-strong); background: transparent; color: var(--muted);
+  cursor: pointer;
+}
+.chip-btn:hover { color: var(--fg); border-color: var(--fg); }
+.chip-btn[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: var(--accent-fg);
+}
+#results .card[hidden] { display: none; }

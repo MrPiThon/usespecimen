@@ -136,9 +136,15 @@ nothing; not having them loses. What remains:
    *text* pair below AA is disqualifying, a decorative border below 3:1 is not —
    four of four reference sites fail the latter, so blocking on it would ship
    nothing.
-3. **Facets from the token data.** Hue family, contrast level, radius scale,
-   type classification, density, light/dark polarity. They have search; nobody
-   has shopping-by-aesthetic, and the token data makes it nearly free.
+3. **Facets from the token data.** Built. Polarity, shape (sharp / rounded /
+   pill), accent hue family, and body contrast band — every one read from
+   measurements, never hand-tagged, so a system cannot be mis-filed and cannot
+   go stale. The same facets drive `/systems`, `/r/index.json` and the MCP
+   server's `search_designs`, so an agent and a human shop the same catalogue.
+   They have search; nobody has shopping-by-aesthetic.
+
+   The bar only offers options that match something — advertising a filter that
+   returns nothing reads as a broken catalogue rather than a small one.
 4. **Falsifiability as a feature.** Publish the capture alongside the file so a
    reader can check any claim. It is how we found `#010102` doesn't exist, and
    it is the one thing a competitor cannot copy by scraping the output.
@@ -165,7 +171,7 @@ Ours carries one.
 | Framework | Astro 6, static | Hundreds–thousands of near-static pages is SSG's job. Zero JS by default. Next.js would ship a runtime we don't need. |
 | Content | Content Layer + Zod, `src/content.config.ts` | `glob()` over `content/systems/**/DESIGN.md`, schema mirrors the spec. A malformed file fails the build. |
 | Source of truth | Git, one dir per system | `DESIGN.md`, `capture.json`, `source.webp`. PRs for contributions; provenance is commit history. No CMS, no DB in v1. |
-| Search | Pagefind + prebuilt facet index | Static, no backend. Facets from frontmatter. Vector search only if it earns its keep. |
+| Search | Token-derived facets, client-side | Static, no backend, no dependency. Pagefind was installed and removed: it indexes page *text*, which is worth having across hundreds of files and is pure overhead across four. Add it when the corpus justifies an index — the facets do not need it. |
 | Hosting | Vercel | Deployed there as of 29 Aug 2026. Host config is not portable: `vercel.json` carries the `/r/*` CORS contract and `cleanUrls`, while `public/_headers` is the Cloudflare/Netlify equivalent, kept only in case of a move. Changing host means porting both. |
 | Styling | CSS custom properties | We sell design credibility. Tailwind defaults produce the look customers are escaping. |
 | Ingestion | Playwright + Node CLI | Runs offline in CI, writes files, opens a PR. Never part of the web app. |

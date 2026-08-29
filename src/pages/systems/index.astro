@@ -1,44 +1,141 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { readCapture } from '../../lib/system-files.mjs';
+import { facetsFor, FACET_GROUPS } from '../../lib/facets.mjs';
 
-const systems = (await getCollection('systems'))
-  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+const entries = await getCollection('systems');
+const systems = (await Promise.all(entries.map(async (entry) => ({
+  entry,
+  facets: facetsFor(await readCapture(entry.id)),
+})))).sort((a, b) => a.entry.data.name.localeCompare(b.entry.data.name));
 
-// Facets come from the token data itself rather than hand-tagging. Pagefind and
-// the full facet set land in P1; this is the shape they plug into.
+// Only offer a filter that matches something. A facet bar advertising options
+// that return nothing reads as a broken catalogue rather than a small one.
+const present = new Set(systems.flatMap(s => Object.entries(s.facets ?? {})
+  .map(([k, v]) => `${k}:${v}`)));
+const groups = FACET_GROUPS
+  .map(g => ({ ...g, options: g.options.filter(([id]) => present.has(`${g.key}:${id}`)) }))
+  .filter(g => g.options.length > 0);
+
 const swatchKeys = ['background', 'card', 'primary', 'foreground'];
 ---
 
 <Base
   title="Systems — Specimen"
-  description="Design systems extracted from live sites, dated, spec-linted and contrast-audited."
+  description="Design systems extracted from live sites, dated, spec-linted and contrast-audited. Filter by polarity, shape and contrast."
 >
   <h1 style="margin-top:2rem;">Systems</h1>
   <p class="prose" style="color:var(--muted);">
-    {systems.length} {systems.length === 1 ? 'system' : 'systems'}, each extracted
-    from the live site by a headless browser and verified against the DESIGN.md spec.
+    Each one extracted from the live site by a headless browser and verified
+    against the DESIGN.md spec. The filters below are read from the measured
+    tokens, not hand-tagged — which is why they cannot be wrong about a file.
   </p>
 
-  <div class="grid" style="margin-top:2rem;">
-    {systems.map((s) => {
-      const c = s.data.colors ?? {};
-      const captured = s.data.provenance.capturedAt;
+  <div class="panel" style="margin-top:1.5rem;">
+    <label class="visually-hidden" for="q">Search systems</label>
+    <input id="q" type="search" placeholder="Search by name, brand or description…" autocomplete="off" />
+    <div id="facets" style="margin-top:0.85rem;display:grid;gap:0.6rem;">
+      {groups.map(g => (
+        <div class="facet-row">
+          <span class="facet-label">{g.label}</span>
+          {g.options.map(([id, label]) => (
+            <button type="button" class="chip-btn" data-facet={g.key} data-value={id}
+              aria-pressed="false">{label}</button>
+          ))}
+        </div>
+      ))}
+    </div>
+    <p id="count" style="margin:0.85rem 0 0;color:var(--muted);font-size:0.9rem;">
+      {systems.length} systems
+    </p>
+  </div>
+
+  <div class="grid" id="results" style="margin-top:1.5rem;">
+    {systems.map(({ entry, facets }) => {
+      const c = entry.data.colors ?? {};
+      const captured = entry.data.provenance.capturedAt;
       return (
-        <a class="card" href={`/systems/${s.id}`}>
-          <h3>{s.data.name}</h3>
-          <p>{s.data.description}</p>
+        <a
+          class="card"
+          href={`/systems/${entry.id}`}
+          data-polarity={facets?.polarity}
+          data-shape={facets?.shape}
+          data-contrast={facets?.contrast}
+          data-dark={facets?.dark}
+          data-text={[entry.id, entry.data.name, entry.data.provenance.brand,
+            entry.data.description].filter(Boolean).join(' ').toLowerCase()}
+        >
+          <h3>{entry.data.name}</h3>
+          <p>{entry.data.description}</p>
           <div class="swatches">
-            {swatchKeys.filter((k) => typeof c[k] === 'string').map((k) => (
+            {swatchKeys.filter(k => typeof c[k] === 'string').map(k => (
               <span class="swatch" style={`background:${c[k]}`} title={`${k} ${c[k]}`}></span>
             ))}
           </div>
           <p style="margin:0.75rem 0 0;font-size:0.8rem;">
-            {s.data.provenance.brand} · verified <time datetime={captured.toISOString()}>
-              {captured.toISOString().slice(0, 10)}</time>
+            {entry.data.provenance.brand} · {facets?.polarity}
+            {facets?.dark === 'yes' && <> + dark</>} · {facets?.shape}
+            {facets?.ratio && <> · {facets.ratio}:1</>}
+            <br />
+            verified <time datetime={captured.toISOString()}>{captured.toISOString().slice(0, 10)}</time>
           </p>
         </a>
       );
     })}
   </div>
+
+  <p id="empty" hidden style="color:var(--muted);margin-top:1.5rem;">
+    Nothing matches those filters. <button type="button" id="clear">Clear them</button>
+  </p>
 </Base>
+
+<script>
+  // Filtering runs over attributes already on the cards, so the full list is
+  // what a reader without JavaScript sees — the filters are an enhancement, not
+  // the only way in.
+  const cards = [...document.querySelectorAll('#results .card')];
+  const chips = [...document.querySelectorAll('.chip-btn')];
+  const q = document.getElementById('q');
+  const count = document.getElementById('count');
+  const empty = document.getElementById('empty');
+  const active = new Map();
+
+  function apply() {
+    const text = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const card of cards) {
+      const matchesFacets = [...active].every(([key, value]) => card.dataset[key] === value);
+      const matchesText = !text || card.dataset.text.includes(text);
+      const show = matchesFacets && matchesText;
+      card.hidden = !show;
+      if (show) shown += 1;
+    }
+    count.textContent = shown === cards.length
+      ? `${cards.length} systems`
+      : `${shown} of ${cards.length} systems`;
+    empty.hidden = shown > 0;
+  }
+
+  for (const chip of chips) {
+    chip.addEventListener('click', () => {
+      const { facet, value } = chip.dataset;
+      const on = active.get(facet) === value;
+      // One value per group: these are alternatives, not additive tags.
+      for (const other of chips) {
+        if (other.dataset.facet === facet) other.setAttribute('aria-pressed', 'false');
+      }
+      if (on) active.delete(facet);
+      else { active.set(facet, value); chip.setAttribute('aria-pressed', 'true'); }
+      apply();
+    });
+  }
+
+  q.addEventListener('input', apply);
+  document.getElementById('clear')?.addEventListener('click', () => {
+    active.clear();
+    q.value = '';
+    for (const chip of chips) chip.setAttribute('aria-pressed', 'false');
+    apply();
+  });
+</script>

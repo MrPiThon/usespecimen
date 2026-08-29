@@ -122,6 +122,10 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 - The detail page **throws** on lint errors, which fails the build. Contrast
   failures do not: non-text pairs below 3:1 are near-universal on real sites
   (four of four reference captures), so those are reported, not disqualifying.
+- `src/lib/facets.mjs` derives the catalogue facets — polarity, shape, accent
+  hue, contrast band — from a capture. It is the single definition behind
+  `/systems`, `/r/index.json` and MCP `search_designs`, so the three cannot
+  disagree about what a system is. Facets are measured, never hand-tagged.
 - `src/lib/validate.mjs` powers `/validate`, and reuses the build's own linter
   plus the YAML parser Astro's content layer uses. That is deliberate: a
   validator that disagreed with the build would be worse than none, since the

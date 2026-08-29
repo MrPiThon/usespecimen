@@ -34,7 +34,8 @@ const failure = message => ({ content: [{ type: 'text', text: message }], isErro
 const describe = s => [
   `${s.slug} — ${s.name}`,
   s.description ? `  ${s.description}` : null,
-  `  brand: ${s.brand}  ·  ${s.polarity ?? 'unknown'}${s.supportsDark ? ' (also ships dark)' : ''}`,
+  `  brand: ${s.brand}  ·  ${s.polarity ?? 'unknown'}${s.supportsDark ? ' (also ships dark)' : ''}`
+    + `  ·  ${s.shape ?? '?'}  ·  ${s.hue ?? '?'} accent  ·  body ${s.bodyContrast ?? '?'}:1`,
   `  palette: ${s.palette.filter(Boolean).join(' ')}`,
   `  verified ${String(s.capturedAt).slice(0, 10)} against ${s.source}`,
   // Built from THIS server's registry, not the canonical URL baked into the
@@ -56,8 +57,12 @@ server.registerTool('search_designs', {
     query: z.string().optional().describe('Free text matched against slug, name, brand and description'),
     polarity: z.enum(['light', 'dark']).optional().describe('The polarity of the default palette'),
     supportsDark: z.boolean().optional().describe('Only systems that respond to prefers-color-scheme'),
+    shape: z.enum(['sharp', 'rounded', 'pill']).optional()
+      .describe('Corner treatment: sharp means no radius anywhere'),
+    hue: z.string().optional()
+      .describe('Hue family of the accent — neutral, red, orange, yellow, green, teal, blue, purple, pink'),
   },
-}, async ({ query, polarity, supportsDark }) => {
+}, async ({ query, polarity, supportsDark, shape, hue }) => {
   let data;
   try {
     data = await catalog();
@@ -69,6 +74,8 @@ server.registerTool('search_designs', {
   const hits = data.systems.filter(s => {
     if (polarity && s.polarity !== polarity) return false;
     if (supportsDark === true && !s.supportsDark) return false;
+    if (shape && s.shape !== shape) return false;
+    if (hue && s.hue !== hue) return false;
     if (!q) return true;
     return [s.slug, s.name, s.brand, s.description].filter(Boolean)
       .some(f => String(f).toLowerCase().includes(q));
@@ -78,7 +85,8 @@ server.registerTool('search_designs', {
     // Say what was searched, so the agent can widen rather than conclude the
     // registry is empty.
     return text(`No system matches${q ? ` "${query}"` : ''}`
-      + `${polarity ? ` with ${polarity} polarity` : ''}. `
+      + `${polarity ? ` with ${polarity} polarity` : ''}`
+      + `${shape ? ` and ${shape} corners` : ''}. `
       + `The registry currently carries ${data.count}: `
       + `${data.systems.map(s => s.slug).join(', ')}.`);
   }
