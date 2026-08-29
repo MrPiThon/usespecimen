@@ -134,9 +134,15 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   `entry.body`, because the Content Layer strips frontmatter and the file people
   paste into an agent is the whole thing. Verified byte-identical at
   `/r/<slug>/DESIGN.md`.
-- `public/_headers` carries the CORS and content-type contract for `/r/*`; a
-  static build discards `Response` headers, so setting them in the endpoint
-  alone would silently do nothing.
+- **Host config is duplicated and not portable.** A static build discards the
+  `Response` headers set in an endpoint, so the `/r/*` CORS and content-type
+  contract lives in host config — and every host spells it differently. We
+  deploy on **Vercel**, so `vercel.json` is the live one; `public/_headers` is
+  the Cloudflare/Netlify form, kept only against a move. Change one, change both,
+  and remember `_headers` is inert on Vercel rather than merely redundant.
+- `vercel.json` also sets `cleanUrls`. Astro's `build.format: 'file'` emits
+  `about.html`, which Vercel will not serve at `/about` without it — every nav
+  link 404s in production while working perfectly in `astro dev`.
 - The hostname is in `src/lib/site.mjs` and nowhere else — the CLI needs it too,
   so it cannot live in `astro.config.mjs`, which imports it. Site code still
   derives URLs from `Astro.site`.

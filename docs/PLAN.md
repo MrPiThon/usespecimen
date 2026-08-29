@@ -166,7 +166,7 @@ Ours carries one.
 | Content | Content Layer + Zod, `src/content.config.ts` | `glob()` over `content/systems/**/DESIGN.md`, schema mirrors the spec. A malformed file fails the build. |
 | Source of truth | Git, one dir per system | `DESIGN.md`, `capture.json`, `source.webp`. PRs for contributions; provenance is commit history. No CMS, no DB in v1. |
 | Search | Pagefind + prebuilt facet index | Static, no backend. Facets from frontmatter. Vector search only if it earns its keep. |
-| Hosting | Cloudflare Pages | Same edge the incumbent sits on, free at this scale, Workers ready for the API tier. |
+| Hosting | Vercel | Deployed there as of 29 Aug 2026. Host config is not portable: `vercel.json` carries the `/r/*` CORS contract and `cleanUrls`, while `public/_headers` is the Cloudflare/Netlify equivalent, kept only in case of a move. Changing host means porting both. |
 | Styling | CSS custom properties | We sell design credibility. Tailwind defaults produce the look customers are escaping. |
 | Ingestion | Playwright + Node CLI | Runs offline in CI, writes files, opens a PR. Never part of the web app. |
 | Later | Better Auth + Stripe/Polar | Phase 3 only. Don't build accounts before there's something worth logging into. |
