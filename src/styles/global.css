@@ -292,3 +292,19 @@ th { color: var(--muted); font-weight: 550; }
 }
 .pv .pv-success { background: var(--pv-success, #2a7d46); }
 .pv .pv-danger { background: var(--pv-danger, #b42318); }
+
+/* ---- validator ---- */
+#input {
+  width: 100%; min-height: 22rem; resize: vertical;
+  font-family: var(--mono); font-size: 0.85rem; line-height: 1.5;
+  background: var(--surface); color: var(--fg);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0.85rem;
+}
+#input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.v-list { margin: 0 0 1rem; padding-left: 1.2rem; font-size: 0.9rem; }
+.v-list li { margin-bottom: 0.25rem; }
+.v-list.bad li { color: var(--bad); }
+.v-list.warn li, .v-list li.warn { color: var(--warn); }
+#results h3 { font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--muted); margin: 1.25rem 0 0.4rem; }

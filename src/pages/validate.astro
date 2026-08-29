@@ -1,0 +1,172 @@
+---
+import Base from '../layouts/Base.astro';
+import { SECTIONS } from '../lib/design-md.mjs';
+---
+
+<Base
+  title="Validate a DESIGN.md — Specimen"
+  description="Paste a DESIGN.md and get spec conformance plus a WCAG contrast audit. Free, no account, nothing uploaded."
+>
+  <h1 style="margin-top:2rem;">Validate a DESIGN.md</h1>
+  <p class="prose" style="color:var(--muted);">
+    Paste a file, or drop one in. You get the same verdict our build gives — this
+    page runs the linter that decides whether a file may ship here, plus a
+    contrast audit on the colour pairs your naming makes identifiable. Everything
+    runs in your browser; nothing is uploaded and nothing is stored.
+  </p>
+
+  <div class="detail" style="margin-top:2rem;">
+    <div>
+      <div class="pv-row" style="margin-bottom:0.6rem;">
+        <button type="button" id="run">Validate</button>
+        <label class="btn" for="file" style="cursor:pointer;">Choose a file…</label>
+        <input id="file" type="file" accept=".md,text/markdown,text/plain" class="visually-hidden" />
+        <button type="button" id="example">Load an example</button>
+        <span id="filename" style="color:var(--muted);font-size:0.9rem;"></span>
+      </div>
+      <textarea
+        id="input"
+        spellcheck="false"
+        placeholder="---&#10;name: Indigo Infrastructure&#10;colors:&#10;  background: '#ffffff'&#10;---&#10;&#10;## Overview&#10;…"
+        aria-label="DESIGN.md content"
+      ></textarea>
+      <div id="results" aria-live="polite"></div>
+    </div>
+
+    <aside>
+      <div class="panel" style="margin-bottom:1rem;">
+        <h3>What is checked</h3>
+        <ul style="margin:0;padding-left:1.1rem;font-size:0.9rem;">
+          <li>Frontmatter parses as YAML, and <code>name</code> is present — the
+            only property the spec requires.</li>
+          <li>All eight <code>##</code> sections, once each, in order.</li>
+          <li>Every <code>{'{'}token.reference{'}'}</code> resolves to a declared token.</li>
+          <li>WCAG 1.4.3 contrast on identifiable foreground/background pairs.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Required order</h3>
+        <ol style="margin:0;padding-left:1.2rem;font-size:0.9rem;">
+          {SECTIONS.map(s => <li>{s}</li>)}
+        </ol>
+      </div>
+    </aside>
+  </div>
+</Base>
+
+<script>
+  import { validateDesignMd } from '../lib/validate.mjs';
+
+  const $ = id => document.getElementById(id);
+  const input = $('input');
+  const results = $('results');
+  const filename = $('filename');
+
+  const el = (tag, props = {}, children = []) => {
+    const node = Object.assign(document.createElement(tag), props);
+    for (const c of [].concat(children)) node.append(c);
+    return node;
+  };
+  const list = (items, cls) => el('ul', { className: `v-list ${cls}` },
+    items.map(t => el('li', { textContent: t })));
+
+  function render(v) {
+    results.replaceChildren();
+    if (!v) return;
+
+    const verdict = el('p', { className: 'pv-row', style: 'margin:1rem 0 0.5rem' });
+    verdict.append(el('span', {
+      className: `badge ${v.ok ? 'pass' : 'fail'}`,
+      textContent: v.ok ? 'Conformant' : `${v.errors.length} error${v.errors.length === 1 ? '' : 's'}`,
+    }));
+    if (v.warnings.length) {
+      verdict.append(el('span', {
+        className: 'badge warn',
+        textContent: `${v.warnings.length} warning${v.warnings.length === 1 ? '' : 's'}`,
+      }));
+    }
+    if (v.audit?.pairs.length) {
+      verdict.append(el('span', {
+        className: `badge ${v.audit.failures ? 'fail' : 'pass'}`,
+        textContent: v.audit.failures
+          ? `${v.audit.failures} pair${v.audit.failures === 1 ? '' : 's'} below AA`
+          : 'Contrast AA',
+      }));
+    }
+    results.append(verdict);
+
+    if (v.errors.length) {
+      results.append(el('h3', { textContent: 'Errors' }), list(v.errors, 'bad'));
+    }
+    if (v.warnings.length) {
+      results.append(el('h3', { textContent: 'Warnings' }), list(v.warnings, 'warn'));
+    }
+
+    if (v.sections.length) {
+      results.append(el('h3', { textContent: 'Sections found' }));
+      results.append(el('ol', { className: 'v-list' }, v.sections.map(s => el('li', {
+        textContent: s.canonical ? s.heading : `${s.heading} — not a spec section`,
+        className: s.canonical ? '' : 'warn',
+      }))));
+    }
+
+    const a = v.audit;
+    if (a?.pairs.length) {
+      results.append(el('h3', { textContent: 'Contrast' }));
+      const rows = a.pairs.map(p => el('tr', {}, [
+        el('td', { textContent: p.pair }),
+        el('td', {}, [
+          el('span', { className: 'chip', style: `background:${p.fg}` }),
+          el('span', { className: 'chip', style: `background:${p.bg}` }),
+        ]),
+        el('td', {
+          textContent: `${p.ratio}:1`,
+          style: `color:var(--${p.aa ? 'ok' : 'bad'})`,
+        }),
+        el('td', { textContent: `needs ${p.min}:1`, style: 'color:var(--muted)' }),
+      ]));
+      results.append(el('table', {}, [
+        el('thead', {}, el('tr', {}, ['Pair', '', 'Ratio', ''].map(t => el('th', { textContent: t })))),
+        el('tbody', {}, rows),
+      ]));
+      if (a.unpaired.length) {
+        results.append(el('p', {
+          style: 'color:var(--muted);font-size:0.9rem;',
+          textContent: `Not audited, because the pairing is not inferable from the name: ${a.unpaired.join(', ')}.`,
+        }));
+      }
+    } else if (v.data) {
+      results.append(el('p', {
+        style: 'color:var(--muted);font-size:0.9rem;',
+        textContent: 'No contrast pairs could be identified from the colour names. '
+          + 'Naming a background token `background` or `canvas` lets the audit run.',
+      }));
+    }
+  }
+
+  let timer;
+  const run = () => render(validateDesignMd(input.value));
+  const schedule = () => { clearTimeout(timer); timer = setTimeout(run, 250); };
+
+  input.addEventListener('input', schedule);
+  $('run').addEventListener('click', run);
+
+  $('file').addEventListener('change', async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    filename.textContent = file.name;
+    input.value = await file.text();
+    run();
+  });
+
+  $('example').addEventListener('click', async () => {
+    try {
+      const res = await fetch('/r/stripe/DESIGN.md');
+      input.value = await res.text();
+      filename.textContent = 'stripe/DESIGN.md';
+      run();
+    } catch {
+      filename.textContent = 'could not load the example';
+    }
+  });
+</script>

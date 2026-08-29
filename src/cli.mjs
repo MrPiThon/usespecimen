@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { harvestFn } from './extract/harvest.mjs';
 import { cluster, summarize } from './extract/cluster.mjs';
 import { mergeHarvests } from './extract/merge.mjs';
-import { parseColor, deltaE } from './extract/color.mjs';
+import { parseColor, deltaE } from './lib/color.mjs';
 import { captureScreenshot } from './extract/screenshot.mjs';
 
 // Widest first: the primary capture supplies the scalars and the stylesheet

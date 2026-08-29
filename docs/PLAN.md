@@ -204,8 +204,13 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
   paste into agent prompts.
 - `/spec` — a genuinely good explainer of the format, section by section, with a
   live validator. Best organic-traffic asset; theirs is thin.
-- `/validate` — paste or upload a DESIGN.md, get conformance plus a contrast
-  audit. Free, no account. One afternoon; earns links forever.
+- `/validate` — **built.** Paste or upload a DESIGN.md, get conformance plus a
+  contrast audit. Free, no account, nothing uploaded — it runs entirely in the
+  browser. It runs the *same* linter the build enforces and the same YAML parser
+  the content layer uses, so its verdict is the verdict: a validator that
+  disagreed with the build would be worse than not offering one. Contrast is
+  audited only on pairs the file's naming makes identifiable, and everything it
+  could not pair is listed rather than quietly skipped.
 - `/cli`, `/mcp` — install docs for the machine interfaces.
 - `/submit` — contribute by PR, schema documented.
 - `/about` — provenance policy, trademark policy, opt-out process. Early, not

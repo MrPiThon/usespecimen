@@ -19,7 +19,7 @@
 
 import {
   parseColor, toHex, flatten, toOklch, deltaE, contrastRatio, relativeLuminance, hueFamily,
-} from './color.mjs';
+} from '../lib/color.mjs';
 
 /** OKLab distance below which two TEXT or interactive colors are one token.
  *  Measured against real pairs: Stripe's navy variants sit 0.0424 apart and must

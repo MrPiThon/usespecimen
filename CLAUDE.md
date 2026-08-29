@@ -50,7 +50,9 @@ npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
   That is deliberate and it is the product claim; don't route around it by
   loosening the schema when a file fails.
 - Playwright is a **devDependency**. The ingestion pipeline is never part of the
-  web app, so the site build must never import from `src/extract/`.
+  web app, so the site build must never import from `src/extract/`. Genuinely
+  shared, dependency-free code belongs in `src/lib/` — that is why `color.mjs`
+  lives there and `cluster.mjs` imports it as `../lib/color.mjs`.
 - `extract` sweeps **1440 / 768 / 390 under light and dark** — six harvests per
   site. Widths merge per scheme (`src/extract/merge.mjs`), schemes cluster
   separately. `--viewport WxH` pins a single width, `--light-only` skips the dark
@@ -106,6 +108,13 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 - The detail page **throws** on lint errors, which fails the build. Contrast
   failures do not: non-text pairs below 3:1 are near-universal on real sites
   (four of four reference captures), so those are reported, not disqualifying.
+- `src/lib/validate.mjs` powers `/validate`, and reuses the build's own linter
+  plus the YAML parser Astro's content layer uses. That is deliberate: a
+  validator that disagreed with the build would be worse than none, since the
+  offer is "paste your file and learn whether it would ship". Contrast is audited
+  only on pairs the file's own naming makes identifiable — `background`/`canvas`,
+  `foreground`/`ink`, `on-x`/`xForeground` — and everything it could not pair is
+  listed, because silently checking nothing looks exactly like silently passing.
 - `src/lib/preview.mjs` + `src/components/Preview.astro` render real components
   from one file's tokens. The rule that makes it worth anything: a custom
   property is set **only** where the file declares the token — nothing is filled
@@ -203,7 +212,13 @@ capture dominates any area-ranked role. That is the right default — the widest
 layout is canonical — but a mobile-only surface can be out-weighed by the same
 element at desktop.
 
-### `src/extract/color.mjs` — the math
+### `src/lib/color.mjs` — the math
+
+Lives in `src/lib/`, not `src/extract/`, because both the pipeline and the site
+need it and it has no dependencies at all. That is the shape of the rule: the
+site must never import from `src/extract/` (which would drag in the browser
+driver), so anything genuinely shared moves here rather than reaching across the
+boundary.
 
 Pure functions, no I/O. Signature conventions are not uniform, so check before
 calling:
