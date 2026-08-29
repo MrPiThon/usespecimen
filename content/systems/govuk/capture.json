@@ -15,7 +15,7 @@
     "sampleRatio": 0.716
   },
   "harvestVersion": 2,
-  "clusterVersion": 6,
+  "clusterVersion": 7,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -105,7 +105,7 @@
       {
         "hex": "#0f7a52",
         "role": "primary",
-        "hue": "teal",
+        "hue": "green",
         "lightness": 0.514,
         "chroma": 0.11,
         "count": 2
@@ -159,6 +159,7 @@
         "count": 4
       }
     ],
+    "semantic": {},
     "accentRejected": [
       {
         "hex": "#1d70b8",

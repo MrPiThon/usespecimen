@@ -149,6 +149,64 @@ export function clusterColors(entries, threshold = COLOR_MERGE) {
 
 const isChromatic = c => toOklch(c.rgb).C >= CHROMATIC;
 
+/** Hue families that carry conventional meaning. Blue is deliberately absent: it
+ *  is the most common brand hue, and labelling every blue panel "info" would be
+ *  wrong far more often than right. */
+const SEMANTIC_BY_HUE = {
+  green: 'success', red: 'danger', orange: 'warning', yellow: 'warning',
+};
+const SEMANTIC_MIN_CHROMA = 0.05;
+const MIN_SEMANTIC_COUNT = 2;
+
+/**
+ * Success / danger / warning colours, read from tinted panels and their borders.
+ *
+ * Declared RAW, for the same reason focus rings are: `rgba(39, 166, 68, 0.07)`
+ * is a 7% wash on screen, but the token it declares is `#27a644`, and that is
+ * what a design system means by "success". Compositing it would emit a colour
+ * that is on screen and is not the token.
+ *
+ * Ranked by how many properties a colour paints before how often it appears. A
+ * real state style colours a surface AND its edge; that is what separates
+ * Linear's #27a644 (background and border, 9 elements) from a pure lime used
+ * 16 times as decoration.
+ */
+export function semanticColors(capture, primary) {
+  const byHex = new Map();
+  for (const map of ['bgColors', 'borderColors']) {
+    for (const [key, w] of Object.entries(capture?.[map] ?? {})) {
+      const c = parseColor(key);
+      if (!c || (c.a ?? 1) === 0) continue;
+      const rgb = { r: c.r, g: c.g, b: c.b, a: 1 };
+      const lch = toOklch(rgb);
+      if (lch.C < SEMANTIC_MIN_CHROMA) continue;
+      const role = SEMANTIC_BY_HUE[hueFamily(lch)];
+      if (!role) continue;
+      // The brand accent is not a semantic colour, however green it happens to
+      // be — GOV.UK's primary would otherwise be reported as `success`.
+      if (primary && deltaE(rgb, primary.rgb) <= COLOR_MERGE) continue;
+      const hit = byHex.get(toHex(rgb))
+        ?? { hex: toHex(rgb), role, count: 0, sources: new Set() };
+      hit.count += w.count;
+      hit.sources.add(map);
+      byHex.set(hit.hex, hit);
+    }
+  }
+
+  const out = {};
+  const ranked = [...byHex.values()].sort((a, b) => b.sources.size - a.sources.size
+    || b.count - a.count || (a.hex < b.hex ? -1 : 1));
+  for (const c of ranked) {
+    if (c.count < MIN_SEMANTIC_COUNT || out[c.role]) continue;
+    out[c.role] = {
+      hex: c.hex,
+      occurrences: c.count,
+      paintsBorder: c.sources.has('borderColors'),
+    };
+  }
+  return out;
+}
+
 /**
  * Colors declared inside box-shadow strings. A chromatic one is nearly always a
  * focus ring or brand glow, which is where a restrained system keeps its accent
@@ -350,6 +408,7 @@ export function colorTokens(capture) {
 
   const surfaces = surfaceRamp(bg, backdrop, accents, shares.bg);
   const texts = textRamp(text, backdrop, shares.text);
+  const semantic = semanticColors(capture, primary);
 
   return {
     polarity: relativeLuminance(backdrop.rgb) < 0.2 ? 'dark' : 'light',
@@ -372,6 +431,9 @@ export function colorTokens(capture) {
       })),
     },
     palette,
+    // State colours, not brand colours. Empty is a real answer: a marketing page
+    // that never shows an error state has no danger token to extract.
+    semantic,
     // Chromatic fills that lost the accent role for appearing once. Reported
     // rather than dropped: a reviewer eyeballing the tokens should see what was
     // considered and why it was passed over.
@@ -881,8 +943,11 @@ export function cluster(capture) {
     // 6: adds typography.roles from harvest v2 bundles, and `body` now comes
     //    from a real bundle instead of four independent histogram winners,
     //    which moves body size on pages whose most-typed size is UI chrome.
+    // 7: adds colors.semantic, and fixes hueFamily's bands, which were HSL
+    //    angles applied to OKLCH — every red was labelled orange, so the `hue`
+    //    facet moves on any palette containing one.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 6,
+    clusterVersion: 7,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

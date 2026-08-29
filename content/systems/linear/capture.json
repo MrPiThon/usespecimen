@@ -15,7 +15,7 @@
     "sampleRatio": 0.59
   },
   "harvestVersion": 2,
-  "clusterVersion": 6,
+  "clusterVersion": 7,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -118,7 +118,7 @@
       {
         "hex": "#e4f222",
         "role": null,
-        "hue": "green",
+        "hue": "yellow",
         "lightness": 0.92,
         "chroma": 0.201,
         "count": 1
@@ -182,7 +182,7 @@
       {
         "hex": "#260809",
         "role": null,
-        "hue": "orange",
+        "hue": "red",
         "lightness": 0.187,
         "chroma": 0.051,
         "count": 3
@@ -230,7 +230,7 @@
       {
         "hex": "#f7bf8b",
         "role": null,
-        "hue": "yellow",
+        "hue": "orange",
         "lightness": 0.843,
         "chroma": 0.093,
         "count": 22
@@ -254,7 +254,7 @@
       {
         "hex": "#eb5757",
         "role": null,
-        "hue": "orange",
+        "hue": "red",
         "lightness": 0.653,
         "chroma": 0.183,
         "count": 3
@@ -286,12 +286,24 @@
       {
         "hex": "#8fa6ff",
         "role": null,
-        "hue": "purple",
+        "hue": "blue",
         "lightness": 0.744,
         "chroma": 0.131,
         "count": 8
       }
     ],
+    "semantic": {
+      "success": {
+        "hex": "#27a644",
+        "occurrences": 9,
+        "paintsBorder": true
+      },
+      "danger": {
+        "hex": "#f34e52",
+        "occurrences": 8,
+        "paintsBorder": true
+      }
+    },
     "accentRejected": [
       {
         "hex": "#e4f222",

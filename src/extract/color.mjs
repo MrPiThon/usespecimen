@@ -89,15 +89,22 @@ export function contrastRatio(fg, bg) {
   return (hi + 0.05) / (lo + 0.05);
 }
 
-/** Rough hue family label, for faceted search later. */
+/**
+ * Rough hue family label, for faceted search and semantic classification.
+ *
+ * These are OKLCH hue angles, which are NOT the HSL angles they resemble: pure
+ * red sits at 29 degrees, not 0. Bands verified against canonical colours —
+ * #ff0000 29, #f97316 48, #eab308 86, #22c55e 150, #14b8a6 183, #3b82f6 260,
+ * #8b5cf6 293, #ec4899 354. An HSL-shaped table labels every red "orange".
+ */
 export function hueFamily({ C, h }) {
   if (C < 0.03) return 'neutral';
-  if (h < 20 || h >= 345) return 'red';
-  if (h < 50) return 'orange';
-  if (h < 95) return 'yellow';
-  if (h < 160) return 'green';
-  if (h < 200) return 'teal';
-  if (h < 260) return 'blue';
-  if (h < 300) return 'purple';
-  return 'pink';
+  if (h < 15 || h >= 330) return 'pink';
+  if (h < 40) return 'red';
+  if (h < 75) return 'orange';
+  if (h < 120) return 'yellow';
+  if (h < 170) return 'green';
+  if (h < 230) return 'teal';
+  if (h < 275) return 'blue';
+  return 'purple';
 }

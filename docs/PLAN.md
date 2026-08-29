@@ -370,11 +370,24 @@ from four independent histograms could emit a combination the page never used,
 and it did — Stripe's body was reported with `-0.22px` tracking, which belongs to
 its 22px display style. The 16px body carries none.
 
-**4. Semantic colours are on the floor.**
-Their file has `semantic-success: #27a644`. Our capture contains
-`rgba(39, 166, 68, 0.07)` — the same green — and we never look at it. Low-alpha
-chromatic backgrounds classified by hue family (green→success, red→danger,
-amber→warning) is a cheap, well-evidenced addition.
+**4. ~~Semantic colours are on the floor.~~ DONE, cluster v7.**
+`colors.semantic` reads state colours from tinted panels and their borders,
+declared RAW for the same reason focus rings are: `rgba(39, 166, 68, 0.07)` is a
+7% wash on screen, but the token it declares is `#27a644` — exactly the
+`semantic-success` in their file.
+
+Ranked by how many properties a colour paints before how often it appears. A real
+state style colours a surface *and* its edge, which is what separates Linear's
+`#27a644` (background + border, 9 elements) from a pure lime used 16 times as
+decoration. Linear yields `success #27a644` and `danger #f34e52`; Stripe and
+GOV.UK yield nothing, which is correct — neither marketing page shows a state.
+
+**This uncovered a bug in `hueFamily`.** Its bands were HSL hue angles applied to
+OKLCH values. Pure red sits at 29 degrees in OKLCH, not 0, so *every red was
+labelled orange* and pink was labelled red. That silently broke both semantic
+classification and the hue facet this plan sells in section 4.3. Bands are now
+verified against canonical colours (#ff0000 29, #f97316 48, #eab308 86, #22c55e
+150, #14b8a6 183, #3b82f6 260, #8b5cf6 293, #ec4899 354).
 
 **5. No interaction states.**
 `harvest` reads resting computed style only, so hover, active and focus are

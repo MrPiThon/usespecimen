@@ -118,7 +118,7 @@ provenance:
   capturedAt: '2026-08-28T23:56:37.987Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 2
-  clusterVersion: 6
+  clusterVersion: 7
 ---
 
 ## Overview

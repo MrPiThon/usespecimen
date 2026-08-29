@@ -14,6 +14,8 @@ colors:
   text-2: '#d0d6e0'
   text-3: '#8a8f98'
   text-4: '#62666d'
+  success: '#27a644'
+  danger: '#f34e52'
 typography:
   fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
   headingFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
@@ -136,7 +138,7 @@ provenance:
   capturedAt: '2026-08-28T23:56:41.777Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
   harvestVersion: 2
-  clusterVersion: 6
+  clusterVersion: 7
 ---
 
 ## Overview
@@ -167,6 +169,10 @@ observe.
 
 A single acid-yellow panel (`#e4f222`) appears once on the marketing page. It is
 a campaign element, not a token, and it is deliberately excluded.
+
+State colours survive in tinted panels and their borders: `#27a644` for success
+and `#f34e52` for danger, both painting a surface and its edge. They are the
+only saturated colours in the system that are neither brand nor decoration.
 
 Borders are `#1c1d1e` at 1.18:1. Separation here is a small luminance step, not
 a contrast boundary — correct for dark UI, but it means borders alone cannot

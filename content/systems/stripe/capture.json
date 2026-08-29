@@ -15,7 +15,7 @@
     "sampleRatio": 0.668
   },
   "harvestVersion": 2,
-  "clusterVersion": 6,
+  "clusterVersion": 7,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -121,7 +121,7 @@
       {
         "hex": "#0d1738",
         "role": null,
-        "hue": "purple",
+        "hue": "blue",
         "lightness": 0.217,
         "chroma": 0.066,
         "count": 1
@@ -217,7 +217,7 @@
       {
         "hex": "#839bc8",
         "role": null,
-        "hue": "purple",
+        "hue": "blue",
         "lightness": 0.688,
         "chroma": 0.072,
         "count": 4
@@ -225,7 +225,7 @@
       {
         "hex": "#a3b5d6",
         "role": null,
-        "hue": "purple",
+        "hue": "blue",
         "lightness": 0.77,
         "chroma": 0.051,
         "count": 3
@@ -257,7 +257,7 @@
       {
         "hex": "#7d8ba4",
         "role": null,
-        "hue": "purple",
+        "hue": "blue",
         "lightness": 0.634,
         "chroma": 0.041,
         "count": 7
@@ -295,6 +295,7 @@
         "count": 8
       }
     ],
+    "semantic": {},
     "accentRejected": [
       {
         "hex": "#0a2540",

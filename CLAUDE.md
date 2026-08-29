@@ -159,7 +159,9 @@ calling:
 - Most functions take `{r, g, b, a}` with **0-255** channels — `flatten`,
   `toOklab`, `toOklch`, `deltaE`, `relativeLuminance`, `contrastRatio`, `toHex`.
 - `hueFamily` is the exception: it takes an **OKLCH** `{C, h}`, so pipe through
-  `toOklch` first.
+  `toOklch` first. Its bands are OKLCH hue angles, which are *not* the HSL angles
+  they resemble — pure red is 29 degrees, not 0. An HSL-shaped table labels every
+  red "orange", which is what the original did.
 - `deltaE` converts sRGB→OKLab internally. Pass it RGB, not OKLab.
 - `contrastRatio(fg, bg)` flattens `fg` over `bg` itself, so `bg` must already be
   opaque.
@@ -198,6 +200,11 @@ is what makes the palette recognisable:
 most prose — filtered above 20 chars/element to drop nav and label chrome, then
 ranked by total characters to drop display type. Neither measure works alone, and
 ranking by total characters (the old behaviour) gave Linear its 13px chrome size.
+
+`colors.semantic` reads success/danger/warning from tinted panels, taking the
+**declared** colour rather than the composited one — a 7% green wash declares
+`#27a644`, and that is the token. Candidates are ranked by how many properties
+they paint before how often: a real state style colours a surface and its edge.
 
 Alongside the colour roles, `colors.ramps` carries ordered ladders: `text` by contrast
 descending, `surface` by lightness distance from the canvas. They answer a
