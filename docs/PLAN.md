@@ -231,10 +231,14 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
   HTTP endpoints rather than the repository, so it works against a deployed
   registry from any machine, and `SPECIMEN_REGISTRY` overrides the origin since
   an MCP client passes no argv. Both pages still need writing — the software
-  exists, the install docs do not.
+  exists, and both pages are now written. They say plainly that nothing is
+  published to npm yet and give the clone-and-run path instead — a documented
+  `npx @usespecimen/cli` that does not resolve would be worse than no page.
 - `/submit` — contribute by PR, schema documented.
-- `/about` — provenance policy, trademark policy, opt-out process. Early, not
-  boilerplate: it's a trust asset.
+- `/about` — **built.** Provenance policy, trademark policy, removal process.
+  The brand list and the "no file here is derived from another corpus" claim are
+  rendered *from the collection*, so neither can drift away from what the
+  registry actually holds. Removal is stated as unconditional.
 
 If a block is identical on every system page, it belongs in the footer or the
 docs, not the body. That's the trap that caught them.
