@@ -109,6 +109,22 @@ export function checkTokenRefs(data) {
   return errors;
 }
 
+/**
+ * Resolve a `{path.to.token}` reference against the frontmatter.
+ *
+ * Returns a literal unchanged, and null when the reference dangles — though
+ * checkTokenRefs fails the build before a dangling one can reach a page, so null
+ * here means the caller asked for something the file never declared.
+ */
+export function resolveRef(data, value) {
+  if (typeof value === 'number') return String(value);
+  if (typeof value !== 'string') return null;
+  const m = /^\{([a-zA-Z0-9_.-]+)\}$/.exec(value.trim());
+  if (!m) return value;
+  const hit = m[1].split('.').reduce((o, k) => (o == null ? o : o[k]), data);
+  return typeof hit === 'string' || typeof hit === 'number' ? String(hit) : null;
+}
+
 /** Full conformance result for one file. */
 export function lint(entry) {
   const section = lintSections(entry.body);

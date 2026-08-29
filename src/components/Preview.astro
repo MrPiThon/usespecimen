@@ -1,0 +1,59 @@
+---
+// Real components rendered from one file's tokens. Deliberately mundane —
+// button, card, nav, form, table — because the point is not to look good but to
+// make a wrong token obvious at a glance.
+import { previewVars } from '../lib/preview.mjs';
+
+interface Props { data: any; dark?: boolean; label: string; }
+const { data, dark = false, label } = Astro.props;
+const style = previewVars(data, { dark });
+const semantic = ['success', 'danger'].filter(k => (data.colors ?? {})[dark ? `dark-${k}` : k]);
+---
+
+<figure class="pv-wrap">
+  <figcaption>{label}</figcaption>
+  <div class="pv" style={style}>
+    <nav class="pv-nav">
+      <strong>{data.name}</strong>
+      <a href="#" onclick="return false">Docs</a>
+      <a href="#" onclick="return false">Pricing</a>
+      <button type="button" class="pv-btn">Get started</button>
+    </nav>
+
+    <div class="pv-body">
+      <h3 class="pv-h">Deploy in one command</h3>
+      <p>Body copy set in this system's own type role, at its own size and leading.</p>
+      <p class="pv-muted">Muted text, for the tier a system reserves for secondary copy.</p>
+
+      <div class="pv-card">
+        <strong>Card surface</strong>
+        <p class="pv-muted">Uses the card colour and border where the file declares them.</p>
+        <label class="pv-field">
+          <span>Project name</span>
+          <input type="text" value="specimen" readonly />
+        </label>
+        <div class="pv-row">
+          <button type="button" class="pv-btn">Primary</button>
+          <button type="button" class="pv-btn pv-btn-quiet">Secondary</button>
+        </div>
+      </div>
+
+      <table class="pv-table">
+        <thead><tr><th>Token</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>background</td><td>{(data.colors ?? {})[dark ? 'dark-background' : 'background'] ?? '—'}</td></tr>
+          <tr><td>foreground</td><td>{(data.colors ?? {})[dark ? 'dark-foreground' : 'foreground'] ?? '—'}</td></tr>
+          <tr><td>primary</td><td>{(data.colors ?? {})[dark ? 'dark-primary' : 'primary'] ?? '—'}</td></tr>
+        </tbody>
+      </table>
+
+      {semantic.length > 0 && (
+        <div class="pv-row">
+          {semantic.map(k => (
+            <span class={`pv-pill pv-${k}`}>{k}</span>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</figure>

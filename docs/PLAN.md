@@ -115,11 +115,21 @@ nothing; not having them loses. What remains:
 
 **Real differentiators.**
 
-1. **Proof, not vibes.** A provenance block per entry: capture date, source URL,
-   extraction method, pipeline versions — plus a live preview rendering real
-   components from the file's own tokens in both themes, beside a screenshot of
-   the source. If the preview looks wrong, the file is wrong, and everyone can
-   see it. Nobody else dates a file.
+1. **Proof, not vibes.** Built. A provenance block per entry — capture date,
+   source URL, extraction method, pipeline versions — plus a live preview
+   rendering real components from the file's own tokens, in both schemes where
+   the site has two, above a dated screenshot of the source.
+
+   The preview only earns the claim "if the preview looks wrong, the file is
+   wrong" while it refuses to improve on its input, so a custom property is set
+   **only** when the file declares the token. Where the file is silent the
+   preview falls back to a plainly neutral default and draws its own hairlines
+   **dashed**, and the page names what it had to supply: Linear's preview says
+   "this file supplies no label colour for the accent" rather than letting a
+   white button label read as extracted. GOV.UK, which declares everything the
+   preview needs, renders solid and says nothing.
+
+   Nobody else dates a file, and nobody else shows you what they had to make up.
 2. **Validated in public.** Google spec linter plus a WCAG contrast audit on
    every declared pair, printed on the page. Enforced at build time, so a
    non-conformant file cannot reach the site. Caveat learned in testing: a

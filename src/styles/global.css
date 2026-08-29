@@ -193,3 +193,102 @@ th { color: var(--muted); font-weight: 550; }
   position: absolute; width: 1px; height: 1px; overflow: hidden;
   clip-path: inset(50%); white-space: nowrap;
 }
+
+/* ---- live component preview ----
+   Renders from one system's tokens and nothing else. Every value falls back to
+   a plainly neutral default, never to this site's palette: a file that declares
+   no border must render without one, or the preview is flattering its input.
+   Selectors are .pv-scoped so the site chrome above cannot leak in. */
+.pv-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 62rem) { .pv-grid.two { grid-template-columns: 1fr 1fr; } }
+
+.pv-wrap { margin: 0; min-width: 0; }
+.pv-wrap figcaption {
+  color: var(--muted); font-size: 0.8rem; margin-bottom: 0.4rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+.pv {
+  background: var(--pv-bg, #ffffff);
+  color: var(--pv-fg, #111111);
+  font-family: var(--pv-font, ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--pv-size, 16px);
+  font-weight: var(--pv-weight, 400);
+  line-height: var(--pv-leading, 1.5);
+  letter-spacing: var(--pv-tracking, normal);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.pv-nav {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--pv-border, rgba(128, 128, 128, 0.3));
+  border-bottom-style: var(--pv-border-style, dashed);
+}
+.pv-nav strong { margin-right: auto; }
+.pv .pv-nav a { color: inherit; text-decoration: none; opacity: 0.7; font-size: 0.9em; }
+
+.pv-body { padding: 1rem; display: grid; gap: 0.85rem; }
+.pv p { margin: 0; }
+.pv .pv-h {
+  margin: 0; line-height: 1.2;
+  font-size: var(--pv-heading-size, 1.35em);
+  font-weight: var(--pv-heading-weight, 600);
+}
+.pv .pv-muted { color: var(--pv-muted, currentColor); }
+
+.pv .pv-card {
+  background: var(--pv-card, transparent);
+  border: 1px solid var(--pv-border, rgba(128, 128, 128, 0.35));
+  border-style: var(--pv-border-style, dashed);
+  border-radius: var(--pv-radius, 0);
+  padding: 1rem; display: grid; gap: 0.7rem;
+}
+
+.pv-row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+
+.pv .pv-btn {
+  font: inherit;
+  display: inline-flex; align-items: center;
+  background: var(--pv-btn-bg, var(--pv-primary, #303030));
+  color: var(--pv-btn-fg, var(--pv-primary-fg, #ffffff));
+  border: 0;
+  border-radius: var(--pv-btn-radius, var(--pv-radius, 0));
+  padding: var(--pv-btn-padding, 0.5rem 0.9rem);
+  gap: var(--pv-btn-gap, 0.4rem);
+  cursor: default;
+}
+.pv .pv-btn-quiet {
+  background: transparent; color: inherit;
+  border: 1px solid var(--pv-border, rgba(128, 128, 128, 0.4));
+  border-style: var(--pv-border-style, dashed);
+}
+.pv .pv-btn:hover { border-color: inherit; }
+
+.pv .pv-field { display: grid; gap: 0.3rem; font-size: 0.9em; }
+.pv .pv-field input {
+  font: inherit;
+  background: var(--pv-bg, #ffffff);
+  color: inherit;
+  border: 1px solid var(--pv-border, rgba(128, 128, 128, 0.4));
+  border-style: var(--pv-border-style, dashed);
+  border-radius: var(--pv-radius, 0);
+  padding: 0.45rem 0.6rem;
+}
+
+.pv .pv-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+.pv .pv-table th, .pv .pv-table td {
+  text-align: left; padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--pv-border, rgba(128, 128, 128, 0.3));
+  border-bottom-style: var(--pv-border-style, dashed);
+}
+.pv .pv-table th { color: var(--pv-muted, inherit); font-weight: 500; }
+
+.pv .pv-pill {
+  border-radius: 999px; padding: 0.1rem 0.6rem; font-size: 0.8em;
+  color: var(--pv-bg, #ffffff);
+}
+.pv .pv-success { background: var(--pv-success, #2a7d46); }
+.pv .pv-danger { background: var(--pv-danger, #b42318); }

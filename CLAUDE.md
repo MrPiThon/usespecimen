@@ -106,6 +106,15 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 - The detail page **throws** on lint errors, which fails the build. Contrast
   failures do not: non-text pairs below 3:1 are near-universal on real sites
   (four of four reference captures), so those are reported, not disqualifying.
+- `src/lib/preview.mjs` + `src/components/Preview.astro` render real components
+  from one file's tokens. The rule that makes it worth anything: a custom
+  property is set **only** where the file declares the token — nothing is filled
+  in, so a thin file renders visibly plain. Absent borders draw dashed, and
+  `previewGaps()` lists what the preview had to supply so a viewer never reads a
+  CSS default as an extracted value. For the dark scheme, `dark-*` tokens are
+  promoted over their base names *before* resolving `{colors.primary}`-style
+  references, or component tokens resolve to the light accent while the dark
+  preview renders.
 - `src/lib/system-files.mjs` reads `DESIGN.md` from disk rather than using
   `entry.body`, because the Content Layer strips frontmatter and the file people
   paste into an agent is the whole thing. Verified byte-identical at
