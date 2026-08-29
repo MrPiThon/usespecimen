@@ -22,9 +22,14 @@ export function emitYaml(obj, indent = 0) {
   return Object.entries(obj)
     .filter(([, v]) => v !== undefined && v !== null && v !== '')
     .filter(([, v]) => !(v && typeof v === 'object' && Object.keys(v).length === 0))
-    .map(([k, v]) => (v && typeof v === 'object' && !Array.isArray(v)
-      ? `${pad}${k}:\n${emitYaml(v, indent + 2)}`
-      : `${pad}${k}: ${scalar(v)}`))
+    .map(([k, v]) => {
+      // Arrays are block sequences — `categories` is the only one, and a flow
+      // list would still parse but reads nothing like the rest of the file.
+      if (Array.isArray(v)) return `${pad}${k}:\n${v.map(x => `${pad}  - ${x}`).join('\n')}`;
+      return v && typeof v === 'object'
+        ? `${pad}${k}:\n${emitYaml(v, indent + 2)}`
+        : `${pad}${k}: ${scalar(v)}`;
+    })
     .join('\n');
 }
 
@@ -40,7 +45,7 @@ export function brandFromUrl(url) {
   }
 }
 
-export function buildFrontmatter(cap, { name, description, brand, dark }) {
+export function buildFrontmatter(cap, { name, description, brand, dark, categories }) {
   const roles = cap.colors.roles;
   const t = cap.typography;
 
@@ -92,6 +97,9 @@ export function buildFrontmatter(cap, { name, description, brand, dark }) {
     name,
     version: '0.1.0',
     description,
+    // Declared, not measured, so it can only come from the author or from the
+    // file being refreshed — never from the capture.
+    ...(categories?.length ? { categories } : {}),
     colors,
     typography: {
       fontFamily: t.body.stack,

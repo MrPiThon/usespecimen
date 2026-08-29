@@ -145,6 +145,11 @@ nothing; not having them loses. What remains:
 
    The bar only offers options that match something — advertising a filter that
    returns nothing reads as a broken catalogue rather than a small one.
+
+   **Category is the exception, and is marked as one.** What a site is *for* is
+   invisible to a crawler, so categories are declared in frontmatter against a
+   controlled vocabulary the schema enforces. Free tags would drift into
+   synonyms and a filter over synonyms silently returns partial results.
 4. **Falsifiability as a feature.** Publish the capture alongside the file so a
    reader can check any claim. It is how we found `#010102` doesn't exist, and
    it is the one thing a competitor cannot copy by scraping the output.

@@ -122,6 +122,15 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 - The detail page **throws** on lint errors, which fails the build. Contrast
   failures do not: non-text pairs below 3:1 are near-universal on real sites
   (four of four reference captures), so those are reported, not disqualifying.
+- `src/lib/categories.mjs` holds the category vocabulary. Categories are the one
+  facet that is **declared, not measured** — no crawler can see whether a site is
+  e-commerce or a portfolio — so they live in frontmatter and the schema holds
+  them to an enum. An unknown id fails the build, which beats a filter that
+  quietly fragments across `dev-tools` and `developer-tools`.
+- `author --tokens-only` refreshes frontmatter and keeps the prose. Use it after
+  any clusterer change: it inherits name, description, categories and brand from
+  the existing file, because none of those exist in a capture and a refresh that
+  dropped them would silently un-categorise the catalogue.
 - `src/lib/facets.mjs` derives the catalogue facets — polarity, shape, accent
   hue, contrast band — from a capture. It is the single definition behind
   `/systems`, `/r/index.json` and MCP `search_designs`, so the three cannot

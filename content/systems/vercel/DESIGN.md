@@ -15,6 +15,7 @@ colors:
   text-2: '#4d4d4d'
   dark-background: '#000000'
   dark-foreground: '#ededed'
+  dark-card: '#171717'
   dark-mutedForeground: '#a1a1a1'
   dark-primary: '#52a8ff'
 typography:
@@ -112,10 +113,9 @@ provenance:
   capturedAt: '2026-08-29T00:36:08.461Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
-  clusterVersion: 11
-  screenshot: './source.webp'
-  screenshotDark: './source-dark.webp'
+  clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -184,3 +184,4 @@ Links darken to `hsla(0, 0%, 9%)` on hover.
 - **Don't** add drop shadows. This system is flat on purpose.
 - **Don't** spend the blue on anything but focus. Filling a button with it would
   break the one rule the palette is built around.
+

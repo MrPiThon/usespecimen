@@ -109,9 +109,9 @@ provenance:
   capturedAt: '2026-08-29T00:37:14.194Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
-  clusterVersion: 11
-  screenshot: './source.webp'
+  clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -177,3 +177,4 @@ exactly — it is engineered to survive high-contrast modes and to be unmissable
 - **Don't** round any corner. Sharpness is the identity.
 - **Don't** add a muted grey text tier. Its absence is deliberate.
 - **Don't** drop the yellow focus state or replace it with a default outline.
+

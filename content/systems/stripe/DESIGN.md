@@ -146,9 +146,9 @@ provenance:
   capturedAt: '2026-08-29T00:35:20.586Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
-  clusterVersion: 11
-  screenshot: './source.webp'
+  clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -216,3 +216,4 @@ trailing arrow. Reproduce the padding rather than the tag. Surfaces use the pale
 - **Don't** use the border colour to carry meaning. At 1.18:1 it is invisible to
   many readers and fails non-text contrast.
 - **Don't** introduce a second accent hue. This system has exactly one.
+

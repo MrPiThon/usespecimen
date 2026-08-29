@@ -15,7 +15,7 @@
     "sampleRatio": 0.656
   },
   "harvestVersion": 4,
-  "clusterVersion": 12,
+  "clusterVersion": 14,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -609,6 +609,10 @@
       64
     ],
     "distinctValues": 33
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
   },
   "rounded": {
     "scale": [
@@ -2515,9 +2519,5 @@
       "format": "webp"
     }
   },
-  "darkHarvest": null,
-  "stability": {
-    "deadBand": 0.05,
-    "notes": []
-  }
+  "darkHarvest": null
 }

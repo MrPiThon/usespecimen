@@ -1,0 +1,203 @@
+---
+name: 'Editorial Workspace'
+version: '0.1.0'
+description: 'Serif-led productivity: a Lyon Text body at 18px, near-black on white, and one blue reserved for action.'
+categories:
+  - saas
+  - marketing
+colors:
+  background: '#ffffff'
+  foreground: '#000000'
+  card: '#f9f9f8'
+  mutedForeground: '#615d59'
+  primary: '#0075de'
+  primaryForeground: '#ffffff'
+  border: '#e6e6e6'
+  surface-1: '#f9f9f8'
+  text-1: '#000000'
+  text-2: '#0d0d0d'
+  text-3: '#1a1a1a'
+  text-4: '#615d59'
+  text-5: '#757575'
+  danger: '#f64932'
+  warning: '#ffb110'
+  success: '#1aae39'
+typography:
+  fontFamily: '"Lyon Text", Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", SimSun, "Nanum Myeongjo", NanumMyeongjo, Batang, serif'
+  headingFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+  baseSize: '18px'
+  lineHeight: 1.56
+  weight: 400
+  headingWeight: 700
+  scale:
+    sm: '12px'
+    base: '14px'
+    lg: '16px'
+    xl: '18px'
+    2xl: '20px'
+    3xl: '22px'
+    4xl: '32px'
+    5xl: '42px'
+    6xl: '45.675px'
+    7xl: '54px'
+    up-9: '60.9px'
+    up-10: '96px'
+  roles:
+    body:
+      fontFamily: '"Lyon Text", Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", SimSun, "Nanum Myeongjo", NanumMyeongjo, Batang, serif'
+      fontSize: '18px'
+      fontWeight: 400
+      lineHeight: 1.56
+    body-sm:
+      fontFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+      fontSize: '14px'
+      fontWeight: 500
+      lineHeight: 1.43
+    caption:
+      fontFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+      fontSize: '12px'
+      fontWeight: 500
+      lineHeight: 1.33
+      letterSpacing: '0.125px'
+    h1:
+      fontFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+      fontSize: '42px'
+      fontWeight: 600
+      lineHeight: 1.14
+      letterSpacing: '-1.5px'
+    h2:
+      fontFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+      fontSize: '22px'
+      fontWeight: 700
+      lineHeight: 1.27
+      letterSpacing: '-0.25px'
+    h3:
+      fontFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+      fontSize: '16px'
+      fontWeight: 700
+      lineHeight: 1.5
+    link:
+      fontFamily: 'NotionInter, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"'
+      fontSize: '16px'
+      fontWeight: 500
+      lineHeight: 1.5
+rounded:
+  sm: '4px'
+  md: '6px'
+  lg: '8px'
+  xl: '12px'
+  button: '8px'
+  pill: '9999.01px'
+spacing:
+  base: '4px'
+  s1: '3px'
+  s2: '4px'
+  s3: '6px'
+  s4: '8px'
+  s5: '12px'
+  s6: '15px'
+  s7: '16px'
+  s8: '24px'
+  s9: '32px'
+  s10: '40px'
+components:
+  button:
+    background: '{colors.primary}'
+    foreground: '{colors.primaryForeground}'
+    radius: '{rounded.button}'
+    padding: '5px 10px'
+    gap: '8px'
+    active:
+      backgroundColor: '#f6f5f4'
+      borderColor: '#f9f9f8'
+    focus-visible:
+      backgroundColor: '#f6f5f4'
+      borderColor: '#f9f9f8'
+    hover:
+      color: '#000000e5'
+  surface:
+    background: '{colors.card}'
+    border: '{colors.border}'
+  link:
+    padding: '3px 16px 3px 8px'
+    gap: '0px 8px'
+    active:
+      backgroundColor: '#0000001a'
+    focus:
+      color: '#00396b'
+    focus-visible:
+      backgroundColor: '#0000000d'
+    hover:
+      backgroundColor: '#0000000d'
+provenance:
+  brand: 'Notion'
+  source: 'https://www.notion.com/'
+  capturedAt: '2026-08-29T02:23:21.837Z'
+  method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
+  harvestVersion: 4
+  clusterVersion: 14
+---
+
+## Overview
+
+A productivity interface built on a serif. Body copy is set in Lyon Text at
+18px, which is the opposite of the sans-at-14px convention the category runs on,
+and it is the decision everything else defers to.
+
+Reach for this when the product is mostly reading and writing, and you want it
+to feel closer to a document than to a dashboard.
+
+## Colors
+
+White canvas, pure `#000000` body copy at 21:1. The text ladder runs five steps
+— `#000000`, `#0d0d0d`, `#1a1a1a`, `#615d59`, `#757575` — from 21:1 down to
+4.59:1, and the top three are separated by almost nothing. That is a system
+using near-black as a texture rather than as a single value.
+
+One blue, `#0075de`, carries every action. Its white label measures 4.57:1,
+which clears AA by 0.07 — real, but with no room to spare. Surfaces sit a single
+step off white at `#f9f9f8`.
+
+State colours are declared and distinct: `#1aae39` success, `#ffb110` warning,
+`#f64932` danger. Borders are `#e6e6e6` at 1.25:1 — separation only.
+
+## Typography
+
+Lyon Text at 18px with a 1.56 line height for body, and NotionInter at weight
+700 for headings. A serif body under a sans heading is the reverse of the usual
+pairing and is the single most copyable idea here.
+
+Twelve steps from 12px to 96px.
+
+## Layout
+
+A 4px grid, obeyed by 82.6% of observed spacing — the second strictest in this
+catalogue. The run is 3, 4, 6, 8, 12, 15, 16, 24, 32, 40.
+
+## Elevation & Depth
+
+Barely there, deliberately. The largest shadow begins
+`rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px` — a hundredth of an alpha and a
+sub-pixel offset. Depth is a hint that something is liftable, not a claim that
+it is already floating.
+
+## Shapes
+
+Radii of 4, 6, 8 and 12px, with buttons at 8px. Nothing is pilled.
+
+## Components
+
+Buttons are padded `5px 10px` at 8px radius with an 8px gap. Links carry
+asymmetric padding, `3px 16px 3px 8px`, which is what makes them sit correctly
+against inline text rather than floating in a box of their own.
+
+Hover, focus-visible and active are all declared, on buttons and links alike.
+
+## Do's and Don'ts
+
+- **Do** keep the serif body. Substituting a sans changes what the product is.
+- **Do** preserve the tight top of the text ladder — three near-blacks doing
+  different jobs is the texture.
+- **Don't** shrink the button label. White on `#0075de` is 4.57:1, and small or
+  light text on that blue drops below AA immediately.
+- **Don't** ask the `#e6e6e6` border to carry meaning; at 1.25:1 it is a hairline.

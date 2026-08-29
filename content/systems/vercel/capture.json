@@ -15,7 +15,7 @@
     "sampleRatio": 0.464
   },
   "harvestVersion": 4,
-  "clusterVersion": 12,
+  "clusterVersion": 14,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,13 +32,13 @@
       },
       "foreground": {
         "hex": "#171717",
-        "weightShare": 0.4352,
+        "weightShare": 0.4258,
         "variants": []
       },
       "card": null,
       "mutedForeground": {
         "hex": "#4d4d4d",
-        "weightShare": 0.5385,
+        "weightShare": 0.5269,
         "variants": []
       },
       "primary": {
@@ -58,13 +58,13 @@
           "name": "text-1",
           "hex": "#171717",
           "contrast": 17.18,
-          "charShare": 0.4352
+          "charShare": 0.4258
         },
         {
           "name": "text-2",
           "hex": "#4d4d4d",
           "contrast": 8.1,
-          "charShare": 0.5385
+          "charShare": 0.5269
         }
       ]
     },
@@ -83,7 +83,7 @@
         "hue": "neutral",
         "lightness": 0.205,
         "chroma": 0,
-        "count": 7
+        "count": 13
       },
       {
         "hex": "#4d4d4d",
@@ -100,6 +100,14 @@
         "lightness": 0.51,
         "chroma": 0,
         "count": 3
+      },
+      {
+        "hex": "#c9c9c9",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.836,
+        "chroma": 0,
+        "count": 18
       },
       {
         "hex": "#ffffff",
@@ -130,7 +138,7 @@
     "accentRejected": [],
     "clusterCounts": {
       "bg": 3,
-      "text": 6,
+      "text": 7,
       "border": 0,
       "interactive": 2
     }
@@ -351,6 +359,10 @@
     ],
     "distinctValues": 19
   },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
   "rounded": {
     "scale": [
       {
@@ -514,7 +526,7 @@
       "sampleRatio": 0.466
     },
     "harvestVersion": 4,
-    "clusterVersion": 11,
+    "clusterVersion": 14,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -531,13 +543,17 @@
         },
         "foreground": {
           "hex": "#ededed",
-          "weightShare": 0.438,
+          "weightShare": 0.4286,
           "variants": []
         },
-        "card": null,
+        "card": {
+          "hex": "#171717",
+          "weightShare": 0.0201,
+          "variants": []
+        },
         "mutedForeground": {
           "hex": "#a1a1a1",
-          "weightShare": 0.5385,
+          "weightShare": 0.5269,
           "variants": []
         },
         "primary": {
@@ -551,19 +567,32 @@
         "primaryForeground": null
       },
       "ramps": {
-        "surface": [],
+        "surface": [
+          {
+            "name": "surface-1",
+            "hex": "#171717",
+            "deltaL": 0.205,
+            "areaShare": 0.0201
+          }
+        ],
         "text": [
           {
             "name": "text-1",
             "hex": "#ededed",
             "contrast": 17.94,
-            "charShare": 0.438
+            "charShare": 0.4286
           },
           {
             "name": "text-2",
+            "hex": "#c9c9c9",
+            "contrast": 12.69,
+            "charShare": 0.0214
+          },
+          {
+            "name": "text-3",
             "hex": "#a1a1a1",
             "contrast": 8.13,
-            "charShare": 0.5385
+            "charShare": 0.5269
           }
         ]
       },
@@ -583,6 +612,14 @@
           "lightness": 0.946,
           "chroma": 0,
           "count": 16
+        },
+        {
+          "hex": "#171717",
+          "role": "card",
+          "hue": "neutral",
+          "lightness": 0.205,
+          "chroma": 0,
+          "count": 6
         },
         {
           "hex": "#0a0a0a",
@@ -609,6 +646,14 @@
           "count": 3
         },
         {
+          "hex": "#c9c9c9",
+          "role": null,
+          "hue": "neutral",
+          "lightness": 0.836,
+          "chroma": 0,
+          "count": 18
+        },
+        {
           "hex": "#62c073",
           "role": null,
           "hue": "green",
@@ -620,8 +665,8 @@
       "semantic": {},
       "accentRejected": [],
       "clusterCounts": {
-        "bg": 4,
-        "text": 5,
+        "bg": 5,
+        "text": 6,
         "border": 0,
         "interactive": 3
       }
@@ -841,6 +886,10 @@
         44
       ],
       "distinctValues": 19
+    },
+    "stability": {
+      "deadBand": 0.05,
+      "notes": []
     },
     "rounded": {
       "scale": [
@@ -2483,9 +2532,5 @@
       "height": 900,
       "format": "webp"
     }
-  },
-  "stability": {
-    "deadBand": 0.05,
-    "notes": []
   }
 }

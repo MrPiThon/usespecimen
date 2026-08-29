@@ -21,7 +21,7 @@ import { authorSystem, brandFromUrl } from './extract/author.mjs';
 import { parseColor, deltaE } from './lib/color.mjs';
 import { captureScreenshot } from './extract/screenshot.mjs';
 import { SITE, rawUrl, indexUrl, systemUrl } from './lib/site.mjs';
-import { validateDesignMd } from './lib/validate.mjs';
+import { validateDesignMd, splitFrontmatter } from './lib/validate.mjs';
 
 // Widest first: the primary capture supplies the scalars and the stylesheet
 // data, and the widest layout is the canonical one.
@@ -68,9 +68,12 @@ Options:
   --name <name>      author: the aesthetic's name, not the company's
   --description <s>  author: one line for the catalog
   --brand <name>     author: attribution (default: guessed from the source host)
+  --categories <ids> author: comma-separated, e.g. saas,developer-tools
   --content <dir>    author: target directory (default: content/systems)
   --from <slug>      author: capture directory under out/ when it differs from
                      the target slug (www.gov.uk extracts to gov, ships as govuk)
+  --tokens-only      author: refresh frontmatter, keep the prose. Use when the
+                     clusterer improves and the values are stale
   --force            author/add: overwrite an existing DESIGN.md
   --json             Print token JSON instead of the summary
   --quiet            Suppress the summary
@@ -200,9 +203,6 @@ function report(data, opts) {
  * to make that impossible.
  */
 async function author(slug, opts) {
-  if (!opts.name) fail('author needs --name. Name the aesthetic, not the company:\n'
-    + '  --name "Indigo Infrastructure", not --name "Stripe"');
-
   // The capture directory and the published slug need not match: www.gov.uk
   // extracts to `gov` but ships as `govuk`.
   const source = opts.from || slug;
@@ -229,7 +229,41 @@ async function author(slug, opts) {
   };
 
   const target = join(dir, 'DESIGN.md');
-  if (!opts.force) {
+  // Refreshing tokens must never cost the prose. A clusterer improvement makes
+  // frontmatter stale on every existing file, and rewriting the body to fix a
+  // hex would throw away the only part no command can regenerate.
+  let keepBody = null;
+  let inherited = {};
+  if (opts.tokensOnly) {
+    try {
+      const raw = await readFile(target, 'utf8');
+      keepBody = splitFrontmatter(raw).body;
+      // Name, description and categories exist only in the file — nothing in a
+      // capture knows them. A token refresh that dropped them would silently
+      // un-categorise the whole catalogue.
+      const prior = validateDesignMd(raw).data ?? {};
+      inherited = {
+        name: prior.name,
+        description: prior.description,
+        categories: prior.categories,
+        brand: prior.provenance?.brand,
+      };
+    } catch (err) {
+      fail(`--tokens-only needs an existing ${target} to keep the prose from.`);
+    }
+  }
+
+  const meta = {
+    name: opts.name ?? inherited.name,
+    description: opts.description ?? inherited.description,
+    categories: opts.categories ?? inherited.categories,
+    brand: opts.brand ?? inherited.brand,
+  };
+  if (!meta.name) {
+    fail('author needs --name. Name the aesthetic, not the company:\n'
+      + '  --name "Indigo Infrastructure", not --name "Stripe"');
+  }
+  if (!opts.force && !opts.tokensOnly) {
     try {
       await readFile(target, 'utf8');
       fail(`${target} already exists. Pass --force to overwrite it — the prose in `
@@ -239,12 +273,19 @@ async function author(slug, opts) {
     }
   }
 
-  const file = authorSystem(cap, {
-    name: opts.name,
-    description: opts.description,
-    brand: opts.brand || brandFromUrl(cap.source.url),
+  const generated = authorSystem(cap, {
+    ...meta,
+    brand: meta.brand || brandFromUrl(cap.source.url),
     dark: cap.supportsDark ? cap.dark : null,
   });
+  const file = keepBody === null
+    ? generated
+    : `---
+${splitFrontmatter(generated).frontmatter}
+---
+
+${keepBody}
+`;
 
   // The scaffold must pass the same gate the build applies, or `author` has
   // produced something that cannot ship.
@@ -268,7 +309,7 @@ async function author(slug, opts) {
     }
   }
 
-  log(`Wrote ${dir}/`);
+  log(`Wrote ${dir}/${keepBody === null ? '' : '  (frontmatter only; prose kept)'}`);
   log(`  DESIGN.md, capture.json${shots.length ? `, ${shots.join(', ')}` : ''}`);
   log(`  cluster v${cap.clusterVersion}, ${cap.warnings.length} warning(s)`
     + `${cap.supportsDark ? ', + dark palette' : ''}`);
@@ -514,8 +555,10 @@ try {
       name: { type: 'string' },
       description: { type: 'string' },
       brand: { type: 'string' },
+      categories: { type: 'string' },
       content: { type: 'string', default: 'content/systems' },
       from: { type: 'string' },
+      'tokens-only': { type: 'boolean', default: false },
       force: { type: 'boolean', default: false },
       json: { type: 'boolean', default: false },
       quiet: { type: 'boolean', default: false },
@@ -546,8 +589,12 @@ const opts = {
   name: values.name,
   description: values.description,
   brand: values.brand,
+  categories: values.categories
+    ? values.categories.split(',').map(x => x.trim()).filter(Boolean)
+    : undefined,
   content: values.content,
   from: values.from,
+  tokensOnly: values['tokens-only'],
   force: values.force,
   json: values.json,
   quiet: values.quiet,

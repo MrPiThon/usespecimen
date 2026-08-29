@@ -154,9 +154,9 @@ provenance:
   capturedAt: '2026-08-29T00:37:06.457Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 4
-  clusterVersion: 11
-  screenshot: './source.webp'
+  clusterVersion: 14
 ---
+
 
 ## Overview
 
@@ -236,3 +236,4 @@ on the focus ring instead. Surfaces sit a step above the canvas with a
   That restraint is the system, not an oversight.
 - **Don't** invent a spacing scale. This system genuinely does not have one.
 - **Don't** rely on border colour alone to indicate state at 1.18:1.
+

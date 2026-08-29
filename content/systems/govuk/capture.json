@@ -15,7 +15,7 @@
     "sampleRatio": 0.716
   },
   "harvestVersion": 4,
-  "clusterVersion": 12,
+  "clusterVersion": 14,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -375,6 +375,18 @@
       60
     ],
     "distinctValues": 16
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": [
+      {
+        "decision": "spacing.base",
+        "measured": 0.7418,
+        "threshold": 0.75,
+        "margin": -0.0109,
+        "held": null
+      }
+    ]
   },
   "rounded": {
     "scale": [],
@@ -1312,17 +1324,5 @@
       "format": "webp"
     }
   },
-  "darkHarvest": null,
-  "stability": {
-    "deadBand": 0.05,
-    "notes": [
-      {
-        "decision": "spacing.base",
-        "measured": 0.7418,
-        "threshold": 0.75,
-        "margin": -0.0109,
-        "held": null
-      }
-    ]
-  }
+  "darkHarvest": null
 }

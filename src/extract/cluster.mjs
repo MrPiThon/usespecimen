@@ -60,6 +60,11 @@ const MUTED_MAX_CHROMA = 0.08;
 /** A card surface sits near the page background in lightness. Further than this
  *  and it is an accent panel, not a surface. */
 const SURFACE_MAX_DL = 0.25;
+/** ...and stays close to neutral. Deliberately generous — plenty of systems tint
+ *  their surfaces on purpose — but measured, real surfaces top out at 0.0186
+ *  (Stripe's blue-grey #d4dee9) while accent panels start at 0.0776 (Apple's
+ *  #9fc6f4) and run to 0.1684 (Notion's amber). 0.04 has margin on both sides. */
+const SURFACE_MAX_CHROMA = 0.04;
 /** A brand accent recurs; a single element is a promo panel. Measured: Stripe's
  *  indigo appears on 7 interactive fills and GOV.UK's green on 2, while the one
  *  576x360 yellow banner that used to win Linear by sheer area appears on 1. */
@@ -338,6 +343,7 @@ function surfaceRamp(bg, backdrop, accents, total) {
   return bg
     .filter(c => deltaE(c.rgb, backdrop.rgb) > SURFACE_MERGE
       && dL(c) <= SURFACE_MAX_DL
+      && toOklch(c.rgb).C <= SURFACE_MAX_CHROMA
       && !accents.has(c.hex)
       && total > 0 && c.weight / total >= SURFACE_MIN_AREA)
     .sort((a, b) => dL(a) - dL(b) || (a.hex < b.hex ? -1 : 1))
@@ -400,14 +406,6 @@ export function colorTokens(capture) {
     && ratioToBg(c) >= MUTED_MIN_CONTRAST
     && toOklch(c.rgb).C < MUTED_MAX_CHROMA) || null;
 
-  // A surface, not an accent: close to the page background in lightness, and
-  // never a color the site fills buttons with. Without both guards this picks
-  // up the brightest CTA on the page and calls it a card.
-  const accents = new Set(iBg.map(c => c.hex));
-  const card = bg.find(c => deltaE(c.rgb, backdrop.rgb) > SURFACE_MERGE
-    && Math.abs(toOklch(c.rgb).L - bgLightness) <= SURFACE_MAX_DL
-    && !accents.has(c.hex)) || null;
-
   // The accent ladder, strongest evidence first. Ranking interactive fills by
   // area alone is what handed Linear a one-off promo panel instead of its brand
   // colour, so a fill has to RECUR to count as the accent.
@@ -429,6 +427,20 @@ export function colorTokens(capture) {
     primary = text.find(isChromatic);
     primarySource = primary ? 'textColors' : null;
   }
+
+  // A surface is not an accent and not a state. Semantic colours are resolved
+  // first so they can be excluded here: a warning tint sitting behind a banner
+  // is near the background in lightness and low-chroma enough to pass every
+  // other guard, which is how Basecamp's #ffdc74 became its `card`.
+  const semantic = semanticColors(capture, primary);
+  const accents = new Set([
+    ...iBg.map(c => c.hex),
+    ...Object.values(semantic).map(v => v.hex),
+  ]);
+  const card = bg.find(c => deltaE(c.rgb, backdrop.rgb) > SURFACE_MERGE
+    && Math.abs(toOklch(c.rgb).L - bgLightness) <= SURFACE_MAX_DL
+    && toOklch(c.rgb).C <= SURFACE_MAX_CHROMA
+    && !accents.has(c.hex)) || null;
 
   // Only meaningful when primary is a filled surface — if the accent came from
   // link text there is no "on primary" to report, and guessing white would be
@@ -484,7 +496,6 @@ export function colorTokens(capture) {
 
   const surfaces = surfaceRamp(bg, backdrop, accents, shares.bg);
   const texts = textRamp(text, backdrop, shares.text);
-  const semantic = semanticColors(capture, primary);
 
   return {
     polarity: relativeLuminance(backdrop.rgb) < 0.2 ? 'dark' : 'light',
@@ -1210,7 +1221,7 @@ export function cluster(capture, { previous } = {}) {
     // 13: parseColor understands lab/oklab/oklch/display-p3, so sites authoring
     //     in modern colour spaces stop resolving to null andwhite-on-white.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 13,
+    clusterVersion: 14,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

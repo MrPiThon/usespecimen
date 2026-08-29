@@ -1,0 +1,2014 @@
+{
+  "capturedAt": "2026-08-29T02:23:21.837Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://www.notion.com/",
+    "title": "The AI workspace that works for you. | Notion",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 4611,
+    "elementCount": 3252,
+    "sampled": 1405,
+    "sampleRatio": 0.432
+  },
+  "harvestVersion": 4,
+  "clusterVersion": 14,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.1351,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f9f9f8",
+        "weightShare": 0.0809,
+        "variants": [
+          "#f6f5f4"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#615d59",
+        "weightShare": 0.2416,
+        "variants": [
+          "#696969"
+        ]
+      },
+      "primary": {
+        "hex": "#0075de",
+        "weightShare": 0.4758,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 9
+      },
+      "primaryForeground": {
+        "hex": "#ffffff",
+        "weightShare": 0.5172,
+        "variants": []
+      },
+      "border": {
+        "hex": "#e6e6e6",
+        "weightShare": 0.8261,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f9f9f8",
+          "deltaL": 0.018,
+          "areaShare": 0.0809
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 21,
+          "charShare": 0.1351
+        },
+        {
+          "name": "text-2",
+          "hex": "#0d0d0d",
+          "contrast": 19.47,
+          "charShare": 0.07
+        },
+        {
+          "name": "text-3",
+          "hex": "#1a1a1a",
+          "contrast": 17.4,
+          "charShare": 0.1926
+        },
+        {
+          "name": "text-4",
+          "hex": "#615d59",
+          "contrast": 6.53,
+          "charShare": 0.2416
+        },
+        {
+          "name": "text-5",
+          "hex": "#757575",
+          "contrast": 4.59,
+          "charShare": 0.0846
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 60
+      },
+      {
+        "hex": "#f9f9f8",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.982,
+        "chroma": 0.001,
+        "count": 21
+      },
+      {
+        "hex": "#097fe8",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.597,
+        "chroma": 0.183,
+        "count": 6
+      },
+      {
+        "hex": "#f64932",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.651,
+        "chroma": 0.213,
+        "count": 6
+      },
+      {
+        "hex": "#ffb110",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.814,
+        "chroma": 0.168,
+        "count": 6
+      },
+      {
+        "hex": "#005bab",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.473,
+        "chroma": 0.147,
+        "count": 3
+      },
+      {
+        "hex": "#e32d14",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.593,
+        "chroma": 0.219,
+        "count": 3
+      },
+      {
+        "hex": "#e89d01",
+        "role": null,
+        "hue": "orange",
+        "lightness": 0.751,
+        "chroma": 0.158,
+        "count": 3
+      },
+      {
+        "hex": "#404040",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.371,
+        "chroma": 0,
+        "count": 51
+      },
+      {
+        "hex": "#0075de",
+        "role": "primary",
+        "hue": "blue",
+        "lightness": 0.568,
+        "chroma": 0.182,
+        "count": 9
+      },
+      {
+        "hex": "#ffdec4",
+        "role": null,
+        "hue": "orange",
+        "lightness": 0.921,
+        "chroma": 0.05,
+        "count": 3
+      },
+      {
+        "hex": "#e6f3fe",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.958,
+        "chroma": 0.02,
+        "count": 3
+      },
+      {
+        "hex": "#111111",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.178,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 9
+      },
+      {
+        "hex": "#ff83dd",
+        "role": null,
+        "hue": "pink",
+        "lightness": 0.777,
+        "chroma": 0.182,
+        "count": 1
+      },
+      {
+        "hex": "#ff8a33",
+        "role": null,
+        "hue": "orange",
+        "lightness": 0.749,
+        "chroma": 0.17,
+        "count": 1
+      },
+      {
+        "hex": "#ffc95e",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.864,
+        "chroma": 0.138,
+        "count": 1
+      },
+      {
+        "hex": "#f77463",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.711,
+        "chroma": 0.164,
+        "count": 1
+      },
+      {
+        "hex": "#1313ba",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.372,
+        "chroma": 0.237,
+        "count": 3
+      },
+      {
+        "hex": "#1aae39",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.656,
+        "chroma": 0.196,
+        "count": 3
+      },
+      {
+        "hex": "#62aef0",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.729,
+        "chroma": 0.123,
+        "count": 1
+      },
+      {
+        "hex": "#ad6ded",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.658,
+        "chroma": 0.19,
+        "count": 1
+      },
+      {
+        "hex": "#615d59",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.481,
+        "chroma": 0.008,
+        "count": 51
+      },
+      {
+        "hex": "#1a1a1a",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.218,
+        "chroma": 0,
+        "count": 87
+      }
+    ],
+    "semantic": {
+      "danger": {
+        "hex": "#f64932",
+        "occurrences": 6,
+        "paintsBorder": false
+      },
+      "warning": {
+        "hex": "#ffb110",
+        "occurrences": 6,
+        "paintsBorder": false
+      },
+      "success": {
+        "hex": "#1aae39",
+        "occurrences": 3,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 23,
+      "text": 8,
+      "border": 2,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Lyon Text",
+      "class": "serif",
+      "stack": "\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif",
+      "sizePx": 18,
+      "weight": 400,
+      "lineHeightPx": 28.08,
+      "lineHeightRatio": 1.56,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "NotionInter",
+      "class": "sans",
+      "stack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+      "largestPx": 96,
+      "weight": 700,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "NotionInter",
+        "class": "sans",
+        "stack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\""
+      },
+      {
+        "family": "Lyon Text",
+        "class": "serif",
+        "stack": "\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.857,
+        "weightShare": 0.0169,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 14,
+        "rem": 1,
+        "weightShare": 0.5357,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "rem": 1.143,
+        "weightShare": 0.129,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 18,
+        "rem": 1.286,
+        "weightShare": 0.1766,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 20,
+        "rem": 1.429,
+        "weightShare": 0.0282,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 22,
+        "rem": 1.571,
+        "weightShare": 0.0589,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 32,
+        "rem": 2.286,
+        "weightShare": 0.0188,
+        "variants": [
+          31.5
+        ]
+      },
+      {
+        "name": "5xl",
+        "px": 42,
+        "rem": 3,
+        "weightShare": 0.0145,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 45.675,
+        "rem": 3.262,
+        "weightShare": 0.001,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 54,
+        "rem": 3.857,
+        "weightShare": 0.0089,
+        "variants": []
+      },
+      {
+        "name": "up-9",
+        "px": 60.9,
+        "rem": 4.35,
+        "weightShare": 0.0053,
+        "variants": []
+      },
+      {
+        "name": "up-10",
+        "px": 96,
+        "rem": 6.857,
+        "weightShare": 0.0053,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 13,
+    "roles": {
+      "body": {
+        "fontFamily": "Lyon Text",
+        "fontStack": "\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif",
+        "class": "serif",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.56,
+        "letterSpacing": null,
+        "elements": 9,
+        "chars": 1035
+      },
+      "body-sm": {
+        "fontFamily": "NotionInter",
+        "fontStack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 132,
+        "chars": 2254
+      },
+      "caption": {
+        "fontFamily": "NotionInter",
+        "fontStack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 500,
+        "lineHeight": 1.33,
+        "letterSpacing": "0.125px",
+        "elements": 12,
+        "chars": 99
+      },
+      "h1": {
+        "fontFamily": "NotionInter",
+        "fontStack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "42px",
+        "fontWeight": 600,
+        "lineHeight": 1.14,
+        "letterSpacing": "-1.5px",
+        "elements": 1,
+        "chars": 31
+      },
+      "h2": {
+        "fontFamily": "NotionInter",
+        "fontStack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "22px",
+        "fontWeight": 700,
+        "lineHeight": 1.27,
+        "letterSpacing": "-0.25px",
+        "elements": 9,
+        "chars": 345
+      },
+      "h3": {
+        "fontFamily": "NotionInter",
+        "fontStack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 700,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 15,
+        "chars": 432
+      },
+      "link": {
+        "fontFamily": "NotionInter",
+        "fontStack": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 500,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 174
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 22
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.826,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.682
+      },
+      {
+        "base": 6,
+        "share": 0.252
+      },
+      {
+        "base": 5,
+        "share": 0.065
+      },
+      {
+        "base": 4,
+        "share": 0.826
+      }
+    ],
+    "scale": [
+      3,
+      4,
+      6,
+      8,
+      12,
+      15,
+      16,
+      24,
+      32,
+      40
+    ],
+    "distinctValues": 34
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 54
+      },
+      {
+        "name": "md",
+        "px": 6,
+        "count": 22
+      },
+      {
+        "name": "lg",
+        "px": 8,
+        "count": 136
+      },
+      {
+        "name": "xl",
+        "px": 12,
+        "count": 39
+      }
+    ],
+    "button": "8px",
+    "pill": true,
+    "pillValue": "9999.01px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px 0px, rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px 0px, rgba(0, 0, 0, 0.027) 0px 2.025px 7.847px 0px, rgba(0, 0, 0, 0.04) 0px 4px 18px 0px",
+        "count": 12
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.008) 0px 0.667px 3.502px 0px, rgba(0, 0, 0, 0.016) 0px 2.933px 7.252px 0px, rgba(0, 0, 0, 0.02) 0px 7.2px 14.462px 0px, rgba(0, 0, 0, 0.024) 0px 13.867px 28.348px 0px, rgba(0, 0, 0, 0.03) 0px 23.333px 52.123px 0px, rgba(0, 0, 0, 0.04) 0px 36px 89px 0px",
+        "count": 4
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 1px 0px 0px",
+        "count": 3
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "3px 16px 3px 8px",
+      "borderWidth": null,
+      "radius": "8px",
+      "gap": "0px 8px",
+      "elements": 23,
+      "variants": 7,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "5px 10px",
+      "borderWidth": null,
+      "radius": "4px",
+      "gap": "8px",
+      "elements": 3,
+      "variants": 4,
+      "dominantUnstyled": false
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 23,
+      "readable": 22,
+      "blocked": 1,
+      "stateRules": 357
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "backgroundColor": "#f6f5f4",
+          "borderColor": "#f9f9f8",
+          "matchedElements": 1,
+          "rulesConsidered": 2
+        },
+        "focus-visible": {
+          "backgroundColor": "#f6f5f4",
+          "borderColor": "#f9f9f8",
+          "matchedElements": 1,
+          "rulesConsidered": 2
+        },
+        "hover": {
+          "color": "#000000e5",
+          "matchedElements": 12,
+          "rulesConsidered": 4
+        }
+      },
+      "link": {
+        "active": {
+          "backgroundColor": "#0000001a",
+          "matchedElements": 49,
+          "rulesConsidered": 13
+        },
+        "focus": {
+          "color": "#00396b",
+          "matchedElements": 17,
+          "rulesConsidered": 4
+        },
+        "focus-visible": {
+          "backgroundColor": "#0000000d",
+          "matchedElements": 49,
+          "rulesConsidered": 10
+        },
+        "hover": {
+          "backgroundColor": "#0000000d",
+          "matchedElements": 49,
+          "rulesConsidered": 14
+        }
+      },
+      "text": {
+        "focus": {
+          "boxShadow": "rgba(35, 131, 226, 0.57) 0px 0px 0px 1px inset, rgba(35, 131, 226, 0.35) 0px 0px 0px 2px",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "focus-visible": {
+          "outlineColor": "#0075de",
+          "matchedElements": 8,
+          "rulesConsidered": 1
+        }
+      }
+    },
+    "declarations": 51
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#ffffff",
+        "ratio": 21,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#615d59",
+        "bg": "#ffffff",
+        "ratio": 6.53,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#ffffff",
+        "bg": "#0075de",
+        "ratio": 4.57,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0075de",
+        "bg": "#ffffff",
+        "ratio": 4.57,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#e6e6e6",
+        "bg": "#ffffff",
+        "ratio": 1.25,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.25
+  },
+  "warnings": [
+    "13 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Strided sample: 1405 of 3252 elements. Weights are relative only."
+  ],
+  "supportsDark": false,
+  "dark": null,
+  "harvest": {
+    "harvestVersion": 4,
+    "url": "https://www.notion.com/",
+    "title": "The AI workspace that works for you. | Notion",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 4611,
+    "textColors": {
+      "rgba(0, 0, 0, 0.898)": {
+        "count": 87,
+        "area": 290485.875,
+        "chars": 1129
+      },
+      "rgb(255, 255, 255)": {
+        "count": 46,
+        "area": 380824.546875,
+        "chars": 1534
+      },
+      "rgba(0, 0, 0, 0.95)": {
+        "count": 19,
+        "area": 685940.18359375,
+        "chars": 410
+      },
+      "rgb(0, 91, 171)": {
+        "count": 3,
+        "area": 22472.25,
+        "chars": 42
+      },
+      "rgba(0, 0, 0, 0.54)": {
+        "count": 28,
+        "area": 214562.8125,
+        "chars": 496
+      },
+      "rgb(0, 0, 0)": {
+        "count": 39,
+        "area": 239516.5,
+        "chars": 792
+      },
+      "rgb(97, 93, 89)": {
+        "count": 45,
+        "area": 274326.755859375,
+        "chars": 1377
+      },
+      "rgb(9, 127, 232)": {
+        "count": 3,
+        "area": 24220.25,
+        "chars": 42
+      },
+      "rgba(0, 0, 0, 0.59)": {
+        "count": 6,
+        "area": 7148.4375,
+        "chars": 39
+      }
+    },
+    "bgColors": {
+      "rgb(255, 255, 255)": {
+        "count": 60,
+        "area": 38482463.01953125,
+        "chars": 42
+      },
+      "rgb(0, 117, 222)": {
+        "count": 9,
+        "area": 60489.375,
+        "chars": 90
+      },
+      "rgb(255, 201, 94)": {
+        "count": 1,
+        "area": 3750.0037477612495,
+        "chars": 0
+      },
+      "rgb(247, 116, 99)": {
+        "count": 1,
+        "area": 3436.5180564764887,
+        "chars": 0
+      },
+      "rgb(98, 174, 240)": {
+        "count": 1,
+        "area": 2847.929669365287,
+        "chars": 0
+      },
+      "rgb(173, 109, 237)": {
+        "count": 1,
+        "area": 2500,
+        "chars": 0
+      },
+      "rgb(255, 138, 51)": {
+        "count": 1,
+        "area": 3750.0074853897095,
+        "chars": 0
+      },
+      "rgb(255, 131, 221)": {
+        "count": 1,
+        "area": 3750.0074853897095,
+        "chars": 0
+      },
+      "rgb(255, 222, 196)": {
+        "count": 3,
+        "area": 42110.746337890625,
+        "chars": 0
+      },
+      "rgb(230, 243, 254)": {
+        "count": 3,
+        "area": 22472.25,
+        "chars": 42
+      },
+      "rgba(0, 0, 0, 0.05)": {
+        "count": 1,
+        "area": 1024,
+        "chars": 0
+      },
+      "rgba(255, 255, 255, 0)": {
+        "count": 51,
+        "area": 212976,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.75)": {
+        "count": 51,
+        "area": 95239.125,
+        "chars": 0
+      },
+      "rgb(249, 249, 248)": {
+        "count": 18,
+        "area": 2705570.837890625,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 9,
+        "area": 9216,
+        "chars": 9
+      },
+      "rgb(9, 127, 232)": {
+        "count": 6,
+        "area": 466532.5822753906,
+        "chars": 0
+      },
+      "rgb(255, 177, 16)": {
+        "count": 6,
+        "area": 466518.7448730469,
+        "chars": 0
+      },
+      "rgb(246, 73, 50)": {
+        "count": 6,
+        "area": 466518.7448730469,
+        "chars": 0
+      },
+      "rgb(26, 174, 57)": {
+        "count": 3,
+        "area": 3168,
+        "chars": 0
+      },
+      "rgb(19, 19, 186)": {
+        "count": 3,
+        "area": 3168,
+        "chars": 0
+      },
+      "rgb(227, 45, 20)": {
+        "count": 3,
+        "area": 463350.7448730469,
+        "chars": 0
+      },
+      "rgb(0, 91, 171)": {
+        "count": 3,
+        "area": 463364.5822753906,
+        "chars": 0
+      },
+      "rgb(232, 157, 1)": {
+        "count": 3,
+        "area": 463350.7448730469,
+        "chars": 0
+      },
+      "rgb(246, 245, 244)": {
+        "count": 3,
+        "area": 952560,
+        "chars": 0
+      },
+      "rgb(17, 17, 17)": {
+        "count": 3,
+        "area": 14868,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "rgba(255, 255, 255, 0)": {
+        "count": 66,
+        "area": 320157.875,
+        "chars": 174
+      },
+      "rgba(0, 0, 0, 0.1)": {
+        "count": 19,
+        "area": 1183031.6875,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 4,
+        "area": 398478.82275390625,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 266,
+        "area": 1862765.361328125,
+        "chars": 4773
+      },
+      "\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif": {
+        "count": 10,
+        "area": 276732.25,
+        "chars": 1088
+      }
+    },
+    "fontSizes": {
+      "14px": {
+        "count": 175,
+        "area": 688823.615234375,
+        "chars": 3140
+      },
+      "96px": {
+        "count": 1,
+        "area": 263056.9375,
+        "chars": 31
+      },
+      "72px": {
+        "count": 1,
+        "area": 19087.841796875,
+        "chars": 6
+      },
+      "20px": {
+        "count": 11,
+        "area": 83696,
+        "chars": 165
+      },
+      "16px": {
+        "count": 45,
+        "area": 234450.5625,
+        "chars": 756
+      },
+      "54px": {
+        "count": 2,
+        "area": 74251.625,
+        "chars": 52
+      },
+      "22px": {
+        "count": 9,
+        "area": 128033.5,
+        "chars": 345
+      },
+      "18px": {
+        "count": 9,
+        "area": 263830,
+        "chars": 1035
+      },
+      "42px": {
+        "count": 4,
+        "area": 116275.15625,
+        "chars": 85
+      },
+      "12px": {
+        "count": 12,
+        "area": 72544.125,
+        "chars": 99
+      },
+      "60.9px": {
+        "count": 1,
+        "area": 94655,
+        "chars": 31
+      },
+      "45.675px": {
+        "count": 1,
+        "area": 7678.88671875,
+        "chars": 6
+      },
+      "32px": {
+        "count": 4,
+        "area": 89460.625,
+        "chars": 104
+      },
+      "31.5px": {
+        "count": 1,
+        "area": 3653.736328125,
+        "chars": 6
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 57,
+        "area": 652925.359375,
+        "chars": 2212
+      },
+      "500": {
+        "count": 159,
+        "area": 600140.408203125,
+        "chars": 2545
+      },
+      "600": {
+        "count": 12,
+        "area": 418877.09375,
+        "chars": 102
+      },
+      "700": {
+        "count": 48,
+        "area": 467554.75,
+        "chars": 1002
+      }
+    },
+    "lineHeights": {
+      "20px": {
+        "count": 175,
+        "area": 688823.615234375,
+        "chars": 3140
+      },
+      "100px": {
+        "count": 1,
+        "area": 263056.9375,
+        "chars": 31
+      },
+      "87.12px": {
+        "count": 1,
+        "area": 19087.841796875,
+        "chars": 6
+      },
+      "28px": {
+        "count": 29,
+        "area": 475559.5,
+        "chars": 1545
+      },
+      "24px": {
+        "count": 45,
+        "area": 234450.5625,
+        "chars": 756
+      },
+      "56px": {
+        "count": 2,
+        "area": 74251.625,
+        "chars": 52
+      },
+      "48px": {
+        "count": 4,
+        "area": 116275.15625,
+        "chars": 85
+      },
+      "16px": {
+        "count": 12,
+        "area": 72544.125,
+        "chars": 99
+      },
+      "66.1997px": {
+        "count": 1,
+        "area": 94655,
+        "chars": 31
+      },
+      "55.2668px": {
+        "count": 1,
+        "area": 7678.88671875,
+        "chars": 6
+      },
+      "40px": {
+        "count": 4,
+        "area": 89460.625,
+        "chars": 104
+      },
+      "38.115px": {
+        "count": 1,
+        "area": 3653.736328125,
+        "chars": 6
+      }
+    },
+    "letterSpacings": {
+      "-4.6px": {
+        "count": 1,
+        "area": 263056.9375,
+        "chars": 31
+      },
+      "-2px": {
+        "count": 1,
+        "area": 19087.841796875,
+        "chars": 6
+      },
+      "-0.125px": {
+        "count": 11,
+        "area": 83696,
+        "chars": 165
+      },
+      "-1.87501px": {
+        "count": 2,
+        "area": 74251.625,
+        "chars": 52
+      },
+      "-0.25px": {
+        "count": 9,
+        "area": 128033.5,
+        "chars": 345
+      },
+      "-1.5px": {
+        "count": 4,
+        "area": 116275.15625,
+        "chars": 85
+      },
+      "0.125px": {
+        "count": 12,
+        "area": 72544.125,
+        "chars": 99
+      },
+      "-2.585px": {
+        "count": 1,
+        "area": 94655,
+        "chars": 31
+      },
+      "-1.26875px": {
+        "count": 1,
+        "area": 7678.88671875,
+        "chars": 6
+      },
+      "-0.75px": {
+        "count": 4,
+        "area": 89460.625,
+        "chars": 104
+      },
+      "-0.875001px": {
+        "count": 1,
+        "area": 3653.736328125,
+        "chars": 6
+      }
+    },
+    "typeStyles": {
+      "text|14px|500|20px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 132,
+        "area": 404295.505859375,
+        "chars": 2254
+      },
+      "h1|96px|600|100px|-4.6px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 1,
+        "area": 263056.9375,
+        "chars": 31
+      },
+      "text|72px|500|87.12px|-2px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 1,
+        "area": 19087.841796875,
+        "chars": 6
+      },
+      "text|20px|400|28px|-0.125px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 2,
+        "area": 74480,
+        "chars": 156
+      },
+      "link|16px|500|24px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 12,
+        "area": 92880.3125,
+        "chars": 174
+      },
+      "text|16px|400|24px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 2,
+        "area": 17185,
+        "chars": 82
+      },
+      "text|14px|400|20px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 40,
+        "area": 239735.609375,
+        "chars": 820
+      },
+      "h2|54px|700|56px|-1.87501px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 2,
+        "area": 74251.625,
+        "chars": 52
+      },
+      "h2|22px|700|28px|-0.25px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 9,
+        "area": 128033.5,
+        "chars": 345
+      },
+      "text|20px|600|28px|-0.125px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 9,
+        "area": 9216,
+        "chars": 9
+      },
+      "h3|14px|400|20px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 44792.5,
+        "chars": 66
+      },
+      "h3|16px|700|24px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 15,
+        "area": 105981.75,
+        "chars": 432
+      },
+      "text|16px|700|24px|normal|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 15,
+        "area": 5501.25,
+        "chars": 15
+      },
+      "text|18px|400|28px|normal|\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif": {
+        "count": 9,
+        "area": 263830,
+        "chars": 1035
+      },
+      "h2|42px|700|48px|-1.5px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 3,
+        "area": 64326,
+        "chars": 54
+      },
+      "text|16px|400|24px|normal|\"Lyon Text\", Georgia, YuMincho, \"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"Songti TC\", \"Songti SC\", SimSun, \"Nanum Myeongjo\", NanumMyeongjo, Batang, serif": {
+        "count": 1,
+        "area": 12902.25,
+        "chars": 53
+      },
+      "text|12px|500|16px|0.125px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 12,
+        "area": 72544.125,
+        "chars": 99
+      },
+      "h1|60.9px|600|66.1997px|-2.585px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 1,
+        "area": 94655,
+        "chars": 31
+      },
+      "text|45.675px|500|55.2668px|-1.26875px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 1,
+        "area": 7678.88671875,
+        "chars": 6
+      },
+      "h2|32px|700|40px|-0.75px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 4,
+        "area": 89460.625,
+        "chars": 104
+      },
+      "h1|42px|600|48px|-1.5px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 1,
+        "area": 51949.15625,
+        "chars": 31
+      },
+      "text|31.5px|500|38.115px|-0.875001px|NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 1,
+        "area": 3653.736328125,
+        "chars": 6
+      }
+    },
+    "states": {
+      "button|hover|color:#000000e5": {
+        "rules": 2,
+        "matched": 12
+      },
+      "link|hover|color:#00396b": {
+        "rules": 4,
+        "matched": 21
+      },
+      "link|focus|color:#00396b": {
+        "rules": 2,
+        "matched": 17
+      },
+      "link|active|color:#00396b": {
+        "rules": 2,
+        "matched": 17
+      },
+      "link|hover|color:#fff": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|color:#fff": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|color:#fff": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|color:var(--color-button-secondary-text-interactive,#005bab)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|color:var(--color-button-secondary-text-interactive,#005bab)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|color:var(--color-button-secondary-text-interactive,#005bab)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|color:#000000f2": {
+        "rules": 1,
+        "matched": 9
+      },
+      "link|focus|color:#000000f2": {
+        "rules": 1,
+        "matched": 9
+      },
+      "link|active|color:#000000f2": {
+        "rules": 1,
+        "matched": 9
+      },
+      "link|hover|background-color:#005bab": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus-visible|background-color:#005bab": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|background-color:#005bab": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|background-color:#f2f9ff": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus-visible|background-color:#f2f9ff": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|background-color:#f2f9ff": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|background-color:#f6f5f4": {
+        "rules": 1,
+        "matched": 17
+      },
+      "link|focus-visible|background-color:#f6f5f4": {
+        "rules": 1,
+        "matched": 17
+      },
+      "link|active|background-color:#f6f5f4": {
+        "rules": 1,
+        "matched": 17
+      },
+      "button|hover|color:#000000bf": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|hover|background-color:#f6f5f4;border-color:#f9f9f8": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|background-color:#f6f5f4;border-color:#f9f9f8": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|active|background-color:#f6f5f4;border-color:#f9f9f8": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:#f6f5f4;border-color:#0000001a": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|background-color:#f6f5f4;border-color:#0000001a": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|active|background-color:#f6f5f4;border-color:#0000001a": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|background-color:#0000000d": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|focus-visible|background-color:#0000000d": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|active|background-color:#0000001a": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|hover|background-color:#dfdcd9": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|focus-visible|background-color:#dfdcd9": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|active|background-color:#dfdcd9": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|hover|background-color:#9c7054": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|focus-visible|background-color:#885d3d": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|active|background-color:#744d2d": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|hover|background-color:#ebd5c5": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|focus-visible|background-color:#ebd5c5": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|active|background-color:#ebd5c5": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|hover|background-color:#d9b79f": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|focus-visible|background-color:#d9b79f": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|active|background-color:#d9b79f": {
+        "rules": 1,
+        "matched": 49
+      },
+      "link|hover|text-decoration-color:currentcolor": {
+        "rules": 1,
+        "matched": 24
+      },
+      "link|focus-visible|text-decoration-color:currentcolor": {
+        "rules": 1,
+        "matched": 24
+      },
+      "link|active|text-decoration-color:currentcolor": {
+        "rules": 1,
+        "matched": 24
+      },
+      "text|focus|box-shadow:rgba(35, 131, 226, 0.57) 0px 0px 0px 1px inset, rgba(35, 131, 226, 0.35) 0px 0px 0px 2px": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|outline-color:#0075de": {
+        "rules": 2,
+        "matched": 8
+      },
+      "link|hover|box-shadow:0px .175px 1.041px 0px #00000003, 0px .8px 2.925px 0px #00000005, 0px 2.025px 7.847px 0px #00000007, 0px 4px 18px 0px #0000000a": {
+        "rules": 1,
+        "matched": 3
+      },
+      "link|focus-visible|box-shadow:0px .175px 1.041px 0px #00000003, 0px .8px 2.925px 0px #00000005, 0px 2.025px 7.847px 0px #00000007, 0px 4px 18px 0px #0000000a": {
+        "rules": 1,
+        "matched": 3
+      }
+    },
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 7,
+        "area": 204290.171875,
+        "chars": 0
+      },
+      "button|5px 10px|0px|4px|8px": {
+        "count": 3,
+        "area": 7550.15625,
+        "chars": 0
+      },
+      "link|5px 10px|0px|4px|8px": {
+        "count": 6,
+        "area": 15514.21875,
+        "chars": 0
+      },
+      "link|4px 14px|1px|8px|normal": {
+        "count": 1,
+        "area": 4767.1875,
+        "chars": 0
+      },
+      "link|6px 15px|1px|8px|12px": {
+        "count": 4,
+        "area": 23412.15625,
+        "chars": 58
+      },
+      "button|0px|0px|50%|normal": {
+        "count": 1,
+        "area": 1024,
+        "chars": 0
+      },
+      "link|6px 8px|1px|8px|8px": {
+        "count": 9,
+        "area": 37584,
+        "chars": 0
+      },
+      "link|0px|0px|12px|normal": {
+        "count": 6,
+        "area": 1703176.990234375,
+        "chars": 0
+      },
+      "link|3px 16px 3px 8px|0px|8px|0px 8px": {
+        "count": 23,
+        "area": 60905,
+        "chars": 0
+      },
+      "button|8px 16px|1px|9999.01px|normal": {
+        "count": 1,
+        "area": 6306.8125,
+        "chars": 0
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 2,
+        "area": 5794.0625,
+        "chars": 0
+      }
+    },
+    "styleSheets": {
+      "total": 23,
+      "readable": 22,
+      "blocked": 1,
+      "stateRules": 357
+    },
+    "radii": {
+      "4px": {
+        "count": 54,
+        "area": 48984.374267578125,
+        "chars": 0
+      },
+      "8px": {
+        "count": 136,
+        "area": 1079592.875,
+        "chars": 174
+      },
+      "9999.01px": {
+        "count": 27,
+        "area": 96905.65028227307,
+        "chars": 0
+      },
+      "50%": {
+        "count": 1,
+        "area": 1024,
+        "chars": 0
+      },
+      "12px": {
+        "count": 37,
+        "area": 6202940.270263672,
+        "chars": 0
+      },
+      "100%": {
+        "count": 9,
+        "area": 9216,
+        "chars": 9
+      },
+      "5px": {
+        "count": 3,
+        "area": 14868,
+        "chars": 0
+      },
+      "6px": {
+        "count": 22,
+        "area": 5694149.1513671875,
+        "chars": 0
+      },
+      "23.04px": {
+        "count": 2,
+        "area": 308499.80712890625,
+        "chars": 0
+      },
+      "11.7px": {
+        "count": 2,
+        "area": 89979.015625,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgba(0, 0, 0, 0) 0px 1px 0px 0px": {
+        "count": 3,
+        "area": 166272,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.008) 0px 0.667px 3.502px 0px, rgba(0, 0, 0, 0.016) 0px 2.933px 7.252px 0px, rgba(0, 0, 0, 0.02) 0px 7.2px 14.462px 0px, rgba(0, 0, 0, 0.024) 0px 13.867px 28.348px 0px, rgba(0, 0, 0, 0.03) 0px 23.333px 52.123px 0px, rgba(0, 0, 0, 0.04) 0px 36px 89px 0px": {
+        "count": 4,
+        "area": 591588,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px 0px, rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px 0px, rgba(0, 0, 0, 0.027) 0px 2.025px 7.847px 0px, rgba(0, 0, 0, 0.04) 0px 4px 18px 0px": {
+        "count": 12,
+        "area": 2201398.4086914062,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "1": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "2": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 69,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 27,
+        "area": 0,
+        "chars": 0
+      },
+      "5": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 69,
+        "area": 0,
+        "chars": 0
+      },
+      "7": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 571,
+        "area": 0,
+        "chars": 0
+      },
+      "9": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "11": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 144,
+        "area": 0,
+        "chars": 0
+      },
+      "14": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "15": {
+        "count": 36,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 155,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 102,
+        "area": 0,
+        "chars": 0
+      },
+      "26": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "28": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "30": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 21,
+        "area": 0,
+        "chars": 0
+      },
+      "36": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 12,
+        "area": 0,
+        "chars": 0
+      },
+      "58": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "60": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "71": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "106": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "108": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "111": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "128": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "158": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(0, 117, 222)": {
+        "count": 9,
+        "area": 60489.375,
+        "chars": 90
+      },
+      "rgb(230, 243, 254)": {
+        "count": 3,
+        "area": 22472.25,
+        "chars": 42
+      },
+      "rgba(0, 0, 0, 0.05)": {
+        "count": 1,
+        "area": 1024,
+        "chars": 0
+      },
+      "rgba(255, 255, 255, 0)": {
+        "count": 27,
+        "area": 112752,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 6,
+        "area": 43140.6875,
+        "chars": 42
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 29,
+        "area": 653519.484375,
+        "chars": 0
+      },
+      "4px": {
+        "count": 9,
+        "area": 23064.375,
+        "chars": 0
+      },
+      "8px": {
+        "count": 111,
+        "area": 402648.875,
+        "chars": 174
+      },
+      "50%": {
+        "count": 1,
+        "area": 1024,
+        "chars": 0
+      },
+      "12px": {
+        "count": 12,
+        "area": 2512303.299560547,
+        "chars": 0
+      },
+      "9999.01px": {
+        "count": 3,
+        "area": 18920.4375,
+        "chars": 0
+      },
+      "6px": {
+        "count": 6,
+        "area": 1583333.6103515625,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgba(0, 0, 0, 0.95)": {
+        "count": 102,
+        "area": 3539471.572265625,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.898)": {
+        "count": 38,
+        "area": 139688.375,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 19,
+        "area": 1451579.4470214844,
+        "chars": 90
+      },
+      "rgb(0, 91, 171)": {
+        "count": 3,
+        "area": 22472.25,
+        "chars": 42
+      },
+      "rgb(9, 127, 232)": {
+        "count": 3,
+        "area": 24220.25,
+        "chars": 42
+      },
+      "rgba(0, 0, 0, 0.54)": {
+        "count": 6,
+        "area": 17382.1875,
+        "chars": 0
+      }
+    },
+    "headingSizes": {
+      "96px": {
+        "count": 1,
+        "area": 263056.9375,
+        "chars": 31
+      },
+      "54px": {
+        "count": 2,
+        "area": 74251.625,
+        "chars": 52
+      },
+      "22px": {
+        "count": 9,
+        "area": 128033.5,
+        "chars": 345
+      },
+      "14px": {
+        "count": 3,
+        "area": 44792.5,
+        "chars": 66
+      },
+      "16px": {
+        "count": 15,
+        "area": 105981.75,
+        "chars": 432
+      },
+      "42px": {
+        "count": 4,
+        "area": 116275.15625,
+        "chars": 85
+      },
+      "60.9px": {
+        "count": 1,
+        "area": 94655,
+        "chars": 31
+      },
+      "32px": {
+        "count": 4,
+        "area": 89460.625,
+        "chars": 104
+      }
+    },
+    "headingFamilies": {
+      "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"": {
+        "count": 39,
+        "area": 916507.09375,
+        "chars": 1146
+      }
+    },
+    "headingWeights": {
+      "400": {
+        "count": 3,
+        "area": 44792.5,
+        "chars": 66
+      },
+      "600": {
+        "count": 3,
+        "area": 409661.09375,
+        "chars": 93
+      },
+      "700": {
+        "count": 33,
+        "area": 462053.5,
+        "chars": 987
+      }
+    },
+    "pageBg": "rgb(255, 255, 255)",
+    "elementCount": 3252,
+    "sampled": 1405,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 1090
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 1081
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 1081
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": null
+}
