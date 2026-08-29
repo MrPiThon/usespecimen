@@ -2,6 +2,10 @@
 name: 'Voltage Dark'
 version: '0.1.0'
 description: 'Dense dark product UI: near-black canvas, small tight type, and a lavender accent so restrained it survives only in focus rings.'
+categories:
+  - saas
+  - developer-tools
+  - marketing
 colors:
   background: '#08090a'
   foreground: '#d0d6e0'

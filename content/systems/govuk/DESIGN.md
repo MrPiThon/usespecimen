@@ -2,6 +2,8 @@
 name: 'Civic Sans'
 version: '0.1.0'
 description: 'Function-first public service design: zero ornament, zero radius, maximum contrast, unusually large body type.'
+categories:
+  - public-sector
 colors:
   background: '#ffffff'
   foreground: '#0b0c0c'

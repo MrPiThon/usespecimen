@@ -2,6 +2,11 @@
 name: 'Indigo Infrastructure'
 version: '0.1.0'
 description: 'High-trust developer commerce: near-white canvas, deep navy prose, one saturated indigo doing all the persuading.'
+categories:
+  - finance
+  - developer-tools
+  - saas
+  - marketing
 colors:
   background: '#ffffff'
   foreground: '#061b31'

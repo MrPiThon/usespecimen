@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { CATEGORY_IDS } from './lib/categories.mjs';
 
 // Validation IS the content layer. A DESIGN.md that doesn't conform never
 // becomes a page, because the build fails before it can — that guarantee is the
@@ -52,6 +53,11 @@ const systems = defineCollection({
     name: z.string().min(1),
     version: z.string().optional(),
     description: z.string().optional(),
+    // Declared, not measured — a crawler cannot see what a site is for. Held to
+    // a controlled vocabulary so the filter never fragments across synonyms;
+    // an unknown id is a build error, which is better than a slow decay into
+    // "dev-tools" and "developer-tools" both half-working.
+    categories: z.array(z.enum(CATEGORY_IDS)).min(1).optional(),
     colors: z.record(z.string(), tokenTree).optional(),
     typography: z.record(z.string(), tokenTree).optional(),
     rounded: z.record(z.string(), tokenTree).optional(),

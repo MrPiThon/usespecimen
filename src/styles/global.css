@@ -333,3 +333,9 @@ th { color: var(--muted); font-weight: 550; }
   background: var(--accent); border-color: var(--accent); color: var(--accent-fg);
 }
 #results .card[hidden] { display: none; }
+
+.tag {
+  display: inline-block; font-size: 0.72rem; letter-spacing: 0.02em;
+  color: var(--muted); border: 1px solid var(--border);
+  border-radius: 100px; padding: 0.02rem 0.45rem; margin: 0 0.25rem 0.25rem 0;
+}

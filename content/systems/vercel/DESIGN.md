@@ -2,6 +2,10 @@
 name: 'Monochrome Inversion'
 version: '0.1.0'
 description: 'Achromatic platform design that inverts whole: near-white and near-black, a geometric sans, and colour reserved for focus and status.'
+categories:
+  - developer-tools
+  - saas
+  - marketing
 colors:
   background: '#fafafa'
   foreground: '#171717'

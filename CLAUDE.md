@@ -265,9 +265,12 @@ calling:
 - `deltaE` converts sRGB→OKLab internally. Pass it RGB, not OKLab.
 - `contrastRatio(fg, bg)` flattens `fg` over `bg` itself, so `bg` must already be
   opaque.
-- `parseColor` handles `rgb()/rgba()`, `hsl()/hsla()` (with `deg` and
-  slash-alpha), 3/4/6/8-digit hex, and `color(srgb ...)`. It returns `null` for
-  everything else — gradients, `currentColor`, and named colors like `red` are
+- `parseColor` handles `rgb()/rgba()`, `hsl()/hsla()`, hex, `color(srgb ...)`,
+  and the modern spaces `lab()`, `oklab()`, `oklch()` and
+  `color(display-p3 ...)`. That last group is not optional: **230 of 233** colour
+  values on tailwindcss.com and **9 of 9** on basecamp.com are authored in them,
+  and dropping them produced white-on-white rather than no answer. It returns
+  `null` for everything else — gradients, `currentColor`, and named colors like `red` are
   **not** handled, so null-check every parse. hsl matters more than it looks:
   computed style rarely emits it, but authored stylesheet rules are full of it.
 

@@ -1207,8 +1207,10 @@ export function cluster(capture, { previous } = {}) {
     // 11: adds components — box metrics per kind from harvest v4.
     // 12: adds `stability`, and spacing.base holds its previous value when the
     //     grid share lands within DEAD_BAND of the threshold.
+    // 13: parseColor understands lab/oklab/oklch/display-p3, so sites authoring
+    //     in modern colour spaces stop resolving to null andwhite-on-white.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 12,
+    clusterVersion: 13,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
