@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-28T22:47:12.097Z",
+  "capturedAt": "2026-08-28T23:56:44.058Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 441,
     "sampleRatio": 0.716
   },
-  "harvestVersion": 1,
-  "clusterVersion": 5,
+  "harvestVersion": 2,
+  "clusterVersion": 6,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -179,9 +179,9 @@
       "stack": "\"GDS Transport\", arial, sans-serif",
       "sizePx": 19,
       "weight": 400,
-      "lineHeightPx": 25,
+      "lineHeightPx": 25.08,
       "lineHeightRatio": 1.32,
-      "lineHeightInferred": true,
+      "lineHeightInferred": false,
       "letterSpacing": null
     },
     "heading": {
@@ -256,7 +256,55 @@
       }
     ],
     "scaleTruncated": false,
-    "distinctSizes": 7
+    "distinctSizes": 7,
+    "roles": {
+      "body": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 400,
+        "lineHeight": 1.32,
+        "letterSpacing": null,
+        "elements": 31,
+        "chars": 1704
+      },
+      "h2": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "36px",
+        "fontWeight": 700,
+        "lineHeight": 1.11,
+        "letterSpacing": null,
+        "elements": 5,
+        "chars": 82
+      },
+      "button": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 400,
+        "lineHeight": 1,
+        "letterSpacing": null,
+        "elements": 2,
+        "chars": 50
+      },
+      "link": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 700,
+        "lineHeight": 1.32,
+        "letterSpacing": null,
+        "elements": 36,
+        "chars": 783
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 19
   },
   "spacing": {
     "base": 5,
@@ -374,7 +422,7 @@
     "Strided sample: 441 of 616 elements. Weights are relative only."
   ],
   "harvest": {
-    "harvestVersion": 1,
+    "harvestVersion": 2,
     "url": "https://www.gov.uk/",
     "title": "Welcome to GOV.UK",
     "viewport": {
@@ -572,6 +620,103 @@
       }
     },
     "letterSpacings": {},
+    "typeStyles": {
+      "h2|24px|700|30px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 3,
+        "area": 66330,
+        "chars": 60
+      },
+      "text|19px|400|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 31,
+        "area": 535929.6875,
+        "chars": 1704
+      },
+      "button|19px|400|19px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 2,
+        "area": 17637.34375,
+        "chars": 50
+      },
+      "link|19px|400|19px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 2025.875,
+        "chars": 12
+      },
+      "link|16px|400|20px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 1,
+        "chars": 20
+      },
+      "h2|24px|700|normal|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 1,
+        "chars": 15
+      },
+      "text|16px|700|normal|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 2997.421875,
+        "chars": 4
+      },
+      "text|19px|700|20px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 1,
+        "chars": 13
+      },
+      "text|64px|700|68.48px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 157752,
+        "chars": 58
+      },
+      "text|19px|700|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 15750,
+        "chars": 6
+      },
+      "button|13.3333px|400|normal|normal|Arial": {
+        "count": 1,
+        "area": 2500,
+        "chars": 13
+      },
+      "h2|36px|700|40px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 5,
+        "area": 111200,
+        "chars": 82
+      },
+      "link|19px|700|24.7px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 6,
+        "area": 58710.953125,
+        "chars": 215
+      },
+      "link|19px|700|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 36,
+        "area": 158926.40625,
+        "chars": 783
+      },
+      "h2|16px|700|20px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 2727.5,
+        "chars": 20
+      },
+      "button|16px|400|20px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 3,
+        "area": 16284.046875,
+        "chars": 36
+      },
+      "text|16px|400|20px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 2,
+        "area": 2,
+        "chars": 42
+      },
+      "link|19px|400|25px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 34,
+        "area": 165619,
+        "chars": 673
+      },
+      "h2|28.5px|700|37.5px|normal|\"GDS Transport\", arial, sans-serif": {
+        "count": 1,
+        "area": 1,
+        "chars": 13
+      }
+    },
     "radii": {},
     "shadows": {
       "rgb(8, 61, 41) 0px 2px 0px 0px": {

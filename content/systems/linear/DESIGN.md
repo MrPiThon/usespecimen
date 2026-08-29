@@ -17,8 +17,8 @@ colors:
 typography:
   fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
   headingFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
-  baseSize: '13px'
-  lineHeight: 1.85
+  baseSize: '15px'
+  lineHeight: 1.6
   weight: 400
   headingWeight: 510
   letterSpacing: '-0.165px'
@@ -35,6 +35,75 @@ typography:
     6xl: '48px'
     7xl: '64px'
     up-9: '72px'
+  roles:
+    body:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '15px'
+      fontWeight: 400
+      lineHeight: 1.6
+      letterSpacing: '-0.165px'
+    body-sm:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '14px'
+      fontWeight: 400
+      lineHeight: 1.5
+      letterSpacing: '-0.182px'
+    caption:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '13px'
+      fontWeight: 400
+      lineHeight: 1.54
+      letterSpacing: '-0.039px'
+    caption-sm:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '12px'
+      fontWeight: 510
+      lineHeight: 1.4
+    body-lg:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '18px'
+      fontWeight: 400
+      lineHeight: 1.6
+      letterSpacing: '-0.165px'
+    lead:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '24px'
+      fontWeight: 400
+      lineHeight: 1.33
+      letterSpacing: '-0.288px'
+    h2:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '48px'
+      fontWeight: 510
+      lineHeight: 1
+      letterSpacing: '-1.056px'
+    h3:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '13px'
+      fontWeight: 510
+      lineHeight: 1.5
+      letterSpacing: '-0.13px'
+    h4:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '16px'
+      fontWeight: 590
+      lineHeight: 1.75
+    button:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '16px'
+      fontWeight: 510
+      lineHeight: 2.75
+    link:
+      fontFamily: '"Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+      fontSize: '13px'
+      fontWeight: 400
+      lineHeight: 1.5
+      letterSpacing: '-0.13px'
+    mono:
+      fontFamily: '"Berkeley Mono", ui-monospace, "SF Mono", Menlo, monospace'
+      fontSize: '14px'
+      fontWeight: 400
+      lineHeight: 1.71
 rounded:
   sm: '4px'
   md: '6px'
@@ -64,10 +133,10 @@ components:
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-28T22:26:46.603Z'
+  capturedAt: '2026-08-28T23:56:41.777Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
-  harvestVersion: 1
-  clusterVersion: 5
+  harvestVersion: 2
+  clusterVersion: 6
 ---
 
 ## Overview
@@ -105,8 +174,9 @@ convey state.
 
 ## Typography
 
-`Inter Variable` at 13px with a generous 1.85 line height and `-0.165px`
-tracking. Small type with loose leading is what makes the density readable.
+`Inter Variable` at 15px with a 1.6 line height and `-0.165px` tracking.
+The tight tracking at a modest size is what lets the interface stay dense
+without becoming cramped.
 
 Headings use weight 510 — a variable-font axis value, not a named weight. The
 scale runs twelve steps from 10px to 72px.

@@ -443,6 +443,122 @@ function stepName(i, baseIdx) {
   return d < 0 ? (DOWN[-d - 1] || `down-${-d}`) : (UP[d - 1] || `up-${d}`);
 }
 
+/** Prose sets many characters per element; chrome (nav, labels, badges) sets
+ *  few. 20 splits them on every site measured. */
+const PROSE_MIN_CHARS_PER_EL = 20;
+/** The body ladder covers sizes near body. Past this ratio a size is display
+ *  type, which is named by its heading element or not at all — calling a 48px
+ *  hero "lead-lg" would be worse than leaving it unnamed. */
+const LADDER_MAX_RATIO = 1.6;
+const LADDER_MIN_RATIO = 0.6;
+/** A ladder step used on one or two elements is a styled span, not a tier. */
+const MIN_LADDER_ELEMENTS = 3;
+const TEXT_DOWN = ['body-sm', 'caption', 'caption-sm'];
+const TEXT_UP = ['body-lg', 'lead', 'lead-lg'];
+
+/** Parse one typeStyles key back into a record. Family is the tail, so a '|'
+ *  inside a font stack survives the round trip. */
+function parseTypeStyle(key) {
+  const parts = key.split('|');
+  if (parts.length < 6) return null;
+  const px = parseFloat(parts[1]);
+  if (!Number.isFinite(px)) return null;
+  return {
+    kind: parts[0],
+    px,
+    fontWeight: Number(parts[2]) || null,
+    // 'normal' is a real, common value here — unlike in the per-property
+    // histograms, where harvest's bump() drops it before we ever see it.
+    lineHeightPx: parts[3] === 'normal' ? null : parseFloat(parts[3]),
+    letterSpacing: parts[4] === 'normal' ? null : parts[4],
+    stack: parts.slice(5).join('|'),
+  };
+}
+
+const typeEntries = capture => entriesOf(capture.typeStyles, 'chars')
+  .map((e) => {
+    const parsed = parseTypeStyle(e.value);
+    return parsed && { ...parsed, chars: e.weight, count: e.count, charsPerEl: e.weight / e.count };
+  })
+  .filter(Boolean);
+
+const asRole = (b) => ({
+  fontFamily: primaryFamily(b.stack),
+  fontStack: b.stack,
+  class: familyClass(b.stack),
+  fontSize: `${round(b.px, 2)}px`,
+  fontWeight: b.fontWeight,
+  lineHeight: b.lineHeightPx ? round(b.lineHeightPx / b.px, 2) : null,
+  letterSpacing: b.letterSpacing,
+  elements: b.count,
+  chars: b.chars,
+});
+
+/**
+ * Typography roles built from co-occurring bundles, so every role is a
+ * combination the page actually used rather than four independent histogram
+ * winners glued together.
+ *
+ * Needs harvest v2. Older captures have no `typeStyles` and get an empty set
+ * rather than a fabricated one.
+ */
+export function typographyRoles(capture) {
+  const all = typeEntries(capture);
+  if (!all.length) return { roles: {}, available: false };
+
+  const roles = {};
+  const dominant = kind => all.filter(b => b.kind === kind)[0] ?? null;
+  // Monospace is its own role; letting it into the prose pool makes a code block
+  // compete for `body`, and on Linear it won `body-lg` outright.
+  const textish = all.filter(b => b.kind === 'text' && familyClass(b.stack) !== 'mono');
+
+  // Body is the style that sets the most PROSE. Not the most characters — that
+  // is chrome, which has many elements with few characters each. Not the highest
+  // characters-per-element either — that is display type, few elements with many.
+  // Filter on chars-per-element to drop the chrome, then rank the remainder by
+  // total volume to drop the display sizes. `all` is already chars-sorted.
+  // Measured: Stripe 16px over 26px, Linear 15px over 13px, GOV.UK 19px, which
+  // matches the value GOV.UK publishes.
+  const body = textish.find(b => b.charsPerEl >= PROSE_MIN_CHARS_PER_EL) ?? textish[0] ?? null;
+  if (body) roles.body = asRole(body);
+
+  if (body) {
+    // One bundle per size, heaviest wins: three weights at 12px are one tier of
+    // the system, not three separate ones.
+    const bySize = new Map();
+    for (const b of textish) {
+      const key = Math.round(b.px);
+      if (!bySize.has(key)) bySize.set(key, b);
+    }
+    const near = [...bySize.values()].filter(b => Math.round(b.px) !== Math.round(body.px)
+      && b.count >= MIN_LADDER_ELEMENTS
+      && b.px / body.px <= LADDER_MAX_RATIO && b.px / body.px >= LADDER_MIN_RATIO);
+    // Take the heaviest steps, THEN order by size to name them. Taking the
+    // nearest sizes instead drops the tier the site actually leans on — Stripe's
+    // 10px small print (93 elements) lost to three sizes used once each.
+    const name = (list, names) => list.slice(0, names.length)
+      .sort((a, b) => Math.abs(a.px - body.px) - Math.abs(b.px - body.px))
+      .forEach((b, i) => { roles[names[i]] = asRole(b); });
+    name(near.filter(b => b.px < body.px), TEXT_DOWN);
+    name(near.filter(b => b.px > body.px), TEXT_UP);
+  }
+
+  // Heading roles are named by the element that carried them, so h1 means h1
+  // rather than "the biggest thing we found".
+  for (const level of ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']) {
+    const hit = dominant(level);
+    if (hit) roles[level] = asRole(hit);
+  }
+  for (const kind of ['button', 'link']) {
+    const hit = dominant(kind);
+    if (hit) roles[kind] = asRole(hit);
+  }
+  const mono = all.find(b => familyClass(b.stack) === 'mono');
+  if (mono) roles.mono = asRole(mono);
+
+  return { roles, available: true, distinctStyles: all.length };
+}
+
 export function typographyTokens(capture) {
   const families = entriesOf(capture.fontFamilies, 'chars');
   const headingFamilies = entriesOf(capture.headingFamilies, 'chars');
@@ -482,8 +598,25 @@ export function typographyTokens(capture) {
   // inference and is labelled as one.
   const bodyLineHeight = lineHeights[0] || null;
 
+  const roleSet = typographyRoles(capture);
+  const bodyRole = roleSet.roles.body ?? null;
+  const bodyPx = bodyRole ? parseFloat(bodyRole.fontSize) : null;
+
+  // Prefer the co-occurring bundle. Assembling `body` from four independent
+  // histograms can emit a combination the page never used; a bundle is by
+  // construction one it did, which is also why lineHeightInferred goes false.
   return {
-    body: {
+    body: bodyRole ? {
+      family: bodyRole.fontFamily,
+      class: bodyRole.class,
+      stack: bodyRole.fontStack,
+      sizePx: bodyPx,
+      weight: bodyRole.fontWeight,
+      lineHeightPx: bodyRole.lineHeight ? round(bodyRole.lineHeight * bodyPx, 2) : null,
+      lineHeightRatio: bodyRole.lineHeight,
+      lineHeightInferred: false,
+      letterSpacing: bodyRole.letterSpacing,
+    } : {
       ...face(families[0]),
       sizePx: bodySize?.px ?? null,
       weight: weights[0] ? Number(weights[0].value) : null,
@@ -506,6 +639,10 @@ export function typographyTokens(capture) {
     scale,
     scaleTruncated: truncated,
     distinctSizes: sizes.length,
+    // Roles need harvest v2; older captures get an empty set, never a made-up one.
+    roles: roleSet.roles,
+    rolesAvailable: roleSet.available,
+    distinctStyles: roleSet.distinctStyles ?? null,
   };
 }
 
@@ -741,8 +878,11 @@ export function cluster(capture) {
     //    Tokens are unchanged from 3; only the audit verdicts move.
     // 5: adds colors.ramps — ordered surface and text ladders. Additive; the
     //    named roles are unchanged.
+    // 6: adds typography.roles from harvest v2 bundles, and `body` now comes
+    //    from a real bundle instead of four independent histogram winners,
+    //    which moves body size on pages whose most-typed size is UI chrome.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 5,
+    clusterVersion: 6,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

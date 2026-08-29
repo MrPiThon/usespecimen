@@ -16,13 +16,16 @@ export const harvestFn = () => {
     // Bump whenever a change in here moves the output for an unchanged page, so
     // a drift diff can tell a redesign from a harvester change. Captures with no
     // version predate the field, and so predate the painted-border-side fix.
-    harvestVersion: 1,
+    // 2: adds typeStyles, co-occurring type property bundles keyed by element
+    //    kind. Older captures cannot produce typography roles.
+    harvestVersion: 2,
     url: location.href,
     title: document.title,
     viewport: { w: innerWidth, h: innerHeight },
     docHeight: document.documentElement.scrollHeight,
     textColors: {}, bgColors: {}, borderColors: {},
     fontFamilies: {}, fontSizes: {}, fontWeights: {}, lineHeights: {}, letterSpacings: {},
+    typeStyles: {},
     radii: {}, shadows: {}, spacings: {},
     interactiveBg: {}, interactiveRadius: {}, interactiveFg: {},
     headingSizes: {}, headingFamilies: {}, headingWeights: {},
@@ -71,6 +74,23 @@ export const harvestFn = () => {
         bump(out.headingFamilies, cs.fontFamily, w);
         bump(out.headingWeights, cs.fontWeight, w);
       }
+
+      // One key per CO-OCCURRING type style. The per-property histograms above
+      // cannot be recombined — knowing a page uses 16px and weight 600 says
+      // nothing about whether 16px is ever bold — so a real typography role has
+      // to be recorded as a bundle or invented later, and inventing is the one
+      // thing this pipeline does not do.
+      //
+      // The kind prefix is the element that carried the style, so role names
+      // come from the DOM rather than from a guess. Family goes last: a '|'
+      // inside a font stack then cannot break the split on the way out.
+      const kind = /^H[1-6]$/.test(tag) ? tag.toLowerCase()
+        : (tag === 'BUTTON' || el.getAttribute('role') === 'button'
+          || (tag === 'INPUT' && /button|submit/i.test(el.type || ''))) ? 'button'
+          : tag === 'A' ? 'link' : 'text';
+      bump(out.typeStyles, [
+        kind, cs.fontSize, cs.fontWeight, cs.lineHeight, cs.letterSpacing, cs.fontFamily,
+      ].join('|'), w);
     }
 
     const bg = cs.backgroundColor;

@@ -12,7 +12,6 @@ colors:
   border: '#e5edf5'
   surface-1: '#f8fafd'
   surface-2: '#e5edf5'
-  surface-3: '#d4dee9'
   text-1: '#061b31'
   text-2: '#50617a'
   text-3: '#64748d'
@@ -23,7 +22,6 @@ typography:
   lineHeight: 1.4
   weight: 300
   headingWeight: 300
-  letterSpacing: '-0.22px'
   scale:
     4xs: '8px'
     3xs: '9px'
@@ -37,6 +35,56 @@ typography:
     3xl: '26px'
     4xl: '32px'
     5xl: '48px'
+  roles:
+    body:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '16px'
+      fontWeight: 300
+      lineHeight: 1.4
+    body-sm:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '10px'
+      fontWeight: 300
+      lineHeight: 1.15
+      letterSpacing: '0.1px'
+    body-lg:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '18px'
+      fontWeight: 300
+      lineHeight: 1.4
+    lead:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '22px'
+      fontWeight: 300
+      lineHeight: 1.1
+      letterSpacing: '-0.22px'
+    h2:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '32px'
+      fontWeight: 300
+      lineHeight: 1.1
+      letterSpacing: '-0.64px'
+    h3:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '22px'
+      fontWeight: 300
+      lineHeight: 1.1
+      letterSpacing: '-0.22px'
+    h4:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '16px'
+      fontWeight: 300
+      lineHeight: 1.4
+    button:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '14px'
+      fontWeight: 400
+      lineHeight: 1
+    link:
+      fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
+      fontSize: '16px'
+      fontWeight: 300
+      lineHeight: 1.25
 rounded:
   sm: '4px'
   md: '5px'
@@ -67,10 +115,10 @@ components:
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-28T22:47:09.750Z'
+  capturedAt: '2026-08-28T23:56:37.987Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
-  harvestVersion: 1
-  clusterVersion: 5
+  harvestVersion: 2
+  clusterVersion: 6
 ---
 
 ## Overview
@@ -101,9 +149,10 @@ every step is shallow, which is why the page reads as calm rather than layered.
 
 ## Typography
 
-One family, `sohne-var`, at 16px with a 1.4 line height and `-0.22px`
-tracking. Body weight is 300 — noticeably lighter than most product UI, and
-central to the character rather than incidental.
+One family, `sohne-var`, at 16px with a 1.4 line height and no tracking
+adjustment. Body weight is 300 — noticeably lighter than most product UI, and
+central to the character rather than incidental. Negative tracking appears only
+at display sizes, tightening to `-0.22px` at 22px and `-0.64px` at 32px.
 
 The scale runs twelve steps from 8px to 48px. Headings share the body family
 and weight; hierarchy comes from size, not from a heavier cut.

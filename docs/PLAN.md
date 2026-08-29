@@ -338,20 +338,37 @@ of painted background area while Linear's green and red semantic overlays sit at
 0.145% and 0.104%. Chroma would have failed here, because plenty of systems tint
 their surfaces deliberately — Stripe's `#e5edf5` is measurably blue.
 
-**3. Body size is wrong on dense UI.**
-We pick the size with the most total characters. On Linear that is 13px, which is
-nav and label chrome. Characters *per element* separates prose from chrome, but
-not alone — display text scores highest of all:
+**3. ~~Body size is wrong on dense UI.~~ DONE, harvest v2 + cluster v6.**
+Fixed together with typography roles, because both needed the same missing data.
+The per-property histograms cannot be recombined — knowing a page uses 16px and
+weight 600 says nothing about whether 16px is ever bold — so `harvest` now
+records **co-occurring bundles**: `kind|size|weight|lineHeight|tracking|family`,
+keyed by the element that carried them (`h1`…`h6`, `button`, `link`, `text`).
+54 distinct bundles on Linear, 62 on Stripe, 19 on GOV.UK.
 
-| Linear | elements | chars/el |  | Stripe | elements | chars/el |
-|---|---|---|---|---|---|---|
-| 13px | 129 | 16.9 |  | 16px | 196 | 22.9 |
-| 15px | 65 | **31.2** |  | 22px | 20 | 93.0 |
-| 24px | 4 | 136.8 |  | 10px | 93 | 8.3 |
+Body is now the style that sets the most *prose*: filter to bundles above 20
+characters per element (drops nav and label chrome), then rank by total
+characters (drops display type, which scores highest per element but has little
+volume). Neither measure works alone.
 
-Rule that fits both: among sizes with a substantial element count, body is the
-one with the highest chars-per-element. Gives 15px for Linear and keeps 16px for
-Stripe. Note this makes getdesign.md's Linear body of 16px look wrong too.
+| | was | now | getdesign.md |
+|---|---|---|---|
+| Linear | 13px | **15px** | 16px |
+| Stripe | 16px | **16px** | 16px |
+| GOV.UK | 19px | **19px** | — |
+
+GOV.UK matches its published 19px. Linear's 16px in their file now looks wrong
+in the other direction.
+
+Roles emitted: 12 for Linear, 9 for Stripe, 4 for GOV.UK, against their 13 —
+`body`, the `body-sm`/`caption`/`body-lg`/`lead` ladder, `h1`…`h6`, `button`,
+`link`, `mono`. Names come from the DOM element that carried the style, not from
+a guess about what a size is for.
+
+Side effect worth noting: `lineHeightInferred` is now false. Assembling `body`
+from four independent histograms could emit a combination the page never used,
+and it did — Stripe's body was reported with `-0.22px` tracking, which belongs to
+its 22px display style. The 16px body carries none.
 
 **4. Semantic colours are on the floor.**
 Their file has `semantic-success: #27a644`. Our capture contains

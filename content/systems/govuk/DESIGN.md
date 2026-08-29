@@ -26,6 +26,27 @@ typography:
     xl: '28.5px'
     2xl: '36px'
     3xl: '64px'
+  roles:
+    body:
+      fontFamily: '"GDS Transport", arial, sans-serif'
+      fontSize: '19px'
+      fontWeight: 400
+      lineHeight: 1.32
+    h2:
+      fontFamily: '"GDS Transport", arial, sans-serif'
+      fontSize: '36px'
+      fontWeight: 700
+      lineHeight: 1.11
+    button:
+      fontFamily: '"GDS Transport", arial, sans-serif'
+      fontSize: '19px'
+      fontWeight: 400
+      lineHeight: 1
+    link:
+      fontFamily: '"GDS Transport", arial, sans-serif'
+      fontSize: '19px'
+      fontWeight: 700
+      lineHeight: 1.32
 spacing:
   base: '5px'
   s1: '5px'
@@ -49,10 +70,10 @@ components:
 provenance:
   brand: 'GOV.UK'
   source: 'https://www.gov.uk/'
-  capturedAt: '2026-08-28T22:47:12.097Z'
+  capturedAt: '2026-08-28T23:56:44.058Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900'
-  harvestVersion: 1
-  clusterVersion: 5
+  harvestVersion: 2
+  clusterVersion: 6
 ---
 
 ## Overview

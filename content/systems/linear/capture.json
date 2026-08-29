@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-28T22:26:46.603Z",
+  "capturedAt": "2026-08-28T23:56:41.777Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900",
   "source": {
@@ -14,8 +14,8 @@
     "sampled": 2982,
     "sampleRatio": 0.59
   },
-  "harvestVersion": 1,
-  "clusterVersion": 5,
+  "harvestVersion": 2,
+  "clusterVersion": 6,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -310,11 +310,11 @@
       "family": "Inter Variable",
       "class": "sans",
       "stack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
-      "sizePx": 13,
+      "sizePx": 15,
       "weight": 400,
       "lineHeightPx": 24,
-      "lineHeightRatio": 1.85,
-      "lineHeightInferred": true,
+      "lineHeightRatio": 1.6,
+      "lineHeightInferred": false,
       "letterSpacing": "-0.165px"
     },
     "heading": {
@@ -424,7 +424,143 @@
       }
     ],
     "scaleTruncated": true,
-    "distinctSizes": 14
+    "distinctSizes": 14,
+    "roles": {
+      "body": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": "-0.165px",
+        "elements": 48,
+        "chars": 1487
+      },
+      "body-sm": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.182px",
+        "elements": 3,
+        "chars": 172
+      },
+      "caption": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.54,
+        "letterSpacing": "-0.039px",
+        "elements": 8,
+        "chars": 620
+      },
+      "caption-sm": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 510,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 529
+      },
+      "body-lg": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": "-0.165px",
+        "elements": 20,
+        "chars": 20
+      },
+      "lead": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "24px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": "-0.288px",
+        "elements": 4,
+        "chars": 547
+      },
+      "h2": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "48px",
+        "fontWeight": 510,
+        "lineHeight": 1,
+        "letterSpacing": "-1.056px",
+        "elements": 6,
+        "chars": 216
+      },
+      "h3": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 510,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.13px",
+        "elements": 5,
+        "chars": 38
+      },
+      "h4": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 590,
+        "lineHeight": 1.75,
+        "letterSpacing": null,
+        "elements": 1,
+        "chars": 8
+      },
+      "button": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 510,
+        "lineHeight": 2.75,
+        "letterSpacing": null,
+        "elements": 2,
+        "chars": 24
+      },
+      "link": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.13px",
+        "elements": 36,
+        "chars": 260
+      },
+      "mono": {
+        "fontFamily": "Berkeley Mono",
+        "fontStack": "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "class": "mono",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.71,
+        "letterSpacing": null,
+        "elements": 172,
+        "chars": 1252
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 54
   },
   "spacing": {
     "base": null,
@@ -581,7 +717,7 @@
     "Strided sample: 2982 of 5052 elements. Weights are relative only."
   ],
   "harvest": {
-    "harvestVersion": 1,
+    "harvestVersion": 2,
     "url": "https://linear.app/",
     "title": "Linear – The system for product development",
     "viewport": {
@@ -612,7 +748,7 @@
       },
       "rgb(98, 102, 109)": {
         "count": 130,
-        "area": 127916.37133789062,
+        "area": 127928.37133789062,
         "chars": 775
       },
       "rgb(109, 120, 213)": {
@@ -858,7 +994,7 @@
     "fontFamilies": {
       "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
         "count": 446,
-        "area": 1929689.9626464844,
+        "area": 1929701.9626464844,
         "chars": 7311
       },
       "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
@@ -890,7 +1026,7 @@
       },
       "12px": {
         "count": 187,
-        "area": 233808.03002929688,
+        "area": 233820.03002929688,
         "chars": 1653
       },
       "20px": {
@@ -957,7 +1093,7 @@
       },
       "510": {
         "count": 138,
-        "area": 884148.19140625,
+        "area": 884160.19140625,
         "chars": 2111
       },
       "590": {
@@ -999,7 +1135,7 @@
       },
       "16px": {
         "count": 71,
-        "area": 76145.921875,
+        "area": 76157.921875,
         "chars": 637
       },
       "26.6px": {
@@ -1113,6 +1249,278 @@
         "count": 1,
         "area": 104004,
         "chars": 38
+      }
+    },
+    "typeStyles": {
+      "button|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 5144.5,
+        "chars": 16
+      },
+      "link|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 5,
+        "area": 10985.5,
+        "chars": 32
+      },
+      "link|13px|510|32px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 2333.5,
+        "chars": 7
+      },
+      "text|64px|510|64px|-1.408px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 95127,
+        "chars": 101
+      },
+      "text|15px|400|24px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 48,
+        "area": 194634.828125,
+        "chars": 1487
+      },
+      "text|15px|510|24px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 9,
+        "area": 55448.640625,
+        "chars": 140
+      },
+      "text|14px|590|21px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 861.328125,
+        "chars": 6
+      },
+      "text|13px|510|normal|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 11,
+        "area": 10623.75,
+        "chars": 101
+      },
+      "button|12px|510|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 9984,
+        "chars": 18
+      },
+      "text|12px|510|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 50,
+        "area": 51012.796875,
+        "chars": 323
+      },
+      "text|12px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 48,
+        "area": 23422.859375,
+        "chars": 207
+      },
+      "h3|20px|590|26.6px|-0.24px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 16747.82958984375,
+        "chars": 17
+      },
+      "text|14px|400|21px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 30749.25,
+        "chars": 172
+      },
+      "text|12px|400|20px|-0.182px|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
+        "count": 1,
+        "area": 2525.625,
+        "chars": 13
+      },
+      "h4|16px|590|28px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 17633.4375,
+        "chars": 8
+      },
+      "text|12px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 33,
+        "area": 33304.03125,
+        "chars": 274
+      },
+      "text|13px|510|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 1669.0625,
+        "chars": 13
+      },
+      "text|12px|400|16.8px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 21,
+        "area": 15775.152587890625,
+        "chars": 136
+      },
+      "text|13px|400|16px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 20088.5,
+        "chars": 120
+      },
+      "text|13px|510|16px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 305,
+        "chars": 4
+      },
+      "text|13px|510|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 18,
+        "area": 55948.546875,
+        "chars": 454
+      },
+      "text|12px|510|16.8px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 18,
+        "area": 47240.390625,
+        "chars": 529
+      },
+      "button|12px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 4062.375,
+        "chars": 14
+      },
+      "text|12px|400|16.8px|normal|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
+        "count": 8,
+        "area": 43406.79931640625,
+        "chars": 111
+      },
+      "h2|48px|510|48px|-1.056px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 6,
+        "area": 370406.47265625,
+        "chars": 216
+      },
+      "text|48px|510|48px|-1.056px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 36025.03125,
+        "chars": 30
+      },
+      "text|24px|400|31.92px|-0.288px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 184162.9921875,
+        "chars": 547
+      },
+      "text|10px|400|14px|-0.15px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 16,
+        "area": 10450.5625,
+        "chars": 126
+      },
+      "text|16px|590|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 1094.6875,
+        "chars": 6
+      },
+      "text|15px|590|20px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 3346.5625,
+        "chars": 23
+      },
+      "text|12px|510|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 3086,
+        "chars": 28
+      },
+      "text|15px|300|20px|-0.06px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 60134.03125,
+        "chars": 378
+      },
+      "text|18px|400|28.8px|-0.165px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 20,
+        "area": 4882.5,
+        "chars": 20
+      },
+      "text|13px|400|20px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 4,
+        "area": 8883.125,
+        "chars": 74
+      },
+      "text|10px|400|16px|-0.15px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 7,
+        "area": 2822.0625,
+        "chars": 48
+      },
+      "text|14px|510|32px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 4134.5,
+        "chars": 19
+      },
+      "text|13px|500|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 5,
+        "area": 18936.875,
+        "chars": 36
+      },
+      "text|11px|400|14px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 1694.8125,
+        "chars": 12
+      },
+      "text|13px|400|20px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 8,
+        "area": 162434.90625,
+        "chars": 620
+      },
+      "text|13px|400|19.5px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 6,
+        "area": 9360,
+        "chars": 48
+      },
+      "text|13px|500|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 6,
+        "area": 21760,
+        "chars": 188
+      },
+      "text|13px|400|20px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 13124,
+        "chars": 18
+      },
+      "text|13px|400|16px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 1608,
+        "chars": 15
+      },
+      "text|13px|400|16px|-0.039px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 3065.5,
+        "chars": 27
+      },
+      "text|13px|400|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 12,
+        "area": 17233.125,
+        "chars": 101
+      },
+      "text|14px|400|21px|normal|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
+        "count": 1,
+        "area": 5779.25,
+        "chars": 43
+      },
+      "text|14px|400|24px|normal|\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace": {
+        "count": 172,
+        "area": 452811.75,
+        "chars": 1252
+      },
+      "text|13px|510|32px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 1237.5,
+        "chars": 6
+      },
+      "text|32px|400|36px|-0.704px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 99090,
+        "chars": 164
+      },
+      "text|14px|510|21px|-0.182px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 8069.25,
+        "chars": 22
+      },
+      "h2|72px|510|72px|-1.584px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 104004,
+        "chars": 38
+      },
+      "button|16px|510|44px|normal|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 11904.75,
+        "chars": 24
+      },
+      "h3|13px|510|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 5,
+        "area": 15600,
+        "chars": 38
+      },
+      "link|13px|400|19.5px|-0.13px|\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif": {
+        "count": 36,
+        "area": 48048.4375,
+        "chars": 260
       }
     },
     "radii": {

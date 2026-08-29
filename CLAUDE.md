@@ -58,8 +58,9 @@ npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
   WxH` the crawl size. `node src/cli.mjs --help` for the rest.
 - **No test runner is configured.** Verification to date is running `extract`
   against real sites and reading the summary against the live design.
-- **`out/` is gitignored**, and this is not yet a git repo (`git init` is
-  pending) even though the plan treats git as the source of truth.
+- **`out/` is gitignored.** Captures only enter the repo when copied into
+  `content/systems/<slug>/`. `main` pushes to `MrPiThon/usespecimen`, and CI runs
+  the build plus a raw-file identity check on every push and PR.
 - To iterate on clustering without launching Playwright, paste the body of
   `harvestFn` into a browser console on any target page. `cluster` takes that
   bare dump as well as a full `capture.json`.
@@ -133,13 +134,22 @@ Weight semantics, which the clusterer depends on:
 Four gotchas that will silently skew a clusterer:
 
 1. `bump()` drops keys that are empty, `'none'`, or `'normal'` — so
-   `lineHeight: normal` and `letterSpacing: normal` never appear at all.
+   `lineHeight: normal` and `letterSpacing: normal` never appear in the
+   per-property maps. They survive in `typeStyles`, where `normal` sits inside a
+   joined key rather than being the key.
 2. `spacings` is **count-only**; its `area` and `chars` are always 0, because the
    call site passes `{count: 1}` as the weights object.
 3. Above 6000 elements the walk strides. Counts are a **sample, not a census** —
    compare weights against each other, never against `elementCount`.
 4. `radii` is gated on `borderRadius !== '0px'` but keyed on
    `borderTopLeftRadius`, so asymmetric radii record only one corner.
+
+`typeStyles` (harvest v2) is the exception to the one-property-per-map rule: it
+keys on `kind|size|weight|lineHeight|tracking|family` so type properties that
+**co-occur** stay together. The other histograms cannot be recombined — knowing a
+page uses 16px and weight 600 says nothing about whether 16px is ever bold — so
+any typography role built from them is a combination that may never have existed.
+Family is last in the key because a font stack can contain `|`.
 
 ### `src/extract/color.mjs` — the math
 
@@ -184,7 +194,12 @@ is what makes the palette recognisable:
   to interactive then body text; the emitted `source` says which.
 - **border** — top border cluster by count, not area.
 
-Alongside the roles, `colors.ramps` carries ordered ladders: `text` by contrast
+`typography.roles` is built from those bundles. `body` is the style that sets the
+most prose — filtered above 20 chars/element to drop nav and label chrome, then
+ranked by total characters to drop display type. Neither measure works alone, and
+ranking by total characters (the old behaviour) gave Linear its 13px chrome size.
+
+Alongside the colour roles, `colors.ramps` carries ordered ladders: `text` by contrast
 descending, `surface` by lightness distance from the canvas. They answer a
 different question from the roles — "what are the tiers" rather than "what is the
 body colour" — so `card` (the most-used surface, area-ranked) and `surface-1`
