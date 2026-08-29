@@ -586,6 +586,25 @@ that — `NOISE_SVG` is our own `feTurbulence` tile, used only when a file repor
 `noise` with no usable value. The measured values in play are the tile size and
 the blend mode; the texture is ours.
 
+**Chromatic gradient stops become colour tokens.** Stripe's `#7f7dfc` and
+`#f44bcc` are the most recognisable thing about its homepage and appeared in no
+token; Shopify's `#1260ff` exists only as a 35% wash and never as a solid. They
+are emitted as `gradient-1..n` in the `colors` group, using the **declared**
+stop rather than the composited result — the same rule semantic colours already
+follow for a tinted panel.
+
+Gated on `CHROMATIC` (0.03), reusing the existing constant rather than adding
+one: measured stops run 0.063 (Slack's palest lilac) to 0.246, while the noise
+runs 0.000 (white), 0.014 and 0.027, so the cut lands in the gap. Fully
+transparent stops are dropped, and any stop already emitted as a role, ramp or
+semantic colour is skipped — the full gradient is in `backgrounds.wash`, so the
+token list only has to carry what is new. Without the chroma gate Linear got
+`gradient-1: #ffffff`, which is a fade-end in a dark-only system and an
+invitation to fill something with it.
+
+The contrast audit does not pair them: they are decorative, and
+`gradient-1/background` is not a text pair.
+
 Three of thirteen systems are **undecorated** — GOV.UK, Nike, Basecamp. That is
 a finding, not a failure, and the files say so in words so an agent does not
 reach for a gradient.

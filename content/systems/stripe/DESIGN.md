@@ -22,6 +22,8 @@ colors:
   text-2: '#50617a'
   text-3: '#64748d'
   success: '#00d66f'
+  gradient-1: '#7f7dfc'
+  gradient-2: '#f44bcc'
 typography:
   fontFamily: 'sohne-var, "SF Pro Display", sans-serif'
   headingFamily: 'sohne-var, "SF Pro Display", sans-serif'
@@ -183,6 +185,9 @@ provenance:
 
 
 
+
+
+
 ## Overview
 
 A restraint-first aesthetic for financial and developer products. Almost the
@@ -208,6 +213,12 @@ information on its own.
 Three surface steps sit above white — `#f8fafd`, `#e5edf5`, `#d4dee9` — and
 three text tiers below it at 17.37:1, 6.3:1 and 4.75:1. The palette is wide but
 every step is shallow, which is why the page reads as calm rather than layered.
+
+**Two of these colours are gradient stops, not surfaces.** `#7f7dfc` and
+`#f44bcc` are the indigo and magenta of the hero sweep — they appear as
+`gradient-1` and `gradient-2` because they are genuinely part of this palette,
+and a file that omitted them left out the most recognisable thing on the page.
+Neither is ever painted as a solid: use them in a gradient, not as a fill.
 
 ## Typography
 
@@ -286,6 +297,9 @@ hard at the end, which is what gives the page its settled feel.
 
 **What this file does not constrain:** section order, page composition, imagery,
 or copy. It gives you an ink, a grid, a measure and a tempo — not a page.
+
+
+
 
 
 

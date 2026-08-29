@@ -741,12 +741,14 @@
         {
           "raw": "oklab(0.129999 -0.00404751 -0.027702 / 0.05)",
           "hex": "#030712",
-          "alpha": 0.05
+          "alpha": 0.05,
+          "chroma": 0.028
         },
         {
           "raw": "rgba(0, 0, 0, 0)",
           "hex": "#000000",
-          "alpha": 0
+          "alpha": 0,
+          "chroma": 0
         }
       ],
       "areaShare": 0.724
@@ -758,17 +760,20 @@
         {
           "raw": "rgba(0, 0, 0, 0)",
           "hex": "#000000",
-          "alpha": 0
+          "alpha": 0,
+          "chroma": 0
         },
         {
           "raw": "rgba(0, 0, 0, 0)",
           "hex": "#000000",
-          "alpha": 0
+          "alpha": 0,
+          "chroma": 0
         },
         {
           "raw": "lab(1.90334 0.278696 -5.48866)",
           "hex": "#030712",
-          "alpha": 1
+          "alpha": 1,
+          "chroma": 0.028
         }
       ],
       "areaShare": 0.046
@@ -1625,12 +1630,14 @@
           {
             "raw": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
             "hex": "#ffffff",
-            "alpha": 0.1
+            "alpha": 0.1,
+            "chroma": 0
           },
           {
             "raw": "rgba(0, 0, 0, 0)",
             "hex": "#000000",
-            "alpha": 0
+            "alpha": 0,
+            "chroma": 0
           }
         ],
         "areaShare": 0.724
@@ -1642,17 +1649,20 @@
           {
             "raw": "rgba(0, 0, 0, 0)",
             "hex": "#000000",
-            "alpha": 0
+            "alpha": 0,
+            "chroma": 0
           },
           {
             "raw": "rgba(0, 0, 0, 0)",
             "hex": "#000000",
-            "alpha": 0
+            "alpha": 0,
+            "chroma": 0
           },
           {
             "raw": "lab(1.90334 0.278696 -5.48866)",
             "hex": "#030712",
-            "alpha": 1
+            "alpha": 1,
+            "chroma": 0.028
           }
         ],
         "areaShare": 0.046

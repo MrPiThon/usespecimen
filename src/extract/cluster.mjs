@@ -1409,7 +1409,17 @@ export function backgroundTokens(capture) {
       const rgb = parseColor(raw);
       // parseColor returns null for keywords like `transparent`, which are real
       // stops but carry no colour worth publishing.
-      if (rgb) stops.push({ raw, hex: toHex(rgb), alpha: round(rgb.a ?? 1, 3) });
+      // Chroma travels with the stop so a consumer can tell a brand colour from
+      // a fade-end without re-deriving it. Measured across the corpus, real
+      // gradient colours run 0.063 (Slack's palest lilac) to 0.246, while the
+      // noise runs 0.000 (white), 0.014 and 0.027 — CHROMATIC at 0.03 sits in
+      // the gap, so the existing constant does the job without a new one.
+      if (rgb) {
+        stops.push({
+          raw, hex: toHex(rgb), alpha: round(rgb.a ?? 1, 3),
+          chroma: round(toOklch(rgb).C, 4),
+        });
+      }
     }
     return {
       kind,

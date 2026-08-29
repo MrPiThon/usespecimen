@@ -733,17 +733,20 @@
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "alpha": 1
+          "alpha": 1,
+          "chroma": 0
         },
         {
           "raw": "rgb(239, 213, 255)",
           "hex": "#efd5ff",
-          "alpha": 1
+          "alpha": 1,
+          "chroma": 0.0628
         },
         {
           "raw": "rgb(229, 185, 254)",
           "hex": "#e5b9fe",
-          "alpha": 1
+          "alpha": 1,
+          "chroma": 0.1047
         }
       ],
       "areaShare": 0.196

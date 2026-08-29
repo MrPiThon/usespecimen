@@ -701,12 +701,14 @@
         {
           "raw": "rgba(0, 0, 0, 0)",
           "hex": "#000000",
-          "alpha": 0
+          "alpha": 0,
+          "chroma": 0
         },
         {
           "raw": "rgba(0, 0, 0, 0.55)",
           "hex": "#000000",
-          "alpha": 0.55
+          "alpha": 0.55,
+          "chroma": 0
         }
       ],
       "areaShare": 1

@@ -196,6 +196,9 @@ provenance:
 
 
 
+
+
+
 ## Overview
 
 A dark, information-dense aesthetic for tools people keep open all day. The
@@ -312,6 +315,9 @@ everything that animates. Nothing here lingers.
 **What this file does not constrain:** how many sections a page has, what they
 contain, their order, or the copy. It describes a language — dark, dense, fast,
 contained, card-built. Write your own pages in it.
+
+
+
 
 
 

@@ -150,6 +150,8 @@ provenance:
 
 
 
+
+
 ## Overview
 
 Monochrome and loud. Pure `#111111` on white, an enormous Futura display step,
@@ -260,6 +262,8 @@ duration, one curve, applied almost everywhere.
 sections a page has, the content of the imagery, or the copy itself. Those are
 yours. The measurements above describe a language — an ink, a display gap, a
 measure, a rhythm of image over text — not a page. Build your own pages in it.
+
+
 
 
 

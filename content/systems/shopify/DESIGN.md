@@ -22,6 +22,7 @@ colors:
   text-2: '#bdbdca'
   text-3: '#99b3ad'
   text-4: '#a1a1aa'
+  gradient-1: '#1260ff'
 typography:
   fontFamily: 'Shopify-Inter, Helvetica, Arial, sans-serif'
   headingFamily: 'Shopify-Inter, Helvetica, Arial, sans-serif'
@@ -193,6 +194,9 @@ provenance:
 
 
 
+
+
+
 ## Overview
 
 Commerce on a pure black canvas, with exactly one chromatic colour in the whole
@@ -219,6 +223,12 @@ green cast, which is the mint bleeding into the surfaces.
 
 Borders are `#e4e4e7` at 16.55:1. A near-white border on black is unusual and
 very deliberate: here a border is a real boundary, not a suggestion.
+
+**`gradient-1` is `#1260ff`, and it is never a solid colour.** The blue exists
+only as a radial wash at 35% alpha behind content — there is no blue surface,
+no blue button, no blue text anywhere on the page. The declared stop is the
+token, in the same way a tinted semantic panel declares its colour; painting a
+button with it would produce something this system does not contain.
 
 ## Typography
 
@@ -290,6 +300,9 @@ radius — note the asymmetry, which leaves room for a trailing icon. Links take
 
 **What this file does not constrain:** the merchandising, the section order, or
 how many sections a page runs. Those are yours.
+
+
+
 
 
 

@@ -475,12 +475,14 @@
         {
           "raw": "rgb(250, 250, 250)",
           "hex": "#fafafa",
-          "alpha": 1
+          "alpha": 1,
+          "chroma": 0
         },
         {
           "raw": "rgba(0, 0, 0, 0)",
           "hex": "#000000",
-          "alpha": 0
+          "alpha": 0,
+          "chroma": 0
         }
       ],
       "areaShare": 0.491
@@ -1095,12 +1097,14 @@
           {
             "raw": "rgb(0, 0, 0)",
             "hex": "#000000",
-            "alpha": 1
+            "alpha": 1,
+            "chroma": 0
           },
           {
             "raw": "rgba(0, 0, 0, 0)",
             "hex": "#000000",
-            "alpha": 0
+            "alpha": 0,
+            "chroma": 0
           }
         ],
         "areaShare": 0.491

@@ -170,6 +170,8 @@ provenance:
 
 
 
+
+
 ## Overview
 
 A productivity interface built on a serif. Body copy is set in Lyon Text at
@@ -260,6 +262,8 @@ The curve accelerates into the end rather than easing out of it.
 
 **What this file does not constrain:** what the sections contain or how many
 there are. Take the centred display voice and the measure; build your own page.
+
+
 
 
 

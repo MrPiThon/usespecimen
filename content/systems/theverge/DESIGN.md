@@ -196,6 +196,8 @@ provenance:
 
 
 
+
+
 ## Overview
 
 Newsroom energy: near-black on white, a serif for reading, and an electric
@@ -281,6 +283,8 @@ page; do not build a system of transitions on one measurement.
 
 **What this file does not constrain:** page structure, which could not be read
 here, and motion, which was measured on a single element.
+
+
 
 
 

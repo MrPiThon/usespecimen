@@ -9,6 +9,7 @@
 // A scaffold is therefore structurally conformant and entirely true the moment
 // it is written. It is just not yet good.
 
+import { CHROMATIC } from './cluster.mjs';
 import { SECTIONS } from '../lib/design-md.mjs';
 
 const quote = v => `'${String(v).replace(/'/g, "''")}'`;
@@ -58,6 +59,33 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     colors[step.name] = step.hex;
   }
   for (const [role, v] of Object.entries(cap.colors.semantic)) colors[role] = v.hex;
+
+  // Gradient stops are colours this design uses, and they were missing.
+  // Stripe's #7f7dfc -> #f44bcc hero sweep is the single most recognisable
+  // thing about its homepage and appeared in no token; Shopify's #1260ff
+  // exists only as a 35% wash and never as a solid surface.
+  //
+  // The DECLARED stop is the token, not the composited result, matching how
+  // semantic colours already treat a 7% tinted panel. Fully transparent stops
+  // are dropped — a fade to nothing is not a colour — and any stop already
+  // emitted above is skipped, so a gradient that ends on the card surface does
+  // not restate it. The full gradient stays in `backgrounds.wash`, so nothing
+  // is lost by keeping this list to what is new.
+  const seen = new Set(Object.values(colors));
+  const stops = [
+    ...(cap.backgrounds?.wash?.stops ?? []),
+    ...(cap.backgrounds?.pattern?.stops ?? []),
+  ];
+  let g = 0;
+  for (const stop of stops) {
+    // Chromatic only. A fade to white or to the canvas is a transition, not a
+    // colour worth a token, and #ffffff sitting in a dark system's palette
+    // invites somebody to fill something with it.
+    if (!stop.alpha || stop.chroma < CHROMATIC || seen.has(stop.hex) || g >= 6) continue;
+    seen.add(stop.hex);
+    g += 1;
+    colors[`gradient-${g}`] = stop.hex;
+  }
   if (dark) {
     for (const [k, v] of Object.entries(dark.colors.roles)) {
       if (v) colors[`dark-${k}`] = v.hex;
@@ -242,6 +270,10 @@ function factsFor(section, cap, dark) {
           .map(k => bullet(k, hex(k))),
         c.ramps.text.length ? bullet('Text ramp', c.ramps.text.map(x => `${x.hex} (${x.contrast}:1)`).join(', ')) : null,
         c.ramps.surface.length ? bullet('Surface ramp', c.ramps.surface.map(x => x.hex).join(', ')) : null,
+        cap.backgrounds?.wash?.stops?.length
+          ? bullet('Gradient stops', cap.backgrounds.wash.stops
+            .map(x => `${x.hex}${x.alpha < 1 ? ` at ${Math.round(x.alpha * 100)}%` : ''}`).join(' to '))
+          : null,
         Object.entries(c.semantic).map(([k, v]) => bullet(k, v.hex)),
         dark ? bullet('Dark', ['background', 'foreground', 'primary']
           .map(k => dark.colors.roles[k]?.hex).filter(Boolean).join(', ')) : null,

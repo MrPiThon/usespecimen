@@ -158,6 +158,8 @@ provenance:
 
 
 
+
+
 ## Overview
 
 Product-page minimalism: a white canvas, one blue, and controls pilled hard
@@ -256,6 +258,8 @@ animates. A single curve governs essentially the whole page.
 
 **What this file does not constrain:** page composition, section order, or
 content. It gives you a narrow measure against wide imagery, and one timing.
+
+
 
 
 

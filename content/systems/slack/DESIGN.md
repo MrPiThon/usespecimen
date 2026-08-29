@@ -17,6 +17,8 @@ colors:
   text-1: '#000000'
   text-2: '#1d1d1d'
   text-3: '#696969'
+  gradient-1: '#efd5ff'
+  gradient-2: '#e5b9fe'
 typography:
   fontFamily: 'Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
   headingFamily: 'Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
@@ -191,6 +193,9 @@ provenance:
 
 
 
+
+
+
 ## Overview
 
 A deep aubergine on white — a purple dark enough that it reads as ink until you
@@ -213,6 +218,10 @@ what lets it be used for text as well as for fills.
 Surfaces are `#f9f0ff`, a lilac so pale it is almost white — the aubergine
 diluted rather than a neutral grey. Borders are `#f5f5f5` at 1.09:1, separation
 only.
+
+**`gradient-1` and `gradient-2` — `#efd5ff` and `#e5b9fe` — are the lilac fade**,
+the aubergine at very low volume used as a ground. They are stops in a
+three-colour gradient that begins at white, not standalone surface colours.
 
 ## Typography
 
@@ -282,6 +291,9 @@ transition measured in this registry, and it is deliberate.
 
 **What this file does not constrain:** page structure, section order, or
 content. It gives you a colour discipline, a type pairing and a tempo.
+
+
+
 
 
 
