@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:16:40.277Z",
+  "capturedAt": "2026-08-29T00:28:57.225Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -9,13 +9,13 @@
       "w": 1440,
       "h": 900
     },
-    "docHeight": 14668,
-    "elementCount": 8688,
-    "sampled": 5764,
-    "sampleRatio": 0.663
+    "docHeight": 15106,
+    "elementCount": 8946,
+    "sampled": 5867,
+    "sampleRatio": 0.656
   },
-  "harvestVersion": 3,
-  "clusterVersion": 10,
+  "harvestVersion": 4,
+  "clusterVersion": 11,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -32,12 +32,12 @@
       },
       "foreground": {
         "hex": "#061b31",
-        "weightShare": 0.2266,
+        "weightShare": 0.2248,
         "variants": []
       },
       "card": {
         "hex": "#e5edf5",
-        "weightShare": 0.1461,
+        "weightShare": 0.1426,
         "variants": [
           "#e3ecf7",
           "#eaeff7",
@@ -46,24 +46,24 @@
       },
       "mutedForeground": {
         "hex": "#50617a",
-        "weightShare": 0.2987,
+        "weightShare": 0.2975,
         "variants": []
       },
       "primary": {
         "hex": "#533afd",
-        "weightShare": 0.6809,
+        "weightShare": 0.6761,
         "variants": [],
         "source": "interactiveBg",
         "occurrences": 19
       },
       "primaryForeground": {
         "hex": "#ffffff",
-        "weightShare": 0.0832,
+        "weightShare": 0.0821,
         "variants": []
       },
       "border": {
         "hex": "#e5edf5",
-        "weightShare": 0.5981,
+        "weightShare": 0.6019,
         "variants": []
       }
     },
@@ -73,13 +73,19 @@
           "name": "surface-1",
           "hex": "#f8fafd",
           "deltaL": 0.016,
-          "areaShare": 0.1337
+          "areaShare": 0.1304
         },
         {
           "name": "surface-2",
           "hex": "#e5edf5",
           "deltaL": 0.058,
-          "areaShare": 0.1461
+          "areaShare": 0.1426
+        },
+        {
+          "name": "surface-3",
+          "hex": "#d4dee9",
+          "deltaL": 0.104,
+          "areaShare": 0.0031
         }
       ],
       "text": [
@@ -87,19 +93,19 @@
           "name": "text-1",
           "hex": "#061b31",
           "contrast": 17.37,
-          "charShare": 0.2266
+          "charShare": 0.2248
         },
         {
           "name": "text-2",
           "hex": "#50617a",
           "contrast": 6.3,
-          "charShare": 0.2987
+          "charShare": 0.2975
         },
         {
           "name": "text-3",
           "hex": "#64748d",
           "contrast": 4.75,
-          "charShare": 0.218
+          "charShare": 0.2224
         }
       ]
     },
@@ -110,7 +116,7 @@
         "hue": "neutral",
         "lightness": 1,
         "chroma": 0,
-        "count": 88
+        "count": 94
       },
       {
         "hex": "#e5edf5",
@@ -118,7 +124,7 @@
         "hue": "neutral",
         "lightness": 0.942,
         "chroma": 0.014,
-        "count": 75
+        "count": 77
       },
       {
         "hex": "#f8fafd",
@@ -143,6 +149,14 @@
         "lightness": 0.521,
         "chroma": 0.268,
         "count": 19
+      },
+      {
+        "hex": "#d4dee9",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.896,
+        "chroma": 0.019,
+        "count": 2
       },
       {
         "hex": "#ffe0d1",
@@ -174,7 +188,7 @@
         "hue": "blue",
         "lightness": 0.488,
         "chroma": 0.045,
-        "count": 476
+        "count": 478
       },
       {
         "hex": "#e2e4ff",
@@ -190,7 +204,7 @@
         "hue": "blue",
         "lightness": 0.219,
         "chroma": 0.051,
-        "count": 348
+        "count": 351
       },
       {
         "hex": "#64748d",
@@ -198,7 +212,7 @@
         "hue": "blue",
         "lightness": 0.555,
         "chroma": 0.044,
-        "count": 109
+        "count": 125
       },
       {
         "hex": "#7f7dfc",
@@ -254,7 +268,7 @@
         "hue": "blue",
         "lightness": 0.29,
         "chroma": 0.05,
-        "count": 33
+        "count": 35
       },
       {
         "hex": "#8087ff",
@@ -287,14 +301,6 @@
         "lightness": 0.631,
         "chroma": 0.145,
         "count": 3
-      },
-      {
-        "hex": "#ff6118",
-        "role": null,
-        "hue": "orange",
-        "lightness": 0.69,
-        "chroma": 0.206,
-        "count": 24
       }
     ],
     "semantic": {
@@ -306,7 +312,7 @@
     },
     "accentRejected": [],
     "clusterCounts": {
-      "bg": 13,
+      "bg": 14,
       "text": 17,
       "border": 9,
       "interactive": 4
@@ -337,6 +343,11 @@
         "family": "sohne-var",
         "class": "sans",
         "stack": "sohne-var, \"SF Pro Display\", sans-serif"
+      },
+      {
+        "family": "sohne-var",
+        "class": "sans",
+        "stack": "sohne-var, sans-serif"
       }
     ],
     "scale": [
@@ -344,84 +355,84 @@
         "name": "3xs",
         "px": 9,
         "rem": 0.563,
-        "weightShare": 0.0347,
+        "weightShare": 0.0341,
         "variants": []
       },
       {
         "name": "2xs",
         "px": 10,
         "rem": 0.625,
-        "weightShare": 0.0681,
+        "weightShare": 0.0669,
         "variants": []
       },
       {
         "name": "xs",
         "px": 11,
         "rem": 0.688,
-        "weightShare": 0.0143,
+        "weightShare": 0.014,
         "variants": []
       },
       {
         "name": "sm",
         "px": 12,
         "rem": 0.75,
-        "weightShare": 0.0208,
+        "weightShare": 0.0296,
         "variants": []
       },
       {
         "name": "base",
         "px": 16,
         "rem": 1,
-        "weightShare": 0.4027,
+        "weightShare": 0.4019,
         "variants": []
       },
       {
         "name": "lg",
         "px": 18,
         "rem": 1.125,
-        "weightShare": 0.0918,
+        "weightShare": 0.0902,
         "variants": []
       },
       {
         "name": "xl",
         "px": 20,
         "rem": 1.25,
-        "weightShare": 0.1341,
+        "weightShare": 0.1317,
         "variants": []
       },
       {
         "name": "2xl",
         "px": 22,
         "rem": 1.375,
-        "weightShare": 0.0899,
+        "weightShare": 0.0883,
         "variants": []
       },
       {
         "name": "3xl",
         "px": 26,
         "rem": 1.625,
-        "weightShare": 0.0544,
+        "weightShare": 0.0554,
         "variants": []
       },
       {
         "name": "4xl",
         "px": 28,
         "rem": 1.75,
-        "weightShare": 0.0171,
+        "weightShare": 0.0168,
         "variants": []
       },
       {
         "name": "5xl",
         "px": 32,
         "rem": 2,
-        "weightShare": 0.0148,
+        "weightShare": 0.0145,
         "variants": []
       },
       {
         "name": "6xl",
         "px": 48,
         "rem": 3,
-        "weightShare": 0.0133,
+        "weightShare": 0.0131,
         "variants": []
       }
     ],
@@ -562,15 +573,15 @@
       }
     },
     "rolesAvailable": true,
-    "distinctStyles": 89
+    "distinctStyles": 95
   },
   "spacing": {
     "base": 4,
-    "gridConfidence": 0.786,
+    "gridConfidence": 0.79,
     "gridCandidates": [
       {
         "base": 8,
-        "share": 0.664
+        "share": 0.653
       },
       {
         "base": 6,
@@ -578,11 +589,11 @@
       },
       {
         "base": 5,
-        "share": 0.1
+        "share": 0.096
       },
       {
         "base": 4,
-        "share": 0.786
+        "share": 0.79
       }
     ],
     "scale": [
@@ -597,7 +608,7 @@
       40,
       64
     ],
-    "distinctValues": 32
+    "distinctValues": 33
   },
   "rounded": {
     "scale": [
@@ -609,7 +620,7 @@
       {
         "name": "md",
         "px": 4,
-        "count": 151
+        "count": 152
       },
       {
         "name": "lg",
@@ -619,7 +630,7 @@
       {
         "name": "xl",
         "px": 6,
-        "count": 130
+        "count": 134
       }
     ],
     "button": "4px",
@@ -648,12 +659,32 @@
     ],
     "flat": false
   },
+  "components": {
+    "link": {
+      "padding": "14.5px 24px 15.5px 24px",
+      "borderWidth": "1px",
+      "radius": "4px",
+      "gap": "8px",
+      "elements": 11,
+      "variants": 9,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "0px 16px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 4,
+      "variants": 8,
+      "dominantUnstyled": true
+    }
+  },
   "states": {
     "available": false,
     "sheets": {
-      "total": 7,
+      "total": 8,
       "readable": 0,
-      "blocked": 7,
+      "blocked": 8,
       "stateRules": 0
     },
     "roles": {},
@@ -728,25 +759,25 @@
   },
   "warnings": [
     "19 distinct type sizes collapsed to 12; the site may not have a real type scale.",
-    "Interaction states unavailable: all 7 stylesheets are cross-origin, so hover, focus and active could not be read at all.",
-    "Strided sample: 5764 of 8688 elements. Weights are relative only."
+    "Interaction states unavailable: all 8 stylesheets are cross-origin, so hover, focus and active could not be read at all.",
+    "Strided sample: 5867 of 8946 elements. Weights are relative only."
   ],
   "supportsDark": false,
   "dark": null,
   "harvest": {
-    "harvestVersion": 3,
+    "harvestVersion": 4,
     "url": "https://stripe.com/",
     "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
     "viewport": {
       "w": 1440,
       "h": 900
     },
-    "docHeight": 14668,
+    "docHeight": 15106,
     "textColors": {
       "rgb(6, 27, 49)": {
-        "count": 348,
-        "area": 2377787.5711987168,
-        "chars": 7665
+        "count": 351,
+        "area": 2406053.7274487168,
+        "chars": 7741
       },
       "rgb(255, 255, 255)": {
         "count": 85,
@@ -754,9 +785,9 @@
         "chars": 1779
       },
       "rgb(100, 116, 141)": {
-        "count": 109,
-        "area": 2405379.832041951,
-        "chars": 7374
+        "count": 125,
+        "area": 2432458.582041951,
+        "chars": 7660
       },
       "rgb(129, 184, 26)": {
         "count": 2,
@@ -789,9 +820,9 @@
         "chars": 324
       },
       "rgb(80, 97, 122)": {
-        "count": 476,
-        "area": 1845455.610025215,
-        "chars": 10104
+        "count": 478,
+        "area": 1866831.360025215,
+        "chars": 10246
       },
       "rgb(255, 97, 24)": {
         "count": 24,
@@ -802,6 +833,16 @@
         "count": 48,
         "area": 40332.02619604021,
         "chars": 507
+      },
+      "rgb(0, 0, 0)": {
+        "count": 49,
+        "area": 38579.37919482868,
+        "chars": 658
+      },
+      "rgb(17, 39, 62)": {
+        "count": 2,
+        "area": 1882.125,
+        "chars": 30
       },
       "rgb(125, 139, 164)": {
         "count": 7,
@@ -823,15 +864,10 @@
         "area": 20548.828125,
         "chars": 117
       },
-      "rgb(0, 0, 0)": {
-        "count": 47,
-        "area": 38577.37919482868,
-        "chars": 582
-      },
       "rgb(10, 37, 64)": {
         "count": 3,
-        "area": 8055.78662109375,
-        "chars": 66
+        "area": 7770.146484375,
+        "chars": 63
       },
       "rgb(66, 84, 102)": {
         "count": 3,
@@ -851,8 +887,8 @@
         "chars": 313
       },
       "rgb(255, 255, 255)": {
-        "count": 79,
-        "area": 34847927.30716564,
+        "count": 85,
+        "area": 36144107.30716564,
         "chars": 60
       },
       "rgba(255, 255, 255, 0.65)": {
@@ -861,8 +897,8 @@
         "chars": 57
       },
       "rgb(229, 237, 245)": {
-        "count": 60,
-        "area": 8687515.127615307,
+        "count": 62,
+        "area": 8689563.127615307,
         "chars": 0
       },
       "rgb(255, 224, 209)": {
@@ -894,6 +930,11 @@
         "count": 29,
         "area": 7302360.025556713,
         "chars": 226
+      },
+      "rgb(212, 222, 233)": {
+        "count": 2,
+        "area": 192570,
+        "chars": 0
       },
       "rgba(255, 255, 255, 0)": {
         "count": 31,
@@ -958,8 +999,8 @@
         "chars": 0
       },
       "rgb(229, 237, 245)": {
-        "count": 125,
-        "area": 30212295.46511353,
+        "count": 127,
+        "area": 31042067.46511353,
         "chars": 0
       },
       "rgb(185, 185, 249)": {
@@ -1010,16 +1051,21 @@
     },
     "fontFamilies": {
       "sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 1376,
-        "area": 9585614.755250756,
-        "chars": 33831
+        "count": 1387,
+        "area": 9607797.990114037,
+        "chars": 34082
+      },
+      "sohne-var, sans-serif": {
+        "count": 14,
+        "area": 56135.90625,
+        "chars": 356
       }
     },
     "fontSizes": {
       "14px": {
-        "count": 44,
-        "area": 65489.58158144355,
-        "chars": 410
+        "count": 45,
+        "area": 68482.0664447248,
+        "chars": 415
       },
       "48px": {
         "count": 13,
@@ -1027,9 +1073,9 @@
         "chars": 451
       },
       "16px": {
-        "count": 596,
-        "area": 3075060.8588867188,
-        "chars": 13623
+        "count": 600,
+        "area": 3096438.6088867188,
+        "chars": 13841
       },
       "32px": {
         "count": 11,
@@ -1037,9 +1083,9 @@
         "chars": 501
       },
       "26px": {
-        "count": 32,
-        "area": 815190.5075268559,
-        "chars": 1839
+        "count": 34,
+        "area": 840178.5387768559,
+        "chars": 1907
       },
       "10px": {
         "count": 279,
@@ -1057,9 +1103,9 @@
         "chars": 246
       },
       "12px": {
-        "count": 73,
-        "area": 106505.92904698104,
-        "chars": 705
+        "count": 91,
+        "area": 135466.80404698104,
+        "chars": 1021
       },
       "11px": {
         "count": 53,
@@ -1114,21 +1160,21 @@
     },
     "fontWeights": {
       "300": {
-        "count": 937,
-        "area": 8203322.836050873,
-        "chars": 28304
+        "count": 955,
+        "area": 8275736.461050873,
+        "chars": 28790
       },
       "400": {
-        "count": 439,
-        "area": 1382291.919199883,
-        "chars": 5527
+        "count": 446,
+        "area": 1388197.4353131643,
+        "chars": 5648
       }
     },
     "lineHeights": {
       "14px": {
-        "count": 99,
-        "area": 64952.57594438642,
-        "chars": 650
+        "count": 100,
+        "area": 68230.70094438642,
+        "chars": 658
       },
       "55.2px": {
         "count": 4,
@@ -1176,9 +1222,9 @@
         "chars": 213
       },
       "12px": {
-        "count": 24,
-        "area": 43010.60062285885,
-        "chars": 360
+        "count": 34,
+        "area": 52782.72562285885,
+        "chars": 506
       },
       "8.56px": {
         "count": 12,
@@ -1204,6 +1250,16 @@
         "count": 261,
         "area": 522374.2012103498,
         "chars": 3384
+      },
+      "29px": {
+        "count": 2,
+        "area": 24988.03125,
+        "chars": 68
+      },
+      "22px": {
+        "count": 2,
+        "area": 21375.75,
+        "chars": 142
       },
       "49.44px": {
         "count": 5,
@@ -1252,8 +1308,8 @@
       },
       "19.6px": {
         "count": 3,
-        "area": 8055.78662109375,
-        "chars": 66
+        "area": 7770.146484375,
+        "chars": 63
       },
       "21px": {
         "count": 3,
@@ -1425,9 +1481,9 @@
         "chars": 36
       },
       "link|14px|400|14px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 2,
-        "area": 7177.65625,
-        "chars": 20
+        "count": 3,
+        "area": 10455.78125,
+        "chars": 28
       },
       "text|14px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
@@ -1530,9 +1586,9 @@
         "chars": 42
       },
       "text|12px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 14,
-        "area": 40398.0132220611,
-        "chars": 238
+        "count": 16,
+        "area": 41426.9194720611,
+        "chars": 248
       },
       "text|9px|400|10.8px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 12,
@@ -1593,6 +1649,41 @@
         "count": 3,
         "area": 11250.306069895625,
         "chars": 39
+      },
+      "h2|26px|300|29px|normal|sohne-var, sans-serif": {
+        "count": 2,
+        "area": 24988.03125,
+        "chars": 68
+      },
+      "text|16px|300|22px|normal|sohne-var, sans-serif": {
+        "count": 2,
+        "area": 21375.75,
+        "chars": 142
+      },
+      "text|16px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 28,
+        "area": 71735.75,
+        "chars": 663
+      },
+      "text|12px|400|12px|normal|sohne-var, sans-serif": {
+        "count": 2,
+        "area": 1882.125,
+        "chars": 30
+      },
+      "text|12px|300|12px|normal|sohne-var, sans-serif": {
+        "count": 8,
+        "area": 7890,
+        "chars": 116
+      },
+      "text|12px|300|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 2,
+        "area": 13774.6875,
+        "chars": 104
+      },
+      "link|12px|300|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
+        "count": 4,
+        "area": 4385.15625,
+        "chars": 56
       },
       "text|48px|300|49.44px|-0.96px|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 1,
@@ -1659,11 +1750,6 @@
         "area": 247819.4375,
         "chars": 1082
       },
-      "text|16px|400|normal|normal|sohne-var, \"SF Pro Display\", sans-serif": {
-        "count": 26,
-        "area": 71733.75,
-        "chars": 587
-      },
       "text|18px|400|25.2px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 4,
         "area": 42029.6728515625,
@@ -1716,8 +1802,8 @@
       },
       "text|14px|400|19.6px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 3,
-        "area": 8055.78662109375,
-        "chars": 66
+        "area": 7770.146484375,
+        "chars": 63
       },
       "text|14px|300|21px|normal|sohne-var, \"SF Pro Display\", sans-serif": {
         "count": 3,
@@ -1866,22 +1952,109 @@
       }
     },
     "states": {},
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 135,
+        "area": 551421.3208618164,
+        "chars": 1350
+      },
+      "button|12px 0px|0px|4px|4px": {
+        "count": 4,
+        "area": 13284.375,
+        "chars": 36
+      },
+      "link|12px 0px|0px|4px|4px": {
+        "count": 2,
+        "area": 4961.40625,
+        "chars": 15
+      },
+      "link|10.5px 20px 13.5px 20px|1px|4px|8px": {
+        "count": 1,
+        "area": 3363.75,
+        "chars": 0
+      },
+      "link|11.5px 20px 12.5px 20px|0px|4px|8px": {
+        "count": 1,
+        "area": 5494.375,
+        "chars": 13
+      },
+      "link|15.5px 24px 16.5px 24px|0px|4px|8px": {
+        "count": 7,
+        "area": 58584,
+        "chars": 109
+      },
+      "link|14.5px 24px 15.5px 24px|1px|4px|8px": {
+        "count": 11,
+        "area": 89018.25,
+        "chars": 154
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 10,
+        "area": 2213428,
+        "chars": 0
+      },
+      "button|8px|0px|2px|normal": {
+        "count": 1,
+        "area": 1024,
+        "chars": 0
+      },
+      "button|0px 16px|0px|0px|normal": {
+        "count": 4,
+        "area": 108408.375,
+        "chars": 0
+      },
+      "link|0px|1px|4px|8px": {
+        "count": 4,
+        "area": 11440,
+        "chars": 0
+      },
+      "button|0px|0px|4px|normal": {
+        "count": 5,
+        "area": 6976,
+        "chars": 0
+      },
+      "link|0px|0px|0px|16px": {
+        "count": 8,
+        "area": 1465531,
+        "chars": 0
+      },
+      "button|32px 0px|0px|4px|8px": {
+        "count": 4,
+        "area": 123200,
+        "chars": 0
+      },
+      "link|2px|1px|4px|12px": {
+        "count": 2,
+        "area": 12189.6875,
+        "chars": 0
+      },
+      "button|0px|0px|4px|8px": {
+        "count": 1,
+        "area": 2979.75,
+        "chars": 0
+      },
+      "button|0px 24px|1px|4px|normal": {
+        "count": 1,
+        "area": 4485.625,
+        "chars": 8
+      }
+    },
     "styleSheets": {
-      "total": 7,
+      "total": 8,
       "readable": 0,
-      "blocked": 7,
+      "blocked": 8,
       "stateRules": 0
     },
     "radii": {
       "6px": {
-        "count": 130,
-        "area": 17552988.876176525,
+        "count": 134,
+        "area": 17934672.876176525,
         "chars": 226
       },
       "4px": {
-        "count": 151,
-        "area": 1066418.0716832578,
-        "chars": 838
+        "count": 152,
+        "area": 1069696.1966832578,
+        "chars": 846
       },
       "5px": {
         "count": 30,
@@ -1908,14 +2081,14 @@
         "area": 11634.74570722878,
         "chars": 0
       },
+      "2px": {
+        "count": 8,
+        "area": 8192,
+        "chars": 0
+      },
       "8px": {
         "count": 4,
         "area": 219830,
-        "chars": 0
-      },
-      "2px": {
-        "count": 6,
-        "area": 6144,
         "chars": 0
       },
       "50%": {
@@ -1953,7 +2126,7 @@
     },
     "spacings": {
       "1": {
-        "count": 12,
+        "count": 16,
         "area": 0,
         "chars": 0
       },
@@ -1968,7 +2141,7 @@
         "chars": 0
       },
       "4": {
-        "count": 117,
+        "count": 146,
         "area": 0,
         "chars": 0
       },
@@ -1983,7 +2156,7 @@
         "chars": 0
       },
       "8": {
-        "count": 456,
+        "count": 472,
         "area": 0,
         "chars": 0
       },
@@ -1998,12 +2171,12 @@
         "chars": 0
       },
       "11": {
-        "count": 16,
+        "count": 18,
         "area": 0,
         "chars": 0
       },
       "12": {
-        "count": 102,
+        "count": 115,
         "area": 0,
         "chars": 0
       },
@@ -2023,7 +2196,12 @@
         "chars": 0
       },
       "16": {
-        "count": 404,
+        "count": 415,
+        "area": 0,
+        "chars": 0
+      },
+      "17": {
+        "count": 4,
         "area": 0,
         "chars": 0
       },
@@ -2043,7 +2221,7 @@
         "chars": 0
       },
       "24": {
-        "count": 144,
+        "count": 150,
         "area": 0,
         "chars": 0
       },
@@ -2088,7 +2266,7 @@
         "chars": 0
       },
       "64": {
-        "count": 70,
+        "count": 71,
         "area": 0,
         "chars": 0
       },
@@ -2108,7 +2286,7 @@
         "chars": 0
       },
       "96": {
-        "count": 8,
+        "count": 9,
         "area": 0,
         "chars": 0
       }
@@ -2123,6 +2301,11 @@
         "count": 3,
         "area": 36101,
         "chars": 57
+      },
+      "rgb(229, 237, 245)": {
+        "count": 2,
+        "area": 2048,
+        "chars": 0
       },
       "rgb(255, 255, 255)": {
         "count": 3,
@@ -2152,26 +2335,31 @@
     },
     "interactiveRadius": {
       "0px": {
-        "count": 455,
-        "area": 9609641.323565006,
-        "chars": 3932
+        "count": 459,
+        "area": 9614026.480852604,
+        "chars": 3988
       },
       "4px": {
-        "count": 103,
-        "area": 851334.21875,
-        "chars": 838
+        "count": 104,
+        "area": 854612.34375,
+        "chars": 846
+      },
+      "2px": {
+        "count": 2,
+        "area": 2048,
+        "chars": 0
       }
     },
     "interactiveFg": {
       "rgb(83, 58, 253)": {
         "count": 168,
-        "area": 774683.4365234375,
+        "area": 774683.4375610352,
         "chars": 923
       },
       "rgb(6, 27, 49)": {
-        "count": 5,
-        "area": 14967.65625,
-        "chars": 43
+        "count": 6,
+        "area": 18245.78125,
+        "chars": 51
       },
       "rgb(255, 255, 255)": {
         "count": 37,
@@ -2182,6 +2370,16 @@
         "count": 69,
         "area": 8199576.558916569,
         "chars": 0
+      },
+      "rgb(149, 164, 186)": {
+        "count": 2,
+        "area": 2048,
+        "chars": 0
+      },
+      "rgb(100, 116, 141)": {
+        "count": 4,
+        "area": 4385.15625,
+        "chars": 56
       },
       "rgb(125, 139, 164)": {
         "count": 1,
@@ -2216,9 +2414,9 @@
         "chars": 161
       },
       "26px": {
-        "count": 12,
-        "area": 236666.71508789062,
-        "chars": 496
+        "count": 14,
+        "area": 261654.74633789062,
+        "chars": 564
       },
       "56px": {
         "count": 1,
@@ -2271,13 +2469,18 @@
         "count": 147,
         "area": 1748857.935546875,
         "chars": 5502
+      },
+      "sohne-var, sans-serif": {
+        "count": 2,
+        "area": 24988.03125,
+        "chars": 68
       }
     },
     "headingWeights": {
       "300": {
-        "count": 108,
-        "area": 1625990.9272460938,
-        "chars": 4701
+        "count": 110,
+        "area": 1650978.9584960938,
+        "chars": 4769
       },
       "400": {
         "count": 39,
@@ -2286,23 +2489,23 @@
       }
     },
     "pageBg": "rgba(0, 0, 0, 0)",
-    "elementCount": 8688,
-    "sampled": 5764,
+    "elementCount": 8946,
+    "sampled": 5867,
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 2862
+        "elements": 2948
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 2913
+        "elements": 2999
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 2913
+        "elements": 2999
       }
     ],
     "mergedFrom": 3

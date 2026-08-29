@@ -477,10 +477,30 @@ Vercel's accent is now `#0072f5` (via `button:focus-visible`), lightening to
 `#52a8ff` in dark. Stripe, GOV.UK and Linear are unchanged — their accents come
 from filled controls or resting shadows and never consult the new source.
 
-**7. No component-level tokens.**
-Their button carries `padding: 8px 14px` plus typography and radius references.
-We emit background, foreground and radius. `harvest` already visits every
-interactive element, so padding and font size are free.
+**7. ~~No component-level tokens.~~ DONE, harvest v4 + cluster v11.**
+`componentBoxes` records padding, border width, radius and gap as one bundle per
+interactive element — the same shape as `typeStyles` and states, for the same
+reason.
+
+The naive read was useless: the most common bundle for almost every kind is
+fully default, because `<a>` and `<button>` are frequently bare wrappers around
+the element that carries the styling. So a bundle that sets real padding is
+preferred, then any bundle that sets anything, then the dominant one.
+
+| | padding | other |
+|---|---|---|
+| Stripe **link** | `14.5px 24px 15.5px 24px` | 1px border, 4px radius, 8px gap |
+| GOV.UK **button** | `8px 10px 7px 10px` | 1px border |
+| Linear **button** | `0px 7px` | 8px radius, 8px gap |
+| Vercel **link** | `2px` | 6px gap |
+
+Stripe's call to action turns out to be an anchor, not a button element, and its
+file now says to reproduce the padding rather than the tag. GOV.UK styles
+`<button>` directly and so is unaffected by the preference rule — `dominantUnstyled`
+is false there and true for the other three, which is the reader's cue.
+
+Thin evidence is flagged: Vercel's button token rests on one element out of two
+distinct shapes, and the file says so.
 
 **8. No screenshots.**
 `source.avif` is specified and absent, and §4.1's "preview beside the source"

@@ -478,6 +478,58 @@ export function colorTokens(capture) {
 }
 
 // ---------------------------------------------------------------------------
+// Components
+// ---------------------------------------------------------------------------
+
+/**
+ * Box metrics per component kind, taken from the single most common bundle.
+ *
+ * Needs harvest v4. Ranked by element count, not area: the token is whatever
+ * shape the site uses most often, and area would hand it to one oversized hero
+ * button. Zero values are kept — a link with no padding is a fact about the
+ * system, not a missing measurement.
+ */
+export function componentTokens(capture) {
+  const ranked = entriesOf(capture?.componentBoxes, 'count').map((e) => {
+    const [kind, padding, borderWidth, radius, gap] = e.value.split('|');
+    return {
+      kind,
+      padding,
+      borderWidth: borderWidth === '0px' ? null : borderWidth,
+      radius: radius === '0px' ? null : radius,
+      gap: gap === 'normal' ? null : gap,
+      elements: e.count,
+      padded: padding !== '0px',
+      styled: padding !== '0px' || borderWidth !== '0px' || radius !== '0px' || gap !== 'normal',
+    };
+  });
+
+  const out = {};
+  for (const kind of [...new Set(ranked.map(r => r.kind))]) {
+    // Entries arrive count-ordered, so `find` returns the most common match.
+    //
+    // The most common bundle is usually a fully default one — an <a> or <button>
+    // that wraps the element carrying the actual styling. It describes nothing,
+    // so a bundle that sets real padding is preferred, then any bundle that sets
+    // anything at all. Stripe's CTA is a link padded 14.5px 24px; its <button>
+    // elements are bare wrappers. GOV.UK, which styles <button> directly, is
+    // unaffected either way.
+    const forKind = ranked.filter(r => r.kind === kind);
+    const pick = forKind.find(r => r.padded) ?? forKind.find(r => r.styled) ?? forKind[0];
+    const { kind: _k, padded, styled, ...token } = pick;
+    out[kind] = {
+      ...token,
+      // How many distinct shapes this kind has, and whether the commonest one
+      // carried no styling at all — both are the reader's cue to how much to
+      // trust a single set of numbers.
+      variants: forKind.length,
+      dominantUnstyled: !forKind[0].styled,
+    };
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------------------
 // Interaction states
 // ---------------------------------------------------------------------------
 
@@ -988,7 +1040,7 @@ export function contrastAudit(colors) {
 
 /** Everything we could not observe, said out loud. This list is the honest
  *  half of the product — an unflagged gap is how a wrong token ships. */
-function collectWarnings(capture, colors, type, spacing, rounded, states) {
+function collectWarnings(capture, colors, type, spacing, rounded, states, components) {
   const w = [];
   const { roles } = colors;
   if (colors.roles.background.source === 'browserDefault') {
@@ -1026,6 +1078,13 @@ function collectWarnings(capture, colors, type, spacing, rounded, states) {
       + 'the site may not have a real type scale.');
   }
   if (rounded.sharp) w.push('No border radius anywhere; treat as a deliberately sharp system.');
+  for (const [kind, box] of Object.entries(components ?? {})) {
+    if (box.elements < 3 && (box.padding !== '0px' || box.radius)) {
+      w.push(`${kind} box metrics come from ${box.elements} element`
+        + `${box.elements === 1 ? '' : 's'} out of ${box.variants} distinct shapes; `
+        + 'thin evidence for a component token.');
+    }
+  }
   const sh = states?.sheets;
   if (sh && !states.available) {
     w.push(`Interaction states unavailable: all ${sh.total} stylesheets are cross-origin, `
@@ -1050,6 +1109,7 @@ export function cluster(capture) {
   const elevation = elevationTokens(capture);
   const audit = contrastAudit(colors);
   const states = stateTokens(capture);
+  const components = componentTokens(capture);
 
   return {
     source: {
@@ -1083,17 +1143,19 @@ export function cluster(capture) {
     //    downstream has to invent a conventional 9999px.
     // 10: accent detection mines STATE box-shadows too, and parseColor learned
     //     hsl()/hsla(), so focus rings authored in hsl stop being invisible.
+    // 11: adds components — box metrics per kind from harvest v4.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 10,
+    clusterVersion: 11,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,
     spacing,
     rounded,
     elevation,
+    components,
     states,
     audit,
-    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states),
+    warnings: collectWarnings(capture, colors, typography, spacing, rounded, states, components),
   };
 }
 

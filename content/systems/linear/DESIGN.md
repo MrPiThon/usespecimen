@@ -10,6 +10,7 @@ colors:
   primary: '#5e6ad2'
   border: '#1c1d1e'
   surface-1: '#0f1011'
+  surface-2: '#161718'
   text-1: '#f7f8f8'
   text-2: '#d0d6e0'
   text-3: '#8a8f98'
@@ -136,16 +137,20 @@ components:
   button:
     background: '{colors.primary}'
     radius: '{rounded.button}'
+    padding: '0px 7px'
+    gap: '8px'
   surface:
     background: '{colors.card}'
     border: '{colors.border}'
+  link:
+    padding: '0px 12px'
 provenance:
   brand: 'Linear'
   source: 'https://linear.app/'
-  capturedAt: '2026-08-29T00:16:50.778Z'
+  capturedAt: '2026-08-29T00:29:08.804Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 3
-  clusterVersion: 10
+  harvestVersion: 4
+  clusterVersion: 11
 ---
 
 ## Overview

@@ -148,6 +148,12 @@ Four gotchas that will silently skew a clusterer:
 4. `radii` is gated on `borderRadius !== '0px'` but keyed on
    `borderTopLeftRadius`, so asymmetric radii record only one corner.
 
+`componentBoxes` (harvest v4) records padding, border width, radius and gap per
+interactive element, bundled. Selection prefers a bundle with real padding over
+the most common one, because `<a>` and `<button>` are frequently bare wrappers
+around whatever carries the styling — the commonest bundle is usually all
+defaults and describes nothing. `dominantUnstyled` records when that happened.
+
 `states` (harvest v3) is read from `document.styleSheets`, not from computed
 style, which only ever reports the resting value. Each state rule is matched back
 against the DOM so its role name comes from a real element, `var()` references are

@@ -87,6 +87,7 @@ components:
   button:
     background: '{colors.primary}'
     radius: '{rounded.button}'
+    padding: '0px 8px 0px 4px'
     focus-visible:
       boxShadow: '0 0 0 2px hsla(0, 0%, 100%, 1), 0 0 0 4px hsla(212, 100%, 48%, 1)'
     hover:
@@ -95,6 +96,8 @@ components:
     background: '{colors.background}'
     border: '{colors.foreground}'
   link:
+    padding: '2px'
+    gap: '6px'
     focus:
       opacity: '1'
     hover:
@@ -102,10 +105,10 @@ components:
 provenance:
   brand: 'Vercel'
   source: 'https://vercel.com/'
-  capturedAt: '2026-08-29T00:18:45.190Z'
+  capturedAt: '2026-08-29T00:29:53.574Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 3
-  clusterVersion: 10
+  harvestVersion: 4
+  clusterVersion: 11
 ---
 
 ## Overview

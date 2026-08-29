@@ -20,7 +20,8 @@ export const harvestFn = () => {
     //    kind. Older captures cannot produce typography roles.
     // 3: adds states — hover/focus/active declarations read from stylesheet
     //    rules rather than computed style, bundled one key per rule.
-    harvestVersion: 3,
+    // 4: adds componentBoxes, the box metrics of interactive elements.
+    harvestVersion: 4,
     url: location.href,
     title: document.title,
     viewport: { w: innerWidth, h: innerHeight },
@@ -33,6 +34,7 @@ export const harvestFn = () => {
     // no area or character weight to speak of, so overloading those fields would
     // be a lie the clusterer would then have to decode.
     states: {},
+    componentBoxes: {},
     styleSheets: { total: 0, readable: 0, blocked: 0, stateRules: 0 },
     radii: {}, shadows: {}, spacings: {},
     interactiveBg: {}, interactiveRadius: {}, interactiveFg: {},
@@ -140,6 +142,19 @@ export const harvestFn = () => {
       if (bg && bg !== 'rgba(0, 0, 0, 0)') bump(out.interactiveBg, bg, w);
       bump(out.interactiveFg, cs.color, w);
       if (cs.borderTopLeftRadius) bump(out.interactiveRadius, cs.borderTopLeftRadius, w);
+
+      // Box metrics as ONE bundle per element, for the same reason typeStyles
+      // exists: padding and radius that co-occur describe a real component,
+      // while taking each from its own histogram describes one that may not.
+      // Padding is collapsed to CSS shorthand here so the emitted token reads
+      // the way a person would write it.
+      const pad = [cs.paddingTop, cs.paddingRight, cs.paddingBottom, cs.paddingLeft];
+      const padding = (pad[0] === pad[2] && pad[1] === pad[3])
+        ? (pad[0] === pad[1] ? pad[0] : pad[0] + ' ' + pad[1])
+        : pad.join(' ');
+      bump(out.componentBoxes, [
+        kindOf(el), padding, cs.borderTopWidth, cs.borderTopLeftRadius, cs.gap || 'normal',
+      ].join('|'), w);
     }
   }
 

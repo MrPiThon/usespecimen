@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:18:45.190Z",
+  "capturedAt": "2026-08-29T00:29:53.574Z",
   "tool": "@usespecimen/extractor@0.0.0",
   "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
   "source": {
@@ -10,12 +10,12 @@
       "h": 900
     },
     "docHeight": 5333,
-    "elementCount": 3365,
+    "elementCount": 3383,
     "sampled": 1559,
-    "sampleRatio": 0.463
+    "sampleRatio": 0.461
   },
-  "harvestVersion": 3,
-  "clusterVersion": 10,
+  "harvestVersion": 4,
+  "clusterVersion": 11,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -381,6 +381,26 @@
     ],
     "flat": false
   },
+  "components": {
+    "link": {
+      "padding": "2px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": "6px",
+      "elements": 80,
+      "variants": 7,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "0px 8px 0px 4px",
+      "borderWidth": null,
+      "radius": "3.35544e+07px",
+      "gap": null,
+      "elements": 1,
+      "variants": 2,
+      "dominantUnstyled": true
+    }
+  },
   "states": {
     "available": true,
     "sheets": {
@@ -476,7 +496,8 @@
     "Accent #0072f5 taken from a focus ring (button:focus-visible, text:focus-visible), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
     "No borders observed; border token omitted.",
     "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
-    "Strided sample: 1559 of 3365 elements. Weights are relative only."
+    "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
+    "Strided sample: 1559 of 3383 elements. Weights are relative only."
   ],
   "supportsDark": true,
   "dark": {
@@ -488,12 +509,12 @@
         "h": 900
       },
       "docHeight": 5333,
-      "elementCount": 3389,
+      "elementCount": 3365,
       "sampled": 1568,
-      "sampleRatio": 0.463
+      "sampleRatio": 0.466
     },
-    "harvestVersion": 3,
-    "clusterVersion": 10,
+    "harvestVersion": 4,
+    "clusterVersion": 11,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -510,7 +531,7 @@
         },
         "foreground": {
           "hex": "#ededed",
-          "weightShare": 0.4352,
+          "weightShare": 0.438,
           "variants": []
         },
         "card": null,
@@ -536,7 +557,7 @@
             "name": "text-1",
             "hex": "#ededed",
             "contrast": 17.94,
-            "charShare": 0.4352
+            "charShare": 0.438
           },
           {
             "name": "text-2",
@@ -569,7 +590,7 @@
           "hue": "neutral",
           "lightness": 0.145,
           "chroma": 0,
-          "count": 20
+          "count": 23
         },
         {
           "hex": "#a1a1a1",
@@ -847,9 +868,33 @@
         {
           "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px",
           "count": 8
+        },
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px, rgba(255, 255, 255, 0.06) 0px 1px 2px 0px",
+          "count": 3
         }
       ],
       "flat": false
+    },
+    "components": {
+      "link": {
+        "padding": "2px",
+        "borderWidth": null,
+        "radius": null,
+        "gap": "6px",
+        "elements": 80,
+        "variants": 7,
+        "dominantUnstyled": false
+      },
+      "button": {
+        "padding": "0px 8px 0px 4px",
+        "borderWidth": null,
+        "radius": "3.35544e+07px",
+        "gap": null,
+        "elements": 1,
+        "variants": 2,
+        "dominantUnstyled": true
+      }
     },
     "states": {
       "available": true,
@@ -887,8 +932,8 @@
         "text": {
           "focus-visible": {
             "boxShadow": "0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000",
-            "matchedElements": 86,
-            "rulesConsidered": 4
+            "matchedElements": 83,
+            "rulesConsidered": 5
           },
           "hover": {
             "textDecorationColor": "#454545",
@@ -897,7 +942,7 @@
           }
         }
       },
-      "declarations": 16
+      "declarations": 17
     },
     "audit": {
       "pairs": [
@@ -946,11 +991,12 @@
       "Accent #52a8ff taken from a focus ring (button:focus-visible, text:focus-visible), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
       "No borders observed; border token omitted.",
       "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
-      "Strided sample: 1568 of 3389 elements. Weights are relative only."
+      "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
+      "Strided sample: 1568 of 3365 elements. Weights are relative only."
     ]
   },
   "harvest": {
-    "harvestVersion": 3,
+    "harvestVersion": 4,
     "url": "https://vercel.com/",
     "title": "Agentic Infrastructure - Vercel",
     "viewport": {
@@ -1371,6 +1417,53 @@
         "matched": 3
       }
     },
+    "componentBoxes": {
+      "link|8px|0px|0px|normal": {
+        "count": 1,
+        "area": 1258,
+        "chars": 0
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 2,
+        "area": 6355.5,
+        "chars": 0
+      },
+      "link|0px|0px|0px|normal": {
+        "count": 3,
+        "area": 11824.5,
+        "chars": 0
+      },
+      "link|0px 6px|0px|6px|normal": {
+        "count": 3,
+        "area": 7670,
+        "chars": 0
+      },
+      "link|0px 12px|0px|3.35544e+07px|normal": {
+        "count": 4,
+        "area": 19578.875,
+        "chars": 0
+      },
+      "link|20px|0px|6px|normal": {
+        "count": 3,
+        "area": 780900,
+        "chars": 0
+      },
+      "button|0px 8px 0px 4px|0px|3.35544e+07px|normal": {
+        "count": 1,
+        "area": 10673.125,
+        "chars": 0
+      },
+      "link|2px|0px|0px|6px": {
+        "count": 80,
+        "area": 146266.125,
+        "chars": 754
+      },
+      "link|0px 0px 0px 8px|0px|0px|normal": {
+        "count": 1,
+        "area": 5304,
+        "chars": 0
+      }
+    },
     "styleSheets": {
       "total": 7,
       "readable": 7,
@@ -1616,29 +1709,29 @@
       }
     },
     "pageBg": "rgb(250, 250, 250)",
-    "elementCount": 3365,
+    "elementCount": 3383,
     "sampled": 1559,
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1123
+        "elements": 1129
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1121
+        "elements": 1127
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1121
+        "elements": 1127
       }
     ],
     "mergedFrom": 3
   },
   "darkHarvest": {
-    "harvestVersion": 3,
+    "harvestVersion": 4,
     "url": "https://vercel.com/",
     "title": "Agentic Infrastructure - Vercel",
     "viewport": {
@@ -1653,9 +1746,9 @@
         "chars": 3393
       },
       "rgb(237, 237, 237)": {
-        "count": 164,
-        "area": 1761712.8125,
-        "chars": 2742
+        "count": 167,
+        "area": 1761715.8125,
+        "chars": 2760
       },
       "rgb(10, 10, 10)": {
         "count": 7,
@@ -1678,9 +1771,9 @@
         "chars": 45
       },
       "rgb(143, 143, 143)": {
-        "count": 9,
-        "area": 9,
-        "chars": 45
+        "count": 6,
+        "area": 6,
+        "chars": 27
       }
     },
     "bgColors": {
@@ -1690,8 +1783,8 @@
         "chars": 0
       },
       "rgb(10, 10, 10)": {
-        "count": 20,
-        "area": 492272.125,
+        "count": 23,
+        "area": 494000.125,
         "chars": 0
       },
       "rgb(237, 237, 237)": {
@@ -2018,9 +2111,9 @@
         "rules": 1,
         "matched": 37
       },
-      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000": {
-        "rules": 2,
-        "matched": 86
+      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 0 1px hsla(0, 0%, 18%, 1), 0px 1px 2px 0px #ffffff0f": {
+        "rules": 1,
+        "matched": 3
       },
       "text|hover|background-color:hsla(0, 0%, 63%, 1)": {
         "rules": 1,
@@ -2042,6 +2135,10 @@
         "rules": 1,
         "matched": 2
       },
+      "text|focus-visible|box-shadow:0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000": {
+        "rules": 1,
+        "matched": 83
+      },
       "button|focus-visible|box-shadow:0 0 0 2px hsla(0, 0%, 4%, 1), 0 0 0 4px hsla(210, 100%, 66%, 1)": {
         "rules": 1,
         "matched": 38
@@ -2057,6 +2154,53 @@
       "text|focus-visible|color:#fafafa": {
         "rules": 1,
         "matched": 3
+      }
+    },
+    "componentBoxes": {
+      "link|8px|0px|0px|normal": {
+        "count": 1,
+        "area": 1258,
+        "chars": 0
+      },
+      "button|0px|0px|0px|normal": {
+        "count": 2,
+        "area": 6355.5,
+        "chars": 0
+      },
+      "link|0px|0px|0px|normal": {
+        "count": 3,
+        "area": 11824.5,
+        "chars": 0
+      },
+      "link|0px 6px|0px|6px|normal": {
+        "count": 3,
+        "area": 7670,
+        "chars": 0
+      },
+      "link|0px 12px|0px|3.35544e+07px|normal": {
+        "count": 4,
+        "area": 19578.875,
+        "chars": 0
+      },
+      "link|20px|0px|6px|normal": {
+        "count": 3,
+        "area": 780900,
+        "chars": 0
+      },
+      "button|0px 8px 0px 4px|0px|3.35544e+07px|normal": {
+        "count": 1,
+        "area": 10673.125,
+        "chars": 0
+      },
+      "link|2px|0px|0px|6px": {
+        "count": 80,
+        "area": 146266.125,
+        "chars": 754
+      },
+      "link|0px 0px 0px 8px|0px|0px|normal": {
+        "count": 1,
+        "area": 5304,
+        "chars": 0
       }
     },
     "styleSheets": {
@@ -2101,6 +2245,11 @@
       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px inset": {
         "count": 9,
         "area": 5184,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(46, 46, 46) 0px 0px 0px 1px, rgba(255, 255, 255, 0.06) 0px 1px 2px 0px": {
+        "count": 3,
+        "area": 1728,
         "chars": 0
       }
     },
@@ -2304,23 +2453,23 @@
       }
     },
     "pageBg": "rgb(0, 0, 0)",
-    "elementCount": 3389,
+    "elementCount": 3365,
     "sampled": 1568,
     "viewports": [
       {
         "w": 1440,
         "h": 900,
-        "elements": 1131
+        "elements": 1123
       },
       {
         "w": 768,
         "h": 1024,
-        "elements": 1129
+        "elements": 1121
       },
       {
         "w": 390,
         "h": 844,
-        "elements": 1129
+        "elements": 1121
       }
     ],
     "mergedFrom": 3

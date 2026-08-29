@@ -12,6 +12,7 @@ colors:
   border: '#e5edf5'
   surface-1: '#f8fafd'
   surface-2: '#e5edf5'
+  surface-3: '#d4dee9'
   text-1: '#061b31'
   text-2: '#50617a'
   text-3: '#64748d'
@@ -126,16 +127,21 @@ components:
     background: '{colors.primary}'
     foreground: '{colors.primaryForeground}'
     radius: '{rounded.button}'
+    padding: '0px 16px'
   surface:
     background: '{colors.card}'
     border: '{colors.border}'
+  link:
+    padding: '14.5px 24px 15.5px 24px'
+    gap: '8px'
+    borderWidth: '1px'
 provenance:
   brand: 'Stripe'
   source: 'https://stripe.com/'
-  capturedAt: '2026-08-29T00:16:40.277Z'
+  capturedAt: '2026-08-29T00:28:57.225Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
-  harvestVersion: 3
-  clusterVersion: 10
+  harvestVersion: 4
+  clusterVersion: 11
 ---
 
 ## Overview
@@ -192,8 +198,10 @@ appear, but only on badges and small status chips.
 
 ## Components
 
-Buttons take the indigo fill, a white label and the 4px radius. Surfaces use the
-pale `#e5edf5` tint with the same colour as their border.
+The call to action is an anchor, not a button element: padded
+`14.5px 24px 15.5px 24px`, a 1px border, 4px radius and an 8px gap for its
+trailing arrow. Reproduce the padding rather than the tag. Surfaces use the pale
+`#e5edf5` tint with the same colour as their border.
 
 ## Do's and Don'ts
 
