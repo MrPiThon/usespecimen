@@ -144,8 +144,13 @@ nothing; not having them loses. What remains:
    it is the one thing a competitor cannot copy by scraping the output.
 
 **Table stakes — build, but claim nothing for them.**
-Whole file on the page, raw URL at `/r/<slug>/DESIGN.md`, `npx specimen add`,
-MCP server.
+Whole file on the page, raw URL at `/r/<slug>/DESIGN.md`, `specimen add`, MCP
+server. All four are built; none of them is a reason to choose us.
+
+One thing carries over from the differentiators even here: both clients validate
+a file before it lands. `add` refuses to write a non-conformant file and
+`get_design` refuses to return one, because that is the last point before an
+agent follows it as though it were sound.
 
 Not on the list: more entries, a Catalog Pass, backgrounds, video templates, an
 affiliate program, a starter kit. Their homepage carries nine product lines.
@@ -220,6 +225,13 @@ site redesigns. That's Phase 2, but design the `capture.json` schema for it now.
   **before** writing it and refuses a non-conformant one — the registry should
   never serve such a file, but the client is the last place to catch it and the
   only one that knows it is about to be handed to an agent.
+
+  The MCP server is built too: `search_designs` (free text plus polarity and
+  supportsDark facets) and `get_design` (one file, verbatim). It reads the same
+  HTTP endpoints rather than the repository, so it works against a deployed
+  registry from any machine, and `SPECIMEN_REGISTRY` overrides the origin since
+  an MCP client passes no argv. Both pages still need writing — the software
+  exists, the install docs do not.
 - `/submit` — contribute by PR, schema documented.
 - `/about` — provenance policy, trademark policy, opt-out process. Early, not
   boilerplate: it's a trust asset.

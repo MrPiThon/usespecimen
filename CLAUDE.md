@@ -40,6 +40,7 @@ npm run build                                 # static build to dist/
 ```bash
 npm run list -- --registry http://localhost:4321    # catalog (needs a running site)
 npm run add -- stripe --registry http://localhost:4321
+npm run mcp                                         # MCP server on stdio
 ```
 
 ```bash
@@ -140,7 +141,13 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   so it cannot live in `astro.config.mjs`, which imports it. Site code still
   derives URLs from `Astro.site`.
 - `add`/`list` talk to the published site by default; `--registry <origin>`
-  points them at a local `astro preview` for testing.
+  points them at a local `astro preview` for testing. The MCP server
+  (`src/mcp.mjs`) uses the same endpoints and reads `SPECIMEN_REGISTRY` from the
+  environment, because an MCP client gives it no argv.
+- The MCP server fetches over HTTP rather than reading `content/` — one contract,
+  and it then works against a deployed registry from any machine. `get_design`
+  returns the file **verbatim** so writing it to disk reproduces the registry's
+  bytes; a provenance preamble would end up inside the repository's DESIGN.md.
 
 ### `src/extract/harvest.mjs` — runs inside the page
 
