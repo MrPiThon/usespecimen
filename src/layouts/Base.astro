@@ -1,4 +1,7 @@
 ---
+// Self-hosted so the build has no runtime dependency on a font CDN. The theme
+// file names this face; themeVars() throws if that ever stops being true.
+import '@fontsource-variable/inter';
 import '../styles/global.css';
 import { getEntry } from 'astro:content';
 import { THEME_SLUG, themeVars, themeCredit } from '../lib/theme.mjs';

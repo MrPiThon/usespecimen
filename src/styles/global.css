@@ -117,13 +117,46 @@ pre {
 .site-header {
   border-bottom: 1px solid var(--border);
   box-shadow: var(--lift);
-  position: sticky; top: 0; z-index: 10;
+  /* The file says how this bar behaves, not only how tall it is. Linear's is
+     fixed, so it leaves the flow and `main` reserves its height below.
+     One rule, not two: the minifier merges duplicate selectors, and a second
+     `.site-header` block put a hardcoded `position: sticky` after this var,
+     which silently won. */
+  position: var(--nav-position, sticky);
+  top: 0; left: 0; right: 0; z-index: 10;
   background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(10px);
 }
 .site-header .wrap {
   display: flex; align-items: center; gap: var(--s5);
   height: var(--nav-height, 52px);
+}
+/* Reserve the fixed bar's height. On `body`, not on `main`: main carries the
+   .wrap class, whose `padding: 0 var(--s5)` shorthand resets padding-top and
+   wins on specificity. A fixed header is out of flow, so this space is what
+   the content starts below. */
+body { padding-top: var(--nav-offset, 0px); }
+
+/* Section rhythm, from the file. The site ran 64px against a system that
+   measures 128px between sections. `main` IS the wrap element here, so this is
+   a direct-child selector rather than main > .wrap > section. */
+main > section + section { margin-top: var(--section-gap, var(--s6)); }
+main > section:first-child { padding-top: var(--s6); }
+
+/* The hero's headline size and alignment, from the file. A 64px display size
+   is not the 38px top step of the body type scale — different measurements for
+   different jobs, and the site was using the wrong one.
+
+   `--hero-height` is deliberately NOT applied. Linear's hero is 1.14 viewports
+   because it holds a product screenshot; ours holds a headline and an install
+   line. Forcing the height produced 450px of dead space under the content,
+   which is the grammar-versus-transcription line showing up in the layout: the
+   height describes what Linear's hero contains, not a rule every hero obeys.
+   The token stays in the file as guidance; the site does not obey it blindly. */
+.hero { text-align: var(--hero-align, left); }
+.hero h1 {
+  font-size: var(--hero-heading, var(--step-6xl, 38px));
+  line-height: 1.1;
 }
 
 /* The system's own timing, on everything that responds to the pointer. A file

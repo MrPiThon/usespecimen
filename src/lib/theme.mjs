@@ -20,6 +20,40 @@
 
 export const THEME_SLUG = 'linear';
 
+/**
+ * The one family the site ships as a webfont, self-hosted via
+ * `@fontsource-variable/inter` and imported in Base.astro.
+ *
+ * This has to be a constant because the import is static, and that creates a
+ * way for the site to lie: swap the theme to a system that uses a different
+ * face and the page would go on claiming to wear the file while rendering a
+ * system fallback. Which is precisely what was happening — the file named
+ * Inter Variable, nothing loaded it, and a canvas probe measured the body text
+ * as identical to the monospace fallback.
+ *
+ * So `assertThemeFont` throws at build time instead. Change the theme file and
+ * the build tells you to change the font, rather than quietly rendering in
+ * Arial under a stylesheet that says Inter.
+ */
+export const SELF_HOSTED_FONT = 'Inter Variable';
+
+/** First family in a CSS font stack, unquoted. */
+export function primaryFamily(stack) {
+  if (!stack) return null;
+  return stack.split(',')[0].trim().replace(/^["']|["']$/g, '');
+}
+
+function assertThemeFont(data) {
+  const family = primaryFamily(data?.typography?.fontFamily);
+  if (family && family !== SELF_HOSTED_FONT) {
+    throw new Error(
+      `Theme "${THEME_SLUG}" declares "${family}" but the site self-hosts `
+      + `"${SELF_HOSTED_FONT}". Add the matching @fontsource package and update `
+      + 'SELF_HOSTED_FONT, or the site renders a fallback while claiming to wear the file.',
+    );
+  }
+}
+
 /** Site variable <- token name in the file. Anything absent simply is not set,
  *  and the stylesheet falls back rather than inventing a value. */
 const COLOR_MAP = {
@@ -42,6 +76,7 @@ const COLOR_MAP = {
  * @returns {string} custom property declarations for a :root block
  */
 export function themeVars(data) {
+  assertThemeFont(data);
   const colors = data?.colors ?? {};
   const type = data?.typography ?? {};
   const rounded = data?.rounded ?? {};
@@ -82,6 +117,22 @@ export function themeVars(data) {
   const layout = data?.layout ?? {};
   if (layout.measure) out.push(['--container', layout.measure]);
   if (layout.navHeight) out.push(['--nav-height', layout.navHeight]);
+  // The rhythm between sections, and the hero's own proportions. These were
+  // emitted into the file and then used by nothing: the site ran 64px gaps
+  // against a system that measures 128px, and a 38px headline against one whose
+  // heroes carry 64px.
+  if (layout.sectionSpacing) out.push(['--section-gap', layout.sectionSpacing]);
+  if (layout.heroHeight) out.push(['--hero-height', layout.heroHeight]);
+  if (layout.heroHeadingSize) out.push(['--hero-heading', layout.heroHeadingSize]);
+  if (layout.heroAlign) out.push(['--hero-align', layout.heroAlign]);
+  // `fixed` and `sticky` differ in whether the bar takes space in flow, so this
+  // is passed through rather than normalised to whichever the site preferred.
+  if (layout.navPosition) out.push(['--nav-position', layout.navPosition]);
+  // A fixed bar leaves the flow, so the page has to reserve its height; a
+  // sticky one does not. Derived here rather than guessed in CSS, which cannot
+  // branch on a custom property's value.
+  const fixed = layout.navPosition === 'fixed' || layout.navPosition === 'absolute';
+  if (layout.navHeight) out.push(['--nav-offset', fixed ? layout.navHeight : '0px']);
   // How state changes arrive. Without this the site would pick its own timing
   // while claiming to wear the file, which is the gap this whole exercise
   // exists to close. A system that declares no motion sets nothing, and the

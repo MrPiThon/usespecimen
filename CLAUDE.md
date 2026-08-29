@@ -450,9 +450,29 @@ Neither applies on this Windows machine, where Chromium is already installed.
   tracking, all five radii, the **type scale** (headings are its own steps, not a
   ladder invented here), the **observed spacing steps**, and the **shadows**.
   It also takes the **structure**: the 1340px measure becomes the page
-  container, the 73px nav height the header, and the file's 0.1s ease governs
-  every transition on the site. A file that declares no motion sets `--motion`
-  to nothing and interactions stay instant.
+  container, the 73px nav height the header, `navPosition: fixed` makes it fixed
+  (with `--nav-offset` reserving its height, since a fixed bar leaves the flow),
+  the 128px `sectionSpacing` is the rhythm between sections, the 64px
+  `heroHeadingSize` is the homepage headline, and the file's 0.1s ease governs
+  every transition. A file that declares no motion sets `--motion` to nothing
+  and interactions stay instant.
+  **The typeface is self-hosted** via `@fontsource-variable/inter`, because for
+  a long time the stylesheet named Inter Variable and nothing loaded it — a
+  canvas probe measured the body text as identical to the monospace fallback.
+  `themeVars` now throws if the theme file's family stops matching
+  `SELF_HOSTED_FONT`, so the site cannot go back to claiming a face it is not
+  rendering.
+  Two tokens are deliberately **not** applied, and the reason is the same one
+  that governs section composition: they describe Linear's *content*, not its
+  language. `heroHeight: 114vh` is 1.14 viewports because Linear's hero holds a
+  product screenshot; forcing it on a hero holding a headline and an install
+  line produced 450px of dead space. `gridColumns: 2` is a marketing page's card
+  density, and this is a catalogue. Adopting a design system means adopting its
+  language, not its page.
+  One CSS trap worth knowing: **the minifier merges duplicate selectors.** A
+  second `.site-header` block whose `position: var(--nav-position)` was written
+  after the original's `position: sticky` lost silently, because the merge kept
+  source order within the combined rule.
   `--faint` (3.45:1) is the one token held back from small text — it is the
   system's quietest tier, fine where it is used at size and a failing pair at
   label size, and shipping it would contradict the audit we publish elsewhere.
