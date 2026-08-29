@@ -1,0 +1,1400 @@
+{
+  "capturedAt": "2026-08-29T02:43:21.506Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://www.airbnb.com/",
+    "title": "Airbnb | Vacation rentals, cabins, beach houses, & more",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 1278,
+    "elementCount": 3564,
+    "sampled": 963,
+    "sampleRatio": 0.27
+  },
+  "harvestVersion": 4,
+  "clusterVersion": 14,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#222222",
+        "weightShare": 0.7187,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f7f7f7",
+        "weightShare": 0.4501,
+        "variants": [
+          "#f2f2f2"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#6c6c6c",
+        "weightShare": 0.2771,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#da1249",
+        "weightShare": 0.0021,
+        "variants": [],
+        "source": "textColors",
+        "occurrences": 1
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#dddddd",
+        "weightShare": 0.3571,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f7f7f7",
+          "deltaL": 0.024,
+          "areaShare": 0.4501
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#222222",
+          "contrast": 15.91,
+          "charShare": 0.7187
+        },
+        {
+          "name": "text-2",
+          "hex": "#6c6c6c",
+          "contrast": 5.25,
+          "charShare": 0.2771
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 13
+      },
+      {
+        "hex": "#f7f7f7",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.976,
+        "chroma": 0,
+        "count": 10
+      },
+      {
+        "hex": "#da1249",
+        "role": "primary",
+        "hue": "red",
+        "lightness": 0.569,
+        "chroma": 0.221,
+        "count": 2
+      },
+      {
+        "hex": "#dddddd",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.898,
+        "chroma": 0,
+        "count": 7
+      },
+      {
+        "hex": "#0073e5",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.569,
+        "chroma": 0.194,
+        "count": 1
+      },
+      {
+        "hex": "#ff385c",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.658,
+        "chroma": 0.231,
+        "count": 1
+      },
+      {
+        "hex": "#222222",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.252,
+        "chroma": 0,
+        "count": 9
+      },
+      {
+        "hex": "#6c6c6c",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.531,
+        "chroma": 0,
+        "count": 69
+      },
+      {
+        "hex": "#ebebeb",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.94,
+        "chroma": 0,
+        "count": 4
+      },
+      {
+        "hex": "#e2e2e2",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.913,
+        "chroma": 0,
+        "count": 1
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [
+      {
+        "hex": "#0073e5",
+        "occurrences": 1
+      }
+    ],
+    "clusterCounts": {
+      "bg": 7,
+      "text": 4,
+      "border": 4,
+      "interactive": 2
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Airbnb Cereal VF",
+      "class": "sans",
+      "stack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+      "sizePx": 12,
+      "weight": 400,
+      "lineHeightPx": 15.96,
+      "lineHeightRatio": 1.33,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Airbnb Cereal VF",
+      "class": "sans",
+      "stack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+      "largestPx": 28,
+      "weight": 500,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "Airbnb Cereal VF",
+        "class": "sans",
+        "stack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif"
+      },
+      {
+        "family": "-apple-system",
+        "class": "sans",
+        "stack": "-apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 10,
+        "rem": 0.714,
+        "weightShare": 0.0067,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.857,
+        "weightShare": 0.0175,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 14,
+        "rem": 1,
+        "weightShare": 0.9241,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 21,
+        "rem": 1.5,
+        "weightShare": 0.01,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 22,
+        "rem": 1.571,
+        "weightShare": 0.0281,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 28,
+        "rem": 2,
+        "weightShare": 0.0136,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 6,
+    "roles": {
+      "body": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 1,
+        "chars": 34
+      },
+      "body-lg": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.29,
+        "letterSpacing": null,
+        "elements": 57,
+        "chars": 678
+      },
+      "h1": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "28px",
+        "fontWeight": 700,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 45
+      },
+      "h2": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "22px",
+        "fontWeight": 500,
+        "lineHeight": 1.18,
+        "letterSpacing": "-0.44px",
+        "elements": 3,
+        "chars": 93
+      },
+      "h3": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.29,
+        "letterSpacing": null,
+        "elements": 9,
+        "chars": 60
+      },
+      "button": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.29,
+        "letterSpacing": null,
+        "elements": 24,
+        "chars": 318
+      },
+      "link": {
+        "fontFamily": "Airbnb Cereal VF",
+        "fontStack": "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.29,
+        "letterSpacing": null,
+        "elements": 81,
+        "chars": 1323
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 15
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.682,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.479
+      },
+      {
+        "base": 6,
+        "share": 0.19
+      },
+      {
+        "base": 5,
+        "share": 0.151
+      },
+      {
+        "base": 4,
+        "share": 0.682
+      }
+    ],
+    "scale": [
+      2,
+      4,
+      5,
+      8,
+      10,
+      11,
+      12,
+      16,
+      20,
+      24
+    ],
+    "distinctValues": 21
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 84
+      },
+      {
+        "name": "md",
+        "px": 8,
+        "count": 27
+      },
+      {
+        "name": "lg",
+        "px": 12,
+        "count": 6
+      },
+      {
+        "name": "xl",
+        "px": 32,
+        "count": 10
+      },
+      {
+        "name": "2xl",
+        "px": 40,
+        "count": 9
+      }
+    ],
+    "button": "4px",
+    "pill": true,
+    "pillValue": "50%",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 3px 2.5px 0px, rgba(0, 0, 0, 0.15) 0px 1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 0.8px 0.4px 0px, rgb(255, 255, 255) 0px 1px 1.5px 0px inset, rgba(58, 58, 58, 0.02) 0px 10px 15px 0px inset, rgba(255, 255, 255, 0.6) 0px -1.5px 0.8px 0px inset, rgba(0, 0, 0, 0.3) 0px -1.5px 0.75px 0px inset",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.02) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 8px 24px 0px",
+        "count": 2
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 1px 0.5px 0px, rgba(0, 0, 0, 0.15) 0px -0.5px 1px 0px, rgba(0, 0, 0, 0.05) 0px -1.2px 0.5px 1px, rgba(0, 0, 0, 0.05) 0px 8px 16px 0px, rgb(255, 255, 255) -0.2px -1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0.5px 0.7px 2.5px 0px inset, rgba(0, 0, 0, 0.05) -1px -3px 8px 0px inset, rgba(0, 0, 0, 0.1) 0.5px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 1px 6px 6px 2px inset",
+        "count": 1
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 2px 12px 0px",
+        "count": 1
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 6px 20px 0px",
+        "count": 1
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "0px 0px 0px 2px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 1,
+      "variants": 6,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "0px 16px",
+      "borderWidth": null,
+      "radius": "8px",
+      "gap": null,
+      "elements": 8,
+      "variants": 7,
+      "dominantUnstyled": false
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 5,
+      "readable": 5,
+      "blocked": 0,
+      "stateRules": 801
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "color": "#000000",
+          "matchedElements": 8,
+          "rulesConsidered": 3
+        },
+        "focus": {
+          "color": "#222222",
+          "matchedElements": 7,
+          "rulesConsidered": 1
+        },
+        "focus-visible": {
+          "color": "#222222",
+          "matchedElements": 23,
+          "rulesConsidered": 9
+        },
+        "hover": {
+          "color": "#222222",
+          "matchedElements": 7,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "focus": {
+          "color": "#ff385c",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "focus-visible": {
+          "color": "#ffffff",
+          "matchedElements": 34,
+          "rulesConsidered": 3
+        },
+        "hover": {
+          "color": "#ff385c",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        }
+      },
+      "text": {
+        "focus-visible": {
+          "boxShadow": "0 0 0 2px #222222",
+          "matchedElements": 3,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#222222",
+          "matchedElements": 4,
+          "rulesConsidered": 1
+        }
+      }
+    },
+    "declarations": 21
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#222222",
+        "bg": "#ffffff",
+        "ratio": 15.91,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#6c6c6c",
+        "bg": "#ffffff",
+        "ratio": 5.25,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#da1249",
+        "bg": "#ffffff",
+        "ratio": 5.04,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "accent is body text",
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "border/background",
+        "fg": "#dddddd",
+        "bg": "#ffffff",
+        "ratio": 1.36,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.36
+  },
+  "warnings": [
+    "Accent taken from textColors, not a filled button — verify by eye.",
+    "Ignored #0073e5 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
+    "No spacing grid explains 75% of values (best 0.682); site may not be on a grid.",
+    "link box metrics come from 1 element out of 6 distinct shapes; thin evidence for a component token.",
+    "Strided sample: 963 of 3564 elements. Weights are relative only."
+  ],
+  "supportsDark": false,
+  "dark": null,
+  "harvest": {
+    "harvestVersion": 4,
+    "url": "https://www.airbnb.com/",
+    "title": "Airbnb | Vacation rentals, cabins, beach houses, & more",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 1278,
+    "textColors": {
+      "rgb(34, 34, 34)": {
+        "count": 193,
+        "area": 497080.2653503418,
+        "chars": 2376
+      },
+      "rgb(108, 108, 108)": {
+        "count": 69,
+        "area": 225081.5625,
+        "chars": 916
+      },
+      "rgb(255, 255, 255)": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      },
+      "rgb(218, 18, 73)": {
+        "count": 1,
+        "area": 832.6875,
+        "chars": 7
+      }
+    },
+    "bgColors": {
+      "rgb(255, 255, 255)": {
+        "count": 13,
+        "area": 3703343.453125,
+        "chars": 0
+      },
+      "rgb(34, 34, 34)": {
+        "count": 9,
+        "area": 1071.375,
+        "chars": 0
+      },
+      "rgb(221, 221, 221)": {
+        "count": 7,
+        "area": 2489,
+        "chars": 0
+      },
+      "rgb(218, 18, 73)": {
+        "count": 2,
+        "area": 4608,
+        "chars": 0
+      },
+      "rgb(242, 242, 242)": {
+        "count": 4,
+        "area": 6400,
+        "chars": 0
+      },
+      "rgb(247, 247, 247)": {
+        "count": 6,
+        "area": 3034789.453125,
+        "chars": 0
+      },
+      "rgb(255, 56, 92)": {
+        "count": 1,
+        "area": 1600,
+        "chars": 0
+      },
+      "rgb(0, 115, 229)": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      }
+    },
+    "borderColors": {
+      "rgb(221, 221, 221)": {
+        "count": 5,
+        "area": 364970.859375,
+        "chars": 0
+      },
+      "rgb(235, 235, 235)": {
+        "count": 4,
+        "area": 287846.625,
+        "chars": 0
+      },
+      "rgb(226, 226, 226)": {
+        "count": 1,
+        "area": 27375,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 3,
+        "area": 12465.624389648438,
+        "chars": 0
+      },
+      "rgba(255, 255, 255, 0.5)": {
+        "count": 1,
+        "area": 3993.7503051757812,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 263,
+        "area": 722994.5153503418,
+        "chars": 3299
+      },
+      "-apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      }
+    },
+    "fontSizes": {
+      "14px": {
+        "count": 245,
+        "area": 639936.1872253418,
+        "chars": 3055
+      },
+      "28px": {
+        "count": 3,
+        "area": 3,
+        "chars": 45
+      },
+      "12px": {
+        "count": 7,
+        "area": 21159.1875,
+        "chars": 58
+      },
+      "22px": {
+        "count": 3,
+        "area": 61386,
+        "chars": 93
+      },
+      "21px": {
+        "count": 3,
+        "area": 90.046875,
+        "chars": 33
+      },
+      "10px": {
+        "count": 3,
+        "area": 2498.0625,
+        "chars": 22
+      }
+    },
+    "fontWeights": {
+      "400": {
+        "count": 155,
+        "area": 355605.6872253418,
+        "chars": 2191
+      },
+      "500": {
+        "count": 103,
+        "area": 369373.75,
+        "chars": 1037
+      },
+      "700": {
+        "count": 6,
+        "area": 93.046875,
+        "chars": 78
+      }
+    },
+    "lineHeights": {
+      "20.02px": {
+        "count": 14,
+        "area": 14,
+        "chars": 141
+      },
+      "40.04px": {
+        "count": 3,
+        "area": 3,
+        "chars": 45
+      },
+      "18px": {
+        "count": 231,
+        "area": 639922.1872253418,
+        "chars": 2914
+      },
+      "16px": {
+        "count": 7,
+        "area": 21159.1875,
+        "chars": 58
+      },
+      "26px": {
+        "count": 3,
+        "area": 61386,
+        "chars": 93
+      },
+      "30.03px": {
+        "count": 3,
+        "area": 90.046875,
+        "chars": 33
+      },
+      "12px": {
+        "count": 3,
+        "area": 2498.0625,
+        "chars": 22
+      }
+    },
+    "letterSpacings": {
+      "-0.44px": {
+        "count": 3,
+        "area": 61386,
+        "chars": 93
+      },
+      "0.2px": {
+        "count": 3,
+        "area": 2498.0625,
+        "chars": 22
+      }
+    },
+    "typeStyles": {
+      "link|14px|400|20.02px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 3,
+        "chars": 45
+      },
+      "h1|28px|700|40.04px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 3,
+        "chars": 45
+      },
+      "text|14px|500|18px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 59,
+        "area": 180754.1875,
+        "chars": 528
+      },
+      "text|14px|400|20.02px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 11,
+        "area": 11,
+        "chars": 96
+      },
+      "text|12px|500|16px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 6,
+        "area": 18021.9375,
+        "chars": 24
+      },
+      "text|14px|400|18px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 57,
+        "area": 188041.4997253418,
+        "chars": 678
+      },
+      "h2|22px|500|26px|-0.44px|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 61386,
+        "chars": 93
+      },
+      "button|14px|500|18px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 24,
+        "area": 53183.25,
+        "chars": 318
+      },
+      "h2|21px|700|30.03px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 3,
+        "area": 90.046875,
+        "chars": 33
+      },
+      "h3|14px|500|18px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 9,
+        "area": 53117.71875,
+        "chars": 60
+      },
+      "link|14px|400|18px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 81,
+        "area": 162747.5625,
+        "chars": 1323
+      },
+      "text|12px|400|16px|normal|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 3137.25,
+        "chars": 34
+      },
+      "link|14px|500|18px|normal|-apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      },
+      "text|10px|500|12px|0.2px|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 1,
+        "area": 832.6875,
+        "chars": 7
+      },
+      "text|10px|400|12px|0.2px|\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 2,
+        "area": 1665.375,
+        "chars": 15
+      }
+    },
+    "states": {
+      "button|focus|color:#222222": {
+        "rules": 1,
+        "matched": 7
+      },
+      "link|focus|color:#FF385C": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|color:#222222": {
+        "rules": 2,
+        "matched": 23
+      },
+      "button|focus-visible|box-shadow:var( --dls-button_box-shadow,0 0 0 2px #FFFFFF,0 0 0 4px #222222 )": {
+        "rules": 1,
+        "matched": 6
+      },
+      "button|focus-visible|box-shadow:none": {
+        "rules": 1,
+        "matched": 11
+      },
+      "button|focus-visible|box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #222222": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus-visible|color:#FFFFFF": {
+        "rules": 1,
+        "matched": 34
+      },
+      "link|focus-visible|box-shadow:0 0 0 2px var(--dls-text-link_focus-accent-color,#3F3F3F)": {
+        "rules": 1,
+        "matched": 34
+      },
+      "button|focus-visible|border-color:currentcolor": {
+        "rules": 1,
+        "matched": 16
+      },
+      "button|focus-visible|box-shadow:0 0 0 2px #222222,0 0 0 4px rgba(255,255,255,0.8)": {
+        "rules": 2,
+        "matched": 16
+      },
+      "text|focus-visible|box-shadow:0 0 0 2px #222222": {
+        "rules": 1,
+        "matched": 3
+      },
+      "button|focus-visible|background-color:transparent": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|box-shadow:0 0 0 2px #222222": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|border-color:var(--dls-button_border-color_focus)": {
+        "rules": 1,
+        "matched": 7
+      },
+      "link|focus-visible|background-color:var(--dls-text-link_focus-accent-color,#3F3F3F)": {
+        "rules": 1,
+        "matched": 34
+      },
+      "button|hover|color:#222222": {
+        "rules": 1,
+        "matched": 7
+      },
+      "link|hover|color:#FF385C": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|color:#222222": {
+        "rules": 1,
+        "matched": 4
+      },
+      "button|active|color:#222222": {
+        "rules": 1,
+        "matched": 7
+      },
+      "button|active|color:#000000": {
+        "rules": 1,
+        "matched": 8
+      },
+      "button|active|border-color:currentcolor": {
+        "rules": 1,
+        "matched": 8
+      }
+    },
+    "componentBoxes": {
+      "link|0px|0px|0px|normal": {
+        "count": 19,
+        "area": 144124.6875,
+        "chars": 0
+      },
+      "link|0px 5px 0px 0px|0px|0px|normal": {
+        "count": 1,
+        "area": 2375.4375,
+        "chars": 0
+      },
+      "link|0px 0px 0px 5px|0px|0px|normal": {
+        "count": 1,
+        "area": 3728.25,
+        "chars": 0
+      },
+      "link|0px 0px 0px 2px|0px|0px|normal": {
+        "count": 1,
+        "area": 3803.0625,
+        "chars": 0
+      },
+      "button|0px|0px|32px|normal": {
+        "count": 2,
+        "area": 37070.34375,
+        "chars": 0
+      },
+      "button|0px|0px|50px|normal": {
+        "count": 1,
+        "area": 2304,
+        "chars": 0
+      },
+      "button|11px 12px|0px|20px|normal": {
+        "count": 1,
+        "area": 4851.25,
+        "chars": 0
+      },
+      "button|0px|0px|50%|normal": {
+        "count": 2,
+        "area": 3200,
+        "chars": 0
+      },
+      "button|0px 16px|0px|8px|normal": {
+        "count": 8,
+        "area": 17727.75,
+        "chars": 106
+      },
+      "button|0px|0px|8px|4px": {
+        "count": 1,
+        "area": 1614.65625,
+        "chars": 0
+      },
+      "link|0px|0px|4px|normal": {
+        "count": 28,
+        "area": 57270.375,
+        "chars": 441
+      },
+      "button|6px 8px|0px|12px|normal": {
+        "count": 2,
+        "area": 5331.5625,
+        "chars": 0
+      },
+      "link|0px|0px|50%|normal": {
+        "count": 3,
+        "area": 768,
+        "chars": 0
+      }
+    },
+    "styleSheets": {
+      "total": 5,
+      "readable": 5,
+      "blocked": 0,
+      "stateRules": 801
+    },
+    "radii": {
+      "1.5px": {
+        "count": 2,
+        "area": 18,
+        "chars": 0
+      },
+      "0px": {
+        "count": 2,
+        "area": 18,
+        "chars": 0
+      },
+      "32px": {
+        "count": 10,
+        "area": 306570,
+        "chars": 0
+      },
+      "100px": {
+        "count": 4,
+        "area": 205260,
+        "chars": 0
+      },
+      "50px": {
+        "count": 4,
+        "area": 9216,
+        "chars": 0
+      },
+      "20px": {
+        "count": 1,
+        "area": 4851.25,
+        "chars": 0
+      },
+      "50%": {
+        "count": 14,
+        "area": 9380,
+        "chars": 0
+      },
+      "8px": {
+        "count": 27,
+        "area": 58027.21875,
+        "chars": 318
+      },
+      "3px": {
+        "count": 3,
+        "area": 450,
+        "chars": 0
+      },
+      "4px": {
+        "count": 84,
+        "area": 171811.125,
+        "chars": 1323
+      },
+      "12px": {
+        "count": 6,
+        "area": 15994.6875,
+        "chars": 0
+      },
+      "10px": {
+        "count": 1,
+        "area": 1600,
+        "chars": 0
+      },
+      "24px": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      },
+      "40px": {
+        "count": 9,
+        "area": 50103.78065490723,
+        "chars": 0
+      }
+    },
+    "shadows": {
+      "rgba(0, 0, 0, 0.02) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 8px 24px 0px": {
+        "count": 2,
+        "area": 102630,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.1) 0px 6px 20px 0px": {
+        "count": 1,
+        "area": 18312,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0) 0px 2px 12px 0px": {
+        "count": 1,
+        "area": 25500,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.1) 0px 3px 2.5px 0px, rgba(0, 0, 0, 0.15) 0px 1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 0.8px 0.4px 0px, rgb(255, 255, 255) 0px 1px 1.5px 0px inset, rgba(58, 58, 58, 0.02) 0px 10px 15px 0px inset, rgba(255, 255, 255, 0.6) 0px -1.5px 0.8px 0px inset, rgba(0, 0, 0, 0.3) 0px -1.5px 0.75px 0px inset": {
+        "count": 3,
+        "area": 11614.343170166016,
+        "chars": 0
+      },
+      "rgb(255, 255, 255) 0px 1px 0.5px 0px, rgba(0, 0, 0, 0.15) 0px -0.5px 1px 0px, rgba(0, 0, 0, 0.05) 0px -1.2px 0.5px 1px, rgba(0, 0, 0, 0.05) 0px 8px 16px 0px, rgb(255, 255, 255) -0.2px -1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0.5px 0.7px 2.5px 0px inset, rgba(0, 0, 0, 0.05) -1px -3px 8px 0px inset, rgba(0, 0, 0, 0.1) 0.5px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 1px 6px 6px 2px inset": {
+        "count": 1,
+        "area": 3718.062789916992,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "2": {
+        "count": 14,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 38,
+        "area": 0,
+        "chars": 0
+      },
+      "5": {
+        "count": 11,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 7,
+        "area": 0,
+        "chars": 0
+      },
+      "7": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 53,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 15,
+        "area": 0,
+        "chars": 0
+      },
+      "11": {
+        "count": 25,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 16,
+        "area": 0,
+        "chars": 0
+      },
+      "14": {
+        "count": 4,
+        "area": 0,
+        "chars": 0
+      },
+      "15": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 58,
+        "area": 0,
+        "chars": 0
+      },
+      "18": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "19": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "22": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 25,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 5,
+        "area": 0,
+        "chars": 0
+      },
+      "35": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(242, 242, 242)": {
+        "count": 4,
+        "area": 6400,
+        "chars": 0
+      },
+      "rgb(255, 255, 255)": {
+        "count": 3,
+        "area": 19912,
+        "chars": 0
+      },
+      "rgb(0, 115, 229)": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      }
+    },
+    "interactiveRadius": {
+      "0px": {
+        "count": 50,
+        "area": 360313.9375,
+        "chars": 0
+      },
+      "32px": {
+        "count": 4,
+        "area": 67760.34375,
+        "chars": 0
+      },
+      "50px": {
+        "count": 2,
+        "area": 4608,
+        "chars": 0
+      },
+      "20px": {
+        "count": 1,
+        "area": 4851.25,
+        "chars": 0
+      },
+      "50%": {
+        "count": 14,
+        "area": 9380,
+        "chars": 0
+      },
+      "8px": {
+        "count": 27,
+        "area": 58027.21875,
+        "chars": 318
+      },
+      "4px": {
+        "count": 84,
+        "area": 171811.125,
+        "chars": 1323
+      },
+      "12px": {
+        "count": 6,
+        "area": 15994.6875,
+        "chars": 0
+      },
+      "24px": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      },
+      "40px": {
+        "count": 5,
+        "area": 34771.37469482422,
+        "chars": 0
+      }
+    },
+    "interactiveFg": {
+      "rgb(255, 56, 92)": {
+        "count": 2,
+        "area": 10560,
+        "chars": 0
+      },
+      "rgb(34, 34, 34)": {
+        "count": 134,
+        "area": 357859.4684448242,
+        "chars": 1344
+      },
+      "rgb(108, 108, 108)": {
+        "count": 57,
+        "area": 359098.46875,
+        "chars": 297
+      },
+      "rgb(255, 255, 255)": {
+        "count": 1,
+        "area": 2077.96875,
+        "chars": 7
+      }
+    },
+    "headingSizes": {
+      "28px": {
+        "count": 3,
+        "area": 3,
+        "chars": 45
+      },
+      "22px": {
+        "count": 3,
+        "area": 61386,
+        "chars": 93
+      },
+      "21px": {
+        "count": 3,
+        "area": 90.046875,
+        "chars": 33
+      },
+      "14px": {
+        "count": 9,
+        "area": 53117.71875,
+        "chars": 60
+      }
+    },
+    "headingFamilies": {
+      "\"Airbnb Cereal VF\", Circular, -apple-system, BlinkMacSystemFont, Roboto, \"Helvetica Neue\", sans-serif": {
+        "count": 18,
+        "area": 114596.765625,
+        "chars": 231
+      }
+    },
+    "headingWeights": {
+      "500": {
+        "count": 12,
+        "area": 114503.71875,
+        "chars": 153
+      },
+      "700": {
+        "count": 6,
+        "area": 93.046875,
+        "chars": 78
+      }
+    },
+    "pageBg": "rgb(255, 255, 255)",
+    "elementCount": 3564,
+    "sampled": 963,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 1183
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 1186
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 1195
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": null
+}

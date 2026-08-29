@@ -131,6 +131,12 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   any clusterer change: it inherits name, description, categories and brand from
   the existing file, because none of those exist in a capture and a refresh that
   dropped them would silently un-categorise the catalogue.
+- `src/lib/colornames.mjs` names a measured accent at two levels: the broad hue
+  from `hueFamily`, and a specific shade (emerald, indigo, rose, slate). Matched
+  on **hue angle alone**, not nearest deltaE — GOV.UK's dark forest and Shopify's
+  bright mint are both unarguably green, and full-distance matching would file
+  them apart. Anchors are a classification vocabulary, never emitted as values,
+  so the filter stays on the measured side of the line unlike categories.
 - `src/lib/facets.mjs` derives the catalogue facets — polarity, shape, accent
   hue, contrast band — from a capture. It is the single definition behind
   `/systems`, `/r/index.json` and MCP `search_designs`, so the three cannot

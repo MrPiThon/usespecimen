@@ -35,7 +35,11 @@ const describe = s => [
   `${s.slug} — ${s.name}`,
   s.description ? `  ${s.description}` : null,
   `  brand: ${s.brand}  ·  ${s.polarity ?? 'unknown'}${s.supportsDark ? ' (also ships dark)' : ''}`
-    + `  ·  ${s.shape ?? '?'}  ·  ${s.hue ?? '?'} accent  ·  body ${s.bodyContrast ?? '?'}:1`,
+    + `  ·  ${s.shape ?? '?'}  ·  body ${s.bodyContrast ?? '?'}:1`,
+  // Both names, because an agent asked for "an emerald system" and one asked for
+  // "something green" should each recognise this line.
+  `  accent: ${s.accent ?? '?'} — ${s.shade ?? '?'} (${s.hue ?? '?'})`,
+  (s.categories ?? []).length ? `  categories: ${s.categories.join(', ')}` : null,
   `  palette: ${s.palette.filter(Boolean).join(' ')}`,
   `  verified ${String(s.capturedAt).slice(0, 10)} against ${s.source}`,
   // Built from THIS server's registry, not the canonical URL baked into the
@@ -60,9 +64,13 @@ server.registerTool('search_designs', {
     shape: z.enum(['sharp', 'rounded', 'pill']).optional()
       .describe('Corner treatment: sharp means no radius anywhere'),
     hue: z.string().optional()
-      .describe('Hue family of the accent — neutral, red, orange, yellow, green, teal, blue, purple, pink'),
+      .describe('Broad hue family of the accent — neutral, red, orange, yellow, green, teal, blue, purple, pink'),
+    shade: z.string().optional()
+      .describe('Specific shade of the accent — emerald, indigo, rose, fuchsia, lime, slate, charcoal and so on. Narrower than hue.'),
+    category: z.string().optional()
+      .describe('What the system is FOR, declared rather than measured — saas, developer-tools, e-commerce, marketing, editorial, docs, portfolio, public-sector, finance, agency'),
   },
-}, async ({ query, polarity, supportsDark, shape, hue }) => {
+}, async ({ query, polarity, supportsDark, shape, hue, shade, category }) => {
   let data;
   try {
     data = await catalog();
@@ -76,6 +84,8 @@ server.registerTool('search_designs', {
     if (supportsDark === true && !s.supportsDark) return false;
     if (shape && s.shape !== shape) return false;
     if (hue && s.hue !== hue) return false;
+    if (shade && s.shade !== shade) return false;
+    if (category && !(s.categories ?? []).includes(category)) return false;
     if (!q) return true;
     return [s.slug, s.name, s.brand, s.description].filter(Boolean)
       .some(f => String(f).toLowerCase().includes(q));

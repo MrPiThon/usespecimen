@@ -1,0 +1,2653 @@
+{
+  "capturedAt": "2026-08-29T02:41:08.325Z",
+  "tool": "@usespecimen/extractor@0.0.0",
+  "method": "playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)",
+  "source": {
+    "url": "https://slack.com/",
+    "title": "Slack | AI Work Platform & Productivity Tools",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 11192,
+    "elementCount": 7158,
+    "sampled": 2062,
+    "sampleRatio": 0.288
+  },
+  "harvestVersion": 4,
+  "clusterVersion": 14,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.5486,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f9f0ff",
+        "weightShare": 0.1091,
+        "variants": [
+          "#f9edff"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#696969",
+        "weightShare": 0.1036,
+        "variants": [
+          "#5e5d60",
+          "#757575"
+        ]
+      },
+      "primary": {
+        "hex": "#611f69",
+        "weightShare": 0.0165,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 12
+      },
+      "primaryForeground": {
+        "hex": "#ffffff",
+        "weightShare": 0.2454,
+        "variants": []
+      },
+      "border": {
+        "hex": "#f5f5f5",
+        "weightShare": 0.4688,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f9f0ff",
+          "deltaL": 0.034,
+          "areaShare": 0.1091
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 21,
+          "charShare": 0.5486
+        },
+        {
+          "name": "text-2",
+          "hex": "#696969",
+          "contrast": 5.49,
+          "charShare": 0.1036
+        }
+      ]
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 115
+      },
+      {
+        "hex": "#f9f0ff",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.966,
+        "chroma": 0.022,
+        "count": 103
+      },
+      {
+        "hex": "#4a154b",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.306,
+        "chroma": 0.108,
+        "count": 8
+      },
+      {
+        "hex": "#481a54",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.316,
+        "chroma": 0.109,
+        "count": 6
+      },
+      {
+        "hex": "#808080",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.598,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#611f69",
+        "role": "primary",
+        "hue": "purple",
+        "lightness": 0.374,
+        "chroma": 0.136,
+        "count": 23
+      },
+      {
+        "hex": "#2e0039",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.221,
+        "chroma": 0.107,
+        "count": 1
+      },
+      {
+        "hex": "#e8f5fa",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.962,
+        "chroma": 0.015,
+        "count": 6
+      },
+      {
+        "hex": "#696969",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.521,
+        "chroma": 0,
+        "count": 100
+      },
+      {
+        "hex": "#1264a3",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.491,
+        "chroma": 0.124,
+        "count": 72
+      },
+      {
+        "hex": "#730394",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.416,
+        "chroma": 0.202,
+        "count": 36
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#9602c7",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.508,
+        "chroma": 0.252,
+        "count": 16
+      },
+      {
+        "hex": "#1d1d1d",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.231,
+        "chroma": 0,
+        "count": 27
+      },
+      {
+        "hex": "#454245",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.383,
+        "chroma": 0.006,
+        "count": 13
+      },
+      {
+        "hex": "#3d0157",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.276,
+        "chroma": 0.137,
+        "count": 8
+      },
+      {
+        "hex": "#d17dfe",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.73,
+        "chroma": 0.195,
+        "count": 15
+      },
+      {
+        "hex": "#0b4c8c",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.416,
+        "chroma": 0.122,
+        "count": 6
+      },
+      {
+        "hex": "#f5f5f5",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.97,
+        "chroma": 0,
+        "count": 15
+      },
+      {
+        "hex": "#ebeaeb",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.938,
+        "chroma": 0.002,
+        "count": 10
+      },
+      {
+        "hex": "#eac8fe",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.879,
+        "chroma": 0.081,
+        "count": 2
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 9,
+      "text": 13,
+      "border": 5,
+      "interactive": 2
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Salesforce-Sans",
+      "class": "sans",
+      "stack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "sizePx": 18,
+      "weight": 400,
+      "lineHeightPx": null,
+      "lineHeightRatio": null,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Salesforce-Avant-Garde",
+      "class": "sans",
+      "stack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "largestPx": 64,
+      "weight": 700,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "Salesforce-Sans",
+        "class": "sans",
+        "stack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+      },
+      {
+        "family": "Salesforce-Avant-Garde",
+        "class": "sans",
+        "stack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+      }
+    ],
+    "scale": [
+      {
+        "name": "3xs",
+        "px": 12,
+        "rem": 0.667,
+        "weightShare": 0.0301,
+        "variants": []
+      },
+      {
+        "name": "2xs",
+        "px": 14,
+        "rem": 0.778,
+        "weightShare": 0.1585,
+        "variants": [
+          13.5,
+          14.4
+        ]
+      },
+      {
+        "name": "xs",
+        "px": 15.3436,
+        "rem": 0.852,
+        "weightShare": 0.025,
+        "variants": [
+          15
+        ]
+      },
+      {
+        "name": "sm",
+        "px": 16,
+        "rem": 0.889,
+        "weightShare": 0.2187,
+        "variants": [
+          15.75
+        ]
+      },
+      {
+        "name": "base",
+        "px": 18,
+        "rem": 1,
+        "weightShare": 0.2977,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 22.4,
+        "rem": 1.244,
+        "weightShare": 0.0413,
+        "variants": [
+          22,
+          22.56
+        ]
+      },
+      {
+        "name": "xl",
+        "px": 23.3436,
+        "rem": 1.297,
+        "weightShare": 0.0262,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 24,
+        "rem": 1.333,
+        "weightShare": 0.1165,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 28,
+        "rem": 1.556,
+        "weightShare": 0.0219,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 32,
+        "rem": 1.778,
+        "weightShare": 0.0198,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 50.4,
+        "rem": 2.8,
+        "weightShare": 0.0088,
+        "variants": [
+          50
+        ]
+      },
+      {
+        "name": "6xl",
+        "px": 58,
+        "rem": 3.222,
+        "weightShare": 0.0124,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 21,
+    "roles": {
+      "body": {
+        "fontFamily": "Salesforce-Sans",
+        "fontStack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 31,
+        "chars": 3561
+      },
+      "body-sm": {
+        "fontFamily": "Salesforce-Sans",
+        "fontStack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 60,
+        "chars": 2883
+      },
+      "caption": {
+        "fontFamily": "Salesforce-Sans",
+        "fontStack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.56,
+        "letterSpacing": "-0.0216px",
+        "elements": 75,
+        "chars": 926
+      },
+      "caption-sm": {
+        "fontFamily": "Salesforce-Sans",
+        "fontStack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 700,
+        "lineHeight": 1.5,
+        "letterSpacing": "0.684px",
+        "elements": 30,
+        "chars": 474
+      },
+      "body-lg": {
+        "fontFamily": "Salesforce-Sans",
+        "fontStack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "22.56px",
+        "fontWeight": 600,
+        "lineHeight": 1.21,
+        "letterSpacing": "-0.272px",
+        "elements": 5,
+        "chars": 166
+      },
+      "lead": {
+        "fontFamily": "Salesforce-Avant-Garde",
+        "fontStack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "24px",
+        "fontWeight": 600,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 36,
+        "chars": 1104
+      },
+      "lead-lg": {
+        "fontFamily": "Salesforce-Avant-Garde",
+        "fontStack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "28px",
+        "fontWeight": 600,
+        "lineHeight": 1.21,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 262
+      },
+      "h1": {
+        "fontFamily": "Salesforce-Avant-Garde",
+        "fontStack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "32px",
+        "fontWeight": 700,
+        "lineHeight": 1.12,
+        "letterSpacing": "-0.384px",
+        "elements": 2,
+        "chars": 94
+      },
+      "h2": {
+        "fontFamily": "Salesforce-Avant-Garde",
+        "fontStack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "32px",
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": "-0.256px",
+        "elements": 5,
+        "chars": 192
+      },
+      "h3": {
+        "fontFamily": "Salesforce-Avant-Garde",
+        "fontStack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "22.4px",
+        "fontWeight": 700,
+        "lineHeight": 1.34,
+        "letterSpacing": "-0.0896px",
+        "elements": 14,
+        "chars": 469
+      },
+      "button": {
+        "fontFamily": "Salesforce-Avant-Garde",
+        "fontStack": "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 60
+      },
+      "link": {
+        "fontFamily": "Salesforce-Sans",
+        "fontStack": "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 700,
+        "lineHeight": 1.29,
+        "letterSpacing": "0.798px",
+        "elements": 25,
+        "chars": 332
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 70
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.746,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.545
+      },
+      {
+        "base": 6,
+        "share": 0.326
+      },
+      {
+        "base": 5,
+        "share": 0.103
+      },
+      {
+        "base": 4,
+        "share": 0.746
+      }
+    ],
+    "scale": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32
+    ],
+    "distinctValues": 38
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": [
+      {
+        "decision": "spacing.base",
+        "measured": 0.7458,
+        "threshold": 0.75,
+        "margin": -0.0056,
+        "held": null
+      }
+    ]
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 101
+      },
+      {
+        "name": "md",
+        "px": 8,
+        "count": 25
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "count": 132
+      },
+      {
+        "name": "xl",
+        "px": 48,
+        "count": 15
+      }
+    ],
+    "button": "4px",
+    "pill": true,
+    "pillValue": "50%",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 0px 32px 0px",
+        "count": 61
+      },
+      {
+        "value": "rgba(131, 56, 138, 0.08) 0px 4.8px 14px 6.4px",
+        "count": 12
+      },
+      {
+        "value": "rgb(97, 31, 105) 0px 0px 0px 1px inset",
+        "count": 7
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.08) 0px 1px 3px 0px",
+        "count": 6
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 1px inset",
+        "count": 3
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "19px 40px 20px 40px",
+      "borderWidth": null,
+      "radius": "4px",
+      "gap": null,
+      "elements": 7,
+      "variants": 8,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "12px",
+      "borderWidth": null,
+      "radius": "90px",
+      "gap": null,
+      "elements": 4,
+      "variants": 5,
+      "dominantUnstyled": false
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 8,
+      "readable": 8,
+      "blocked": 0,
+      "stateRules": 408
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "backgroundColor": "#f5f4f5",
+          "opacity": "1",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "focus": {
+          "outlineColor": "#000000",
+          "matchedElements": 12,
+          "rulesConsidered": 5
+        },
+        "focus-visible": {
+          "outlineColor": "#611f69",
+          "matchedElements": 6,
+          "rulesConsidered": 2
+        },
+        "hover": {
+          "color": "#333333",
+          "borderColor": "#888888",
+          "opacity": "0.9",
+          "matchedElements": 7,
+          "rulesConsidered": 10
+        }
+      },
+      "link": {
+        "active": {
+          "color": "#1264a3",
+          "matchedElements": 303,
+          "rulesConsidered": 7
+        },
+        "focus": {
+          "color": "#1264a3",
+          "matchedElements": 303,
+          "rulesConsidered": 9
+        },
+        "focus-visible": {
+          "boxShadow": "none",
+          "outlineColor": "#730394",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#1264a3",
+          "matchedElements": 465,
+          "rulesConsidered": 15
+        }
+      },
+      "text": {
+        "focus": {
+          "color": "#000000",
+          "matchedElements": 6,
+          "rulesConsidered": 5
+        },
+        "focus-visible": {
+          "outlineColor": "#ffffff",
+          "matchedElements": 6,
+          "rulesConsidered": 3
+        },
+        "hover": {
+          "color": "#1264a3",
+          "matchedElements": 30,
+          "rulesConsidered": 6
+        }
+      }
+    },
+    "declarations": 64
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#ffffff",
+        "ratio": 21,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#696969",
+        "bg": "#ffffff",
+        "ratio": 5.49,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#ffffff",
+        "bg": "#611f69",
+        "ratio": 11,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#611f69",
+        "bg": "#ffffff",
+        "ratio": 11,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#f5f5f5",
+        "bg": "#ffffff",
+        "ratio": 1.09,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.09
+  },
+  "warnings": [
+    "No spacing grid explains 75% of values (best 0.746); site may not be on a grid.",
+    "21 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Strided sample: 2062 of 7158 elements. Weights are relative only."
+  ],
+  "supportsDark": false,
+  "dark": null,
+  "harvest": {
+    "harvestVersion": 4,
+    "url": "https://slack.com/",
+    "title": "Slack | AI Work Platform & Productivity Tools",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 11192,
+    "textColors": {
+      "rgb(255, 255, 255)": {
+        "count": 55,
+        "area": 1655036.1606445312,
+        "chars": 1904
+      },
+      "rgb(29, 29, 29)": {
+        "count": 27,
+        "area": 212525.041015625,
+        "chars": 239
+      },
+      "rgb(97, 31, 105)": {
+        "count": 10,
+        "area": 167731.078125,
+        "chars": 131
+      },
+      "rgb(115, 3, 148)": {
+        "count": 36,
+        "area": 138722.431640625,
+        "chars": 651
+      },
+      "rgb(0, 0, 0)": {
+        "count": 221,
+        "area": 4252716.8701171875,
+        "chars": 9599
+      },
+      "rgb(117, 117, 117)": {
+        "count": 1,
+        "area": 2170.24658203125,
+        "chars": 20
+      },
+      "rgb(69, 66, 69)": {
+        "count": 13,
+        "area": 14980.1123046875,
+        "chars": 111
+      },
+      "rgb(72, 26, 84)": {
+        "count": 45,
+        "area": 613144.34375,
+        "chars": 1075
+      },
+      "rgb(11, 76, 140)": {
+        "count": 6,
+        "area": 7023.638671875,
+        "chars": 18
+      },
+      "rgb(18, 100, 163)": {
+        "count": 72,
+        "area": 196935.2986907959,
+        "chars": 1479
+      },
+      "rgb(61, 1, 87)": {
+        "count": 8,
+        "area": 36906.75,
+        "chars": 60
+      },
+      "rgba(0, 0, 0, 0)": {
+        "count": 12,
+        "area": 542661.5,
+        "chars": 393
+      },
+      "rgb(150, 2, 199)": {
+        "count": 16,
+        "area": 330767.09375,
+        "chars": 393
+      },
+      "rgb(209, 125, 254)": {
+        "count": 15,
+        "area": 140998,
+        "chars": 24
+      },
+      "rgb(105, 105, 105)": {
+        "count": 87,
+        "area": 379536.3125,
+        "chars": 1391
+      },
+      "rgb(94, 93, 96)": {
+        "count": 12,
+        "area": 101395.35205078125,
+        "chars": 402
+      }
+    },
+    "bgColors": {
+      "rgb(255, 255, 255)": {
+        "count": 106,
+        "area": 36393080.189453125,
+        "chars": 309
+      },
+      "rgb(97, 31, 105)": {
+        "count": 23,
+        "area": 109523.4375,
+        "chars": 159
+      },
+      "rgb(249, 240, 255)": {
+        "count": 67,
+        "area": 5769332.125,
+        "chars": 474
+      },
+      "rgb(46, 0, 57)": {
+        "count": 1,
+        "area": 8214.53125,
+        "chars": 12
+      },
+      "rgb(74, 21, 75)": {
+        "count": 8,
+        "area": 3947755.78125,
+        "chars": 0
+      },
+      "rgb(232, 245, 250)": {
+        "count": 6,
+        "area": 7023.638671875,
+        "chars": 18
+      },
+      "rgba(255, 255, 255, 0.9)": {
+        "count": 3,
+        "area": 3072,
+        "chars": 0
+      },
+      "rgb(249, 237, 255)": {
+        "count": 36,
+        "area": 10803.25,
+        "chars": 0
+      },
+      "rgba(249, 237, 255, 0.25)": {
+        "count": 6,
+        "area": 4245430.125,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.5)": {
+        "count": 3,
+        "area": 180072,
+        "chars": 0
+      },
+      "rgb(72, 26, 84)": {
+        "count": 6,
+        "area": 2314272,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 3,
+        "area": 507,
+        "chars": 0
+      }
+    },
+    "borderColors": {
+      "rgb(18, 100, 163)": {
+        "count": 2,
+        "area": 2850.681640625,
+        "chars": 0
+      },
+      "rgb(235, 234, 235)": {
+        "count": 7,
+        "area": 10624,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.04)": {
+        "count": 15,
+        "area": 105043.28125,
+        "chars": 204
+      },
+      "rgb(234, 200, 254)": {
+        "count": 2,
+        "area": 52321.9375,
+        "chars": 0
+      },
+      "rgb(0, 0, 0)": {
+        "count": 3,
+        "area": 548641.787109375,
+        "chars": 0
+      },
+      "rgb(237, 234, 237)": {
+        "count": 3,
+        "area": 1276486.9375,
+        "chars": 0
+      }
+    },
+    "fontFamilies": {
+      "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 442,
+        "area": 4306965.462020874,
+        "chars": 13056
+      },
+      "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 194,
+        "area": 4486284.767822266,
+        "chars": 4834
+      }
+    },
+    "fontSizes": {
+      "14px": {
+        "count": 175,
+        "area": 1106860.9656829834,
+        "chars": 2431
+      },
+      "15px": {
+        "count": 6,
+        "area": 9301.947265625,
+        "chars": 50
+      },
+      "64px": {
+        "count": 1,
+        "area": 132234.609375,
+        "chars": 47
+      },
+      "18px": {
+        "count": 85,
+        "area": 2208444.7661132812,
+        "chars": 5326
+      },
+      "12px": {
+        "count": 64,
+        "area": 109396.27587890625,
+        "chars": 539
+      },
+      "22px": {
+        "count": 5,
+        "area": 43607.96875,
+        "chars": 68
+      },
+      "58px": {
+        "count": 6,
+        "area": 575567.34375,
+        "chars": 221
+      },
+      "22.56px": {
+        "count": 6,
+        "area": 63381.765625,
+        "chars": 201
+      },
+      "32px": {
+        "count": 9,
+        "area": 334436.8005371094,
+        "chars": 354
+      },
+      "16px": {
+        "count": 106,
+        "area": 713269.2414550781,
+        "chars": 3911
+      },
+      "24px": {
+        "count": 60,
+        "area": 1188863.1000976562,
+        "chars": 2084
+      },
+      "76px": {
+        "count": 2,
+        "area": 57384.59375,
+        "chars": 9
+      },
+      "21px": {
+        "count": 2,
+        "area": 39932.578125,
+        "chars": 108
+      },
+      "15.75px": {
+        "count": 2,
+        "area": 370.78125,
+        "chars": 2
+      },
+      "50.4px": {
+        "count": 2,
+        "area": 452640,
+        "chars": 85
+      },
+      "96px": {
+        "count": 10,
+        "area": 99528,
+        "chars": 16
+      },
+      "50px": {
+        "count": 13,
+        "area": 132700.75,
+        "chars": 72
+      },
+      "13.5px": {
+        "count": 7,
+        "area": 981.75,
+        "chars": 7
+      },
+      "30.3589px": {
+        "count": 3,
+        "area": 55922.24609375,
+        "chars": 84
+      },
+      "23.3436px": {
+        "count": 14,
+        "area": 247170,
+        "chars": 469
+      },
+      "15.3436px": {
+        "count": 10,
+        "area": 100782,
+        "chars": 398
+      },
+      "28px": {
+        "count": 12,
+        "area": 317049,
+        "chars": 391
+      },
+      "48px": {
+        "count": 4,
+        "area": 118894.6875,
+        "chars": 18
+      },
+      "36px": {
+        "count": 2,
+        "area": 247078.5,
+        "chars": 88
+      },
+      "42.6155px": {
+        "count": 1,
+        "area": 67432.55859375,
+        "chars": 36
+      },
+      "22.4px": {
+        "count": 14,
+        "area": 233970,
+        "chars": 469
+      },
+      "14.4px": {
+        "count": 10,
+        "area": 94578,
+        "chars": 398
+      },
+      "80px": {
+        "count": 5,
+        "area": 41470,
+        "chars": 8
+      }
+    },
+    "fontWeights": {
+      "300": {
+        "count": 12,
+        "area": 372677.03125,
+        "chars": 690
+      },
+      "400": {
+        "count": 325,
+        "area": 3480486.248779297,
+        "chars": 10885
+      },
+      "600": {
+        "count": 80,
+        "area": 1653572.462890625,
+        "chars": 2221
+      },
+      "700": {
+        "count": 219,
+        "area": 3286514.486923218,
+        "chars": 4094
+      }
+    },
+    "lineHeights": {
+      "18.004px": {
+        "count": 37,
+        "area": 370658.6092376709,
+        "chars": 458
+      },
+      "23.325px": {
+        "count": 2,
+        "area": 2850.681640625,
+        "chars": 17
+      },
+      "19.6px": {
+        "count": 6,
+        "area": 41487.931640625,
+        "chars": 177
+      },
+      "71.68px": {
+        "count": 1,
+        "area": 132234.609375,
+        "chars": 47
+      },
+      "27.99px": {
+        "count": 15,
+        "area": 211509.404296875,
+        "chars": 447
+      },
+      "18.66px": {
+        "count": 1,
+        "area": 2170.24658203125,
+        "chars": 20
+      },
+      "20.006px": {
+        "count": 7,
+        "area": 82184.0625,
+        "chars": 432
+      },
+      "72.5px": {
+        "count": 2,
+        "area": 260687.34375,
+        "chars": 90
+      },
+      "27.2px": {
+        "count": 6,
+        "area": 63381.765625,
+        "chars": 201
+      },
+      "17.152px": {
+        "count": 2,
+        "area": 2533.5966796875,
+        "chars": 6
+      },
+      "40px": {
+        "count": 8,
+        "area": 488906.875,
+        "chars": 312
+      },
+      "18px": {
+        "count": 30,
+        "area": 97234.5,
+        "chars": 474
+      },
+      "30px": {
+        "count": 42,
+        "area": 725670,
+        "chars": 1407
+      },
+      "24.88px": {
+        "count": 10,
+        "area": 105072,
+        "chars": 398
+      },
+      "56px": {
+        "count": 7,
+        "area": 816220.75,
+        "chars": 252
+      },
+      "0px": {
+        "count": 45,
+        "area": 6009.609375,
+        "chars": 45
+      },
+      "31.992px": {
+        "count": 1,
+        "area": 26598.00634765625,
+        "chars": 43
+      },
+      "104px": {
+        "count": 15,
+        "area": 140998,
+        "chars": 24
+      },
+      "36px": {
+        "count": 9,
+        "area": 298342.5,
+        "chars": 468
+      },
+      "50px": {
+        "count": 12,
+        "area": 84000,
+        "chars": 36
+      },
+      "22.864px": {
+        "count": 12,
+        "area": 78891.63208007812,
+        "chars": 384
+      },
+      "25.722px": {
+        "count": 3,
+        "area": 102344.494140625,
+        "chars": 144
+      },
+      "18.2px": {
+        "count": 12,
+        "area": 12817.9248046875,
+        "chars": 96
+      },
+      "21.77px": {
+        "count": 90,
+        "area": 335850.8125,
+        "chars": 1066
+      },
+      "35.84px": {
+        "count": 3,
+        "area": 92608.42553710938,
+        "chars": 130
+      },
+      "28px": {
+        "count": 10,
+        "area": 61435.3125,
+        "chars": 136
+      },
+      "20.8px": {
+        "count": 12,
+        "area": 101395.35205078125,
+        "chars": 402
+      },
+      "14.4px": {
+        "count": 4,
+        "area": 4490.0419921875,
+        "chars": 12
+      },
+      "37.9487px": {
+        "count": 3,
+        "area": 55922.24609375,
+        "chars": 84
+      },
+      "23.8593px": {
+        "count": 10,
+        "area": 100782,
+        "chars": 398
+      },
+      "17.5px": {
+        "count": 8,
+        "area": 91622.25,
+        "chars": 60
+      },
+      "34px": {
+        "count": 8,
+        "area": 227781.5,
+        "chars": 262
+      },
+      "47.7293px": {
+        "count": 1,
+        "area": 67432.55859375,
+        "chars": 36
+      },
+      "35px": {
+        "count": 4,
+        "area": 89267.5,
+        "chars": 129
+      },
+      "22.392px": {
+        "count": 10,
+        "area": 94578,
+        "chars": 398
+      }
+    },
+    "letterSpacings": {
+      "0.798px": {
+        "count": 37,
+        "area": 370658.6092376709,
+        "chars": 458
+      },
+      "-0.0216px": {
+        "count": 111,
+        "area": 521672.34228515625,
+        "chars": 1760
+      },
+      "-0.0168px": {
+        "count": 6,
+        "area": 41487.931640625,
+        "chars": 177
+      },
+      "-0.768px": {
+        "count": 1,
+        "area": 132234.609375,
+        "chars": 47
+      },
+      "-0.0144px": {
+        "count": 1,
+        "area": 2170.24658203125,
+        "chars": 20
+      },
+      "-0.464px": {
+        "count": 2,
+        "area": 260687.34375,
+        "chars": 90
+      },
+      "-0.272px": {
+        "count": 6,
+        "area": 63381.765625,
+        "chars": 201
+      },
+      "-0.256px": {
+        "count": 8,
+        "area": 488906.875,
+        "chars": 312
+      },
+      "0.684px": {
+        "count": 30,
+        "area": 97234.5,
+        "chars": 474
+      },
+      "-0.096px": {
+        "count": 15,
+        "area": 271128.00634765625,
+        "chars": 512
+      },
+      "-0.0192px": {
+        "count": 10,
+        "area": 105072,
+        "chars": 398
+      },
+      "0.216px": {
+        "count": 12,
+        "area": 160794.720703125,
+        "chars": 258
+      },
+      "-0.4032px": {
+        "count": 2,
+        "area": 452640,
+        "chars": 85
+      },
+      "-1.152px": {
+        "count": 10,
+        "area": 99528,
+        "chars": 16
+      },
+      "-0.0288px": {
+        "count": 18,
+        "area": 300031.6875,
+        "chars": 477
+      },
+      "-0.6px": {
+        "count": 13,
+        "area": 132700.75,
+        "chars": 72
+      },
+      "0.1px": {
+        "count": 12,
+        "area": 12817.9248046875,
+        "chars": 96
+      },
+      "0.8px": {
+        "count": 18,
+        "area": 195905.25,
+        "chars": 150
+      },
+      "-0.384px": {
+        "count": 3,
+        "area": 92608.42553710938,
+        "chars": 130
+      },
+      "-0.242871px": {
+        "count": 3,
+        "area": 55922.24609375,
+        "chars": 84
+      },
+      "-0.0933745px": {
+        "count": 14,
+        "area": 247170,
+        "chars": 469
+      },
+      "-0.0184123px": {
+        "count": 10,
+        "area": 100782,
+        "chars": 398
+      },
+      "-0.112px": {
+        "count": 8,
+        "area": 91622.25,
+        "chars": 60
+      },
+      "-0.511386px": {
+        "count": 1,
+        "area": 67432.55859375,
+        "chars": 36
+      },
+      "-0.224px": {
+        "count": 4,
+        "area": 89267.5,
+        "chars": 129
+      },
+      "-0.0896px": {
+        "count": 14,
+        "area": 233970,
+        "chars": 469
+      },
+      "-0.01728px": {
+        "count": 10,
+        "area": 94578,
+        "chars": 398
+      },
+      "-0.96px": {
+        "count": 5,
+        "area": 41470,
+        "chars": 8
+      }
+    },
+    "typeStyles": {
+      "link|14px|700|18.004px|0.798px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 25,
+        "area": 348541.390625,
+        "chars": 332
+      },
+      "text|15px|700|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 4742.28125,
+        "chars": 26
+      },
+      "text|15px|700|23.325px|-0.0216px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 2850.681640625,
+        "chars": 17
+      },
+      "link|15px|700|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 1708.984375,
+        "chars": 7
+      },
+      "text|14px|600|19.6px|-0.0168px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 35749.412109375,
+        "chars": 147
+      },
+      "link|14px|600|19.6px|-0.0168px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 5738.51953125,
+        "chars": 30
+      },
+      "h1|64px|700|71.68px|-0.768px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 132234.609375,
+        "chars": 47
+      },
+      "text|18px|400|27.99px|-0.0216px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 50714.68359375,
+        "chars": 189
+      },
+      "text|12px|400|18.66px|-0.0144px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 2170.24658203125,
+        "chars": 20
+      },
+      "text|14px|400|20.006px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 7,
+        "area": 82184.0625,
+        "chars": 432
+      },
+      "text|22px|600|normal|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 5,
+        "area": 43607.96875,
+        "chars": 68
+      },
+      "h2|58px|600|72.5px|-0.464px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 260687.34375,
+        "chars": 90
+      },
+      "text|18px|400|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 31,
+        "area": 1411193.40625,
+        "chars": 3561
+      },
+      "text|22.56px|700|27.2px|-0.272px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 11107.453125,
+        "chars": 35
+      },
+      "text|12px|700|17.152px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 2533.5966796875,
+        "chars": 6
+      },
+      "text|22.56px|600|27.2px|-0.272px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 5,
+        "area": 52274.3125,
+        "chars": 166
+      },
+      "h2|32px|700|40px|-0.256px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 5,
+        "area": 222368.375,
+        "chars": 192
+      },
+      "text|16px|400|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 60,
+        "area": 416196.046875,
+        "chars": 2883
+      },
+      "text|12px|700|18px|0.684px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 30,
+        "area": 97234.5,
+        "chars": 474
+      },
+      "h3|24px|700|30px|-0.096px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 14,
+        "area": 244530,
+        "chars": 469
+      },
+      "text|16px|400|24.88px|-0.0192px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 10,
+        "area": 105072,
+        "chars": 398
+      },
+      "button|18px|400|normal|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 8,
+        "area": 36906.75,
+        "chars": 60
+      },
+      "text|58px|600|56px|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 4,
+        "area": 314880,
+        "chars": 131
+      },
+      "text|24px|600|normal|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 36,
+        "area": 619392.59375,
+        "chars": 1104
+      },
+      "link|18px|400|27.99px|0.216px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 160794.720703125,
+        "chars": 258
+      },
+      "text|76px|400|normal|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 57384.59375,
+        "chars": 9
+      },
+      "text|21px|400|normal|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 39932.578125,
+        "chars": 108
+      },
+      "text|15.75px|400|0px|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 370.78125,
+        "chars": 2
+      },
+      "text|18px|300|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 6,
+        "area": 283660.046875,
+        "chars": 576
+      },
+      "text|16px|300|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 6,
+        "area": 89016.984375,
+        "chars": 114
+      },
+      "text|16px|700|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 9,
+        "area": 22403.390625,
+        "chars": 123
+      },
+      "h3|24px|700|31.992px|-0.096px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 26598.00634765625,
+        "chars": 43
+      },
+      "h2|50.4px|700|56px|-0.4032px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 452640,
+        "chars": 85
+      },
+      "text|96px|700|104px|-1.152px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 10,
+        "area": 99528,
+        "chars": 16
+      },
+      "text|24px|400|36px|-0.0288px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 9,
+        "area": 298342.5,
+        "chars": 468
+      },
+      "text|16px|400|0px|-0.0288px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 9,
+        "area": 1689.1875,
+        "chars": 9
+      },
+      "text|50px|700|50px|-0.6px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 84000,
+        "chars": 36
+      },
+      "text|16px|400|22.864px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 78891.63208007812,
+        "chars": 384
+      },
+      "text|12px|400|0px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 27,
+        "area": 2967.890625,
+        "chars": 27
+      },
+      "text|32px|700|40px|-0.256px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 19460,
+        "chars": 32
+      },
+      "text|18px|400|25.722px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 102344.494140625,
+        "chars": 144
+      },
+      "text|13.5px|400|0px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 7,
+        "area": 981.75,
+        "chars": 7
+      },
+      "text|14px|400|18.2px|0.1px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 12817.9248046875,
+        "chars": 96
+      },
+      "text|14px|700|18.004px|0.798px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 22117.2186126709,
+        "chars": 126
+      },
+      "h3|50px|700|56px|-0.6px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 48700.75,
+        "chars": 36
+      },
+      "text|14px|700|21.77px|0.8px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 6,
+        "area": 30574.5,
+        "chars": 50
+      },
+      "text|14px|400|21.77px|-0.0216px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 75,
+        "area": 290595.90625,
+        "chars": 926
+      },
+      "link|14px|600|normal|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 3,
+        "area": 6908.625,
+        "chars": 42
+      },
+      "link|14px|400|21.77px|-0.0216px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 9,
+        "area": 14680.40625,
+        "chars": 90
+      },
+      "h1|32px|700|35.84px|-0.384px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 66897.26733398438,
+        "chars": 94
+      },
+      "text|18px|600|28px|-0.0216px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 10,
+        "area": 61435.3125,
+        "chars": 136
+      },
+      "text|18px|700|20.8px|-0.0216px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 101395.35205078125,
+        "chars": 402
+      },
+      "text|12px|700|14.4px|normal|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 4,
+        "area": 4490.0419921875,
+        "chars": 12
+      },
+      "h2|30.3589px|700|37.9487px|-0.242871px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 37615.03125,
+        "chars": 52
+      },
+      "h3|23.3436px|700|30px|-0.0933745px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 14,
+        "area": 247170,
+        "chars": 469
+      },
+      "text|15.3436px|400|23.8593px|-0.0184123px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 10,
+        "area": 100782,
+        "chars": 398
+      },
+      "h2|14px|700|17.5px|-0.112px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 8,
+        "area": 91622.25,
+        "chars": 60
+      },
+      "text|28px|600|34px|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 8,
+        "area": 227781.5,
+        "chars": 262
+      },
+      "text|48px|400|normal|normal|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 4,
+        "area": 118894.6875,
+        "chars": 18
+      },
+      "h2|36px|700|40px|-0.256px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 247078.5,
+        "chars": 88
+      },
+      "text|30.3589px|700|37.9487px|-0.242871px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 18307.21484375,
+        "chars": 32
+      },
+      "h3|42.6155px|700|47.7293px|-0.511386px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 67432.55859375,
+        "chars": 36
+      },
+      "text|14px|700|normal|0.8px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 12,
+        "area": 165330.75,
+        "chars": 100
+      },
+      "h2|28px|600|35px|-0.224px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 25116.875,
+        "chars": 45
+      },
+      "h2|28px|700|35px|-0.224px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 2,
+        "area": 42393.75,
+        "chars": 52
+      },
+      "h3|22.4px|700|30px|-0.0896px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 14,
+        "area": 233970,
+        "chars": 469
+      },
+      "text|14.4px|400|22.392px|-0.01728px|Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 10,
+        "area": 94578,
+        "chars": 398
+      },
+      "text|80px|700|104px|-0.96px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 5,
+        "area": 41470,
+        "chars": 8
+      },
+      "text|28px|700|35px|-0.224px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 21756.875,
+        "chars": 32
+      },
+      "h3|32px|700|35.84px|-0.384px|Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 1,
+        "area": 25711.158203125,
+        "chars": 36
+      }
+    },
+    "states": {
+      "link|hover|box-shadow:rgb(97, 31, 105) 0px 0px 0px 2px inset": {
+        "rules": 2,
+        "matched": 10
+      },
+      "link|focus|color:rgb(255, 255, 255);background-color:rgb(97, 31, 105);box-shadow:rgb(97, 31, 105) 0px 0px 0px 2px inset": {
+        "rules": 1,
+        "matched": 8
+      },
+      "link|active|color:rgb(255, 255, 255);background-color:rgb(97, 31, 105);box-shadow:rgb(97, 31, 105) 0px 0px 0px 2px inset": {
+        "rules": 1,
+        "matched": 8
+      },
+      "link|hover|box-shadow:rgb(255, 255, 255) 0px 0px 0px 2px inset": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|color:rgb(97, 31, 105);background-color:rgb(255, 255, 255);box-shadow:rgb(255, 255, 255) 0px 0px 0px 2px inset;outline-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|color:rgb(97, 31, 105);background-color:rgb(255, 255, 255);box-shadow:rgb(255, 255, 255) 0px 0px 0px 2px inset;outline-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|color:rgb(255, 255, 255);background-color:rgb(74, 21, 75);border-color:rgb(74, 21, 75)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "link|focus|color:rgb(255, 255, 255);background-color:rgb(74, 21, 75)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "link|active|color:rgb(255, 255, 255);background-color:rgb(74, 21, 75)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "link|hover|color:rgb(255, 255, 255);border-color:currentcolor": {
+        "rules": 1,
+        "matched": 5
+      },
+      "link|hover|color:rgb(97, 31, 105)": {
+        "rules": 1,
+        "matched": 3
+      },
+      "link|focus|outline-color:rgb(97, 31, 105)": {
+        "rules": 8,
+        "matched": 36
+      },
+      "button|focus|outline-color:rgb(97, 31, 105)": {
+        "rules": 2,
+        "matched": 2
+      },
+      "button|focus-visible|outline-color:rgb(97, 31, 105)": {
+        "rules": 2,
+        "matched": 6
+      },
+      "link|hover|background-color:rgb(74, 21, 75)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|outline-color:rgb(97, 31, 105)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|focus|box-shadow:rgb(97, 31, 105) 0px 0px 0px 2px inset": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|box-shadow:rgb(97, 31, 105) 0px 0px 0px 2px inset": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|hover|color:rgb(18, 100, 163)": {
+        "rules": 8,
+        "matched": 465
+      },
+      "text|hover|color:rgb(18, 100, 163)": {
+        "rules": 2,
+        "matched": 30
+      },
+      "button|hover|color:rgb(18, 100, 163)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|color:rgb(18, 100, 163);border-color:currentcolor": {
+        "rules": 1,
+        "matched": 74
+      },
+      "link|hover|color:rgb(255, 255, 255);background-color:rgba(0, 0, 0, 0);box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus|color:rgb(255, 255, 255);background-color:rgba(0, 0, 0, 0);box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus-visible|outline-color:rgb(115, 3, 148)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus-visible|box-shadow:none;outline-color:rgb(115, 3, 148)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus-visible|outline-color:rgb(115, 3, 148)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus|outline-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "link|active|color:rgb(18, 100, 163)": {
+        "rules": 1,
+        "matched": 303
+      },
+      "link|focus|color:rgb(18, 100, 163)": {
+        "rules": 1,
+        "matched": 303
+      },
+      "link|hover|box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 2rem": {
+        "rules": 2,
+        "matched": 22
+      },
+      "link|hover|box-shadow:rgba(0, 0, 0, 0.1) 0px 1rem 2rem": {
+        "rules": 1,
+        "matched": 18
+      },
+      "link|active|box-shadow:rgba(0, 0, 0, 0.1) 0px 4px 8px -3px": {
+        "rules": 1,
+        "matched": 18
+      },
+      "text|hover|color:rgb(0, 0, 0)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "text|focus|color:rgb(0, 0, 0)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "text|hover|background-color:rgb(235, 234, 235)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|hover|background-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|hover|background-color:rgb(245, 244, 245);opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|active|background-color:rgb(245, 244, 245);opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus|background-color:rgb(245, 244, 245);opacity:1": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|color:rgb(0, 0, 0);background-color:rgb(245, 244, 245);opacity:0.43": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|focus|outline-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|hover|background-color:rgb(249, 240, 255)": {
+        "rules": 1,
+        "matched": 5
+      },
+      "text|hover|background-color:rgb(46, 0, 57)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "text|focus|outline-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "text|focus-visible|outline-color:rgb(255, 255, 255)": {
+        "rules": 1,
+        "matched": 6
+      },
+      "link|hover|border-color:currentcolor;box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|focus|border-color:currentcolor;box-shadow:none": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:rgba(29, 29, 29, 0.1)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "button|hover|background-color:rgb(229, 185, 254)": {
+        "rules": 1,
+        "matched": 4
+      },
+      "link|hover|color:rgb(86, 86, 86)": {
+        "rules": 2,
+        "matched": 3
+      },
+      "button|hover|opacity:1": {
+        "rules": 1,
+        "matched": 4
+      },
+      "button|hover|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
+        "rules": 1,
+        "matched": 7
+      },
+      "button|focus|color:rgb(51, 51, 51);border-color:rgb(136, 136, 136);opacity:0.9": {
+        "rules": 1,
+        "matched": 7
+      },
+      "button|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 2,
+        "matched": 12
+      },
+      "text|focus|border-color:rgb(0, 0, 0)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "link|hover|color:rgb(56, 96, 190)": {
+        "rules": 1,
+        "matched": 2
+      },
+      "text|focus|outline-color:rgb(0, 0, 0)": {
+        "rules": 3,
+        "matched": 5
+      },
+      "button|hover|opacity:0.6": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|background-color:rgb(56, 96, 190)": {
+        "rules": 1,
+        "matched": 1
+      },
+      "button|hover|color:rgb(34, 133, 247)": {
+        "rules": 1,
+        "matched": 1
+      }
+    },
+    "componentBoxes": {
+      "link|19px 40px 20px 40px|0px|4px|normal": {
+        "count": 7,
+        "area": 70492.21875,
+        "chars": 95
+      },
+      "link|8px 0px 0px 0px|0px|0px|normal": {
+        "count": 1,
+        "area": 4646,
+        "chars": 0
+      },
+      "button|0px|0px|4px|normal": {
+        "count": 5,
+        "area": 5546.28125,
+        "chars": 0
+      },
+      "link|0px|0px|0px|normal": {
+        "count": 95,
+        "area": 1223974.140625,
+        "chars": 110
+      },
+      "link|8px 0px|0px|0px|normal": {
+        "count": 1,
+        "area": 1708.984375,
+        "chars": 7
+      },
+      "link|12px 16px|0px|4px|normal": {
+        "count": 2,
+        "area": 12416.25,
+        "chars": 25
+      },
+      "button|0px|0px|4px|8px": {
+        "count": 8,
+        "area": 84173.125,
+        "chars": 0
+      },
+      "link|0px|0px|0px|8px": {
+        "count": 1,
+        "area": 2903.578125,
+        "chars": 0
+      },
+      "button|0px|1px|999px|normal": {
+        "count": 2,
+        "area": 3200,
+        "chars": 0
+      },
+      "link|0px|0px|16px|normal": {
+        "count": 10,
+        "area": 1680000,
+        "chars": 0
+      },
+      "button|12px|0px|90px|normal": {
+        "count": 4,
+        "area": 18453.375,
+        "chars": 30
+      },
+      "button|0px 13.6px 0px 0px|0px|4px|normal": {
+        "count": 1,
+        "area": 3186.75,
+        "chars": 0
+      },
+      "link|0px 0px 0px 16px|0px|0px|normal": {
+        "count": 4,
+        "area": 7752.9375,
+        "chars": 30
+      }
+    },
+    "styleSheets": {
+      "total": 8,
+      "readable": 8,
+      "blocked": 0,
+      "stateRules": 408
+    },
+    "radii": {
+      "4px": {
+        "count": 101,
+        "area": 970750.8295898438,
+        "chars": 806
+      },
+      "8px": {
+        "count": 25,
+        "area": 4817762.3125,
+        "chars": 0
+      },
+      "50%": {
+        "count": 33,
+        "area": 11270336,
+        "chars": 0
+      },
+      "48px": {
+        "count": 15,
+        "area": 105043.28125,
+        "chars": 204
+      },
+      "16px": {
+        "count": 132,
+        "area": 9914836.104980469,
+        "chars": 0
+      },
+      "12px": {
+        "count": 1,
+        "area": 312828.3984375,
+        "chars": 0
+      },
+      "999px": {
+        "count": 14,
+        "area": 65823.638671875,
+        "chars": 18
+      },
+      "60px": {
+        "count": 2,
+        "area": 52321.9375,
+        "chars": 0
+      },
+      "90px": {
+        "count": 8,
+        "area": 36906.75,
+        "chars": 60
+      }
+    },
+    "shadows": {
+      "rgb(97, 31, 105) 0px 0px 0px 1px inset": {
+        "count": 7,
+        "area": 96851.578125,
+        "chars": 98
+      },
+      "rgba(0, 0, 0, 0.1) 0px 0px 32px 0px": {
+        "count": 61,
+        "area": 9093801.072265625,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.1) 0px 5px 20px 0px": {
+        "count": 1,
+        "area": 24600,
+        "chars": 0
+      },
+      "rgba(0, 0, 0, 0.08) 0px 1px 3px 0px": {
+        "count": 6,
+        "area": 7023.638671875,
+        "chars": 18
+      },
+      "rgba(106, 106, 106, 0.25) 0px 3.073px 9.372px 0px": {
+        "count": 2,
+        "area": 52321.9375,
+        "chars": 0
+      },
+      "rgb(255, 255, 255) 0px 0px 0px 1px inset": {
+        "count": 3,
+        "area": 72895.875,
+        "chars": 42
+      },
+      "rgba(131, 56, 138, 0.08) 0px 4.8px 14px 6.4px": {
+        "count": 12,
+        "area": 268639.15771484375,
+        "chars": 0
+      }
+    },
+    "spacings": {
+      "2": {
+        "count": 54,
+        "area": 0,
+        "chars": 0
+      },
+      "3": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "4": {
+        "count": 65,
+        "area": 0,
+        "chars": 0
+      },
+      "5": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "6": {
+        "count": 74,
+        "area": 0,
+        "chars": 0
+      },
+      "8": {
+        "count": 257,
+        "area": 0,
+        "chars": 0
+      },
+      "10": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "11": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "12": {
+        "count": 105,
+        "area": 0,
+        "chars": 0
+      },
+      "16": {
+        "count": 99,
+        "area": 0,
+        "chars": 0
+      },
+      "18": {
+        "count": 16,
+        "area": 0,
+        "chars": 0
+      },
+      "19": {
+        "count": 24,
+        "area": 0,
+        "chars": 0
+      },
+      "20": {
+        "count": 33,
+        "area": 0,
+        "chars": 0
+      },
+      "23": {
+        "count": 7,
+        "area": 0,
+        "chars": 0
+      },
+      "24": {
+        "count": 119,
+        "area": 0,
+        "chars": 0
+      },
+      "25": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "26": {
+        "count": 18,
+        "area": 0,
+        "chars": 0
+      },
+      "27": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "28": {
+        "count": 3,
+        "area": 0,
+        "chars": 0
+      },
+      "30": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "31": {
+        "count": 16,
+        "area": 0,
+        "chars": 0
+      },
+      "32": {
+        "count": 45,
+        "area": 0,
+        "chars": 0
+      },
+      "35": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "36": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "40": {
+        "count": 21,
+        "area": 0,
+        "chars": 0
+      },
+      "43": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "48": {
+        "count": 17,
+        "area": 0,
+        "chars": 0
+      },
+      "50": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "53": {
+        "count": 2,
+        "area": 0,
+        "chars": 0
+      },
+      "56": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "64": {
+        "count": 6,
+        "area": 0,
+        "chars": 0
+      },
+      "80": {
+        "count": 9,
+        "area": 0,
+        "chars": 0
+      },
+      "88": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "95": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "96": {
+        "count": 8,
+        "area": 0,
+        "chars": 0
+      },
+      "105": {
+        "count": 16,
+        "area": 0,
+        "chars": 0
+      },
+      "147": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      },
+      "154": {
+        "count": 1,
+        "area": 0,
+        "chars": 0
+      }
+    },
+    "interactiveBg": {
+      "rgb(97, 31, 105)": {
+        "count": 12,
+        "area": 107914.4375,
+        "chars": 159
+      },
+      "rgb(255, 255, 255)": {
+        "count": 57,
+        "area": 6440082.890625,
+        "chars": 117
+      }
+    },
+    "interactiveRadius": {
+      "4px": {
+        "count": 59,
+        "area": 624297.796875,
+        "chars": 332
+      },
+      "0px": {
+        "count": 150,
+        "area": 2313966.328125,
+        "chars": 427
+      },
+      "999px": {
+        "count": 6,
+        "area": 9600,
+        "chars": 0
+      },
+      "16px": {
+        "count": 30,
+        "area": 4943437.5,
+        "chars": 0
+      },
+      "90px": {
+        "count": 8,
+        "area": 36906.75,
+        "chars": 60
+      }
+    },
+    "interactiveFg": {
+      "rgb(255, 255, 255)": {
+        "count": 15,
+        "area": 180810.3125,
+        "chars": 201
+      },
+      "rgb(18, 100, 163)": {
+        "count": 88,
+        "area": 6938211.330078125,
+        "chars": 300
+      },
+      "rgb(0, 0, 0)": {
+        "count": 34,
+        "area": 213564.96875,
+        "chars": 0
+      },
+      "rgb(29, 29, 29)": {
+        "count": 6,
+        "area": 14791.916015625,
+        "chars": 7
+      },
+      "rgb(97, 31, 105)": {
+        "count": 10,
+        "area": 167731.078125,
+        "chars": 131
+      },
+      "rgb(115, 3, 148)": {
+        "count": 3,
+        "area": 5738.51953125,
+        "chars": 30
+      },
+      "rgb(105, 105, 105)": {
+        "count": 89,
+        "area": 370453.5,
+        "chars": 90
+      },
+      "rgb(61, 1, 87)": {
+        "count": 8,
+        "area": 36906.75,
+        "chars": 60
+      }
+    },
+    "headingSizes": {
+      "64px": {
+        "count": 1,
+        "area": 132234.609375,
+        "chars": 47
+      },
+      "58px": {
+        "count": 2,
+        "area": 260687.34375,
+        "chars": 90
+      },
+      "32px": {
+        "count": 8,
+        "area": 314976.8005371094,
+        "chars": 322
+      },
+      "24px": {
+        "count": 15,
+        "area": 271128.00634765625,
+        "chars": 512
+      },
+      "50.4px": {
+        "count": 2,
+        "area": 452640,
+        "chars": 85
+      },
+      "50px": {
+        "count": 1,
+        "area": 48700.75,
+        "chars": 36
+      },
+      "30.3589px": {
+        "count": 2,
+        "area": 37615.03125,
+        "chars": 52
+      },
+      "23.3436px": {
+        "count": 14,
+        "area": 247170,
+        "chars": 469
+      },
+      "14px": {
+        "count": 8,
+        "area": 91622.25,
+        "chars": 60
+      },
+      "36px": {
+        "count": 2,
+        "area": 247078.5,
+        "chars": 88
+      },
+      "42.6155px": {
+        "count": 1,
+        "area": 67432.55859375,
+        "chars": 36
+      },
+      "28px": {
+        "count": 3,
+        "area": 67510.625,
+        "chars": 97
+      },
+      "22.4px": {
+        "count": 14,
+        "area": 233970,
+        "chars": 469
+      }
+    },
+    "headingFamilies": {
+      "Salesforce-Avant-Garde, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 65,
+        "area": 2381144.2248535156,
+        "chars": 2303
+      },
+      "Salesforce-Sans, system-ui, -apple-system, blinkmacsystemfont, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"": {
+        "count": 8,
+        "area": 91622.25,
+        "chars": 60
+      }
+    },
+    "headingWeights": {
+      "600": {
+        "count": 3,
+        "area": 285804.21875,
+        "chars": 135
+      },
+      "700": {
+        "count": 70,
+        "area": 2186962.2561035156,
+        "chars": 2228
+      }
+    },
+    "pageBg": "rgb(255, 255, 255)",
+    "elementCount": 7158,
+    "sampled": 2062,
+    "viewports": [
+      {
+        "w": 1440,
+        "h": 900,
+        "elements": 2386
+      },
+      {
+        "w": 768,
+        "h": 1024,
+        "elements": 2386
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "elements": 2386
+      }
+    ],
+    "mergedFrom": 3,
+    "screenshot": {
+      "width": 1440,
+      "height": 900,
+      "format": "webp"
+    }
+  },
+  "darkHarvest": null
+}

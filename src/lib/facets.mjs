@@ -6,6 +6,7 @@
 // never hand-tagged, so a system cannot be mis-filed and cannot go stale.
 
 import { parseColor, toOklch, hueFamily } from './color.mjs';
+import { shadeName } from './colornames.mjs';
 
 /** Contrast bands, on the body/background pair. Chosen to separate the three
  *  kinds of system people actually mean: severe, ordinary, and soft. */
@@ -20,8 +21,11 @@ export function facetsFor(capture) {
   const roles = capture.colors?.roles ?? {};
   const rounded = capture.rounded ?? {};
 
+  // Both levels come off the same measured accent: `hue` is the broad word a
+  // reader browses by, `shade` the specific one they search for.
   const primary = roles.primary?.hex ? parseColor(roles.primary.hex) : null;
   const hue = primary ? hueFamily(toOklch(primary)) : 'neutral';
+  const shade = primary ? shadeName(primary) : null;
 
   const bodyPair = capture.audit?.pairs?.find(p => p.pair === 'foreground/background');
   const ratio = bodyPair?.ratio ?? null;
@@ -36,6 +40,8 @@ export function facetsFor(capture) {
     polarity: capture.colors?.polarity ?? null,
     dark: capture.supportsDark ? 'yes' : 'no',
     hue,
+    shade,
+    accent: roles.primary?.hex ?? null,
     shape,
     contrast,
     ratio,

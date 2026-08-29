@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { readCapture } from '../../lib/system-files.mjs';
 import { facetsFor, FACET_GROUPS } from '../../lib/facets.mjs';
 import { categoryCounts } from '../../lib/categories.mjs';
+import { shadeCounts } from '../../lib/colornames.mjs';
 
 const entries = await getCollection('systems');
 const systems = (await Promise.all(entries.map(async (entry) => ({
@@ -20,6 +21,14 @@ const groups = FACET_GROUPS
   .filter(g => g.options.length > 0);
 
 const categories = categoryCounts(entries);
+const shades = shadeCounts(systems.map(s => s.facets));
+// Broad hue names, ordered so the bar does not reshuffle as the corpus grows.
+const HUE_ORDER = ['red', 'orange', 'yellow', 'green', 'teal', 'blue', 'purple', 'pink', 'neutral'];
+const hues = HUE_ORDER
+  .map(id => ({ id, count: systems.filter(s => s.facets?.hue === id).length }))
+  .filter(h => h.count > 0);
+const swatchFor = id => systems.find(s => s.facets?.hue === id)?.facets?.accent;
+const shadeSwatch = id => systems.find(s => s.facets?.shade === id)?.facets?.accent;
 const swatchKeys = ['background', 'card', 'primary', 'foreground'];
 ---
 
@@ -45,6 +54,30 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
           {categories.map(c => (
             <button type="button" class="chip-btn" data-facet="categories" data-value={c.id}
               aria-pressed="false">{c.label} <span style="opacity:0.55">{c.count}</span></button>
+          ))}
+        </div>
+      )}
+      {hues.length > 1 && (
+        <div class="facet-row">
+          <span class="facet-label" title="Hue family of the measured accent">Colour</span>
+          {hues.map(h => (
+            <button type="button" class="chip-btn" data-facet="hue" data-value={h.id}
+              aria-pressed="false">
+              <span class="chip-dot" style={`background:${swatchFor(h.id)}`}></span>
+              {h.id[0].toUpperCase() + h.id.slice(1)} <span style="opacity:0.55">{h.count}</span>
+            </button>
+          ))}
+        </div>
+      )}
+      {shades.length > 1 && (
+        <div class="facet-row">
+          <span class="facet-label" title="The specific shade of the measured accent">Shade</span>
+          {shades.map(sh => (
+            <button type="button" class="chip-btn" data-facet="shade" data-value={sh.id}
+              aria-pressed="false">
+              <span class="chip-dot" style={`background:${shadeSwatch(sh.id)}`}></span>
+              {sh.label} <span style="opacity:0.55">{sh.count}</span>
+            </button>
           ))}
         </div>
       )}
@@ -76,6 +109,8 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
           data-contrast={facets?.contrast}
           data-dark={facets?.dark}
           data-categories={(entry.data.categories ?? []).join(' ')}
+          data-hue={facets?.hue}
+          data-shade={facets?.shade}
           data-text={[entry.id, entry.data.name, entry.data.provenance.brand,
             entry.data.description].filter(Boolean).join(' ').toLowerCase()}
         >
