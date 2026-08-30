@@ -76,6 +76,24 @@ const MIN_ACCENT_COUNT = 2;
  *  0.145% and 0.104%. Area separates them cleanly; chroma does not, because
  *  plenty of systems tint their surfaces on purpose. */
 const SURFACE_MIN_AREA = 0.0025;
+
+/**
+ * Share of painted background area above which a chromatic colour is a SURFACE
+ * the site fills sections with, not a control it fills buttons with.
+ *
+ * 0.05, and the cut sits in an observed gap. Measured across the corpus:
+ * wise 21.3%, stripe 12.0%, duolingo 10.9%, shopify 9.5%, mailchimp 8.1%,
+ * slack 7.5% — then a drop to apple 3.9%, govuk 3.6%, hackernews 2.3% and
+ * everything else under 2%. The six above the line are exactly the sites built
+ * from big coloured bands; the ones below paint a badge or a link.
+ *
+ * This is the fact the surface ramp cannot carry and correctly refuses to:
+ * that ladder is a depth sequence of near-canvas neutrals, so it filters out
+ * anything chromatic and anything already claimed as the accent. Wise's lime is
+ * both, so 24% of its page went unpublished and its preview rendered as a white
+ * page with a green button — which is the one thing Wise does not look like.
+ */
+const SECTION_FILL_MIN_AREA = 0.05;
 /** A text tier has to carry real copy. Lower than TEXT_SIGNIFICANCE, which gates
  *  role assignment: a tier can be a minority voice, a role cannot. */
 const RAMP_MIN_SHARE = 0.02;
@@ -517,6 +535,16 @@ export function colorTokens(capture) {
   const surfaces = surfaceRamp(bg, backdrop, accents, shares.bg);
   const texts = textRamp(text, backdrop, shares.text);
 
+  // The colour this system paints whole sections in. Ranked by painted area
+  // over the background histogram — `interactiveBg` would only ever find the
+  // button. Chromatic, because a neutral band is the surface ramp's job, and
+  // not the canvas itself.
+  const fill = bg
+    .filter(c => c.hex !== backdrop.hex
+      && toOklch(c.rgb).C >= CHROMATIC
+      && shares.bg > 0 && c.weight / shares.bg >= SECTION_FILL_MIN_AREA)
+    .sort((a, b) => b.weight - a.weight)[0] ?? null;
+
   return {
     polarity: relativeLuminance(backdrop.rgb) < 0.2 ? 'dark' : 'light',
     roles,
@@ -537,6 +565,13 @@ export function colorTokens(capture) {
         charShare: round(shares.text > 0 ? c.weight / shares.text : 0, 4),
       })),
     },
+    // A brand colour used as a ground, not as a control. Null for most systems,
+    // and null is the right answer: Nike, Pentagram and Vercel paint no large
+    // chromatic area at all, and a preview that invented one for them would be
+    // wrong in the same direction Wise's was.
+    sectionFill: fill
+      ? { hex: fill.hex, areaShare: round(fill.weight / shares.bg, 4) }
+      : null,
     palette,
     // State colours, not brand colours. Empty is a real answer: a marketing page
     // that never shows an error state has no danger token to extract.
@@ -1609,7 +1644,9 @@ export function cluster(capture, { previous } = {}) {
     // Token sets are only comparable for drift within the same version.
     // 18: adds backgrounds.overlay — the second tiled texture, previously
     //     dropped because only the largest layer was published.
-    clusterVersion: 18,
+    // 19: adds colors.sectionFill — the chromatic colour a site grounds whole
+    //     sections in, which the surface ramp filters out by design.
+    clusterVersion: 19,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

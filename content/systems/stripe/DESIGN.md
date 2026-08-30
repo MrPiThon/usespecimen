@@ -22,6 +22,7 @@ colors:
   text-2: '#50617a'
   text-3: '#64748d'
   success: '#00d66f'
+  sectionFill: '#0d1738'
   gradient-1: '#7f7dfc'
   gradient-2: '#f44bcc'
 typography:
@@ -172,7 +173,7 @@ provenance:
   capturedAt: '2026-08-29T04:36:18.818Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 19
   screenshot: './source.webp'
 ---
 
@@ -293,7 +294,7 @@ or copy. It gives you an ink, a grid, a measure and a tempo — not a page.
 *Shared by every file in this registry; only the counts below are this
 file's.*
 
-**Budget.** 11 colours, 5 radii, 10 spacing steps, 12 type steps, 1 weight, 4
+**Budget.** 12 colours, 5 radii, 10 spacing steps, 12 type steps, 1 weight, 4
 shadows and one easing curve. That is the whole design — a colour, radius,
 shadow or curve not on that list is one you invented. An absence here is an
 instruction rather than a gap: fill nothing in from convention.

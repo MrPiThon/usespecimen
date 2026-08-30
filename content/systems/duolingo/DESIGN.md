@@ -13,6 +13,7 @@ colors:
   text-1: '#4b4b4b'
   text-2: '#777777'
   success: '#58cc02'
+  sectionFill: '#58cc02'
 typography:
   fontFamily: 'duolingo-sans, sans-serif'
   headingFamily: 'feather, sans-serif'
@@ -111,7 +112,7 @@ provenance:
   capturedAt: '2026-08-29T04:56:29.490Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 19
   screenshot: './source.webp'
 ---
 

@@ -22,6 +22,7 @@ colors:
   text-2: '#bdbdca'
   text-3: '#99b3ad'
   text-4: '#a1a1aa'
+  sectionFill: '#041e18'
   gradient-1: '#1260ff'
 typography:
   fontFamily: 'Shopify-Inter, Helvetica, Arial, sans-serif'
@@ -182,7 +183,7 @@ provenance:
   capturedAt: '2026-08-29T04:35:32.434Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 19
   screenshot: './source.webp'
 ---
 

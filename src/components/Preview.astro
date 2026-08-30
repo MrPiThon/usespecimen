@@ -8,6 +8,11 @@ interface Props { data: any; dark?: boolean; label: string; }
 const { data, dark = false, label } = Astro.props;
 const style = previewVars(data, { dark });
 const semantic = ['success', 'danger'].filter(k => (data.colors ?? {})[dark ? `dark-${k}` : k]);
+// A band only where the file measured one. Seventeen systems ground nothing
+// large in a chromatic colour, and for those the panel opens straight into the
+// body — which is what those pages do.
+const c = data.colors ?? {};
+const fill = c[dark ? 'dark-sectionFill' : 'sectionFill'] ?? null;
 ---
 
 <figure class="pv-wrap">
@@ -19,6 +24,21 @@ const semantic = ['success', 'danger'].filter(k => (data.colors ?? {})[dark ? `d
       <a href="#" onclick="return false">Pricing</a>
       <button type="button" class="pv-btn">Save changes</button>
     </nav>
+
+    {fill && (
+      <div class="pv-hero">
+        {/* The file's own name as the headline. Any invented line would be
+            either Wise-specific filler on twenty-two other systems or the
+            generic marketing register this registry warns about; the name is
+            short, true, and different on every panel. */}
+        <h3 class="pv-hero-h">{data.name}</h3>
+        <p class="pv-hero-p">
+          The colour this design grounds sections in, at the headline size and
+          alignment its own hero was measured at.
+        </p>
+        <button type="button" class="pv-btn pv-btn-onfill">Primary action</button>
+      </div>
+    )}
 
     <div class="pv-body">
       <h3 class="pv-h">Deploy in one command</h3>

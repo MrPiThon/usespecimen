@@ -508,6 +508,55 @@ th { color: var(--muted); font-weight: 550; }
   border-bottom-style: var(--pv-border-style, dashed);
 }
 .pv-nav strong { margin-right: auto; color: inherit; }
+/* The hero band. Rendered only when the file measured a `sectionFill`, and it
+   is the single change that made these panels stop looking alike: the
+   components below are a set WE chose, so every system rendered through them
+   came out as the same page in different colours. A page's ground and the size
+   of its headline are most of what makes it recognisable, and all three values
+   here — fill, headline size, alignment — were measured and were being thrown
+   away.
+
+   The headline is `min(measured, 7vw)` for the same reason the site's own hero
+   is clamped: Wise's is 89px from a 1240px capture and the panel is narrower
+   than that, so the measurement is honoured where there is room and scaled
+   where there is not. */
+.pv .pv-hero {
+  background: var(--pv-fill);
+  padding: var(--s9, 24px) var(--s8, 16px) var(--s10, 32px);
+  text-align: var(--pv-hero-align, left);
+  border-bottom: 1px var(--pv-border-style, dashed) var(--pv-border, rgba(128, 128, 128, 0.4));
+}
+.pv .pv-hero-h {
+  margin: 0;
+  font-family: var(--pv-heading-font, inherit);
+  font-size: min(var(--pv-hero-size, 2em), 7vw);
+  font-weight: var(--pv-heading-weight, 700);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  /* The label colour the file pairs with its accent, since the band is filled
+     with a colour the file also uses behind text. Falls back to the body
+     foreground rather than to black. */
+  color: var(--pv-fill-fg, var(--pv-fg, inherit));
+}
+/* Block, and no max-width. The band's own text-align does the centring, so an
+   auto-centred block would sit wrong under a left-aligned headline and an
+   inline-block put the button on the same line as the copy. The band's padding
+   is what keeps the measure sane. */
+.pv .pv-hero-p {
+  margin: 0.75em 0 0;
+  color: var(--pv-fill-fg, var(--pv-fg, inherit));
+  opacity: 0.75;
+}
+/* Three classes deep on purpose. `.pv .pv-btn` is declared after this block and
+   sets `background: var(--pv-btn-bg)`, which for a system whose button fill IS
+   its section fill — Wise — painted lime on lime and made the button vanish. */
+.pv .pv-hero .pv-btn-onfill {
+  margin-top: 1em;
+  background: var(--pv-fill-fg, var(--pv-fg));
+  color: var(--pv-fill);
+  border-color: transparent;
+}
+
 /* The `.pv` block below is the one place on this site that deliberately does
    NOT use Linear's steps. It renders the PREVIEWED system's components, so its
    sizes are `em` — relative to that system's own base size, which `--pv-*`

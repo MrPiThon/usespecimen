@@ -18,6 +18,7 @@ colors:
   text-2: '#231e15'
   text-3: '#004e56'
   warning: '#e7b75f'
+  sectionFill: '#e7b75f'
 typography:
   fontFamily: '"Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif'
   headingFamily: '"Means Web", Georgia, Times, "Times New Roman", serif'
@@ -166,7 +167,7 @@ provenance:
   capturedAt: '2026-08-29T04:55:52.846Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 19
   screenshot: './source.webp'
 ---
 

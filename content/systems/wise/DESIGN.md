@@ -19,6 +19,7 @@ colors:
   text-2: '#454745'
   success: '#163300'
   warning: '#3e3b07'
+  sectionFill: '#9fe870'
 typography:
   fontFamily: 'Inter, Helvetica, Arial, sans-serif'
   headingFamily: 'Inter, Helvetica, Arial, sans-serif'
@@ -180,7 +181,7 @@ provenance:
   capturedAt: '2026-08-29T04:54:50.430Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 19
   screenshot: './source.webp'
 ---
 

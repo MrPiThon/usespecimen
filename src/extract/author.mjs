@@ -61,6 +61,15 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
   }
   for (const [role, v] of Object.entries(cap.colors.semantic)) colors[role] = v.hex;
 
+  // The colour this design grounds whole sections in. Wise paints 21% of its
+  // painted background area in its lime and Slack 7.5% in aubergine, and until
+  // now neither fact reached the file: the surface ramp is a ladder of
+  // near-canvas neutrals and filters out anything chromatic, and `primary`
+  // records the same colour as a button fill without saying it is also the
+  // ground. An agent handed only those two builds a white page with a coloured
+  // button, which is the one thing Wise does not look like.
+  if (cap.colors.sectionFill) colors.sectionFill = cap.colors.sectionFill.hex;
+
   // Gradient stops are colours this design uses, and they were missing.
   // Stripe's #7f7dfc -> #f44bcc hero sweep is the single most recognisable
   // thing about its homepage and appeared in no token; Shopify's #1260ff
@@ -91,6 +100,7 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
     for (const [k, v] of Object.entries(dark.colors.roles)) {
       if (v) colors[`dark-${k}`] = v.hex;
     }
+    if (dark.colors.sectionFill) colors['dark-sectionFill'] = dark.colors.sectionFill.hex;
   }
 
   const scale = {};

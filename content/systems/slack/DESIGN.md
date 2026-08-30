@@ -17,6 +17,7 @@ colors:
   text-1: '#000000'
   text-2: '#1d1d1d'
   text-3: '#696969'
+  sectionFill: '#4a154b'
   gradient-1: '#efd5ff'
   gradient-2: '#e5b9fe'
 typography:
@@ -181,7 +182,7 @@ provenance:
   capturedAt: '2026-08-29T04:36:01.915Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 19
   screenshot: './source.webp'
 ---
 
@@ -288,7 +289,7 @@ content. It gives you a colour discipline, a type pairing and a tempo.
 *Shared by every file in this registry; only the counts below are this
 file's.*
 
-**Budget.** 9 colours, 5 radii, 10 spacing steps, 12 type steps, 2 weights, 5
+**Budget.** 10 colours, 5 radii, 10 spacing steps, 12 type steps, 2 weights, 5
 shadows and one easing curve. That is the whole design — a colour, radius,
 shadow or curve not on that list is one you invented. It has no spacing grid,
 so use the steps it observed rather than rounding them into a tidy 8px rhythm.

@@ -10,6 +10,7 @@
 
 import { resolveRef } from './design-md.mjs';
 import { resolveStack } from './webfonts.mjs';
+import { parseColor, contrastRatio } from './color.mjs';
 
 /** Does this file carry a second, dark palette? */
 export const hasDarkPalette = data =>
@@ -40,6 +41,33 @@ const firstOf = (obj, ...keys) => keys.map(k => obj?.[k]).find(v => typeof v ===
  * @returns {string} an inline `style` value — only the properties this file
  *   actually supports, so absent tokens stay absent rather than defaulting.
  */
+/**
+ * Which of the file's own colours to set text in on the section fill.
+ *
+ * Not `primaryForeground`: that is the label the file pairs with `primary`, and
+ * on five of the six systems that have a fill those are different colours —
+ * Stripe's accent is indigo and its fill is navy. Using it would be the
+ * fabricated-combination error, a measured value applied to a pairing nobody
+ * measured.
+ *
+ * So the candidates are all colours this file declares, and the choice between
+ * them is derived rather than invented: whichever scores the highest contrast
+ * against the fill. That is the same move `card` and `mutedForeground` make in
+ * the clusterer — the value is observed, the selection is computed.
+ */
+function onFill(colors) {
+  const fill = parseColor(colors.sectionFill ?? '');
+  if (!fill) return undefined;
+  const best = ['primaryForeground', 'background', 'foreground', 'text-1']
+    .map(k => colors[k])
+    .filter(v => typeof v === 'string')
+    .map(hex => ({ hex, rgb: parseColor(hex) }))
+    .filter(c => c.rgb)
+    .map(c => ({ ...c, ratio: contrastRatio(c.rgb, fill) }))
+    .sort((a, b) => b.ratio - a.ratio)[0];
+  return best?.hex;
+}
+
 export function previewVars(data, { dark = false } = {}) {
   const eff = effective(data, dark);
   const colors = eff?.colors ?? {};
@@ -87,6 +115,22 @@ export function previewVars(data, { dark = false } = {}) {
     '--pv-heading-font': resolveStack(heading.fontFamily ?? eff?.typography?.headingFamily),
     '--pv-heading-size': heading.fontSize,
     '--pv-heading-weight': heading.fontWeight,
+
+    // The ground this design fills sections with, and the proportions of its
+    // own hero. All three were measured and none of them reached the preview,
+    // which is why every system rendered as the same white page with a
+    // differently coloured button: Wise grounds 21% of its painted area in
+    // lime at an 89px centred headline, and the preview showed a 20px
+    // left-aligned heading on white.
+    //
+    // Absent for seventeen of twenty-three systems, and the panel then renders
+    // no band at all. That is the measurement: Nike, Pentagram and Vercel
+    // ground nothing, and inventing a band for them would be the same error in
+    // the other direction.
+    '--pv-fill': colors.sectionFill,
+    '--pv-fill-fg': onFill(colors),
+    '--pv-hero-size': eff?.layout?.heroHeadingSize,
+    '--pv-hero-align': eff?.layout?.heroAlign,
 
     // Always set, unlike everything else here.
     //

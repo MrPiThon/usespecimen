@@ -210,6 +210,27 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
 - A **deliberately sharp** system emits `rounded: { button: '0px' }`. It used to
   emit no `rounded` group at all, which reads as "not measured" rather than
   "measured as zero" — and an agent handed no radius invents one.
+- **`colors.sectionFill`** (cluster v19) is the colour a design grounds whole
+  sections in, and it is the token that made the previews stop looking alike.
+  The surface ramp cannot carry it and correctly refuses to: that ladder is a
+  depth sequence of near-canvas neutrals, so it filters out anything chromatic
+  **and** anything already claimed as the accent. Wise's lime is both, so 24% of
+  its painted background area went unpublished, and its preview rendered as a
+  white page with a green button — the one thing Wise does not look like.
+  Ranked by area over `bgColors`, not `interactiveBg`, which would only ever
+  find the button. `SECTION_FILL_MIN_AREA` is 0.05 and the cut sits in an
+  observed gap: wise 21.3%, stripe 12.0%, duolingo 10.9%, shopify 9.5%,
+  mailchimp 8.1%, slack 7.5% — then apple 3.9%, govuk 3.6% and everything else
+  under 2.5%. The six above the line are exactly the sites built from big
+  coloured bands. Seventeen systems get null, and null is the answer: Nike,
+  Pentagram and Vercel ground nothing.
+  The text on the band is **not** `primaryForeground` — that is the label the
+  file pairs with `primary`, and on five of the six those are different colours
+  (Stripe's accent is indigo, its fill is navy). `onFill()` picks whichever of
+  the file's own declared colours scores the highest contrast against the fill:
+  the values are observed, the selection is computed, which is the same move
+  `card` and `mutedForeground` already make. Result across the six: 13.05, 17.55,
+  4.18, 14.00, 17.44 and 11.34:1.
 - `src/lib/preview.mjs` + `src/components/Preview.astro` render real components
   from one file's tokens. The rule that makes it worth anything: a custom
   property is set **only** where the file declares the token — nothing is filled
