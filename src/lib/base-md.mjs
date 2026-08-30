@@ -24,10 +24,18 @@
 // Framework-free, like the rest of src/lib: the CLI writes it and the site
 // renders it, and neither may drag in the other's dependencies.
 
-/** Bumped when the template changes in a way worth a reader noticing. The
- *  freshness check compares rendered text rather than this number, so a
- *  forgotten bump is caught anyway — it exists for the human reading the file. */
-export const BASE_VERSION = 1;
+/**
+ * Bumped when the template changes in a way worth a reader noticing. The
+ * freshness check compares rendered text rather than this number, so a
+ * forgotten bump is caught anyway — it exists for the human reading the file.
+ *
+ * 2: the tells in a Claude Design draft of this very site — a fake browser
+ *    window with traffic-light dots around a code sample, and the filled-beside-
+ *    outlined button pair under the headline. Both were in one generated
+ *    screenshot and neither was in v1, which is the argument for auditing this
+ *    list against real generated pages rather than writing it from memory.
+ */
+export const BASE_VERSION = 2;
 
 const OPEN = `<!-- specimen:base v${BASE_VERSION} · generated · shared by every file in this registry · edit src/lib/base-md.mjs, then run \`npm run base\` -->`;
 const CLOSE = '<!-- /specimen:base -->';
@@ -176,11 +184,14 @@ export function renderBase(data) {
     + ' statistic; no caption on a thing that already says what it is.\n'
     + '- **Structure** — not hero, logo wall, three feature cards, three steps,'
     + ' testimonials, FAQ, closing CTA; not three of anything by default; not'
-    + ' every section the same width, centred, at the same padding.\n'
+    + ' every section the same width, centred, at the same padding; not a filled'
+    + ' button beside an outlined one under the headline, either of them ending'
+    + ' in an arrow.\n'
     + '- **Surface** — no indigo-to-violet-to-pink gradient; no gradient-filled'
     + ' heading; no blurred glow behind the hero; no glass panel on every card;'
     + ' no emoji standing in for an icon; no icon in a tinted rounded square; no'
-    + ' `scale(1.05)` on hover.',
+    + ' fake browser or terminal chrome — traffic-light dots, a filename bar —'
+    + ' around a code sample; no `scale(1.05)` on hover.',
 
     'The tell under all of them is uniformity — one radius, one border, one'
     + ' shadow, one gap everywhere, because nothing was decided.',

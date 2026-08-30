@@ -254,7 +254,7 @@ The curve accelerates into the end rather than easing out of it.
 **What this file does not constrain:** what the sections contain or how many
 there are. Take the centred display voice and the measure; build your own page.
 
-<!-- specimen:base v1 · generated · shared by every file in this registry · edit src/lib/base-md.mjs, then run `npm run base` -->
+<!-- specimen:base v2 · generated · shared by every file in this registry · edit src/lib/base-md.mjs, then run `npm run base` -->
 
 ### The base
 
@@ -283,11 +283,13 @@ is here unless it was measured.
   a thing that already says what it is.
 - **Structure** — not hero, logo wall, three feature cards, three steps,
   testimonials, FAQ, closing CTA; not three of anything by default; not every
-  section the same width, centred, at the same padding.
+  section the same width, centred, at the same padding; not a filled button
+  beside an outlined one under the headline, either of them ending in an arrow.
 - **Surface** — no indigo-to-violet-to-pink gradient; no gradient-filled
   heading; no blurred glow behind the hero; no glass panel on every card; no
-  emoji standing in for an icon; no icon in a tinted rounded square; no
-  `scale(1.05)` on hover.
+  emoji standing in for an icon; no icon in a tinted rounded square; no fake
+  browser or terminal chrome — traffic-light dots, a filename bar — around a
+  code sample; no `scale(1.05)` on hover.
 
 The tell under all of them is uniformity — one radius, one border, one shadow,
 one gap everywhere, because nothing was decided.
