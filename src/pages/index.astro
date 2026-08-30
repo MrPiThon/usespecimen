@@ -1,9 +1,54 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { readCapture } from '../lib/system-files.mjs';
+import { resolveStack } from '../lib/webfonts.mjs';
 
-const systems = (await getCollection('systems'))
+const all = (await getCollection('systems'))
   .sort((a, b) => b.data.provenance.capturedAt.getTime() - a.data.provenance.capturedAt.getTime());
+
+// Corpus figures, counted rather than claimed. Every one of these is a thing a
+// competitor scraping this site would have to re-derive from the source pages.
+const captures = await Promise.all(all.map(s => readCapture(s.id)));
+const stats = captures.reduce((acc, cap, i) => {
+  const colors = Object.values(all[i].data.colors ?? {}).filter(v => typeof v === 'string');
+  acc.colors += colors.length;
+  acc.pairs += (cap?.audit?.pairs ?? []).length;
+  // The count worth leading with. Nobody publishes the limits of their own
+  // extraction, because a directory has no extraction to be limited.
+  acc.warnings += (cap?.warnings ?? []).length;
+  acc.states += Object.values(cap?.states?.roles ?? {})
+    .reduce((n, r) => n + Object.keys(r).length, 0);
+  return acc;
+}, { colors: 0, pairs: 0, warnings: 0, states: 0 });
+
+const FIGURES = [
+  { n: all.length, label: 'design systems' },
+  { n: stats.colors, label: 'colour tokens, none invented' },
+  { n: stats.pairs, label: 'contrast pairs audited' },
+  { n: stats.states, label: 'interaction states read from CSS' },
+  { n: stats.warnings, label: 'warnings published against ourselves' },
+];
+
+// The featured system leads because its file carries the widest spread of what
+// the pipeline can measure — a gradient the colour tokens alone would miss, a
+// full state set, and real motion.
+const featured = all.find(s => s.id === 'stripe') ?? all[0];
+const fc = featured.data.colors ?? {};
+const fl = featured.data.layout ?? {};
+
+const recent = all.slice(0, 6);
+
+/** Card titles set in the system's own display face, as on /systems. */
+const nameStyle = (d) => {
+  const t = d.typography ?? {};
+  const stack = resolveStack(t.headingFamily ?? t.fontFamily);
+  return [
+    stack ? `font-family:${stack}` : null,
+    t.headingWeight ? `font-weight:${t.headingWeight}` : null,
+    t.letterSpacing ? `letter-spacing:${t.letterSpacing}` : null,
+  ].filter(Boolean).join(';');
+};
 ---
 
 <Base
@@ -11,33 +56,97 @@ const systems = (await getCollection('systems'))
   description="DESIGN.md files extracted from live sites by a real crawler: dated, spec-linted, contrast-audited and installable with one command."
 >
   <section class="hero">
-    <h1 class="prose" style="max-width:20ch;">
-      DESIGN.md files your agent can trust.
-    </h1>
-    <p class="prose" style="font-size:1.1rem;color:var(--muted);">
-      Every file here was extracted from the live site by a headless browser, not
-      described from a screenshot. Tokens come from <code>getComputedStyle</code>,
-      so no colour on this site was invented. Each file is dated, checked against
-      the DESIGN.md spec, and contrast-audited in public.
+    <h1 class="prose" style="max-width:18ch;">DESIGN.md files your agent can trust.</h1>
+    <p class="prose lede">
+      Hand one to a coding agent and the UI it writes matches a chosen visual
+      language. Every value was measured from the live site by a headless browser
+      through <code>getComputedStyle</code> — dated, spec-linted and
+      contrast-audited. <strong>No colour in this registry was written by a model.</strong>
     </p>
 
-    <div class="panel" style="max-width:32rem;margin-top:1.5rem;">
-      <pre style="margin:0;"><code>npm run add -- stripe</code></pre>
-      <p style="margin:0.6rem 0 0;color:var(--muted);font-size:0.85rem;">
-        Not on npm yet — <a href="/cli">run it from a clone</a>, or give your
-        agent <a href="/mcp">the MCP server</a>.
+    <div class="panel install">
+      <pre><code>npx specimen add stripe</code></pre>
+      <p>
+        Not on npm yet — <a href="/cli">run it from a clone</a>, give your agent{' '}
+        <a href="/mcp">the MCP server</a>, or read <a href="/llms.txt">llms.txt</a>.
       </p>
     </div>
+  </section>
+
+  <section aria-label="What the registry contains">
+    <dl class="figures">
+      {FIGURES.map(f => (
+        <div>
+          <dt>{f.n}</dt>
+          <dd>{f.label}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  {/* Proof rather than a claim: one real file's measurements, on the page, with
+      the URL and date they came from. A directory can copy the prose above; it
+      cannot copy this without building a crawler. */}
+  <section class="proof">
+    <h2>What "measured" means</h2>
+    <div class="proof-grid">
+      <div>
+        <h3>Colour, with the pairings checked</h3>
+        <ul class="facts">
+          <li><span class="dot" style={`background:${fc.background}`}></span> canvas <code>{fc.background}</code></li>
+          <li><span class="dot" style={`background:${fc.foreground}`}></span> body text <code>{fc.foreground}</code></li>
+          <li><span class="dot" style={`background:${fc.primary}`}></span> accent <code>{fc.primary}</code></li>
+          {fc['gradient-1'] && (
+            <li>
+              <span class="dot" style={`background:linear-gradient(120deg, ${fc['gradient-1']}, ${fc['gradient-2'] ?? fc['gradient-1']})`}></span>
+              gradient stops <code>{fc['gradient-1']}</code> → <code>{fc['gradient-2']}</code>
+            </li>
+          )}
+        </ul>
+        <p class="fine">
+          Those last two exist only inside a gradient. A palette that listed the
+          solid colours alone would leave out the most recognisable thing on the
+          page.
+        </p>
+      </div>
+      <div>
+        <h3>And the parts a palette misses</h3>
+        <ul class="facts">
+          {fl.measure && <li><b>{fl.measure}</b> <span>content measure</span></li>}
+          {fl.sectionSpacing && <li><b>{fl.sectionSpacing}</b> <span>between sections</span></li>}
+          {fl.heroHeight && (
+            <li><b>{fl.heroHeight}</b> <span>hero, {fl.heroHeadingSize} headline</span></li>
+          )}
+          {featured.data.motion && (
+            <li>
+              <b>{featured.data.motion.duration}</b> <span>{featured.data.motion.easing}</span>
+            </li>
+          )}
+          {fl.sectionMedia && (
+            <li><b>{fl.sectionWidth}</b> <span>sections, {fl.sectionMedia}</span></li>
+          )}
+        </ul>
+        <p class="fine">
+          Structure, composition and timing — the difference between a page in
+          the right colours and a page that reads like the real thing.
+        </p>
+      </div>
+    </div>
+    <p class="fine">
+      From <a href={featured.data.provenance.source} rel="nofollow noopener">{featured.data.provenance.source}</a>,
+      captured {featured.data.provenance.capturedAt.toISOString().slice(0, 10)}.{' '}
+      <a href={`/systems/${featured.id}`}>See the whole file →</a>
+    </p>
   </section>
 
   <section>
     <h2>Recently verified</h2>
     <div class="grid" style="margin-top:1rem;">
-      {systems.map((s) => {
+      {recent.map((s) => {
         const c = s.data.colors ?? {};
         return (
           <a class="card" href={`/systems/${s.id}`}>
-            <h3>{s.data.name}</h3>
+            <h3 style={nameStyle(s.data)}>{s.data.name}</h3>
             <p>{s.data.description}</p>
             <div class="swatches">
               {['background', 'card', 'primary', 'foreground']
@@ -48,7 +157,7 @@ const systems = (await getCollection('systems'))
         );
       })}
     </div>
-    <p style="margin-top:1.5rem;"><a href="/systems">All systems →</a></p>
+    <p style="margin-top:1.5rem;"><a href="/systems">All {all.length} systems →</a></p>
   </section>
 
   <section class="prose">
@@ -61,7 +170,57 @@ const systems = (await getCollection('systems'))
       <li><strong>Validated at build time.</strong> A file that breaks the spec's
         section rules fails the build, so it cannot reach this site.</li>
       <li><strong>Honest about gaps.</strong> Where the extractor could not
-        observe a token, the file omits it and says why, rather than guessing.</li>
+        observe a token, the file omits it and says why. That is what those
+        {' '}{stats.warnings} warnings are, and they ship with the files.</li>
     </ul>
   </section>
+
+  <style>
+    .lede { font-size: var(--step-2xl, 1.1rem); color: var(--muted); }
+    .lede strong { color: var(--fg-strong); font-weight: inherit; }
+
+    .install { max-width: 32rem; margin-top: var(--s5); }
+    .install pre { margin: 0; }
+    .install p { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.85rem; }
+
+    .figures {
+      display: grid; gap: var(--s4);
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      margin: 0; padding: var(--s5) 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .figures dt {
+      font-size: var(--step-5xl, 2rem); line-height: 1;
+      color: var(--fg-strong); font-weight: var(--heading-weight, 600);
+      font-variant-numeric: tabular-nums;
+    }
+    .figures dd {
+      margin: var(--s2) 0 0; color: var(--muted);
+      font-size: 0.85rem; line-height: 1.35; max-width: 18ch;
+    }
+
+    .proof-grid {
+      display: grid; gap: var(--s5) var(--s6); margin-top: var(--s4);
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+    .proof h3 { font-size: var(--step-2xl, 1rem); margin: 0 0 var(--s3); }
+    .facts { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s2); }
+    /* Each item is exactly two flex children — a marker and one span of text.
+       Leaving bare text nodes between elements makes each one its own flex item
+       and gives it the gap, which rendered "full-bleed , balanced". */
+    .facts li { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.9rem; }
+    .facts .dot { align-self: center; }
+    .facts b { color: var(--fg-strong); font-variant-numeric: tabular-nums; }
+    .facts code { font-size: 0.85em; }
+    .dot {
+      width: 1.1rem; height: 1.1rem; flex: none;
+      border-radius: var(--radius-sm);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 20%, transparent);
+    }
+    .fine {
+      color: var(--muted); font-size: 0.85rem; line-height: 1.5;
+      max-width: 46ch; margin: var(--s3) 0 0;
+    }
+  </style>
 </Base>
