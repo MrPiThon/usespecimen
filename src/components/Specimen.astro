@@ -345,13 +345,15 @@ const shownIn = (fam) => {
   }
   .sp-block > h3 {
     margin: 0 0 0.35rem;
-    font-size: 0.75rem; font-weight: 600;
+    font-size: var(--t-caption-sm-size, 12px);
+    font-weight: var(--t-caption-sm-weight, 510);
     letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--pv-muted, #666);
   }
   .sp-note {
     margin: 0.35rem 0 0;
-    font-size: 0.8rem; line-height: 1.5;
+    font-size: var(--t-caption-size, 13px);
+    line-height: var(--t-caption-leading, 1.54);
     color: var(--pv-muted, #666);
     max-width: 62ch;
   }
@@ -374,10 +376,11 @@ const shownIn = (fam) => {
   }
   .sw figcaption {
     display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem;
-    margin-top: 0.35rem; font-size: 0.72rem; line-height: 1.4;
+    margin-top: var(--s3); font-size: var(--step-sm, 12px);
+    line-height: var(--t-caption-sm-leading, 1.4);
   }
   .sw-name { font-weight: 600; }
-  .sw figcaption code { font-size: 0.72rem; color: var(--pv-muted, #666); }
+  .sw figcaption code { font-size: var(--step-sm, 12px); color: var(--pv-muted, #666); }
   .sw-ratio {
     margin-left: auto; font-variant-numeric: tabular-nums;
     color: var(--pv-muted, #666);
@@ -393,7 +396,7 @@ const shownIn = (fam) => {
     overflow: hidden;
   }
   .ty-meta {
-    flex: 0 0 7rem; font-size: 0.7rem;
+    flex: 0 0 7rem; font-size: var(--step-xs, 10px);
     color: var(--pv-muted, #666); display: flex; justify-content: space-between;
   }
   .ty-meta em { font-style: normal; font-variant-numeric: tabular-nums; }
@@ -401,7 +404,7 @@ const shownIn = (fam) => {
 
   .sub-badge {
     display: flex; flex-wrap: wrap; gap: 0.4rem;
-    margin: 0.5rem 0 0; font-size: 0.7rem;
+    margin: var(--s5) 0 0; font-size: var(--step-xs, 10px);
   }
   .sub-badge span {
     border: 1px dashed currentColor;
@@ -437,7 +440,7 @@ const shownIn = (fam) => {
     box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.35);
   }
   .sh figcaption, .el figcaption {
-    margin-top: 0.35rem; font-size: 0.7rem; color: var(--pv-muted, #666);
+    margin-top: var(--s3); font-size: var(--step-xs, 10px); color: var(--pv-muted, #666);
     display: flex; flex-direction: column;
   }
   .sh figcaption em { font-style: normal; }
@@ -450,7 +453,7 @@ const shownIn = (fam) => {
   .sc-list { display: grid; gap: 0.3rem; margin-top: 0.6rem; }
   .sc-row { display: flex; align-items: center; gap: 0.75rem; }
   .sc-meta {
-    flex: 0 0 3.5rem; font-size: 0.7rem; text-align: right;
+    flex: 0 0 3.5rem; font-size: var(--step-xs, 10px); text-align: right;
     color: var(--pv-muted, #666); font-variant-numeric: tabular-nums;
   }
   .sc-bar {
@@ -466,8 +469,8 @@ const shownIn = (fam) => {
   }
 
   .mo {
-    margin-top: 0.4rem;
-    font: inherit; font-size: 0.85rem;
+    margin-top: var(--s3);
+    font: inherit; font-size: var(--t-caption-size, 13px);
     padding: var(--pv-btn-padding, 0.5rem 1rem);
     border: 1px solid var(--pv-border, rgba(128, 128, 128, 0.4));
     border-radius: var(--pv-btn-radius, var(--pv-radius, 6px));
@@ -483,7 +486,8 @@ const shownIn = (fam) => {
 
   .st {
     display: grid; grid-template-columns: auto 1fr;
-    gap: 0.3rem 1rem; margin: 0.6rem 0 0; font-size: 0.8rem;
+    gap: var(--s3) var(--s9, 24px); margin: var(--s4) 0 0;
+    font-size: var(--t-caption-size, 13px);
   }
   .st dt { color: var(--pv-muted, #666); }
   .st dd { margin: 0; }
@@ -496,8 +500,8 @@ const shownIn = (fam) => {
     width: min(100%, calc(var(--me) / 1440 * 100%));
   }
   .me em {
-    display: block; margin-top: 0.3rem; font-style: normal;
-    font-size: 0.7rem; color: var(--pv-muted, #666);
+    display: block; margin-top: var(--s3); font-style: normal;
+    font-size: var(--step-xs, 10px); color: var(--pv-muted, #666);
   }
 
   @media (max-width: 34rem) {

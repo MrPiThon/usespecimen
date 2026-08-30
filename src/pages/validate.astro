@@ -22,7 +22,7 @@ import { SECTIONS } from '../lib/design-md.mjs';
         <label class="btn" for="file" style="cursor:pointer;">Choose a file…</label>
         <input id="file" type="file" accept=".md,text/markdown,text/plain" class="visually-hidden" />
         <button type="button" id="example">Load an example</button>
-        <span id="filename" style="color:var(--muted);font-size:0.9rem;"></span>
+        <span id="filename" style="color:var(--muted);font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);"></span>
       </div>
       <textarea
         id="input"
@@ -36,7 +36,7 @@ import { SECTIONS } from '../lib/design-md.mjs';
     <aside>
       <div class="panel" style="margin-bottom:1rem;">
         <h3>What is checked</h3>
-        <ul style="margin:0;padding-left:1.1rem;font-size:0.9rem;">
+        <ul style="margin:0;padding-left:var(--s8,16px);font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);">
           <li>Frontmatter parses as YAML, and <code>name</code> is present — the
             only property the spec requires.</li>
           <li>All eight <code>##</code> sections, once each, in order.</li>
@@ -46,7 +46,7 @@ import { SECTIONS } from '../lib/design-md.mjs';
       </div>
       <div class="panel">
         <h3>Required order</h3>
-        <ol style="margin:0;padding-left:1.2rem;font-size:0.9rem;">
+        <ol style="margin:0;padding-left:var(--s8,16px);font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);">
           {SECTIONS.map(s => <li>{s}</li>)}
         </ol>
       </div>
@@ -131,13 +131,13 @@ import { SECTIONS } from '../lib/design-md.mjs';
       ]));
       if (a.unpaired.length) {
         results.append(el('p', {
-          style: 'color:var(--muted);font-size:0.9rem;',
+          style: 'color:var(--muted);font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);',
           textContent: `Not audited, because the pairing is not inferable from the name: ${a.unpaired.join(', ')}.`,
         }));
       }
     } else if (v.data) {
       results.append(el('p', {
-        style: 'color:var(--muted);font-size:0.9rem;',
+        style: 'color:var(--muted);font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);',
         textContent: 'No contrast pairs could be identified from the colour names. '
           + 'Naming a background token `background` or `canvas` lets the audit run.',
       }));

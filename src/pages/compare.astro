@@ -122,7 +122,7 @@ const B = 'linear';
 
   <div id="cmp"></div>
 
-  <p class="prose" style="color:var(--muted);font-size:0.9rem;margin-top:2rem;">
+  <p class="prose" style="color:var(--muted);font-size:var(--t-caption-size,13px);line-height:var(--t-caption-leading,1.54);margin-top:var(--s7,32px);">
     A blank cell means the extractor could not observe that value and the file
     omits it rather than guessing — which is itself a difference worth seeing.
   </p>
@@ -205,7 +205,11 @@ const B = 'linear';
        will happily grow to accommodate — which pushed the whole page past a
        320px screen and made the browser zoom out. */
     .cmp-pick label { display: grid; gap: 4px; flex: 1 1 14rem; min-width: 0; }
-    .cmp-pick span { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .cmp-pick span {
+      font-size: var(--t-caption-sm-size, 12px);
+      font-weight: var(--t-caption-sm-weight, 510);
+      color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em;
+    }
     .cmp-pick select {
       font: inherit; background: var(--bg); color: var(--fg);
       border: 1px solid var(--border); border-radius: var(--radius);
@@ -225,7 +229,9 @@ const B = 'linear';
 
     .cmp-group { margin-top: var(--s6); }
     .cmp-group h2 {
-      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em;
+      font-size: var(--t-caption-sm-size, 12px);
+      font-weight: var(--t-caption-sm-weight, 510);
+      text-transform: uppercase; letter-spacing: 0.07em;
       color: var(--muted); margin: 0 0 var(--s3);
     }
     table.cmp { width: 100%; border-collapse: collapse; display: block; }
@@ -233,9 +239,9 @@ const B = 'linear';
     .cmp tr { padding: 0.45rem 0; border-bottom: 1px solid var(--border); align-items: baseline; }
     .cmp th {
       text-align: left; font-weight: 400; color: var(--muted);
-      font-size: 0.85rem; display: flex; gap: 0.35rem; align-items: baseline;
+      font-size: var(--t-caption-size, 13px); display: flex; gap: var(--s3); align-items: baseline;
     }
-    .cmp td { display: flex; align-items: baseline; gap: 0.4rem; font-size: 0.9rem; }
+    .cmp td { display: flex; align-items: baseline; gap: var(--s3); font-size: var(--t-body-sm-size, 14px); }
     .cmp-none { color: var(--faint); font-style: italic; }
     .cmp-dot {
       width: 0.85rem; height: 0.85rem; flex: none; align-self: center;
@@ -245,14 +251,14 @@ const B = 'linear';
     /* Marked, not coloured: a difference is not a fault, and colouring it red
        would read as one. */
     .cmp .differs th { color: var(--fg-strong); }
-    .cmp-flag { color: var(--accent); font-size: 0.9em; }
+    .cmp-flag { color: var(--accent); font-size: var(--t-caption-size, 13px); }
 
     @media (max-width: 40rem) {
       .cmp-head, .cmp tr { grid-template-columns: minmax(0, 7rem) minmax(0, 1fr) minmax(0, 1fr); gap: var(--s2); }
       /* Long values wrap rather than setting a floor for the whole table. */
       .cmp td, .cmp th { overflow-wrap: anywhere; }
-      .cmp th { font-size: 0.78rem; }
-      .cmp td { font-size: 0.82rem; }
+      .cmp th { font-size: var(--step-sm, 12px); }
+      .cmp td { font-size: var(--t-caption-size, 13px); }
     }
   </style>
 </Base>

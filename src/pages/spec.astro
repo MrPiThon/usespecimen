@@ -110,9 +110,9 @@ const sample = bySlug.govuk;
         {s.example && (
           <>
             <blockquote style="margin:0;padding:0.75rem 1rem;border-left:3px solid var(--border);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;">
-              <p style="margin:0;white-space:pre-wrap;font-size:0.9rem;">{s.example.text}</p>
+              <p style="margin:0;white-space:pre-wrap;font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);">{s.example.text}</p>
             </blockquote>
-            <p style="font-size:0.85rem;color:var(--muted);margin-top:0.4rem;">
+            <p style="font-size:var(--t-caption-size,13px);line-height:var(--t-caption-leading,1.54);color:var(--muted);margin-top:var(--s3);">
               from <a href={`/systems/${s.example.slug}`}>{s.example.name}</a>
             </p>
           </>

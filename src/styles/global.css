@@ -143,22 +143,55 @@ a:hover { text-decoration-color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: var(--radius-sm); }
 ::selection { background: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--fg-strong); }
 
+/* Headings wear the file's type ROLES, not sizes picked off its scale.
+   A scale is a list of sizes; a role is a size that was observed together with
+   a weight, a leading and a tracking. Setting 24px and then choosing 1.15
+   leading and -0.02em tracking by eye rebuilds a bundle that never existed on
+   the page — the same fabricated-combination bug the pipeline avoids in
+   `typeStyles`, `states` and motion.
+
+   h1 takes the h2 role, which is the file's one display bundle: 48px at 510
+   with 1.0 leading and -1.056px tracking. h2 and h3 take the lead-lg and lead
+   bundles for size and tracking, with the file's own heading weight over them —
+   the file measures tracking at 13, 14, 15, 20, 24 and 48px and nowhere else,
+   so those are the sizes a heading may be.
+
+   The jump from 48px to 24px is steep, and it is the system's: a large display
+   step and then small dense type is what this file measures. */
 h1, h2, h3 {
   color: var(--fg-strong);
   font-weight: var(--heading-weight);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
   margin: 0 0 var(--s2);
 }
-/* Heading sizes are steps from the system's own scale, not a ladder invented
-   here. It specifies no responsive behaviour, so neither do we. */
-h1 { font-size: var(--step-6xl, 38px); }
-h2 { font-size: var(--step-4xl, 24px); margin-top: var(--s6); }
-h3 { font-size: var(--step-3xl, 20px); margin-top: var(--s5); }
+h1 {
+  font-size: var(--t-h2-size, 48px);
+  font-weight: var(--t-h2-weight, 510);
+  line-height: var(--t-h2-leading, 1);
+  letter-spacing: var(--t-h2-track, -1.056px);
+}
+h2 {
+  font-size: var(--t-lead-lg-size, 24px);
+  line-height: var(--t-lead-lg-leading, 1.33);
+  letter-spacing: var(--t-lead-lg-track, -0.288px);
+  margin-top: var(--s6);
+}
+h3 {
+  font-size: var(--t-lead-size, 20px);
+  line-height: var(--t-lead-leading, 1.33);
+  letter-spacing: var(--t-lead-track, -0.24px);
+  margin-top: var(--s5);
+}
 p, ul, ol { margin: 0 0 var(--s3); }
 strong { color: var(--fg-strong); font-weight: 550; }
 
-code, pre, kbd { font-family: var(--mono); font-size: 0.875em; letter-spacing: 0; }
+/* The mono role, whole. 0.875em resolved to 13.1px, a size this file does not
+   contain; its monospace was measured at 14px with 1.71 leading. */
+code, pre, kbd {
+  font-family: var(--mono);
+  font-size: var(--t-mono-size, 14px);
+  line-height: var(--t-mono-leading, 1.71);
+  letter-spacing: 0;
+}
 :not(pre) > code {
   background: var(--surface-2);
   border: 1px solid var(--border);
@@ -169,7 +202,7 @@ code, pre, kbd { font-family: var(--mono); font-size: 0.875em; letter-spacing: 0
 pre {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg, 8px);
   padding: var(--s4);
   overflow-x: auto;
 }
@@ -246,7 +279,10 @@ a, button, input, .card, .chip { transition: all var(--motion, 0s) var(--motion-
   min-width: 0;
 }
 .site-header nav a {
-  color: var(--muted); text-decoration: none; font-size: 0.9rem;
+  color: var(--muted); text-decoration: none;
+  font-size: var(--t-link-size, 13px);
+  line-height: var(--t-link-leading, 1.5);
+  letter-spacing: var(--t-link-track, -0.13px);
   white-space: nowrap;
 }
 .site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--fg-strong); }
@@ -283,18 +319,25 @@ a, button, input, .card, .chip { transition: all var(--motion, 0s) var(--motion-
      same distance its sections sit off each other. */
   margin-top: var(--section-gap, 5rem);
   padding: var(--s6) 0;
-  color: var(--muted); font-size: 0.9rem;
+  color: var(--muted);
+  font-size: var(--t-caption-size, 13px);
+  line-height: var(--t-caption-leading, 1.54);
+  letter-spacing: var(--t-caption-track, -0.039px);
 }
 .site-footer a { color: var(--fg); text-decoration: none; }
 .site-footer a:hover { color: var(--fg-strong); text-decoration: underline; }
 
 .footer-cols {
-  display: grid; gap: var(--s6);
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  display: grid; gap: var(--s6) var(--s7, 32px);
+  /* Three, not four. "Not a four-column footer" is on the list this site
+     publishes in every one of its files, and this site was shipping
+     `2fr 1fr 1fr 1fr`. Catalogue and Tools merge; About keeps the wide column
+     so the grid is deliberately uneven rather than four equal bays. */
+  grid-template-columns: 2fr 1fr 1fr;
   align-items: start;
 }
 .footer-about p { margin: var(--s3) 0 0; max-width: 42ch; }
-.footer-about .brand { font-size: 1rem; }
+.footer-about .brand { font-size: var(--step-2xl, 16px); }
 
 .site-footer nav { display: flex; flex-direction: column; gap: var(--s2); }
 .site-footer nav h2 {
@@ -396,7 +439,11 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
   letter-spacing: 0.07em; color: var(--muted); font-weight: 550;
 }
 
-.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px var(--s3); font-size: 0.85rem; }
+.kv {
+  display: grid; grid-template-columns: auto 1fr; gap: var(--s2) var(--s3);
+  font-size: var(--t-caption-size, 13px);
+  line-height: var(--t-caption-leading, 1.54);
+}
 .kv dt { color: var(--muted); }
 .kv dd { margin: 0; overflow-wrap: anywhere; }
 
@@ -410,7 +457,7 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
 .badge.warn { color: var(--warn); }
 .badge.fail { color: var(--bad); }
 
-table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+table { border-collapse: collapse; width: 100%; font-size: var(--t-caption-size, 13px); }
 th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
 th { color: var(--muted); font-weight: 550; }
 .chip {
@@ -434,7 +481,10 @@ th { color: var(--muted); font-weight: 550; }
 
 .pv-wrap { margin: 0; min-width: 0; }
 .pv-wrap figcaption {
-  color: var(--muted); font-size: 0.75rem; margin-bottom: 6px;
+  color: var(--muted); margin-bottom: var(--s3);
+  font-size: var(--t-caption-sm-size, 12px);
+  font-weight: var(--t-caption-sm-weight, 510);
+  line-height: var(--t-caption-sm-leading, 1.4);
   text-transform: uppercase; letter-spacing: 0.07em;
 }
 
@@ -458,6 +508,11 @@ th { color: var(--muted); font-weight: 550; }
   border-bottom-style: var(--pv-border-style, dashed);
 }
 .pv-nav strong { margin-right: auto; color: inherit; }
+/* The `.pv` block below is the one place on this site that deliberately does
+   NOT use Linear's steps. It renders the PREVIEWED system's components, so its
+   sizes are `em` — relative to that system's own base size, which `--pv-*`
+   sets. Converting these to Linear's scale would render every system's preview
+   in Linear's type, which is the opposite of what the panel is for. */
 .pv .pv-nav a { color: inherit; text-decoration: none; opacity: 0.7; font-size: 0.9em; }
 
 .pv-body { padding: var(--s4); display: grid; gap: 14px; }
@@ -526,12 +581,15 @@ th { color: var(--muted); font-weight: 550; }
 /* ---- validator ---- */
 #input {
   width: 100%; min-height: 22rem; resize: vertical;
-  font-family: var(--mono); font-size: 0.85rem; line-height: 1.5; letter-spacing: 0;
+  font-family: var(--mono);
+  font-size: var(--t-mono-size, 14px);
+  line-height: var(--t-mono-leading, 1.71);
+  letter-spacing: 0;
   background: var(--bg); color: var(--fg);
   border: 1px solid var(--border); border-radius: var(--radius);
   padding: var(--s3);
 }
-.v-list { margin: 0 0 var(--s3); padding-left: var(--s4); font-size: 0.9rem; }
+.v-list { margin: 0 0 var(--s3); padding-left: var(--s4); font-size: var(--t-body-sm-size, 14px); }
 .v-list li { margin-bottom: 4px; }
 .v-list.bad li { color: var(--bad); }
 .v-list.warn li, .v-list li.warn { color: var(--warn); }
@@ -541,7 +599,9 @@ th { color: var(--muted); font-weight: 550; }
    12px uppercase — which also flattened the per-system typefaces they are set
    in. The catalogue now uses #catalog, and this stays scoped either way. */
 #results > h3 {
-  font-size: 0.75rem; text-transform: uppercase;
+  font-size: var(--t-caption-sm-size, 12px);
+  font-weight: var(--t-caption-sm-weight, 510);
+  text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--muted); margin: var(--s5) 0 6px;
 }
 
@@ -559,7 +619,7 @@ th { color: var(--muted); font-weight: 550; }
   color: var(--muted); min-width: 6.5rem;
 }
 .chip-btn {
-  font: inherit; font-size: 0.82rem; letter-spacing: var(--tracking);
+  font: inherit; font-size: var(--t-caption-size, 13px); letter-spacing: var(--tracking);
   padding: 2px 10px; border-radius: var(--radius-pill);
   border: 1px solid var(--border); background: var(--surface-2); color: var(--muted);
   cursor: pointer;
@@ -583,7 +643,7 @@ th { color: var(--muted); font-weight: 550; }
   border: 1px solid color-mix(in srgb, var(--fg) 25%, transparent);
 }
 .tag {
-  display: inline-block; font-size: 0.7rem; letter-spacing: 0.02em;
+  display: inline-block; font-size: var(--step-sm, 12px); letter-spacing: 0.02em;
   color: var(--muted); border: 1px solid var(--border);
   border-radius: var(--radius-pill); padding: 1px 8px; margin: 0 4px 4px 0;
 }

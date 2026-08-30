@@ -187,16 +187,37 @@ export function themeVars(data, decor = null) {
   if (type.weight) out.push(['--weight', String(type.weight)]);
   if (type.headingWeight) out.push(['--heading-weight', String(type.headingWeight)]);
   if (type.letterSpacing) out.push(['--tracking', type.letterSpacing]);
+  // Every declared radius, not the four the stylesheet happened to want. The
+  // file publishes six and the site was drawing one of them 32 times out of 40,
+  // which is the uniformity the Base names as the tell underneath all the
+  // others — a single corner everywhere because nothing was decided.
+  for (const [step, value] of Object.entries(rounded)) {
+    if (typeof value === 'string') out.push([`--radius-${step}`, value]);
+  }
   if (rounded.md) out.push(['--radius', rounded.md]);
-  if (rounded.sm) out.push(['--radius-sm', rounded.sm]);
-  if (rounded.lg) out.push(['--radius-lg', rounded.lg]);
-  if (rounded.button) out.push(['--radius-button', rounded.button]);
-  if (rounded.pill) out.push(['--radius-pill', rounded.pill]);
 
   // Type scale, straight from the file. Headings climb the system's own steps
   // instead of a ladder this site made up.
   for (const [step, value] of Object.entries(type.scale ?? {})) {
     out.push([`--step-${step}`, value]);
+  }
+
+  // The type ROLES, which are the part that matters and which this site ignored
+  // entirely. A scale is a list of sizes; a role is a size that was observed
+  // together with a weight, a leading and a tracking. Taking a size from the
+  // scale and then choosing leading by eye rebuilds a combination that may
+  // never have existed on the page — the same fabricated-combination bug
+  // `typeStyles`, `states` and motion each had in the pipeline.
+  //
+  // Every role the file declares gets emitted, because which of them a
+  // stylesheet wants is the stylesheet's business. Tracking is omitted where a
+  // role carries none, so `var(--t-x-track, normal)` resolves honestly instead
+  // of to a zero nobody measured.
+  for (const [role, r] of Object.entries(type.roles ?? {})) {
+    if (r?.fontSize) out.push([`--t-${role}-size`, r.fontSize]);
+    if (r?.fontWeight != null) out.push([`--t-${role}-weight`, String(r.fontWeight)]);
+    if (r?.lineHeight != null) out.push([`--t-${role}-leading`, String(r.lineHeight)]);
+    if (r?.letterSpacing) out.push([`--t-${role}-track`, r.letterSpacing]);
   }
   // Observed spacing. `base` is skipped: this system has no grid, and the value
   // would be null anyway. The stylesheet picks which steps to use for what —

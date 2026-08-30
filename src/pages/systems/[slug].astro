@@ -45,7 +45,7 @@ const font = fontNote(d);
 ---
 
 <Base title={`${d.name} — Specimen`} description={d.description}>
-  <p style="margin:2rem 0 0;color:var(--muted);font-size:0.9rem;">
+  <p style="margin:var(--s7,32px) 0 0;color:var(--muted);font-size:var(--t-body-sm-size,14px);line-height:var(--t-body-sm-leading,1.5);">
     <a href="/systems">Systems</a> / {entry.id}
   </p>
   <h1 style="margin-bottom:0.25rem;">{d.name}</h1>
@@ -185,7 +185,7 @@ const font = fontNote(d);
           {capture.warnings?.length > 0 && (
             <>
               <h3 style="margin-top:1rem;">Extraction notes</h3>
-              <ul style="margin:0;padding-left:1.1rem;font-size:0.85rem;color:var(--muted);">
+              <ul style="margin:0;padding-left:var(--s8,16px);font-size:var(--t-caption-size,13px);line-height:var(--t-caption-leading,1.54);color:var(--muted);">
                 {capture.warnings.map((w) => <li>{w}</li>)}
               </ul>
             </>
@@ -213,7 +213,7 @@ const font = fontNote(d);
     }
     .tabs button {
       background: none; border: 0; cursor: pointer;
-      font: inherit; font-size: 0.85rem;
+      font: inherit; font-size: var(--t-caption-size, 13px);
       color: var(--muted);
       padding: 0.5rem 0.9rem;
       border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -228,7 +228,7 @@ const font = fontNote(d);
       border-bottom-color: var(--accent, var(--fg-strong));
     }
     .tp-note {
-      color: var(--muted); font-size: 0.9rem;
+      color: var(--muted); font-size: var(--t-body-sm-size, 14px);
       max-width: var(--measure); margin: 0 0 var(--s4);
     }
     .tp-h { margin: var(--s6) 0 var(--s4); font-size: var(--step-3xl, 1.25rem); }

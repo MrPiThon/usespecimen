@@ -771,6 +771,32 @@ Neither applies on this Windows machine, where Chromium is already installed.
   second `.site-header` block whose `position: var(--nav-position)` was written
   after the original's `position: sticky` lost silently, because the merge kept
   source order within the combined rule.
+  **The site wears the file's type ROLES, not sizes picked off its scale.** A
+  scale is a list of sizes; a role is a size that was observed together with a
+  weight, a leading and a tracking. `theme.mjs` emits every role as
+  `--t-<role>-{size,weight,leading,track}`, and `global.css` groups its
+  selectors by role. Setting 24px and then choosing 1.15 leading and -0.02em
+  tracking by eye rebuilds a bundle that never existed on the page — the same
+  fabricated-combination bug the pipeline avoids in `typeStyles`, `states` and
+  motion, committed in the stylesheet instead of the clusterer.
+  This was an audit of the site against the Base it publishes, and the site
+  lost: **16 hardcoded rem sizes in the stylesheet rendering 5 sizes the file
+  does not contain** — 11.48, 12.24, 13.125, 13.6 and 14.4px. `0.85rem` is
+  13.6px; Linear measures 13px and 14px and nothing between. Every page now
+  renders only the file's own twelve steps, checked by walking the DOM rather
+  than by reading the CSS.
+  h1 takes the **h2 role** (48px/510/1.0/-1.056px), the file's one display
+  bundle; h2 and h3 take `lead-lg` and `lead` for size and tracking under the
+  file's heading weight. The file measures tracking at 13, 14, 15, 20, 24 and
+  48px and nowhere else, so those are the sizes a heading may be. The jump from
+  48 to 24 is steep and it is the system's: a large display step and then small
+  dense type is what this file measures.
+  **`.pv` is the deliberate exception.** It renders the *previewed* system's
+  components, so its sizes are `em` against that system's base. Putting it on
+  Linear's steps would render every preview in Linear's type.
+  Sections are all one width because `sectionWidth: contained` — the Base's
+  "not every section the same width" is a rule about defaults, and this one was
+  measured.
   `--faint` (3.45:1) is the one token held back from small text — it is the
   system's quietest tier, fine where it is used at size and a failing pair at
   label size, and shipping it would contradict the audit we publish elsewhere.
