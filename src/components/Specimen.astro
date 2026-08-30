@@ -11,6 +11,7 @@
 // system renders light on this dark site rather than borrowing its palette.
 import { previewVars } from '../lib/preview.mjs';
 import { parseColor, contrastRatio, flatten, toOklch } from '../lib/color.mjs';
+import { fontNote, primaryFamily } from '../lib/webfonts.mjs';
 
 interface Props { data: any; dark?: boolean; }
 const { data, dark = false } = Astro.props;
@@ -84,6 +85,11 @@ const type = data.typography ?? {};
 
 // Sample text sized so a reader can judge the face, not the words.
 const SAMPLE = 'Design tokens measured from the live site';
+const font = fontNote(data);
+// Only worth a block of its own when the display face differs from the body
+// one; otherwise the type scale above already shows it.
+const bodyFamily = primaryFamily(type.fontFamily);
+const headingFamily = primaryFamily(type.headingFamily);
 ---
 
 <div class="sp" style={previewVars(data, { dark })}>
@@ -135,10 +141,7 @@ const SAMPLE = 'Design tokens measured from the live site';
   {scale.length > 0 && (
     <section class="sp-block">
       <h3>Type scale</h3>
-      <p class="sp-note">
-        Rendered at the measured size in the file's own stack. Webfonts are not
-        loaded, so the face falls back — the sizes and weights are the measurement.
-      </p>
+      <p class="sp-note">Rendered at the measured size. {font.note}</p>
       <div class="ty-list">
         {scale.map(s => (
           <div class="ty-row">
@@ -160,6 +163,18 @@ const SAMPLE = 'Design tokens measured from the live site';
           type.weight ? `weight ${type.weight}` : null,
           type.letterSpacing ? `tracking ${type.letterSpacing}` : null,
         ].filter(Boolean).join(' · ')}
+      </p>
+    </section>
+  )}
+
+  {headingFamily && headingFamily !== bodyFamily && (
+    <section class="sp-block">
+      <h3>Headings</h3>
+      <p class="sp-head">{SAMPLE}</p>
+      <p class="sp-note">
+        {[headingFamily, type.headingWeight ? `weight ${type.headingWeight}` : null]
+          .filter(Boolean).join(' · ')}
+        {' '}— a second face, shown here because the scale above renders in the body one.
       </p>
     </section>
   )}
@@ -358,6 +373,13 @@ const SAMPLE = 'Design tokens measured from the live site';
   .ty-meta em { font-style: normal; font-variant-numeric: tabular-nums; }
   .ty-sample { line-height: 1.1; white-space: nowrap; }
 
+  .sp-head {
+    margin: 0.5rem 0 0;
+    font-family: var(--pv-heading-font, var(--pv-font, inherit));
+    font-size: var(--pv-heading-size, 1.6rem);
+    font-weight: var(--pv-heading-weight, 600);
+    line-height: 1.2;
+  }
   .sp-body {
     margin: 0.5rem 0 0;
     font-size: var(--pv-size, 16px);

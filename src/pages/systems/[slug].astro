@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import Preview from '../../components/Preview.astro';
 import Specimen from '../../components/Specimen.astro';
 import { hasDarkPalette, previewGaps } from '../../lib/preview.mjs';
+import { fontNote } from '../../lib/webfonts.mjs';
 import Base from '../../layouts/Base.astro';
 import { lint } from '../../lib/design-md.mjs';
 import { readCapture, readDesignFile } from '../../lib/system-files.mjs';
@@ -38,6 +39,9 @@ const audit = capture?.audit ?? null;
 const textFailures = audit?.textFailures ?? 0;
 const showDark = hasDarkPalette(d);
 const gaps = previewGaps(d);
+// Per system rather than as a blanket disclaimer: "typefaces are not loaded"
+// was untrue for every system using Inter, which this site already ships.
+const font = fontNote(d);
 ---
 
 <Base title={`${d.name} — Specimen`} description={d.description}>
@@ -93,7 +97,7 @@ const gaps = previewGaps(d);
             nothing, the preview falls back to a neutral default and draws its own
             hairlines dashed, so borrowed styling never reads as extracted.
             {gaps.length > 0 && <> This file supplies {gaps.join(', ')}.</>}
-            {' '}Typefaces are not loaded, so text renders in a fallback face.
+            {' '}{font.note}
           </p>
           <div class={`pv-grid ${showDark ? 'two' : ''}`}>
             <Preview data={d} label={showDark ? 'Light' : 'Preview'} />

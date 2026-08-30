@@ -148,6 +148,21 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   only on pairs the file's own naming makes identifiable — `background`/`canvas`,
   `foreground`/`ink`, `on-x`/`xForeground` — and everything it could not pair is
   listed, because silently checking nothing looks exactly like silently passing.
+- `src/lib/webfonts.mjs` decides which typefaces the site may render. **Six of
+  23 systems render in their real face**, three partly, and fourteen fall back.
+  That split is a licensing fact, not a technical one: only Inter, Manrope and
+  Geist are OFL, so only those are self-hosted via `@fontsource`. sohne-var,
+  Nike Futura ND, Graphik, Lyon Text, ABC Favorit, Airbnb Cereal, figmaSans and
+  the rest are commercially licensed, and serving them — self-hosted **or**
+  hotlinked from the source CDN — is redistribution we have no right to. GDS
+  Transport is licensed for GOV.UK services specifically. Same rule that
+  withholds Linear's grain PNG.
+  The resolved family is **prepended** to the file's own stack rather than
+  replacing it, because fontsource ships `Manrope Variable` where Supabase
+  declares `Manrope`.
+  The old blanket note ("typefaces are not loaded") was untrue for every Inter
+  system, which this site already shipped; `fontNote()` now states per system
+  which face is rendering and names the ones it cannot serve.
 - `src/components/Specimen.astro` is the token sheet: every value rendered as
   the thing it describes rather than listed in a table. Swatches with contrast,
   the type scale at its measured sizes, radii drawn, shadows cast, spacing as

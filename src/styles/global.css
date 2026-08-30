@@ -353,6 +353,7 @@ th { color: var(--muted); font-weight: 550; }
 .pv p { margin: 0; }
 .pv .pv-h {
   margin: 0; line-height: 1.2; color: inherit;
+  font-family: var(--pv-heading-font, var(--pv-font, inherit));
   font-size: var(--pv-heading-size, 1.35em);
   font-weight: var(--pv-heading-weight, 600);
 }

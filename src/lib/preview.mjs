@@ -9,6 +9,7 @@
 // holds while the preview refuses to improve on its input.
 
 import { resolveRef } from './design-md.mjs';
+import { resolveStack } from './webfonts.mjs';
 
 /** Does this file carry a second, dark palette? */
 export const hasDarkPalette = data =>
@@ -70,11 +71,20 @@ export function previewVars(data, { dark = false } = {}) {
     '--pv-btn-fg': resolveRef(eff, button.foreground),
     '--pv-btn-gap': typeof button.gap === 'string' ? button.gap : undefined,
 
-    '--pv-font': body.fontFamily ?? eff?.typography?.fontFamily,
+    // Prepends the self-hosted family when the declared face is one we may
+    // legitimately serve, and is a no-op otherwise. A preview in the wrong face
+    // is a preview of the wrong design, so it is worth getting right wherever
+    // the licence allows.
+    '--pv-font': resolveStack(body.fontFamily ?? eff?.typography?.fontFamily),
     '--pv-size': body.fontSize ?? eff?.typography?.baseSize,
     '--pv-weight': body.fontWeight ?? eff?.typography?.weight,
     '--pv-leading': body.lineHeight ?? eff?.typography?.lineHeight,
     '--pv-tracking': body.letterSpacing,
+    // Headings had a size and a weight but no family, so a system whose display
+    // face differs from its body face previewed entirely in the body face —
+    // and Supabase claimed to render "the real typeface" while Manrope was
+    // never requested at all.
+    '--pv-heading-font': resolveStack(heading.fontFamily ?? eff?.typography?.headingFamily),
     '--pv-heading-size': heading.fontSize,
     '--pv-heading-weight': heading.fontWeight,
 

@@ -2,6 +2,11 @@
 // Self-hosted so the build has no runtime dependency on a font CDN. The theme
 // file names this face; themeVars() throws if that ever stops being true.
 import '@fontsource-variable/inter';
+// The other two openly-licensed faces in the registry, so a system that uses
+// them previews in its real letterforms. See src/lib/webfonts.mjs for why the
+// list stops here.
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/geist';
 import '../styles/global.css';
 import { getEntry } from 'astro:content';
 import { THEME_SLUG, themeVars } from '../lib/theme.mjs';
