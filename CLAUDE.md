@@ -491,6 +491,31 @@ that grew to two lines would sit on top of the page content. Under 46rem it
 as "more this way" rather than as a clipped rendering fault. Before that it
 measured 458px wide in a 375px viewport and CLI and MCP were simply unreachable.
 
+**The zoom-out class of bug.** With `width=device-width`, a layout wider than
+the screen does not produce a scrollbar — the browser widens the viewport and
+zooms out, so text goes small and nothing looks obviously broken. Four causes,
+all the same underlying thing: an **intrinsic minimum** that refuses to shrink.
+
+| | fix |
+|---|---|
+| `.detail` mobile rule used a bare `1fr` | `minmax(0, 1fr)` — bare `1fr` is `minmax(auto, 1fr)`, and `auto` will not go below min-content, so the raw DESIGN.md `<pre>` set the page width |
+| `.grid` floor of `19rem` on a 272px content box | `minmax(min(19rem, 100%), 1fr)` |
+| `<select>` sized to its widest option (279px) | `min-width: 0` on it and its flex parent |
+| `.get-actions` three buttons, no wrap | `flex-wrap: wrap` |
+
+Grid and flex children default to `min-width: auto`, so **anything scrollable
+inside them expands its parent instead of scrolling**. `.detail > * { min-width:
+0 }` guards the whole detail page against a recurrence.
+
+Checking for this needs `innerWidth`, not `scrollWidth`: once the browser has
+zoomed out the two are equal and the page looks fine. The tell is `innerWidth`
+exceeding the width you asked for.
+
+And a hole in the first audit worth not repeating: only the Specimen tab was
+ever measured. **Hidden panels report zero size**, so the DESIGN.md tab — the
+one actually causing the zoom-out — was invisible to every check. Click through
+each tab.
+
 Two flexbox traps in that header, worth remembering because they look identical
 from the outside:
 

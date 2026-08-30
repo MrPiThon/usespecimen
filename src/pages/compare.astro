@@ -194,12 +194,16 @@ const B = 'linear';
       display: flex; flex-wrap: wrap; gap: var(--s4);
       align-items: end; margin: var(--s5) 0 var(--s5);
     }
-    .cmp-pick label { display: grid; gap: 4px; flex: 1 1 14rem; }
+    /* min-width:0 on both: a <select> is sized to its widest option, and
+       "Kinetic Monochrome — Nike" gives it a 279px minimum that a flex item
+       will happily grow to accommodate — which pushed the whole page past a
+       320px screen and made the browser zoom out. */
+    .cmp-pick label { display: grid; gap: 4px; flex: 1 1 14rem; min-width: 0; }
     .cmp-pick span { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
     .cmp-pick select {
       font: inherit; background: var(--bg); color: var(--fg);
       border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 0.5rem 0.6rem; width: 100%;
+      padding: 0.5rem 0.6rem; width: 100%; min-width: 0;
     }
 
     /* The header row shares the table's column template so the two line up. */
@@ -238,7 +242,9 @@ const B = 'linear';
     .cmp-flag { color: var(--accent); font-size: 0.9em; }
 
     @media (max-width: 40rem) {
-      .cmp-head, .cmp tr { grid-template-columns: 7rem 1fr 1fr; gap: var(--s2); }
+      .cmp-head, .cmp tr { grid-template-columns: minmax(0, 7rem) minmax(0, 1fr) minmax(0, 1fr); gap: var(--s2); }
+      /* Long values wrap rather than setting a floor for the whole table. */
+      .cmp td, .cmp th { overflow-wrap: anywhere; }
       .cmp th { font-size: 0.78rem; }
       .cmp td { font-size: 0.82rem; }
     }

@@ -142,7 +142,7 @@ const font = fontNote(d);
 
         <section role="tabpanel" id="p-file" aria-labelledby="t-file" hidden>
           <p class="tp-note">
-            Exactly what is in the repository, frontmatter included.
+            Exactly what is in the repository, frontmatter included.{' '}
             <a href={`/r/${entry.id}/DESIGN.md`}>Raw</a>
           </p>
           <pre class="scroll"><code>{raw}</code></pre>
@@ -202,7 +202,9 @@ const font = fontNote(d);
       margin-top: var(--s5);
     }
     .get pre { margin: 0; flex: 1 1 18rem; }
-    .get-actions { display: flex; gap: var(--s3); }
+    /* Wraps, or the three buttons set a floor the page cannot shrink below —
+       at 320px they held the layout at 341px and the browser zoomed out. */
+    .get-actions { display: flex; gap: var(--s3); flex-wrap: wrap; }
 
     .tabs {
       display: flex; gap: 0.25rem; flex-wrap: wrap;

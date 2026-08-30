@@ -352,7 +352,7 @@ const shownIn = (fam) => {
 
   .sw-grid {
     display: grid; gap: 0.6rem; margin-top: 0.6rem;
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(9rem, 100%), 1fr));
   }
   .sw { margin: 0; min-width: 0; }
   .sw-chip {
