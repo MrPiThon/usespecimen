@@ -63,6 +63,7 @@ ${vars}
         <a class="brand" href="/">Specimen</a>
         <nav>
           <a href="/systems" aria-current={path.startsWith('/systems') ? 'page' : undefined}>Systems</a>
+          <a href="/compare" aria-current={path === '/compare' ? 'page' : undefined}>Compare</a>
           <a href="/spec" aria-current={path === '/spec' ? 'page' : undefined}>Spec</a>
           <a href="/validate" aria-current={path === '/validate' ? 'page' : undefined}>Validate</a>
           <a href="/cli" aria-current={path === '/cli' ? 'page' : undefined}>CLI</a>
@@ -90,6 +91,7 @@ ${vars}
             <a href="/systems">Systems</a>
             <a href="/spec">The spec</a>
             <a href="/validate">Validate a file</a>
+            <a href="/compare">Compare two</a>
           </nav>
 
           <nav aria-labelledby="f-tools">

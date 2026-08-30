@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 // and `lastmod` should be the date the system was actually re-captured rather
 // than the date the site happened to build.
 
-const STATIC = ['/', '/systems', '/spec', '/validate', '/cli', '/mcp', '/about', '/submit'];
+const STATIC = ['/', '/systems', '/compare', '/spec', '/validate', '/cli', '/mcp', '/about', '/submit'];
 
 export const GET: APIRoute = async ({ site }) => {
   const url = (p: string) => new URL(p, site).href;

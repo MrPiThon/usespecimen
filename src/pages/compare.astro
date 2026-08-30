@@ -1,0 +1,246 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { readCapture } from '../lib/system-files.mjs';
+import { resolveStack, primaryFamily } from '../lib/webfonts.mjs';
+import { parseColor, contrastRatio, flatten } from '../lib/color.mjs';
+
+// One page rather than 253 static permutations, with the pair in the query
+// string so a comparison is still a link you can send. Every value is embedded
+// at build time; the only thing the script does is choose which two to show.
+
+const entries = (await getCollection('systems'))
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+const ratio = (hex: string, bgHex: string) => {
+  const c = parseColor(hex);
+  const bg = parseColor(bgHex);
+  if (!c || !bg) return null;
+  return Math.round(contrastRatio(flatten(c, bg), bg) * 100) / 100;
+};
+
+const systems = await Promise.all(entries.map(async (e) => {
+  const capture = await readCapture(e.id);
+  const d = e.data;
+  const c = d.colors ?? {};
+  const t = d.typography ?? {};
+  const l = d.layout ?? {};
+  const comp = capture?.layout?.composition ?? null;
+  const bg = c.background ?? '#ffffff';
+  return {
+    slug: e.id,
+    name: d.name,
+    brand: d.provenance.brand,
+    // The rendered stack, so each column is set in the system it describes.
+    stack: resolveStack(t.headingFamily ?? t.fontFamily) ?? null,
+    swatches: ['background', 'card', 'primary', 'foreground']
+      .map(k => c[k]).filter(v => typeof v === 'string'),
+    rows: {
+      canvas: c.background ?? null,
+      'body text': c.foreground ?? null,
+      'body contrast': c.foreground ? `${ratio(c.foreground, bg)}:1` : null,
+      accent: c.primary ?? null,
+      'on accent': c.primaryForeground ?? null,
+      border: c.border ?? null,
+      'body face': primaryFamily(t.fontFamily),
+      'display face': primaryFamily(t.headingFamily),
+      'body size': t.baseSize ?? null,
+      leading: t.lineHeight != null ? String(t.lineHeight) : null,
+      'body weight': t.weight != null ? String(t.weight) : null,
+      'heading weight': t.headingWeight != null ? String(t.headingWeight) : null,
+      tracking: t.letterSpacing ?? null,
+      'button radius': d.rounded?.button ?? null,
+      'spacing base': d.spacing?.base ?? null,
+      measure: l.measure ?? null,
+      'section gap': l.sectionSpacing ?? null,
+      'nav': l.navHeight ? `${l.navHeight} ${l.navPosition ?? ''}`.trim() : null,
+      hero: l.heroHeight ? `${l.heroHeight}, ${l.heroHeadingSize ?? '?'} ${l.heroAlign ?? ''}`.trim() : null,
+      'section width': comp?.sectionWidth ?? null,
+      imagery: comp ? (comp.sectionMedia === 'none' ? 'none' : comp.sectionMedia) : null,
+      'copy density': comp ? `${comp.sectionCopy} (${comp.charsMedian} chars)` : null,
+      pattern: d.backgrounds?.pattern
+        ? `${d.backgrounds.pattern}${d.backgrounds.patternSize ? ` ${d.backgrounds.patternSize}` : ''}`
+        : null,
+      motion: d.motion ? `${d.motion.duration} ${d.motion.easing}` : 'none',
+      shadows: String(Object.keys(d.elevation ?? {}).length),
+    } as Record<string, string | null>,
+  };
+}));
+
+// Grouped so a reader can scan one dimension at a time rather than 24 rows.
+const GROUPS = [
+  { title: 'Colour', keys: ['canvas', 'body text', 'body contrast', 'accent', 'on accent', 'border'] },
+  { title: 'Type', keys: ['body face', 'display face', 'body size', 'leading', 'body weight', 'heading weight', 'tracking'] },
+  { title: 'Shape & space', keys: ['button radius', 'spacing base', 'shadows'] },
+  { title: 'Structure', keys: ['measure', 'section gap', 'nav', 'hero', 'section width', 'imagery', 'copy density'] },
+  { title: 'Surface & motion', keys: ['pattern', 'motion'] },
+];
+
+const COLOUR_KEYS = new Set(['canvas', 'body text', 'accent', 'on accent', 'border']);
+const A = 'stripe';
+const B = 'linear';
+---
+
+<Base
+  title="Compare design systems — Specimen"
+  description="Put two measured design systems side by side: palette, type, structure, surface and motion, with the differences marked."
+>
+  <h1>Compare</h1>
+  <p class="prose" style="color:var(--muted);">
+    Two measured systems side by side. Every row is a value read from the live
+    site, so a difference here is a real difference between the designs rather
+    than between two people's descriptions of them. Rows that differ are marked.
+  </p>
+
+  <div class="cmp-pick panel">
+    <label>
+      <span>First</span>
+      <select id="pa">
+        {systems.map(s => <option value={s.slug} selected={s.slug === A}>{s.name} — {s.brand}</option>)}
+      </select>
+    </label>
+    <label>
+      <span>Second</span>
+      <select id="pb">
+        {systems.map(s => <option value={s.slug} selected={s.slug === B}>{s.name} — {s.brand}</option>)}
+      </select>
+    </label>
+    <button type="button" id="swap" title="Swap the two columns">Swap</button>
+  </div>
+
+  <div class="cmp-head">
+    <div></div>
+    <div class="cmp-col"><a id="la" href={`/systems/${A}`}><strong id="na"></strong></a><div class="cmp-sw" id="sa"></div></div>
+    <div class="cmp-col"><a id="lb" href={`/systems/${B}`}><strong id="nb"></strong></a><div class="cmp-sw" id="sb"></div></div>
+  </div>
+
+  <div id="cmp"></div>
+
+  <p class="prose" style="color:var(--muted);font-size:0.9rem;margin-top:2rem;">
+    A blank cell means the extractor could not observe that value and the file
+    omits it rather than guessing — which is itself a difference worth seeing.
+  </p>
+
+  <script is:inline define:vars={{ systems, GROUPS, COLOUR_KEYS: [...COLOUR_KEYS] }}>
+    (() => {
+      const byId = Object.fromEntries(systems.map(s => [s.slug, s]));
+      const colourKeys = new Set(COLOUR_KEYS);
+      const pa = document.getElementById('pa');
+      const pb = document.getElementById('pb');
+      const out = document.getElementById('cmp');
+
+      // The pair lives in the URL so a comparison can be sent to someone.
+      const params = new URLSearchParams(location.search);
+      if (byId[params.get('a')]) pa.value = params.get('a');
+      if (byId[params.get('b')]) pb.value = params.get('b');
+
+      const cell = (key, value) => {
+        if (value == null) return '<td class="cmp-none">not measured</td>';
+        const swatch = colourKeys.has(key) && /^#[0-9a-f]{3,8}$/i.test(value)
+          ? `<span class="cmp-dot" style="background:${value}"></span>`
+          : '';
+        return `<td>${swatch}<span>${value}</span></td>`;
+      };
+
+      const render = () => {
+        const a = byId[pa.value];
+        const b = byId[pb.value];
+        history.replaceState(null, '', `?a=${a.slug}&b=${b.slug}`);
+
+        for (const [side, s] of [['a', a], ['b', b]]) {
+          document.getElementById('n' + side).textContent = s.name;
+          document.getElementById('l' + side).href = `/systems/${s.slug}`;
+          // Each column headed in the face of the system it describes.
+          document.getElementById('n' + side).style.fontFamily = s.stack || '';
+          document.getElementById('s' + side).innerHTML = s.swatches
+            .map(h => `<span class="cmp-dot" style="background:${h}"></span>`).join('');
+        }
+
+        out.innerHTML = GROUPS.map(g => {
+          const rows = g.keys.map(k => {
+            const va = a.rows[k];
+            const vb = b.rows[k];
+            // Only mark a difference when both sides actually have a value:
+            // "one of them was not measurable" is a different statement from
+            // "these two designs disagree", and conflating them would overstate
+            // what the comparison knows.
+            const differs = va != null && vb != null && va !== vb;
+            return `<tr class="${differs ? 'differs' : ''}">`
+              + `<th scope="row">${k}${differs ? '<span class="cmp-flag" aria-label="differs">≠</span>' : ''}</th>`
+              + cell(k, va) + cell(k, vb) + '</tr>';
+          }).join('');
+          return `<section class="cmp-group"><h2>${g.title}</h2>`
+            + `<table class="cmp"><tbody>${rows}</tbody></table></section>`;
+        }).join('');
+      };
+
+      pa.addEventListener('change', render);
+      pb.addEventListener('change', render);
+      document.getElementById('swap').addEventListener('click', () => {
+        const t = pa.value; pa.value = pb.value; pb.value = t; render();
+      });
+      render();
+    })();
+  </script>
+
+  {/* Global, not scoped. Astro stamps `data-astro-cid-*` on template elements at
+      build time, and markup injected with innerHTML never gets it — so scoped
+      rules silently did not apply to the generated table: it kept
+      `display: table-row` instead of the grid, the column swatches computed to
+      0px wide, and the group headings rendered as plain 24px h2s. Every
+      selector here is `.cmp`-prefixed, which is what makes global safe. */}
+  <style is:global>
+    .cmp-pick {
+      display: flex; flex-wrap: wrap; gap: var(--s4);
+      align-items: end; margin: var(--s5) 0 var(--s5);
+    }
+    .cmp-pick label { display: grid; gap: 4px; flex: 1 1 14rem; }
+    .cmp-pick span { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .cmp-pick select {
+      font: inherit; background: var(--bg); color: var(--fg);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 0.5rem 0.6rem; width: 100%;
+    }
+
+    /* The header row shares the table's column template so the two line up. */
+    .cmp-head, .cmp tr { display: grid; grid-template-columns: 11rem 1fr 1fr; gap: var(--s3); }
+    .cmp-head { align-items: end; padding-bottom: var(--s3); border-bottom: 1px solid var(--border); }
+    .cmp-col a { text-decoration: none; }
+    .cmp-col strong { font-size: var(--step-3xl, 1.25rem); color: var(--fg-strong); line-height: 1.15; }
+    .cmp-sw { display: flex; gap: 3px; margin-top: 6px; }
+    /* Overrides the base dot's `flex: none` and fixed width — inside the header
+       strip these share the column rather than each claiming its full width,
+       which was pushing the page into horizontal scroll. */
+    .cmp-sw .cmp-dot { flex: 1 1 0; width: auto; height: 10px; }
+
+    .cmp-group { margin-top: var(--s6); }
+    .cmp-group h2 {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--muted); margin: 0 0 var(--s3);
+    }
+    table.cmp { width: 100%; border-collapse: collapse; display: block; }
+    .cmp tbody { display: block; }
+    .cmp tr { padding: 0.45rem 0; border-bottom: 1px solid var(--border); align-items: baseline; }
+    .cmp th {
+      text-align: left; font-weight: 400; color: var(--muted);
+      font-size: 0.85rem; display: flex; gap: 0.35rem; align-items: baseline;
+    }
+    .cmp td { display: flex; align-items: baseline; gap: 0.4rem; font-size: 0.9rem; }
+    .cmp-none { color: var(--faint); font-style: italic; }
+    .cmp-dot {
+      width: 0.85rem; height: 0.85rem; flex: none; align-self: center;
+      border-radius: var(--radius-sm);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 22%, transparent);
+    }
+    /* Marked, not coloured: a difference is not a fault, and colouring it red
+       would read as one. */
+    .cmp .differs th { color: var(--fg-strong); }
+    .cmp-flag { color: var(--accent); font-size: 0.9em; }
+
+    @media (max-width: 40rem) {
+      .cmp-head, .cmp tr { grid-template-columns: 7rem 1fr 1fr; gap: var(--s2); }
+      .cmp th { font-size: 0.78rem; }
+      .cmp td { font-size: 0.82rem; }
+    }
+  </style>
+</Base>

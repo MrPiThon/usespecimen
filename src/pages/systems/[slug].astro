@@ -65,6 +65,7 @@ const font = fontNote(d);
     <div class="get-actions">
       <button type="button" id="copy" data-raw={raw}>Copy DESIGN.md</button>
       <a class="btn" href={`/r/${entry.id}/DESIGN.md`} download={`${entry.id}-DESIGN.md`}>Download</a>
+      <a class="btn" href={`/compare?a=${entry.id}&b=${entry.id === 'linear' ? 'stripe' : 'linear'}`}>Compare</a>
     </div>
   </div>
 

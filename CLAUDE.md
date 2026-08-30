@@ -482,6 +482,24 @@ Ties are not contradictions: Nike and Airbnb both run a 96px nav.
 
 When this fails: correct the prose. Never adjust a token to match a sentence.
 
+## `/compare`
+
+Two systems side by side, every row a measured value. One page with the pair in
+the query string (`?a=stripe&b=linear`) rather than 253 static permutations, so
+a comparison is still a link you can send. All values are embedded at build
+time; the script only chooses which two to show.
+
+A row is marked `≠` **only when both sides have a value**. "One of them was not
+measurable" is a different statement from "these two designs disagree", and
+conflating them would overstate what the comparison knows.
+
+The style block is `is:global`, and it has to be: Astro stamps
+`data-astro-cid-*` on template elements at build time, and markup injected with
+`innerHTML` never gets it — so scoped rules silently did not apply to the
+generated table. It kept `display: table-row` instead of the grid, the column
+swatches computed to 0px, and the group headings rendered as plain 24px h2s.
+Every selector is `.cmp`-prefixed, which is what makes global safe here.
+
 ## The machine-facing surface
 
 - `/llms.txt` (https://llmstxt.org) is a plain-text index written for a model
