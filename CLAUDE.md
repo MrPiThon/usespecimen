@@ -477,11 +477,27 @@ Two rules govern what may go in it:
    violet-to-pink gradient. So the rule is never "no gradients", it is "none you
    were not given" — every prohibition is phrased against the file rather than
    against a style.
-2. **Nothing that inflates the file.** The Base runs 320–370 words against a
-   median body of 642. It already costs a third to a half of each file and
-   competes with the measurements, which are the reason anyone opened it. A Base
-   long enough to dominate has a model following our prose instead of the site's
-   design. Cut before adding.
+2. **Nothing that inflates the file.** v3 runs 460–494 words, of which roughly
+   385 is shared boilerplate and the rest is the per-file budget. Against a
+   median body of ~660 hand-written words that is about 40% of each file, up
+   from a third at v1 — the sourcing pass in v3 earned its additions, but the
+   ceiling is real and the next version should cut before it adds. A Base long
+   enough to dominate has a model following our prose instead of the site's
+   design.
+
+**The list is sourced, and was not always.** v1 and v2 were written from priors
+plus one generated screenshot, which is not research. `SOURCES` at the top of
+`base-md.mjs` names what v3 is actually drawn from, so an item can be checked or
+challenged. Two things the research corrected outright: "tricolon of one-word
+features" is attested nowhere and was replaced by the two-abstract-noun feature
+title that is; and the word list implied a single hit convicts, when the finding
+is that **density is the tell** rather than any one word. One item is kept
+without corroboration and labelled as such — the uppercase eyebrow over the
+headline, which no source names but which led the generated draft of this site.
+
+Anything added later should be traceable to a source or to a generated page we
+have actually looked at. Writing it from memory is what produced a v1 that a
+single screenshot could hole twice.
 
 **The budget is the part that is not boilerplate.** The first paragraph is
 computed from the frontmatter — distinct *values*, not key names, because Linear

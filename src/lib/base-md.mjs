@@ -23,6 +23,46 @@
 //
 // Framework-free, like the rest of src/lib: the CLI writes it and the site
 // renders it, and neither may drag in the other's dependencies.
+//
+// SOURCES for the habit list. v1 and v2 were written from priors and from one
+// generated screenshot, which is not research and should not have been
+// presented as any. These are what the list is actually drawn from, and a
+// claim that is in none of them and in no generated page we have seen does not
+// belong in it:
+//
+//   925studios.co/blog/ai-slop-web-design-guide       Inter, purple-to-blue,
+//                                                     uniform 16px radius and
+//                                                     24px padding, stock
+//                                                     imagery, dead hover states
+//   sikora.software/blog/ai-website-design            #615fff / #8e51ff /
+//                                                     #0f172b, 01/02/03 steps,
+//                                                     "Sarah Johnson, Head of
+//                                                     Operations", 🚀💡✨
+//   github.com/funboy322/avoid-ai-design              rounded-2xl shadow-lg,
+//                                                     lucide Sparkles/ArrowRight/
+//                                                     Zap, untouched shadcn zinc,
+//                                                     icon-in-rounded-square
+//   dev.to/alanwest/how-to-fix-the-ai-generated-look-in-your-frontend
+//                                                     hero → features → social
+//                                                     proof → pricing → FAQ →
+//                                                     footer; bg-indigo-600;
+//                                                     two-abstract-noun titles
+//   uxplanet.org/how-to-spot-ai-generated-design      ultra-conventional
+//                                                     hierarchy, the same
+//                                                     skeleton repeated
+//   slopdetector.org/blog/ai-words-list               delve/utilize/robust/
+//                                                     pivotal, and the finding
+//                                                     that density is the tell
+//                                                     rather than any one word
+//
+// Two things the research contradicted, both now fixed: "tricolon of one-word
+// features" is not attested anywhere and was replaced by the two-abstract-noun
+// title that is; and the word list implied a single hit convicts, which the
+// density finding says is wrong.
+//
+// One thing it did not corroborate and which is kept anyway: the uppercase
+// eyebrow over the headline. No source names it, but it was the first thing in
+// the generated draft of this site, so it stays on the evidence of that page.
 
 /**
  * Bumped when the template changes in a way worth a reader noticing. The
@@ -34,8 +74,14 @@
  *    outlined button pair under the headline. Both were in one generated
  *    screenshot and neither was in v1, which is the argument for auditing this
  *    list against real generated pages rather than writing it from memory.
+ * 3: sourced. See SOURCES above. Adds the default typeface and palette, which
+ *    every source names first and neither earlier version had; the concrete
+ *    `rounded-2xl shadow-lg p-6` form of the uniformity tell; lucide's worn
+ *    three; 01/02/03 steps, the lifted middle pricing tier and the four-column
+ *    footer; named placeholder people; stock imagery; and a motion bullet,
+ *    which earns its place because motion is a thing these files measure.
  */
-export const BASE_VERSION = 2;
+export const BASE_VERSION = 3;
 
 const OPEN = `<!-- specimen:base v${BASE_VERSION} · generated · shared by every file in this registry · edit src/lib/base-md.mjs, then run \`npm run base\` -->`;
 const CLOSE = '<!-- /specimen:base -->';
@@ -69,7 +115,21 @@ function wrap(text, width = 78) {
   // decision is never taken in the middle of one. Deciding per word and then
   // refusing to break while inside a span does not work: the line has already
   // been allowed to reach the margin by the time the span opens.
-  const tokens = text.replace(/\s+/g, ' ').trim().match(/\S*`[^`]*`\S*|\S+/g) ?? [];
+  //
+  // Built by counting ticks rather than by one regex. The regex version
+  // (/\S*`[^`]*`\S*|\S+/) backtracked into welding two adjacent spans into a
+  // single token — `Sparkles`, `ArrowRight` came back as one — and a token
+  // wider than the margin cannot be broken, so the line simply ran long.
+  const tokens = [];
+  let span = null;
+  for (const word of text.replace(/\s+/g, ' ').trim().split(' ')) {
+    if (span === null) tokens.push(word);
+    else span.push(word);
+    if ((word.match(/`/g) ?? []).length % 2 === 0) continue;
+    if (span === null) span = [tokens.pop()];
+    else { tokens.push(span.join(' ')); span = null; }
+  }
+  if (span) tokens.push(span.join(' '));
   const lines = [];
   let line = '';
   for (const token of tokens) {
@@ -167,31 +227,40 @@ export function renderBase(data) {
     + ' An absence here is an instruction rather than a gap: fill nothing in'
     + ' from convention.',
 
-    '**Scope.** A visual language, not a page. How surfaces are coloured, how'
-    + ' type steps, how far things sit apart, how fast they move. Sections,'
-    + ' copy, information architecture and imagery are yours — the file is'
-    + ' silent on them on purpose.',
+    '**Scope.** A visual language, not a page: sections, copy, information'
+    + ' architecture and imagery are yours, and the silence on them is'
+    + ' deliberate.',
 
-    '**Habits to suppress.** Asked for a landing page, a model returns the'
-    + ' average of every landing page, and that average is recognisable on'
-    + ' sight. None of this is here unless it was measured.',
+    '**Habits to suppress.** A model asked for a page returns the average of'
+    + ' every page, and the average is recognisable. None of this is here'
+    + ' unless it was measured.',
 
     '- **Copy** — no small uppercase letterspaced line over the headline (`FOR'
-    + ' DEVELOPERS`, `INTRODUCING`, `AI-POWERED`); no tricolon of one-word'
-    + ' features; no *seamlessly*, *effortlessly*, *unlock*, *supercharge*,'
-    + ' *elevate*, *empower*, *transform*, *leverage*, *next level*; no "Ready'
-    + ' to get started?" band; no invented testimonial, customer logo or round'
-    + ' statistic; no caption on a thing that already says what it is.\n'
-    + '- **Structure** — not hero, logo wall, three feature cards, three steps,'
-    + ' testimonials, FAQ, closing CTA; not three of anything by default; not'
-    + ' every section the same width, centred, at the same padding; not a filled'
-    + ' button beside an outlined one under the headline, either of them ending'
-    + ' in an arrow.\n'
-    + '- **Surface** — no indigo-to-violet-to-pink gradient; no gradient-filled'
-    + ' heading; no blurred glow behind the hero; no glass panel on every card;'
-    + ' no emoji standing in for an icon; no icon in a tinted rounded square; no'
-    + ' fake browser or terminal chrome — traffic-light dots, a filename bar —'
-    + ' around a code sample; no `scale(1.05)` on hover.',
+    + ' DEVELOPERS`, `INTRODUCING`); no feature title built from two abstract'
+    + ' nouns ("Seamless Integration"); no *seamlessly*, *effortlessly*,'
+    + ' *unlock*, *elevate*, *empower*, *transform*, *leverage*, *delve* —'
+    + ' density is the tell rather than any one word; no "Get started" band;'
+    + ' no invented testimonial, customer logo, round statistic, or "Sarah'
+    + ' Johnson, Head of Operations" over a generated avatar; no caption on a'
+    + ' thing that already says what it is.\n'
+    + '- **Structure** — not hero, logo wall, three feature cards, three-tier'
+    + ' pricing with the middle plan lifted, FAQ accordion, closing CTA,'
+    + ' four-column footer; not steps numbered 01 / 02 / 03; not three of'
+    + ' anything by default; not every section the same width, centred, at the'
+    + ' same padding; not a filled button beside an outlined one, arrow welded'
+    + ' to the label.\n'
+    + '- **Surface** — not Inter unless this file names it, and not a stock'
+    + ' Tailwind palette (`indigo-600`, untouched `zinc` and `slate`); no'
+    + ' indigo-to-violet-to-pink gradient; no gradient-filled heading; no'
+    + ' `rounded-2xl shadow-lg p-6` on everything; no glass panel; no blurred'
+    + ' glow behind the hero; no emoji standing in for an icon; no icon in a'
+    + ' tinted rounded square; no `Sparkles`, `ArrowRight` or `Zap`; no fake'
+    + ' browser or terminal chrome — traffic-light dots, a filename bar — around'
+    + ' a code sample; no stock photograph of people at a laptop and no floating'
+    + ' 3D blob.\n'
+    + '- **Motion** — this file measures its own. Do not leave hover states'
+    + ' doing nothing, do not snap where it declares an easing curve, and do not'
+    + ' put one fade-in-up on every element on the page.',
 
     'The tell under all of them is uniformity — one radius, one border, one'
     + ' shadow, one gap everywhere, because nothing was decided.',
