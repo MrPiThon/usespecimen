@@ -80,7 +80,17 @@ page the source site does not have. Each file's Do's and Don'ts closes by naming
 what it does not constrain.
 
 Where a measurement could not be made it is omitted with a warning rather than
-guessed, and the warnings are published alongside the file.
+guessed, and the warnings are published alongside the file. An omission is an
+instruction: a file with no elevation group describes a design where nothing
+floats, not one waiting for a default shadow.
+
+Every file ends with a shared block called the Base, generated from one template
+and marked in the source with an HTML comment. It states what that file's whole
+budget is — how many colours, radii, steps, weights, shadows and curves you were
+actually given — and lists the defaults a language model reaches for when a file
+is silent: the uppercase eyebrow over a headline, the three feature cards, the
+violet gradient, the glass panel on every surface. None of those is in a file
+here unless it was measured on the source page.
 
 ## Catalogue (${rows.length} systems)
 

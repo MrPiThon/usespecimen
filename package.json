@@ -15,7 +15,8 @@
     "list": "node src/cli.mjs list",
     "mcp": "node src/mcp.mjs",
     "author": "node src/cli.mjs author",
-    "check": "node src/check-prose.mjs"
+    "check": "node src/check-prose.mjs",
+    "base": "node src/cli.mjs base"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

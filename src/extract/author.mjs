@@ -10,6 +10,7 @@
 // it is written. It is just not yet good.
 
 import { CHROMATIC } from './cluster.mjs';
+import { injectBase } from '../lib/base-md.mjs';
 import { SECTIONS } from '../lib/design-md.mjs';
 
 const quote = v => `'${String(v).replace(/'/g, "''")}'`;
@@ -443,12 +444,20 @@ function factsFor(section, cap, dark) {
 
 /** Frontmatter plus a fact-sheet body, ready for prose. */
 export function authorSystem(cap, meta) {
-  const front = emitYaml(buildFrontmatter(cap, meta));
+  const data = buildFrontmatter(cap, meta);
+  const front = emitYaml(data);
   const body = SECTIONS.map((section) => {
     const facts = factsFor(section, cap, meta.dark);
     return `## ${section}\n\n${facts || '- Nothing observed.'}\n`;
   }).join('\n');
 
+  // The Base lands at the end of Do's and Don'ts, which is both where it
+  // belongs — it is do's and don'ts — and the only place it fits without
+  // tripping the spec: a ninth `##` section is legal but warns, and all 23
+  // files would then carry that warning forever. It reads the frontmatter
+  // object rather than the capture, because the budget it states has to count
+  // what the file actually publishes.
   return `---\n${front}\n---\n\n<!-- SCAFFOLD: every line below is a measured value. Rewrite as prose;\n`
-    + `     do not add values that are not here. Delete this comment when done. -->\n\n${body}`;
+    + `     do not add values that are not here. Delete this comment when done. -->\n\n`
+    + injectBase(body, data);
 }

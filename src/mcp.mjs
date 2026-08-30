@@ -115,7 +115,10 @@ server.registerTool('get_design', {
   description:
     'Fetch one system\'s DESIGN.md verbatim, ready to write into a repository as '
     + 'DESIGN.md and follow for all UI work. The file carries its own provenance '
-    + 'block: when it was captured, from which URL, and by which pipeline version.',
+    + 'block: when it was captured, from which URL, and by which pipeline version. '
+    + 'It ends with a Base block stating the whole budget the file gives you — how '
+    + 'many colours, radii, steps, weights, shadows and curves — and the defaults '
+    + 'to suppress where it is silent. Read that block before writing any UI.',
   inputSchema: {
     slug: z.string().describe('System slug, e.g. "stripe" — from search_designs'),
   },

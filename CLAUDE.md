@@ -44,6 +44,11 @@ npm run mcp                                         # MCP server on stdio
 ```
 
 ```bash
+npm run base                                  # rewrite the Base block in all 23 files
+npm run base -- --check                       # verify none has drifted (CI gate)
+```
+
+```bash
 npx playwright install chromium               # one-time; already present on this machine
 npm run extract -- https://stripe.com         # → out/stripe/capture.json
 npm run cluster -- out/stripe/capture.json    # re-cluster offline, no browser
@@ -52,6 +57,9 @@ npm run author -- stripe --name "Indigo Infrastructure"   # capture -> content/
 
 - Node 24, ESM only; extractor sources are `.mjs`, and `package.json` sets
   `"type": "module"`.
+- Three gates, all run in CI: `npm run build` (spec), `npm run check` (prose
+  against tokens) and `npm run base -- --check` (the shared Base block is
+  current in every file).
 - **`npm run build` fails if any DESIGN.md breaks the spec** — wrong section
   order, a duplicate heading, or a `{token.reference}` that resolves to nothing.
   That is deliberate and it is the product claim; don't route around it by
@@ -434,6 +442,70 @@ meaningful within one version.
 Output is deterministic and carries `harvestVersion` + `clusterVersion`, so a
 drift diff can tell a redesign from a pipeline change. That is the schema
 groundwork for Phase 2 re-capture.
+
+## The Base (`npm run base`)
+
+Every measurement in a DESIGN.md says what a design *is*. None of them can say
+what not to do, and that gap is where generated UI comes from: handed twelve
+colours and a type scale, a model still reaches for its defaults on everything
+the file is silent about — the small uppercase eyebrow over the headline, the
+three feature cards, the indigo-to-pink gradient, the glass panel on every
+surface. Those are not failures of the palette. They are what the average of
+every landing page looks like, and the average is what a language model returns
+when asked for a landing page.
+
+So every file ends with a **Base**: one block, generated from
+`src/lib/base-md.mjs`, written into all 23 files by `npm run base`. CI runs
+`npm run base -- --check` and fails if any copy has drifted, which is what keeps
+twenty-three copies one copy.
+
+**Where it goes: the end of Do's and Don'ts.** A ninth `##` section is legal —
+the spec preserves unknown sections — but it warns, and every file in the
+registry would carry that warning forever. Inside section eight it is also
+simply where it belongs, and last in the file is where an agent looks for rules.
+Delimited by `<!-- specimen:base ... -->` comments so regeneration is idempotent
+and a version bump replaces the block rather than stacking a second one.
+
+**Baked in, not served.** Splicing it into `/r/<slug>/DESIGN.md` and MCP
+`get_design` on the way out would be a smaller change and a worse one: the raw
+file would stop being the file in the repository, and the byte-identity CI
+enforces is worth more than the convenience.
+
+Two rules govern what may go in it:
+
+1. **Nothing that contradicts a measurement.** Stripe really does paint a
+   violet-to-pink gradient. So the rule is never "no gradients", it is "none you
+   were not given" — every prohibition is phrased against the file rather than
+   against a style.
+2. **Nothing that inflates the file.** The Base runs 320–370 words against a
+   median body of 642. It already costs a third to a half of each file and
+   competes with the measurements, which are the reason anyone opened it. A Base
+   long enough to dominate has a model following our prose instead of the site's
+   design. Cut before adding.
+
+**The budget is the part that is not boilerplate.** The first paragraph is
+computed from the frontmatter — distinct *values*, not key names, because Linear
+declares seven radius names over six values and six is the number of corners you
+can draw:
+
+> **Budget.** 5 colours, 1 radius, 10 spacing steps, 11 type steps, 2 weights
+> and 2 shadows. […] It declares no motion, so state changes here are instant.
+> It has no spacing grid […] Its buttons are square at 0px, which is a
+> measurement rather than a value nobody set. Its canvas carries no pattern or
+> wash, so leave it flat.
+
+That is GOV.UK, and it is a portrait of restraint no token table conveys. The
+absences are derived the same way, and they are the half a token list cannot
+carry: a file with no elevation group is not a design waiting for
+`0 4px 12px rgba(0, 0, 0, 0.1)`, it is a design where nothing floats.
+
+`stripBase` trims **both** ends of the body, which also swept up the blank-line
+rot the old `--tokens-only` had been accumulating — GOV.UK was carrying sixteen
+leading blank lines.
+
+`base` normalises CRLF to LF on read and writes LF. Without it a Windows
+checkout under `core.autocrlf` reports all 23 files stale forever, and `--check`
+fails on one machine and passes on another.
 
 ## Prose drift (`npm run check`)
 

@@ -43,6 +43,13 @@ jobs:
       - name: Check prose agrees with the tokens
         run: npm run check
 
+      # The Base is one template rendered into twenty-three files. It can only
+      # stay one template if a change to it is never half-applied, so a file
+      # whose copy has drifted fails here rather than quietly disagreeing with
+      # the other twenty-two.
+      - name: Check the Base is current in every file
+        run: npm run base -- --check
+
       - name: Check raw files are byte-identical to source
         run: |
           for f in content/systems/*/DESIGN.md; do

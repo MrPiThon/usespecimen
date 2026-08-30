@@ -11,7 +11,7 @@
 // errors go to stderr, so `--json` pipes cleanly.
 
 import { parseArgs } from 'node:util';
-import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { access, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { harvestFn } from './extract/harvest.mjs';
@@ -22,6 +22,7 @@ import { parseColor, deltaE } from './lib/color.mjs';
 import { captureScreenshot } from './extract/screenshot.mjs';
 import { SITE, rawUrl, indexUrl, systemUrl } from './lib/site.mjs';
 import { validateDesignMd, splitFrontmatter } from './lib/validate.mjs';
+import { injectBase, BASE_VERSION } from './lib/base-md.mjs';
 
 // Widest first: the primary capture supplies the scalars and the stylesheet
 // data, and the widest layout is the canonical one.
@@ -43,6 +44,7 @@ Usage:
   node src/cli.mjs author <slug> --name <name> [options]
   node src/cli.mjs add <slug> [options]
   node src/cli.mjs list [options]
+  node src/cli.mjs base [--check]
 
 Commands:
   extract    Crawl live pages, harvest computed styles, cluster into tokens,
@@ -55,6 +57,9 @@ Commands:
   add        Fetch a system's DESIGN.md into the current directory, validated
              before it lands. Prints the prompt to hand your agent.
   list       Show what the registry carries.
+  base       Rewrite the generated Base block in every published file, so a
+             change to src/lib/base-md.mjs reaches all of them at once.
+             --check reports drift and exits non-zero instead of writing.
 
 Options:
   --out <dir>        Output directory (default: out)
@@ -75,6 +80,7 @@ Options:
   --tokens-only      author: refresh frontmatter, keep the prose. Use when the
                      clusterer improves and the values are stale
   --force            author/add: overwrite an existing DESIGN.md
+  --check            base: verify rather than write
   --json             Print token JSON instead of the summary
   --quiet            Suppress the summary
   -h, --help
@@ -316,8 +322,7 @@ async function author(slug, opts) {
 ${splitFrontmatter(generated).frontmatter}
 ---
 
-${keepBody.trim()}
-`;
+${injectBase(keepBody, validateDesignMd(generated).data)}`;
 
   // The scaffold must pass the same gate the build applies, or `author` has
   // produced something that cannot ship.
@@ -411,7 +416,74 @@ async function add(slug, opts) {
   out('');
   out('  Use DESIGN.md in this repository as the design system for all UI work.');
   out('  Follow its tokens exactly. Do not substitute colours, type sizes or');
-  out('  spacing values that are not in the file.');
+  out('  spacing values that are not in the file. Read the Base block at the end');
+  out('  of it before you write anything.');
+}
+
+/**
+ * Rewrite the generated Base block in every published file, or check that none
+ * has drifted.
+ *
+ * This is what makes the Base improvable. Serving it from one place instead —
+ * splicing it into `/r/<slug>/DESIGN.md` and MCP `get_design` on the way out —
+ * would be a smaller change and a worse one: the raw file would stop being the
+ * file in the repository, and the byte-identity CI already enforces is a
+ * promise worth more than the convenience. So the block is baked in, and this
+ * command is how twenty-three copies stay one copy.
+ */
+async function base(opts) {
+  const dirs = (await readdir(opts.content, { withFileTypes: true }))
+    .filter(e => e.isDirectory()).map(e => e.name).sort();
+
+  const stale = [];
+  let written = 0;
+  for (const slug of dirs) {
+    const target = join(opts.content, slug, 'DESIGN.md');
+    let raw;
+    try {
+      // Normalised to LF on the way in, and written back the same way. A
+      // Windows checkout with core.autocrlf hands these over as CRLF while
+      // every generator here emits LF, so a byte comparison would call all
+      // twenty-three files stale forever and --check would fail on one machine
+      // and pass on another. Git stores LF regardless, so this changes nothing
+      // that gets committed.
+      raw = (await readFile(target, 'utf8')).replace(/\r\n/g, '\n');
+    } catch (err) {
+      if (err.code === 'ENOENT') continue;
+      throw err;
+    }
+    const parsed = validateDesignMd(raw);
+    if (!parsed.data) {
+      fail(`${target} does not parse, so its Base cannot be regenerated:\n  `
+        + `${(parsed.errors ?? ['unknown error']).join('\n  ')}`);
+    }
+    const { frontmatter, body } = splitFrontmatter(raw);
+    const next = `---\n${frontmatter}\n---\n\n${injectBase(body, parsed.data)}`;
+    if (next === raw) continue;
+    if (opts.check) { stale.push(slug); continue; }
+    // Validated before writing, for the same reason `author` validates its own
+    // scaffold: a command that could leave the registry unbuildable is a bug
+    // here, not a file to fix by hand.
+    const verdict = validateDesignMd(next);
+    if (!verdict.ok) {
+      fail(`Regenerating ${slug} produced a file that does not conform, which is `
+        + `a bug in base-md.mjs:\n  ${verdict.errors.join('\n  ')}`);
+    }
+    await writeFile(target, next);
+    written += 1;
+  }
+
+  if (opts.check) {
+    if (stale.length) {
+      fail(`The Base is stale in ${stale.length} file(s): ${stale.join(', ')}.\n`
+        + 'Run `npm run base` and commit the result.');
+    }
+    log(`Base v${BASE_VERSION} is current in all ${dirs.length} files.`);
+    return;
+  }
+  log(written
+    ? `Base v${BASE_VERSION} written to ${written} of ${dirs.length} files.`
+    : `Base v${BASE_VERSION} already current in all ${dirs.length} files.`);
 }
 
 async function list(opts) {
@@ -588,6 +660,7 @@ try {
       from: { type: 'string' },
       'tokens-only': { type: 'boolean', default: false },
       force: { type: 'boolean', default: false },
+      check: { type: 'boolean', default: false },
       json: { type: 'boolean', default: false },
       quiet: { type: 'boolean', default: false },
       help: { type: 'boolean', short: 'h', default: false },
@@ -624,6 +697,7 @@ const opts = {
   from: values.from,
   tokensOnly: values['tokens-only'],
   force: values.force,
+  check: values.check,
   json: values.json,
   quiet: values.quiet,
 };
@@ -647,6 +721,10 @@ switch (command) {
   }
   case 'list': {
     await list(opts);
+    break;
+  }
+  case 'base': {
+    await base(opts);
     break;
   }
   case 'cluster': {

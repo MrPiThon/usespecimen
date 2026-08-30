@@ -192,3 +192,45 @@ incomplete by measurement, not by choice.
 
 **What this file does not constrain:** structure, much of which could not be
 read here, and state styling, most of which is in stylesheets we cannot see.
+
+<!-- specimen:base v1 · generated · shared by every file in this registry · edit src/lib/base-md.mjs, then run `npm run base` -->
+
+### The base
+
+*Shared by every file in this registry; only the counts below are this
+file's.*
+
+**Budget.** 5 colours, 1 radius, 10 spacing steps, 9 type steps, 2 weights and
+one easing curve. That is the whole design — a colour, radius, shadow or curve
+not on that list is one you invented. It declares no elevation, so nothing in
+this design floats. Its canvas carries no pattern or wash, so leave it flat.
+An absence here is an instruction rather than a gap: fill nothing in from
+convention.
+
+**Scope.** A visual language, not a page. How surfaces are coloured, how type
+steps, how far things sit apart, how fast they move. Sections, copy,
+information architecture and imagery are yours — the file is silent on them on
+purpose.
+
+**Habits to suppress.** Asked for a landing page, a model returns the average
+of every landing page, and that average is recognisable on sight. None of this
+is here unless it was measured.
+
+- **Copy** — no small uppercase letterspaced line over the headline
+  (`FOR DEVELOPERS`, `INTRODUCING`, `AI-POWERED`); no tricolon of one-word
+  features; no *seamlessly*, *effortlessly*, *unlock*, *supercharge*, *elevate*,
+  *empower*, *transform*, *leverage*, *next level*; no "Ready to get started?"
+  band; no invented testimonial, customer logo or round statistic; no caption on
+  a thing that already says what it is.
+- **Structure** — not hero, logo wall, three feature cards, three steps,
+  testimonials, FAQ, closing CTA; not three of anything by default; not every
+  section the same width, centred, at the same padding.
+- **Surface** — no indigo-to-violet-to-pink gradient; no gradient-filled
+  heading; no blurred glow behind the hero; no glass panel on every card; no
+  emoji standing in for an icon; no icon in a tinted rounded square; no
+  `scale(1.05)` on hover.
+
+The tell under all of them is uniformity — one radius, one border, one shadow,
+one gap everywhere, because nothing was decided.
+
+<!-- /specimen:base -->
