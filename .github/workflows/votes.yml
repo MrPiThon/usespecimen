@@ -1,0 +1,55 @@
+name: Refresh upvotes
+
+# The site never fetches at build time — counts come from content/votes.json,
+# which is committed so builds stay deterministic and work offline. That trades
+# freshness for determinism, and this job is what buys the freshness back.
+#
+# Daily rather than on every reaction: a webhook would be more current and would
+# also mean a repository commit every time somebody clicks a thumb. The page
+# states the date it read, so a day-old count is disclosed rather than wrong.
+
+on:
+  schedule:
+    # 05:00 UTC, off the hour to avoid the top-of-hour scheduling crush.
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: votes
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      # No `npm ci`: the sync only needs node's own fetch and reads one
+      # dependency-free module, so installing the site's tree would be a minute
+      # of CI for nothing.
+      - name: Read reaction counts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run votes
+
+      # `--exit-code` so an unchanged day is a no-op rather than an empty
+      # commit. Most days nothing will have moved.
+      - name: Commit if the counts moved
+        run: |
+          if git diff --quiet -- content/votes.json; then
+            echo "No change in upvotes."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/votes.json
+          git commit -m "Refresh upvote counts"
+          git push

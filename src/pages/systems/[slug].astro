@@ -8,6 +8,8 @@ import { fontNote } from '../../lib/webfonts.mjs';
 import Base from '../../layouts/Base.astro';
 import { lint } from '../../lib/design-md.mjs';
 import { readCapture, readDesignFile } from '../../lib/system-files.mjs';
+import { readVotes, voteUrl } from '../../lib/votes.mjs';
+import voteFile from '../../../content/votes.json';
 
 export async function getStaticPaths() {
   const systems = await getCollection('systems');
@@ -15,6 +17,13 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+
+// Read from the committed file. No fetch at build time, so a build is
+// deterministic and works offline — the count carries the date it was read,
+// like every other number on this site.
+const votes = readVotes(voteFile, [entry.id]);
+const vote = votes.systems[entry.id];
+const votedOn = votes.fetchedAt ? votes.fetchedAt.slice(0, 10) : null;
 const { Content } = await render(entry);
 const raw = await readDesignFile(entry.id);
 const capture = await readCapture(entry.id);
@@ -151,6 +160,20 @@ const font = fontNote(d);
     </div>
 
     <aside>
+      {/* A sort key, not a score. The count lives on GitHub because this is a
+          static site with no accounts, and needing an account to vote is the
+          entire anti-abuse story. */}
+      <div class="vote">
+        <span class="vote-count">{vote.up}</span>
+        <span class="vote-label">
+          {vote.up === 1 ? 'upvote' : 'upvotes'}
+          {votedOn && <><br />read {votedOn}</>}
+        </span>
+        {vote.issue
+          ? <a href={voteUrl(vote.issue)} rel="noopener">Upvote on GitHub</a>
+          : <span class="vote-label">no ballot yet</span>}
+      </div>
+
       <div class="panel" style="margin-bottom:1rem;">
         <h3>Provenance</h3>
         <dl class="kv">

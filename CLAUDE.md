@@ -658,6 +658,37 @@ rather than forcing the page wide, and facet chips sit at 27px — above the 24p
 floor, and deliberately not larger, because 40 of them at a comfortable tap size
 would be a page of scrolling on its own.
 
+## Upvotes (`npm run votes`)
+
+One GitHub issue per system titled `Upvote: <slug>`; the upvote is a thumbs-up
+reaction on it. `npm run votes` reads the counts into `content/votes.json`,
+`--create` opens the missing ballots, and a daily workflow commits any change.
+
+**The build never fetches.** Counts come from the committed JSON, so a build is
+deterministic, works offline and needs no token in CI — the same discipline
+captures follow. The cost is staleness, and staleness is *stated*: every count
+renders with the date it was read, exactly as every token renders with the date
+it was captured.
+
+Why GitHub and not a database: this is a static build with no backend and no
+accounts, and an upvote is shared mutable state that a static build cannot hold.
+GitHub already holds the rest of the registry's state. Voting needs a GitHub
+account, which is the entire anti-abuse story for nothing — no auth code, no
+personal data, no rate limiter to tune.
+
+- `--create` is split from the read path on purpose: reading is safe and runs on
+  a schedule, opening 23 public issues in somebody's repository is not something
+  a cron job should do.
+- A system with no ballot renders `{ up: 0, issue: null }` and the control says
+  "no ballot yet" rather than disappearing. A vote widget that vanishes at zero
+  is how a catalogue comes to look unanimously popular.
+- The votes sort breaks ties by name, so equal counts do not reshuffle between
+  loads. Sorting reorders the existing cards rather than rebuilding the grid, so
+  the filter state above it stays valid.
+- **It is a sort, never the default sort, and rendered quietly.** This registry
+  sells verification; a popularity number louder than the measurements would be
+  the directory pattern it exists to be an alternative to.
+
 ## The spectrum (homepage)
 
 Every chromatic value the registry has measured — accents, section grounds and

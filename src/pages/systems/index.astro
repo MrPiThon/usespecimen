@@ -6,12 +6,18 @@ import { facetsFor, FACET_GROUPS } from '../../lib/facets.mjs';
 import { categoryCounts } from '../../lib/categories.mjs';
 import { shadeCounts } from '../../lib/colornames.mjs';
 import { resolveStack } from '../../lib/webfonts.mjs';
+import { readVotes, voteUrl } from '../../lib/votes.mjs';
+import voteFile from '../../../content/votes.json';
 
 const entries = await getCollection('systems');
 const systems = (await Promise.all(entries.map(async (entry) => ({
   entry,
   facets: facetsFor(await readCapture(entry.id)),
 })))).sort((a, b) => a.entry.data.name.localeCompare(b.entry.data.name));
+
+// Read from the committed file, never fetched at build time — see votes.mjs.
+const votes = readVotes(voteFile, systems.map(s => s.entry.id));
+const votedOn = votes.fetchedAt ? votes.fetchedAt.slice(0, 10) : null;
 
 /** The card title, set in the system's own display face at its own weight and
  *  tracking. Size stays the card's, so the grid still reads as a grid. */
@@ -60,6 +66,17 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
   <div class="panel" style="margin-top:1.5rem;">
     <label class="visually-hidden" for="q">Search systems</label>
     <input id="q" type="search" placeholder="Search by name, brand or description…" autocomplete="off" />
+    <div class="sort-row">
+      <label class="facet-label" for="sort">Sort</label>
+      <select id="sort">
+        <option value="name">Name</option>
+        <option value="votes">Most upvoted</option>
+        <option value="recent">Recently verified</option>
+      </select>
+      {votes.total > 0 && (
+        <span class="sort-note">{votes.total} upvotes, read {votedOn}</span>
+      )}
+    </div>
     <div id="facets" style="margin-top:0.85rem;display:grid;gap:0.6rem;">
       {categories.length > 0 && (
         <div class="facet-row">
@@ -126,11 +143,17 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
           data-shade={facets?.shade}
           data-text={[entry.id, entry.data.name, entry.data.provenance.brand,
             entry.data.description].filter(Boolean).join(' ').toLowerCase()}
+          data-votes={votes.systems[entry.id].up}
+          data-captured={captured.toISOString()}
+          data-name={entry.data.name.toLowerCase()}
         >
           {/* Each name set in its own system's typeface — the real one where
               the licence allows, an openly-licensed stand-in otherwise. The
               catalogue is a wall of design systems, so it should look like
               23 different design systems rather than 23 rows of Inter. */}
+          <span class="card-votes" title="Upvotes, counted from thumbs-up reactions on GitHub">
+            &#9650; {votes.systems[entry.id].up}
+          </span>
           <h3 style={nameStyle(entry.data)}>{entry.data.name}</h3>
           <p>{entry.data.description}</p>
           <div class="swatches">
@@ -201,6 +224,23 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
       apply();
     });
   }
+
+  // Sorting reorders the grid rather than rebuilding it, so every card keeps
+  // its identity and the filter state above stays valid.
+  const grid = document.getElementById('catalog');
+  const sort = document.getElementById('sort');
+  const KEYS = {
+    name: (a, b) => a.dataset.name.localeCompare(b.dataset.name),
+    // Descending, then name, so equal counts do not shuffle between loads.
+    votes: (a, b) => Number(b.dataset.votes) - Number(a.dataset.votes)
+      || a.dataset.name.localeCompare(b.dataset.name),
+    recent: (a, b) => b.dataset.captured.localeCompare(a.dataset.captured)
+      || a.dataset.name.localeCompare(b.dataset.name),
+  };
+  sort?.addEventListener('change', () => {
+    const cmp = KEYS[sort.value] ?? KEYS.name;
+    for (const card of [...cards].sort(cmp)) grid.appendChild(card);
+  });
 
   q.addEventListener('input', apply);
   document.getElementById('clear')?.addEventListener('click', () => {

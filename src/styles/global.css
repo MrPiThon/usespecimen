@@ -673,6 +673,45 @@ th { color: var(--muted); font-weight: 550; }
   border: 1px solid var(--border); background: var(--surface-2); color: var(--muted);
   cursor: pointer;
 }
+/* Upvotes. Deliberately quiet: this registry sells verification, and a
+   popularity number rendered louder than the measurements would be the
+   directory pattern we exist to be an alternative to. It is a sort, not a
+   ranking, and never the default one. */
+.sort-row {
+  display: flex; align-items: center; gap: var(--s5);
+  margin-top: var(--s6); flex-wrap: wrap;
+}
+.sort-row select {
+  font: inherit; font-size: var(--t-caption-size, 13px);
+  background: var(--bg); color: var(--fg);
+  border: 1px solid var(--border); border-radius: var(--radius-md, 6px);
+  padding: var(--s3) var(--s5); min-width: 0;
+}
+.sort-note { color: var(--muted); font-size: var(--step-sm, 12px); }
+
+/* Sits in the card's top-right without displacing the title, which is set in
+   the system's own face and must keep its own line. */
+.card { position: relative; }
+.card-votes {
+  position: absolute; top: var(--s5); right: var(--s5);
+  color: var(--muted); font-size: var(--step-sm, 12px);
+  font-variant-numeric: tabular-nums;
+}
+.card:hover .card-votes { color: var(--fg); }
+
+.vote {
+  display: flex; align-items: center; gap: var(--s5);
+  margin-top: var(--s6); padding: var(--s5) var(--s6);
+  border: 1px solid var(--border); border-radius: var(--radius-lg, 8px);
+  background: var(--surface);
+}
+.vote-count {
+  font-size: var(--t-lead-size, 20px); color: var(--fg-strong);
+  font-variant-numeric: tabular-nums; line-height: 1;
+}
+.vote-label { color: var(--muted); font-size: var(--t-caption-size, 13px); }
+.vote a { margin-left: auto; white-space: nowrap; }
+
 .chip-btn:hover { color: var(--fg-strong); border-color: var(--faint); }
 /* Selected reads as an outline, not a fill: this system never fills with its
    accent, and borrowing that pattern from elsewhere would break the point. */

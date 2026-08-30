@@ -1,0 +1,98 @@
+{
+  "repo": "MrPiThon/usespecimen",
+  "fetchedAt": "2026-08-30T19:58:17.843Z",
+  "systems": {
+    "airbnb": {
+      "issue": null,
+      "up": 0
+    },
+    "apple": {
+      "issue": null,
+      "up": 0
+    },
+    "basecamp": {
+      "issue": null,
+      "up": 0
+    },
+    "duolingo": {
+      "issue": null,
+      "up": 0
+    },
+    "figma": {
+      "issue": null,
+      "up": 0
+    },
+    "framer": {
+      "issue": null,
+      "up": 0
+    },
+    "govuk": {
+      "issue": null,
+      "up": 0
+    },
+    "gumroad": {
+      "issue": null,
+      "up": 0
+    },
+    "hackernews": {
+      "issue": null,
+      "up": 0
+    },
+    "linear": {
+      "issue": null,
+      "up": 0
+    },
+    "mailchimp": {
+      "issue": null,
+      "up": 0
+    },
+    "nike": {
+      "issue": null,
+      "up": 0
+    },
+    "notion": {
+      "issue": null,
+      "up": 0
+    },
+    "pentagram": {
+      "issue": null,
+      "up": 0
+    },
+    "shopify": {
+      "issue": null,
+      "up": 0
+    },
+    "slack": {
+      "issue": null,
+      "up": 0
+    },
+    "stripe": {
+      "issue": null,
+      "up": 0
+    },
+    "substack": {
+      "issue": null,
+      "up": 0
+    },
+    "supabase": {
+      "issue": null,
+      "up": 0
+    },
+    "tailwindcss": {
+      "issue": null,
+      "up": 0
+    },
+    "theverge": {
+      "issue": null,
+      "up": 0
+    },
+    "vercel": {
+      "issue": null,
+      "up": 0
+    },
+    "wise": {
+      "issue": null,
+      "up": 0
+    }
+  }
+}
