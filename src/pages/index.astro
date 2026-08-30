@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { readCapture } from '../lib/system-files.mjs';
 import { resolveStack } from '../lib/webfonts.mjs';
+import { parseColor, toOklch, hueFamily } from '../lib/color.mjs';
 
 const all = (await getCollection('systems'))
   .sort((a, b) => b.data.provenance.capturedAt.getTime() - a.data.provenance.capturedAt.getTime());
@@ -38,6 +39,52 @@ const fc = featured.data.colors ?? {};
 const fl = featured.data.layout ?? {};
 
 const recent = all.slice(0, 6);
+
+/**
+ * Every chromatic colour the registry has measured, in hue order.
+ *
+ * A rainbow where each stop is a citation. Nothing here was chosen to look
+ * good next to its neighbours — the order is the OKLCH hue angle and the
+ * membership is "some real site paints with this", so the sequence is a fact
+ * about the corpus rather than a palette.
+ *
+ * The chroma floor drops the greys. Below 0.06 a colour is a surface tier
+ * pretending to be a hue, and a spectrum full of near-neutrals is just a
+ * gradient with extra steps.
+ */
+const SPECTRUM_MIN_CHROMA = 0.06;
+const seenHex = new Set();
+const spectrum = all.flatMap((sys) => {
+  const c = sys.data.colors ?? {};
+  const keys = ['primary', 'sectionFill', ...Object.keys(c).filter(k => /^gradient-\d+$/.test(k))];
+  return keys.map((key) => {
+    const hex = c[key];
+    if (typeof hex !== 'string') return null;
+    const rgb = parseColor(hex);
+    if (!rgb) return null;
+    const lch = toOklch(rgb);
+    if (lch.C < SPECTRUM_MIN_CHROMA) return null;
+    return { hex, key, slug: sys.id, name: sys.data.name, brand: sys.data.provenance.brand,
+             h: lch.h, family: hueFamily(lch) };
+  }).filter(Boolean);
+})
+  .sort((a, b) => a.h - b.h)
+  // Wise measures the same lime as both its accent and its ground, so it would
+  // otherwise appear twice at the same angle.
+  .filter(x => !seenHex.has(x.hex) && seenHex.add(x.hex));
+
+const ramp = `linear-gradient(90deg, ${spectrum.map(x => x.hex).join(', ')})`;
+
+// The largest step between neighbours, which is the part of the wheel nobody in
+// the registry paints with. Worth naming: a spectrum that quietly interpolated
+// across it would imply a coverage the corpus does not have.
+const gap = spectrum.reduce((worst, x, i) => {
+  if (i === 0) return worst;
+  const d = x.h - spectrum[i - 1].h;
+  return d > worst.d ? { d: Math.round(d), from: spectrum[i - 1], to: x } : worst;
+}, { d: 0 });
+
+const families = [...new Set(spectrum.map(x => x.family))];
 
 /** Card titles set in the system's own display face, as on /systems. */
 const nameStyle = (d) => {
@@ -82,6 +129,50 @@ const nameStyle = (d) => {
         </div>
       ))}
     </dl>
+  </section>
+
+  {/* The whole registry as one spectrum. Every stop is an accent, a ground or a
+      gradient stop some real site paints with, ordered by hue angle, and the
+      whole thing is a citation list that happens to be a rainbow.
+
+      It is also the answer to the obvious objection about the Base's "no
+      indigo-to-violet-to-pink gradient" rule. That rule is about a gradient
+      chosen because it looks good. This one is chosen by measurement: remove a
+      system and a stop disappears. The test is whether the colours are content
+      or decoration, and these are the content. */}
+  <section class="spectrum">
+    <h2>Every hue in the registry</h2>
+    <p class="prose" style="color:var(--muted);">
+      {spectrum.length} chromatic values across {all.length} systems — accents,
+      section grounds and gradient stops — ordered by hue angle. Not one of them
+      was chosen by a model, or by us. They are what {families.length} families of
+      real websites paint with.
+    </p>
+
+    <div class="ramp" style={`background:${ramp}`} role="img"
+      aria-label={`A spectrum of ${spectrum.length} measured colours from ${families.join(', ')}`}></div>
+
+    <ol class="chips">
+      {spectrum.map(x => (
+        <li>
+          <a href={`/systems/${x.slug}`} title={`${x.hex} — ${x.name} (${x.brand}) ${x.key}`}>
+            <span class="chip-sw" style={`background:${x.hex}`}></span>
+            <span class="chip-text">
+              <code>{x.hex}</code>
+              <span class="chip-src">{x.brand}</span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ol>
+
+    <p class="fine">
+      The wheel is not evenly covered, and the gaps are findings too. The widest
+      is <b>{gap.d}°</b> between <code>{gap.from.hex}</code> ({gap.from.brand})
+      and <code>{gap.to.hex}</code> ({gap.to.brand}) — the cyan quadrant, which
+      nothing in this registry uses. A palette invented to look complete would
+      have filled it.
+    </p>
   </section>
 
   {/* Proof rather than a claim: one real file's measurements, on the page, with
@@ -234,6 +325,45 @@ const nameStyle = (d) => {
       border-radius: var(--radius-sm);
       box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 20%, transparent);
     }
+    /* The spectrum. Deliberately the largest single element on the page after
+       the headline: it is the best proof this registry has, and it was sitting
+       unshown across 23 detail pages. */
+    .ramp {
+      height: 5rem; margin: var(--s6) 0 var(--s5);
+      border-radius: var(--radius-lg, 8px);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 18%, transparent);
+    }
+    .chips {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; gap: var(--s3);
+      /* 9rem, so a phone gets two columns rather than thirty stacked rows. */
+      grid-template-columns: repeat(auto-fill, minmax(min(9rem, 100%), 1fr));
+    }
+    .chips a {
+      display: flex; align-items: center; gap: var(--s5);
+      text-decoration: none; min-width: 0;
+      padding: var(--s3) var(--s5);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md, 6px);
+      background: var(--surface);
+    }
+    .chips a:hover { border-color: var(--faint); background: var(--surface-2); }
+    .chip-sw {
+      width: 1.4rem; height: 1.4rem; flex: none;
+      border-radius: var(--radius-sm);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 22%, transparent);
+    }
+    .chips code { font-size: var(--t-caption-size, 13px); }
+    /* Stacked, not side by side. On one line the brand was the flex item that
+       could shrink, so at three columns it ellipsised down to a single letter
+       and every chip read "S." */
+    .chip-text { display: grid; min-width: 0; }
+    .chip-src {
+      color: var(--muted); font-size: var(--step-sm, 12px);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .spectrum .fine b { color: var(--fg-strong); }
+
     .fine {
       color: var(--muted); max-width: 46ch; margin: var(--s3) 0 0;
       font-size: var(--t-caption-size, 13px);

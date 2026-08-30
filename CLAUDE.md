@@ -658,6 +658,37 @@ rather than forcing the page wide, and facet chips sit at 27px — above the 24p
 floor, and deliberately not larger, because 40 of them at a comfortable tap size
 would be a page of scrolling on its own.
 
+## The spectrum (homepage)
+
+Every chromatic value the registry has measured — accents, section grounds and
+gradient stops — sorted by OKLCH hue angle and rendered as one ramp, with each
+stop chipped underneath and linked to the system it came from. 30 values across
+23 systems, spanning red to pink.
+
+It exists because "every colour of the rainbow" is a reasonable thing to want on
+this page and there was a version of it that costs nothing: **the corpus already
+contains a full hue wheel, and every hex in it has provenance.** Inventing a
+palette would have contradicted the file the site wears, the Base it ships and
+the one rule the project rests on. Building the rainbow out of measurements
+gives more colour, not less — brand accents are far more saturated than anything
+a tasteful invented ramp would use.
+
+Two rules keep it honest:
+
+- **Membership is measured, not chosen.** Remove a system and a stop disappears.
+  The chroma floor is 0.06, which drops surface tiers pretending to be hues; a
+  spectrum full of near-neutrals is a gradient with extra steps.
+- **The gaps are published.** The widest is 77 degrees, between The Verge's
+  `#3cffd0` and Framer's `#0099ff` — the cyan quadrant, which nothing in this
+  registry paints with. The page says so. A palette invented to look complete
+  would have filled it, and that is exactly the difference being sold.
+
+On the Base's "no indigo-to-violet-to-pink gradient": that rule is about a
+gradient chosen because it looks good. The test is whether the colours are
+content or decoration, and these are the content — which is also why the ramp
+is captioned with its own provenance rather than sitting behind the headline as
+a wash.
+
 ## `/compare`
 
 Two systems side by side, every row a measured value. One page with the pair in
