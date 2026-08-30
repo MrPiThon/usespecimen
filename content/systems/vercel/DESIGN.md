@@ -108,6 +108,7 @@ motion:
   easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
 backgrounds:
   wash: 'linear-gradient(to top in oklab, rgb(250, 250, 250) 0%, rgba(0, 0, 0, 0) 100%)'
+  washDark: 'linear-gradient(to top in oklab, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)'
   mixBlendMode: 'color-burn'
   maskImage: 'raster'
 components:
@@ -135,7 +136,7 @@ provenance:
   capturedAt: '2026-08-29T04:38:05.596Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 20
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---

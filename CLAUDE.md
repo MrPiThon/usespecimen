@@ -77,8 +77,16 @@ npm run author -- stripe --name "Indigo Infrastructure"   # capture -> content/
   stdout while progress goes to stderr, so it pipes. `--slug` overrides the
   derived directory name (`www.gov.uk` would otherwise give `gov`), `--viewport
   WxH` the crawl size. `node src/cli.mjs --help` for the rest.
-- **No test runner is configured.** Verification to date is running `extract`
-  against real sites and reading the summary against the live design.
+- **`npm test`** — `node --test`, no dependencies. 70 tests: a full-token
+  snapshot of `cluster()` over all 23 committed captures, a determinism check
+  per system, an independent re-derivation that every emitted colour was
+  observed in the harvest, and units over the functions with a history of being
+  wrong (parseColor's modern spaces, hueFamily's OKLCH bands, the spec linter,
+  Base idempotence). `UPDATE_SNAPSHOTS=1 npm test` re-baselines.
+  The snapshots are committed on purpose: a tuning constant that moves shows up
+  as an exact diff on exactly the systems it affects, which is the review you
+  want when the move is deliberate. It found three real things on its first run
+  — see "What the tests caught" below.
 - **`out/` is gitignored.** Captures only enter the repo when copied into
   `content/systems/<slug>/`. `main` pushes to `MrPiThon/usespecimen`, and CI runs
   the build plus a raw-file identity check on every push and PR.
@@ -310,6 +318,28 @@ interactive element, bundled. Selection prefers a bundle with real padding over
 the most common one, because `<a>` and `<button>` are frequently bare wrappers
 around whatever carries the styling — the commonest bundle is usually all
 defaults and describes nothing. `dominantUnstyled` records when that happened.
+
+**Bundle selection cannot find a primary CTA, and two attempts to make it are
+recorded in the comments as failures.** Ranking by mean painted area gave Linear
+`0px 28px 0px 36px`, Stripe `32px 0px`, and turned Tailwind's 4px buttons into
+pills — because `button|a|role=button` matches links wrapped around whole cards,
+and a big link is shaped exactly like a big button. Filtering first to bundles
+padded on both axes still put Stripe at 2px and Notion at a pill. The harvest
+carries no notion of which element is the call to action, so the honest position
+is the warning the file already publishes, not a better-sounding guess.
+
+**`rounded.button` is a separate question and was genuinely wrong** (cluster
+v20). It read the most common non-zero radius across *every* interactive
+element, so Wise — which puts 9999px on 95% of its twenty button elements and
+2px on hundreds of other interactive things — published `button: 2px`. Since
+`components.button.radius` is emitted as a `{rounded.button}` reference, the
+file told an agent to build square buttons for a site whose buttons are all
+pills. It now reads a supermajority of the page's own button bundles first.
+`BUTTON_RADIUS_CONSENSUS` is 0.6 and sits in an observed gap: agreement across
+systems with a non-zero top radius runs 95% (wise), 68% (figma), 67%
+(duolingo), then 57%, 53%, 50%, 46%, 43%, 42%. Below the cut the bundles really
+do disagree, so the old behaviour stands rather than a coin toss. Two systems
+changed; the other twenty-one are byte-identical.
 
 `states` (harvest v3) is read from `document.styleSheets`, not from computed
 style, which only ever reports the resting value. Each state rule is matched back
@@ -543,6 +573,31 @@ leading blank lines.
 `base` normalises CRLF to LF on read and writes LF. Without it a Windows
 checkout under `core.autocrlf` reports all 23 files stale forever, and `--check`
 fails on one machine and passes on another.
+
+## What the tests caught
+
+Written after nineteen versions of tuning constants had shipped with nothing
+guarding them. On the first runs it found three things, none of which were
+visible by eye:
+
+1. **`colors.roles.border` was `undefined`, not `null`,** on basecamp and
+   vercel — and `primary` on pentagram. `token()` used `cluster && ({...})`, so
+   an unobservable role inherited whatever falsy value the caller passed, and
+   `border[0]` on an empty array is undefined. `JSON.stringify` **deletes**
+   undefined keys, so the field vanished from those captures entirely. A missing
+   key reads as "this pipeline version had no such field"; `null` reads as
+   "measured, not found", which is the claim. Now `? :`.
+2. **My own test was wrong twice, and said so loudly.** It flattened candidate
+   colours against `harvest.pageBg`, which Figma reports as `rgba(0, 0, 0, 0)` —
+   compositing a 24% white over transparent black gives `#3d3d3d`, matching
+   nothing. And its candidate set skipped shadows and state rules, so it called
+   Linear's accent invented when that accent correctly comes from a
+   `:focus-visible` box-shadow. Both were the test's bugs; the clusterer was
+   right. A test that only ever passes has not been tested.
+3. **A one-unit tolerance is needed and no more.** Supabase's card composites a
+   5%-alpha overlay at float precision while the test rounds the canvas to hex
+   first, so one channel lands one step apart. Tolerance is +/-1 per channel,
+   which still fails instantly on an averaged hex.
 
 ## Prose drift (`npm run check`)
 

@@ -15,7 +15,7 @@
     "sampleRatio": 0.814
   },
   "harvestVersion": 8,
-  "clusterVersion": 17,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -100,6 +100,7 @@
         }
       ]
     },
+    "sectionFill": null,
     "palette": [
       {
         "hex": "#000000",
@@ -745,6 +746,7 @@
     "decorated": true,
     "layerCount": 8,
     "pattern": null,
+    "overlay": null,
     "wash": {
       "kind": "linear-gradient",
       "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",

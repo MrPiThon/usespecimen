@@ -182,7 +182,7 @@ provenance:
   capturedAt: '2026-08-29T04:36:01.915Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 19
+  clusterVersion: 20
   screenshot: './source.webp'
 ---
 

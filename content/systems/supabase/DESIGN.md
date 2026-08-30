@@ -143,6 +143,7 @@ motion:
   easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
 backgrounds:
   wash: 'linear-gradient(oklch(0.1 0 34 / 0.0812725) 0px, oklab(0.1 0 0 / 0.0406362) 100%)'
+  washDark: 'linear-gradient(oklch(0.95 0.001485 159 / 0.075125) 0px, oklch(0.215 0.0025 159) 100%)'
   backdropFilter: 'blur(4px)'
   maskImage: 'linear-gradient'
 components:
@@ -163,7 +164,7 @@ provenance:
   capturedAt: '2026-08-29T04:53:45.969Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 20
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---

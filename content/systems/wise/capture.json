@@ -15,7 +15,7 @@
     "sampleRatio": 0.474
   },
   "harvestVersion": 8,
-  "clusterVersion": 19,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -588,7 +588,7 @@
         "count": 29
       }
     ],
-    "button": "2px",
+    "button": "9999px",
     "pill": true,
     "pillValue": "9999px",
     "sharp": false

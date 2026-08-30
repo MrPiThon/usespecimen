@@ -1,0 +1,850 @@
+{
+  "source": {
+    "url": "https://supabase.com/",
+    "title": "Supabase | The Postgres Development Platform",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 7747,
+    "elementCount": 23229,
+    "sampled": 2083,
+    "sampleRatio": 0.09
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#fdfdfd",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#030303",
+        "weightShare": 0.1595,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f6f5fd",
+        "weightShare": 0.0092,
+        "variants": [
+          "#f7f7f7",
+          "#f9f9f9",
+          "#fafafa"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#696969",
+        "weightShare": 0.6742,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#0c0f24",
+        "weightShare": 0.0595,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 3
+      },
+      "primaryForeground": {
+        "hex": "#fefefe",
+        "weightShare": 0.119,
+        "variants": []
+      },
+      "border": {
+        "hex": "#e9e9e9",
+        "weightShare": 0.691,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f6f5fd",
+          "deltaL": 0.022,
+          "areaShare": 0.0092
+        },
+        {
+          "name": "surface-2",
+          "hex": "#f8f3ef",
+          "deltaL": 0.028,
+          "areaShare": 0.0052
+        },
+        {
+          "name": "surface-3",
+          "hex": "#eeeeee",
+          "deltaL": 0.044,
+          "areaShare": 0.0078
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#030303",
+          "contrast": 20.3,
+          "charShare": 0.1595
+        },
+        {
+          "name": "text-2",
+          "hex": "#696969",
+          "contrast": 5.42,
+          "charShare": 0.6742
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 149
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 21
+      },
+      {
+        "hex": "#0c0f24",
+        "role": "primary",
+        "hue": "purple",
+        "lightness": 0.179,
+        "chroma": 0.043,
+        "count": 3
+      },
+      {
+        "hex": "#f6f5fd",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.973,
+        "chroma": 0.011,
+        "count": 12
+      },
+      {
+        "hex": "#eeeeee",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.951,
+        "chroma": 0,
+        "count": 30
+      },
+      {
+        "hex": "#002533",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.247,
+        "chroma": 0.048,
+        "count": 2
+      },
+      {
+        "hex": "#1a2dcc",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.424,
+        "chroma": 0.237,
+        "count": 2
+      },
+      {
+        "hex": "#f8f3ef",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.967,
+        "chroma": 0.008,
+        "count": 6
+      },
+      {
+        "hex": "#72e3ad",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.835,
+        "chroma": 0.13,
+        "count": 3
+      },
+      {
+        "hex": "#a9f1ca",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.9,
+        "chroma": 0.09,
+        "count": 2
+      },
+      {
+        "hex": "#030303",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.1,
+        "chroma": 0,
+        "count": 118
+      },
+      {
+        "hex": "#be93e4",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.733,
+        "chroma": 0.123,
+        "count": 3
+      },
+      {
+        "hex": "#d1d1d1",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.86,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#15593b",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.414,
+        "chroma": 0.084,
+        "count": 30
+      },
+      {
+        "hex": "#e9e9e9",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.934,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#464646",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.394,
+        "chroma": 0,
+        "count": 31
+      },
+      {
+        "hex": "#696969",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.521,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#3ecf8e",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.762,
+        "chroma": 0.154,
+        "count": 80
+      },
+      {
+        "hex": "#00482f",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.355,
+        "chroma": 0.078,
+        "count": 56
+      },
+      {
+        "hex": "#3fcf8e",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.763,
+        "chroma": 0.154,
+        "count": 2
+      },
+      {
+        "hex": "#a0a0a0",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.706,
+        "chroma": 0,
+        "count": 48
+      },
+      {
+        "hex": "#6b35dc",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.504,
+        "chroma": 0.233,
+        "count": 12
+      },
+      {
+        "hex": "#95e6b8",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.86,
+        "chroma": 0.103,
+        "count": 45
+      },
+      {
+        "hex": "#d9d9d9",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.884,
+        "chroma": 0,
+        "count": 42
+      }
+    ],
+    "semantic": {
+      "success": {
+        "hex": "#3fcf8e",
+        "occurrences": 4,
+        "paintsBorder": true
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 15,
+      "text": 14,
+      "border": 7,
+      "interactive": 6
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Inter",
+      "class": "sans",
+      "stack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+      "sizePx": 15,
+      "weight": 450,
+      "lineHeightPx": 22.5,
+      "lineHeightRatio": 1.5,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Manrope",
+      "class": "sans",
+      "stack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "largestPx": 34,
+      "weight": 600,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "Inter",
+        "class": "sans",
+        "stack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif"
+      },
+      {
+        "family": "Manrope",
+        "class": "sans",
+        "stack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
+      },
+      {
+        "family": "Source Code Pro",
+        "class": "mono",
+        "stack": "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace"
+      },
+      {
+        "family": "Departure Mono Superbase",
+        "class": "mono",
+        "stack": "\"Departure Mono Superbase\", ui-monospace, monospace"
+      }
+    ],
+    "scale": [
+      {
+        "name": "2xs",
+        "px": 12,
+        "rem": 0.8,
+        "weightShare": 0.0617,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 13,
+        "rem": 0.867,
+        "weightShare": 0.0382,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 14,
+        "rem": 0.933,
+        "weightShare": 0.3861,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 15,
+        "rem": 1,
+        "weightShare": 0.4084,
+        "variants": [
+          15.2
+        ]
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "rem": 1.067,
+        "weightShare": 0.0198,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 18,
+        "rem": 1.2,
+        "weightShare": 0.0014,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 22,
+        "rem": 1.467,
+        "weightShare": 0.0508,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 25.6,
+        "rem": 1.707,
+        "weightShare": 0.0016,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 32,
+        "rem": 2.133,
+        "weightShare": 0.0016,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 34,
+        "rem": 2.267,
+        "weightShare": 0.0272,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 46,
+        "rem": 3.067,
+        "weightShare": 0.0032,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 11,
+    "roles": {
+      "body": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 450,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 29,
+        "chars": 3983
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 450,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 139,
+        "chars": 2713
+      },
+      "caption": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 450,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 20,
+        "chars": 434
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 450,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 9,
+        "chars": 66
+      },
+      "h2": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 144
+      },
+      "h3": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "34px",
+        "fontWeight": 600,
+        "lineHeight": 1.11,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 182
+      },
+      "h4": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 228
+      },
+      "h6": {
+        "fontFamily": "Manrope",
+        "fontStack": "Manrope, \"Manrope Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 600,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 12,
+        "chars": 96
+      },
+      "button": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 450,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 72
+      },
+      "link": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Fallback\", system-ui, \"Helvetica Neue\", Helvetica, Arial, sans-serif, Inter, \"Helvetica Neue\", Helvetica, ui-sans-serif, system-ui, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 450,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 5,
+        "chars": 89
+      },
+      "mono": {
+        "fontFamily": "Source Code Pro",
+        "fontStack": "\"Source Code Pro\", \"Source Code Pro Fallback\", \"Source Code Pro\", \"Office Code Pro\", Menlo, monospace, \"Source Code Pro\", ui-monospace, Menlo, monospace",
+        "class": "mono",
+        "fontSize": "13px",
+        "fontWeight": 500,
+        "lineHeight": 1.7,
+        "letterSpacing": null,
+        "elements": 117,
+        "chars": 405
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 34
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.883,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.707
+      },
+      {
+        "base": 6,
+        "share": 0.245
+      },
+      {
+        "base": 5,
+        "share": 0.088
+      },
+      {
+        "base": 4,
+        "share": 0.883
+      }
+    ],
+    "scale": [
+      1,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32
+    ],
+    "distinctValues": 22
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 39
+      },
+      {
+        "name": "md",
+        "px": 6,
+        "count": 28
+      },
+      {
+        "name": "lg",
+        "px": 8,
+        "count": 89
+      },
+      {
+        "name": "xl",
+        "px": 12,
+        "count": 17
+      },
+      {
+        "name": "2xl",
+        "px": 16,
+        "count": 18
+      }
+    ],
+    "button": "6px",
+    "pill": true,
+    "pillValue": "3.35544e+07px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 4
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 2
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.12) 0px 0px 0px 1px inset",
+        "count": 2
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "40px 24px",
+      "borderWidth": "1px",
+      "radius": "8px",
+      "gap": null,
+      "elements": 2,
+      "variants": 10,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "16px 0px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 3,
+      "variants": 5,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 9,
+    "measure": {
+      "px": 560,
+      "occurrences": 20,
+      "share": 0.274
+    },
+    "rhythm": {
+      "px": 96,
+      "occurrences": 5,
+      "share": 0.625
+    },
+    "composition": {
+      "total": 9,
+      "bleedCount": 9,
+      "griddedCount": 7,
+      "mediaLedCount": 2,
+      "charsMedian": 660,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.78
+    },
+    "columns": {
+      "count": 6,
+      "occurrences": 2
+    },
+    "hero": {
+      "heightRatio": 1.05,
+      "heightRatioMeasured": 1.05,
+      "headingSize": 16,
+      "align": "left",
+      "media": 5,
+      "fullBleed": true,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": {
+      "height": 65,
+      "position": "relative",
+      "links": 7,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.15s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 18,
+      "share": 0.72
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 4,
+    "pattern": null,
+    "overlay": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(oklch(0.1 0 34 / 0.0812725) 0px, oklab(0.1 0 0 / 0.0406362) 100%)",
+      "stops": [
+        {
+          "raw": "oklch(0.1 0 34 / 0.0812725)",
+          "hex": "#030303",
+          "alpha": 0.081,
+          "chroma": 0
+        },
+        {
+          "raw": "oklab(0.1 0 0 / 0.0406362)",
+          "hex": "#030303",
+          "alpha": 0.041,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.627
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(4px)",
+        "count": 1
+      },
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 1
+      },
+      "filter": {
+        "value": "drop-shadow(rgba(0, 0, 0, 0.05) 0px 1px 1px)",
+        "count": 15
+      }
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 6,
+      "readable": 2,
+      "blocked": 4,
+      "stateRules": 5
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#030303",
+        "bg": "#fdfdfd",
+        "ratio": 20.28,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#696969",
+        "bg": "#fdfdfd",
+        "ratio": 5.4,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#fefefe",
+        "bg": "#0c0f24",
+        "ratio": 18.77,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0c0f24",
+        "bg": "#fdfdfd",
+        "ratio": 18.61,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#e9e9e9",
+        "bg": "#fdfdfd",
+        "ratio": 1.19,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.19
+  },
+  "warnings": [
+    "link box metrics come from 2 elements out of 10 distinct shapes; thin evidence for a component token.",
+    "Found 5 state rules but none target elements on this page; the site's own CSS is likely among the 4 cross-origin sheets.",
+    "Strided sample: 2083 of 23229 elements. Weights are relative only."
+  ]
+}

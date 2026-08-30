@@ -1,0 +1,859 @@
+{
+  "source": {
+    "url": "https://www.framer.com/",
+    "title": "Framer: AI design agent",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 10878,
+    "elementCount": 6552,
+    "sampled": 5334,
+    "sampleRatio": 0.814
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "dark",
+    "roles": {
+      "background": {
+        "hex": "#000000",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#ffffff",
+        "weightShare": 0.3441,
+        "variants": []
+      },
+      "card": {
+        "hex": "#111111",
+        "weightShare": 0.0506,
+        "variants": [
+          "#0f0f0f",
+          "#101010",
+          "#121212"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#999999",
+        "weightShare": 0.5264,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#0099ff",
+        "weightShare": null,
+        "variants": [],
+        "source": "focusRing",
+        "occurrences": 4,
+        "via": "resting"
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#0f0f0f",
+        "weightShare": 0.5,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#111111",
+          "deltaL": 0.178,
+          "areaShare": 0.0506
+        },
+        {
+          "name": "surface-2",
+          "hex": "#171717",
+          "deltaL": 0.205,
+          "areaShare": 0.0124
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#ffffff",
+          "contrast": 21,
+          "charShare": 0.3441
+        },
+        {
+          "name": "text-2",
+          "hex": "#cccccc",
+          "contrast": 13.08,
+          "charShare": 0.0257
+        },
+        {
+          "name": "text-3",
+          "hex": "#999999",
+          "contrast": 7.37,
+          "charShare": 0.5264
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#000000",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 120
+      },
+      {
+        "hex": "#111111",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.178,
+        "chroma": 0,
+        "count": 23
+      },
+      {
+        "hex": "#171717",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.205,
+        "chroma": 0,
+        "count": 37
+      },
+      {
+        "hex": "#002238",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.24,
+        "chroma": 0.058,
+        "count": 5
+      },
+      {
+        "hex": "#262626",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.27,
+        "chroma": 0,
+        "count": 37
+      },
+      {
+        "hex": "#ffffff",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 33
+      },
+      {
+        "hex": "#0099ff",
+        "role": "primary",
+        "hue": "blue",
+        "lightness": 0.669,
+        "chroma": 0.184,
+        "count": 27
+      },
+      {
+        "hex": "#1a1a1a",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.216,
+        "chroma": 0,
+        "count": 17
+      },
+      {
+        "hex": "#1f1f1f",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.239,
+        "chroma": 0,
+        "count": 17
+      },
+      {
+        "hex": "#000f1a",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.16,
+        "chroma": 0.034,
+        "count": 6
+      },
+      {
+        "hex": "#00130e",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.165,
+        "chroma": 0.031,
+        "count": 10
+      },
+      {
+        "hex": "#dedede",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.901,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#333333",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.321,
+        "chroma": 0,
+        "count": 8
+      },
+      {
+        "hex": "#383838",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.341,
+        "chroma": 0,
+        "count": 1
+      },
+      {
+        "hex": "#1b1b1b",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.223,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#878787",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.623,
+        "chroma": 0,
+        "count": 9
+      },
+      {
+        "hex": "#0f0b19",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.162,
+        "chroma": 0.031,
+        "count": 1
+      },
+      {
+        "hex": "#4d4d4d",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.418,
+        "chroma": 0,
+        "count": 1
+      },
+      {
+        "hex": "#4cd963",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.784,
+        "chroma": 0.2,
+        "count": 4
+      },
+      {
+        "hex": "#cccccc",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.845,
+        "chroma": 0,
+        "count": 7
+      },
+      {
+        "hex": "#0066ff",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.563,
+        "chroma": 0.241,
+        "count": 1
+      },
+      {
+        "hex": "#d67a5c",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.674,
+        "chroma": 0.123,
+        "count": 5
+      },
+      {
+        "hex": "#222222",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.252,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#999999",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.683,
+        "chroma": 0,
+        "count": 6
+      }
+    ],
+    "semantic": {
+      "success": {
+        "hex": "#00bb88",
+        "occurrences": 10,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [
+      {
+        "hex": "#0066ff",
+        "occurrences": 1
+      }
+    ],
+    "clusterCounts": {
+      "bg": 26,
+      "text": 14,
+      "border": 3,
+      "interactive": 6
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Inter Variable",
+      "class": "sans",
+      "stack": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+      "sizePx": 18,
+      "weight": 400,
+      "lineHeightPx": 24.3,
+      "lineHeightRatio": 1.35,
+      "lineHeightInferred": false,
+      "letterSpacing": "-0.2px"
+    },
+    "heading": {
+      "family": "GT Walsheim Medium",
+      "class": "sans",
+      "stack": "\"GT Walsheim Medium\", \"GT Walsheim Medium Placeholder\", sans-serif",
+      "largestPx": 54,
+      "weight": 500,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "Inter Variable",
+        "class": "sans",
+        "stack": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif"
+      },
+      {
+        "family": "Inter",
+        "class": "sans",
+        "stack": "Inter, \"Inter Placeholder\", sans-serif"
+      },
+      {
+        "family": "GT Walsheim Medium",
+        "class": "sans",
+        "stack": "\"GT Walsheim Medium\", \"GT Walsheim Medium Placeholder\", sans-serif"
+      },
+      {
+        "family": "Input Mono Regular",
+        "class": "mono",
+        "stack": "\"Input Mono Regular\", \"Input Mono Regular Placeholder\", monospace"
+      }
+    ],
+    "scale": [
+      {
+        "name": "3xs",
+        "px": 7,
+        "rem": 0.5,
+        "weightShare": 0.004,
+        "variants": []
+      },
+      {
+        "name": "2xs",
+        "px": 10,
+        "rem": 0.714,
+        "weightShare": 0.0061,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 12,
+        "rem": 0.857,
+        "weightShare": 0.2413,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 13,
+        "rem": 0.929,
+        "weightShare": 0.0766,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 14,
+        "rem": 1,
+        "weightShare": 0.2876,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 15,
+        "rem": 1.071,
+        "weightShare": 0.0492,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 16,
+        "rem": 1.143,
+        "weightShare": 0.0176,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 18,
+        "rem": 1.286,
+        "weightShare": 0.2353,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 28,
+        "rem": 2,
+        "weightShare": 0.0324,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 36,
+        "rem": 2.571,
+        "weightShare": 0.0161,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 44,
+        "rem": 3.143,
+        "weightShare": 0.0162,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 54,
+        "rem": 3.857,
+        "weightShare": 0.0113,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 16,
+    "roles": {
+      "body": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.35,
+        "letterSpacing": "-0.2px",
+        "elements": 26,
+        "chars": 2083
+      },
+      "body-sm": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1,
+        "letterSpacing": "-0.14px",
+        "elements": 267,
+        "chars": 2179
+      },
+      "caption": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 500,
+        "lineHeight": 1.6,
+        "letterSpacing": null,
+        "elements": 70,
+        "chars": 663
+      },
+      "caption-sm": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 500,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 22,
+        "chars": 521
+      },
+      "h1": {
+        "fontFamily": "GT Walsheim Medium",
+        "fontStack": "\"GT Walsheim Medium\", \"GT Walsheim Medium Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "36px",
+        "fontWeight": 500,
+        "lineHeight": 1,
+        "letterSpacing": "-1.44px",
+        "elements": 2,
+        "chars": 128
+      },
+      "h2": {
+        "fontFamily": "GT Walsheim Medium",
+        "fontStack": "\"GT Walsheim Medium\", \"GT Walsheim Medium Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "28px",
+        "fontWeight": 500,
+        "lineHeight": 1.1,
+        "letterSpacing": "-1.12px",
+        "elements": 10,
+        "chars": 362
+      },
+      "h3": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.35,
+        "letterSpacing": "-0.2px",
+        "elements": 37,
+        "chars": 440
+      },
+      "h4": {
+        "fontFamily": "GT Walsheim Medium",
+        "fontStack": "\"GT Walsheim Medium\", \"GT Walsheim Medium Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "54px",
+        "fontWeight": 500,
+        "lineHeight": 0.8,
+        "letterSpacing": "-2.16px",
+        "elements": 3,
+        "chars": 18
+      },
+      "h6": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.35,
+        "letterSpacing": "-0.2px",
+        "elements": 2,
+        "chars": 40
+      },
+      "link": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, \"Inter Placeholder\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.1px",
+        "elements": 3,
+        "chars": 39
+      },
+      "mono": {
+        "fontFamily": "Input Mono Regular",
+        "fontStack": "\"Input Mono Regular\", \"Input Mono Regular Placeholder\", monospace",
+        "class": "mono",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 24,
+        "chars": 623
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 66
+  },
+  "spacing": {
+    "base": 5,
+    "gridConfidence": 0.795,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.071
+      },
+      {
+        "base": 6,
+        "share": 0.074
+      },
+      {
+        "base": 5,
+        "share": 0.795
+      },
+      {
+        "base": 4,
+        "share": 0.176
+      }
+    ],
+    "scale": [
+      1,
+      4,
+      5,
+      6,
+      8,
+      10,
+      15,
+      20,
+      25,
+      40
+    ],
+    "distinctValues": 32
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 6,
+        "count": 111
+      },
+      {
+        "name": "md",
+        "px": 8,
+        "count": 446
+      },
+      {
+        "name": "lg",
+        "px": 10,
+        "count": 40
+      },
+      {
+        "name": "xl",
+        "px": 15,
+        "count": 79
+      },
+      {
+        "name": "2xl",
+        "px": 18,
+        "count": 32
+      }
+    ],
+    "button": "8px",
+    "pill": true,
+    "pillValue": "50%",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
+        "count": 9
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 10px 20px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.25) 0px 2px 4px 0px",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.25) 0px 4px 8px 0px",
+        "count": 3
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "40px",
+      "borderWidth": null,
+      "radius": "18px",
+      "gap": "10px",
+      "elements": 8,
+      "variants": 11,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "0px 10px",
+      "borderWidth": null,
+      "radius": "8px",
+      "gap": "0px",
+      "elements": 2,
+      "variants": 5,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 7,
+    "measure": {
+      "px": 690,
+      "occurrences": 64,
+      "share": 0.29
+    },
+    "rhythm": {
+      "px": 120,
+      "occurrences": 8,
+      "share": 0.615
+    },
+    "composition": {
+      "total": 7,
+      "bleedCount": 7,
+      "griddedCount": 6,
+      "mediaLedCount": 4,
+      "charsMedian": 135,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "balanced",
+      "sectionCopy": "sparse",
+      "gridPrevalence": 0.86
+    },
+    "columns": {
+      "count": 3,
+      "occurrences": 1
+    },
+    "hero": {
+      "heightRatio": 1.09,
+      "heightRatioMeasured": 1.09,
+      "headingSize": 54,
+      "align": "left",
+      "media": 1,
+      "fullBleed": true,
+      "ctas": 2,
+      "ctasFilled": 2,
+      "ctaEvidence": "weak"
+    },
+    "nav": {
+      "height": 64,
+      "position": "relative",
+      "links": 10,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": null,
+      "easing": null,
+      "occurrences": 0,
+      "share": 0
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 8,
+    "pattern": null,
+    "overlay": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 1,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.147
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(5px)",
+        "count": 1
+      },
+      "mixBlendMode": {
+        "value": "overlay",
+        "count": 1
+      },
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 14
+      },
+      "filter": {
+        "value": "blur(4.53278e-06px)",
+        "count": 1
+      }
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 13,
+      "readable": 12,
+      "blocked": 1,
+      "stateRules": 31
+    },
+    "roles": {},
+    "declarations": 2
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#ffffff",
+        "bg": "#000000",
+        "ratio": 21,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#999999",
+        "bg": "#000000",
+        "ratio": 7.37,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0099ff",
+        "bg": "#000000",
+        "ratio": 7,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a focus indicator, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#0f0f0f",
+        "bg": "#000000",
+        "ratio": 1.1,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.1
+  },
+  "warnings": [
+    "Hero call-to-action count (2) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "Accent #0099ff taken from a focus ring (resting), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
+    "Ignored #0066ff as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
+    "16 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "button box metrics come from 2 elements out of 5 distinct shapes; thin evidence for a component token.",
+    "Strided sample: 5334 of 6552 elements. Weights are relative only."
+  ]
+}

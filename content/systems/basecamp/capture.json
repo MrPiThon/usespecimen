@@ -15,7 +15,7 @@
     "sampleRatio": 0.73
   },
   "harvestVersion": 8,
-  "clusterVersion": 17,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -48,7 +48,8 @@
         "hex": "#29353c",
         "weightShare": 0.122,
         "variants": []
-      }
+      },
+      "border": null
     },
     "ramps": {
       "surface": [],
@@ -61,6 +62,7 @@
         }
       ]
     },
+    "sectionFill": null,
     "palette": [
       {
         "hex": "#fcf7ff",
@@ -554,6 +556,7 @@
     "decorated": false,
     "layerCount": 2,
     "pattern": null,
+    "overlay": null,
     "wash": null,
     "effects": {
       "backdropFilter": null,
@@ -681,7 +684,7 @@
       "sampleRatio": 0.727
     },
     "harvestVersion": 8,
-    "clusterVersion": 17,
+    "clusterVersion": 20,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -720,7 +723,8 @@
           "hex": "#e1e5e8",
           "weightShare": 0.122,
           "variants": []
-        }
+        },
+        "border": null
       },
       "ramps": {
         "surface": [
@@ -746,6 +750,7 @@
           }
         ]
       },
+      "sectionFill": null,
       "palette": [
         {
           "hex": "#0b151b",
@@ -1258,6 +1263,7 @@
       "decorated": false,
       "layerCount": 2,
       "pattern": null,
+      "overlay": null,
       "wash": null,
       "effects": {
         "backdropFilter": null,

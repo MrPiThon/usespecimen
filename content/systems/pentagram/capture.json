@@ -15,7 +15,7 @@
     "sampleRatio": 0.424
   },
   "harvestVersion": 8,
-  "clusterVersion": 17,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -47,6 +47,7 @@
           "#707070"
         ]
       },
+      "primary": null,
       "primaryForeground": null,
       "border": {
         "hex": "#333333",
@@ -84,6 +85,7 @@
         }
       ]
     },
+    "sectionFill": null,
     "palette": [
       {
         "hex": "#ffffff",
@@ -490,6 +492,7 @@
     "decorated": true,
     "layerCount": 149,
     "pattern": null,
+    "overlay": null,
     "wash": null,
     "effects": {
       "backdropFilter": {

@@ -15,7 +15,7 @@
     "sampleRatio": 0.282
   },
   "harvestVersion": 8,
-  "clusterVersion": 19,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,

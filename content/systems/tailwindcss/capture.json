@@ -15,7 +15,7 @@
     "sampleRatio": 0.794
   },
   "harvestVersion": 8,
-  "clusterVersion": 18,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -121,6 +121,7 @@
         }
       ]
     },
+    "sectionFill": null,
     "palette": [
       {
         "hex": "#ffffff",
@@ -942,7 +943,7 @@
       "sampleRatio": 0.794
     },
     "harvestVersion": 8,
-    "clusterVersion": 18,
+    "clusterVersion": 20,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1044,6 +1045,7 @@
           }
         ]
       },
+      "sectionFill": null,
       "palette": [
         {
           "hex": "#030712",

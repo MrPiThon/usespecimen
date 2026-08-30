@@ -1,0 +1,452 @@
+{
+  "source": {
+    "url": "https://news.ycombinator.com/",
+    "title": "Hacker News",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 1214,
+    "elementCount": 2430,
+    "sampled": 2307,
+    "sampleRatio": 0.949
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#f6f6ef",
+        "weightShare": 1,
+        "variants": [],
+        "source": "largestBgCluster"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.4359,
+        "variants": []
+      },
+      "card": {
+        "hex": "#ffffff",
+        "weightShare": 0.0044,
+        "variants": []
+      },
+      "mutedForeground": {
+        "hex": "#828282",
+        "weightShare": 0.5624,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#ff6600",
+        "weightShare": null,
+        "variants": [],
+        "source": "surfaceFill",
+        "occurrences": 6
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#767676",
+        "weightShare": 0.5,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#ffffff",
+          "deltaL": 0.029,
+          "areaShare": 0.0044
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 19.35,
+          "charShare": 0.4359
+        },
+        {
+          "name": "text-2",
+          "hex": "#828282",
+          "contrast": 3.54,
+          "charShare": 0.5624
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#f6f6ef",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0.971,
+        "chroma": 0.009,
+        "count": 3
+      },
+      {
+        "hex": "#ff6600",
+        "role": "primary",
+        "hue": "orange",
+        "lightness": 0.696,
+        "chroma": 0.204,
+        "count": 6
+      },
+      {
+        "hex": "#ffffff",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#828282",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.607,
+        "chroma": 0,
+        "count": 807
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 144
+      },
+      {
+        "hex": "#222222",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.252,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#767676",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.566,
+        "chroma": 0,
+        "count": 3
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 3,
+      "text": 3,
+      "border": 2,
+      "interactive": 0
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Verdana",
+      "class": "sans",
+      "stack": "Verdana, Geneva, sans-serif",
+      "sizePx": 10.67,
+      "weight": 400,
+      "lineHeightPx": null,
+      "lineHeightRatio": null,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Verdana",
+      "class": "sans",
+      "stack": "Verdana, Geneva, sans-serif",
+      "largestPx": null,
+      "weight": null,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "Verdana",
+        "class": "sans",
+        "stack": "Verdana, Geneva, sans-serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "2xs",
+        "px": 9.33333,
+        "rem": 0.7,
+        "weightShare": 0.272,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 10.6667,
+        "rem": 0.8,
+        "weightShare": 0.144,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.9,
+        "weightShare": 0.1401,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 13.3333,
+        "rem": 1,
+        "weightShare": 0.2993,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 14.6667,
+        "rem": 1.1,
+        "weightShare": 0.1445,
+        "variants": [
+          15
+        ]
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 5,
+    "roles": {
+      "body": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "10.67px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 123,
+        "chars": 907
+      },
+      "body-sm": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "9.33px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 118,
+        "chars": 778
+      },
+      "body-lg": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 60,
+        "chars": 395
+      },
+      "lead": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "13.33px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 63,
+        "chars": 183
+      },
+      "lead-lg": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "14.67px",
+        "fontWeight": 400,
+        "lineHeight": 1.27,
+        "letterSpacing": null,
+        "elements": 30,
+        "chars": 81
+      },
+      "link": {
+        "fontFamily": "Verdana",
+        "fontStack": "Verdana, Geneva, sans-serif",
+        "class": "sans",
+        "fontSize": "13.33px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 62,
+        "chars": 2838
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 15
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.02,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.02
+      },
+      {
+        "base": 6,
+        "share": 0
+      },
+      {
+        "base": 5,
+        "share": 0.01
+      },
+      {
+        "base": 4,
+        "share": 0.02
+      }
+    ],
+    "scale": [
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "distinctValues": 5
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [],
+    "button": null,
+    "pill": false,
+    "pillValue": null,
+    "sharp": true
+  },
+  "elevation": {
+    "shadows": [],
+    "flat": true
+  },
+  "components": {
+    "link": {
+      "padding": "0px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 197,
+      "variants": 1,
+      "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": false,
+    "sections": null,
+    "measure": null,
+    "rhythm": null,
+    "composition": null,
+    "columns": null,
+    "hero": null,
+    "nav": null,
+    "motion": {
+      "duration": null,
+      "easing": null,
+      "occurrences": 0,
+      "share": 0
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 0,
+    "pattern": null,
+    "overlay": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 1,
+      "readable": 1,
+      "blocked": 0,
+      "stateRules": 3
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#f6f6ef",
+        "ratio": 19.35,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#828282",
+        "bg": "#f6f6ef",
+        "ratio": 3.54,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#ff6600",
+        "bg": "#f6f6ef",
+        "ratio": 2.7,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "border/background",
+        "fg": "#767676",
+        "bg": "#f6f6ef",
+        "ratio": 4.18,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": true,
+        "aaa": null
+      }
+    ],
+    "failures": 2,
+    "textFailures": 2,
+    "minRatio": 2.7
+  },
+  "warnings": [
+    "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
+    "Accent #ff6600 taken from a recurring coloured surface — the page has no styled control, focus ring or chromatic text to read it from. It is the brand colour of a masthead or panel, not of a button.",
+    "No spacing grid explains 75% of values (best 0.02); site may not be on a grid.",
+    "No border radius anywhere; treat as a deliberately sharp system.",
+    "Found 3 state rules but none target elements on this page.",
+    "Strided sample: 2307 of 2430 elements. Weights are relative only."
+  ]
+}

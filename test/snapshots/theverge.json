@@ -1,0 +1,826 @@
+{
+  "source": {
+    "url": "https://www.theverge.com/",
+    "title": "The Verge",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 19177,
+    "elementCount": 15605,
+    "sampled": 5958,
+    "sampleRatio": 0.382
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#131313",
+        "weightShare": 0.4313,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f6f6f6",
+        "weightShare": 0.0207,
+        "variants": []
+      },
+      "mutedForeground": {
+        "hex": "#4a4a4a",
+        "weightShare": 0.3194,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#3cffd0",
+        "weightShare": 0.0941,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 3
+      },
+      "primaryForeground": {
+        "hex": "#000000",
+        "weightShare": 0.011,
+        "variants": []
+      },
+      "border": {
+        "hex": "#e9e9e9",
+        "weightShare": 0.7191,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f6f6f6",
+          "deltaL": 0.027,
+          "areaShare": 0.0207
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 21,
+          "charShare": 0.0903
+        },
+        {
+          "name": "text-2",
+          "hex": "#131313",
+          "contrast": 18.58,
+          "charShare": 0.4313
+        },
+        {
+          "name": "text-3",
+          "hex": "#4a4a4a",
+          "contrast": 8.86,
+          "charShare": 0.3194
+        },
+        {
+          "name": "text-4",
+          "hex": "#636363",
+          "contrast": 6.01,
+          "charShare": 0.0281
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 14
+      },
+      {
+        "hex": "#f6f6f6",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.973,
+        "chroma": 0,
+        "count": 13
+      },
+      {
+        "hex": "#131313",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.187,
+        "chroma": 0,
+        "count": 10
+      },
+      {
+        "hex": "#3cffd0",
+        "role": "primary",
+        "hue": "teal",
+        "lightness": 0.896,
+        "chroma": 0.163,
+        "count": 6
+      },
+      {
+        "hex": "#1a1a1a",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.218,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#000000",
+        "role": "primaryForeground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 17
+      },
+      {
+        "hex": "#e9e9e9",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.934,
+        "chroma": 0,
+        "count": 13
+      },
+      {
+        "hex": "#eee6ff",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.939,
+        "chroma": 0.034,
+        "count": 30
+      },
+      {
+        "hex": "#63ffd9",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.907,
+        "chroma": 0.142,
+        "count": 7
+      },
+      {
+        "hex": "#5200ff",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.487,
+        "chroma": 0.297,
+        "count": 6
+      },
+      {
+        "hex": "#4a4a4a",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.409,
+        "chroma": 0,
+        "count": 141
+      },
+      {
+        "hex": "#636363",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.5,
+        "chroma": 0,
+        "count": 290
+      },
+      {
+        "hex": "#949494",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.667,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#cccccc",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.845,
+        "chroma": 0,
+        "count": 1
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 10,
+      "text": 7,
+      "border": 7,
+      "interactive": 5
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "__fkRomanStandard_cfceed",
+      "class": "serif",
+      "stack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif",
+      "sizePx": 16,
+      "weight": 400,
+      "lineHeightPx": 20.8,
+      "lineHeightRatio": 1.3,
+      "lineHeightInferred": false,
+      "letterSpacing": "-0.16px"
+    },
+    "heading": {
+      "family": "ui-sans-serif",
+      "class": "sans",
+      "stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "largestPx": 24,
+      "weight": 600,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "__polySans_9afc27",
+        "class": "sans",
+        "stack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif"
+      },
+      {
+        "family": "__fkRomanStandard_cfceed",
+        "class": "serif",
+        "stack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif"
+      },
+      {
+        "family": "ui-sans-serif",
+        "class": "sans",
+        "stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+      },
+      {
+        "family": "__polySansMono_0b836e",
+        "class": "mono",
+        "stack": "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "4xs",
+        "px": 11,
+        "rem": 0.688,
+        "weightShare": 0.1025,
+        "variants": []
+      },
+      {
+        "name": "3xs",
+        "px": 12,
+        "rem": 0.75,
+        "weightShare": 0.0036,
+        "variants": []
+      },
+      {
+        "name": "2xs",
+        "px": 13.008,
+        "rem": 0.813,
+        "weightShare": 0.1377,
+        "variants": [
+          13
+        ]
+      },
+      {
+        "name": "xs",
+        "px": 14,
+        "rem": 0.875,
+        "weightShare": 0.0808,
+        "variants": [
+          14.08
+        ]
+      },
+      {
+        "name": "sm",
+        "px": 15,
+        "rem": 0.938,
+        "weightShare": 0.0117,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 16,
+        "rem": 1,
+        "weightShare": 0.3431,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 18,
+        "rem": 1.125,
+        "weightShare": 0.19,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 20,
+        "rem": 1.25,
+        "weightShare": 0.0791,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 24,
+        "rem": 1.5,
+        "weightShare": 0.0256,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 26,
+        "rem": 1.625,
+        "weightShare": 0.0153,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 31,
+        "rem": 1.938,
+        "weightShare": 0.0032,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 65,
+        "rem": 4.063,
+        "weightShare": 0.0028,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 16,
+    "roles": {
+      "body": {
+        "fontFamily": "__fkRomanStandard_cfceed",
+        "fontStack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif",
+        "class": "serif",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": "-0.16px",
+        "elements": 58,
+        "chars": 7937
+      },
+      "body-sm": {
+        "fontFamily": "__polySans_9afc27",
+        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": null,
+        "elements": 11,
+        "chars": 3003
+      },
+      "caption": {
+        "fontFamily": "ui-sans-serif",
+        "fontStack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "13.01px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 1965
+      },
+      "caption-sm": {
+        "fontFamily": "__polySans_9afc27",
+        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "11px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": "1.1px",
+        "elements": 450,
+        "chars": 3232
+      },
+      "body-lg": {
+        "fontFamily": "__fkRomanStandard_cfceed",
+        "fontStack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif",
+        "class": "serif",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 688
+      },
+      "lead": {
+        "fontFamily": "__fkRomanStandard_cfceed",
+        "fontStack": "__fkRomanStandard_cfceed, __fkRomanStandard_Fallback_cfceed, Georgia, serif, Georgia, serif",
+        "class": "serif",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 636
+      },
+      "lead-lg": {
+        "fontFamily": "__polySans_9afc27",
+        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "24px",
+        "fontWeight": 300,
+        "lineHeight": 1.1,
+        "letterSpacing": "0.24px",
+        "elements": 8,
+        "chars": 538
+      },
+      "h2": {
+        "fontFamily": "__polySans_9afc27",
+        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "24px",
+        "fontWeight": 700,
+        "lineHeight": 1.1,
+        "letterSpacing": "0.24px",
+        "elements": 4,
+        "chars": 52
+      },
+      "h3": {
+        "fontFamily": "ui-sans-serif",
+        "fontStack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "class": "sans",
+        "fontSize": "8px",
+        "fontWeight": 600,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 2,
+        "chars": 52
+      },
+      "button": {
+        "fontFamily": "__polySans_9afc27",
+        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": null,
+        "elements": 22,
+        "chars": 561
+      },
+      "link": {
+        "fontFamily": "__polySans_9afc27",
+        "fontStack": "__polySans_9afc27, __polySans_Fallback_9afc27, Helvetica, Arial, sans-serif, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 700,
+        "lineHeight": 1,
+        "letterSpacing": null,
+        "elements": 76,
+        "chars": 4790
+      },
+      "mono": {
+        "fontFamily": "__polySansMono_0b836e",
+        "fontStack": "__polySansMono_0b836e, __polySansMono_Fallback_0b836e, \"Courier New\", Courier, monospace, Arial, sans-serif",
+        "class": "mono",
+        "fontSize": "11px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 227
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 70
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.58,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.239
+      },
+      {
+        "base": 6,
+        "share": 0.46
+      },
+      {
+        "base": 5,
+        "share": 0.413
+      },
+      {
+        "base": 4,
+        "share": 0.58
+      }
+    ],
+    "scale": [
+      6,
+      8,
+      10,
+      12,
+      15,
+      16,
+      20,
+      24,
+      30,
+      40
+    ],
+    "distinctValues": 32
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 2,
+        "count": 52
+      },
+      {
+        "name": "md",
+        "px": 3,
+        "count": 87
+      },
+      {
+        "name": "lg",
+        "px": 24,
+        "count": 11
+      }
+    ],
+    "button": "2px",
+    "pill": true,
+    "pillValue": "50%",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px -1px 0px 0px inset",
+        "count": 180
+      },
+      {
+        "value": "rgb(82, 0, 255) 0px -1px 0px 0px inset",
+        "count": 61
+      },
+      {
+        "value": "rgb(19, 19, 19) 0px -1px 0px 0px inset",
+        "count": 18
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px inset",
+        "count": 4
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px",
+        "count": 3
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "14px 0px 14px 14px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 6,
+      "variants": 6,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "10px 18px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 9,
+      "variants": 10,
+      "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": false,
+    "sections": null,
+    "measure": {
+      "px": 800,
+      "occurrences": 50,
+      "share": 0.373
+    },
+    "rhythm": null,
+    "composition": null,
+    "columns": {
+      "count": 2,
+      "occurrences": 11
+    },
+    "hero": null,
+    "nav": {
+      "height": 36,
+      "position": "absolute",
+      "links": 7,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.1s",
+      "easing": "ease",
+      "occurrences": 1,
+      "share": 1
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 5,
+    "pattern": {
+      "kind": "lines",
+      "size": "120px 120px",
+      "angle": "118",
+      "value": "linear-gradient(118deg, rgba(0, 0, 0, 0.04) 0.5px, rgba(0, 0, 0, 0) 0.5px)",
+      "external": false,
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0.04)",
+          "hex": "#000000",
+          "alpha": 0.04,
+          "chroma": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.059
+    },
+    "overlay": null,
+    "wash": {
+      "kind": "radial-gradient",
+      "value": "radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 62%)",
+      "stops": [
+        {
+          "raw": "rgba(0, 0, 0, 0.06)",
+          "hex": "#000000",
+          "alpha": 0.06,
+          "chroma": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.177
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(14px)",
+        "count": 1
+      },
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": {
+        "value": "drop-shadow(rgba(255, 255, 255, 0.6) 0px 35px 35px)",
+        "count": 1
+      }
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 5,
+      "readable": 5,
+      "blocked": 0,
+      "stateRules": 202
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "color": "#ffffff",
+          "backgroundColor": "#2c6415",
+          "borderColor": "rgba(162, 192, 169, 0.5)",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "focus": {
+          "color": "#ffffff",
+          "borderColor": "#68b631",
+          "matchedElements": 59,
+          "rulesConsidered": 3
+        },
+        "focus-visible": {
+          "borderColor": "#3cffd0",
+          "outlineColor": "#ffffff",
+          "matchedElements": 3,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#ffffff",
+          "borderColor": "#68b631",
+          "matchedElements": 59,
+          "rulesConsidered": 15
+        }
+      },
+      "link": {
+        "focus": {
+          "outlineColor": "#000000",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#131313",
+          "boxShadow": "inset 0 -1px 0 0 #5200ff",
+          "matchedElements": 98,
+          "rulesConsidered": 19
+        }
+      },
+      "text": {
+        "focus": {
+          "outlineColor": "#5200ff",
+          "matchedElements": 19,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "boxShadow": "inset 0 -0.6em 0 0 #3cffd0",
+          "matchedElements": 119,
+          "rulesConsidered": 12
+        }
+      }
+    },
+    "declarations": 57
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#131313",
+        "bg": "#ffffff",
+        "ratio": 18.58,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#4a4a4a",
+        "bg": "#ffffff",
+        "ratio": 8.86,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#000000",
+        "bg": "#3cffd0",
+        "ratio": 16.41,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#3cffd0",
+        "bg": "#ffffff",
+        "ratio": 1.28,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": false,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#e9e9e9",
+        "bg": "#ffffff",
+        "ratio": 1.21,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 2,
+    "textFailures": 0,
+    "minRatio": 1.21
+  },
+  "warnings": [
+    "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
+    "No spacing grid explains 75% of values (best 0.58); site may not be on a grid.",
+    "16 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Strided sample: 5958 of 15605 elements. Weights are relative only."
+  ]
+}

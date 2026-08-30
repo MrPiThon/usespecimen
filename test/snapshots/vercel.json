@@ -1,0 +1,604 @@
+{
+  "source": {
+    "url": "https://vercel.com/",
+    "title": "Agentic Infrastructure - Vercel",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5333,
+    "elementCount": 3386,
+    "sampled": 1559,
+    "sampleRatio": 0.46
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#fafafa",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#171717",
+        "weightShare": 0.4258,
+        "variants": []
+      },
+      "card": null,
+      "mutedForeground": {
+        "hex": "#4d4d4d",
+        "weightShare": 0.5269,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#0072f5",
+        "weightShare": null,
+        "variants": [],
+        "source": "focusRing",
+        "occurrences": 75,
+        "via": "button:focus-visible, text:focus-visible"
+      },
+      "primaryForeground": null,
+      "border": null
+    },
+    "ramps": {
+      "surface": [],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#171717",
+          "contrast": 17.18,
+          "charShare": 0.4258
+        },
+        {
+          "name": "text-2",
+          "hex": "#4d4d4d",
+          "contrast": 8.1,
+          "charShare": 0.5269
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#fafafa",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0.985,
+        "chroma": 0,
+        "count": 35
+      },
+      {
+        "hex": "#171717",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.205,
+        "chroma": 0,
+        "count": 13
+      },
+      {
+        "hex": "#4d4d4d",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.42,
+        "chroma": 0,
+        "count": 284
+      },
+      {
+        "hex": "#666666",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.51,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#c9c9c9",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.836,
+        "chroma": 0,
+        "count": 18
+      },
+      {
+        "hex": "#ffffff",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 7
+      },
+      {
+        "hex": "#8f8f8f",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.65,
+        "chroma": 0,
+        "count": 9
+      },
+      {
+        "hex": "#297a3a",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.515,
+        "chroma": 0.125,
+        "count": 9
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 3,
+      "text": 7,
+      "border": 0,
+      "interactive": 2
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "GeistSans",
+      "class": "unknown",
+      "stack": "GeistSans, \"GeistSans Fallback\"",
+      "sizePx": 14,
+      "weight": 400,
+      "lineHeightPx": 20.02,
+      "lineHeightRatio": 1.43,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "GeistSans",
+      "class": "unknown",
+      "stack": "GeistSans, \"GeistSans Fallback\"",
+      "largestPx": 64,
+      "weight": 450,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "GeistSans",
+        "class": "unknown",
+        "stack": "GeistSans, \"GeistSans Fallback\""
+      },
+      {
+        "family": "Geist Mono",
+        "class": "mono",
+        "stack": "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\""
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 11,
+        "rem": 0.786,
+        "weightShare": 0.0163,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.857,
+        "weightShare": 0.0848,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 14,
+        "rem": 1,
+        "weightShare": 0.6555,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "rem": 1.143,
+        "weightShare": 0.0491,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 24,
+        "rem": 1.714,
+        "weightShare": 0.0964,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 32,
+        "rem": 2.286,
+        "weightShare": 0.0292,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 48,
+        "rem": 3.429,
+        "weightShare": 0.0326,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 56,
+        "rem": 4,
+        "weightShare": 0.0292,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 64,
+        "rem": 4.571,
+        "weightShare": 0.0068,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 9,
+    "roles": {
+      "body": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 25,
+        "chars": 724
+      },
+      "body-sm": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "11px",
+        "fontWeight": 500,
+        "lineHeight": 1.82,
+        "letterSpacing": "0.2px",
+        "elements": 27,
+        "chars": 81
+      },
+      "body-lg": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "16px",
+        "fontWeight": 500,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 9,
+        "chars": 99
+      },
+      "h1": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "64px",
+        "fontWeight": 400,
+        "lineHeight": 1,
+        "letterSpacing": "-3.84px",
+        "elements": 2,
+        "chars": 44
+      },
+      "h2": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 36,
+        "chars": 282
+      },
+      "link": {
+        "fontFamily": "GeistSans",
+        "fontStack": "GeistSans, \"GeistSans Fallback\"",
+        "class": "unknown",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.43,
+        "letterSpacing": null,
+        "elements": 237,
+        "chars": 2256
+      },
+      "mono": {
+        "fontFamily": "Geist Mono",
+        "fontStack": "\"Geist Mono\", ui-monospace, SFMono-Regular, Menlo, Monaco, \"Liberation Mono\", \"DejaVu Sans Mono\", \"Courier New\", monospace, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "mono",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 33,
+        "chars": 501
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 22
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.455,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.085
+      },
+      {
+        "base": 6,
+        "share": 0.455
+      },
+      {
+        "base": 5,
+        "share": 0.051
+      },
+      {
+        "base": 4,
+        "share": 0.25
+      }
+    ],
+    "scale": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16,
+      20,
+      24,
+      40,
+      44
+    ],
+    "distinctValues": 19
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 6,
+        "count": 23
+      }
+    ],
+    "button": "3.35544e+07px",
+    "pill": true,
+    "pillValue": "3.35544e+07px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgb(250, 250, 250) 0px 0px 0px 1px",
+        "count": 15
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px inset",
+        "count": 9
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(235, 235, 235) 0px 0px 0px 1px",
+        "count": 8
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "2px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": "6px",
+      "elements": 80,
+      "variants": 7,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "0px 8px 0px 4px",
+      "borderWidth": null,
+      "radius": "3.35544e+07px",
+      "gap": null,
+      "elements": 1,
+      "variants": 2,
+      "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 4,
+    "measure": {
+      "px": 1390,
+      "occurrences": 43,
+      "share": 0.597
+    },
+    "rhythm": {
+      "px": 40,
+      "occurrences": 1,
+      "share": 1
+    },
+    "composition": {
+      "total": 4,
+      "bleedCount": 0,
+      "griddedCount": 4,
+      "mediaLedCount": 3,
+      "charsMedian": 579,
+      "sectionWidth": "contained",
+      "sectionMedia": "image-led",
+      "sectionCopy": "moderate",
+      "gridPrevalence": 1
+    },
+    "columns": null,
+    "hero": {
+      "heightRatio": 0.93,
+      "heightRatioMeasured": 0.93,
+      "headingSize": 64,
+      "align": "left",
+      "media": 2,
+      "fullBleed": false,
+      "ctas": 2,
+      "ctasFilled": 2,
+      "ctaEvidence": "strong"
+    },
+    "nav": {
+      "height": 64,
+      "position": "sticky",
+      "links": 78,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.1s",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "occurrences": 80,
+      "share": 0.62
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 7,
+    "pattern": null,
+    "overlay": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(to top in oklab, rgb(250, 250, 250) 0%, rgba(0, 0, 0, 0) 100%)",
+      "stops": [
+        {
+          "raw": "rgb(250, 250, 250)",
+          "hex": "#fafafa",
+          "alpha": 1,
+          "chroma": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.491
+    },
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": {
+        "value": "color-burn",
+        "count": 1
+      },
+      "maskImage": {
+        "value": "raster",
+        "count": 2
+      },
+      "filter": {
+        "value": "blur(48px)",
+        "count": 1
+      }
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 7,
+      "readable": 7,
+      "blocked": 0,
+      "stateRules": 612
+    },
+    "roles": {
+      "button": {
+        "focus-visible": {
+          "boxShadow": "0 0 0 2px hsla(0, 0%, 100%, 1), 0 0 0 4px hsla(212, 100%, 48%, 1)",
+          "matchedElements": 38,
+          "rulesConsidered": 2
+        },
+        "hover": {
+          "backgroundColor": "#0000000d",
+          "matchedElements": 41,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "focus": {
+          "opacity": "1",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#171717",
+          "matchedElements": 2,
+          "rulesConsidered": 1
+        }
+      },
+      "text": {
+        "focus-visible": {
+          "boxShadow": "0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000",
+          "matchedElements": 86,
+          "rulesConsidered": 4
+        },
+        "hover": {
+          "textDecorationColor": "#c9c9c9",
+          "matchedElements": 33,
+          "rulesConsidered": 7
+        }
+      }
+    },
+    "declarations": 16
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#171717",
+        "bg": "#fafafa",
+        "ratio": 17.18,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#4d4d4d",
+        "bg": "#fafafa",
+        "ratio": 8.1,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0072f5",
+        "bg": "#fafafa",
+        "ratio": 4.26,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a focus indicator, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      }
+    ],
+    "failures": 0,
+    "textFailures": 0,
+    "minRatio": 4.26
+  },
+  "warnings": [
+    "Accent #0072f5 taken from a focus ring (button:focus-visible, text:focus-visible), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
+    "No borders observed; border token omitted.",
+    "No spacing grid explains 75% of values (best 0.455); site may not be on a grid.",
+    "button box metrics come from 1 element out of 2 distinct shapes; thin evidence for a component token.",
+    "Strided sample: 1559 of 3386 elements. Weights are relative only."
+  ]
+}

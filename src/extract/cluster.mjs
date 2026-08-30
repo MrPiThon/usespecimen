@@ -77,6 +77,10 @@ const MIN_ACCENT_COUNT = 2;
  *  plenty of systems tint their surfaces on purpose. */
 const SURFACE_MIN_AREA = 0.0025;
 
+/** Share of a page's button elements that must carry the same radius before it
+ *  overrides the count rank across all interactive elements. See roundedTokens. */
+const BUTTON_RADIUS_CONSENSUS = 0.6;
+
 /**
  * Share of painted background area above which a chromatic colour is a SURFACE
  * the site fills sections with, not a control it fills buttons with.
@@ -340,12 +344,18 @@ function resolveBackdrop(capture) {
   return { rgb: WHITE, source: 'browserDefault' };
 }
 
-const token = (cluster, share, extra = {}) => cluster && ({
+// `? :` rather than `&&`. With `&&`, an unobservable role inherited whatever
+// falsy value the caller happened to pass — `border[0]` on an empty array is
+// `undefined`, and JSON.stringify DELETES undefined keys, so `border` vanished
+// from three captures entirely. A missing key reads as "this pipeline version
+// had no such field"; null reads as "measured, not found", which is the claim.
+// Every other omission in this file is already null.
+const token = (cluster, share, extra = {}) => (cluster ? {
   hex: cluster.hex,
   weightShare: round(share, 4),
   variants: cluster.variants,
   ...extra,
-});
+} : null);
 
 /**
  * The surface ladder: each distinct near-canvas background, ordered by distance
@@ -599,6 +609,17 @@ export function colorTokens(capture) {
  * system, not a missing measurement.
  */
 export function componentTokens(capture) {
+  // Bundle selection is unchanged, and that is a finding rather than an
+  // oversight. Ranking by mean painted area was tried and is worse: the
+  // `button|a|role=button` selector matches links wrapped around whole cards,
+  // so "biggest" gave Linear `0px 28px 0px 36px`, Stripe `32px 0px`, and turned
+  // Tailwind's 4px buttons into pills. Filtering to bundles padded on both axes
+  // first still put Stripe at 2px and Notion at a pill.
+  //
+  // `componentBoxes` does not carry enough signal to identify a primary CTA —
+  // it has no notion of which element is the call to action, and a big link is
+  // shaped exactly like a big button. `dominantUnstyled` and `variants` below
+  // exist to say so, and the file publishes the warning rather than pretending.
   const ranked = entriesOf(capture?.componentBoxes, 'count').map((e) => {
     const [kind, padding, borderWidth, radius, gap] = e.value.split('|');
     return {
@@ -1065,8 +1086,42 @@ export function roundedTokens(capture) {
   // Every <a> on the page reports its radius here, and most links are square, so
   // zero carries no information about button shape. The heaviest non-zero value
   // is the shape token; genuinely square systems fall out as `sharp`.
-  const button = entriesOf(capture.interactiveRadius, 'count')
-    .find(e => parseFloat(e.value) > 0)?.value ?? null;
+  // The radius a supermajority of this page's BUTTONS actually carry, when one
+  // exists, ahead of the commonest radius across every interactive element.
+  //
+  // Wise puts 9999px on 95% of its twenty button elements and 2px on hundreds
+  // of other interactive things; the count rank over `interactiveRadius` took
+  // the 2px, and because `components.button.radius` is emitted as a
+  // `{rounded.button}` reference, the file told an agent to build square
+  // buttons for a site whose buttons are all pills. Figma is the same at 68%.
+  //
+  // BUTTON_RADIUS_CONSENSUS is 0.6 and the cut sits in an observed gap: of the
+  // systems whose top button radius is non-zero, agreement runs 95% (wise),
+  // 68% (figma), 67% (duolingo) — then 57% (mailchimp), 53%, 50%, 46%, 43%,
+  // 42%. Below the cut the bundles genuinely disagree and there is no
+  // supermajority to read, so the old behaviour stands rather than a coin toss.
+  //
+  // Zero is excluded here as it is below: most `<a>` elements are square, so a
+  // zero majority says nothing about button shape.
+  const buttonRadii = {};
+  let buttonElements = 0;
+  for (const [key, w] of Object.entries(capture?.componentBoxes ?? {})) {
+    const [kind, , , radius] = key.split('|');
+    if (kind !== 'button') continue;
+    buttonRadii[radius] = (buttonRadii[radius] ?? 0) + (w?.count ?? 0);
+    buttonElements += w?.count ?? 0;
+  }
+  const consensus = Object.entries(buttonRadii)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
+  const agreed = consensus && buttonElements > 0
+    && consensus[1] / buttonElements >= BUTTON_RADIUS_CONSENSUS
+    && parseFloat(consensus[0]) > 0
+    ? consensus[0]
+    : null;
+
+  const button = agreed
+    ?? entriesOf(capture.interactiveRadius, 'count')
+      .find(e => parseFloat(e.value) > 0)?.value ?? null;
   // The OBSERVED pill value, not a conventional 9999px. Browsers serialise very
   // large radii their own way — Chrome hands back "3.35544e+07px" — and that
   // ugly string is what the site actually declares.
@@ -1646,7 +1701,11 @@ export function cluster(capture, { previous } = {}) {
     //     dropped because only the largest layer was published.
     // 19: adds colors.sectionFill — the chromatic colour a site grounds whole
     //     sections in, which the surface ramp filters out by design.
-    clusterVersion: 19,
+    // 20: rounded.button reads a supermajority of the page's own button
+    //     bundles before falling back to the interactiveRadius count rank, and
+    //     an unobservable colour role is null rather than undefined — the
+    //     latter was being deleted by JSON.stringify, so the key vanished.
+    clusterVersion: 20,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

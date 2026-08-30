@@ -1,0 +1,548 @@
+{
+  "source": {
+    "url": "https://substack.com/",
+    "title": "Substack",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 3290,
+    "elementCount": 2270,
+    "sampled": 1612,
+    "sampleRatio": 0.71
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#363737",
+        "weightShare": 0.6631,
+        "variants": []
+      },
+      "card": {
+        "hex": "#c8c8c8",
+        "weightShare": 0.0011,
+        "variants": []
+      },
+      "mutedForeground": {
+        "hex": "#777777",
+        "weightShare": 0.1886,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#ff6719",
+        "weightShare": 0.1394,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 14
+      },
+      "primaryForeground": {
+        "hex": "#363737",
+        "weightShare": 0.4356,
+        "variants": []
+      },
+      "border": {
+        "hex": "#e6e6e6",
+        "weightShare": 0.8929,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#363737",
+          "contrast": 11.94,
+          "charShare": 0.6631
+        },
+        {
+          "name": "text-2",
+          "hex": "#777777",
+          "contrast": 4.48,
+          "charShare": 0.1886
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 30
+      },
+      {
+        "hex": "#eeeeee",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.949,
+        "chroma": 0,
+        "count": 45
+      },
+      {
+        "hex": "#232525",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.262,
+        "chroma": 0.003,
+        "count": 3
+      },
+      {
+        "hex": "#2f6d5d",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.489,
+        "chroma": 0.069,
+        "count": 3
+      },
+      {
+        "hex": "#ff6719",
+        "role": "primary",
+        "hue": "orange",
+        "lightness": 0.698,
+        "chroma": 0.201,
+        "count": 14
+      },
+      {
+        "hex": "#c8c8c8",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.833,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#363737",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.336,
+        "chroma": 0.001,
+        "count": 54
+      },
+      {
+        "hex": "#777777",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.569,
+        "chroma": 0,
+        "count": 80
+      },
+      {
+        "hex": "#e6e6e6",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.923,
+        "chroma": 0,
+        "count": 25
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 6,
+      "text": 4,
+      "border": 2,
+      "interactive": 4
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "system-ui",
+      "class": "sans",
+      "stack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+      "sizePx": 15,
+      "weight": 400,
+      "lineHeightPx": 21,
+      "lineHeightRatio": 1.4,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Cahuenga",
+      "class": "serif",
+      "stack": "Cahuenga, serif",
+      "largestPx": 32,
+      "weight": 500,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "system-ui",
+        "class": "sans",
+        "stack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\""
+      },
+      {
+        "family": "Cahuenga",
+        "class": "serif",
+        "stack": "Cahuenga, serif"
+      },
+      {
+        "family": "SF Pro Display",
+        "class": "sans",
+        "stack": "\"SF Pro Display\", -apple-system-headline, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\""
+      }
+    ],
+    "scale": [
+      {
+        "name": "sm",
+        "px": 13,
+        "rem": 0.867,
+        "weightShare": 0.2355,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 15,
+        "rem": 1,
+        "weightShare": 0.7137,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 20,
+        "rem": 1.333,
+        "weightShare": 0.0041,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 24,
+        "rem": 1.6,
+        "weightShare": 0.0312,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 32,
+        "rem": 2.133,
+        "weightShare": 0.0156,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 5,
+    "roles": {
+      "body": {
+        "fontFamily": "system-ui",
+        "fontStack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 400,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 15,
+        "chars": 2790
+      },
+      "body-sm": {
+        "fontFamily": "system-ui",
+        "fontStack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.31,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 669
+      },
+      "h1": {
+        "fontFamily": "SF Pro Display",
+        "fontStack": "\"SF Pro Display\", -apple-system-headline, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "20px",
+        "fontWeight": 700,
+        "lineHeight": 1.2,
+        "letterSpacing": null,
+        "elements": 1,
+        "chars": 4
+      },
+      "h3": {
+        "fontFamily": "Cahuenga",
+        "fontStack": "Cahuenga, serif",
+        "class": "serif",
+        "fontSize": "32px",
+        "fontWeight": 500,
+        "lineHeight": 1.24,
+        "letterSpacing": null,
+        "elements": 2,
+        "chars": 80
+      },
+      "h4": {
+        "fontFamily": "Cahuenga",
+        "fontStack": "Cahuenga, serif",
+        "class": "serif",
+        "fontSize": "24px",
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 7,
+        "chars": 160
+      },
+      "button": {
+        "fontFamily": "system-ui",
+        "fontStack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 600,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 25,
+        "chars": 328
+      },
+      "link": {
+        "fontFamily": "system-ui",
+        "fontStack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 500,
+        "lineHeight": 1.33,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 240
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 14
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.936,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.579
+      },
+      {
+        "base": 6,
+        "share": 0.204
+      },
+      {
+        "base": 5,
+        "share": 0.026
+      },
+      {
+        "base": 4,
+        "share": 0.936
+      }
+    ],
+    "scale": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16,
+      20,
+      24,
+      32,
+      48
+    ],
+    "distinctValues": 14
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 8,
+        "count": 68
+      },
+      {
+        "name": "md",
+        "px": 12,
+        "count": 64
+      }
+    ],
+    "button": "9999px",
+    "pill": true,
+    "pillValue": "9999px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.1) 0px -1px 0px 0px inset",
+        "count": 14
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
+        "count": 11
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "button": {
+      "padding": "0px 8px",
+      "borderWidth": null,
+      "radius": "9999px",
+      "gap": "8px",
+      "elements": 24,
+      "variants": 7,
+      "dominantUnstyled": false
+    },
+    "link": {
+      "padding": "0px",
+      "borderWidth": null,
+      "radius": "9999px",
+      "gap": null,
+      "elements": 6,
+      "variants": 4,
+      "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": false,
+    "sections": null,
+    "measure": {
+      "px": 570,
+      "occurrences": 33,
+      "share": 0.446
+    },
+    "rhythm": null,
+    "composition": null,
+    "columns": null,
+    "hero": null,
+    "nav": null,
+    "motion": {
+      "duration": "0.25s",
+      "easing": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "occurrences": 64,
+      "share": 1
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 2,
+    "pattern": null,
+    "overlay": null,
+    "wash": {
+      "kind": "linear-gradient",
+      "value": "linear-gradient(rgba(59, 55, 74, 0.75), rgba(59, 55, 74, 0.75))",
+      "stops": [
+        {
+          "raw": "rgba(59, 55, 74, 0.75)",
+          "hex": "#3b374a",
+          "alpha": 0.75,
+          "chroma": 0.0331
+        },
+        {
+          "raw": "rgba(59, 55, 74, 0.75)",
+          "hex": "#3b374a",
+          "alpha": 0.75,
+          "chroma": 0.0331
+        }
+      ],
+      "areaShare": 0.422
+    },
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 18,
+      "readable": 5,
+      "blocked": 13,
+      "stateRules": 0
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#363737",
+        "bg": "#ffffff",
+        "ratio": 11.94,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#777777",
+        "bg": "#ffffff",
+        "ratio": 4.48,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#363737",
+        "bg": "#ff6719",
+        "ratio": 4.1,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#ff6719",
+        "bg": "#ffffff",
+        "ratio": 2.91,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": false,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#e6e6e6",
+        "bg": "#ffffff",
+        "ratio": 1.25,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 4,
+    "textFailures": 2,
+    "minRatio": 1.25
+  },
+  "warnings": [
+    "Page sections could not be read — the children of the content root do not partition it, which happens on app shells and on stacked full-height layers. Hero, section rhythm and section count are withheld; measure, grid, navigation and motion are measured independently and stand.",
+    "Found 0 state rules but none target elements on this page; the site's own CSS is likely among the 13 cross-origin sheets.",
+    "Strided sample: 1612 of 2270 elements. Weights are relative only."
+  ]
+}

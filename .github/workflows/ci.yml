@@ -40,6 +40,13 @@ jobs:
       # Prose is hand-written against a capture, and captures get re-taken. A
       # file whose words contradict its own tokens is a broken promise in the
       # same way a spec violation is, so it fails here rather than shipping.
+      # The clusterer's tuning constants were each derived from a measured
+      # failure on a real site, and nothing guarded them until this suite. The
+      # 23 committed captures are the fixtures, so it needs no browser and no
+      # network.
+      - name: Test
+        run: npm test
+
       - name: Check prose agrees with the tokens
         run: npm run check
 

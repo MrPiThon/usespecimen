@@ -1,0 +1,585 @@
+{
+  "source": {
+    "url": "https://www.duolingo.com/",
+    "title": "Duolingo - The world’s most popular way to learn",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 7803,
+    "elementCount": 12583,
+    "sampled": 4610,
+    "sampleRatio": 0.366
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#777777",
+        "weightShare": 0.4795,
+        "variants": []
+      },
+      "card": null,
+      "mutedForeground": null,
+      "primary": {
+        "hex": "#a5ed6e",
+        "weightShare": 0.9585,
+        "variants": [],
+        "source": "interactiveFg",
+        "occurrences": 198
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#a5ed6e",
+        "weightShare": 0.6,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#4b4b4b",
+          "contrast": 8.72,
+          "charShare": 0.0467
+        },
+        {
+          "name": "text-2",
+          "hex": "#777777",
+          "contrast": 4.48,
+          "charShare": 0.4795
+        }
+      ]
+    },
+    "sectionFill": {
+      "hex": "#58cc02",
+      "areaShare": 0.1091
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 6
+      },
+      {
+        "hex": "#58cc02",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.748,
+        "chroma": 0.229,
+        "count": 6
+      },
+      {
+        "hex": "#100f3e",
+        "role": null,
+        "hue": "purple",
+        "lightness": 0.208,
+        "chroma": 0.087,
+        "count": 3
+      },
+      {
+        "hex": "#777777",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.569,
+        "chroma": 0,
+        "count": 99
+      },
+      {
+        "hex": "#a5ed6e",
+        "role": "primary",
+        "hue": "green",
+        "lightness": 0.872,
+        "chroma": 0.175,
+        "count": 198
+      },
+      {
+        "hex": "#4b4b4b",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.413,
+        "chroma": 0,
+        "count": 15
+      },
+      {
+        "hex": "#1cb0f6",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.718,
+        "chroma": 0.151,
+        "count": 9
+      },
+      {
+        "hex": "#d7ffb8",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.955,
+        "chroma": 0.101,
+        "count": 21
+      },
+      {
+        "hex": "#042c60",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.302,
+        "chroma": 0.102,
+        "count": 3
+      },
+      {
+        "hex": "#000437",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.163,
+        "chroma": 0.098,
+        "count": 3
+      },
+      {
+        "hex": "#afafaf",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.754,
+        "chroma": 0,
+        "count": 1
+      },
+      {
+        "hex": "#e5e5e5",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.922,
+        "chroma": 0,
+        "count": 2
+      }
+    ],
+    "semantic": {
+      "success": {
+        "hex": "#58cc02",
+        "occurrences": 6,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 3,
+      "text": 10,
+      "border": 2,
+      "interactive": 0
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "duolingo-sans",
+      "class": "sans",
+      "stack": "duolingo-sans, sans-serif",
+      "sizePx": 17,
+      "weight": 500,
+      "lineHeightPx": 23.97,
+      "lineHeightRatio": 1.41,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "feather",
+      "class": "sans",
+      "stack": "feather, sans-serif",
+      "largestPx": 64,
+      "weight": 700,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "duolingo-sans",
+        "class": "sans",
+        "stack": "duolingo-sans, sans-serif"
+      },
+      {
+        "family": "feather",
+        "class": "sans",
+        "stack": "feather, sans-serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "2xs",
+        "px": 13,
+        "rem": 0.765,
+        "weightShare": 0.1001,
+        "variants": []
+      },
+      {
+        "name": "xs",
+        "px": 14,
+        "rem": 0.824,
+        "weightShare": 0.0116,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 15,
+        "rem": 0.882,
+        "weightShare": 0.3659,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 17,
+        "rem": 1,
+        "weightShare": 0.3977,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 19,
+        "rem": 1.118,
+        "weightShare": 0.0284,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 32,
+        "rem": 1.882,
+        "weightShare": 0.0255,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 36,
+        "rem": 2.118,
+        "weightShare": 0.0236,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 48,
+        "rem": 2.824,
+        "weightShare": 0.0387,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 64,
+        "rem": 3.765,
+        "weightShare": 0.0085,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 9,
+    "roles": {
+      "body": {
+        "fontFamily": "duolingo-sans",
+        "fontStack": "duolingo-sans, sans-serif",
+        "class": "sans",
+        "fontSize": "17px",
+        "fontWeight": 500,
+        "lineHeight": 1.41,
+        "letterSpacing": null,
+        "elements": 15,
+        "chars": 2334
+      },
+      "body-sm": {
+        "fontFamily": "duolingo-sans",
+        "fontStack": "duolingo-sans, sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 700,
+        "lineHeight": 1.33,
+        "letterSpacing": "0.8px",
+        "elements": 84,
+        "chars": 654
+      },
+      "caption": {
+        "fontFamily": "duolingo-sans",
+        "fontStack": "duolingo-sans, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 700,
+        "lineHeight": 1.21,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 72
+      },
+      "body-lg": {
+        "fontFamily": "duolingo-sans",
+        "fontStack": "duolingo-sans, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 700,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 177
+      },
+      "h1": {
+        "fontFamily": "duolingo-sans",
+        "fontStack": "duolingo-sans, sans-serif",
+        "class": "sans",
+        "fontSize": "32px",
+        "fontWeight": 700,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 159
+      },
+      "h2": {
+        "fontFamily": "feather",
+        "fontStack": "feather, sans-serif",
+        "class": "sans",
+        "fontSize": "48px",
+        "fontWeight": 700,
+        "lineHeight": null,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 146
+      },
+      "link": {
+        "fontFamily": "duolingo-sans",
+        "fontStack": "duolingo-sans, sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 700,
+        "lineHeight": 1.47,
+        "letterSpacing": null,
+        "elements": 108,
+        "chars": 1317
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 19
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.763,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.563
+      },
+      {
+        "base": 6,
+        "share": 0.387
+      },
+      {
+        "base": 5,
+        "share": 0.244
+      },
+      {
+        "base": 4,
+        "share": 0.763
+      }
+    ],
+    "scale": [
+      8,
+      10,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48,
+      96,
+      101
+    ],
+    "distinctValues": 21
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": [
+      {
+        "decision": "spacing.base",
+        "measured": 0.763,
+        "threshold": 0.75,
+        "margin": 0.0173,
+        "held": null
+      }
+    ]
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 12,
+        "count": 21
+      }
+    ],
+    "button": "12px",
+    "pill": false,
+    "pillValue": null,
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [],
+    "flat": true
+  },
+  "components": {
+    "link": {
+      "padding": "0px 16px",
+      "borderWidth": null,
+      "radius": "12px",
+      "gap": null,
+      "elements": 2,
+      "variants": 4,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "0px 16px",
+      "borderWidth": null,
+      "radius": "12px",
+      "gap": null,
+      "elements": 1,
+      "variants": 3,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 4,
+    "measure": {
+      "px": 990,
+      "occurrences": 9,
+      "share": 0.474
+    },
+    "rhythm": {
+      "px": 96,
+      "occurrences": 4,
+      "share": 0.667
+    },
+    "composition": {
+      "total": 4,
+      "bleedCount": 4,
+      "griddedCount": 2,
+      "mediaLedCount": 4,
+      "charsMedian": 229,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "image-led",
+      "sectionCopy": "moderate",
+      "gridPrevalence": 0.5
+    },
+    "columns": {
+      "count": 3,
+      "occurrences": 1
+    },
+    "hero": {
+      "heightRatio": null,
+      "heightRatioMeasured": 4,
+      "headingSize": 48,
+      "align": "left",
+      "media": 6,
+      "fullBleed": true,
+      "ctas": 2,
+      "ctasFilled": 0,
+      "ctaEvidence": "weak"
+    },
+    "nav": {
+      "height": null,
+      "position": "static",
+      "links": 44,
+      "overflowed": true
+    },
+    "motion": {
+      "duration": "0.2s",
+      "easing": "ease",
+      "occurrences": 1,
+      "share": 1
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 0,
+    "pattern": null,
+    "overlay": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "raster",
+        "count": 18
+      },
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 11,
+      "readable": 2,
+      "blocked": 9,
+      "stateRules": 23
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#777777",
+        "bg": "#ffffff",
+        "ratio": 4.48,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#a5ed6e",
+        "bg": "#ffffff",
+        "ratio": 1.41,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "accent is link text",
+        "aa": false,
+        "aaa": false
+      },
+      {
+        "pair": "border/background",
+        "fg": "#a5ed6e",
+        "bg": "#ffffff",
+        "ratio": 1.41,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 3,
+    "textFailures": 2,
+    "minRatio": 1.41
+  },
+  "warnings": [
+    "Hero call-to-action count (2) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "Navigation measured taller than a fifth of the viewport — likely a menu caught open; its height was withheld rather than published.",
+    "First section is 4 viewports tall — most likely a run of stacked panels rather than one hero, so its height was withheld.",
+    "Accent taken from interactiveFg, not a filled button — verify by eye.",
+    "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "link box metrics come from 2 elements out of 4 distinct shapes; thin evidence for a component token.",
+    "button box metrics come from 1 element out of 3 distinct shapes; thin evidence for a component token.",
+    "Found 23 state rules but none target elements on this page; the site's own CSS is likely among the 9 cross-origin sheets.",
+    "Strided sample: 4610 of 12583 elements. Weights are relative only."
+  ]
+}

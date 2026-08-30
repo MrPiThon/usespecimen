@@ -1,0 +1,841 @@
+{
+  "source": {
+    "url": "https://wise.com/",
+    "title": "Wise: The international account | Money without borders | Wise United States",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 10623,
+    "elementCount": 7715,
+    "sampled": 3657,
+    "sampleRatio": 0.474
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#0e0f0c",
+        "weightShare": 0.1809,
+        "variants": []
+      },
+      "card": {
+        "hex": "#ecefeb",
+        "weightShare": 0.1029,
+        "variants": [
+          "#f1f1ee"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#454745",
+        "weightShare": 0.4382,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#9fe870",
+        "weightShare": 0.6613,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 42
+      },
+      "primaryForeground": {
+        "hex": "#0e0f0c",
+        "weightShare": 0.017,
+        "variants": []
+      },
+      "border": {
+        "hex": "#e3e7e0",
+        "weightShare": 0.4706,
+        "variants": [
+          "#e2e2e2"
+        ]
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#ecefeb",
+          "deltaL": 0.052,
+          "areaShare": 0.1029
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#0e0f0c",
+          "contrast": 19.23,
+          "charShare": 0.1809
+        },
+        {
+          "name": "text-2",
+          "hex": "#454745",
+          "contrast": 9.37,
+          "charShare": 0.4382
+        }
+      ]
+    },
+    "sectionFill": {
+      "hex": "#9fe870",
+      "areaShare": 0.2125
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 60
+      },
+      {
+        "hex": "#9fe870",
+        "role": "primary",
+        "hue": "green",
+        "lightness": 0.857,
+        "chroma": 0.17,
+        "count": 60
+      },
+      {
+        "hex": "#ecefeb",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.948,
+        "chroma": 0.006,
+        "count": 48
+      },
+      {
+        "hex": "#163300",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.287,
+        "chroma": 0.084,
+        "count": 28
+      },
+      {
+        "hex": "#f1f1ee",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.958,
+        "chroma": 0.005,
+        "count": 15
+      },
+      {
+        "hex": "#e0f7f7",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.959,
+        "chroma": 0.024,
+        "count": 3
+      },
+      {
+        "hex": "#d0d6cc",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.869,
+        "chroma": 0.015,
+        "count": 30
+      },
+      {
+        "hex": "#454745",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.395,
+        "chroma": 0.004,
+        "count": 130
+      },
+      {
+        "hex": "#0e0f0c",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.166,
+        "chroma": 0.006,
+        "count": 144
+      },
+      {
+        "hex": "#e8ebe6",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.936,
+        "chroma": 0.007,
+        "count": 18
+      },
+      {
+        "hex": "#cf2929",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.556,
+        "chroma": 0.201,
+        "count": 6
+      },
+      {
+        "hex": "#e2e2e2",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.913,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#e3e7e0",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.922,
+        "chroma": 0.009,
+        "count": 48
+      },
+      {
+        "hex": "#054d28",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.37,
+        "chroma": 0.091,
+        "count": 3
+      },
+      {
+        "hex": "#868685",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.62,
+        "chroma": 0.001,
+        "count": 6
+      }
+    ],
+    "semantic": {
+      "success": {
+        "hex": "#163300",
+        "occurrences": 131,
+        "paintsBorder": true
+      },
+      "warning": {
+        "hex": "#3e3b07",
+        "occurrences": 15,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 7,
+      "text": 8,
+      "border": 4,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Inter",
+      "class": "sans",
+      "stack": "Inter, Helvetica, Arial, sans-serif",
+      "sizePx": 14,
+      "weight": 400,
+      "lineHeightPx": 21.98,
+      "lineHeightRatio": 1.57,
+      "lineHeightInferred": false,
+      "letterSpacing": "0.14px"
+    },
+    "heading": {
+      "family": "Inter",
+      "class": "sans",
+      "stack": "Inter, Helvetica, Arial, sans-serif",
+      "largestPx": 89.1428,
+      "weight": 600,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "Inter",
+        "class": "sans",
+        "stack": "Inter, Helvetica, Arial, sans-serif"
+      },
+      {
+        "family": "Wise Sans",
+        "class": "sans",
+        "stack": "\"Wise Sans\", Inter, sans-serif"
+      },
+      {
+        "family": "Inter",
+        "class": "sans",
+        "stack": "Inter, sans-serif, helvetica, arial"
+      },
+      {
+        "family": "Inter",
+        "class": "mono",
+        "stack": "Inter, sans-serif, helvetica, arial, monospace"
+      }
+    ],
+    "scale": [
+      {
+        "name": "base",
+        "px": 14,
+        "rem": 1,
+        "weightShare": 0.3677,
+        "variants": [
+          13.5
+        ]
+      },
+      {
+        "name": "lg",
+        "px": 15.2727,
+        "rem": 1.091,
+        "weightShare": 0.0478,
+        "variants": [
+          15
+        ]
+      },
+      {
+        "name": "xl",
+        "px": 16,
+        "rem": 1.143,
+        "weightShare": 0.2804,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 17.2727,
+        "rem": 1.234,
+        "weightShare": 0.0662,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 18,
+        "rem": 1.286,
+        "weightShare": 0.1182,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 20,
+        "rem": 1.429,
+        "weightShare": 0.0746,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 40,
+        "rem": 2.857,
+        "weightShare": 0.0084,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 40.9092,
+        "rem": 2.922,
+        "weightShare": 0.0036,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 44.9092,
+        "rem": 3.208,
+        "weightShare": 0.0034,
+        "variants": []
+      },
+      {
+        "name": "up-9",
+        "px": 46,
+        "rem": 3.286,
+        "weightShare": 0.0048,
+        "variants": [
+          45.4572
+        ]
+      },
+      {
+        "name": "up-10",
+        "px": 58.5143,
+        "rem": 4.18,
+        "weightShare": 0.0036,
+        "variants": []
+      },
+      {
+        "name": "up-11",
+        "px": 300,
+        "rem": 21.429,
+        "weightShare": 0.0036,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 25,
+    "roles": {
+      "body": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.57,
+        "letterSpacing": "0.14px",
+        "elements": 30,
+        "chars": 5980
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 600,
+        "lineHeight": null,
+        "letterSpacing": "0.08px",
+        "elements": 3,
+        "chars": 3
+      },
+      "caption": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "10.5px",
+        "fontWeight": 400,
+        "lineHeight": null,
+        "letterSpacing": "-0.084px",
+        "elements": 3,
+        "chars": 3
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "0.08px",
+        "elements": 28,
+        "chars": 3670
+      },
+      "lead": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "17.27px",
+        "fontWeight": 400,
+        "lineHeight": 1.51,
+        "letterSpacing": "0.0863633px",
+        "elements": 10,
+        "chars": 639
+      },
+      "lead-lg": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.44,
+        "letterSpacing": "0.09px",
+        "elements": 10,
+        "chars": 639
+      },
+      "h1": {
+        "fontFamily": "Wise Sans",
+        "fontStack": "\"Wise Sans\", Inter, sans-serif",
+        "class": "sans",
+        "fontSize": "44.91px",
+        "fontWeight": 900,
+        "lineHeight": 0.85,
+        "letterSpacing": null,
+        "elements": 1,
+        "chars": 33
+      },
+      "h2": {
+        "fontFamily": "Wise Sans",
+        "fontStack": "\"Wise Sans\", Inter, sans-serif",
+        "class": "sans",
+        "fontSize": "40.91px",
+        "fontWeight": 900,
+        "lineHeight": 0.85,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 64
+      },
+      "h3": {
+        "fontFamily": "Wise Sans",
+        "fontStack": "\"Wise Sans\", Inter, sans-serif",
+        "class": "sans",
+        "fontSize": "40px",
+        "fontWeight": 400,
+        "lineHeight": 0.85,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 93
+      },
+      "h4": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "17.27px",
+        "fontWeight": 600,
+        "lineHeight": 1.51,
+        "letterSpacing": "0.0863633px",
+        "elements": 6,
+        "chars": 601
+      },
+      "button": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.176px",
+        "elements": 3,
+        "chars": 75
+      },
+      "link": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, Helvetica, Arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.176px",
+        "elements": 51,
+        "chars": 745
+      },
+      "mono": {
+        "fontFamily": "Inter",
+        "fontStack": "Inter, sans-serif, helvetica, arial, monospace",
+        "class": "mono",
+        "fontSize": "300px",
+        "fontWeight": 400,
+        "lineHeight": 0.09,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 42
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 79
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.589,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.333
+      },
+      {
+        "base": 6,
+        "share": 0.138
+      },
+      {
+        "base": 5,
+        "share": 0.055
+      },
+      {
+        "base": 4,
+        "share": 0.589
+      }
+    ],
+    "scale": [
+      3,
+      4,
+      8,
+      9,
+      10,
+      12,
+      16,
+      24,
+      34,
+      38
+    ],
+    "distinctValues": 36
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 2,
+        "count": 215
+      },
+      {
+        "name": "md",
+        "px": 10,
+        "count": 15
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "count": 19
+      },
+      {
+        "name": "xl",
+        "px": 17.0462,
+        "count": 29
+      },
+      {
+        "name": "2xl",
+        "px": 18.7693,
+        "count": 29
+      }
+    ],
+    "button": "9999px",
+    "pill": true,
+    "pillValue": "9999px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+        "count": 36
+      },
+      {
+        "value": "rgb(134, 134, 133) 0px 0px 0px 1px inset",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.08) 0px 6px 20px 0px",
+        "count": 3
+      },
+      {
+        "value": "rgba(14, 15, 12, 0.12) 0px 0px 0px 1px",
+        "count": 3
+      },
+      {
+        "value": "rgba(22, 51, 0, 0.12) 0px 0px 0px 1px",
+        "count": 2
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "9.38462px",
+      "borderWidth": null,
+      "radius": "2px",
+      "gap": null,
+      "elements": 36,
+      "variants": 8,
+      "dominantUnstyled": false
+    },
+    "button": {
+      "padding": "8px 16px",
+      "borderWidth": null,
+      "radius": "9999px",
+      "gap": null,
+      "elements": 2,
+      "variants": 11,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 10,
+    "measure": {
+      "px": 1240,
+      "occurrences": 65,
+      "share": 0.5
+    },
+    "rhythm": {
+      "px": 56,
+      "occurrences": 11,
+      "share": 1
+    },
+    "composition": {
+      "total": 10,
+      "bleedCount": 10,
+      "griddedCount": 6,
+      "mediaLedCount": 2,
+      "charsMedian": 603,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.6
+    },
+    "columns": {
+      "count": 3,
+      "occurrences": 5
+    },
+    "hero": {
+      "heightRatio": 1.56,
+      "heightRatioMeasured": 1.56,
+      "headingSize": 89,
+      "align": "center",
+      "media": 0,
+      "fullBleed": true,
+      "ctas": 7,
+      "ctasFilled": 6,
+      "ctaEvidence": "weak"
+    },
+    "nav": {
+      "height": 76,
+      "position": "relative",
+      "links": 38,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.35s",
+      "easing": "cubic-bezier(0.8, 0.05, 0.2, 0.95)",
+      "occurrences": 35,
+      "share": 0.833
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 2,
+    "pattern": null,
+    "overlay": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "other",
+        "count": 2
+      },
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 29,
+      "readable": 29,
+      "blocked": 0,
+      "stateRules": 539
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "backgroundColor": "rgba(22,51,0,0.12941)",
+          "matchedElements": 4,
+          "rulesConsidered": 3
+        },
+        "hover": {
+          "backgroundColor": "rgba(22,51,0,0.07843)",
+          "matchedElements": 4,
+          "rulesConsidered": 4
+        }
+      },
+      "link": {
+        "focus-visible": {
+          "color": "#0084b3",
+          "backgroundColor": "transparent",
+          "borderColor": "transparent",
+          "matchedElements": 7,
+          "rulesConsidered": 2
+        }
+      },
+      "text": {
+        "active": {
+          "color": "#ffffff",
+          "backgroundColor": "#65cf21",
+          "borderColor": "#65cf21",
+          "matchedElements": 3,
+          "rulesConsidered": 6
+        },
+        "focus": {
+          "borderColor": "#65cf21",
+          "matchedElements": 2,
+          "rulesConsidered": 5
+        },
+        "focus-visible": {
+          "boxShadow": "inset 0 0 0 3px #163300",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#0d1f00",
+          "backgroundColor": "rgba(22,51,0,0.07843)",
+          "borderColor": "#6c6c6b",
+          "matchedElements": 3,
+          "rulesConsidered": 6
+        }
+      }
+    },
+    "declarations": 50
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#0e0f0c",
+        "bg": "#ffffff",
+        "ratio": 19.23,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#454745",
+        "bg": "#ffffff",
+        "ratio": 9.37,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#0e0f0c",
+        "bg": "#9fe870",
+        "ratio": 13.05,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#9fe870",
+        "bg": "#ffffff",
+        "ratio": 1.47,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": false,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#e3e7e0",
+        "bg": "#ffffff",
+        "ratio": 1.25,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 2,
+    "textFailures": 0,
+    "minRatio": 1.25
+  },
+  "warnings": [
+    "Hero call-to-action count (7) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "No spacing grid explains 75% of values (best 0.589); site may not be on a grid.",
+    "25 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "button box metrics come from 2 elements out of 11 distinct shapes; thin evidence for a component token.",
+    "Strided sample: 3657 of 7715 elements. Weights are relative only."
+  ]
+}

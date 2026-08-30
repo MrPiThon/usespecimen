@@ -1,0 +1,785 @@
+{
+  "source": {
+    "url": "https://mailchimp.com/",
+    "title": "Email & SMS Marketing Platform | Mailchimp",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 5956,
+    "elementCount": 8401,
+    "sampled": 2371,
+    "sampleRatio": 0.282
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#000000",
+        "weightShare": 0.3549,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f5f5f5",
+        "weightShare": 0.1531,
+        "variants": [
+          "#f0f4f6"
+        ]
+      },
+      "mutedForeground": null,
+      "primary": {
+        "hex": "#ffe01b",
+        "weightShare": 0.798,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 21
+      },
+      "primaryForeground": {
+        "hex": "#231e15",
+        "weightShare": 0.6579,
+        "variants": []
+      },
+      "border": {
+        "hex": "#403b3b",
+        "weightShare": 0.3529,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f5f5f5",
+          "deltaL": 0.03,
+          "areaShare": 0.1531
+        },
+        {
+          "name": "surface-2",
+          "hex": "#bfbfbf",
+          "deltaL": 0.195,
+          "areaShare": 0.0412
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#000000",
+          "contrast": 21,
+          "charShare": 0.3549
+        },
+        {
+          "name": "text-2",
+          "hex": "#231e15",
+          "contrast": 16.56,
+          "charShare": 0.3711
+        },
+        {
+          "name": "text-3",
+          "hex": "#004e56",
+          "contrast": 9.44,
+          "charShare": 0.0273
+        }
+      ]
+    },
+    "sectionFill": {
+      "hex": "#e7b75f",
+      "areaShare": 0.0811
+    },
+    "palette": [
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 25
+      },
+      {
+        "hex": "#f5f5f5",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.97,
+        "chroma": 0,
+        "count": 114
+      },
+      {
+        "hex": "#231e15",
+        "role": "primaryForeground",
+        "hue": "neutral",
+        "lightness": 0.238,
+        "chroma": 0.018,
+        "count": 28
+      },
+      {
+        "hex": "#e7b75f",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.805,
+        "chroma": 0.12,
+        "count": 3
+      },
+      {
+        "hex": "#ffe01b",
+        "role": "primary",
+        "hue": "yellow",
+        "lightness": 0.905,
+        "chroma": 0.184,
+        "count": 55
+      },
+      {
+        "hex": "#808080",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.598,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#bfbfbf",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.805,
+        "chroma": 0,
+        "count": 15
+      },
+      {
+        "hex": "#000000",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 271
+      },
+      {
+        "hex": "#004e56",
+        "role": null,
+        "hue": "teal",
+        "lightness": 0.387,
+        "chroma": 0.066,
+        "count": 27
+      },
+      {
+        "hex": "#403b3b",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.357,
+        "chroma": 0.007,
+        "count": 15
+      },
+      {
+        "hex": "#bcbab6",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.789,
+        "chroma": 0.006,
+        "count": 4
+      },
+      {
+        "hex": "#706d67",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.535,
+        "chroma": 0.01,
+        "count": 12
+      },
+      {
+        "hex": "#dedede",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.901,
+        "chroma": 0,
+        "count": 1
+      }
+    ],
+    "semantic": {
+      "warning": {
+        "hex": "#e7b75f",
+        "occurrences": 3,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 8,
+      "text": 7,
+      "border": 5,
+      "interactive": 2
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Graphik Web",
+      "class": "sans",
+      "stack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+      "sizePx": 14,
+      "weight": 400,
+      "lineHeightPx": 20.16,
+      "lineHeightRatio": 1.44,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "Means Web",
+      "class": "serif",
+      "stack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif",
+      "largestPx": 64,
+      "weight": 400,
+      "sharesBodyFamily": false
+    },
+    "families": [
+      {
+        "family": "Graphik Web",
+        "class": "sans",
+        "stack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif"
+      },
+      {
+        "family": "Means Web",
+        "class": "serif",
+        "stack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif"
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 11,
+        "rem": 0.846,
+        "weightShare": 0.1458,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.923,
+        "weightShare": 0.1228,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 13,
+        "rem": 1,
+        "weightShare": 0.2421,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 14,
+        "rem": 1.077,
+        "weightShare": 0.2235,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 15,
+        "rem": 1.154,
+        "weightShare": 0.0065,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 16,
+        "rem": 1.231,
+        "weightShare": 0.1613,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 17,
+        "rem": 1.308,
+        "weightShare": 0.0072,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 20,
+        "rem": 1.538,
+        "weightShare": 0.0138,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 28,
+        "rem": 2.154,
+        "weightShare": 0.04,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 29.25,
+        "rem": 2.25,
+        "weightShare": 0.0066,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 38.4,
+        "rem": 2.954,
+        "weightShare": 0.0066,
+        "variants": []
+      },
+      {
+        "name": "up-9",
+        "px": 40,
+        "rem": 3.077,
+        "weightShare": 0.0101,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 19,
+    "roles": {
+      "body": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.44,
+        "letterSpacing": null,
+        "elements": 102,
+        "chars": 4866
+      },
+      "body-sm": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.54,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 2125
+      },
+      "caption": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": null,
+        "elements": 34,
+        "chars": 2598
+      },
+      "caption-sm": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "11px",
+        "fontWeight": 400,
+        "lineHeight": 1.45,
+        "letterSpacing": null,
+        "elements": 18,
+        "chars": 2745
+      },
+      "body-lg": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 500,
+        "lineHeight": 2,
+        "letterSpacing": null,
+        "elements": 102,
+        "chars": 882
+      },
+      "lead": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": null,
+        "elements": 4,
+        "chars": 320
+      },
+      "h1": {
+        "fontFamily": "Means Web",
+        "fontStack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif",
+        "class": "serif",
+        "fontSize": "36px",
+        "fontWeight": 400,
+        "lineHeight": 1.3,
+        "letterSpacing": null,
+        "elements": 1,
+        "chars": 21
+      },
+      "h2": {
+        "fontFamily": "Means Web",
+        "fontStack": "\"Means Web\", Georgia, Times, \"Times New Roman\", serif",
+        "class": "serif",
+        "fontSize": "28px",
+        "fontWeight": 400,
+        "lineHeight": 1.13,
+        "letterSpacing": null,
+        "elements": 13,
+        "chars": 785
+      },
+      "h3": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "17px",
+        "fontWeight": 400,
+        "lineHeight": 1.41,
+        "letterSpacing": null,
+        "elements": 8,
+        "chars": 168
+      },
+      "button": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 500,
+        "lineHeight": 1.2,
+        "letterSpacing": "0.13px",
+        "elements": 9,
+        "chars": 87
+      },
+      "link": {
+        "fontFamily": "Graphik Web",
+        "fontStack": "\"Graphik Web\", \"Helvetica Neue\", Helvetica, Arial, Verdana, sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.35,
+        "letterSpacing": null,
+        "elements": 77,
+        "chars": 1029
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 67
+  },
+  "spacing": {
+    "base": 4,
+    "gridConfidence": 0.869,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.737
+      },
+      {
+        "base": 6,
+        "share": 0.241
+      },
+      {
+        "base": 5,
+        "share": 0.141
+      },
+      {
+        "base": 4,
+        "share": 0.869
+      }
+    ],
+    "scale": [
+      2,
+      5,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32,
+      48
+    ],
+    "distinctValues": 37
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 3,
+        "count": 26
+      },
+      {
+        "name": "md",
+        "px": 4,
+        "count": 104
+      },
+      {
+        "name": "lg",
+        "px": 16,
+        "count": 102
+      },
+      {
+        "name": "xl",
+        "px": 24,
+        "count": 24
+      },
+      {
+        "name": "2xl",
+        "px": 26,
+        "count": 45
+      }
+    ],
+    "button": "16px",
+    "pill": true,
+    "pillValue": "50%",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.086) 0px 15.547px 44px 0px",
+        "count": 102
+      },
+      {
+        "value": "rgb(35, 30, 21) 0px 0px 0px 1px",
+        "count": 19
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.06) 0px 4px 16px 0px",
+        "count": 4
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px",
+        "count": 3
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "16px",
+      "borderWidth": null,
+      "radius": "16px",
+      "gap": "16px",
+      "elements": 34,
+      "variants": 9,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "8px",
+      "borderWidth": null,
+      "radius": "3px",
+      "gap": null,
+      "elements": 3,
+      "variants": 4,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 9,
+    "measure": {
+      "px": 1280,
+      "occurrences": 20,
+      "share": 0.328
+    },
+    "rhythm": {
+      "px": 80,
+      "occurrences": 8,
+      "share": 0.571
+    },
+    "composition": {
+      "total": 9,
+      "bleedCount": 8,
+      "griddedCount": 1,
+      "mediaLedCount": 2,
+      "charsMedian": 1259,
+      "sectionWidth": "full-bleed",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.11
+    },
+    "columns": null,
+    "hero": {
+      "heightRatio": 0.8,
+      "heightRatioMeasured": 0.8,
+      "headingSize": 64,
+      "align": "center",
+      "media": 2,
+      "fullBleed": true,
+      "ctas": 1,
+      "ctasFilled": 1,
+      "ctaEvidence": "strong"
+    },
+    "nav": {
+      "height": 68,
+      "position": "sticky",
+      "links": 185,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.15s",
+      "easing": "ease",
+      "occurrences": 188,
+      "share": 0.723
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 0,
+    "pattern": null,
+    "overlay": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": {
+        "value": "linear-gradient",
+        "count": 4
+      },
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 14,
+      "readable": 13,
+      "blocked": 1,
+      "stateRules": 467
+    },
+    "roles": {
+      "button": {
+        "focus": {
+          "outlineColor": "#000000",
+          "matchedElements": 25,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "color": "#ffffff",
+          "borderColor": "#68b631",
+          "matchedElements": 17,
+          "rulesConsidered": 9
+        }
+      },
+      "h3": {
+        "focus-visible": {
+          "outlineColor": "#4bc4c2",
+          "matchedElements": 10,
+          "rulesConsidered": 1
+        }
+      },
+      "link": {
+        "focus": {
+          "backgroundColor": "rgba(35, 30, 21, 0.05)",
+          "matchedElements": 133,
+          "rulesConsidered": 9
+        },
+        "focus-visible": {
+          "outlineColor": "#4bc4c2",
+          "matchedElements": 165,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "color": "#002023",
+          "matchedElements": 348,
+          "rulesConsidered": 15
+        }
+      },
+      "text": {
+        "active": {
+          "color": "#000000",
+          "backgroundColor": "#ffffff",
+          "matchedElements": 78,
+          "rulesConsidered": 2
+        },
+        "focus": {
+          "borderColor": "#4bc4c2",
+          "boxShadow": "rgba(0, 124, 137, 0.2) 0px 0px 0px 0.125rem",
+          "matchedElements": 10,
+          "rulesConsidered": 11
+        },
+        "focus-visible": {
+          "outlineColor": "rgba(35, 30, 21, 0.5)",
+          "matchedElements": 20,
+          "rulesConsidered": 2
+        },
+        "hover": {
+          "color": "#403b3b",
+          "matchedElements": 10,
+          "rulesConsidered": 11
+        }
+      }
+    },
+    "declarations": 73
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#000000",
+        "bg": "#ffffff",
+        "ratio": 21,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#231e15",
+        "bg": "#ffe01b",
+        "ratio": 12.56,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#ffe01b",
+        "bg": "#ffffff",
+        "ratio": 1.32,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": false,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#403b3b",
+        "bg": "#ffffff",
+        "ratio": 11.01,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": true,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.32
+  },
+  "warnings": [
+    "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "19 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Strided sample: 2371 of 8401 elements. Weights are relative only."
+  ]
+}

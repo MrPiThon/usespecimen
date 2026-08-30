@@ -17,7 +17,8 @@
     "author": "node src/cli.mjs author",
     "check": "node src/check-prose.mjs",
     "base": "node src/cli.mjs base",
-    "votes": "node src/vote-sync.mjs"
+    "votes": "node src/vote-sync.mjs",
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

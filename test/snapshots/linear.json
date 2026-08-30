@@ -1,0 +1,897 @@
+{
+  "source": {
+    "url": "https://linear.app/",
+    "title": "Linear – The system for product development",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 9960,
+    "elementCount": 15350,
+    "sampled": 6850,
+    "sampleRatio": 0.446
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "dark",
+    "roles": {
+      "background": {
+        "hex": "#08090a",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#d0d6e0",
+        "weightShare": 0.3592,
+        "variants": []
+      },
+      "card": {
+        "hex": "#0f1011",
+        "weightShare": 0.1285,
+        "variants": [
+          "#0d0e0f",
+          "#101112",
+          "#121314"
+        ]
+      },
+      "mutedForeground": {
+        "hex": "#8a8f98",
+        "weightShare": 0.3558,
+        "variants": []
+      },
+      "primary": {
+        "hex": "#5e6ad2",
+        "weightShare": null,
+        "variants": [],
+        "source": "focusRing",
+        "occurrences": 3,
+        "via": "resting"
+      },
+      "primaryForeground": null,
+      "border": {
+        "hex": "#1c1d1e",
+        "weightShare": 0.6402,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#0f1011",
+          "deltaL": 0.033,
+          "areaShare": 0.1285
+        },
+        {
+          "name": "surface-2",
+          "hex": "#161718",
+          "deltaL": 0.065,
+          "areaShare": 0.0036
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#f7f8f8",
+          "contrast": 18.73,
+          "charShare": 0.0913
+        },
+        {
+          "name": "text-2",
+          "hex": "#d0d6e0",
+          "contrast": 13.64,
+          "charShare": 0.3592
+        },
+        {
+          "name": "text-3",
+          "hex": "#8a8f98",
+          "contrast": 6.13,
+          "charShare": 0.3558
+        },
+        {
+          "name": "text-4",
+          "hex": "#62666d",
+          "contrast": 3.45,
+          "charShare": 0.0986
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#08090a",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 0.139,
+        "chroma": 0.003,
+        "count": 24
+      },
+      {
+        "hex": "#0f1011",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.172,
+        "chroma": 0.003,
+        "count": 108
+      },
+      {
+        "hex": "#e4f222",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.92,
+        "chroma": 0.201,
+        "count": 3
+      },
+      {
+        "hex": "#161718",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.204,
+        "chroma": 0.003,
+        "count": 19
+      },
+      {
+        "hex": "#1c85e8",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.613,
+        "chroma": 0.174,
+        "count": 2
+      },
+      {
+        "hex": "#0a140e",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.179,
+        "chroma": 0.019,
+        "count": 7
+      },
+      {
+        "hex": "#201011",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.195,
+        "chroma": 0.026,
+        "count": 7
+      },
+      {
+        "hex": "#e5e5e6",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.922,
+        "chroma": 0.001,
+        "count": 6
+      },
+      {
+        "hex": "#07220a",
+        "role": null,
+        "hue": "green",
+        "lightness": 0.223,
+        "chroma": 0.055,
+        "count": 19
+      },
+      {
+        "hex": "#1c1d1e",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.229,
+        "chroma": 0.002,
+        "count": 77
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 14
+      },
+      {
+        "hex": "#d0d6e0",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.874,
+        "chroma": 0.015,
+        "count": 269
+      },
+      {
+        "hex": "#8a8f98",
+        "role": "mutedForeground",
+        "hue": "neutral",
+        "lightness": 0.649,
+        "chroma": 0.015,
+        "count": 434
+      },
+      {
+        "hex": "#260809",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.187,
+        "chroma": 0.051,
+        "count": 6
+      },
+      {
+        "hex": "#2e2e32",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.303,
+        "chroma": 0.007,
+        "count": 14
+      },
+      {
+        "hex": "#171a28",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.221,
+        "chroma": 0.029,
+        "count": 3
+      },
+      {
+        "hex": "#f7f8f8",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.978,
+        "chroma": 0.001,
+        "count": 61
+      },
+      {
+        "hex": "#121414",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.189,
+        "chroma": 0.003,
+        "count": 3
+      },
+      {
+        "hex": "#4ea7fc",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.712,
+        "chroma": 0.151,
+        "count": 8
+      },
+      {
+        "hex": "#eb5757",
+        "role": null,
+        "hue": "red",
+        "lightness": 0.653,
+        "chroma": 0.183,
+        "count": 6
+      },
+      {
+        "hex": "#f7bf8b",
+        "role": null,
+        "hue": "orange",
+        "lightness": 0.843,
+        "chroma": 0.093,
+        "count": 22
+      },
+      {
+        "hex": "#f79ce0",
+        "role": null,
+        "hue": "pink",
+        "lightness": 0.805,
+        "chroma": 0.137,
+        "count": 45
+      },
+      {
+        "hex": "#8fa6ff",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.744,
+        "chroma": 0.131,
+        "count": 16
+      },
+      {
+        "hex": "#ffdf9f",
+        "role": null,
+        "hue": "yellow",
+        "lightness": 0.916,
+        "chroma": 0.088,
+        "count": 10
+      }
+    ],
+    "semantic": {
+      "success": {
+        "hex": "#27a644",
+        "occurrences": 16,
+        "paintsBorder": true
+      },
+      "danger": {
+        "hex": "#f34e52",
+        "occurrences": 14,
+        "paintsBorder": true
+      },
+      "warning": {
+        "hex": "#e4f222",
+        "occurrences": 3,
+        "paintsBorder": false
+      }
+    },
+    "accentRejected": [
+      {
+        "hex": "#e4f222",
+        "occurrences": 1
+      }
+    ],
+    "clusterCounts": {
+      "bg": 22,
+      "text": 12,
+      "border": 8,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "Inter Variable",
+      "class": "sans",
+      "stack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "sizePx": 15,
+      "weight": 400,
+      "lineHeightPx": 24,
+      "lineHeightRatio": 1.6,
+      "lineHeightInferred": false,
+      "letterSpacing": "-0.165px"
+    },
+    "heading": {
+      "family": "Inter Variable",
+      "class": "sans",
+      "stack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "largestPx": 72,
+      "weight": 510,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "Inter Variable",
+        "class": "sans",
+        "stack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif"
+      },
+      {
+        "family": "Berkeley Mono",
+        "class": "mono",
+        "stack": "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace"
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 10,
+        "rem": 0.769,
+        "weightShare": 0.0177,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 12,
+        "rem": 0.923,
+        "weightShare": 0.2157,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 13,
+        "rem": 1,
+        "weightShare": 0.2657,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 14,
+        "rem": 1.077,
+        "weightShare": 0.1048,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 15,
+        "rem": 1.154,
+        "weightShare": 0.2347,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 16,
+        "rem": 1.231,
+        "weightShare": 0.0058,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 20,
+        "rem": 1.538,
+        "weightShare": 0.0305,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 24,
+        "rem": 1.846,
+        "weightShare": 0.0653,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 32,
+        "rem": 2.462,
+        "weightShare": 0.0162,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 38,
+        "rem": 2.923,
+        "weightShare": 0.007,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 40,
+        "rem": 3.077,
+        "weightShare": 0.0066,
+        "variants": []
+      },
+      {
+        "name": "up-9",
+        "px": 48,
+        "rem": 3.692,
+        "weightShare": 0.0125,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": true,
+    "distinctSizes": 17,
+    "roles": {
+      "body": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "15px",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": "-0.165px",
+        "elements": 107,
+        "chars": 3536
+      },
+      "body-sm": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.182px",
+        "elements": 11,
+        "chars": 440
+      },
+      "caption": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.54,
+        "letterSpacing": "-0.039px",
+        "elements": 18,
+        "chars": 1350
+      },
+      "caption-sm": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "12px",
+        "fontWeight": 510,
+        "lineHeight": 1.4,
+        "letterSpacing": null,
+        "elements": 38,
+        "chars": 1077
+      },
+      "body-lg": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": "-0.165px",
+        "elements": 40,
+        "chars": 40
+      },
+      "lead": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": "-0.24px",
+        "elements": 4,
+        "chars": 547
+      },
+      "lead-lg": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "24px",
+        "fontWeight": 400,
+        "lineHeight": 1.33,
+        "letterSpacing": "-0.288px",
+        "elements": 10,
+        "chars": 1045
+      },
+      "h2": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "48px",
+        "fontWeight": 510,
+        "lineHeight": 1,
+        "letterSpacing": "-1.056px",
+        "elements": 6,
+        "chars": 216
+      },
+      "h3": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 510,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.13px",
+        "elements": 17,
+        "chars": 124
+      },
+      "h4": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 590,
+        "lineHeight": 1.75,
+        "letterSpacing": null,
+        "elements": 3,
+        "chars": 24
+      },
+      "button": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 510,
+        "lineHeight": 2.75,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 72
+      },
+      "link": {
+        "fontFamily": "Inter Variable",
+        "fontStack": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "class": "sans",
+        "fontSize": "13px",
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": "-0.13px",
+        "elements": 108,
+        "chars": 780
+      },
+      "mono": {
+        "fontFamily": "Berkeley Mono",
+        "fontStack": "\"Berkeley Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "class": "mono",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": 1.71,
+        "letterSpacing": null,
+        "elements": 204,
+        "chars": 1385
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 67
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.641,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.371
+      },
+      {
+        "base": 6,
+        "share": 0.278
+      },
+      {
+        "base": 5,
+        "share": 0.078
+      },
+      {
+        "base": 4,
+        "share": 0.641
+      }
+    ],
+    "scale": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      10,
+      12,
+      16,
+      24,
+      32
+    ],
+    "distinctValues": 53
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": []
+  },
+  "rounded": {
+    "scale": [
+      {
+        "name": "sm",
+        "px": 4,
+        "count": 46
+      },
+      {
+        "name": "md",
+        "px": 6,
+        "count": 34
+      },
+      {
+        "name": "lg",
+        "px": 8,
+        "count": 82
+      },
+      {
+        "name": "xl",
+        "px": 9,
+        "count": 38
+      },
+      {
+        "name": "2xl",
+        "px": 12,
+        "count": 57
+      }
+    ],
+    "button": "8px",
+    "pill": true,
+    "pillValue": "9999px",
+    "sharp": false
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px",
+        "count": 18
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset",
+        "count": 14
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset",
+        "count": 12
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px",
+        "count": 10
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset",
+        "count": 10
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "0px 12px",
+      "borderWidth": null,
+      "radius": "9999px",
+      "gap": null,
+      "elements": 5,
+      "variants": 6,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "0px 7px",
+      "borderWidth": null,
+      "radius": "8px",
+      "gap": "8px",
+      "elements": 11,
+      "variants": 16,
+      "dominantUnstyled": true
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 10,
+    "measure": {
+      "px": 1340,
+      "occurrences": 47,
+      "share": 0.388
+    },
+    "rhythm": {
+      "px": 128,
+      "occurrences": 8,
+      "share": 0.667
+    },
+    "composition": {
+      "total": 10,
+      "bleedCount": 0,
+      "griddedCount": 7,
+      "mediaLedCount": 3,
+      "charsMedian": 892,
+      "sectionWidth": "contained",
+      "sectionMedia": "text-led",
+      "sectionCopy": "dense",
+      "gridPrevalence": 0.7
+    },
+    "columns": {
+      "count": 2,
+      "occurrences": 14
+    },
+    "hero": {
+      "heightRatio": 1.14,
+      "heightRatioMeasured": 1.14,
+      "headingSize": 64,
+      "align": "left",
+      "media": 1,
+      "fullBleed": false,
+      "ctas": 1,
+      "ctasFilled": 1,
+      "ctaEvidence": "weak"
+    },
+    "nav": {
+      "height": 73,
+      "position": "fixed",
+      "links": 9,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": "0.1s",
+      "easing": "ease",
+      "occurrences": 42,
+      "share": 0.575
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": true,
+    "layerCount": 15,
+    "pattern": {
+      "kind": "noise",
+      "size": "256px 256px",
+      "angle": null,
+      "value": null,
+      "external": true,
+      "stops": [],
+      "areaShare": 0.412
+    },
+    "overlay": null,
+    "wash": {
+      "kind": "radial-gradient",
+      "value": "radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 50%)",
+      "stops": [
+        {
+          "raw": "rgba(255, 255, 255, 0.04)",
+          "hex": "#ffffff",
+          "alpha": 0.04,
+          "chroma": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.124
+    },
+    "effects": {
+      "backdropFilter": {
+        "value": "blur(20px)",
+        "count": 1
+      },
+      "mixBlendMode": {
+        "value": "overlay",
+        "count": 7
+      },
+      "maskImage": {
+        "value": "radial-gradient",
+        "count": 9
+      },
+      "filter": {
+        "value": "blur(0px)",
+        "count": 20
+      }
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 84,
+      "readable": 30,
+      "blocked": 54,
+      "stateRules": 71
+    },
+    "roles": {},
+    "declarations": 0
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#d0d6e0",
+        "bg": "#08090a",
+        "ratio": 13.64,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "mutedForeground/background",
+        "fg": "#8a8f98",
+        "bg": "#08090a",
+        "ratio": 6.13,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#5e6ad2",
+        "bg": "#08090a",
+        "ratio": 4.24,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a focus indicator, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#1c1d1e",
+        "bg": "#08090a",
+        "ratio": 1.18,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.18
+  },
+  "warnings": [
+    "Hero call-to-action count (1) was found several levels above the headline, so it may include controls that are not part of the hero.",
+    "Background texture is an external raster tiling at 256px 256px. Its URL is deliberately not published — reproduce the effect rather than hotlinking the source site's asset.",
+    "Accent #5e6ad2 taken from a focus ring (resting), the only chromatic evidence on the page. The site never fills a button with it, so no foreground pairing could be observed.",
+    "Ignored #e4f222 as the accent: a chromatic interactive fill on only 1 element, which reads as a promo panel rather than a brand colour.",
+    "No spacing grid explains 75% of values (best 0.641); site may not be on a grid.",
+    "17 distinct type sizes collapsed to 12; the site may not have a real type scale.",
+    "Found 71 state rules but none target elements on this page; the site's own CSS is likely among the 54 cross-origin sheets.",
+    "Strided sample: 6850 of 15350 elements. Weights are relative only."
+  ]
+}

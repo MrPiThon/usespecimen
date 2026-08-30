@@ -104,7 +104,7 @@ rounded:
   lg: '8px'
   xl: '16px'
   2xl: '24px'
-  button: '2px'
+  button: '9999px'
   pill: '9999px'
 spacing:
   s1: '2px'
@@ -159,7 +159,7 @@ provenance:
   capturedAt: '2026-08-29T04:55:24.465Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 20
   screenshot: './source.webp'
 ---
 

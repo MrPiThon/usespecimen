@@ -15,7 +15,7 @@
     "sampleRatio": 0.71
   },
   "harvestVersion": 8,
-  "clusterVersion": 17,
+  "clusterVersion": 20,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -80,6 +80,7 @@
         }
       ]
     },
+    "sectionFill": null,
     "palette": [
       {
         "hex": "#ffffff",
@@ -437,6 +438,7 @@
     "decorated": true,
     "layerCount": 2,
     "pattern": null,
+    "overlay": null,
     "wash": {
       "kind": "linear-gradient",
       "value": "linear-gradient(rgba(59, 55, 74, 0.75), rgba(59, 55, 74, 0.75))",
@@ -561,7 +563,7 @@
       "sampleRatio": 0.71
     },
     "harvestVersion": 8,
-    "clusterVersion": 17,
+    "clusterVersion": 20,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -639,6 +641,7 @@
           }
         ]
       },
+      "sectionFill": null,
       "palette": [
         {
           "hex": "#161718",
@@ -1012,6 +1015,7 @@
       "decorated": true,
       "layerCount": 2,
       "pattern": null,
+      "overlay": null,
       "wash": {
         "kind": "linear-gradient",
         "value": "linear-gradient(rgba(59, 55, 74, 0.75), rgba(59, 55, 74, 0.75))",

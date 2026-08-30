@@ -1,0 +1,633 @@
+{
+  "source": {
+    "url": "https://www.gov.uk/",
+    "title": "Welcome to GOV.UK",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "docHeight": 4923,
+    "elementCount": 1848,
+    "sampled": 1323,
+    "sampleRatio": 0.716
+  },
+  "harvestVersion": 8,
+  "clusterVersion": 20,
+  "tuning": {
+    "colorMerge": 0.045,
+    "chromatic": 0.03,
+    "gridThreshold": 0.75
+  },
+  "colors": {
+    "polarity": "light",
+    "roles": {
+      "background": {
+        "hex": "#ffffff",
+        "weightShare": 1,
+        "variants": [],
+        "source": "pageBg"
+      },
+      "foreground": {
+        "hex": "#0b0c0c",
+        "weightShare": 0.5221,
+        "variants": []
+      },
+      "card": {
+        "hex": "#f4f8fb",
+        "weightShare": 0.5196,
+        "variants": []
+      },
+      "mutedForeground": null,
+      "primary": {
+        "hex": "#0f7a52",
+        "weightShare": 0.7108,
+        "variants": [],
+        "source": "interactiveBg",
+        "occurrences": 6
+      },
+      "primaryForeground": {
+        "hex": "#ffffff",
+        "weightShare": 0.0281,
+        "variants": []
+      },
+      "border": {
+        "hex": "#cecece",
+        "weightShare": 0.5865,
+        "variants": []
+      }
+    },
+    "ramps": {
+      "surface": [
+        {
+          "name": "surface-1",
+          "hex": "#f4f8fb",
+          "deltaL": 0.023,
+          "areaShare": 0.5196
+        }
+      ],
+      "text": [
+        {
+          "name": "text-1",
+          "hex": "#0b0c0c",
+          "contrast": 19.59,
+          "charShare": 0.5221
+        }
+      ]
+    },
+    "sectionFill": null,
+    "palette": [
+      {
+        "hex": "#f4f8fb",
+        "role": "card",
+        "hue": "neutral",
+        "lightness": 0.977,
+        "chroma": 0.006,
+        "count": 12
+      },
+      {
+        "hex": "#ffffff",
+        "role": "background",
+        "hue": "neutral",
+        "lightness": 1,
+        "chroma": 0,
+        "count": 12
+      },
+      {
+        "hex": "#1d70b8",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.535,
+        "chroma": 0.136,
+        "count": 12
+      },
+      {
+        "hex": "#0f7a52",
+        "role": "primary",
+        "hue": "green",
+        "lightness": 0.514,
+        "chroma": 0.11,
+        "count": 6
+      },
+      {
+        "hex": "#d2e2f1",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0.905,
+        "chroma": 0.027,
+        "count": 3
+      },
+      {
+        "hex": "#0b0c0c",
+        "role": "foreground",
+        "hue": "neutral",
+        "lightness": 0.153,
+        "chroma": 0.002,
+        "count": 144
+      },
+      {
+        "hex": "#1a65a6",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.497,
+        "chroma": 0.125,
+        "count": 231
+      },
+      {
+        "hex": "#cecece",
+        "role": "border",
+        "hue": "neutral",
+        "lightness": 0.851,
+        "chroma": 0,
+        "count": 61
+      },
+      {
+        "hex": "#000000",
+        "role": null,
+        "hue": "neutral",
+        "lightness": 0,
+        "chroma": 0,
+        "count": 3
+      },
+      {
+        "hex": "#8eb8dc",
+        "role": null,
+        "hue": "blue",
+        "lightness": 0.765,
+        "chroma": 0.069,
+        "count": 12
+      }
+    ],
+    "semantic": {},
+    "accentRejected": [],
+    "clusterCounts": {
+      "bg": 5,
+      "text": 4,
+      "border": 5,
+      "interactive": 3
+    }
+  },
+  "typography": {
+    "body": {
+      "family": "GDS Transport",
+      "class": "sans",
+      "stack": "\"GDS Transport\", arial, sans-serif",
+      "sizePx": 19,
+      "weight": 400,
+      "lineHeightPx": 25.08,
+      "lineHeightRatio": 1.32,
+      "lineHeightInferred": false,
+      "letterSpacing": null
+    },
+    "heading": {
+      "family": "GDS Transport",
+      "class": "sans",
+      "stack": "\"GDS Transport\", arial, sans-serif",
+      "largestPx": 36,
+      "weight": 700,
+      "sharesBodyFamily": true
+    },
+    "families": [
+      {
+        "family": "GDS Transport",
+        "class": "sans",
+        "stack": "\"GDS Transport\", arial, sans-serif"
+      },
+      {
+        "family": "Arial",
+        "class": "unknown",
+        "stack": "Arial"
+      }
+    ],
+    "scale": [
+      {
+        "name": "xs",
+        "px": 13.3333,
+        "rem": 0.702,
+        "weightShare": 0.0034,
+        "variants": []
+      },
+      {
+        "name": "sm",
+        "px": 16,
+        "rem": 0.842,
+        "weightShare": 0.0234,
+        "variants": []
+      },
+      {
+        "name": "base",
+        "px": 19,
+        "rem": 1,
+        "weightShare": 0.9135,
+        "variants": []
+      },
+      {
+        "name": "lg",
+        "px": 21,
+        "rem": 1.105,
+        "weightShare": 0.0052,
+        "variants": []
+      },
+      {
+        "name": "xl",
+        "px": 24,
+        "rem": 1.263,
+        "weightShare": 0.0144,
+        "variants": []
+      },
+      {
+        "name": "2xl",
+        "px": 28.5,
+        "rem": 1.5,
+        "weightShare": 0.0034,
+        "variants": []
+      },
+      {
+        "name": "3xl",
+        "px": 32,
+        "rem": 1.684,
+        "weightShare": 0.0072,
+        "variants": []
+      },
+      {
+        "name": "4xl",
+        "px": 36,
+        "rem": 1.895,
+        "weightShare": 0.0143,
+        "variants": []
+      },
+      {
+        "name": "5xl",
+        "px": 40,
+        "rem": 2.105,
+        "weightShare": 0.0051,
+        "variants": []
+      },
+      {
+        "name": "6xl",
+        "px": 50,
+        "rem": 2.632,
+        "weightShare": 0.0051,
+        "variants": []
+      },
+      {
+        "name": "7xl",
+        "px": 64,
+        "rem": 3.368,
+        "weightShare": 0.0051,
+        "variants": []
+      }
+    ],
+    "scaleTruncated": false,
+    "distinctSizes": 11,
+    "roles": {
+      "body": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 400,
+        "lineHeight": 1.32,
+        "letterSpacing": null,
+        "elements": 95,
+        "chars": 5154
+      },
+      "body-sm": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": null,
+        "elements": 4,
+        "chars": 84
+      },
+      "h2": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "36px",
+        "fontWeight": 700,
+        "lineHeight": 1.11,
+        "letterSpacing": null,
+        "elements": 10,
+        "chars": 164
+      },
+      "button": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 400,
+        "lineHeight": 1,
+        "letterSpacing": null,
+        "elements": 6,
+        "chars": 150
+      },
+      "link": {
+        "fontFamily": "GDS Transport",
+        "fontStack": "\"GDS Transport\", arial, sans-serif",
+        "class": "sans",
+        "fontSize": "19px",
+        "fontWeight": 700,
+        "lineHeight": 1.32,
+        "letterSpacing": null,
+        "elements": 108,
+        "chars": 2349
+      }
+    },
+    "rolesAvailable": true,
+    "distinctStyles": 25
+  },
+  "spacing": {
+    "base": null,
+    "gridConfidence": 0.742,
+    "gridCandidates": [
+      {
+        "base": 8,
+        "share": 0.054
+      },
+      {
+        "base": 6,
+        "share": 0.109
+      },
+      {
+        "base": 5,
+        "share": 0.742
+      },
+      {
+        "base": 4,
+        "share": 0.133
+      }
+    ],
+    "scale": [
+      5,
+      8,
+      9,
+      10,
+      15,
+      19,
+      20,
+      30,
+      50,
+      60
+    ],
+    "distinctValues": 16
+  },
+  "stability": {
+    "deadBand": 0.05,
+    "notes": [
+      {
+        "decision": "spacing.base",
+        "measured": 0.7418,
+        "threshold": 0.75,
+        "margin": -0.0109,
+        "held": null
+      }
+    ]
+  },
+  "rounded": {
+    "scale": [],
+    "button": null,
+    "pill": false,
+    "pillValue": null,
+    "sharp": true
+  },
+  "elevation": {
+    "shadows": [
+      {
+        "value": "rgb(11, 12, 12) 0px 3px 0px 0px",
+        "count": 9
+      },
+      {
+        "value": "rgb(8, 61, 41) 0px 2px 0px 0px",
+        "count": 6
+      }
+    ],
+    "flat": false
+  },
+  "components": {
+    "link": {
+      "padding": "0px",
+      "borderWidth": null,
+      "radius": null,
+      "gap": null,
+      "elements": 78,
+      "variants": 1,
+      "dominantUnstyled": true
+    },
+    "button": {
+      "padding": "8px 10px 7px 10px",
+      "borderWidth": "1px",
+      "radius": null,
+      "gap": null,
+      "elements": 3,
+      "variants": 4,
+      "dominantUnstyled": false
+    }
+  },
+  "layout": {
+    "available": true,
+    "sectionsReliable": true,
+    "sections": 15,
+    "measure": {
+      "px": 610,
+      "occurrences": 31,
+      "share": 0.388
+    },
+    "rhythm": null,
+    "composition": {
+      "total": 15,
+      "bleedCount": 0,
+      "griddedCount": 0,
+      "mediaLedCount": 0,
+      "charsMedian": 74,
+      "sectionWidth": "contained",
+      "sectionMedia": "none",
+      "sectionCopy": "sparse",
+      "gridPrevalence": 0
+    },
+    "columns": {
+      "count": 3,
+      "occurrences": 1
+    },
+    "hero": {
+      "heightRatio": 0.12,
+      "heightRatioMeasured": 0.12,
+      "headingSize": null,
+      "align": null,
+      "media": 0,
+      "fullBleed": false,
+      "ctas": 0,
+      "ctasFilled": 0,
+      "ctaEvidence": "none"
+    },
+    "nav": {
+      "height": 62,
+      "position": "static",
+      "links": 25,
+      "overflowed": false
+    },
+    "motion": {
+      "duration": null,
+      "easing": null,
+      "occurrences": 0,
+      "share": 0
+    }
+  },
+  "backgrounds": {
+    "available": true,
+    "decorated": false,
+    "layerCount": 0,
+    "pattern": null,
+    "overlay": null,
+    "wash": null,
+    "effects": {
+      "backdropFilter": null,
+      "mixBlendMode": null,
+      "maskImage": null,
+      "filter": null
+    }
+  },
+  "states": {
+    "available": true,
+    "sheets": {
+      "total": 2,
+      "readable": 2,
+      "blocked": 0,
+      "stateRules": 425
+    },
+    "roles": {
+      "button": {
+        "active": {
+          "color": "#ffffff",
+          "matchedElements": 9,
+          "rulesConsidered": 4
+        },
+        "focus": {
+          "borderColor": "#ffdd00",
+          "boxShadow": "inset 0 0 0 1px #ffdd00",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 9,
+          "rulesConsidered": 8
+        },
+        "focus-visible": {
+          "color": "#0b0c0c",
+          "backgroundColor": "#ffdd00",
+          "borderColor": "#ffdd00",
+          "boxShadow": "none",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 1,
+          "rulesConsidered": 3
+        },
+        "hover": {
+          "color": "#ffffff",
+          "matchedElements": 10,
+          "rulesConsidered": 6
+        }
+      },
+      "link": {
+        "active": {
+          "color": "#0b0c0c",
+          "matchedElements": 106,
+          "rulesConsidered": 2
+        },
+        "focus": {
+          "color": "#0b0c0c",
+          "backgroundColor": "#ffdd00",
+          "boxShadow": "0 -2px #ffdd00,0 4px #0b0c0c",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "matchedElements": 105,
+          "rulesConsidered": 5
+        },
+        "hover": {
+          "color": "#0f385c",
+          "matchedElements": 104,
+          "rulesConsidered": 1
+        }
+      },
+      "text": {
+        "focus": {
+          "boxShadow": "0px 0px 0px 2px inset",
+          "outlineColor": "#ffdd00",
+          "matchedElements": 2,
+          "rulesConsidered": 4
+        },
+        "focus-visible": {
+          "color": "#0b0c0c",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        },
+        "hover": {
+          "color": "#ffffff",
+          "matchedElements": 1,
+          "rulesConsidered": 1
+        }
+      }
+    },
+    "declarations": 35
+  },
+  "audit": {
+    "pairs": [
+      {
+        "pair": "foreground/background",
+        "fg": "#0b0c0c",
+        "bg": "#ffffff",
+        "ratio": 19.59,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": null,
+        "aa": true,
+        "aaa": true
+      },
+      {
+        "pair": "primaryForeground/primary",
+        "fg": "#ffffff",
+        "bg": "#0f7a52",
+        "ratio": 5.35,
+        "kind": "text",
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "min": 4.5,
+        "note": "label sitting on the accent fill",
+        "aa": true,
+        "aaa": false
+      },
+      {
+        "pair": "primary/background",
+        "fg": "#0f7a52",
+        "bg": "#ffffff",
+        "ratio": 5.35,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "accent is a button fill, judged as a UI component",
+        "aa": true,
+        "aaa": null
+      },
+      {
+        "pair": "border/background",
+        "fg": "#cecece",
+        "bg": "#ffffff",
+        "ratio": 1.57,
+        "kind": "nonText",
+        "criterion": "1.4.11 Non-text Contrast",
+        "min": 3,
+        "note": "decorative separators legitimately fail; only boundaries that convey meaning must pass",
+        "aa": false,
+        "aaa": null
+      }
+    ],
+    "failures": 1,
+    "textFailures": 0,
+    "minRatio": 1.57
+  },
+  "warnings": [
+    "First section carries no heading; the page may open on chrome — a search bar or a breadcrumb — rather than on a headline.",
+    "No background image, gradient or pattern anywhere on the page. The canvas is flat colour, and that is the design rather than a gap in the capture.",
+    "No secondary text color is quiet enough, desaturated enough and common enough to call muted; omitted rather than promoting a link color.",
+    "No spacing grid explains 75% of values (best 0.742); site may not be on a grid.",
+    "No border radius anywhere; treat as a deliberately sharp system.",
+    "Strided sample: 1323 of 1848 elements. Weights are relative only."
+  ]
+}
