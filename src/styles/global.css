@@ -63,20 +63,14 @@
 
 body {
   margin: 0;
-  /* Canvas, then the file's own decorative layer over it: the wash first, the
-     tiled pattern above it, blended with the mode the file declares.
-
-     Layered on `body` rather than on a fixed overlay element — no z-index to
-     get wrong, no pointer-events to trap, and `background-blend-mode` composes
-     the two layers the same way the source site composes them. A file that
-     declares neither resolves both to `none` and the canvas stays flat, which
-     is what GOV.UK, Nike and Basecamp actually are. */
+  /* The canvas colour, and nothing else. The texture over it is painted by the
+     two pseudo-elements below, because the decoration is not one flat sheet:
+     the dot grid fields the content column and the hatch fills the margins
+     around it, which are different areas and cannot be layers of one
+     background. This declaration still matters on its own — a body background
+     propagates to the viewport canvas, so it is what shows through overscroll
+     and behind everything else. */
   background-color: var(--bg);
-  background-image: var(--bg-pattern, none), var(--bg-wash, none);
-  background-size: var(--bg-pattern-size, auto), auto;
-  background-repeat: repeat, no-repeat;
-  background-attachment: fixed, fixed;
-  background-blend-mode: var(--bg-blend, normal), normal;
   color: var(--fg);
   font-family: var(--sans);
   font-size: var(--size);
@@ -84,6 +78,62 @@ body {
   line-height: var(--leading);
   letter-spacing: var(--tracking);
   -webkit-font-smoothing: antialiased;
+}
+
+/* The canvas decoration: a hatched field with the content column laid over it,
+   the two separated by a hairline down each edge. Tailwind's, measured — see
+   DECOR_SLUG in src/lib/theme.mjs for why the texture comes from a different
+   file than everything else here.
+
+   Two fixed layers rather than one masked one. Masking the hatch to the gutters
+   needs their width in CSS, and (100% - container) / 2 inside a
+   `background-position` is not the width it looks like: percentages there
+   resolve against the positioning area MINUS the image, and 100vw counts the
+   scrollbar the centred container does not. Painting the column opaquely over a
+   full-bleed hatch needs no width at all — `margin-inline: auto` finds the same
+   centre the page content uses, from the same --container value.
+
+   Both are inert: fixed, behind the content, and untouchable. A theme whose
+   file declares no decoration resolves every value to `none` and the canvas
+   stays flat, which is what GOV.UK, Nike and Basecamp actually are. */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* The margins. Full bleed, so it is still correct at any width — the column
+   above simply covers however much of it the container claims. */
+body::before {
+  left: 0;
+  right: 0;
+  z-index: -2;
+  background-image: var(--decor-overlay, none);
+  background-size: var(--decor-overlay-size, auto);
+}
+
+/* The column. Opaque, so it hides the hatch behind it, and carrying the pattern
+   and wash on top of that.
+
+   At viewports narrower than the container this is the full width and the two
+   rules sit hard against the screen edges, which is what the source site does
+   at the same size rather than a case worth special-casing away. */
+body::after {
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: min(100%, var(--container, 72rem));
+  z-index: -1;
+  background-color: var(--bg);
+  background-image: var(--bg-pattern, none), var(--bg-wash, none);
+  background-size: var(--bg-pattern-size, auto), auto;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: var(--bg-blend, normal), normal;
+  border-left: 1px solid var(--decor-rule, transparent);
+  border-right: 1px solid var(--decor-rule, transparent);
 }
 
 /* The accent is never a fill. The source system spends it on focus and

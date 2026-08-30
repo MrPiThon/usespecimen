@@ -15,7 +15,7 @@
     "sampleRatio": 0.382
   },
   "harvestVersion": 8,
-  "clusterVersion": 17,
+  "clusterVersion": 18,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -655,6 +655,7 @@
       ],
       "areaShare": 0.059
     },
+    "overlay": null,
     "wash": {
       "kind": "radial-gradient",
       "value": "radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 62%)",
@@ -839,7 +840,7 @@
       "sampleRatio": 0.382
     },
     "harvestVersion": 8,
-    "clusterVersion": 17,
+    "clusterVersion": 18,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1464,6 +1465,28 @@
             "raw": "rgba(255, 255, 255, 0.043)",
             "hex": "#ffffff",
             "alpha": 0.043,
+            "chroma": 0
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0,
+            "chroma": 0
+          }
+        ],
+        "areaShare": 0.035
+      },
+      "overlay": {
+        "kind": "lines",
+        "size": "160px 160px",
+        "angle": "242",
+        "value": "linear-gradient(242deg, rgba(255, 255, 255, 0.03) 0.5px, rgba(0, 0, 0, 0) 0.5px)",
+        "external": false,
+        "stops": [
+          {
+            "raw": "rgba(255, 255, 255, 0.03)",
+            "hex": "#ffffff",
+            "alpha": 0.03,
             "chroma": 0
           },
           {

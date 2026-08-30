@@ -146,6 +146,12 @@ backgrounds:
   pattern: 'dots'
   patternSize: '10px 10px'
   patternImage: 'radial-gradient(oklab(0.129999 -0.00404751 -0.027702 / 0.05) 1px, rgba(0, 0, 0, 0) 0px)'
+  patternImageDark: 'radial-gradient(oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 1px, rgba(0, 0, 0, 0) 0px)'
+  overlay: 'lines'
+  overlaySize: '10px 10px'
+  overlayAngle: '315deg'
+  overlayImage: 'repeating-linear-gradient(315deg, oklab(0 0 0 / 0.05) 0px, oklab(0 0 0 / 0.05) 1px, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%)'
+  overlayImageDark: 'repeating-linear-gradient(315deg, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 1px, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%)'
   wash: 'linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)'
   backdropFilter: 'blur(8px)'
 components:
@@ -169,22 +175,10 @@ provenance:
   capturedAt: '2026-08-29T04:36:29.895Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 18
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Overview
 
@@ -240,7 +234,10 @@ surface ladder — white cards on an off-white page — rather than from shadow.
 **A dot grid, and it is the signature.** A `radial-gradient` with a 1px stop
 tiles at **10px by 10px**, in `#030712` at **5% alpha** — 72% of all painted
 background area on the page. There is also a 315-degree hatch on the same 10px
-tile, and a vertical fade to `#030712` at the foot.
+tile, and a vertical fade to `#030712` at the foot. Under the dark scheme
+both the dot and the hatch invert to white at **10% alpha** — the file carries
+that value separately, because reading the light one onto a dark canvas paints
+nothing at all.
 
 A flat canvas in these colours is not this design. The grid is what makes it
 read as graph paper rather than as a page.
@@ -271,10 +268,3 @@ animates — 100% agreement.
 
 **What this file does not constrain:** page structure and navigation, which were
 not measurable here. Colour, type, shape, grid and motion stand.
-
-
-
-
-
-
-

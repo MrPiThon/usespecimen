@@ -248,22 +248,34 @@ const shownIn = (fam) => {
   {(bg?.pattern || bg?.wash) && (
     <section class="sp-block">
       <h3>Canvas</h3>
+      {/* Every layer the file publishes, stacked in one box. A page can carry
+          two textures — Tailwind hatches at 315 degrees over its dot grid — and
+          showing only the largest would leave a published value with nowhere on
+          this site that renders it. The stacking order is ours; the file records
+          which layers exist and at what size, not which sits on top. */}
       <div
         class="cv"
         style={[
-          bg.patternImage ? `background-image:${bg.patternImage}` : null,
-          bg.wash && !bg.patternImage ? `background-image:${bg.wash}` : null,
-          bg.patternSize ? `background-size:${bg.patternSize}` : null,
-        ].filter(Boolean).join(';')}
+          `background-image:${[bg.overlayImage, bg.patternImage, bg.wash]
+            .filter(Boolean).join(', ') || 'none'}`,
+          `background-size:${[
+            bg.overlayImage ? bg.overlaySize ?? 'auto' : null,
+            bg.patternImage ? bg.patternSize ?? 'auto' : null,
+            bg.wash ? 'auto' : null,
+          ].filter(Boolean).join(', ') || 'auto'}`,
+        ].join(';')}
       ></div>
       <p class="sp-note">
         {[bg.pattern ? `${bg.pattern}${bg.patternSize ? ` at ${bg.patternSize}` : ''}` : null,
+          bg.overlay ? `${bg.overlay}${bg.overlaySize ? ` at ${bg.overlaySize}` : ''}${bg.overlayAngle ? `, ${bg.overlayAngle}` : ''}` : null,
           bg.wash ? 'gradient wash' : null,
           bg.mixBlendMode ? `blended ${bg.mixBlendMode}` : null,
           bg.backdropFilter ? `backdrop ${bg.backdropFilter}` : null,
         ].filter(Boolean).join(' · ')}
         {bg.pattern === 'noise' && !bg.patternImage
           && ' — the source is an external raster, so its URL is withheld and this tile is not shown.'}
+        {(bg.patternImageDark || bg.overlayImageDark || bg.washDark)
+          && ' — shown light; the file carries a separate value for the dark scheme, because this one inverts rather than dimming.'}
       </p>
     </section>
   )}

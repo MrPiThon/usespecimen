@@ -19,6 +19,7 @@
 
 import {
   parseColor, toHex, flatten, toOklch, deltaE, contrastRatio, relativeLuminance, hueFamily,
+  COLOR_STOP_RE,
 } from '../lib/color.mjs';
 
 /** OKLab distance below which two TEXT or interactive colors are one token.
@@ -1402,8 +1403,6 @@ const TILE_MAX_PX = 320;
 
 /** Colour functions that can appear as a gradient stop. None of them nest, so a
  *  non-greedy match to the first `)` is safe — `color(display-p3 ...)` included. */
-const STOP_RE = /(?:rgba?|hsla?|oklab|oklch|lab|lch|color)\([^()]*\)|#[0-9a-fA-F]{3,8}\b/g;
-
 /**
  * The decorative layer: gradients, tiled patterns, grain, and the compositing
  * that makes them read.
@@ -1436,7 +1435,7 @@ export function backgroundTokens(capture) {
     const px = size.match(/(-?[\d.]+)px/g)?.map(parseFloat) ?? [];
     const tiled = repeats && !scaled && px.length > 0 && px.every(n => n > 0 && n <= TILE_MAX_PX);
     const stops = [];
-    for (const raw of value.match(STOP_RE) ?? []) {
+    for (const raw of value.match(COLOR_STOP_RE) ?? []) {
       const rgb = parseColor(raw);
       // parseColor returns null for keywords like `transparent`, which are real
       // stops but carry no colour worth publishing.
@@ -1482,8 +1481,28 @@ export function backgroundTokens(capture) {
   };
   const angleOf = (l) => l.value?.match(/\(\s*(-?[\d.]+)deg/)?.[1] ?? null;
 
-  const pattern = layers.find(l => patternOf(l));
+  // Ordered by painted area, because a page can carry more than one texture and
+  // taking only the largest silently drops the rest. Tailwind lays a 315-degree
+  // hairline hatch over its dot grid at a third of the dots' area — the second
+  // most-painted decoration on the page, and invisible in every file we
+  // published before this. The Verge stacks three rule sheets at 120/160/200px.
+  const tiled = layers.filter(l => patternOf(l));
+  const pattern = tiled[0];
+  // Only the runner-up. A third layer is real but the file is a design language,
+  // not a transcript of the page, and two textures is already the whole of what
+  // a consumer can act on without recreating the source's own layout.
+  const overlay = tiled[1];
   const wash = layers.find(l => !l.tiled && /gradient/.test(l.kind));
+
+  const patternShape = (l) => ({
+    kind: patternOf(l),
+    size: l.size,
+    angle: angleOf(l),
+    value: l.value,
+    external: l.external,
+    stops: l.stops,
+    areaShare: l.areaShare,
+  });
 
   const effect = (prefix) => {
     const hit = Object.entries(bg.effects)
@@ -1507,17 +1526,10 @@ export function backgroundTokens(capture) {
       c: effect('mask-image'), d: effect('filter'),
     }).some(Boolean)),
     layerCount: layers.length,
-    pattern: pattern
-      ? {
-        kind: patternOf(pattern),
-        size: pattern.size,
-        angle: angleOf(pattern),
-        value: pattern.value,
-        external: pattern.external,
-        stops: pattern.stops,
-        areaShare: pattern.areaShare,
-      }
-      : null,
+    pattern: pattern ? patternShape(pattern) : null,
+    // The second texture, same shape as the first. Null on twenty-one of the
+    // twenty-three systems here: most pages carry one treatment or none.
+    overlay: overlay ? patternShape(overlay) : null,
     wash: wash
       ? {
         kind: wash.kind,
@@ -1595,7 +1607,9 @@ export function cluster(capture, { previous } = {}) {
     // 13: parseColor understands lab/oklab/oklch/display-p3, so sites authoring
     //     in modern colour spaces stop resolving to null andwhite-on-white.
     // Token sets are only comparable for drift within the same version.
-    clusterVersion: 17,
+    // 18: adds backgrounds.overlay — the second tiled texture, previously
+    //     dropped because only the largest layer was published.
+    clusterVersion: 18,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

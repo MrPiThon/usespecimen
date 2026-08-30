@@ -19,15 +19,19 @@ import '@fontsource-variable/source-serif-4';
 import '@fontsource-variable/nunito';
 import '../styles/global.css';
 import { getEntry } from 'astro:content';
-import { THEME_SLUG, themeVars } from '../lib/theme.mjs';
+import { THEME_SLUG, DECOR_SLUG, themeVars } from '../lib/theme.mjs';
 
-// The site is styled by a file in its own registry. If that entry ever stops
+// The site is styled by files in its own registry. If either entry ever stops
 // validating, the build fails here rather than silently falling back to the
 // stylesheet defaults — a registry that cannot wear its own file has a problem
 // worth stopping for.
 const theme = await getEntry('systems', THEME_SLUG);
 if (!theme) throw new Error(`Theme system "${THEME_SLUG}" is not in the collection.`);
-const vars = themeVars(theme.data);
+// The canvas texture alone comes from a second file. See DECOR_SLUG for why
+// that is the one part of this stylesheet another system may supply.
+const decor = await getEntry('systems', DECOR_SLUG);
+if (!decor) throw new Error(`Decor system "${DECOR_SLUG}" is not in the collection.`);
+const vars = themeVars(theme.data, decor.data);
 
 interface Props { title: string; description?: string; }
 const { title, description } = Astro.props;

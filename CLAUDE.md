@@ -81,6 +81,11 @@ npm run author -- stripe --name "Indigo Infrastructure"   # capture -> content/
   linter before writing — a scaffold that could not ship would be a bug in
   `author.mjs`, not a file to fix by hand. Use `--from` when the capture
   directory and the published slug differ (`www.gov.uk` extracts to `gov`).
+  `--tokens-only` re-anchors the kept body rather than concatenating it:
+  `splitFrontmatter` returns everything after the closing delimiter, which for a
+  file this command wrote begins with the blank line separating frontmatter from
+  prose — so pasting it under another blank line added one on every refresh. The
+  Verge had accumulated eleven leading and five trailing blank lines.
 - To iterate on clustering without launching Playwright, paste the body of
   `harvestFn` into a browser console on any target page. `cluster` takes that
   bare dump as well as a full `capture.json`.
@@ -342,6 +347,12 @@ calling:
   `null` for everything else — gradients, `currentColor`, and named colors like `red` are
   **not** handled, so null-check every parse. hsl matters more than it looks:
   computed style rarely emits it, but authored stylesheet rules are full of it.
+
+`COLOR_STOP_RE` also lives here rather than in the clusterer, because the site
+needs it too: a file publishes a decorative layer as one gradient string, and
+pulling its hairline colour back out is the only way to draw a rule in the same
+colour without inventing one. Its `[^()]*` deliberately refuses nested parens,
+so a `color-mix()` wrapping other functions is skipped rather than half-matched.
 
 Because harvest emits raw strings including translucent ones, the clusterer must
 `parseColor` and then `flatten` against the effective backdrop (`out.pageBg`)
@@ -675,6 +686,37 @@ Neither applies on this Windows machine, where Chromium is already installed.
   `--faint` (3.45:1) is the one token held back from small text — it is the
   system's quietest tier, fine where it is used at size and a failing pair at
   label size, and shipping it would contradict the audit we publish elsewhere.
+- **The canvas texture comes from a second file** — `DECOR_SLUG`, currently
+  `tailwindcss`. This is the one exception to the bullet above, and the reason
+  it is allowed is narrow: Linear's file declares `pattern: noise` with **no
+  value**, because the source was a PNG on Linear's CDN and publishing that URL
+  would invite a hotlink to somebody else's asset. So that slot was already
+  filled by a stand-in *we invented* — `NOISE_SVG`, our own `feTurbulence` tile.
+  It was the only declaration in the whole stylesheet not backed by a
+  measurement, which makes it the only one another file can legitimately
+  replace: this swaps an invented texture for a measured one out of the same
+  registry. Tailwind's 10px dot grid and 315-degree hatch are published values,
+  read from the same frontmatter every other consumer gets.
+  It takes the **whole** `backgrounds` group or none of it. Linear's vignette
+  under Tailwind's dots would compose a surface that exists on no site — the
+  same fabricated-combination error the clusterer avoids everywhere it bundles
+  co-occurring properties.
+  Which scheme's values to read is **measured, not declared**: `themeVars`
+  takes the relative luminance of the theme's own canvas and reads the `*Dark`
+  keys below 0.2. The theme file is the only thing that knows this site is dark,
+  and a boolean would go stale the moment the theme changed.
+  Where the layers land is composition and is labelled as such. The dots field
+  the content column, the hatch fills the margins outside it, and a hairline
+  marks the boundary — the `--container` measure Linear already supplies. The
+  rule's *colour* is not invented: it is the hatch's own first stop, pulled back
+  out of the published gradient with `COLOR_STOP_RE` and rewritten as rgba.
+  Two fixed pseudo-elements rather than one masked one, and the reason is a
+  trap worth remembering: masking the hatch to the gutters needs their width in
+  CSS, and `(100% - container) / 2` inside a `background-position` is not the
+  width it looks like — percentages there resolve against the positioning area
+  **minus the image**, and `100vw` counts a scrollbar the centred container does
+  not. Painting the column opaquely over a full-bleed hatch needs no width at
+  all: `margin-inline: auto` finds the same centre the page content uses.
 - **No auth, no billing, no accounts** until Phase 3.
 
 ## Structure extraction (harvest v6, cluster v15)
@@ -746,7 +788,7 @@ grid, nav and motion are read independently and still stand.
 `previewVars` therefore sets it unconditionally, `0s` when a file declares none.
 Without that, GOV.UK's preview rendered on Linear's 0.1s ease.
 
-## Background treatment (harvest v8, cluster v17)
+## Background treatment (harvest v8, cluster v18)
 
 Colour tokens say what a surface *is*. `backgrounds` says what is painted over
 it, and it is a large part of why a page in the right palette can still look
@@ -777,6 +819,34 @@ A **full scan** rather than the sampled loop, and `body`/`html` are useless as a
 starting point — both report `background-image: none` on all thirteen sites,
 GOV.UK and Stripe alike. The decoration always sits on large overlay elements,
 so layers are ranked by painted area.
+
+**Two textures, not one** (cluster v18). Ranking by area and publishing the
+winner silently dropped every layer behind it. Tailwind lays a 315-degree
+hairline hatch over its dot grid at a third of the dots' painted area — the
+second most-painted decoration on the page, and absent from the file until now,
+even though the hand-written prose had described it all along. That gap is the
+tell: a human reading the capture saw the hatch, the frontmatter did not carry
+it, and an agent gets only the frontmatter. The runner-up now ships as
+`overlay` / `overlaySize` / `overlayAngle` / `overlayImage`. Only the runner-up:
+The Verge stacks three rule sheets at 120/160/200px, and a file is a design
+language rather than a transcript of one page.
+
+**Dark variants, where they differ** (cluster v18). A file published only its
+light values, so a dark-mode consumer of Tailwind got a near-black dot at 5%
+alpha to paint on a near-black canvas — an invisible texture, confidently
+specified. `patternImageDark`, `overlayImageDark` and `washDark` are emitted
+**only when the dark capture disagrees with the light one**: Tailwind's dot
+inverts to white at 10% and gets a key, its wash is byte-identical across
+schemes and gets none. Restating an unchanged value teaches nothing, and a key
+that appears only when something changed is itself information. The Verge picks
+up both — hairlines to white at 4.3%, vignette deepening to 22% black.
+
+Known asymmetry: the layer *set* comes from the light cluster and dark supplies
+only variants of those layers, so a texture that exists **only** in dark mode is
+not published. The Verge is the case — its dark scheme carries a second rule
+sheet at 242 degrees that its light scheme does not, and no `overlay` ships for
+it. Emitting an `overlayImageDark` with no `overlayImage` to vary would be the
+alternative, and it is not obviously better.
 
 **External rasters are recorded but never published.** Linear's grain is a PNG
 on their CDN; the file carries the tile size and blend mode and withholds the

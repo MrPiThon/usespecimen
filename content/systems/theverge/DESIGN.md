@@ -146,7 +146,9 @@ backgrounds:
   patternSize: '120px 120px'
   patternAngle: '118deg'
   patternImage: 'linear-gradient(118deg, rgba(0, 0, 0, 0.04) 0.5px, rgba(0, 0, 0, 0) 0.5px)'
+  patternImageDark: 'linear-gradient(118deg, rgba(255, 255, 255, 0.043) 0.5px, rgba(0, 0, 0, 0) 0.5px)'
   wash: 'radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 62%)'
+  washDark: 'radial-gradient(140% 110% at 50% 115%, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0) 62%)'
   backdropFilter: 'blur(14px)'
 components:
   button:
@@ -183,21 +185,10 @@ provenance:
   capturedAt: '2026-08-29T04:36:59.043Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 17
+  clusterVersion: 18
   screenshot: './source.webp'
   screenshotDark: './source-dark.webp'
 ---
-
-
-
-
-
-
-
-
-
-
-
 
 ## Overview
 
@@ -257,7 +248,8 @@ elevation. Nothing floats.
 **A 118-degree hairline pattern** tiling at **120px**, drawn in `#000000` at
 **4% alpha** — half-pixel diagonal rules, barely visible individually and
 clearly felt across a full page. Under it, a radial vignette at 6% black lifts
-the centre.
+the centre. Under the dark scheme the rules invert to white at **4.3% alpha**
+and the vignette deepens to **22% black**.
 
 There is also a `drop-shadow(rgba(255, 255, 255, 0.6) 0 35px 35px)` — a white
 glow used as a shadow, which is unusual and worth keeping if you want the
@@ -294,9 +286,3 @@ page; do not build a system of transitions on one measurement.
 
 **What this file does not constrain:** page structure, which could not be read
 here, and motion, which was measured on a single element.
-
-
-
-
-
-

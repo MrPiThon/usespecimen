@@ -18,7 +18,34 @@
 // It is also a dark-only system: no light palette was observed, so the site has
 // no light mode. Adopting a design system means adopting its limits.
 
+import { parseColor, relativeLuminance, COLOR_STOP_RE } from './color.mjs';
+
 export const THEME_SLUG = 'linear';
+
+/**
+ * Where the canvas decoration comes from — a different file from the rest.
+ *
+ * Everything else on this site is Linear's: palette, type, spacing, radii,
+ * shadows, structure, motion. The one thing its file cannot supply is the
+ * texture over the canvas. It declares `pattern: noise` with no value, because
+ * the source was a PNG on Linear's own CDN and publishing that URL would invite
+ * a hotlink to somebody else's asset. So the site was already rendering a
+ * stand-in — our own feTurbulence tile, invented to reproduce an effect we
+ * could describe but not serve.
+ *
+ * That is the one slot in the whole stylesheet not backed by a measurement, so
+ * it is the only place a second file can legitimately be swapped in: this
+ * replaces an invented texture with a measured one from the same registry.
+ * Tailwind's 10px dot grid and its 315-degree hairline hatch are published
+ * values, extracted from the live site under a dark scheme, and they are what
+ * the canvas now wears.
+ *
+ * The whole `backgrounds` group comes from one file or the other, never half of
+ * each. Mixing Linear's vignette under Tailwind's dots would compose a surface
+ * that exists on no site — the same fabricated-combination error the clusterer
+ * is careful about everywhere it bundles co-occurring properties.
+ */
+export const DECOR_SLUG = 'tailwindcss';
 
 /**
  * The one family the site ships as a webfont, self-hosted via
@@ -82,10 +109,67 @@ const COLOR_MAP = {
 };
 
 /**
+ * The decorative layer, resolved for the canvas it will sit on.
+ *
+ * A file publishes its light values under the plain keys and a dark variant
+ * only where the two differ — Tailwind's dot inverts from a near-black at 5%
+ * to white at 10%, and reading the light value onto a dark canvas paints an
+ * invisible texture. Which set to take is decided by measuring the theme's own
+ * canvas rather than by a flag, because the theme file is the only thing that
+ * knows whether this site is dark.
+ */
+function decorVars(source, darkCanvas) {
+  const bg = source?.backgrounds ?? {};
+  // `?? null` rather than `||`: a published empty string is a real answer.
+  const pick = (key) => (darkCanvas ? bg[`${key}Dark`] ?? bg[key] : bg[key]) ?? null;
+  const out = [];
+
+  const pattern = pick('patternImage');
+  if (pattern) out.push(['--bg-pattern', pattern]);
+  // A pattern the file publishes as a value is used verbatim. `noise` is the
+  // one kind that arrives without one: it was an external raster on the source
+  // site, and the file deliberately withholds the URL. This reproduces the
+  // effect instead of borrowing it, which is exactly what the file's own
+  // warning tells a consumer to do — the turbulence is ours, and the only
+  // measured values in play are the tile size and the blend mode.
+  else if (bg.pattern === 'noise') out.push(['--bg-pattern', NOISE_SVG]);
+  if (bg.patternSize) out.push(['--bg-pattern-size', bg.patternSize]);
+
+  const wash = pick('wash');
+  if (wash) out.push(['--bg-wash', wash]);
+  if (bg.mixBlendMode) out.push(['--bg-blend', bg.mixBlendMode]);
+
+  // The second texture, drawn in the gutters outside the content column. Kept
+  // on its own variables rather than folded into --bg-pattern because the two
+  // are painted on different areas: the dots field the column, the hatch fills
+  // the margins around it.
+  const overlay = pick('overlayImage');
+  if (overlay) {
+    out.push(['--decor-overlay', overlay]);
+    if (bg.overlaySize) out.push(['--decor-overlay-size', bg.overlaySize]);
+    // The hairlines marking the column's edges. Where they go is composition —
+    // no crawler can see that a rule belongs at a container boundary — but the
+    // colour is not invented: it is the hatch's own first stop, pulled back out
+    // of the gradient the file publishes and rewritten as rgba.
+    const stop = parseColor(overlay.match(COLOR_STOP_RE)?.[0] ?? '');
+    if (stop) {
+      // Rounded: parseColor converts oklab through a float pipeline, so the
+      // white stop comes back as 255, 254.9865, 254.9822 — valid CSS, and
+      // noise in a stylesheet people read.
+      const ch = (n) => Math.round(n);
+      out.push(['--decor-rule', `rgba(${ch(stop.r)}, ${ch(stop.g)}, ${ch(stop.b)}, ${stop.a ?? 1})`]);
+    }
+  }
+  return out;
+}
+
+/**
  * @param {object} data frontmatter of the theme system
+ * @param {object} [decor] frontmatter of the system supplying the canvas
+ *   decoration. Omitted, the theme decorates itself.
  * @returns {string} custom property declarations for a :root block
  */
-export function themeVars(data) {
+export function themeVars(data, decor = null) {
   assertThemeFont(data);
   const colors = data?.colors ?? {};
   const type = data?.typography ?? {};
@@ -144,24 +228,14 @@ export function themeVars(data) {
   const fixed = layout.navPosition === 'fixed' || layout.navPosition === 'absolute';
   if (layout.navHeight) out.push(['--nav-offset', fixed ? layout.navHeight : '0px']);
 
-  // The decorative layer. Linear's canvas is not the flat #08090a the colour
-  // tokens describe — it carries a tiled grain sheet under a radial vignette,
-  // and that texture is a large part of why the real site does not look like a
-  // solid fill.
-  const bg = data?.backgrounds ?? {};
-  if (bg.wash) out.push(['--bg-wash', bg.wash]);
-  if (bg.mixBlendMode) out.push(['--bg-blend', bg.mixBlendMode]);
-  if (bg.patternSize) out.push(['--bg-pattern-size', bg.patternSize]);
-  // A pattern the file publishes as a value is used verbatim. `noise` is the
-  // one kind that arrives without one: it was an external raster on the source
-  // site, and the file deliberately withholds the URL rather than inviting a
-  // hotlink to somebody else's asset.
-  //
-  // So this reproduces the effect instead of borrowing it, which is exactly
-  // what the file's own warning tells a consumer to do. The turbulence below is
-  // ours; the only measured values in play are the tile size and the blend mode.
-  if (bg.patternImage) out.push(['--bg-pattern', bg.patternImage]);
-  else if (bg.pattern === 'noise') out.push(['--bg-pattern', NOISE_SVG]);
+  // The decorative layer, from `decor` when one is given and from the theme's
+  // own file otherwise. A canvas is not the flat colour its tokens describe:
+  // Linear tiles grain under a vignette, Tailwind lays a dot grid under a
+  // hatch, and that texture is a large part of why a page in the right palette
+  // can still look nothing like the site.
+  const canvas = parseColor(data?.colors?.background ?? '');
+  const darkCanvas = canvas ? relativeLuminance(canvas) < 0.2 : false;
+  out.push(...decorVars(decor ?? data, darkCanvas));
   // How state changes arrive. Without this the site would pick its own timing
   // while claiming to wear the file, which is the gap this whole exercise
   // exists to close. A system that declares no motion sets nothing, and the

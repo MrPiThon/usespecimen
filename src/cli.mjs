@@ -304,13 +304,19 @@ async function author(slug, opts) {
     dark: cap.supportsDark ? cap.dark : null,
     shots: available,
   });
+  // The body is re-anchored rather than concatenated. splitFrontmatter returns
+  // everything after the closing delimiter, which for a file this command wrote
+  // begins with the blank line separating frontmatter from prose — so pasting
+  // it under another blank line added one on every refresh, and a trailing
+  // newline on top of the one already there. Files that had been through
+  // --tokens-only a few times carried a growing run of blank lines.
   const file = keepBody === null
     ? generated
     : `---
 ${splitFrontmatter(generated).frontmatter}
 ---
 
-${keepBody}
+${keepBody.trim()}
 `;
 
   // The scaffold must pass the same gate the build applies, or `author` has

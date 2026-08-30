@@ -1,6 +1,18 @@
 // Color math for token extraction: parsing, OKLab/OKLCH, perceptual distance, WCAG contrast.
 
 /** Parse a CSS computed color string into {r,g,b,a} with 0-255 channels. */
+/**
+ * Colour values as they appear inside a compound string — a gradient's stops, a
+ * box-shadow's colour. Lives here rather than in the clusterer because the site
+ * needs it too: a file publishes a decorative layer as one gradient string, and
+ * pulling its hairline colour back out is the only way to draw a rule in the
+ * same colour without inventing one.
+ *
+ * `[^()]*` deliberately refuses nested parens, so a `color-mix()` wrapping other
+ * functions is skipped rather than half-matched.
+ */
+export const COLOR_STOP_RE = /(?:rgba?|hsla?|oklab|oklch|lab|lch|color)\([^()]*\)|#[0-9a-fA-F]{3,8}\b/g;
+
 export function parseColor(str) {
   if (!str || typeof str !== 'string') return null;
   const s = str.trim().toLowerCase();

@@ -15,7 +15,7 @@
     "sampleRatio": 0.794
   },
   "harvestVersion": 8,
-  "clusterVersion": 17,
+  "clusterVersion": 18,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -753,6 +753,40 @@
       ],
       "areaShare": 0.724
     },
+    "overlay": {
+      "kind": "lines",
+      "size": "10px 10px",
+      "angle": "315",
+      "value": "repeating-linear-gradient(315deg, oklab(0 0 0 / 0.05) 0px, oklab(0 0 0 / 0.05) 1px, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%)",
+      "external": false,
+      "stops": [
+        {
+          "raw": "oklab(0 0 0 / 0.05)",
+          "hex": "#000000",
+          "alpha": 0.05,
+          "chroma": 0
+        },
+        {
+          "raw": "oklab(0 0 0 / 0.05)",
+          "hex": "#000000",
+          "alpha": 0.05,
+          "chroma": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "alpha": 0,
+          "chroma": 0
+        }
+      ],
+      "areaShare": 0.23
+    },
     "wash": {
       "kind": "linear-gradient",
       "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, lab(1.90334 0.278696 -5.48866) 100%)",
@@ -908,7 +942,7 @@
       "sampleRatio": 0.794
     },
     "harvestVersion": 8,
-    "clusterVersion": 17,
+    "clusterVersion": 18,
     "tuning": {
       "colorMerge": 0.045,
       "chromatic": 0.03,
@@ -1641,6 +1675,40 @@
           }
         ],
         "areaShare": 0.724
+      },
+      "overlay": {
+        "kind": "lines",
+        "size": "10px 10px",
+        "angle": "315",
+        "value": "repeating-linear-gradient(315deg, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 0px, oklab(0.999994 0.0000455678 0.0000200868 / 0.1) 1px, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%)",
+        "external": false,
+        "stops": [
+          {
+            "raw": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+            "hex": "#ffffff",
+            "alpha": 0.1,
+            "chroma": 0
+          },
+          {
+            "raw": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+            "hex": "#ffffff",
+            "alpha": 0.1,
+            "chroma": 0
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0,
+            "chroma": 0
+          },
+          {
+            "raw": "rgba(0, 0, 0, 0)",
+            "hex": "#000000",
+            "alpha": 0,
+            "chroma": 0
+          }
+        ],
+        "areaShare": 0.23
       },
       "wash": {
         "kind": "linear-gradient",

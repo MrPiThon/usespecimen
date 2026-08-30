@@ -147,17 +147,34 @@ export function buildFrontmatter(cap, { name, description, brand, dark, categori
   // is directly usable — an agent pastes it — and every stop in it came from
   // getComputedStyle rather than from a model.
   const B = cap.backgrounds;
+  const D = dark?.backgrounds;
+  // A dark variant is emitted only where it differs from the light one.
+  // Tailwind's dot inverts — a near-black at 5% becomes white at 10% — and a
+  // file that published only the light value was handing a dark-mode consumer
+  // an invisible texture. Its wash is byte-identical across schemes, so no
+  // `washDark` is written: restating a value teaches nothing, and a key that
+  // appears only when something changed is itself information.
+  const darkVariant = (key, lightValue, darkValue) => (
+    darkValue && darkValue !== lightValue ? { [key]: darkValue } : {}
+  );
+  const layer = (prefix, light, darkLayer) => (light ? {
+    [prefix]: light.kind,
+    [`${prefix}Size`]: light.size,
+    ...(light.angle ? { [`${prefix}Angle`]: `${light.angle}deg` } : {}),
+    // Omitted for an external raster: the effect is reproducible, the asset
+    // belongs to the source site, and a URL here would end up committed into
+    // somebody's repository as a hotlink.
+    ...(light.value ? { [`${prefix}Image`]: light.value } : {}),
+    ...darkVariant(`${prefix}ImageDark`, light.value, darkLayer?.value),
+  } : {});
   const backgrounds = B?.available && B.decorated ? {
-    ...(B.pattern ? {
-      pattern: B.pattern.kind,
-      patternSize: B.pattern.size,
-      ...(B.pattern.angle ? { patternAngle: `${B.pattern.angle}deg` } : {}),
-      // Omitted for an external raster: the effect is reproducible, the asset
-      // belongs to the source site, and a URL here would end up committed into
-      // somebody's repository as a hotlink.
-      ...(B.pattern.value ? { patternImage: B.pattern.value } : {}),
-    } : {}),
+    ...layer('pattern', B.pattern, D?.pattern),
+    // The second texture, when the page carries one. Tailwind's hatch is the
+    // clearest case: it paints a third as much as the dot grid and is the more
+    // recognisable of the two, so a file omitting it describes the wrong page.
+    ...layer('overlay', B.overlay, D?.overlay),
     ...(B.wash?.value ? { wash: B.wash.value } : {}),
+    ...darkVariant('washDark', B.wash?.value, D?.wash?.value),
     ...(B.effects.backdropFilter ? { backdropFilter: B.effects.backdropFilter.value } : {}),
     ...(B.effects.mixBlendMode ? { mixBlendMode: B.effects.mixBlendMode.value } : {}),
     ...(B.effects.maskImage ? { maskImage: B.effects.maskImage.value } : {}),

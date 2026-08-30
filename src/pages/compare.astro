@@ -61,6 +61,12 @@ const systems = await Promise.all(entries.map(async (e) => {
       pattern: d.backgrounds?.pattern
         ? `${d.backgrounds.pattern}${d.backgrounds.patternSize ? ` ${d.backgrounds.patternSize}` : ''}`
         : null,
+      // A second texture, on its own row rather than folded into the first.
+      // Only two systems here carry one, and "no second layer" is a real answer
+      // about a design rather than a hole in the measurement.
+      overlay: d.backgrounds?.overlay
+        ? `${d.backgrounds.overlay}${d.backgrounds.overlaySize ? ` ${d.backgrounds.overlaySize}` : ''}${d.backgrounds.overlayAngle ? ` ${d.backgrounds.overlayAngle}` : ''}`
+        : null,
       motion: d.motion ? `${d.motion.duration} ${d.motion.easing}` : 'none',
       shadows: String(Object.keys(d.elevation ?? {}).length),
     } as Record<string, string | null>,
@@ -73,7 +79,7 @@ const GROUPS = [
   { title: 'Type', keys: ['body face', 'display face', 'body size', 'leading', 'body weight', 'heading weight', 'tracking'] },
   { title: 'Shape & space', keys: ['button radius', 'spacing base', 'shadows'] },
   { title: 'Structure', keys: ['measure', 'section gap', 'nav', 'hero', 'section width', 'imagery', 'copy density'] },
-  { title: 'Surface & motion', keys: ['pattern', 'motion'] },
+  { title: 'Surface & motion', keys: ['pattern', 'overlay', 'motion'] },
 ];
 
 const COLOUR_KEYS = new Set(['canvas', 'body text', 'accent', 'on accent', 'border']);
