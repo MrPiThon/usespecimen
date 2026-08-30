@@ -482,6 +482,37 @@ Ties are not contradictions: Nike and Airbnb both run a 96px nav.
 
 When this fails: correct the prose. Never adjust a token to match a sentence.
 
+## Mobile
+
+The header is the one part that cannot simply wrap. `main` reserves exactly
+`--nav-offset` — the file's own `--nav-height` — below a fixed bar, so a nav
+that grew to two lines would sit on top of the page content. Under 46rem it
+**scrolls horizontally instead**, with a mask fading the last item so it reads
+as "more this way" rather than as a clipped rendering fault. Before that it
+measured 458px wide in a 375px viewport and CLI and MCP were simply unreachable.
+
+Two flexbox traps in that header, worth remembering because they look identical
+from the outside:
+
+- `align-self` and `align-items` are different axes. `align-self: stretch` made
+  the nav fill the 73px bar; the links inside stayed 23px because the nav's own
+  `align-items: center` re-centred them. Both are needed for a full-height tap
+  target.
+- A flex item will not shrink below its content width without `min-width: 0`,
+  which is why the nav ran off the screen rather than compressing.
+
+The hero heading is `min(var(--hero-heading), 11vw)` below 40rem. 64px comes
+from a 1440px capture; at 375px it ran to four lines and took a third of the
+viewport before any content. The capture is desktop-only, so scaling here is
+responsive behaviour rather than a value invented against the measurement — the
+full measured size is restored above 40rem.
+
+Everything else already collapsed correctly and was left alone: `.detail` to one
+column, tabs and badges wrap, the footer to one column, `pre` scrolls internally
+rather than forcing the page wide, and facet chips sit at 27px — above the 24px
+floor, and deliberately not larger, because 40 of them at a comfortable tap size
+would be a page of scrolling on its own.
+
 ## `/compare`
 
 Two systems side by side, every row a measured value. One page with the pair in

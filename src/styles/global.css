@@ -168,8 +168,16 @@ main > section:first-child { padding-top: var(--s6); }
    The token stays in the file as guidance; the site does not obey it blindly. */
 .hero { text-align: var(--hero-align, left); }
 .hero h1 {
-  font-size: var(--hero-heading, var(--step-6xl, 38px));
+  /* The file's measured hero size, but never wider than the screen can carry.
+     64px was set from a 1440px capture; at 375px it ran to four lines and ate a
+     third of the viewport before a word of the page was visible. The capture is
+     desktop-only, so scaling down here is responsive behaviour rather than a
+     value invented against the measurement. */
+  font-size: min(var(--hero-heading, var(--step-6xl, 38px)), 11vw);
   line-height: 1.1;
+}
+@media (min-width: 40rem) {
+  .hero h1 { font-size: var(--hero-heading, var(--step-6xl, 38px)); }
 }
 
 /* The system's own timing, on everything that responds to the pointer. A file
@@ -180,9 +188,44 @@ a, button, input, .card, .chip { transition: all var(--motion, 0s) var(--motion-
   a, button, input, .card, .chip { transition-duration: 0s; }
 }
 .brand { font-weight: 550; color: var(--fg-strong); text-decoration: none; letter-spacing: -0.01em; }
-.site-header nav { margin-left: auto; display: flex; gap: var(--s4); align-items: center; }
-.site-header nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+.site-header nav {
+  margin-left: auto; display: flex; gap: var(--s4); align-items: center;
+  /* Without this the nav refuses to shrink below its content width and simply
+     runs off the side of the screen. At 375px it measured 458px wide, which put
+     CLI and MCP past the edge with no way to reach them. */
+  min-width: 0;
+}
+.site-header nav a {
+  color: var(--muted); text-decoration: none; font-size: 0.9rem;
+  white-space: nowrap;
+}
 .site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--fg-strong); }
+
+@media (max-width: 46rem) {
+  /* Scroll rather than wrap. The header height is the file's own --nav-height
+     and `main` reserves exactly that much space below a fixed bar, so a nav
+     that wrapped to two lines would sit on top of the page content. */
+  .site-header nav {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    gap: var(--s3);
+    /* Fades the last item instead of cutting it off square, so it reads as
+       "there is more this way" rather than as a rendering fault. */
+    mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+  }
+  .site-header nav::-webkit-scrollbar { display: none; }
+  .site-header .wrap { gap: var(--s3); }
+  /* The bar's full height as the tap target rather than the text's own 23px.
+     The nav has to stretch first: `.wrap` centres its items, so the nav was
+     only as tall as its text and stretching the links inside it did nothing. */
+  /* Two different axes, and both are needed: `align-self` makes the nav fill
+     the bar's height, `align-items` stops the nav re-centring the links inside
+     it. Setting only the first left the nav 73px tall with 23px links in the
+     middle of it. */
+  .site-header nav { align-self: stretch; align-items: stretch; }
+  .site-header nav a { display: flex; align-items: center; }
+}
 
 .site-footer {
   border-top: 1px solid var(--border);
