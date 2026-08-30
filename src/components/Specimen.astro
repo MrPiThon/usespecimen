@@ -90,6 +90,13 @@ const font = fontNote(data);
 // one; otherwise the type scale above already shows it.
 const bodyFamily = primaryFamily(type.fontFamily);
 const headingFamily = primaryFamily(type.headingFamily);
+// These captions name the face the FILE declares, which is right — but they sit
+// above text rendered in a stand-in, and a reader scrolling past the badge at
+// the top of the type section would read "Nike Futura ND" under Jost. Name both.
+const shownIn = (fam) => {
+  const sub = font.substituted.find(x => x.real === fam);
+  return sub ? `${fam} (shown in ${sub.standIn})` : fam;
+};
 ---
 
 <div class="sp" style={previewVars(data, { dark })}>
@@ -141,6 +148,13 @@ const headingFamily = primaryFamily(type.headingFamily);
   {scale.length > 0 && (
     <section class="sp-block">
       <h3>Type scale</h3>
+      {/* Stated at a glance, not only in the paragraph. A reader skimming a
+          specimen sheet should never mistake a stand-in for the real face. */}
+      {font.substituted.length > 0 && (
+        <p class="sub-badge">
+          {font.substituted.map(x => <span><b>{x.standIn}</b> for {x.real}</span>)}
+        </p>
+      )}
       <p class="sp-note">Rendered at the measured size. {font.note}</p>
       <div class="ty-list">
         {scale.map(s => (
@@ -158,7 +172,7 @@ const headingFamily = primaryFamily(type.headingFamily);
       <h3>Body</h3>
       <p class="sp-body">{SAMPLE}. {SAMPLE.toLowerCase()}.</p>
       <p class="sp-note">
-        {[type.fontFamily?.split(',')[0].replace(/['"]/g, ''),
+        {[bodyFamily && shownIn(bodyFamily),
           type.baseSize, type.lineHeight ? `${type.lineHeight} leading` : null,
           type.weight ? `weight ${type.weight}` : null,
           type.letterSpacing ? `tracking ${type.letterSpacing}` : null,
@@ -172,7 +186,7 @@ const headingFamily = primaryFamily(type.headingFamily);
       <h3>Headings</h3>
       <p class="sp-head">{SAMPLE}</p>
       <p class="sp-note">
-        {[headingFamily, type.headingWeight ? `weight ${type.headingWeight}` : null]
+        {[shownIn(headingFamily), type.headingWeight ? `weight ${type.headingWeight}` : null]
           .filter(Boolean).join(' · ')}
         {' '}— a second face, shown here because the scale above renders in the body one.
       </p>
@@ -372,6 +386,20 @@ const headingFamily = primaryFamily(type.headingFamily);
   }
   .ty-meta em { font-style: normal; font-variant-numeric: tabular-nums; }
   .ty-sample { line-height: 1.1; white-space: nowrap; }
+
+  .sub-badge {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin: 0.5rem 0 0; font-size: 0.7rem;
+  }
+  .sub-badge span {
+    border: 1px dashed currentColor;
+    border-radius: var(--pv-radius, 4px);
+    padding: 0.15rem 0.45rem;
+    color: var(--pv-muted, #666);
+  }
+  /* Dashed, like the preview's borrowed hairlines: the same visual language for
+     "this part is ours, not the system's". */
+  .sub-badge b { font-weight: 600; color: var(--pv-fg, inherit); }
 
   .sp-head {
     margin: 0.5rem 0 0;

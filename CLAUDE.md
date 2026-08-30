@@ -163,6 +163,23 @@ Content Layer API is unchanged from 5 (`glob` from `astro/loaders`,
   The old blanket note ("typefaces are not loaded") was untrue for every Inter
   system, which this site already shipped; `fontNote()` now states per system
   which face is rendering and names the ones it cannot serve.
+  Where the real face cannot be served, an **openly-licensed stand-in** is
+  rendered and **always labelled** — a dashed badge on the specimen sheet, and
+  the caption naming both ("Nike Futura ND (shown in Jost)"). Six systems render
+  their real face, 17 are substituted, none fall back to an unnamed system face.
+  Stand-ins are chosen for construction, not vibe: Jost is a Futura revival,
+  Archivo sits in Söhne/Graphik territory, Public Sans exists because a
+  government needed a humanist sans it could license — which is GDS Transport's
+  problem exactly.
+  **The DESIGN.md tokens are never touched.** A file keeps naming `Nike Futura
+  ND`, because that is what an agent needs in order to license the right thing;
+  the substitution exists only in this site's rendering.
+  getdesign.md does the same swap — Bebas Neue and Inter from Google Fonts,
+  placed *ahead* of the real name in the stack — and discloses none of it, so a
+  reader there believes they are seeing Nike Futura ND while looking at a
+  condensed grotesque. Showing an approximation is fine; not saying so is not.
+  Declaring `@font-face` costs only CSS: a browser fetches a woff2 only when a
+  family actually renders, so shipping nine faces still downloads one or two.
 - `src/components/Specimen.astro` is the token sheet: every value rendered as
   the thing it describes rather than listed in a table. Swatches with contrast,
   the type scale at its measured sizes, radii drawn, shadows cast, spacing as

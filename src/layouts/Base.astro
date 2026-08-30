@@ -7,6 +7,16 @@ import '@fontsource-variable/inter';
 // list stops here.
 import '@fontsource-variable/manrope';
 import '@fontsource-variable/geist';
+// Openly-licensed stand-ins for the faces we cannot serve. Declaring @font-face
+// costs only the CSS — a browser fetches a woff2 only when a family actually
+// renders — so a page carrying all of these still downloads just the one or two
+// its own system needs.
+import '@fontsource-variable/jost';
+import '@fontsource-variable/archivo';
+import '@fontsource-variable/public-sans';
+import '@fontsource-variable/source-sans-3';
+import '@fontsource-variable/source-serif-4';
+import '@fontsource-variable/nunito';
 import '../styles/global.css';
 import { getEntry } from 'astro:content';
 import { THEME_SLUG, themeVars } from '../lib/theme.mjs';
