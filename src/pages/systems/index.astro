@@ -5,12 +5,25 @@ import { readCapture } from '../../lib/system-files.mjs';
 import { facetsFor, FACET_GROUPS } from '../../lib/facets.mjs';
 import { categoryCounts } from '../../lib/categories.mjs';
 import { shadeCounts } from '../../lib/colornames.mjs';
+import { resolveStack } from '../../lib/webfonts.mjs';
 
 const entries = await getCollection('systems');
 const systems = (await Promise.all(entries.map(async (entry) => ({
   entry,
   facets: facetsFor(await readCapture(entry.id)),
 })))).sort((a, b) => a.entry.data.name.localeCompare(b.entry.data.name));
+
+/** The card title, set in the system's own display face at its own weight and
+ *  tracking. Size stays the card's, so the grid still reads as a grid. */
+const nameStyle = (d) => {
+  const t = d.typography ?? {};
+  const stack = resolveStack(t.headingFamily ?? t.fontFamily);
+  return [
+    stack ? `font-family:${stack}` : null,
+    t.headingWeight ? `font-weight:${t.headingWeight}` : null,
+    t.letterSpacing ? `letter-spacing:${t.letterSpacing}` : null,
+  ].filter(Boolean).join(';');
+};
 
 // Only offer a filter that matches something. A facet bar advertising options
 // that return nothing reads as a broken catalogue rather than a small one.
@@ -96,7 +109,7 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
     </p>
   </div>
 
-  <div class="grid" id="results" style="margin-top:1.5rem;">
+  <div class="grid" id="catalog" style="margin-top:1.5rem;">
     {systems.map(({ entry, facets }) => {
       const c = entry.data.colors ?? {};
       const captured = entry.data.provenance.capturedAt;
@@ -114,7 +127,11 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
           data-text={[entry.id, entry.data.name, entry.data.provenance.brand,
             entry.data.description].filter(Boolean).join(' ').toLowerCase()}
         >
-          <h3>{entry.data.name}</h3>
+          {/* Each name set in its own system's typeface — the real one where
+              the licence allows, an openly-licensed stand-in otherwise. The
+              catalogue is a wall of design systems, so it should look like
+              23 different design systems rather than 23 rows of Inter. */}
+          <h3 style={nameStyle(entry.data)}>{entry.data.name}</h3>
           <p>{entry.data.description}</p>
           <div class="swatches">
             {swatchKeys.filter(k => typeof c[k] === 'string').map(k => (
@@ -144,7 +161,7 @@ const swatchKeys = ['background', 'card', 'primary', 'foreground'];
   // Filtering runs over attributes already on the cards, so the full list is
   // what a reader without JavaScript sees — the filters are an enhancement, not
   // the only way in.
-  const cards = [...document.querySelectorAll('#results .card')];
+  const cards = [...document.querySelectorAll('#catalog .card')];
   const chips = [...document.querySelectorAll('.chip-btn')];
   const q = document.getElementById('q');
   const count = document.getElementById('count');

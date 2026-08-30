@@ -260,7 +260,13 @@ button:hover, .btn:hover { color: var(--fg-strong); border-color: var(--faint); 
   display: block;
 }
 .card:hover { border-color: var(--faint); background: var(--surface-2); }
-.card h3 { margin: 0 0 4px; font-size: 1rem; }
+/* Card titles carry each system's own typeface (see /systems), so they are set
+   at the theme's 3xl step rather than 1rem — at 16px the faces were technically
+   different and visually indistinguishable. */
+.card h3 {
+  margin: 0 0 var(--s2); font-size: var(--step-3xl, 1.25rem);
+  line-height: 1.15; color: var(--fg-strong);
+}
 .card p { color: var(--muted); font-size: var(--step-lg, 14px); margin: 0 0 var(--s3); }
 
 .swatches { display: flex; gap: 4px; }
@@ -424,7 +430,12 @@ th { color: var(--muted); font-weight: 550; }
 .v-list li { margin-bottom: 4px; }
 .v-list.bad li { color: var(--bad); }
 .v-list.warn li, .v-list li.warn { color: var(--warn); }
-#results h3 {
+/* The validator's own section headings, which it appends as direct children.
+   `>` matters: the catalogue used to share this id, and an ID selector (1,0,1)
+   outranks `.card h3`, so every card title on /systems was silently rendered at
+   12px uppercase — which also flattened the per-system typefaces they are set
+   in. The catalogue now uses #catalog, and this stays scoped either way. */
+#results > h3 {
   font-size: 0.75rem; text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--muted); margin: var(--s5) 0 6px;
 }
@@ -455,7 +466,12 @@ th { color: var(--muted); font-weight: 550; }
   color: var(--fg-strong); border-color: var(--accent);
   box-shadow: inset 0 0 0 1px var(--accent);
 }
-#results .card[hidden] { display: none; }
+/* `.card` sets `display: block`, which beats the UA stylesheet's `[hidden] {
+   display: none }` — so without this the filters update the count while every
+   card stays on screen. Renaming the container from #results to #catalog broke
+   exactly this rule, which is why the selector rename had to be chased into the
+   stylesheet and not only the markup. */
+#catalog .card[hidden] { display: none; }
 .chip-dot {
   display: inline-block; width: 0.6rem; height: 0.6rem; border-radius: var(--radius-pill);
   vertical-align: -1px; margin-right: 3px;

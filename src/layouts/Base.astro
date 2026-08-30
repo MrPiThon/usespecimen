@@ -46,6 +46,10 @@ const year = new Date().getFullYear();
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonical} />
+    {/* The convention agents are starting to look for. Advertised in the head
+        so a fetcher that lands on any page can find the plain-text index
+        without guessing at the path. */}
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Specimen for LLMs" />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={canonical} />
@@ -93,6 +97,7 @@ ${vars}
             <a href="/cli">CLI</a>
             <a href="/mcp">MCP server</a>
             <a href={`/r/${THEME_SLUG}/DESIGN.md`}>Raw endpoint</a>
+            <a href="/llms.txt">llms.txt</a>
           </nav>
 
           <nav aria-labelledby="f-project">

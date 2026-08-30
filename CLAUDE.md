@@ -482,6 +482,24 @@ Ties are not contradictions: Nike and Airbnb both run a 96px nav.
 
 When this fails: correct the prose. Never adjust a token to match a sentence.
 
+## The machine-facing surface
+
+- `/llms.txt` (https://llmstxt.org) is a plain-text index written for a model
+  rather than a crawler — what the registry is, how to fetch a file, what a file
+  does and does not contain, and the whole catalogue with facets and raw URLs.
+  Deliberately an **index, not a dump**: an agent choosing a system needs the
+  catalogue, and one that has chosen fetches `/r/<slug>/DESIGN.md`. Inlining 23
+  files would be ~200KB of context spent before a decision is made.
+  Advertised from every page via `<link rel="alternate" type="text/plain">`.
+- `/robots.txt` exists to say **yes**. Everything here is public, dated and meant
+  to be fetched; crawling it is the intended use.
+- `/sitemap.xml` is hand-rolled rather than pulling in `@astrojs/sitemap`,
+  because `lastmod` should be the date a system was re-captured, not the date
+  the site happened to build.
+- `llms.txt` needs its CORS and content type in **host config**, like `/r/*`: a
+  static build discards an endpoint's own `Response` headers. Both `vercel.json`
+  and `public/_headers` carry it.
+
 ## Identity
 
 | Thing | Value |
