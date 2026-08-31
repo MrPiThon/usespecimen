@@ -1,97 +1,97 @@
 {
   "repo": "MrPiThon/usespecimen",
-  "fetchedAt": "2026-08-30T19:58:17.843Z",
+  "fetchedAt": "2026-08-31T11:35:34.430Z",
   "systems": {
     "airbnb": {
-      "issue": null,
+      "issue": 1,
       "up": 0
     },
     "apple": {
-      "issue": null,
+      "issue": 2,
       "up": 0
     },
     "basecamp": {
-      "issue": null,
+      "issue": 3,
       "up": 0
     },
     "duolingo": {
-      "issue": null,
+      "issue": 4,
       "up": 0
     },
     "figma": {
-      "issue": null,
+      "issue": 5,
       "up": 0
     },
     "framer": {
-      "issue": null,
+      "issue": 6,
       "up": 0
     },
     "govuk": {
-      "issue": null,
+      "issue": 7,
       "up": 0
     },
     "gumroad": {
-      "issue": null,
-      "up": 0
+      "issue": 8,
+      "up": 1
     },
     "hackernews": {
-      "issue": null,
+      "issue": 9,
       "up": 0
     },
     "linear": {
-      "issue": null,
+      "issue": 10,
       "up": 0
     },
     "mailchimp": {
-      "issue": null,
+      "issue": 11,
       "up": 0
     },
     "nike": {
-      "issue": null,
+      "issue": 12,
       "up": 0
     },
     "notion": {
-      "issue": null,
+      "issue": 13,
       "up": 0
     },
     "pentagram": {
-      "issue": null,
+      "issue": 14,
       "up": 0
     },
     "shopify": {
-      "issue": null,
+      "issue": 15,
       "up": 0
     },
     "slack": {
-      "issue": null,
+      "issue": 16,
       "up": 0
     },
     "stripe": {
-      "issue": null,
+      "issue": 17,
       "up": 0
     },
     "substack": {
-      "issue": null,
+      "issue": 18,
       "up": 0
     },
     "supabase": {
-      "issue": null,
+      "issue": 19,
       "up": 0
     },
     "tailwindcss": {
-      "issue": null,
+      "issue": 20,
       "up": 0
     },
     "theverge": {
-      "issue": null,
+      "issue": 21,
       "up": 0
     },
     "vercel": {
-      "issue": null,
+      "issue": 22,
       "up": 0
     },
     "wise": {
-      "issue": null,
+      "issue": 23,
       "up": 0
     }
   }
