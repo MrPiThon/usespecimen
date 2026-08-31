@@ -12,7 +12,7 @@
     "sampleRatio": 0.474
   },
   "harvestVersion": 8,
-  "clusterVersion": 20,
+  "clusterVersion": 21,
   "tuning": {
     "colorMerge": 0.045,
     "chromatic": 0.03,
@@ -272,7 +272,7 @@
       },
       {
         "family": "Inter",
-        "class": "mono",
+        "class": "sans",
         "stack": "Inter, sans-serif, helvetica, arial, monospace"
       }
     ],
@@ -502,17 +502,6 @@
         "letterSpacing": "-0.176px",
         "elements": 51,
         "chars": 745
-      },
-      "mono": {
-        "fontFamily": "Inter",
-        "fontStack": "Inter, sans-serif, helvetica, arial, monospace",
-        "class": "mono",
-        "fontSize": "300px",
-        "fontWeight": 400,
-        "lineHeight": 0.09,
-        "letterSpacing": null,
-        "elements": 3,
-        "chars": 42
       }
     },
     "rolesAvailable": true,

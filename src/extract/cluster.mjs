@@ -757,14 +757,33 @@ export function stateTokens(capture) {
 const primaryFamily = stack =>
   stack.split(',')[0].trim().replace(/^["']|["']$/g, '');
 
-/** Classify off the generic keyword the site itself declared. Checked
- *  sans-before-serif because "sans-serif" contains "serif". */
+/**
+ * Classify off the generic keyword the site itself declared — the FIRST one in
+ * stack order, not whichever kind is tested first.
+ *
+ * Substring-testing the whole stack, mono first, made any stack mentioning
+ * monospace anywhere a monospace stack. Wise declares
+ * `Inter, sans-serif, helvetica, arial, monospace` on its big currency figure:
+ * a sans stack with a legacy last-resort fallback. That gave Wise a `mono`
+ * type role of 300px at a 0.09 line-height — three elements and 42 characters
+ * of display number, published as the file's monospace text style. A site
+ * wearing that file rendered every line of code at 300px.
+ *
+ * Reading left to right also keeps the original sans-before-serif care, which
+ * is still needed WITHIN a token because "sans-serif" contains "serif".
+ */
+const GENERICS = [
+  [/^(ui-)?monospace$/, 'mono'],
+  [/^(ui-)?sans-serif$/, 'sans'],
+  [/^(system-ui|-apple-system|blinkmacsystemfont)$/, 'sans'],
+  [/^(ui-)?serif$/, 'serif'],
+  [/^cursive$/, 'cursive'],
+];
 function familyClass(stack) {
-  const s = stack.toLowerCase();
-  if (s.includes('monospace') || s.includes('ui-monospace')) return 'mono';
-  if (s.includes('sans-serif') || s.includes('system-ui') || s.includes('-apple-system')) return 'sans';
-  if (s.includes('serif')) return 'serif';
-  if (s.includes('cursive')) return 'cursive';
+  for (const raw of String(stack ?? '').toLowerCase().split(',')) {
+    const family = raw.trim().replace(/^["']|["']$/g, '');
+    for (const [re, cls] of GENERICS) if (re.test(family)) return cls;
+  }
   return 'unknown';
 }
 
@@ -1705,7 +1724,10 @@ export function cluster(capture, { previous } = {}) {
     //     bundles before falling back to the interactiveRadius count rank, and
     //     an unobservable colour role is null rather than undefined — the
     //     latter was being deleted by JSON.stringify, so the key vanished.
-    clusterVersion: 20,
+    // 21: familyClass reads the FIRST generic in a font stack rather than any
+    //     generic present, so a sans stack with a trailing `monospace` fallback
+    //     stops being published as a monospace type role.
+    clusterVersion: 21,
     tuning: { colorMerge: COLOR_MERGE, chromatic: CHROMATIC, gridThreshold: GRID_THRESHOLD },
     colors,
     typography,

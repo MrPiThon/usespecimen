@@ -7,6 +7,18 @@
    declares no foreground for its accent, so nothing is ever filled with it, and
    it has no spacing grid, so the steps below are its observed values. */
 
+/* THESE ARE FALLBACKS, and `@layer` is what makes that true.
+   Astro injects its stylesheet <link> AFTER the inline theme <style> that
+   Base.astro writes, and `:root` here has the same specificity as `:root`
+   there — so source order won and this block silently overrode the file the
+   site claims to wear. It was invisible for as long as these values were
+   hand-copied from that same file: switching THEME_SLUG to a light system
+   produced Wise's structure, spacing and type scale over Linear's colours,
+   because only the tokens absent from this block were getting through.
+
+   An unlayered declaration beats a layered one no matter the order, so the
+   theme now wins by construction rather than by luck. Do not unwrap this. */
+@layer fallback {
 :root {
   --bg: #08090a;
   --surface: #0f1011;
@@ -56,7 +68,8 @@
   --edge: var(--shadow-3, inset 0 0 0 1px rgba(255, 255, 255, 0.05));
   --lift: var(--shadow-4, 0 2px 32px rgba(0, 0, 0, 0.25));
 
-  color-scheme: dark;
+  color-scheme: var(--color-scheme, dark);
+}
 }
 
 *, *::before, *::after { box-sizing: border-box; }

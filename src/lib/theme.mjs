@@ -19,6 +19,7 @@
 // no light mode. Adopting a design system means adopting its limits.
 
 import { parseColor, relativeLuminance, COLOR_STOP_RE } from './color.mjs';
+import { faceStatus } from './webfonts.mjs';
 
 export const THEME_SLUG = 'linear';
 
@@ -82,7 +83,7 @@ export function primaryFamily(stack) {
 
 function assertThemeFont(data) {
   const family = primaryFamily(data?.typography?.fontFamily);
-  if (family && family !== SELF_HOSTED_FONT) {
+  if (family && faceStatus(family) !== 'self-hosted') {
     throw new Error(
       `Theme "${THEME_SLUG}" declares "${family}" but the site self-hosts `
       + `"${SELF_HOSTED_FONT}". Add the matching @fontsource package and update `
@@ -256,6 +257,11 @@ export function themeVars(data, decor = null) {
   // can still look nothing like the site.
   const canvas = parseColor(data?.colors?.background ?? '');
   const darkCanvas = canvas ? relativeLuminance(canvas) < 0.2 : false;
+  // Derived from the canvas, not hardcoded. `color-scheme` drives scrollbars,
+  // form controls and the default focus ring, and global.css asserted `dark`
+  // against every theme — so a light system rendered a white page with dark
+  // scrollbars and dark selects.
+  out.push(['--color-scheme', darkCanvas ? 'dark' : 'light']);
   out.push(...decorVars(decor ?? data, darkCanvas));
   // How state changes arrive. Without this the site would pick its own timing
   // while claiming to wear the file, which is the gap this whole exercise

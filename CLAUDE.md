@@ -574,6 +574,40 @@ leading blank lines.
 checkout under `core.autocrlf` reports all 23 files stale forever, and `--check`
 fails on one machine and passes on another.
 
+## Swapping THEME_SLUG (and what it exposed)
+
+Pointing `THEME_SLUG` at another system is the honest test of "change that file
+and the site changes with it". Trying `wise` found four bugs, three of them in
+this site rather than in the file.
+
+1. **`global.css`'s `:root` block was overriding the theme, not falling back to
+   it.** Astro injects its stylesheet `<link>` AFTER the inline theme `<style>`
+   Base.astro writes, and both selectors are `:root` — so source order won.
+   Every token the block defines (`--bg`, `--fg`, `--accent`, `--size`, the
+   radii) came from hardcoded values, and only the tokens absent from it
+   (`--container`, `--step-*`, `--space-*`, `--t-*`) came from the file. It was
+   invisible for as long as those values were hand-copied from Linear: the
+   symptom only appears on a theme that disagrees. The block now sits in
+   `@layer fallback`, and an unlayered declaration beats a layered one whatever
+   the order. Checked afterwards: the only token where the fallback and the file
+   disagreed was `--sans`, whose hardcoded stack had a shortened tail.
+2. **`assertThemeFont` compared against one constant** rather than asking
+   `webfonts.mjs`. Wise declares `Inter`, we self-host `Inter Variable`, and
+   `faceStatus()` already knows those are the same face. It now asks.
+3. **`color-scheme: dark` was asserted against every theme**, so a light system
+   rendered a white page with dark scrollbars and dark selects. Derived from the
+   canvas luminance `decorVars` already computes.
+4. **Wise's `mono` type role was 300px** — see cluster v21 in the typography
+   notes. A site wearing that file rendered every line of code at 300px.
+
+What remains, and it is a real limit rather than a bug: **the fallback layer is
+Linear-shaped.** Wise declares no `surface-2`, `text-3` or `text-4`, so those
+fall through to Linear's dark-system values — `--surface-2: #161718` behind
+`--fg-strong: #0e0f0c` is black on black, and `--muted: #8a8f98` on white is
+about 3:1. Falling back rather than inventing is the correct rule; the
+consequence is that a second theme needs a fallback set of its own, or needs to
+declare the tiers it uses. Worth knowing before treating THEME_SLUG as a switch.
+
 ## What the tests caught
 
 Written after nineteen versions of tuning constants had shipped with nothing

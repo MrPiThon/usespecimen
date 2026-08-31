@@ -109,11 +109,6 @@ typography:
       fontWeight: 600
       lineHeight: 1.5
       letterSpacing: '-0.176px'
-    mono:
-      fontFamily: 'Inter, sans-serif, helvetica, arial, monospace'
-      fontSize: '300px'
-      fontWeight: 400
-      lineHeight: 0.09
 rounded:
   sm: '2px'
   md: '10px'
@@ -181,7 +176,7 @@ provenance:
   capturedAt: '2026-08-29T04:54:50.430Z'
   method: 'playwright/chromium 151.0.7922.34 computed styles @ 1440x900, 768x1024, 390x844 (light + dark)'
   harvestVersion: 8
-  clusterVersion: 20
+  clusterVersion: 21
   screenshot: './source.webp'
 ---
 
